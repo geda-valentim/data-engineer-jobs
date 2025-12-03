@@ -25,3 +25,8 @@ variable "glue_scripts_bucket_name" {
     type = string
     default = "glue-scripts"
 }
+
+variable "athena_results_bucket_name" {
+  description = "Nome do bucket onde o Athena vai salvar os resultados"
+  type        = string
+}

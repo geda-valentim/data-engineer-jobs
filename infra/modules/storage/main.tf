@@ -17,3 +17,7 @@ resource "aws_s3_bucket" "glue_temp" {
 resource "aws_s3_bucket" "glue_scripts" {
   bucket = var.glue_scripts_bucket_name
 }
+
+resource "aws_s3_bucket" "athena_results" {
+  bucket = var.athena_results_bucket_name
+}
