@@ -1,0 +1,1038 @@
+# Skills Catalog for Data/Software Engineers
+# Version: 1.0
+# Last Updated: 2025-12-03
+
+# ============================================
+# CLOUD PLATFORMS
+# ============================================
+
+cloud_platforms:
+
+  # Microsoft Azure
+  azure:
+    canonical: "Azure"
+    variations:
+      - "azure"
+      - "microsoft azure"
+      - "ms azure"
+    priority: high  # 77% do dataset
+
+    sub_skills:
+      - canonical: "Azure Data Factory"
+        variations:
+          - "azure data factory"
+          - "adf"
+          - "data factory"
+        priority: high
+
+      - canonical: "Azure Synapse Analytics"
+        variations:
+          - "synapse"
+          - "azure synapse"
+          - "synapse analytics"
+          - "azure synapse analytics"
+        priority: high
+
+      - canonical: "Azure Databricks"
+        variations:
+          - "azure databricks"
+        priority: high
+
+      - canonical: "Microsoft Fabric"
+        variations:
+          - "fabric"
+          - "ms fabric"
+          - "microsoft fabric"
+        priority: medium
+
+      - canonical: "Azure Data Lake Storage"
+        variations:
+          - "data lake"
+          - "azure data lake"
+          - "adls"
+          - "data lake storage"
+          - "azure data lake storage"
+        priority: high
+
+      - canonical: "Azure Blob Storage"
+        variations:
+          - "blob storage"
+          - "azure blob"
+          - "blob"
+        priority: medium
+
+      - canonical: "Azure Functions"
+        variations:
+          - "azure functions"
+          - "azure function"
+        priority: medium
+
+      - canonical: "Azure DevOps"
+        variations:
+          - "azure devops"
+          - "ado"
+        priority: medium
+
+      - canonical: "Azure Purview"
+        variations:
+          - "purview"
+          - "azure purview"
+          - "microsoft purview"
+        priority: low
+
+      - canonical: "Azure SQL Database"
+        variations:
+          - "azure sql"
+          - "azure sql database"
+          - "sql azure"
+        priority: medium
+
+      - canonical: "Azure Cosmos DB"
+        variations:
+          - "cosmos db"
+          - "cosmosdb"
+          - "azure cosmos"
+        priority: low
+
+      - canonical: "Azure Event Hubs"
+        variations:
+          - "event hubs"
+          - "azure event hubs"
+          - "eventhub"
+        priority: low
+
+      - canonical: "Azure Stream Analytics"
+        variations:
+          - "stream analytics"
+          - "azure stream analytics"
+        priority: low
+
+  # Amazon Web Services
+  aws:
+    canonical: "AWS"
+    variations:
+      - "aws"
+      - "amazon web services"
+    priority: high  # 40% do dataset
+
+    sub_skills:
+      - canonical: "AWS S3"
+        variations:
+          - "s3"
+          - "amazon s3"
+          - "simple storage service"
+        priority: high
+
+      - canonical: "AWS Glue"
+        variations:
+          - "glue"
+          - "aws glue"
+          - "amazon glue"
+        priority: high
+
+      - canonical: "AWS Redshift"
+        variations:
+          - "redshift"
+          - "aws redshift"
+          - "amazon redshift"
+        priority: high
+
+      - canonical: "AWS EMR"
+        variations:
+          - "emr"
+          - "aws emr"
+          - "elastic mapreduce"
+        priority: medium
+
+      - canonical: "AWS Lambda"
+        variations:
+          - "lambda"
+          - "aws lambda"
+        priority: medium
+
+      - canonical: "AWS Athena"
+        variations:
+          - "athena"
+          - "aws athena"
+        priority: medium
+
+      - canonical: "AWS Kinesis"
+        variations:
+          - "kinesis"
+          - "aws kinesis"
+        priority: medium
+
+      - canonical: "AWS DynamoDB"
+        variations:
+          - "dynamodb"
+          - "aws dynamodb"
+        priority: low
+
+      - canonical: "AWS RDS"
+        variations:
+          - "rds"
+          - "aws rds"
+          - "relational database service"
+        priority: medium
+
+      - canonical: "AWS Step Functions"
+        variations:
+          - "step functions"
+          - "aws step functions"
+        priority: low
+
+  # Google Cloud Platform
+  gcp:
+    canonical: "GCP"
+    variations:
+      - "gcp"
+      - "google cloud"
+      - "google cloud platform"
+    priority: high  # 40% do dataset
+
+    sub_skills:
+      - canonical: "BigQuery"
+        variations:
+          - "bigquery"
+          - "big query"
+          - "google bigquery"
+        priority: high
+
+      - canonical: "Google Cloud Storage"
+        variations:
+          - "gcs"
+          - "cloud storage"
+          - "google cloud storage"
+        priority: high
+
+      - canonical: "Google Dataflow"
+        variations:
+          - "dataflow"
+          - "google dataflow"
+        priority: medium
+
+      - canonical: "Google Dataproc"
+        variations:
+          - "dataproc"
+          - "google dataproc"
+        priority: medium
+
+      - canonical: "Google Cloud Functions"
+        variations:
+          - "cloud functions"
+          - "google cloud functions"
+          - "gcf"
+        priority: low
+
+      - canonical: "Google Pub/Sub"
+        variations:
+          - "pub/sub"
+          - "pubsub"
+          - "google pub/sub"
+        priority: medium
+
+      - canonical: "Google Cloud Composer"
+        variations:
+          - "cloud composer"
+          - "google cloud composer"
+        priority: low
+
+# ============================================
+# PROGRAMMING LANGUAGES
+# ============================================
+
+programming_languages:
+
+  - canonical: "Python"
+    variations:
+      - "python"
+      - "python3"
+      - "py"
+    priority: high  # 63% do dataset
+
+  - canonical: "SQL"
+    variations:
+      - "sql"
+      - "structured query language"
+    priority: high  # 40% do dataset
+    sub_variations:
+      - "t-sql"
+      - "transact-sql"
+      - "pl/sql"
+      - "pl-sql"
+      - "mysql"
+      - "postgresql"
+      - "postgres"
+
+  - canonical: "Scala"
+    variations:
+      - "scala"
+    priority: medium  # 9% do dataset
+
+  - canonical: "Java"
+    variations:
+      - "java"
+    priority: medium  # 6% do dataset
+
+  - canonical: "R"
+    variations:
+      - "r programming"
+      - "r language"
+    priority: low
+
+  - canonical: "Go"
+    variations:
+      - "go"
+      - "golang"
+    priority: low
+
+  - canonical: "JavaScript"
+    variations:
+      - "javascript"
+      - "js"
+      - "node.js"
+      - "nodejs"
+    priority: low
+
+  - canonical: "TypeScript"
+    variations:
+      - "typescript"
+      - "ts"
+    priority: low
+
+  - canonical: "Rust"
+    variations:
+      - "rust"
+    priority: low
+
+  - canonical: "C#"
+    variations:
+      - "c#"
+      - "csharp"
+      - "c sharp"
+    priority: low
+
+# ============================================
+# DATA PROCESSING & STREAMING
+# ============================================
+
+data_processing:
+
+  - canonical: "Apache Spark"
+    variations:
+      - "spark"
+      - "apache spark"
+      - "pyspark"
+      - "spark sql"
+    priority: high  # 74% do dataset
+
+  - canonical: "Apache Kafka"
+    variations:
+      - "kafka"
+      - "apache kafka"
+    priority: medium
+
+  - canonical: "Apache Flink"
+    variations:
+      - "flink"
+      - "apache flink"
+    priority: low
+
+  - canonical: "Apache Beam"
+    variations:
+      - "beam"
+      - "apache beam"
+    priority: low
+
+  - canonical: "Databricks"
+    variations:
+      - "databricks"
+    priority: high  # 43% do dataset
+
+  - canonical: "Delta Lake"
+    variations:
+      - "delta lake"
+      - "delta"
+    priority: medium
+
+  - canonical: "Apache Iceberg"
+    variations:
+      - "iceberg"
+      - "apache iceberg"
+    priority: low
+
+  - canonical: "Apache Hudi"
+    variations:
+      - "hudi"
+      - "apache hudi"
+    priority: low
+
+# ============================================
+# ORCHESTRATION & WORKFLOW
+# ============================================
+
+orchestration:
+
+  - canonical: "Apache Airflow"
+    variations:
+      - "airflow"
+      - "apache airflow"
+    priority: high  # 34% do dataset
+
+  - canonical: "Prefect"
+    variations:
+      - "prefect"
+    priority: low
+
+  - canonical: "Dagster"
+    variations:
+      - "dagster"
+    priority: low
+
+  - canonical: "Luigi"
+    variations:
+      - "luigi"
+      - "spotify luigi"
+    priority: low
+
+  - canonical: "Apache NiFi"
+    variations:
+      - "nifi"
+      - "apache nifi"
+    priority: low
+
+# ============================================
+# DATA WAREHOUSES & DATABASES
+# ============================================
+
+data_warehouses:
+
+  - canonical: "Snowflake"
+    variations:
+      - "snowflake"
+    priority: high  # 31% do dataset
+
+  - canonical: "Google BigQuery"
+    variations:
+      - "bigquery"
+      - "big query"
+    priority: high
+
+  - canonical: "Amazon Redshift"
+    variations:
+      - "redshift"
+    priority: high
+
+  - canonical: "Azure Synapse Analytics"
+    variations:
+      - "synapse"
+    priority: high
+
+  - canonical: "Teradata"
+    variations:
+      - "teradata"
+    priority: low
+
+  - canonical: "Oracle Exadata"
+    variations:
+      - "exadata"
+      - "oracle exadata"
+    priority: low
+
+databases:
+
+  relational:
+    - canonical: "PostgreSQL"
+      variations:
+        - "postgresql"
+        - "postgres"
+        - "psql"
+      priority: medium
+
+    - canonical: "MySQL"
+      variations:
+        - "mysql"
+      priority: medium
+
+    - canonical: "Microsoft SQL Server"
+      variations:
+        - "sql server"
+        - "mssql"
+        - "ms sql"
+      priority: medium
+
+    - canonical: "Oracle Database"
+      variations:
+        - "oracle"
+        - "oracle db"
+        - "oracle database"
+      priority: low
+
+    - canonical: "MariaDB"
+      variations:
+        - "mariadb"
+      priority: low
+
+  nosql:
+    - canonical: "MongoDB"
+      variations:
+        - "mongodb"
+        - "mongo"
+      priority: medium
+
+    - canonical: "Cassandra"
+      variations:
+        - "cassandra"
+        - "apache cassandra"
+      priority: low
+
+    - canonical: "Redis"
+      variations:
+        - "redis"
+      priority: low
+
+    - canonical: "Elasticsearch"
+      variations:
+        - "elasticsearch"
+        - "elastic search"
+        - "es"
+      priority: low
+
+    - canonical: "Neo4j"
+      variations:
+        - "neo4j"
+      priority: low
+
+    - canonical: "DynamoDB"
+      variations:
+        - "dynamodb"
+      priority: low
+
+    - canonical: "Cosmos DB"
+      variations:
+        - "cosmos db"
+        - "cosmosdb"
+      priority: low
+
+# ============================================
+# DATA TRANSFORMATION & MODELING
+# ============================================
+
+transformation_tools:
+
+  - canonical: "dbt"
+    variations:
+      - "dbt"
+      - "data build tool"
+    priority: medium  # 6% do dataset (crescendo)
+
+  - canonical: "Apache Hive"
+    variations:
+      - "hive"
+      - "apache hive"
+    priority: low
+
+  - canonical: "Presto"
+    variations:
+      - "presto"
+      - "prestodb"
+    priority: low
+
+  - canonical: "Trino"
+    variations:
+      - "trino"
+      - "trino sql"
+    priority: low
+
+  - canonical: "Denodo"
+    variations:
+      - "denodo"
+    priority: low  # Visto no dataset
+
+# ============================================
+# BI & VISUALIZATION
+# ============================================
+
+bi_tools:
+
+  - canonical: "Power BI"
+    variations:
+      - "power bi"
+      - "powerbi"
+      - "pbi"
+      - "microsoft power bi"
+    priority: medium  # 17% do dataset
+
+  - canonical: "Tableau"
+    variations:
+      - "tableau"
+    priority: medium
+
+  - canonical: "Looker"
+    variations:
+      - "looker"
+      - "google looker"
+    priority: low
+
+  - canonical: "Metabase"
+    variations:
+      - "metabase"
+    priority: low
+
+  - canonical: "Apache Superset"
+    variations:
+      - "superset"
+      - "apache superset"
+    priority: low
+
+  - canonical: "Grafana"
+    variations:
+      - "grafana"
+    priority: low
+
+  - canonical: "Qlik"
+    variations:
+      - "qlik"
+      - "qlikview"
+      - "qlik sense"
+    priority: low
+
+# ============================================
+# PYTHON LIBRARIES & FRAMEWORKS
+# ============================================
+
+python_libraries:
+
+  data_manipulation:
+    - canonical: "Pandas"
+      variations:
+        - "pandas"
+        - "pd"
+      priority: high
+
+    - canonical: "NumPy"
+      variations:
+        - "numpy"
+        - "np"
+      priority: high
+
+    - canonical: "Polars"
+      variations:
+        - "polars"
+      priority: low
+
+    - canonical: "Dask"
+      variations:
+        - "dask"
+      priority: low
+
+  machine_learning:
+    - canonical: "scikit-learn"
+      variations:
+        - "scikit-learn"
+        - "sklearn"
+        - "scikit learn"
+      priority: medium
+
+    - canonical: "TensorFlow"
+      variations:
+        - "tensorflow"
+        - "tf"
+      priority: low
+
+    - canonical: "PyTorch"
+      variations:
+        - "pytorch"
+        - "torch"
+      priority: low
+
+    - canonical: "Keras"
+      variations:
+        - "keras"
+      priority: low
+
+  web_frameworks:
+    - canonical: "FastAPI"
+      variations:
+        - "fastapi"
+      priority: low
+
+    - canonical: "Flask"
+      variations:
+        - "flask"
+      priority: low
+
+    - canonical: "Django"
+      variations:
+        - "django"
+      priority: low
+
+# ============================================
+# DEVOPS & CI/CD
+# ============================================
+
+devops_tools:
+
+  containerization:
+    - canonical: "Docker"
+      variations:
+        - "docker"
+      priority: high  # 37% do dataset
+
+    - canonical: "Kubernetes"
+      variations:
+        - "kubernetes"
+        - "k8s"
+      priority: medium  # 9% do dataset
+
+    - canonical: "OpenShift"
+      variations:
+        - "openshift"
+      priority: low
+
+  cicd:
+    - canonical: "CI/CD"
+      variations:
+        - "ci/cd"
+        - "cicd"
+        - "ci cd"
+        - "continuous integration"
+        - "continuous deployment"
+        - "continuous delivery"
+      priority: high  # 46% do dataset
+
+    - canonical: "Jenkins"
+      variations:
+        - "jenkins"
+      priority: medium
+
+    - canonical: "GitHub Actions"
+      variations:
+        - "github actions"
+        - "gh actions"
+      priority: medium
+
+    - canonical: "GitLab CI"
+      variations:
+        - "gitlab ci"
+        - "gitlab ci/cd"
+      priority: low
+
+    - canonical: "CircleCI"
+      variations:
+        - "circleci"
+        - "circle ci"
+      priority: low
+
+  iac:
+    - canonical: "Terraform"
+      variations:
+        - "terraform"
+      priority: medium  # 6% do dataset
+
+    - canonical: "Ansible"
+      variations:
+        - "ansible"
+      priority: low
+
+    - canonical: "CloudFormation"
+      variations:
+        - "cloudformation"
+        - "aws cloudformation"
+      priority: low
+
+    - canonical: "ARM Templates"
+      variations:
+        - "arm templates"
+        - "azure resource manager"
+      priority: low
+
+# ============================================
+# VERSION CONTROL
+# ============================================
+
+version_control:
+
+  - canonical: "Git"
+    variations:
+      - "git"
+    priority: high  # 11% do dataset
+
+  - canonical: "GitHub"
+    variations:
+      - "github"
+    priority: medium
+
+  - canonical: "GitLab"
+    variations:
+      - "gitlab"
+    priority: low
+
+  - canonical: "Bitbucket"
+    variations:
+      - "bitbucket"
+    priority: low
+
+# ============================================
+# DATA GOVERNANCE & QUALITY
+# ============================================
+
+governance_quality:
+
+  - canonical: "Data Governance"
+    variations:
+      - "data governance"
+      - "governance"
+    priority: high  # 37% do dataset
+
+  - canonical: "Data Quality"
+    variations:
+      - "data quality"
+      - "dq"
+    priority: high
+
+  - canonical: "Data Lineage"
+    variations:
+      - "data lineage"
+      - "lineage"
+    priority: medium
+
+  - canonical: "Data Catalog"
+    variations:
+      - "data catalog"
+      - "catalog"
+    priority: low
+
+  - canonical: "Azure Purview"
+    variations:
+      - "purview"
+      - "azure purview"
+    priority: low
+
+  - canonical: "Collibra"
+    variations:
+      - "collibra"
+    priority: low
+
+  - canonical: "Alation"
+    variations:
+      - "alation"
+    priority: low
+
+  - canonical: "Great Expectations"
+    variations:
+      - "great expectations"
+      - "ge"
+    priority: low
+
+# ============================================
+# PRACTICES & METHODOLOGIES
+# ============================================
+
+practices:
+
+  - canonical: "DevOps"
+    variations:
+      - "devops"
+      - "dev ops"
+    priority: high  # 37% do dataset
+
+  - canonical: "DataOps"
+    variations:
+      - "dataops"
+      - "data ops"
+    priority: medium
+
+  - canonical: "MLOps"
+    variations:
+      - "mlops"
+      - "ml ops"
+    priority: low
+
+  - canonical: "Agile"
+    variations:
+      - "agile"
+      - "agile methodology"
+    priority: medium
+
+  - canonical: "Scrum"
+    variations:
+      - "scrum"
+    priority: low
+
+  - canonical: "ETL"
+    variations:
+      - "etl"
+      - "extract transform load"
+    priority: high  # 71% do dataset
+
+  - canonical: "ELT"
+    variations:
+      - "elt"
+      - "extract load transform"
+    priority: medium
+
+  - canonical: "Data Mesh"
+    variations:
+      - "data mesh"
+    priority: low
+
+  - canonical: "Medallion Architecture"
+    variations:
+      - "medallion architecture"
+      - "bronze silver gold"
+    priority: low
+
+  - canonical: "Lakehouse"
+    variations:
+      - "lakehouse"
+      - "data lakehouse"
+    priority: medium
+
+  - canonical: "Data Warehouse"
+    variations:
+      - "data warehouse"
+      - "dwh"
+      - "data warehousing"
+    priority: high
+
+  - canonical: "Data Lake"
+    variations:
+      - "data lake"
+    priority: high  # 26% do dataset
+
+  - canonical: "API Development"
+    variations:
+      - "api development"
+      - "rest api"
+      - "restful"
+      - "graphql"
+    priority: medium
+
+# ============================================
+# MONITORING & LOGGING
+# ============================================
+
+monitoring_logging:
+
+  - canonical: "Prometheus"
+    variations:
+      - "prometheus"
+    priority: low
+
+  - canonical: "Grafana"
+    variations:
+      - "grafana"
+    priority: low
+
+  - canonical: "Datadog"
+    variations:
+      - "datadog"
+    priority: low
+
+  - canonical: "New Relic"
+    variations:
+      - "new relic"
+      - "newrelic"
+    priority: low
+
+  - canonical: "Splunk"
+    variations:
+      - "splunk"
+    priority: low
+
+  - canonical: "ELK Stack"
+    variations:
+      - "elk stack"
+      - "elk"
+      - "elasticsearch logstash kibana"
+    priority: low
+
+# ============================================
+# CERTIFICATIONS (Optional to detect)
+# ============================================
+
+certifications:
+
+  azure:
+    - canonical: "Azure Data Engineer Associate"
+      variations:
+        - "dp-203"
+        - "azure data engineer"
+        - "microsoft certified data engineer"
+      priority: low
+
+    - canonical: "Azure Solutions Architect"
+      variations:
+        - "az-305"
+        - "azure solutions architect"
+      priority: low
+
+  aws:
+    - canonical: "AWS Certified Data Analytics"
+      variations:
+        - "aws data analytics"
+        - "aws certified data analytics"
+      priority: low
+
+    - canonical: "AWS Solutions Architect"
+      variations:
+        - "aws solutions architect"
+      priority: low
+
+  gcp:
+    - canonical: "Google Professional Data Engineer"
+      variations:
+        - "google professional data engineer"
+        - "gcp data engineer"
+      priority: low
+
+# ============================================
+# SOFT SKILLS (Optional - harder to detect)
+# ============================================
+
+soft_skills:
+
+  - canonical: "Communication"
+    variations:
+      - "communication skills"
+      - "excellent communication"
+    priority: low
+
+  - canonical: "Problem Solving"
+    variations:
+      - "problem solving"
+      - "problem-solving"
+    priority: low
+
+  - canonical: "Team Collaboration"
+    variations:
+      - "team collaboration"
+      - "collaborative"
+    priority: low
+
+  - canonical: "Leadership"
+    variations:
+      - "leadership"
+      - "team leadership"
+    priority: low
+
+# ============================================
+# CONFIGURATION
+# ============================================
+
+config:
+  # Case sensitivity
+  case_sensitive: false
+
+  # Minimum skill name length to avoid false positives
+  min_skill_length: 2
+
+  # Word boundary enforcement
+  word_boundary: true
+
+  # Priority weights for ranking
+  priority_weights:
+    high: 3
+    medium: 2
+    low: 1

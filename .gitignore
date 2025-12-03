@@ -1,0 +1,28 @@
+# Environment variables
+.env
+
+# Python dependencies layer
+infra/layers/python-deps/python/
+
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars.example
+.terraform.lock.hcl
+
+# Lambda deployment packages
+*.zip
+tree.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+tmp/
+*.swp
+*.swo

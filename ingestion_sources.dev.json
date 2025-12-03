@@ -1,0 +1,63 @@
+[
+  
+  {
+    "source_id": "linkedin_brightdata_jobs_data_engineer_worldwide",
+    "source_type": "jobs_listing",
+
+    "provider": "brightdata",
+    "dataset_kind": "snapshot",
+
+    "domain": "linkedin",
+    "entity": "jobs",
+
+    "brightdata_dataset_id": "gd_lpfll7v5hcqtkxl6l",
+
+    "brightdata_extra_params": {
+      "include_errors": "true",
+      "type": "discover_new",
+      "discover_by": "url"
+    },
+
+     "request_urls": [
+      "https://www.linkedin.com/jobs/search/?currentJobId=43410979492&f_TPR=r3600&geoId=92000000&keywords=%22Data%20Engineer%22&origin=JOB_SEARCH_PAGE_SEARCH_BUTTON&refresh=true&sortBy=DD"
+    ],
+
+    "request_url": "https://api.brightdata.com/datasets/v3/trigger?dataset_id=gd_lpfll7v5hcqtkxl6l",
+    "bronze_prefix": "linkedin",
+    "file_format": "jsonl",
+
+    "enabled": true,
+    "schedule_group": "daily_midday",
+    "owner": "data-platform"
+  },
+  {
+    "source_id": "linkedin_brightdata_jobs_engenheiro_dados_brazil",
+    "source_type": "jobs_listing",
+
+    "provider": "brightdata",
+    "dataset_kind": "snapshot",
+
+    "domain": "linkedin",
+    "entity": "jobs",
+
+    "brightdata_dataset_id": "gd_lpfll7v5hcqtkxl6l",
+
+    "brightdata_extra_params": {
+      "include_errors": "true",
+      "type": "discover_new",
+      "discover_by": "url"
+    },
+
+     "request_urls": [
+      "https://www.linkedin.com/jobs/search/?currentJobId=4341321856&f_TPR=r3600&geoId=92000000&keywords=%22engenheiro%20de%20dados%22&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true&sortBy=DD"
+    ],
+
+    "request_url": "https://api.brightdata.com/datasets/v3/trigger?dataset_id=gd_lpfll7v5hcqtkxl6l",
+    "bronze_prefix": "linkedin",
+    "file_format": "jsonl",
+
+    "enabled": true,
+    "schedule_group": "daily_midday",
+    "owner": "data-platform"
+  }
+]

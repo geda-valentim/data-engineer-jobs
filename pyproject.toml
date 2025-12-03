@@ -1,0 +1,27 @@
+[project]
+name = "data-engineer-jobs"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Geda Valentim",email = "gedalias@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+
+dependencies = [
+    "boto3 (>=1.41.2,<2.0.0)",
+    "dotenv (>=0.9.9,<0.10.0)",
+    "requests (>=2.32.5,<3.0.0)",
+    "pendulum (>=3.1.0,<4.0.0)",
+    "lru-cache (>=0.2.3,<0.3.0)",
+    "python-dotenv (>=1.2.1,<2.0.0)"
+]
+
+[project.optional-dependencies]
+glue = [
+    "pyspark (>=4.0.1,<5.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
