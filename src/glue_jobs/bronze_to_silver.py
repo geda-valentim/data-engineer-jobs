@@ -1,5 +1,7 @@
 import sys
+import json
 
+import boto3
 from awsglue.transforms import *
 from awsglue.utils import getResolvedOptions
 from pyspark.context import SparkContext
@@ -12,15 +14,15 @@ from pyspark.sql.functions import (
     regexp_replace,
     to_timestamp,
     to_date,
-    coalesce,
-    sha2,
     row_number,
 )
 from pyspark.sql.window import Window
 
-# ----------------------------
-# Args
-# ----------------------------
+from skills_detection.skill_matcher import create_skills_udf, CATALOG_VERSION
+
+# -------------------------------------------------------------------
+# Args do Glue Job
+# -------------------------------------------------------------------
 args = getResolvedOptions(
     sys.argv,
     [
@@ -45,9 +47,14 @@ MONTH = args["month"]
 DAY = args["day"]
 HOUR = args["hour"]
 
-# ----------------------------
-# Glue / Spark setup
-# ----------------------------
+# -------------------------------------------------------------------
+# Config do catálogo de skills
+# -------------------------------------------------------------------
+SKILLS_CATALOG_KEY = "reference/skills/skills_catalog.json"
+
+# -------------------------------------------------------------------
+# Contexto Glue / Spark
+# -------------------------------------------------------------------
 sc = SparkContext()
 glueContext = GlueContext(sc)
 spark = glueContext.spark_session
@@ -55,6 +62,9 @@ spark = glueContext.spark_session
 job = Job(glueContext)
 job.init(JOB_NAME, args)
 
+# -------------------------------------------------------------------
+# Caminhos S3
+# -------------------------------------------------------------------
 bronze_path = (
     f"s3://{BRONZE_BUCKET}/{SOURCE_SYSTEM}/"
     f"year={YEAR}/month={MONTH}/day={DAY}/hour={HOUR}/"
@@ -65,9 +75,9 @@ silver_base_path = f"s3://{SILVER_BUCKET}/{SOURCE_SYSTEM}/"
 print(f"[bronze_to_silver] Reading from: {bronze_path}")
 print(f"[bronze_to_silver] Writing to: {silver_base_path}")
 
-# ----------------------------
-# Read bronze
-# ----------------------------
+# -------------------------------------------------------------------
+# Leitura Bronze
+# -------------------------------------------------------------------
 try:
     df_bronze = spark.read.json(bronze_path)
 except Exception as e:
@@ -80,9 +90,9 @@ if df_bronze.rdd.isEmpty():
     job.commit()
     sys.exit(0)
 
-# ----------------------------
-# Basic cleaning / typing
-# ----------------------------
+# -------------------------------------------------------------------
+# Limpeza / Normalização básica
+# -------------------------------------------------------------------
 html_tag_pattern = "<[^>]+>"
 
 df_clean = (
@@ -122,6 +132,7 @@ df_clean = (
     .withColumn("scraped_at", to_timestamp(col("timestamp_raw")))
 )
 
+# HTML -> texto plano
 df_clean = df_clean.withColumn(
     "job_description_text",
     regexp_replace(col("job_description_html"), html_tag_pattern, " "),
@@ -132,6 +143,7 @@ df_clean = df_clean.withColumn(
     regexp_replace(col("job_description_text"), r"\s+", " "),
 )
 
+# Partições de data
 df_clean = (
     df_clean
     .withColumn("year", lit(int(YEAR)))
@@ -140,40 +152,10 @@ df_clean = (
     .withColumn("hour", lit(int(HOUR)))
 )
 
-# ----------------------------
-# Dedup técnico dentro do batch
-# ----------------------------
-# job_unique_id: chave técnica da vaga
-df_with_key = (
-    df_clean
-    .withColumn(
-        "job_unique_id",
-        coalesce(
-            col("job_posting_id"),
-            sha2(col("url"), 256),
-        ),
-    )
-    .withColumn("ingestion_ts", col("scraped_at"))
-)
-
-# Janela por (job_unique_id, ingestion_ts) – ou seja,
-# mesma vaga no mesmo timestamp de ingestão (batch/hora).
-w_batch = Window.partitionBy("job_unique_id", "ingestion_ts").orderBy(
-    col("scraped_at").desc()
-)
-
-df_dedup = (
-    df_with_key
-    .withColumn("rn", row_number().over(w_batch))
-    .filter(col("rn") == 1)
-    .drop("rn")
-)
-
-# ----------------------------
-# Seleção de colunas finais da silver
-# ----------------------------
+# -------------------------------------------------------------------
+# Colunas base do Silver (antes das skills)
+# -------------------------------------------------------------------
 silver_cols = [
-    "job_unique_id",           # <--- chave técnica para gold/ATS
     "job_posting_id",
     "source_system",
     "url",
@@ -209,13 +191,76 @@ silver_cols = [
     "hour",
 ]
 
-df_silver = df_dedup.select(*silver_cols)
+df_silver_base = df_clean.select(*silver_cols)
 
-# ----------------------------
-# Write silver
-# ----------------------------
+# -------------------------------------------------------------------
+# Leitura do catálogo de Skills (JSON no S3)
+# -------------------------------------------------------------------
+print(f"[bronze_to_silver] Loading skills catalog from s3://{SILVER_BUCKET}/{SKILLS_CATALOG_KEY}")
+
+s3_client = boto3.client("s3")
+
+try:
+    obj = s3_client.get_object(Bucket=SILVER_BUCKET, Key=SKILLS_CATALOG_KEY)
+    catalog_json = obj["Body"].read().decode("utf-8")
+    catalog_dict = json.loads(catalog_json)
+except Exception as e:
+    print(f"[bronze_to_silver] ERROR reading skills catalog: {e}")
+    catalog_dict = {}
+
+# Cria UDF usando módulo compartilhado
+detect_skills_udf = create_skills_udf(sc, catalog_dict, version=CATALOG_VERSION)
+print(f"[bronze_to_silver] Skills UDF created with catalog version {CATALOG_VERSION}")
+
+# -------------------------------------------------------------------
+# Aplica extração de skills
+# -------------------------------------------------------------------
+df_with_skills = df_silver_base.withColumn(
+    "skills_struct",
+    detect_skills_udf(col("job_title"), col("job_description_text")),
+).withColumn(
+    "skills_canonical", col("skills_struct.skills_canonical")
+).withColumn(
+    "skills_families", col("skills_struct.skills_families")
+).withColumn(
+    "skills_raw_hits", col("skills_struct.skills_raw_hits")
+).withColumn(
+    "skills_catalog_version", col("skills_struct.skills_catalog_version")
+).drop("skills_struct")
+
+silver_cols_with_skills = silver_cols + [
+    "skills_canonical",
+    "skills_families",
+    "skills_raw_hits",
+    "skills_catalog_version",
+]
+
+df_silver_enriched = df_with_skills.select(*silver_cols_with_skills)
+
+# -------------------------------------------------------------------
+# Dedup técnico por job_posting_id (mantém scrape mais recente)
+# -------------------------------------------------------------------
+print("[bronze_to_silver] Applying technical dedup on job_posting_id/scraped_at")
+
+w = Window.partitionBy("job_posting_id").orderBy(col("scraped_at").desc())
+
+df_not_null = df_silver_enriched.filter(col("job_posting_id").isNotNull())
+df_null = df_silver_enriched.filter(col("job_posting_id").isNull())
+
+df_not_null_dedup = (
+    df_not_null
+    .withColumn("rn", row_number().over(w))
+    .filter(col("rn") == 1)
+    .drop("rn")
+)
+
+df_final = df_not_null_dedup.unionByName(df_null)
+
+# -------------------------------------------------------------------
+# Escrita no Silver
+# -------------------------------------------------------------------
 (
-    df_silver
+    df_final
     .repartition("year", "month", "day", "hour")
     .write
     .mode("append")
@@ -224,6 +269,6 @@ df_silver = df_dedup.select(*silver_cols)
     .save(silver_base_path)
 )
 
-print("[bronze_to_silver] Successfully wrote silver data.")
+print("[bronze_to_silver] Successfully wrote silver data with skills enrichment + dedup.")
 
 job.commit()

@@ -243,50 +243,53 @@ cloud_platforms:
 
 programming_languages:
 
-  - canonical: "Python"
+  python:
+    canonical: "Python"
     variations:
       - "python"
       - "python3"
       - "py"
     priority: high  # 63% do dataset
 
-  - canonical: "SQL"
+  sql:
+    canonical: "SQL"
     variations:
       - "sql"
       - "structured query language"
-    priority: high  # 40% do dataset
-    sub_variations:
       - "t-sql"
       - "transact-sql"
       - "pl/sql"
       - "pl-sql"
-      - "mysql"
-      - "postgresql"
-      - "postgres"
+    priority: high  # 40% do dataset
 
-  - canonical: "Scala"
+  scala:
+    canonical: "Scala"
     variations:
       - "scala"
     priority: medium  # 9% do dataset
 
-  - canonical: "Java"
+  java:
+    canonical: "Java"
     variations:
       - "java"
     priority: medium  # 6% do dataset
 
-  - canonical: "R"
+  r:
+    canonical: "R"
     variations:
       - "r programming"
       - "r language"
     priority: low
 
-  - canonical: "Go"
+  go:
+    canonical: "Go"
     variations:
       - "go"
       - "golang"
     priority: low
 
-  - canonical: "JavaScript"
+  javascript:
+    canonical: "JavaScript"
     variations:
       - "javascript"
       - "js"
@@ -294,18 +297,21 @@ programming_languages:
       - "nodejs"
     priority: low
 
-  - canonical: "TypeScript"
+  typescript:
+    canonical: "TypeScript"
     variations:
       - "typescript"
       - "ts"
     priority: low
 
-  - canonical: "Rust"
+  rust:
+    canonical: "Rust"
     variations:
       - "rust"
     priority: low
 
-  - canonical: "C#"
+  csharp:
+    canonical: "C#"
     variations:
       - "c#"
       - "csharp"
@@ -318,7 +324,8 @@ programming_languages:
 
 data_processing:
 
-  - canonical: "Apache Spark"
+  spark:
+    canonical: "Apache Spark"
     variations:
       - "spark"
       - "apache spark"
@@ -326,42 +333,49 @@ data_processing:
       - "spark sql"
     priority: high  # 74% do dataset
 
-  - canonical: "Apache Kafka"
+  kafka:
+    canonical: "Apache Kafka"
     variations:
       - "kafka"
       - "apache kafka"
     priority: medium
 
-  - canonical: "Apache Flink"
+  flink:
+    canonical: "Apache Flink"
     variations:
       - "flink"
       - "apache flink"
     priority: low
 
-  - canonical: "Apache Beam"
+  beam:
+    canonical: "Apache Beam"
     variations:
       - "beam"
       - "apache beam"
     priority: low
 
-  - canonical: "Databricks"
+  databricks:
+    canonical: "Databricks"
     variations:
       - "databricks"
     priority: high  # 43% do dataset
 
-  - canonical: "Delta Lake"
+  delta_lake:
+    canonical: "Delta Lake"
     variations:
       - "delta lake"
       - "delta"
     priority: medium
 
-  - canonical: "Apache Iceberg"
+  iceberg:
+    canonical: "Apache Iceberg"
     variations:
       - "iceberg"
       - "apache iceberg"
     priority: low
 
-  - canonical: "Apache Hudi"
+  hudi:
+    canonical: "Apache Hudi"
     variations:
       - "hudi"
       - "apache hudi"
@@ -373,29 +387,34 @@ data_processing:
 
 orchestration:
 
-  - canonical: "Apache Airflow"
+  airflow:
+    canonical: "Apache Airflow"
     variations:
       - "airflow"
       - "apache airflow"
     priority: high  # 34% do dataset
 
-  - canonical: "Prefect"
+  prefect:
+    canonical: "Prefect"
     variations:
       - "prefect"
     priority: low
 
-  - canonical: "Dagster"
+  dagster:
+    canonical: "Dagster"
     variations:
       - "dagster"
     priority: low
 
-  - canonical: "Luigi"
+  luigi:
+    canonical: "Luigi"
     variations:
       - "luigi"
       - "spotify luigi"
     priority: low
 
-  - canonical: "Apache NiFi"
+  nifi:
+    canonical: "Apache NiFi"
     variations:
       - "nifi"
       - "apache nifi"
@@ -407,33 +426,39 @@ orchestration:
 
 data_warehouses:
 
-  - canonical: "Snowflake"
+  snowflake:
+    canonical: "Snowflake"
     variations:
       - "snowflake"
     priority: high  # 31% do dataset
 
-  - canonical: "Google BigQuery"
+  bigquery:
+    canonical: "Google BigQuery"
     variations:
       - "bigquery"
       - "big query"
     priority: high
 
-  - canonical: "Amazon Redshift"
+  redshift:
+    canonical: "Amazon Redshift"
     variations:
       - "redshift"
     priority: high
 
-  - canonical: "Azure Synapse Analytics"
+  synapse:
+    canonical: "Azure Synapse Analytics"
     variations:
       - "synapse"
     priority: high
 
-  - canonical: "Teradata"
+  teradata:
+    canonical: "Teradata"
     variations:
       - "teradata"
     priority: low
 
-  - canonical: "Oracle Exadata"
+  exadata:
+    canonical: "Oracle Exadata"
     variations:
       - "exadata"
       - "oracle exadata"
@@ -441,78 +466,87 @@ data_warehouses:
 
 databases:
 
-  relational:
-    - canonical: "PostgreSQL"
-      variations:
-        - "postgresql"
-        - "postgres"
-        - "psql"
-      priority: medium
+  postgresql:
+    canonical: "PostgreSQL"
+    variations:
+      - "postgresql"
+      - "postgres"
+      - "psql"
+    priority: medium
 
-    - canonical: "MySQL"
-      variations:
-        - "mysql"
-      priority: medium
+  mysql:
+    canonical: "MySQL"
+    variations:
+      - "mysql"
+    priority: medium
 
-    - canonical: "Microsoft SQL Server"
-      variations:
-        - "sql server"
-        - "mssql"
-        - "ms sql"
-      priority: medium
+  sqlserver:
+    canonical: "Microsoft SQL Server"
+    variations:
+      - "sql server"
+      - "mssql"
+      - "ms sql"
+    priority: medium
 
-    - canonical: "Oracle Database"
-      variations:
-        - "oracle"
-        - "oracle db"
-        - "oracle database"
-      priority: low
+  oracle:
+    canonical: "Oracle Database"
+    variations:
+      - "oracle"
+      - "oracle db"
+      - "oracle database"
+    priority: low
 
-    - canonical: "MariaDB"
-      variations:
-        - "mariadb"
-      priority: low
+  mariadb:
+    canonical: "MariaDB"
+    variations:
+      - "mariadb"
+    priority: low
 
-  nosql:
-    - canonical: "MongoDB"
-      variations:
-        - "mongodb"
-        - "mongo"
-      priority: medium
+  mongodb:
+    canonical: "MongoDB"
+    variations:
+      - "mongodb"
+      - "mongo"
+    priority: medium
 
-    - canonical: "Cassandra"
-      variations:
-        - "cassandra"
-        - "apache cassandra"
-      priority: low
+  cassandra:
+    canonical: "Cassandra"
+    variations:
+      - "cassandra"
+      - "apache cassandra"
+    priority: low
 
-    - canonical: "Redis"
-      variations:
-        - "redis"
-      priority: low
+  redis:
+    canonical: "Redis"
+    variations:
+      - "redis"
+    priority: low
 
-    - canonical: "Elasticsearch"
-      variations:
-        - "elasticsearch"
-        - "elastic search"
-        - "es"
-      priority: low
+  elasticsearch:
+    canonical: "Elasticsearch"
+    variations:
+      - "elasticsearch"
+      - "elastic search"
+    priority: low
 
-    - canonical: "Neo4j"
-      variations:
-        - "neo4j"
-      priority: low
+  neo4j:
+    canonical: "Neo4j"
+    variations:
+      - "neo4j"
+    priority: low
 
-    - canonical: "DynamoDB"
-      variations:
-        - "dynamodb"
-      priority: low
+  dynamodb:
+    canonical: "DynamoDB"
+    variations:
+      - "dynamodb"
+    priority: low
 
-    - canonical: "Cosmos DB"
-      variations:
-        - "cosmos db"
-        - "cosmosdb"
-      priority: low
+  cosmosdb:
+    canonical: "Cosmos DB"
+    variations:
+      - "cosmos db"
+      - "cosmosdb"
+    priority: low
 
 # ============================================
 # DATA TRANSFORMATION & MODELING
@@ -520,31 +554,36 @@ databases:
 
 transformation_tools:
 
-  - canonical: "dbt"
+  dbt:
+    canonical: "dbt"
     variations:
       - "dbt"
       - "data build tool"
     priority: medium  # 6% do dataset (crescendo)
 
-  - canonical: "Apache Hive"
+  hive:
+    canonical: "Apache Hive"
     variations:
       - "hive"
       - "apache hive"
     priority: low
 
-  - canonical: "Presto"
+  presto:
+    canonical: "Presto"
     variations:
       - "presto"
       - "prestodb"
     priority: low
 
-  - canonical: "Trino"
+  trino:
+    canonical: "Trino"
     variations:
       - "trino"
       - "trino sql"
     priority: low
 
-  - canonical: "Denodo"
+  denodo:
+    canonical: "Denodo"
     variations:
       - "denodo"
     priority: low  # Visto no dataset
@@ -555,7 +594,8 @@ transformation_tools:
 
 bi_tools:
 
-  - canonical: "Power BI"
+  powerbi:
+    canonical: "Power BI"
     variations:
       - "power bi"
       - "powerbi"
@@ -563,34 +603,40 @@ bi_tools:
       - "microsoft power bi"
     priority: medium  # 17% do dataset
 
-  - canonical: "Tableau"
+  tableau:
+    canonical: "Tableau"
     variations:
       - "tableau"
     priority: medium
 
-  - canonical: "Looker"
+  looker:
+    canonical: "Looker"
     variations:
       - "looker"
       - "google looker"
     priority: low
 
-  - canonical: "Metabase"
+  metabase:
+    canonical: "Metabase"
     variations:
       - "metabase"
     priority: low
 
-  - canonical: "Apache Superset"
+  superset:
+    canonical: "Apache Superset"
     variations:
       - "superset"
       - "apache superset"
     priority: low
 
-  - canonical: "Grafana"
+  grafana:
+    canonical: "Grafana"
     variations:
       - "grafana"
     priority: low
 
-  - canonical: "Qlik"
+  qlik:
+    canonical: "Qlik"
     variations:
       - "qlik"
       - "qlikview"
@@ -603,69 +649,74 @@ bi_tools:
 
 python_libraries:
 
-  data_manipulation:
-    - canonical: "Pandas"
-      variations:
-        - "pandas"
-        - "pd"
-      priority: high
+  pandas:
+    canonical: "Pandas"
+    variations:
+      - "pandas"
+    priority: high
 
-    - canonical: "NumPy"
-      variations:
-        - "numpy"
-        - "np"
-      priority: high
+  numpy:
+    canonical: "NumPy"
+    variations:
+      - "numpy"
+    priority: high
 
-    - canonical: "Polars"
-      variations:
-        - "polars"
-      priority: low
+  polars:
+    canonical: "Polars"
+    variations:
+      - "polars"
+    priority: low
 
-    - canonical: "Dask"
-      variations:
-        - "dask"
-      priority: low
+  dask:
+    canonical: "Dask"
+    variations:
+      - "dask"
+    priority: low
 
-  machine_learning:
-    - canonical: "scikit-learn"
-      variations:
-        - "scikit-learn"
-        - "sklearn"
-        - "scikit learn"
-      priority: medium
+  sklearn:
+    canonical: "scikit-learn"
+    variations:
+      - "scikit-learn"
+      - "sklearn"
+      - "scikit learn"
+    priority: medium
 
-    - canonical: "TensorFlow"
-      variations:
-        - "tensorflow"
-        - "tf"
-      priority: low
+  tensorflow:
+    canonical: "TensorFlow"
+    variations:
+      - "tensorflow"
+    priority: low
 
-    - canonical: "PyTorch"
-      variations:
-        - "pytorch"
-        - "torch"
-      priority: low
+  pytorch:
+    canonical: "PyTorch"
+    variations:
+      - "pytorch"
+      - "torch"
+    priority: low
 
-    - canonical: "Keras"
-      variations:
-        - "keras"
-      priority: low
+  keras:
+    canonical: "Keras"
+    variations:
+      - "keras"
+    priority: low
 
-  web_frameworks:
-    - canonical: "FastAPI"
-      variations:
-        - "fastapi"
-      priority: low
+  fastapi:
+    canonical: "FastAPI"
+    variations:
+      - "fastapi"
+    priority: low
 
-    - canonical: "Flask"
-      variations:
-        - "flask"
-      priority: low
+  flask:
+    canonical: "Flask"
+    variations:
+      - "flask"
+    priority: low
 
-    - canonical: "Django"
-      variations:
-        - "django"
-      priority: low
+  django:
+    canonical: "Django"
+    variations:
+      - "django"
+    priority: low
 
 # ============================================
 # DEVOPS & CI/CD
@@ -673,79 +724,88 @@ python_libraries:
 
 devops_tools:
 
-  containerization:
-    - canonical: "Docker"
-      variations:
-        - "docker"
-      priority: high  # 37% do dataset
+  docker:
+    canonical: "Docker"
+    variations:
+      - "docker"
+    priority: high  # 37% do dataset
 
-    - canonical: "Kubernetes"
-      variations:
-        - "kubernetes"
-        - "k8s"
-      priority: medium  # 9% do dataset
+  kubernetes:
+    canonical: "Kubernetes"
+    variations:
+      - "kubernetes"
+      - "k8s"
+    priority: medium  # 9% do dataset
 
-    - canonical: "OpenShift"
-      variations:
-        - "openshift"
-      priority: low
+  openshift:
+    canonical: "OpenShift"
+    variations:
+      - "openshift"
+    priority: low
 
   cicd:
-    - canonical: "CI/CD"
-      variations:
-        - "ci/cd"
-        - "cicd"
-        - "ci cd"
-        - "continuous integration"
-        - "continuous deployment"
-        - "continuous delivery"
-      priority: high  # 46% do dataset
+    canonical: "CI/CD"
+    variations:
+      - "ci/cd"
+      - "cicd"
+      - "ci cd"
+      - "continuous integration"
+      - "continuous deployment"
+      - "continuous delivery"
+    priority: high  # 46% do dataset
 
-    - canonical: "Jenkins"
-      variations:
-        - "jenkins"
-      priority: medium
+  jenkins:
+    canonical: "Jenkins"
+    variations:
+      - "jenkins"
+    priority: medium
 
-    - canonical: "GitHub Actions"
-      variations:
-        - "github actions"
-        - "gh actions"
-      priority: medium
+  github_actions:
+    canonical: "GitHub Actions"
+    variations:
+      - "github actions"
+      - "gh actions"
+    priority: medium
 
-    - canonical: "GitLab CI"
-      variations:
-        - "gitlab ci"
-        - "gitlab ci/cd"
-      priority: low
+  gitlab_ci:
+    canonical: "GitLab CI"
+    variations:
+      - "gitlab ci"
+      - "gitlab ci/cd"
+    priority: low
 
-    - canonical: "CircleCI"
-      variations:
-        - "circleci"
-        - "circle ci"
-      priority: low
+  circleci:
+    canonical: "CircleCI"
+    variations:
+      - "circleci"
+      - "circle ci"
+    priority: low
 
-  iac:
-    - canonical: "Terraform"
-      variations:
-        - "terraform"
-      priority: medium  # 6% do dataset
+  terraform:
+    canonical: "Terraform"
+    variations:
+      - "terraform"
+    priority: medium  # 6% do dataset
 
-    - canonical: "Ansible"
-      variations:
-        - "ansible"
-      priority: low
+  ansible:
+    canonical: "Ansible"
+    variations:
+      - "ansible"
+    priority: low
 
-    - canonical: "CloudFormation"
-      variations:
-        - "cloudformation"
-        - "aws cloudformation"
-      priority: low
+  cloudformation:
+    canonical: "CloudFormation"
+    variations:
+      - "cloudformation"
+      - "aws cloudformation"
+    priority: low
 
-    - canonical: "ARM Templates"
-      variations:
-        - "arm templates"
-        - "azure resource manager"
-      priority: low
+  arm_templates:
+    canonical: "ARM Templates"
+    variations:
+      - "arm templates"
+      - "azure resource manager"
+    priority: low
 
 # ============================================
 # VERSION CONTROL
@@ -753,22 +813,26 @@ devops_tools:
 
 version_control:
 
-  - canonical: "Git"
+  git:
+    canonical: "Git"
     variations:
       - "git"
     priority: high  # 11% do dataset
 
-  - canonical: "GitHub"
+  github:
+    canonical: "GitHub"
     variations:
       - "github"
     priority: medium
 
-  - canonical: "GitLab"
+  gitlab:
+    canonical: "GitLab"
     variations:
       - "gitlab"
     priority: low
 
-  - canonical: "Bitbucket"
+  bitbucket:
+    canonical: "Bitbucket"
     variations:
       - "bitbucket"
     priority: low
@@ -779,50 +843,54 @@ version_control:
 
 governance_quality:
 
-  - canonical: "Data Governance"
+  data_governance:
+    canonical: "Data Governance"
     variations:
       - "data governance"
-      - "governance"
     priority: high  # 37% do dataset
 
-  - canonical: "Data Quality"
+  data_quality:
+    canonical: "Data Quality"
     variations:
       - "data quality"
-      - "dq"
     priority: high
 
-  - canonical: "Data Lineage"
+  data_lineage:
+    canonical: "Data Lineage"
     variations:
       - "data lineage"
       - "lineage"
     priority: medium
 
-  - canonical: "Data Catalog"
+  data_catalog:
+    canonical: "Data Catalog"
     variations:
       - "data catalog"
-      - "catalog"
     priority: low
 
-  - canonical: "Azure Purview"
+  purview:
+    canonical: "Azure Purview"
     variations:
       - "purview"
       - "azure purview"
     priority: low
 
-  - canonical: "Collibra"
+  collibra:
+    canonical: "Collibra"
     variations:
       - "collibra"
     priority: low
 
-  - canonical: "Alation"
+  alation:
+    canonical: "Alation"
     variations:
       - "alation"
     priority: low
 
-  - canonical: "Great Expectations"
+  great_expectations:
+    canonical: "Great Expectations"
     variations:
       - "great expectations"
-      - "ge"
     priority: low
 
 # ============================================
@@ -831,77 +899,90 @@ governance_quality:
 
 practices:
 
-  - canonical: "DevOps"
+  devops:
+    canonical: "DevOps"
     variations:
       - "devops"
       - "dev ops"
     priority: high  # 37% do dataset
 
-  - canonical: "DataOps"
+  dataops:
+    canonical: "DataOps"
     variations:
       - "dataops"
       - "data ops"
     priority: medium
 
-  - canonical: "MLOps"
+  mlops:
+    canonical: "MLOps"
     variations:
       - "mlops"
       - "ml ops"
     priority: low
 
-  - canonical: "Agile"
+  agile:
+    canonical: "Agile"
     variations:
       - "agile"
       - "agile methodology"
     priority: medium
 
-  - canonical: "Scrum"
+  scrum:
+    canonical: "Scrum"
     variations:
       - "scrum"
     priority: low
 
-  - canonical: "ETL"
+  etl:
+    canonical: "ETL"
     variations:
       - "etl"
       - "extract transform load"
     priority: high  # 71% do dataset
 
-  - canonical: "ELT"
+  elt:
+    canonical: "ELT"
     variations:
       - "elt"
       - "extract load transform"
     priority: medium
 
-  - canonical: "Data Mesh"
+  data_mesh:
+    canonical: "Data Mesh"
     variations:
       - "data mesh"
     priority: low
 
-  - canonical: "Medallion Architecture"
+  medallion:
+    canonical: "Medallion Architecture"
     variations:
       - "medallion architecture"
       - "bronze silver gold"
     priority: low
 
-  - canonical: "Lakehouse"
+  lakehouse:
+    canonical: "Lakehouse"
     variations:
       - "lakehouse"
       - "data lakehouse"
     priority: medium
 
-  - canonical: "Data Warehouse"
+  data_warehouse:
+    canonical: "Data Warehouse"
     variations:
       - "data warehouse"
       - "dwh"
       - "data warehousing"
     priority: high
 
-  - canonical: "Data Lake"
+  data_lake:
+    canonical: "Data Lake"
     variations:
       - "data lake"
     priority: high  # 26% do dataset
 
-  - canonical: "API Development"
+  api_development:
+    canonical: "API Development"
     variations:
       - "api development"
       - "rest api"
@@ -915,33 +996,39 @@ practices:
 
 monitoring_logging:
 
-  - canonical: "Prometheus"
+  prometheus:
+    canonical: "Prometheus"
     variations:
       - "prometheus"
     priority: low
 
-  - canonical: "Grafana"
+  grafana_monitoring:
+    canonical: "Grafana"
     variations:
       - "grafana"
     priority: low
 
-  - canonical: "Datadog"
+  datadog:
+    canonical: "Datadog"
     variations:
       - "datadog"
     priority: low
 
-  - canonical: "New Relic"
+  newrelic:
+    canonical: "New Relic"
     variations:
       - "new relic"
       - "newrelic"
     priority: low
 
-  - canonical: "Splunk"
+  splunk:
+    canonical: "Splunk"
     variations:
       - "splunk"
     priority: low
 
-  - canonical: "ELK Stack"
+  elk_stack:
+    canonical: "ELK Stack"
     variations:
       - "elk stack"
       - "elk"
@@ -954,38 +1041,40 @@ monitoring_logging:
 
 certifications:
 
-  azure:
-    - canonical: "Azure Data Engineer Associate"
-      variations:
-        - "dp-203"
-        - "azure data engineer"
-        - "microsoft certified data engineer"
-      priority: low
+  azure_data_engineer:
+    canonical: "Azure Data Engineer Associate"
+    variations:
+      - "dp-203"
+      - "azure data engineer"
+      - "microsoft certified data engineer"
+    priority: low
 
-    - canonical: "Azure Solutions Architect"
-      variations:
-        - "az-305"
-        - "azure solutions architect"
-      priority: low
+  azure_solutions_architect:
+    canonical: "Azure Solutions Architect"
+    variations:
+      - "az-305"
+      - "azure solutions architect"
+    priority: low
 
-  aws:
-    - canonical: "AWS Certified Data Analytics"
-      variations:
-        - "aws data analytics"
-        - "aws certified data analytics"
-      priority: low
+  aws_data_analytics:
+    canonical: "AWS Certified Data Analytics"
+    variations:
+      - "aws data analytics"
+      - "aws certified data analytics"
+    priority: low
 
-    - canonical: "AWS Solutions Architect"
-      variations:
-        - "aws solutions architect"
-      priority: low
+  aws_solutions_architect:
+    canonical: "AWS Solutions Architect"
+    variations:
+      - "aws solutions architect"
+    priority: low
 
-  gcp:
-    - canonical: "Google Professional Data Engineer"
-      variations:
-        - "google professional data engineer"
-        - "gcp data engineer"
-      priority: low
+  gcp_data_engineer:
+    canonical: "Google Professional Data Engineer"
+    variations:
+      - "google professional data engineer"
+      - "gcp data engineer"
+    priority: low
 
 # ============================================
 # SOFT SKILLS (Optional - harder to detect)
@@ -993,25 +1082,29 @@ certifications:
 
 soft_skills:
 
-  - canonical: "Communication"
+  communication:
+    canonical: "Communication"
     variations:
       - "communication skills"
       - "excellent communication"
     priority: low
 
-  - canonical: "Problem Solving"
+  problem_solving:
+    canonical: "Problem Solving"
     variations:
       - "problem solving"
       - "problem-solving"
     priority: low
 
-  - canonical: "Team Collaboration"
+  collaboration:
+    canonical: "Team Collaboration"
     variations:
       - "team collaboration"
       - "collaborative"
     priority: low
 
-  - canonical: "Leadership"
+  leadership:
+    canonical: "Leadership"
     variations:
       - "leadership"
       - "team leadership"

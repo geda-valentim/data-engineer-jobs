@@ -83,6 +83,19 @@ resource "aws_iam_role_policy" "glue_bronze_to_silver_policy" {
         ]
       },
 
+      # 🔹 Ler catálogo de skills no Silver (reference/skills/*)
+      {
+        Effect = "Allow"
+        Action = [
+          "s3:GetObject",
+          "s3:ListBucket"
+        ]
+        Resource = [
+          "arn:aws:s3:::${var.silver_bucket_name}",
+          "arn:aws:s3:::${var.silver_bucket_name}/reference/skills/*"
+        ]
+      },
+
       # 🔹 Logs do Glue
       {
         Effect = "Allow"

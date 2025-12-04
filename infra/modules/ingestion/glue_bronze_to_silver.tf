@@ -41,7 +41,14 @@ resource "aws_glue_job" "bronze_to_silver" {
     "--bronze_bucket"                    = var.bronze_bucket_name
     "--silver_bucket"                    = var.silver_bucket_name
     "--source_system"                    = "linkedin"
+    # Módulo de skills compartilhado
+    "--extra-py-files"                   = "s3://${var.glue_scripts_bucket_name}/glue/skills_detection/skill_matcher.py"
   }
+
+  depends_on = [
+    aws_s3_object.glue_skill_matcher_module,
+    aws_s3_object.glue_skill_matcher_init,
+  ]
 
   max_retries = 1
   timeout     = 20
