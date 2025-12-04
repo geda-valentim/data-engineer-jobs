@@ -12,13 +12,8 @@ layer: ## Cria Lambda Layer com dependências Python
 	@echo "🔨 Building Lambda Layer..."
 	@bash infra/scripts/build-layer.sh
 
-skills-catalog: ## Converte skills_catalog.yaml para JSON
-	@echo "📋 Converting skills catalog to JSON..."
-	@python3 -c "import yaml, json, pathlib; \
-		p = pathlib.Path('src/skills_detection/config/skills_catalog.yaml'); \
-		out = p.with_suffix('.json'); \
-		out.write_text(json.dumps(yaml.safe_load(p.read_text()), indent=2)); \
-		print('  ✓', out)"
+skills-catalog: ## Converte skills_catalog.yaml para JSON e cria zip para Glue
+	@bash infra/scripts/build-skills.sh
 
 init: ## Inicializa Terraform
 	cd $(TF_DIR) && terraform init
@@ -35,11 +30,12 @@ apply: layer skills-catalog ## Aplica mudanças (com layer atualizado)
 deploy: apply ## Alias pra apply
 	@true
 
-clean: ## Remove arquivos gerados (layer, skills json)
+clean: ## Remove arquivos gerados (layer, skills json, zip)
 	@echo "🧹 Cleaning up..."
 	rm -rf infra/layers/python-deps/layer.zip
 	rm -rf infra/layers/python-deps/python/
 	rm -f src/skills_detection/config/skills_catalog.json
+	rm -f infra/modules/ingestion/skills_detection.zip
 
 destroy: ## Destroi toda infraestrutura
 	cd $(TF_DIR) && terraform destroy

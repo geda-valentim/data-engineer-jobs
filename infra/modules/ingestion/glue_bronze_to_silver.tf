@@ -26,6 +26,11 @@ resource "aws_glue_job" "bronze_to_silver" {
   number_of_workers = 2
   worker_type       = "G.1X"
 
+  # Permite múltiplas execuções simultâneas (ex: 2 scrapers rodando ao mesmo tempo)
+  execution_property {
+    max_concurrent_runs = 5
+  }
+
   command {
     name            = "glueetl"
     script_location = "s3://${var.glue_scripts_bucket_name}/${aws_s3_object.glue_bronze_to_silver_script.key}"
@@ -42,13 +47,10 @@ resource "aws_glue_job" "bronze_to_silver" {
     "--silver_bucket"                    = var.silver_bucket_name
     "--source_system"                    = "linkedin"
     # Módulo de skills compartilhado
-    "--extra-py-files"                   = "s3://${var.glue_scripts_bucket_name}/glue/skills_detection/skill_matcher.py"
+    "--extra-py-files"                   = "s3://${var.glue_scripts_bucket_name}/glue/skills_detection.zip"
   }
 
-  depends_on = [
-    aws_s3_object.glue_skill_matcher_module,
-    aws_s3_object.glue_skill_matcher_init,
-  ]
+  depends_on = [aws_s3_object.glue_skills_detection_zip]
 
   max_retries = 1
   timeout     = 20

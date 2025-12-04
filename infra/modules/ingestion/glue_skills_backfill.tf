@@ -10,21 +10,13 @@ resource "aws_s3_object" "glue_skills_backfill_script" {
   etag   = filemd5("${path.module}/../../../src/glue_jobs/skills_backfill.py")
 }
 
-# Upload do módulo skill_matcher (dependência)
-resource "aws_s3_object" "glue_skill_matcher_module" {
+# Upload do pacote skills_detection (zip com todo o módulo)
+resource "aws_s3_object" "glue_skills_detection_zip" {
   bucket = var.glue_scripts_bucket_name
-  key    = "glue/skills_detection/skill_matcher.py"
+  key    = "glue/skills_detection.zip"
 
-  source = "${path.module}/../../../src/skills_detection/skill_matcher.py"
-  etag   = filemd5("${path.module}/../../../src/skills_detection/skill_matcher.py")
-}
-
-# __init__.py para o pacote
-resource "aws_s3_object" "glue_skill_matcher_init" {
-  bucket       = var.glue_scripts_bucket_name
-  key          = "glue/skills_detection/__init__.py"
-  content      = ""
-  content_type = "text/x-python"
+  source = "${path.module}/skills_detection.zip"
+  etag   = filemd5("${path.module}/skills_detection.zip")
 }
 
 #############################################
@@ -54,8 +46,10 @@ resource "aws_glue_job" "skills_backfill" {
     "--silver_bucket"                    = var.silver_bucket_name
     "--source_system"                    = "linkedin"
     # Adiciona o diretório de scripts ao PYTHONPATH para imports
-    "--extra-py-files"                   = "s3://${var.glue_scripts_bucket_name}/glue/skills_detection/skill_matcher.py"
+    "--extra-py-files"                   = "s3://${var.glue_scripts_bucket_name}/glue/skills_detection.zip"
   }
+
+  depends_on = [aws_s3_object.glue_skills_detection_zip]
 
   max_retries = 0 # Backfill não deve ter retry automático
   timeout     = 120 # 2 horas para processar histórico

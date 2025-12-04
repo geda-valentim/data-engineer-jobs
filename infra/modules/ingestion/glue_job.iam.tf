@@ -39,18 +39,17 @@ resource "aws_iam_role_policy" "glue_bronze_to_silver_policy" {
         ]
       },
 
-      # 🔹 ESCREVER no Silver
+      # 🔹 ESCREVER no Silver (inclui DeleteObject para overwrite de partições)
       {
         Effect = "Allow"
         Action = [
           "s3:PutObject",
           "s3:GetObject",
+          "s3:DeleteObject",
           "s3:AbortMultipartUpload",
           "s3:ListBucket"
         ]
         Resource = [
-          # ListBucket usa só o ARN do bucket,
-          # Put/Get usam o ARN com /* — não tem problema repetir aqui.
           "arn:aws:s3:::${var.silver_bucket_name}",
           "arn:aws:s3:::${var.silver_bucket_name}/*"
         ]
