@@ -24,7 +24,9 @@
             "synapse",
             "azure synapse",
             "synapse analytics",
-            "azure synapse analytics"
+            "azure synapse analytics",
+            "sql pool",
+            "synapse sql"
           ],
           "priority": "high"
         },
@@ -40,9 +42,11 @@
           "variations": [
             "fabric",
             "ms fabric",
-            "microsoft fabric"
+            "microsoft fabric",
+            "fabric lakehouse",
+            "microsoft fabric lakehouse"
           ],
-          "priority": "medium"
+          "priority": "high"
         },
         {
           "canonical": "Azure Data Lake Storage",
@@ -50,8 +54,10 @@
             "data lake",
             "azure data lake",
             "adls",
+            "adls gen2",
             "data lake storage",
-            "azure data lake storage"
+            "azure data lake storage",
+            "lake storage gen2"
           ],
           "priority": "high"
         },
@@ -121,6 +127,38 @@
           "variations": [
             "stream analytics",
             "azure stream analytics"
+          ],
+          "priority": "low"
+        },
+        {
+          "canonical": "Azure Key Vault",
+          "variations": [
+            "key vault",
+            "azure key vault"
+          ],
+          "priority": "low"
+        },
+        {
+          "canonical": "Azure Logic Apps",
+          "variations": [
+            "logic apps",
+            "azure logic apps"
+          ],
+          "priority": "low"
+        },
+        {
+          "canonical": "Azure AI Foundry",
+          "variations": [
+            "azure ai foundry",
+            "ai foundry"
+          ],
+          "priority": "low"
+        },
+        {
+          "canonical": "Azure ML",
+          "variations": [
+            "azure ml",
+            "azure machine learning"
           ],
           "priority": "low"
         }
@@ -218,6 +256,24 @@
             "aws step functions"
           ],
           "priority": "low"
+        },
+        {
+          "canonical": "AWS EC2",
+          "variations": [
+            "ec2",
+            "aws ec2",
+            "elastic compute"
+          ],
+          "priority": "medium"
+        },
+        {
+          "canonical": "Amazon QuickSight",
+          "variations": [
+            "quicksight",
+            "amazon quicksight",
+            "aws quicksight"
+          ],
+          "priority": "low"
         }
       ]
     },
@@ -289,8 +345,33 @@
             "google cloud composer"
           ],
           "priority": "low"
+        },
+        {
+          "canonical": "Google Kubernetes Engine",
+          "variations": [
+            "gke",
+            "google kubernetes engine"
+          ],
+          "priority": "low"
+        },
+        {
+          "canonical": "Cloud Run",
+          "variations": [
+            "cloud run",
+            "google cloud run"
+          ],
+          "priority": "low"
         }
       ]
+    },
+    "oci": {
+      "canonical": "OCI",
+      "variations": [
+        "oci",
+        "oracle cloud",
+        "oracle cloud infrastructure"
+      ],
+      "priority": "low"
     }
   },
   "programming_languages": {
@@ -395,9 +476,10 @@
       "canonical": "Apache Kafka",
       "variations": [
         "kafka",
-        "apache kafka"
+        "apache kafka",
+        "kafka streams"
       ],
-      "priority": "medium"
+      "priority": "high"
     },
     "flink": {
       "canonical": "Apache Flink",
@@ -420,7 +502,33 @@
       "variations": [
         "databricks"
       ],
-      "priority": "high"
+      "priority": "high",
+      "sub_skills": [
+        {
+          "canonical": "Delta Live Tables",
+          "variations": [
+            "delta live tables",
+            "dlt"
+          ],
+          "priority": "medium"
+        },
+        {
+          "canonical": "Unity Catalog",
+          "variations": [
+            "unity catalog",
+            "unity"
+          ],
+          "priority": "medium"
+        },
+        {
+          "canonical": "MLflow",
+          "variations": [
+            "mlflow",
+            "ml flow"
+          ],
+          "priority": "low"
+        }
+      ]
     },
     "delta_lake": {
       "canonical": "Delta Lake",
@@ -428,7 +536,7 @@
         "delta lake",
         "delta"
       ],
-      "priority": "medium"
+      "priority": "high"
     },
     "iceberg": {
       "canonical": "Apache Iceberg",
@@ -445,6 +553,15 @@
         "apache hudi"
       ],
       "priority": "low"
+    },
+    "hadoop": {
+      "canonical": "Hadoop",
+      "variations": [
+        "hadoop",
+        "apache hadoop",
+        "hdfs"
+      ],
+      "priority": "medium"
     }
   },
   "orchestration": {
@@ -679,7 +796,23 @@
         "pbi",
         "microsoft power bi"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "sub_skills": [
+        {
+          "canonical": "Power Query",
+          "variations": [
+            "power query"
+          ],
+          "priority": "low"
+        },
+        {
+          "canonical": "DAX",
+          "variations": [
+            "dax"
+          ],
+          "priority": "low"
+        }
+      ]
     },
     "tableau": {
       "canonical": "Tableau",
@@ -791,7 +924,8 @@
     "fastapi": {
       "canonical": "FastAPI",
       "variations": [
-        "fastapi"
+        "fastapi",
+        "fast api"
       ],
       "priority": "low"
     },
@@ -806,6 +940,35 @@
       "canonical": "Django",
       "variations": [
         "django"
+      ],
+      "priority": "low"
+    },
+    "nltk": {
+      "canonical": "NLTK",
+      "variations": [
+        "nltk",
+        "natural language toolkit"
+      ],
+      "priority": "low"
+    },
+    "matplotlib": {
+      "canonical": "Matplotlib",
+      "variations": [
+        "matplotlib"
+      ],
+      "priority": "low"
+    },
+    "seaborn": {
+      "canonical": "Seaborn",
+      "variations": [
+        "seaborn"
+      ],
+      "priority": "low"
+    },
+    "scipy": {
+      "canonical": "SciPy",
+      "variations": [
+        "scipy"
       ],
       "priority": "low"
     }
@@ -903,6 +1066,22 @@
       "variations": [
         "arm templates",
         "azure resource manager"
+      ],
+      "priority": "low"
+    },
+    "nexus": {
+      "canonical": "Nexus Repository",
+      "variations": [
+        "nexus",
+        "nexus repository"
+      ],
+      "priority": "low"
+    },
+    "helm": {
+      "canonical": "Helm",
+      "variations": [
+        "helm",
+        "helm charts"
       ],
       "priority": "low"
     }
@@ -1074,7 +1253,7 @@
         "lakehouse",
         "data lakehouse"
       ],
-      "priority": "medium"
+      "priority": "high"
     },
     "data_warehouse": {
       "canonical": "Data Warehouse",
@@ -1098,7 +1277,9 @@
         "api development",
         "rest api",
         "restful",
-        "graphql"
+        "restful apis",
+        "graphql",
+        "api"
       ],
       "priority": "medium"
     }
@@ -1222,6 +1403,33 @@
       "variations": [
         "leadership",
         "team leadership"
+      ],
+      "priority": "low"
+    }
+  },
+  "erp_systems": {
+    "sap": {
+      "canonical": "SAP",
+      "variations": [
+        "sap",
+        "sap erp",
+        "sap hana"
+      ],
+      "priority": "low"
+    },
+    "dynamics": {
+      "canonical": "Microsoft Dynamics",
+      "variations": [
+        "dynamics",
+        "microsoft dynamics",
+        "dynamics 365"
+      ],
+      "priority": "low"
+    },
+    "salesforce": {
+      "canonical": "Salesforce",
+      "variations": [
+        "salesforce"
       ],
       "priority": "low"
     }

@@ -1,0 +1,90 @@
+# Data Processing & Streaming Skills
+# Version: 1.2
+# Last Updated: 2025-12-04
+
+data_processing:
+
+  spark:
+    canonical: "Apache Spark"
+    variations:
+      - "spark"
+      - "apache spark"
+      - "pyspark"
+      - "spark sql"
+    priority: high  # 74% do dataset
+
+  kafka:
+    canonical: "Apache Kafka"
+    variations:
+      - "kafka"
+      - "apache kafka"
+      - "kafka streams"
+    priority: high  # High frequency in job postings
+
+  flink:
+    canonical: "Apache Flink"
+    variations:
+      - "flink"
+      - "apache flink"
+    priority: low
+
+  beam:
+    canonical: "Apache Beam"
+    variations:
+      - "beam"
+      - "apache beam"
+    priority: low
+
+  databricks:
+    canonical: "Databricks"
+    variations:
+      - "databricks"
+    priority: high  # 43% do dataset
+
+    sub_skills:
+      - canonical: "Delta Live Tables"
+        variations:
+          - "delta live tables"
+          - "dlt"
+        priority: medium
+
+      - canonical: "Unity Catalog"
+        variations:
+          - "unity catalog"
+          - "unity"
+        priority: medium
+
+      - canonical: "MLflow"
+        variations:
+          - "mlflow"
+          - "ml flow"
+        priority: low
+
+  delta_lake:
+    canonical: "Delta Lake"
+    variations:
+      - "delta lake"
+      - "delta"
+    priority: high  # High frequency in job postings
+
+  iceberg:
+    canonical: "Apache Iceberg"
+    variations:
+      - "iceberg"
+      - "apache iceberg"
+    priority: low
+
+  hudi:
+    canonical: "Apache Hudi"
+    variations:
+      - "hudi"
+      - "apache hudi"
+    priority: low
+
+  hadoop:
+    canonical: "Hadoop"
+    variations:
+      - "hadoop"
+      - "apache hadoop"
+      - "hdfs"
+    priority: medium

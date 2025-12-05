@@ -26,9 +26,10 @@ resource "aws_glue_job" "bronze_to_silver" {
   number_of_workers = 2
   worker_type       = "G.1X"
 
-  # Permite múltiplas execuções simultâneas (ex: 2 scrapers rodando ao mesmo tempo)
+  # Permite múltiplas execuções simultâneas
+  # Aumentado para suportar backfill de múltiplas regiões
   execution_property {
-    max_concurrent_runs = 5
+    max_concurrent_runs = 10
   }
 
   command {

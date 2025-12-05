@@ -29,13 +29,17 @@ This project implements a complete data engineering pipeline to analyze the Data
 
 ### What's Currently Running
 
-✅ **Automated hourly ingestion** via EventBridge
+✅ **Automated hourly ingestion** via EventBridge + SQS
 
 ✅ **Bronze layer**: Raw JSONL data partitioned by date/hour in S3
 
 ✅ **Silver layer**: Cleaned Parquet data with normalized schema
 
+✅ **Skills Detection**: Automatic extraction of 150+ tech skills from job descriptions
+
 ✅ **Glue ETL**: PySpark job for Bronze → Silver transformation
+
+✅ **Backfill Support**: Fan-out Lambda for bulk region/work-type ingestion
 
 ✅ **Infrastructure as Code**: Complete Terraform setup for AWS
 
@@ -44,16 +48,28 @@ This project implements a complete data engineering pipeline to analyze the Data
 The pipeline follows the **Medallion Architecture** pattern:
 
 ```
-┌─────────────────┐
-│   LinkedIn      │
-│  (Bright Data)  │
-└────────┬────────┘
-         │
-         ▼
+┌─────────────────┐     ┌─────────────────┐
+│   LinkedIn      │     │  Backfill       │
+│  (Bright Data)  │     │  Fan-out Lambda │
+└────────┬────────┘     └────────┬────────┘
+         │                       │
+         ▼                       ▼
 ┌─────────────────┐      ┌──────────────────┐
-│  EventBridge    │─────▶│  Step Functions  │
-│  (Hourly Cron)  │      │   Orchestration  │
+│  EventBridge    │─────▶│      SQS         │◀── Manual triggers
+│  (Hourly Cron)  │      │  Ingestion Queue │
 └─────────────────┘      └────────┬─────────┘
+         │                        │
+         ▼                        ▼
+┌─────────────────┐      ┌──────────────────┐
+│   Dispatcher    │─────▶│  Queue Consumer  │
+│    Lambda       │      │     Lambda       │
+└─────────────────┘      └────────┬─────────┘
+                                  │
+                                  ▼
+                         ┌──────────────────┐
+                         │  Step Functions  │
+                         │   Orchestration  │
+                         └────────┬─────────┘
                                   │
                     ┌─────────────┼─────────────┐
                     ▼             ▼             ▼
@@ -70,7 +86,7 @@ The pipeline follows the **Medallion Architecture** pattern:
                                          │   JSONL  │
                                          └────┬─────┘
                                               │
-                                    AWS Glue ETL (PySpark)
+                            AWS Glue ETL (PySpark + Skills Detection)
                                               │
                                               ▼
                                          ┌──────────┐
@@ -101,10 +117,12 @@ The pipeline follows the **Medallion Architecture** pattern:
 
 ### Infrastructure
 - **AWS S3**: Data lake storage (Bronze, Silver, Gold layers)
+- **AWS SQS**: Message queue for ingestion throttling and backfill
 - **AWS Glue**: Serverless ETL (PySpark 4.0)
-- **AWS Lambda**: Ingestion orchestration (Python 3.13)
+- **AWS Lambda**: Ingestion orchestration (Python 3.12)
 - **AWS EventBridge**: Scheduling and event routing
 - **AWS Step Functions**: Workflow orchestration
+- **AWS DynamoDB**: Ingestion sources configuration
 - **AWS IAM**: Access control and security
 - **Terraform**: Infrastructure as Code
 
@@ -135,20 +153,32 @@ data-engineer-jobs/
 │
 ├── src/
 │   ├── lambdas/
-│   │   └── data_extractor/
-│   │       └── linkedin/
-│   │           └── job_listing/
-│   │               └── bright_data/
-│   │                   ├── trigger.py       # Trigger snapshot
-│   │                   ├── check_status.py  # Check completion
-│   │                   └── save_to_s3.py    # Save to Bronze
+│   │   ├── data_extractor/
+│   │   │   └── linkedin/
+│   │   │       ├── config/
+│   │   │       │   └── linkedin_geo_ids_flat.json  # Region configs
+│   │   │       └── job_listing/
+│   │   │           └── bright_data/
+│   │   │               ├── trigger.py       # Trigger snapshot
+│   │   │               ├── check_status.py  # Check completion
+│   │   │               └── save_to_s3.py    # Save to Bronze
+│   │   ├── queue_consumer/
+│   │   │   └── handler.py           # SQS → Step Functions
+│   │   └── backfill_fanout/
+│   │       └── handler.py           # Bulk region ingestion
 │   │
 │   ├── glue_jobs/
 │   │   ├── bronze_to_silver.py    # Bronze → Silver ETL
 │   │   └── silver_to_gold.py      # [Planned] Silver → Gold
 │   │
+│   ├── skills_detection/
+│   │   ├── config/
+│   │   │   ├── skills_catalog.yaml  # 150+ skills with variations
+│   │   │   └── families/            # Skill families (17 files)
+│   │   └── detector.py              # Skills extraction logic
+│   │
 │   ├── scheduler/
-│   │   └── ingestion_dispatcher.py # Ingestion orchestration
+│   │   └── ingestion_dispatcher.py # DynamoDB → SQS dispatcher
 │   │
 │   └── shared/                     # Common utilities
 │
@@ -214,9 +244,12 @@ terraform apply
 
 This will create:
 - 5 S3 buckets (Bronze, Silver, Gold, Glue temp, Glue scripts)
-- 3 Lambda functions with Python dependencies layer
-- 1 Glue ETL job (Bronze → Silver)
+- 6 Lambda functions with Python dependencies layer
+- 1 SQS queue + DLQ for ingestion throttling
+- 1 DynamoDB table for ingestion sources
+- 1 Glue ETL job (Bronze → Silver with Skills Detection)
 - EventBridge rule for hourly execution
+- Step Functions state machine
 - IAM roles and policies
 - CloudWatch Log Groups
 
@@ -290,11 +323,27 @@ print(df.head())
 
 ### Ingestion Flow (Bronze)
 
-1. **EventBridge** triggers Lambda hourly (`cron(0 * * * ? *)`)
-2. **Lambda 1** (`trigger.py`): Initiates Bright Data snapshot
-3. **Lambda 2** (`check_status.py`): Polls until snapshot completes
-4. **Lambda 3** (`save_to_s3.py`): Downloads and saves JSONL to Bronze S3
-   - Path: `s3://bronze/linkedin/jobs/year=YYYY/month=MM/day=DD/hour=HH/`
+1. **EventBridge** triggers Dispatcher Lambda hourly (`cron(0 * * * ? *)`)
+2. **Dispatcher** reads enabled sources from DynamoDB and sends to SQS
+3. **Queue Consumer** Lambda picks messages from SQS (batch_size=1)
+4. **Step Functions** orchestrates the ingestion workflow:
+   - **Lambda 1** (`trigger.py`): Initiates Bright Data snapshot
+   - **Lambda 2** (`check_status.py`): Polls until snapshot completes
+   - **Lambda 3** (`save_to_s3.py`): Downloads and saves JSONL to Bronze S3
+5. Path: `s3://bronze/linkedin/jobs/year=YYYY/month=MM/day=DD/hour=HH/`
+
+#### Backfill Support
+
+For bulk ingestion of multiple regions/work-types:
+
+```bash
+aws lambda invoke \
+  --function-name data-engineer-jobs-backfill-fanout \
+  --payload '{"region_groups": ["usa_states", "latin_america"]}' \
+  response.json
+```
+
+The fan-out Lambda reads `linkedin_geo_ids_flat.json` and sends messages to SQS for each location × work_type combination, respecting throttling via SQS visibility timeout.
 
 ### Transformation (Silver)
 
@@ -304,9 +353,25 @@ AWS Glue Job (`bronze_to_silver.py`) runs PySpark to:
 - ✅ **Clean** and cast data types
 - ✅ **Normalize** dates, salaries, locations
 - ✅ **Extract** plain text from HTML descriptions
+- ✅ **Detect Skills** from job descriptions (150+ technologies)
 - ✅ **Remove** duplicates (planned)
 - ✅ **Write** Parquet to Silver with Snappy compression
 - ✅ **Partition** by `year/month/day/hour`
+
+#### Skills Detection
+
+The pipeline automatically extracts technical skills from job descriptions using a curated catalog of 150+ technologies organized in 17 families:
+
+| Family | Examples |
+|--------|----------|
+| Cloud Platforms | AWS, Azure, GCP, Databricks |
+| Programming | Python, SQL, Scala, Java |
+| Data Processing | Spark, Kafka, Airflow |
+| Databases | PostgreSQL, MongoDB, Redis |
+| BI Tools | Power BI, Tableau, Looker |
+| DevOps | Docker, Kubernetes, Terraform |
+
+Skills are matched using canonical names and variations (e.g., "AWS" matches "Amazon Web Services", "aws", "Amazon AWS").
 
 ### Analytics (Gold - Planned)
 
@@ -337,21 +402,27 @@ See [docs/gold_features_metrics.md](docs/gold_features_metrics.md) for complete 
 - [x] Hourly automated execution
 - [x] CloudWatch logging
 
-### 🚧 Phase 2: Analytics Layer (In Progress)
+### ✅ Phase 2: Skills & Scale (Completed)
+- [x] Skills detection from job descriptions (150+ technologies)
+- [x] SQS-based ingestion with throttling
+- [x] Backfill support for bulk region ingestion
+- [x] Multi-region/work-type configuration
+- [x] Glue concurrent execution (max 10 parallel jobs)
+
+### 🚧 Phase 3: Analytics Layer (In Progress)
 - [ ] Implement deduplication in Silver
 - [ ] Create Gold layer transformations
 - [ ] Build star schema (fact + dimensions)
-- [ ] Skills extraction with NLP/LLM
 - [ ] Salary normalization and benchmarking
 
-### 📋 Phase 3: Insights & Visualization (Planned)
+### 📋 Phase 4: Insights & Visualization (Planned)
 - [ ] Athena/Presto queries for ad-hoc analysis
 - [ ] Metabase/Looker dashboards
 - [ ] Salary trends by location/seniority
 - [ ] Skills demand analysis
 - [ ] Geographic heat maps
 
-### 🚀 Phase 4: Advanced Features (Future)
+### 🚀 Phase 5: Advanced Features (Future)
 - [ ] Real-time alerting for matching jobs
 - [ ] ML-based job recommendations
 - [ ] Career path analysis

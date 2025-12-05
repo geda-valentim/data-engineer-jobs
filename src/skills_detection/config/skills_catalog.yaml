@@ -1,6 +1,11 @@
 # Skills Catalog for Data/Software Engineers
-# Version: 1.0
-# Last Updated: 2025-12-03
+# Version: 1.2
+# Last Updated: 2025-12-04
+# Updated based on Logistic Regression analysis of job postings
+# Changes: Added OCI, GKE, Cloud Run, Azure Key Vault, Logic Apps, AI Foundry, ML
+#          Added EC2, QuickSight, Unity Catalog, Delta Live Tables, MLflow
+#          Added Power Query, DAX, Hadoop, NLTK, Nexus, Helm, SAP, Dynamics
+#          Updated priorities based on tech_prob analysis
 
 # ============================================
 # CLOUD PLATFORMS
@@ -31,6 +36,8 @@ cloud_platforms:
           - "azure synapse"
           - "synapse analytics"
           - "azure synapse analytics"
+          - "sql pool"
+          - "synapse sql"
         priority: high
 
       - canonical: "Azure Databricks"
@@ -43,15 +50,19 @@ cloud_platforms:
           - "fabric"
           - "ms fabric"
           - "microsoft fabric"
-        priority: medium
+          - "fabric lakehouse"
+          - "microsoft fabric lakehouse"
+        priority: high  # Growing adoption
 
       - canonical: "Azure Data Lake Storage"
         variations:
           - "data lake"
           - "azure data lake"
           - "adls"
+          - "adls gen2"
           - "data lake storage"
           - "azure data lake storage"
+          - "lake storage gen2"
         priority: high
 
       - canonical: "Azure Blob Storage"
@@ -105,6 +116,30 @@ cloud_platforms:
         variations:
           - "stream analytics"
           - "azure stream analytics"
+        priority: low
+
+      - canonical: "Azure Key Vault"
+        variations:
+          - "key vault"
+          - "azure key vault"
+        priority: low
+
+      - canonical: "Azure Logic Apps"
+        variations:
+          - "logic apps"
+          - "azure logic apps"
+        priority: low
+
+      - canonical: "Azure AI Foundry"
+        variations:
+          - "azure ai foundry"
+          - "ai foundry"
+        priority: low
+
+      - canonical: "Azure ML"
+        variations:
+          - "azure ml"
+          - "azure machine learning"
         priority: low
 
   # Amazon Web Services
@@ -181,6 +216,20 @@ cloud_platforms:
           - "aws step functions"
         priority: low
 
+      - canonical: "AWS EC2"
+        variations:
+          - "ec2"
+          - "aws ec2"
+          - "elastic compute"
+        priority: medium
+
+      - canonical: "Amazon QuickSight"
+        variations:
+          - "quicksight"
+          - "amazon quicksight"
+          - "aws quicksight"
+        priority: low
+
   # Google Cloud Platform
   gcp:
     canonical: "GCP"
@@ -236,6 +285,27 @@ cloud_platforms:
           - "cloud composer"
           - "google cloud composer"
         priority: low
+
+      - canonical: "Google Kubernetes Engine"
+        variations:
+          - "gke"
+          - "google kubernetes engine"
+        priority: low
+
+      - canonical: "Cloud Run"
+        variations:
+          - "cloud run"
+          - "google cloud run"
+        priority: low
+
+  # Oracle Cloud Infrastructure
+  oci:
+    canonical: "OCI"
+    variations:
+      - "oci"
+      - "oracle cloud"
+      - "oracle cloud infrastructure"
+    priority: low
 
 # ============================================
 # PROGRAMMING LANGUAGES
@@ -338,7 +408,8 @@ data_processing:
     variations:
       - "kafka"
       - "apache kafka"
-    priority: medium
+      - "kafka streams"
+    priority: high  # High frequency in job postings
 
   flink:
     canonical: "Apache Flink"
@@ -360,12 +431,31 @@ data_processing:
       - "databricks"
     priority: high  # 43% do dataset
 
+    sub_skills:
+      - canonical: "Delta Live Tables"
+        variations:
+          - "delta live tables"
+          - "dlt"
+        priority: medium
+
+      - canonical: "Unity Catalog"
+        variations:
+          - "unity catalog"
+          - "unity"
+        priority: medium
+
+      - canonical: "MLflow"
+        variations:
+          - "mlflow"
+          - "ml flow"
+        priority: low
+
   delta_lake:
     canonical: "Delta Lake"
     variations:
       - "delta lake"
       - "delta"
-    priority: medium
+    priority: high  # High frequency in job postings
 
   iceberg:
     canonical: "Apache Iceberg"
@@ -380,6 +470,14 @@ data_processing:
       - "hudi"
       - "apache hudi"
     priority: low
+
+  hadoop:
+    canonical: "Hadoop"
+    variations:
+      - "hadoop"
+      - "apache hadoop"
+      - "hdfs"
+    priority: medium
 
 # ============================================
 # ORCHESTRATION & WORKFLOW
@@ -603,6 +701,17 @@ bi_tools:
       - "microsoft power bi"
     priority: medium  # 17% do dataset
 
+    sub_skills:
+      - canonical: "Power Query"
+        variations:
+          - "power query"
+        priority: low
+
+      - canonical: "DAX"
+        variations:
+          - "dax"
+        priority: low
+
   tableau:
     canonical: "Tableau"
     variations:
@@ -704,6 +813,7 @@ python_libraries:
     canonical: "FastAPI"
     variations:
       - "fastapi"
+      - "fast api"
     priority: low
 
   flask:
@@ -716,6 +826,31 @@ python_libraries:
     canonical: "Django"
     variations:
       - "django"
+    priority: low
+
+  nltk:
+    canonical: "NLTK"
+    variations:
+      - "nltk"
+      - "natural language toolkit"
+    priority: low
+
+  matplotlib:
+    canonical: "Matplotlib"
+    variations:
+      - "matplotlib"
+    priority: low
+
+  seaborn:
+    canonical: "Seaborn"
+    variations:
+      - "seaborn"
+    priority: low
+
+  scipy:
+    canonical: "SciPy"
+    variations:
+      - "scipy"
     priority: low
 
 # ============================================
@@ -805,6 +940,20 @@ devops_tools:
     variations:
       - "arm templates"
       - "azure resource manager"
+    priority: low
+
+  nexus:
+    canonical: "Nexus Repository"
+    variations:
+      - "nexus"
+      - "nexus repository"
+    priority: low
+
+  helm:
+    canonical: "Helm"
+    variations:
+      - "helm"
+      - "helm charts"
     priority: low
 
 # ============================================
@@ -965,7 +1114,7 @@ practices:
     variations:
       - "lakehouse"
       - "data lakehouse"
-    priority: medium
+    priority: high  # High frequency in job postings
 
   data_warehouse:
     canonical: "Data Warehouse"
@@ -987,7 +1136,9 @@ practices:
       - "api development"
       - "rest api"
       - "restful"
+      - "restful apis"
       - "graphql"
+      - "api"
     priority: medium
 
 # ============================================
@@ -1108,6 +1259,34 @@ soft_skills:
     variations:
       - "leadership"
       - "team leadership"
+    priority: low
+
+# ============================================
+# ERP & ENTERPRISE SYSTEMS
+# ============================================
+
+erp_systems:
+
+  sap:
+    canonical: "SAP"
+    variations:
+      - "sap"
+      - "sap erp"
+      - "sap hana"
+    priority: low
+
+  dynamics:
+    canonical: "Microsoft Dynamics"
+    variations:
+      - "dynamics"
+      - "microsoft dynamics"
+      - "dynamics 365"
+    priority: low
+
+  salesforce:
+    canonical: "Salesforce"
+    variations:
+      - "salesforce"
     priority: low
 
 # ============================================

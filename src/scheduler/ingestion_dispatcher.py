@@ -6,10 +6,10 @@ import boto3
 from boto3.dynamodb.conditions import Attr
 
 dynamodb = boto3.resource("dynamodb")
-sfn = boto3.client("stepfunctions")
+sqs = boto3.client("sqs")
 
 TABLE_NAME = os.getenv("INGESTION_SOURCES_TABLE_NAME")
-STATE_MACHINE_ARN = os.getenv("STATE_MACHINE_ARN")
+INGESTION_QUEUE_URL = os.getenv("INGESTION_QUEUE_URL")
 
 
 def _build_input_from_source(source_item: dict) -> dict:
@@ -40,9 +40,9 @@ def _build_input_from_source(source_item: dict) -> dict:
 
 
 def handler(event, context):
-    if not TABLE_NAME or not STATE_MACHINE_ARN:
+    if not TABLE_NAME or not INGESTION_QUEUE_URL:
         raise RuntimeError(
-            f"Env vars faltando. TABLE_NAME={TABLE_NAME}, STATE_MACHINE_ARN={STATE_MACHINE_ARN}"
+            f"Env vars faltando. TABLE_NAME={TABLE_NAME}, INGESTION_QUEUE_URL={INGESTION_QUEUE_URL}"
         )
 
     table = dynamodb.Table(TABLE_NAME)
@@ -54,24 +54,23 @@ def handler(event, context):
     )
 
     items = resp.get("Items", [])
-    started = 0
+    queued = 0
 
     for src in items:
-        sfn_input = _build_input_from_source(src)
+        message_body = _build_input_from_source(src)
 
-        # Você pode customizar o name, mas deixa o AWS gerar se não quiser conflito
-        sfn.start_execution(
-            stateMachineArn=STATE_MACHINE_ARN,
-            input=json.dumps(sfn_input),
+        sqs.send_message(
+            QueueUrl=INGESTION_QUEUE_URL,
+            MessageBody=json.dumps(message_body),
         )
-        started += 1
+        queued += 1
 
-        print(f"Started execution for source_id={src['source_id']}")
+        print(f"Queued message for source_id={src['source_id']}")
 
     return {
-        "started_executions": started,
+        "queued_messages": queued,
         "sources_found": len(items),
-        "state_machine": STATE_MACHINE_ARN,
+        "queue_url": INGESTION_QUEUE_URL,
     }
 
 

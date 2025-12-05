@@ -17,7 +17,7 @@ resource "aws_lambda_function" "ingestion_dispatcher" {
   environment {
     variables = {
       INGESTION_SOURCES_TABLE_NAME = aws_dynamodb_table.ingestion_sources.name
-      STATE_MACHINE_ARN            = aws_sfn_state_machine.bright_data_snapshot_ingestion.arn
+      INGESTION_QUEUE_URL          = aws_sqs_queue.ingestion_queue.url
     }
   }
 }

@@ -244,8 +244,23 @@ print("[bronze_to_silver] Applying technical dedup on job_posting_id/scraped_at"
 
 w = Window.partitionBy("job_posting_id").orderBy(col("scraped_at").desc())
 
-df_not_null = df_silver_enriched.filter(col("job_posting_id").isNotNull())
-df_null = df_silver_enriched.filter(col("job_posting_id").isNull())
+# Merge com dados existentes na partição para garantir unicidade global
+silver_partition_path = (
+    f"{silver_base_path}year={YEAR}/month={MONTH}/day={DAY}/hour={HOUR}/"
+)
+
+try:
+    df_existing = spark.read.parquet(silver_partition_path)
+    existing_count = df_existing.count()
+    df_combined = df_silver_enriched.unionByName(df_existing)
+    print("[bronze_to_silver] Found existing data, merging for dedup")
+except Exception:
+    df_combined = df_silver_enriched
+    existing_count = 0
+    print("[bronze_to_silver] No existing data in partition")
+
+df_not_null = df_combined.filter(col("job_posting_id").isNotNull())
+df_null = df_combined.filter(col("job_posting_id").isNull())
 
 df_not_null_dedup = (
     df_not_null
@@ -257,18 +272,38 @@ df_not_null_dedup = (
 df_final = df_not_null_dedup.unionByName(df_null)
 
 # -------------------------------------------------------------------
-# Escrita no Silver
+# Escrita no Silver (overwrite na partição)
 # -------------------------------------------------------------------
+spark.conf.set("spark.sql.sources.partitionOverwriteMode", "dynamic")
+
 (
     df_final
     .repartition("year", "month", "day", "hour")
     .write
-    .mode("append")
+    .mode("overwrite")
     .format("parquet")
     .partitionBy("year", "month", "day", "hour")
     .save(silver_base_path)
 )
 
-print("[bronze_to_silver] Successfully wrote silver data with skills enrichment + dedup.")
+# -------------------------------------------------------------------
+# Relatório final
+# -------------------------------------------------------------------
+new_count = df_silver_enriched.count()
+final_count = df_final.count()
+combined_count = new_count + existing_count
+duplicates_removed = combined_count - final_count
+
+print("=" * 60)
+print("[bronze_to_silver] RELATÓRIO FINAL")
+print("=" * 60)
+print(f"  Partição: year={YEAR}/month={MONTH}/day={DAY}/hour={HOUR}")
+print(f"  Registros novos (bronze): {new_count}")
+print(f"  Registros existentes (silver): {existing_count}")
+print(f"  Total após merge: {combined_count}")
+print(f"  Duplicatas removidas: {duplicates_removed}")
+print(f"  Registros finais: {final_count}")
+print(f"  Skills catalog version: {CATALOG_VERSION}")
+print("=" * 60)
 
 job.commit()

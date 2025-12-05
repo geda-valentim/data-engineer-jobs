@@ -1,0 +1,245 @@
+{
+  "metadata": {
+    "description": "LinkedIn Geo IDs para busca de vagas de Data Engineer",
+    "created_at": "2025-02-04",
+    "source": "LinkedIn Voyager API"
+  },
+  "regions": {
+    "global": {
+      "name": "Regiões Globais",
+      "description": "Macro-regiões que abrangem múltiplos países",
+      "locations": [
+        {"geo_id": "91000003", "name": "APAC", "description": "Asia-Pacific"},
+        {"geo_id": "91000007", "name": "EMEA", "description": "Europe, Middle East & Africa"},
+        {"geo_id": "91000008", "name": "MENA", "description": "Middle East & North Africa"}
+      ]
+    },
+    "americas": {
+      "name": "Américas",
+      "description": "América do Norte e América Latina",
+      "sub_regions": {
+        "usa": {
+          "name": "Estados Unidos",
+          "description": "50 estados + DC",
+          "country_geo_id": "103644278",
+          "states": [
+            {"geo_id": "102240587", "name": "Alabama", "abbr": "AL"},
+            {"geo_id": "100290991", "name": "Alaska", "abbr": "AK"},
+            {"geo_id": "106032500", "name": "Arizona", "abbr": "AZ"},
+            {"geo_id": "102790221", "name": "Arkansas", "abbr": "AR"},
+            {"geo_id": "102095887", "name": "California", "abbr": "CA"},
+            {"geo_id": "105763813", "name": "Colorado", "abbr": "CO"},
+            {"geo_id": "106914527", "name": "Connecticut", "abbr": "CT"},
+            {"geo_id": "105375497", "name": "Delaware", "abbr": "DE"},
+            {"geo_id": "101116121", "name": "District of Columbia", "abbr": "DC"},
+            {"geo_id": "101318387", "name": "Florida", "abbr": "FL"},
+            {"geo_id": "106315325", "name": "Georgia", "abbr": "GA"},
+            {"geo_id": "105051999", "name": "Hawaii", "abbr": "HI"},
+            {"geo_id": "102560739", "name": "Idaho", "abbr": "ID"},
+            {"geo_id": "101949407", "name": "Illinois", "abbr": "IL"},
+            {"geo_id": "103336534", "name": "Indiana", "abbr": "IN"},
+            {"geo_id": "103078544", "name": "Iowa", "abbr": "IA"},
+            {"geo_id": "104403803", "name": "Kansas", "abbr": "KS"},
+            {"geo_id": "106470801", "name": "Kentucky", "abbr": "KY"},
+            {"geo_id": "101822552", "name": "Louisiana", "abbr": "LA"},
+            {"geo_id": "101102875", "name": "Maine", "abbr": "ME"},
+            {"geo_id": "100809221", "name": "Maryland", "abbr": "MD"},
+            {"geo_id": "101098412", "name": "Massachusetts", "abbr": "MA"},
+            {"geo_id": "103051080", "name": "Michigan", "abbr": "MI"},
+            {"geo_id": "103411167", "name": "Minnesota", "abbr": "MN"},
+            {"geo_id": "106899551", "name": "Mississippi", "abbr": "MS"},
+            {"geo_id": "101486475", "name": "Missouri", "abbr": "MO"},
+            {"geo_id": "101758306", "name": "Montana", "abbr": "MT"},
+            {"geo_id": "101197782", "name": "Nebraska", "abbr": "NE"},
+            {"geo_id": "101690912", "name": "Nevada", "abbr": "NV"},
+            {"geo_id": "103532695", "name": "New Hampshire", "abbr": "NH"},
+            {"geo_id": "101651951", "name": "New Jersey", "abbr": "NJ"},
+            {"geo_id": "105048220", "name": "New Mexico", "abbr": "NM"},
+            {"geo_id": "105080838", "name": "New York", "abbr": "NY"},
+            {"geo_id": "103255397", "name": "North Carolina", "abbr": "NC"},
+            {"geo_id": "104611396", "name": "North Dakota", "abbr": "ND"},
+            {"geo_id": "106981407", "name": "Ohio", "abbr": "OH"},
+            {"geo_id": "101343299", "name": "Oklahoma", "abbr": "OK"},
+            {"geo_id": "101685541", "name": "Oregon", "abbr": "OR"},
+            {"geo_id": "102986501", "name": "Pennsylvania", "abbr": "PA"},
+            {"geo_id": "104877241", "name": "Rhode Island", "abbr": "RI"},
+            {"geo_id": "102687171", "name": "South Carolina", "abbr": "SC"},
+            {"geo_id": "100115110", "name": "South Dakota", "abbr": "SD"},
+            {"geo_id": "104629187", "name": "Tennessee", "abbr": "TN"},
+            {"geo_id": "102748797", "name": "Texas", "abbr": "TX"},
+            {"geo_id": "104102239", "name": "Utah", "abbr": "UT"},
+            {"geo_id": "104453637", "name": "Vermont", "abbr": "VT"},
+            {"geo_id": "101630962", "name": "Virginia", "abbr": "VA"},
+            {"geo_id": "103977389", "name": "Washington", "abbr": "WA"},
+            {"geo_id": "106420769", "name": "West Virginia", "abbr": "WV"},
+            {"geo_id": "104454774", "name": "Wisconsin", "abbr": "WI"},
+            {"geo_id": "100658004", "name": "Wyoming", "abbr": "WY"}
+          ]
+        },
+        "canada": {
+          "name": "Canadá",
+          "description": "País inteiro",
+          "locations": [
+            {"geo_id": "101174742", "name": "Canada", "name_pt": "Canadá"}
+          ]
+        },
+        "latin_america": {
+          "name": "América Latina",
+          "description": "Região da América Latina",
+          "locations": [
+            {"geo_id": "91000011", "name": "Latin America", "name_pt": "América Latina"}
+          ]
+        }
+      }
+    },
+    "europe": {
+      "name": "Europa",
+      "description": "Países europeus",
+      "sub_regions": {
+        "eu_clusters": {
+          "name": "Clusters Regionais",
+          "description": "Agrupamentos regionais europeus",
+          "locations": [
+            {"geo_id": "91000006", "name": "DACH", "description": "Germany, Austria, Switzerland"},
+            {"geo_id": "91000005", "name": "Benelux", "description": "Belgium, Netherlands, Luxembourg"},
+            {"geo_id": "91000009", "name": "Nordics", "description": "Nordic countries"}
+          ]
+        },
+        "countries": {
+          "name": "Países",
+          "description": "Países europeus individuais",
+          "locations": [
+            {"geo_id": "102845717", "name": "Albania", "name_pt": "Albânia"},
+            {"geo_id": "106296266", "name": "Andorra", "name_pt": "Andorra"},
+            {"geo_id": "103883259", "name": "Austria", "name_pt": "Áustria"},
+            {"geo_id": "101705918", "name": "Belarus", "name_pt": "Bielorrússia"},
+            {"geo_id": "100565514", "name": "Belgium", "name_pt": "Bélgica"},
+            {"geo_id": "102869081", "name": "Bosnia and Herzegovina", "name_pt": "Bósnia e Herzegovina"},
+            {"geo_id": "105333783", "name": "Bulgaria", "name_pt": "Bulgária"},
+            {"geo_id": "104688944", "name": "Croatia", "name_pt": "Croácia"},
+            {"geo_id": "106774002", "name": "Cyprus", "name_pt": "Chipre"},
+            {"geo_id": "104514075", "name": "Denmark", "name_pt": "Dinamarca"},
+            {"geo_id": "102974008", "name": "Estonia", "name_pt": "Estônia"},
+            {"geo_id": "100456013", "name": "Finland", "name_pt": "Finlândia"},
+            {"geo_id": "105015875", "name": "France", "name_pt": "França"},
+            {"geo_id": "101282230", "name": "Germany", "name_pt": "Alemanha"},
+            {"geo_id": "104677530", "name": "Greece", "name_pt": "Grécia"},
+            {"geo_id": "100288700", "name": "Hungary", "name_pt": "Hungria"},
+            {"geo_id": "105238872", "name": "Iceland", "name_pt": "Islândia"},
+            {"geo_id": "104738515", "name": "Ireland", "name_pt": "Irlanda"},
+            {"geo_id": "103350119", "name": "Italy", "name_pt": "Itália"},
+            {"geo_id": "104640522", "name": "Kosovo", "name_pt": "Kosovo"},
+            {"geo_id": "104341318", "name": "Latvia", "name_pt": "Letônia"},
+            {"geo_id": "100878084", "name": "Liechtenstein", "name_pt": "Liechtenstein"},
+            {"geo_id": "101464403", "name": "Lithuania", "name_pt": "Lituânia"},
+            {"geo_id": "104195383", "name": "Luxembourg", "name_pt": "Luxemburgo"},
+            {"geo_id": "100961908", "name": "Malta", "name_pt": "Malta"},
+            {"geo_id": "106178099", "name": "Moldova", "name_pt": "Moldávia"},
+            {"geo_id": "101352147", "name": "Monaco", "name_pt": "Mônaco"},
+            {"geo_id": "100733275", "name": "Montenegro", "name_pt": "Montenegro"},
+            {"geo_id": "102890719", "name": "Netherlands", "name_pt": "Países Baixos"},
+            {"geo_id": "103420483", "name": "North Macedonia", "name_pt": "Macedônia do Norte"},
+            {"geo_id": "103819153", "name": "Norway", "name_pt": "Noruega"},
+            {"geo_id": "105072130", "name": "Poland", "name_pt": "Polônia"},
+            {"geo_id": "100364837", "name": "Portugal", "name_pt": "Portugal"},
+            {"geo_id": "106670623", "name": "Romania", "name_pt": "Romênia"},
+            {"geo_id": "101728296", "name": "Russia", "name_pt": "Rússia"},
+            {"geo_id": "105730022", "name": "San Marino", "name_pt": "San Marino"},
+            {"geo_id": "101855366", "name": "Serbia", "name_pt": "Sérvia"},
+            {"geo_id": "103119917", "name": "Slovakia", "name_pt": "Eslováquia"},
+            {"geo_id": "106137034", "name": "Slovenia", "name_pt": "Eslovênia"},
+            {"geo_id": "105646813", "name": "Spain", "name_pt": "Espanha"},
+            {"geo_id": "105117694", "name": "Sweden", "name_pt": "Suécia"},
+            {"geo_id": "106693272", "name": "Switzerland", "name_pt": "Suíça"},
+            {"geo_id": "102264497", "name": "Ukraine", "name_pt": "Ucrânia"},
+            {"geo_id": "101165590", "name": "United Kingdom", "name_pt": "Reino Unido"},
+            {"geo_id": "107163060", "name": "Vatican City", "name_pt": "Vaticano"}
+          ]
+        }
+      }
+    },
+    "asia": {
+      "name": "Ásia",
+      "description": "Continente asiático e sub-regiões",
+      "sub_regions": {
+        "asia_full": {
+          "name": "Ásia Completa",
+          "description": "Continente inteiro",
+          "locations": [
+            {"geo_id": "91000004", "name": "Asia", "name_pt": "Ásia"}
+          ]
+        },
+        "east_asia": {
+          "name": "Ásia Oriental",
+          "description": "China, Japão, Coreia, Taiwan, Mongólia",
+          "locations": [
+            {"geo_id": "91000012", "name": "East Asia", "name_pt": "Ásia Oriental"}
+          ]
+        },
+        "south_asia": {
+          "name": "Ásia Meridional",
+          "description": "Índia, Paquistão, Bangladesh, Sri Lanka, Nepal",
+          "locations": [
+            {"geo_id": "91000013", "name": "South Asia", "name_pt": "Ásia Meridional"}
+          ]
+        },
+        "southeast_asia": {
+          "name": "Sudeste Asiático",
+          "description": "Tailândia, Vietnã, Indonésia, Filipinas, Malásia, Singapura",
+          "locations": [
+            {"geo_id": "91000014", "name": "Southeast Asia", "name_pt": "Sudeste Asiático"}
+          ]
+        },
+        "india": {
+          "name": "Índia",
+          "description": "País específico - grande mercado de TI",
+          "locations": [
+            {"geo_id": "102713980", "name": "India", "name_pt": "Índia"}
+          ]
+        }
+      }
+    },
+    "middle_east": {
+      "name": "Oriente Médio",
+      "description": "Região do Oriente Médio",
+      "locations": [
+        {"geo_id": "91000001", "name": "Middle East", "name_pt": "Oriente Médio"},
+        {"geo_id": "91000020", "name": "Middle East Region", "name_pt": "Região do Oriente Médio"},
+        {"geo_id": "91000016", "name": "Gulf States", "name_pt": "Estados do Golfo"},
+        {"geo_id": "106729630", "name": "United Arab Emirates", "name_pt": "Emirados Árabes Unidos"}
+      ]
+    },
+    "oceania": {
+      "name": "Oceania",
+      "description": "Austrália, Nova Zelândia e ilhas do Pacífico",
+      "locations": [
+        {"geo_id": "91000010", "name": "Oceania", "name_pt": "Oceania"}
+      ]
+    }
+  },
+  "analysis_groups": {
+    "description": "Grupos sugeridos para análise comparativa de vagas",
+    "groups": [
+      {
+        "name": "USA Analysis",
+        "description": "Análise por estado americano",
+        "geo_ids": ["102240587", "100290991", "106032500", "102790221", "102095887", "105763813", "106914527", "105375497", "101116121", "101318387", "106315325", "105051999", "102560739", "101949407", "103336534", "103078544", "104403803", "106470801", "101822552", "101102875", "100809221", "101098412", "103051080", "103411167", "106899551", "101486475", "101758306", "101197782", "101690912", "103532695", "101651951", "105048220", "105080838", "103255397", "104611396", "106981407", "101343299", "101685541", "102986501", "104877241", "102687171", "100115110", "104629187", "102748797", "104102239", "104453637", "101630962", "103977389", "106420769", "104454774", "100658004"]
+      },
+      {
+        "name": "Europe Analysis",
+        "description": "Análise por país europeu",
+        "geo_ids": ["102845717", "106296266", "103883259", "101705918", "100565514", "102869081", "105333783", "104688944", "106774002", "104514075", "102974008", "100456013", "105015875", "101282230", "104677530", "100288700", "105238872", "104738515", "103350119", "104640522", "104341318", "100878084", "101464403", "104195383", "100961908", "106178099", "101352147", "100733275", "102890719", "103420483", "103819153", "105072130", "100364837", "106670623", "101728296", "105730022", "101855366", "103119917", "106137034", "105646813", "105117694", "106693272", "102264497", "101165590", "107163060"]
+      },
+      {
+        "name": "Asia Analysis",
+        "description": "Análise por sub-região asiática",
+        "geo_ids": ["91000004", "91000012", "91000013", "91000014", "102713980"]
+      },
+      {
+        "name": "Global Comparison",
+        "description": "Comparação entre grandes regiões",
+        "geo_ids": ["103644278", "91000007", "91000004", "91000011", "91000010"]
+      }
+    ]
+  }
+}

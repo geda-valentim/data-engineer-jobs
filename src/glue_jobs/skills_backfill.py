@@ -30,7 +30,8 @@ from pyspark.context import SparkContext
 from awsglue.context import GlueContext
 from awsglue.job import Job
 
-from pyspark.sql.functions import col
+from pyspark.sql.functions import col, row_number
+from pyspark.sql.window import Window
 
 from skills_detection.skill_matcher import create_skills_udf, CATALOG_VERSION
 
@@ -177,12 +178,29 @@ df_with_skills = df_silver.withColumn(
 ).drop("skills_struct")
 
 # -------------------------------------------------------------------
+# Dedup por job_posting_id (mantém scrape mais recente)
+# -------------------------------------------------------------------
+print("[skills_backfill] Applying dedup on job_posting_id...")
+
+w = Window.partitionBy("job_posting_id").orderBy(col("scraped_at").desc())
+
+df_not_null = df_with_skills.filter(col("job_posting_id").isNotNull())
+df_null = df_with_skills.filter(col("job_posting_id").isNull())
+
+df_deduped = (
+    df_not_null
+    .withColumn("rn", row_number().over(w))
+    .filter(col("rn") == 1)
+    .drop("rn")
+).unionByName(df_null)
+
+# -------------------------------------------------------------------
 # Escrita no Silver (overwrite por partição)
 # -------------------------------------------------------------------
 print("[skills_backfill] Writing updated data...")
 
 (
-    df_with_skills
+    df_deduped
     .repartition("year", "month", "day", "hour")
     .write
     .mode("overwrite")
@@ -192,7 +210,22 @@ print("[skills_backfill] Writing updated data...")
     .save(silver_path)
 )
 
-print(f"[skills_backfill] Successfully updated skills for {SOURCE_SYSTEM}")
-print(f"[skills_backfill] Catalog version: {CATALOG_VERSION}")
+# -------------------------------------------------------------------
+# Relatório final
+# -------------------------------------------------------------------
+input_count = df_with_skills.count()
+final_count = df_deduped.count()
+duplicates_removed = input_count - final_count
+
+print("=" * 60)
+print("[skills_backfill] RELATÓRIO FINAL")
+print("=" * 60)
+print(f"  Source system: {SOURCE_SYSTEM}")
+print(f"  Date range: {DATE_FROM or 'all'} to {DATE_TO or 'all'}")
+print(f"  Registros processados: {input_count}")
+print(f"  Duplicatas removidas: {duplicates_removed}")
+print(f"  Registros finais: {final_count}")
+print(f"  Skills catalog version: {CATALOG_VERSION}")
+print("=" * 60)
 
 job.commit()

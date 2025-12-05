@@ -1,0 +1,299 @@
+# Cloud Platforms Skills
+# Version: 1.2
+# Last Updated: 2025-12-04
+
+cloud_platforms:
+
+  # Microsoft Azure
+  azure:
+    canonical: "Azure"
+    variations:
+      - "azure"
+      - "microsoft azure"
+      - "ms azure"
+    priority: high  # 77% do dataset
+
+    sub_skills:
+      - canonical: "Azure Data Factory"
+        variations:
+          - "azure data factory"
+          - "adf"
+          - "data factory"
+        priority: high
+
+      - canonical: "Azure Synapse Analytics"
+        variations:
+          - "synapse"
+          - "azure synapse"
+          - "synapse analytics"
+          - "azure synapse analytics"
+          - "sql pool"
+          - "synapse sql"
+        priority: high
+
+      - canonical: "Azure Databricks"
+        variations:
+          - "azure databricks"
+        priority: high
+
+      - canonical: "Microsoft Fabric"
+        variations:
+          - "fabric"
+          - "ms fabric"
+          - "microsoft fabric"
+          - "fabric lakehouse"
+          - "microsoft fabric lakehouse"
+        priority: high  # Growing adoption
+
+      - canonical: "Azure Data Lake Storage"
+        variations:
+          - "data lake"
+          - "azure data lake"
+          - "adls"
+          - "adls gen2"
+          - "data lake storage"
+          - "azure data lake storage"
+          - "lake storage gen2"
+        priority: high
+
+      - canonical: "Azure Blob Storage"
+        variations:
+          - "blob storage"
+          - "azure blob"
+          - "blob"
+        priority: medium
+
+      - canonical: "Azure Functions"
+        variations:
+          - "azure functions"
+          - "azure function"
+        priority: medium
+
+      - canonical: "Azure DevOps"
+        variations:
+          - "azure devops"
+          - "ado"
+        priority: medium
+
+      - canonical: "Azure Purview"
+        variations:
+          - "purview"
+          - "azure purview"
+          - "microsoft purview"
+        priority: low
+
+      - canonical: "Azure SQL Database"
+        variations:
+          - "azure sql"
+          - "azure sql database"
+          - "sql azure"
+        priority: medium
+
+      - canonical: "Azure Cosmos DB"
+        variations:
+          - "cosmos db"
+          - "cosmosdb"
+          - "azure cosmos"
+        priority: low
+
+      - canonical: "Azure Event Hubs"
+        variations:
+          - "event hubs"
+          - "azure event hubs"
+          - "eventhub"
+        priority: low
+
+      - canonical: "Azure Stream Analytics"
+        variations:
+          - "stream analytics"
+          - "azure stream analytics"
+        priority: low
+
+      - canonical: "Azure Key Vault"
+        variations:
+          - "key vault"
+          - "azure key vault"
+        priority: low
+
+      - canonical: "Azure Logic Apps"
+        variations:
+          - "logic apps"
+          - "azure logic apps"
+        priority: low
+
+      - canonical: "Azure AI Foundry"
+        variations:
+          - "azure ai foundry"
+          - "ai foundry"
+        priority: low
+
+      - canonical: "Azure ML"
+        variations:
+          - "azure ml"
+          - "azure machine learning"
+        priority: low
+
+  # Amazon Web Services
+  aws:
+    canonical: "AWS"
+    variations:
+      - "aws"
+      - "amazon web services"
+    priority: high  # 40% do dataset
+
+    sub_skills:
+      - canonical: "AWS S3"
+        variations:
+          - "s3"
+          - "amazon s3"
+          - "simple storage service"
+        priority: high
+
+      - canonical: "AWS Glue"
+        variations:
+          - "glue"
+          - "aws glue"
+          - "amazon glue"
+        priority: high
+
+      - canonical: "AWS Redshift"
+        variations:
+          - "redshift"
+          - "aws redshift"
+          - "amazon redshift"
+        priority: high
+
+      - canonical: "AWS EMR"
+        variations:
+          - "emr"
+          - "aws emr"
+          - "elastic mapreduce"
+        priority: medium
+
+      - canonical: "AWS Lambda"
+        variations:
+          - "lambda"
+          - "aws lambda"
+        priority: medium
+
+      - canonical: "AWS Athena"
+        variations:
+          - "athena"
+          - "aws athena"
+        priority: medium
+
+      - canonical: "AWS Kinesis"
+        variations:
+          - "kinesis"
+          - "aws kinesis"
+        priority: medium
+
+      - canonical: "AWS DynamoDB"
+        variations:
+          - "dynamodb"
+          - "aws dynamodb"
+        priority: low
+
+      - canonical: "AWS RDS"
+        variations:
+          - "rds"
+          - "aws rds"
+          - "relational database service"
+        priority: medium
+
+      - canonical: "AWS Step Functions"
+        variations:
+          - "step functions"
+          - "aws step functions"
+        priority: low
+
+      - canonical: "AWS EC2"
+        variations:
+          - "ec2"
+          - "aws ec2"
+          - "elastic compute"
+        priority: medium
+
+      - canonical: "Amazon QuickSight"
+        variations:
+          - "quicksight"
+          - "amazon quicksight"
+          - "aws quicksight"
+        priority: low
+
+  # Google Cloud Platform
+  gcp:
+    canonical: "GCP"
+    variations:
+      - "gcp"
+      - "google cloud"
+      - "google cloud platform"
+    priority: high  # 40% do dataset
+
+    sub_skills:
+      - canonical: "BigQuery"
+        variations:
+          - "bigquery"
+          - "big query"
+          - "google bigquery"
+        priority: high
+
+      - canonical: "Google Cloud Storage"
+        variations:
+          - "gcs"
+          - "cloud storage"
+          - "google cloud storage"
+        priority: high
+
+      - canonical: "Google Dataflow"
+        variations:
+          - "dataflow"
+          - "google dataflow"
+        priority: medium
+
+      - canonical: "Google Dataproc"
+        variations:
+          - "dataproc"
+          - "google dataproc"
+        priority: medium
+
+      - canonical: "Google Cloud Functions"
+        variations:
+          - "cloud functions"
+          - "google cloud functions"
+          - "gcf"
+        priority: low
+
+      - canonical: "Google Pub/Sub"
+        variations:
+          - "pub/sub"
+          - "pubsub"
+          - "google pub/sub"
+        priority: medium
+
+      - canonical: "Google Cloud Composer"
+        variations:
+          - "cloud composer"
+          - "google cloud composer"
+        priority: low
+
+      - canonical: "Google Kubernetes Engine"
+        variations:
+          - "gke"
+          - "google kubernetes engine"
+        priority: low
+
+      - canonical: "Cloud Run"
+        variations:
+          - "cloud run"
+          - "google cloud run"
+        priority: low
+
+  # Oracle Cloud Infrastructure
+  oci:
+    canonical: "OCI"
+    variations:
+      - "oci"
+      - "oracle cloud"
+      - "oracle cloud infrastructure"
+    priority: low

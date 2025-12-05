@@ -1,0 +1,134 @@
+# DevOps & CI/CD Tools
+# Version: 1.2
+# Last Updated: 2025-12-04
+
+devops_tools:
+
+  # Containerization
+  docker:
+    canonical: "Docker"
+    variations:
+      - "docker"
+    priority: high  # 37% do dataset
+
+  kubernetes:
+    canonical: "Kubernetes"
+    variations:
+      - "kubernetes"
+      - "k8s"
+    priority: medium  # 9% do dataset
+
+  openshift:
+    canonical: "OpenShift"
+    variations:
+      - "openshift"
+    priority: low
+
+  # CI/CD
+  cicd:
+    canonical: "CI/CD"
+    variations:
+      - "ci/cd"
+      - "cicd"
+      - "ci cd"
+      - "continuous integration"
+      - "continuous deployment"
+      - "continuous delivery"
+    priority: high  # 46% do dataset
+
+  jenkins:
+    canonical: "Jenkins"
+    variations:
+      - "jenkins"
+    priority: medium
+
+  github_actions:
+    canonical: "GitHub Actions"
+    variations:
+      - "github actions"
+      - "gh actions"
+    priority: medium
+
+  gitlab_ci:
+    canonical: "GitLab CI"
+    variations:
+      - "gitlab ci"
+      - "gitlab ci/cd"
+    priority: low
+
+  circleci:
+    canonical: "CircleCI"
+    variations:
+      - "circleci"
+      - "circle ci"
+    priority: low
+
+  azure_pipelines:
+    canonical: "Azure Pipelines"
+    variations:
+      - "azure pipelines"
+      - "azure pipeline"
+    priority: low
+
+  # Infrastructure as Code
+  terraform:
+    canonical: "Terraform"
+    variations:
+      - "terraform"
+    priority: medium  # 6% do dataset
+
+  ansible:
+    canonical: "Ansible"
+    variations:
+      - "ansible"
+    priority: low
+
+  cloudformation:
+    canonical: "CloudFormation"
+    variations:
+      - "cloudformation"
+      - "aws cloudformation"
+    priority: low
+
+  arm_templates:
+    canonical: "ARM Templates"
+    variations:
+      - "arm templates"
+      - "azure resource manager"
+    priority: low
+
+  pulumi:
+    canonical: "Pulumi"
+    variations:
+      - "pulumi"
+    priority: low
+
+  # Package Management
+  nexus:
+    canonical: "Nexus Repository"
+    variations:
+      - "nexus"
+      - "nexus repository"
+    priority: low
+
+  artifactory:
+    canonical: "JFrog Artifactory"
+    variations:
+      - "artifactory"
+      - "jfrog"
+    priority: low
+
+  # Kubernetes Tools
+  helm:
+    canonical: "Helm"
+    variations:
+      - "helm"
+      - "helm charts"
+    priority: low
+
+  argocd:
+    canonical: "Argo CD"
+    variations:
+      - "argocd"
+      - "argo cd"
+    priority: low

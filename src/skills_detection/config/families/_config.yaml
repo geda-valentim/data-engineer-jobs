@@ -1,0 +1,69 @@
+# Skills Catalog Configuration
+# Version: 1.2
+# Last Updated: 2025-12-04
+# Updated based on Logistic Regression analysis of job postings
+
+# This file contains the configuration for the skills catalog.
+# Individual skill families are stored in separate files in this directory.
+
+# Family files to load (in order)
+families:
+  - cloud_platforms.yaml
+  - programming_languages.yaml
+  - data_processing.yaml
+  - orchestration.yaml
+  - data_warehouses.yaml
+  - databases.yaml
+  - transformation_tools.yaml
+  - bi_tools.yaml
+  - python_libraries.yaml
+  - devops_tools.yaml
+  - version_control.yaml
+  - governance_quality.yaml
+  - practices.yaml
+  - monitoring_logging.yaml
+  - certifications.yaml
+  - soft_skills.yaml
+  - erp_systems.yaml
+
+# Global Configuration
+config:
+  # Case sensitivity
+  case_sensitive: false
+
+  # Minimum skill name length to avoid false positives
+  min_skill_length: 2
+
+  # Word boundary enforcement
+  word_boundary: true
+
+  # Priority weights for ranking
+  priority_weights:
+    high: 3
+    medium: 2
+    low: 1
+
+  # Categories for grouping
+  categories:
+    technical:
+      - cloud_platforms
+      - programming_languages
+      - data_processing
+      - orchestration
+      - data_warehouses
+      - databases
+      - transformation_tools
+      - bi_tools
+      - python_libraries
+      - devops_tools
+      - version_control
+      - monitoring_logging
+    concepts:
+      - governance_quality
+      - practices
+    credentials:
+      - certifications
+    soft:
+      - soft_skills
+    enterprise:
+      - erp_systems

@@ -12,19 +12,19 @@ data "aws_iam_policy_document" "dispatcher_policy_doc" {
   }
 
   statement {
-    sid = "AllowStartStepFunctions"
+    sid = "AllowSendToIngestionQueue"
     actions = [
-      "states:StartExecution"
+      "sqs:SendMessage"
     ]
     resources = [
-      aws_sfn_state_machine.bright_data_snapshot_ingestion.arn
+      aws_sqs_queue.ingestion_queue.arn
     ]
   }
 }
 
 resource "aws_iam_policy" "dispatcher_policy" {
   name        = "${var.project_name}-dispatcher-policy"
-  description = "Permite dispatcher ler DynamoDB e startar Step Functions"
+  description = "Permite dispatcher ler DynamoDB e enviar mensagens para SQS"
 
   policy = data.aws_iam_policy_document.dispatcher_policy_doc.json
 }
