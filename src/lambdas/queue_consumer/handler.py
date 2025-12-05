@@ -2,7 +2,7 @@
 Lambda SQS Consumer - Consome mensagens da fila e inicia Step Function
 
 Recebe mensagens do SQS com payload de ingestão e dispara a Step Function.
-O throttling é controlado pela reserved concurrency da Lambda (5).
+O throttling é controlado verificando execuções em andamento antes de iniciar novas.
 """
 
 import os
@@ -12,6 +12,24 @@ import boto3
 sfn_client = boto3.client("stepfunctions")
 
 STATE_MACHINE_ARN = os.environ.get("STATE_MACHINE_ARN")
+MAX_CONCURRENT_EXECUTIONS = int(os.environ.get("MAX_CONCURRENT_EXECUTIONS", "10"))
+
+
+def count_running_executions() -> int:
+    """Conta quantas execuções estão em andamento."""
+    count = 0
+    paginator = sfn_client.get_paginator("list_executions")
+
+    for page in paginator.paginate(
+        stateMachineArn=STATE_MACHINE_ARN,
+        statusFilter="RUNNING"
+    ):
+        count += len(page.get("executions", []))
+        # Otimização: se já passou do limite, não precisa continuar contando
+        if count >= MAX_CONCURRENT_EXECUTIONS:
+            break
+
+    return count
 
 
 def handler(event, context):
@@ -31,6 +49,14 @@ def handler(event, context):
     """
     if not STATE_MACHINE_ARN:
         raise ValueError("STATE_MACHINE_ARN environment variable not set")
+
+    # Verifica concorrência ANTES de processar qualquer mensagem
+    running_count = count_running_executions()
+    if running_count >= MAX_CONCURRENT_EXECUTIONS:
+        print(f"⏳ Throttling: {running_count}/{MAX_CONCURRENT_EXECUTIONS} execuções em andamento")
+        print("   Mensagens retornarão à fila após visibility timeout")
+        # Raise para que TODAS as mensagens do batch voltem para a fila
+        raise Exception(f"Throttling: {running_count} execuções em andamento (max: {MAX_CONCURRENT_EXECUTIONS})")
 
     results = []
 

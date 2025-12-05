@@ -24,21 +24,22 @@ resource "aws_lambda_function" "backfill_fanout" {
   role          = aws_iam_role.backfill_fanout_role.arn
   handler       = "handler.handler"
   runtime       = "python3.11"
-  timeout       = 300  # 5 min - pode enviar muitas mensagens
-  memory_size   = 128
+  timeout       = 60  # 1 min - só gera JSON e inicia Step Function
+  memory_size   = 256
 
   filename         = data.archive_file.backfill_fanout_zip.output_path
   source_code_hash = data.archive_file.backfill_fanout_zip.output_base64sha256
 
   environment {
     variables = {
-      INGESTION_QUEUE_URL = aws_sqs_queue.ingestion_queue.url
+      BACKFILL_BUCKET              = var.data_lake_bucket_name
+      ORCHESTRATOR_STATE_MACHINE_ARN = aws_sfn_state_machine.backfill_orchestrator.arn
     }
   }
 
   tags = {
     Name    = "${var.project_name}-backfill-fanout"
-    Purpose = "Send multiple messages to SQS for backfill operations"
+    Purpose = "Generate payloads and start backfill orchestrator"
   }
 }
 
@@ -67,9 +68,9 @@ resource "aws_iam_role_policy_attachment" "backfill_fanout_logs" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
 
-# Permissão para SQS
-resource "aws_iam_role_policy" "backfill_fanout_sqs" {
-  name = "${var.project_name}-backfill-fanout-sqs"
+# Permissão para S3 (salvar manifest)
+resource "aws_iam_role_policy" "backfill_fanout_s3" {
+  name = "${var.project_name}-backfill-fanout-s3"
   role = aws_iam_role.backfill_fanout_role.id
 
   policy = jsonencode({
@@ -78,10 +79,28 @@ resource "aws_iam_role_policy" "backfill_fanout_sqs" {
       {
         Effect = "Allow"
         Action = [
-          "sqs:SendMessage",
-          "sqs:GetQueueUrl"
+          "s3:PutObject"
         ]
-        Resource = aws_sqs_queue.ingestion_queue.arn
+        Resource = "${var.data_lake_bucket_arn}/backfill-manifests/*"
+      }
+    ]
+  })
+}
+
+# Permissão para Step Functions (iniciar orquestrador)
+resource "aws_iam_role_policy" "backfill_fanout_sfn" {
+  name = "${var.project_name}-backfill-fanout-sfn"
+  role = aws_iam_role.backfill_fanout_role.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Action = [
+          "states:StartExecution"
+        ]
+        Resource = aws_sfn_state_machine.backfill_orchestrator.arn
       }
     ]
   })

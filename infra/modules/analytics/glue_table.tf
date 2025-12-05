@@ -12,9 +12,31 @@ resource "aws_glue_catalog_table" "linkedin_silver" {
     "parquet.compression" = "SNAPPY"
     EXTERNAL              = "TRUE"
 
-    # Partition Projection desabilitado - usar MSCK REPAIR TABLE para registrar partições
-    # Para volumes pequenos, scan direto é mais rápido que projeção
-    "projection.enabled" = "false"
+    # Partition Projection - Athena calcula partições automaticamente
+    # Não precisa de MSCK REPAIR TABLE
+    "projection.enabled" = "true"
+
+    # Year: 2024-2030
+    "projection.year.type"   = "integer"
+    "projection.year.range"  = "2024,2030"
+
+    # Month: 01-12
+    "projection.month.type"   = "integer"
+    "projection.month.range"  = "1,12"
+    "projection.month.digits" = "2"
+
+    # Day: 01-31
+    "projection.day.type"   = "integer"
+    "projection.day.range"  = "1,31"
+    "projection.day.digits" = "2"
+
+    # Hour: 00-23
+    "projection.hour.type"   = "integer"
+    "projection.hour.range"  = "0,23"
+    "projection.hour.digits" = "2"
+
+    # Template do path S3
+    "storage.location.template" = "s3://${var.silver_bucket_name}/linkedin/year=$${year}/month=$${month}/day=$${day}/hour=$${hour}/"
   }
 
   storage_descriptor {
@@ -185,21 +207,21 @@ resource "aws_glue_catalog_table" "linkedin_silver" {
     }
   }
 
-  # Partições
+  # Partições (string para compatibilidade com Partition Projection)
   partition_keys {
     name = "year"
-    type = "int"
+    type = "string"
   }
   partition_keys {
     name = "month"
-    type = "int"
+    type = "string"
   }
   partition_keys {
     name = "day"
-    type = "int"
+    type = "string"
   }
   partition_keys {
     name = "hour"
-    type = "int"
+    type = "string"
   }
 }

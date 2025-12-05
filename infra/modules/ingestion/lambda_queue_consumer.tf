@@ -21,13 +21,13 @@ resource "aws_lambda_function" "queue_consumer" {
   filename         = data.archive_file.queue_consumer_zip.output_path
   source_code_hash = data.archive_file.queue_consumer_zip.output_base64sha256
 
-  # Nota: reserved_concurrent_executions removido por limite da conta
-  # O throttling é controlado pelo batch_size=1 do SQS event source mapping
-  # e pelo max_concurrent_runs do Glue Job (10)
+  # O throttling é controlado pela Lambda verificando execuções em andamento
+  # antes de iniciar novas Step Functions (MAX_CONCURRENT_EXECUTIONS)
 
   environment {
     variables = {
-      STATE_MACHINE_ARN = aws_sfn_state_machine.bright_data_snapshot_ingestion.arn
+      STATE_MACHINE_ARN          = aws_sfn_state_machine.bright_data_snapshot_ingestion.arn
+      MAX_CONCURRENT_EXECUTIONS  = "10"
     }
   }
 
@@ -111,7 +111,8 @@ resource "aws_iam_role_policy" "queue_consumer_sfn" {
       {
         Effect = "Allow"
         Action = [
-          "states:StartExecution"
+          "states:StartExecution",
+          "states:ListExecutions"
         ]
         Resource = aws_sfn_state_machine.bright_data_snapshot_ingestion.arn
       }

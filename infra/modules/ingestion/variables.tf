@@ -67,3 +67,13 @@ variable "glue_temp_bucket_name" {
 variable "glue_scripts_bucket_name" {
   type = string
 }
+
+variable "data_lake_bucket_name" {
+  type        = string
+  description = "Nome do bucket S3 do data lake (para backfill manifests)"
+}
+
+variable "data_lake_bucket_arn" {
+  type        = string
+  description = "ARN do bucket S3 do data lake"
+}

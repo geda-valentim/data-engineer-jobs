@@ -1,3 +1,30 @@
+"""
+Glue Job: Bronze to Silver Backfill
+
+Processa dados do Bronze para o Silver em lote.
+Por padrão, só processa partições que ainda NÃO existem no Silver.
+
+Parâmetros:
+  --bronze_bucket: Bucket do Bronze
+  --silver_bucket: Bucket do Silver
+  --source_system: Sistema fonte (ex: linkedin)
+  --date_from: Data inicial (YYYY-MM-DD), opcional
+  --date_to: Data final (YYYY-MM-DD), opcional
+  --force_reprocess: "true" para reprocessar mesmo se já existe no Silver
+
+Uso:
+  # Processar todo Bronze pendente (não reprocessa existentes)
+  aws glue start-job-run --job-name bronze-to-silver-backfill
+
+  # Processar range específico
+  aws glue start-job-run --job-name bronze-to-silver-backfill \
+    --arguments='{"--date_from":"2025-12-01","--date_to":"2025-12-05"}'
+
+  # Forçar reprocessamento (sobrescreve Silver existente)
+  aws glue start-job-run --job-name bronze-to-silver-backfill \
+    --arguments='{"--force_reprocess":"true"}'
+"""
+
 import sys
 import json
 
@@ -15,6 +42,8 @@ from pyspark.sql.functions import (
     to_timestamp,
     to_date,
     row_number,
+    concat_ws,
+    input_file_name,
 )
 from pyspark.sql.window import Window
 
@@ -25,16 +54,7 @@ from skills_detection.skill_matcher import create_skills_udf, CATALOG_VERSION
 # -------------------------------------------------------------------
 args = getResolvedOptions(
     sys.argv,
-    [
-        "JOB_NAME",
-        "bronze_bucket",
-        "silver_bucket",
-        "source_system",
-        "year",
-        "month",
-        "day",
-        "hour",
-    ],
+    ["JOB_NAME", "bronze_bucket", "silver_bucket", "source_system"],
 )
 
 JOB_NAME = args["JOB_NAME"]
@@ -42,10 +62,11 @@ BRONZE_BUCKET = args["bronze_bucket"]
 SILVER_BUCKET = args["silver_bucket"]
 SOURCE_SYSTEM = args["source_system"]
 
-YEAR = args["year"]
-MONTH = args["month"]
-DAY = args["day"]
-HOUR = args["hour"]
+# Parâmetros opcionais
+all_args = {k.lstrip("-"): v for k, v in zip(sys.argv[::2], sys.argv[1::2]) if k.startswith("--")}
+DATE_FROM = all_args.get("date_from")
+DATE_TO = all_args.get("date_to")
+FORCE_REPROCESS = all_args.get("force_reprocess", "false").lower() == "true"
 
 # -------------------------------------------------------------------
 # Config do catálogo de skills
@@ -65,15 +86,13 @@ job.init(JOB_NAME, args)
 # -------------------------------------------------------------------
 # Caminhos S3
 # -------------------------------------------------------------------
-bronze_path = (
-    f"s3://{BRONZE_BUCKET}/{SOURCE_SYSTEM}/"
-    f"year={YEAR}/month={MONTH}/day={DAY}/hour={HOUR}/"
-)
+bronze_path = f"s3://{BRONZE_BUCKET}/{SOURCE_SYSTEM}/"
+silver_path = f"s3://{SILVER_BUCKET}/{SOURCE_SYSTEM}/"
 
-silver_base_path = f"s3://{SILVER_BUCKET}/{SOURCE_SYSTEM}/"
-
-print(f"[bronze_to_silver] Reading from: {bronze_path}")
-print(f"[bronze_to_silver] Writing to: {silver_base_path}")
+print(f"[backfill] Bronze path: {bronze_path}")
+print(f"[backfill] Silver path: {silver_path}")
+print(f"[backfill] Date range: {DATE_FROM or 'all'} to {DATE_TO or 'all'}")
+print(f"[backfill] Force reprocess: {FORCE_REPROCESS}")
 
 # -------------------------------------------------------------------
 # Leitura Bronze
@@ -81,18 +100,137 @@ print(f"[bronze_to_silver] Writing to: {silver_base_path}")
 try:
     df_bronze = spark.read.json(bronze_path)
 except Exception as e:
-    print(f"[bronze_to_silver] ERROR reading bronze path: {e}")
+    print(f"[backfill] ERROR reading bronze path: {e}")
     job.commit()
     sys.exit(0)
 
 if df_bronze.rdd.isEmpty():
-    print("[bronze_to_silver] No records found for this partition. Exiting gracefully.")
+    print("[backfill] No records found in Bronze. Exiting.")
     job.commit()
     sys.exit(0)
 
+# Extrai partições do path do arquivo
+# Path: s3://bucket/linkedin/year=2025/month=12/day=03/hour=14/file.jsonl
+df_bronze = df_bronze.withColumn("_file_path", input_file_name())
+
+# Extrai year/month/day/hour do path
+from pyspark.sql.functions import regexp_extract
+
+df_bronze = (
+    df_bronze
+    .withColumn("year", regexp_extract(col("_file_path"), r"year=(\d+)", 1))
+    .withColumn("month", regexp_extract(col("_file_path"), r"month=(\d+)", 1))
+    .withColumn("day", regexp_extract(col("_file_path"), r"day=(\d+)", 1))
+    .withColumn("hour", regexp_extract(col("_file_path"), r"hour=(\d+)", 1))
+    .drop("_file_path")
+)
+
+# Zero-pad as partições
+from pyspark.sql.functions import lpad
+
+df_bronze = (
+    df_bronze
+    .withColumn("month", lpad(col("month"), 2, "0"))
+    .withColumn("day", lpad(col("day"), 2, "0"))
+    .withColumn("hour", lpad(col("hour"), 2, "0"))
+)
+
+bronze_count = df_bronze.count()
+print(f"[backfill] Total records in Bronze: {bronze_count}")
+
 # -------------------------------------------------------------------
-# Limpeza / Normalização básica
+# Filtro por data (opcional)
 # -------------------------------------------------------------------
+if DATE_FROM or DATE_TO:
+    df_bronze = df_bronze.withColumn(
+        "_partition_date",
+        to_date(concat_ws("-", col("year"), col("month"), col("day")), "yyyy-MM-dd")
+    )
+
+    if DATE_FROM:
+        df_bronze = df_bronze.filter(col("_partition_date") >= DATE_FROM)
+        print(f"[backfill] Filtered from {DATE_FROM}")
+
+    if DATE_TO:
+        df_bronze = df_bronze.filter(col("_partition_date") <= DATE_TO)
+        print(f"[backfill] Filtered to {DATE_TO}")
+
+    df_bronze = df_bronze.drop("_partition_date")
+
+    filtered_count = df_bronze.count()
+    print(f"[backfill] Records after date filter: {filtered_count}")
+
+# -------------------------------------------------------------------
+# Identificar partições já existentes no Silver
+# -------------------------------------------------------------------
+if not FORCE_REPROCESS:
+    print("[backfill] Checking existing Silver partitions...")
+
+    # Lista partições únicas no Bronze
+    bronze_partitions = (
+        df_bronze
+        .select("year", "month", "day", "hour")
+        .distinct()
+        .collect()
+    )
+    print(f"[backfill] Bronze partitions to check: {len(bronze_partitions)}")
+
+    # Verifica quais já existem no Silver
+    s3_client = boto3.client("s3")
+    existing_partitions = set()
+
+    for row in bronze_partitions:
+        partition_key = f"{SOURCE_SYSTEM}/year={row.year}/month={row.month}/day={row.day}/hour={row.hour}/"
+        try:
+            response = s3_client.list_objects_v2(
+                Bucket=SILVER_BUCKET,
+                Prefix=partition_key,
+                MaxKeys=1
+            )
+            if response.get("KeyCount", 0) > 0:
+                existing_partitions.add((row.year, row.month, row.day, row.hour))
+        except Exception:
+            pass
+
+    print(f"[backfill] Existing Silver partitions: {len(existing_partitions)}")
+
+    if existing_partitions:
+        # Filtra apenas partições que NÃO existem no Silver
+        from pyspark.sql.functions import struct
+
+        df_bronze = df_bronze.withColumn(
+            "_partition_key",
+            struct(col("year"), col("month"), col("day"), col("hour"))
+        )
+
+        # Cria broadcast set para filtragem eficiente
+        existing_broadcast = sc.broadcast(existing_partitions)
+
+        from pyspark.sql.functions import udf
+        from pyspark.sql.types import BooleanType
+
+        def is_new_partition(year, month, day, hour):
+            return (year, month, day, hour) not in existing_broadcast.value
+
+        is_new_udf = udf(is_new_partition, BooleanType())
+
+        df_bronze = df_bronze.filter(
+            is_new_udf(col("year"), col("month"), col("day"), col("hour"))
+        ).drop("_partition_key")
+
+        new_count = df_bronze.count()
+        print(f"[backfill] Records in NEW partitions only: {new_count}")
+
+        if new_count == 0:
+            print("[backfill] All partitions already exist in Silver. Nothing to process.")
+            job.commit()
+            sys.exit(0)
+
+# -------------------------------------------------------------------
+# Transformação Bronze -> Silver
+# -------------------------------------------------------------------
+print("[backfill] Applying transformations...")
+
 html_tag_pattern = "<[^>]+>"
 
 df_clean = (
@@ -143,17 +281,8 @@ df_clean = df_clean.withColumn(
     regexp_replace(col("job_description_text"), r"\s+", " "),
 )
 
-# Partições de data (strings zero-padded para consistência)
-df_clean = (
-    df_clean
-    .withColumn("year", lit(YEAR))
-    .withColumn("month", lit(MONTH.zfill(2)))
-    .withColumn("day", lit(DAY.zfill(2)))
-    .withColumn("hour", lit(HOUR.zfill(2)))
-)
-
 # -------------------------------------------------------------------
-# Colunas base do Silver (antes das skills)
+# Colunas do Silver
 # -------------------------------------------------------------------
 silver_cols = [
     "job_posting_id",
@@ -194,9 +323,9 @@ silver_cols = [
 df_silver_base = df_clean.select(*silver_cols)
 
 # -------------------------------------------------------------------
-# Leitura do catálogo de Skills (JSON no S3)
+# Leitura do catálogo de Skills
 # -------------------------------------------------------------------
-print(f"[bronze_to_silver] Loading skills catalog from s3://{SILVER_BUCKET}/{SKILLS_CATALOG_KEY}")
+print(f"[backfill] Loading skills catalog from s3://{SILVER_BUCKET}/{SKILLS_CATALOG_KEY}")
 
 s3_client = boto3.client("s3")
 
@@ -205,16 +334,18 @@ try:
     catalog_json = obj["Body"].read().decode("utf-8")
     catalog_dict = json.loads(catalog_json)
 except Exception as e:
-    print(f"[bronze_to_silver] ERROR reading skills catalog: {e}")
+    print(f"[backfill] ERROR reading skills catalog: {e}")
     catalog_dict = {}
 
-# Cria UDF usando módulo compartilhado
+# Cria UDF
 detect_skills_udf = create_skills_udf(sc, catalog_dict, version=CATALOG_VERSION)
-print(f"[bronze_to_silver] Skills UDF created with catalog version {CATALOG_VERSION}")
+print(f"[backfill] Skills UDF created with catalog version {CATALOG_VERSION}")
 
 # -------------------------------------------------------------------
 # Aplica extração de skills
 # -------------------------------------------------------------------
+print("[backfill] Applying skills detection...")
+
 df_with_skills = df_silver_base.withColumn(
     "skills_struct",
     detect_skills_udf(col("job_title"), col("job_description_text")),
@@ -228,81 +359,56 @@ df_with_skills = df_silver_base.withColumn(
     "skills_catalog_version", col("skills_struct.skills_catalog_version")
 ).drop("skills_struct")
 
-silver_cols_with_skills = silver_cols + [
-    "skills_canonical",
-    "skills_families",
-    "skills_raw_hits",
-    "skills_catalog_version",
-]
-
-df_silver_enriched = df_with_skills.select(*silver_cols_with_skills)
-
 # -------------------------------------------------------------------
-# Dedup técnico por job_posting_id (mantém scrape mais recente)
+# Dedup por job_posting_id
 # -------------------------------------------------------------------
-print("[bronze_to_silver] Applying technical dedup on job_posting_id/scraped_at")
+print("[backfill] Applying dedup on job_posting_id...")
 
 w = Window.partitionBy("job_posting_id").orderBy(col("scraped_at").desc())
 
-# Merge com dados existentes na partição para garantir unicidade global
-silver_partition_path = (
-    f"{silver_base_path}year={YEAR}/month={MONTH.zfill(2)}/day={DAY.zfill(2)}/hour={HOUR.zfill(2)}/"
-)
+df_not_null = df_with_skills.filter(col("job_posting_id").isNotNull())
+df_null = df_with_skills.filter(col("job_posting_id").isNull())
 
-try:
-    df_existing = spark.read.parquet(silver_partition_path)
-    existing_count = df_existing.count()
-    df_combined = df_silver_enriched.unionByName(df_existing)
-    print("[bronze_to_silver] Found existing data, merging for dedup")
-except Exception:
-    df_combined = df_silver_enriched
-    existing_count = 0
-    print("[bronze_to_silver] No existing data in partition")
-
-df_not_null = df_combined.filter(col("job_posting_id").isNotNull())
-df_null = df_combined.filter(col("job_posting_id").isNull())
-
-df_not_null_dedup = (
+df_deduped = (
     df_not_null
     .withColumn("rn", row_number().over(w))
     .filter(col("rn") == 1)
     .drop("rn")
-)
-
-df_final = df_not_null_dedup.unionByName(df_null)
+).unionByName(df_null)
 
 # -------------------------------------------------------------------
-# Escrita no Silver (overwrite na partição)
+# Escrita no Silver
 # -------------------------------------------------------------------
+print("[backfill] Writing to Silver...")
+
 spark.conf.set("spark.sql.sources.partitionOverwriteMode", "dynamic")
 
 (
-    df_final
+    df_deduped
     .repartition("year", "month", "day", "hour")
     .write
     .mode("overwrite")
     .format("parquet")
     .partitionBy("year", "month", "day", "hour")
-    .save(silver_base_path)
+    .save(silver_path)
 )
 
 # -------------------------------------------------------------------
 # Relatório final
 # -------------------------------------------------------------------
-new_count = df_silver_enriched.count()
-final_count = df_final.count()
-combined_count = new_count + existing_count
-duplicates_removed = combined_count - final_count
+input_count = df_with_skills.count()
+final_count = df_deduped.count()
+duplicates_removed = input_count - final_count
 
 print("=" * 60)
-print("[bronze_to_silver] RELATÓRIO FINAL")
+print("[backfill] RELATÓRIO FINAL")
 print("=" * 60)
-print(f"  Partição: year={YEAR}/month={MONTH.zfill(2)}/day={DAY.zfill(2)}/hour={HOUR.zfill(2)}")
-print(f"  Registros novos (bronze): {new_count}")
-print(f"  Registros existentes (silver): {existing_count}")
-print(f"  Total após merge: {combined_count}")
+print(f"  Source system: {SOURCE_SYSTEM}")
+print(f"  Date range: {DATE_FROM or 'all'} to {DATE_TO or 'all'}")
+print(f"  Force reprocess: {FORCE_REPROCESS}")
+print(f"  Registros Bronze processados: {input_count}")
 print(f"  Duplicatas removidas: {duplicates_removed}")
-print(f"  Registros finais: {final_count}")
+print(f"  Registros finais no Silver: {final_count}")
 print(f"  Skills catalog version: {CATALOG_VERSION}")
 print("=" * 60)
 

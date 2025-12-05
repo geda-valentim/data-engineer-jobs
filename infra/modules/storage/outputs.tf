@@ -3,6 +3,11 @@ output "bronze_bucket_name" {
   value       = var.bronze_bucket_name
 }
 
+output "bronze_bucket_arn" {
+  description = "ARN do bucket bronze"
+  value       = aws_s3_bucket.bronze.arn
+}
+
 output "silver_bucket_name" {
   description = "Nome do bucket silver"
   value       = var.silver_bucket_name

@@ -1,20 +1,24 @@
 """
-Lambda Backfill Fan-out - Envia múltiplas mensagens para a fila SQS
+Lambda Backfill Fan-out - Gera payloads e inicia Step Function orquestradora
 
-Lê a configuração de geo_ids e work_types do arquivo linkedin_geo_ids_flat.json
-e envia uma mensagem para cada combinação location × work_type.
+Lê a configuração de geo_ids e work_types do arquivo linkedin_geo_ids_flat.json,
+gera os payloads para cada combinação location × work_type, salva no S3 e
+inicia a Step Function orquestradora com Distributed Map.
 """
 
 import os
 import json
 from pathlib import Path
+from datetime import datetime
 
 # Só inicializa boto3 se não for teste local
 if __name__ != "__main__":
     import boto3
-    sqs_client = boto3.client("sqs")
+    s3_client = boto3.client("s3")
+    sfn_client = boto3.client("stepfunctions")
 
-QUEUE_URL = os.environ.get("INGESTION_QUEUE_URL")
+BACKFILL_BUCKET = os.environ.get("BACKFILL_BUCKET")
+ORCHESTRATOR_STATE_MACHINE_ARN = os.environ.get("ORCHESTRATOR_STATE_MACHINE_ARN")
 
 # Carrega configuração de geo_ids
 # No Lambda: /var/task/data_extractor/linkedin/config/linkedin_geo_ids_flat.json
@@ -69,54 +73,29 @@ def get_work_type_code(work_type: str, config: dict) -> str:
     return codes.get(work_type, "1,2,3")  # default: all
 
 
-def handler(event, context):
+def generate_payloads(event: dict) -> tuple[list[dict], list[str], dict]:
     """
-    Dispara mensagens para a fila de ingestão baseado em region_groups.
+    Gera lista de payloads baseado nos parâmetros do evento.
 
-    Event format:
-    {
-        "region_groups": ["usa_states", "latin_america", "india"],
-        "work_types_override": ["remote"],  # opcional - sobrescreve config do grupo
-        "days": 30,  # opcional - filtro de tempo em dias (default: 30)
-        "keywords": "data engineer",  # opcional
-        "bronze_prefix_base": "linkedin/jobs-listing"  # opcional
-    }
-
-    Exemplos de days:
-    - days: 1 → últimas 24 horas
-    - days: 3 → últimos 3 dias
-    - days: 7 → última semana
-    - days: 30 → último mês (default)
-    - days: 90 → últimos 3 meses
-
-    Cada region_group é processado de acordo com sua configuração de work_types:
-    - work_types: ["all"] → 1 chamada por location (f_WT=1,2,3)
-    - work_types: ["on_site", "remote", "hybrid"] → 3 chamadas por location
-
-    Se work_types_override for passado, usa esse valor em vez da config do grupo.
-    Exemplo: {"region_groups": ["latin_america"], "work_types_override": ["remote"]}
+    Returns:
+        tuple: (payloads, errors, details_by_group)
     """
-    if not QUEUE_URL:
-        raise ValueError("INGESTION_QUEUE_URL environment variable not set")
-
-    # Carrega configuração
     config = load_geo_config()
 
     # Lista de todos os region_groups disponíveis (exceto work_type_codes)
     all_region_groups = [k for k in config.keys() if k != "work_type_codes"]
 
-    # Se não passar region_groups, usa todos
+    # Parâmetros do evento
     region_groups = event.get("region_groups") or all_region_groups
-    work_types_override = event.get("work_types_override")  # None = usa config do grupo
-    days = event.get("days", DEFAULT_DAYS)  # Default: 30 dias
-    time_filter = days * SECONDS_PER_DAY  # Converte dias para segundos
+    work_types_override = event.get("work_types_override")
+    days = event.get("days", DEFAULT_DAYS)
+    time_filter = days * SECONDS_PER_DAY
     keywords = event.get("keywords", "data engineer")
-    bronze_prefix_base = event.get("bronze_prefix_base", "linkedin/jobs-listing")
     work_type_codes = config.get("work_type_codes", {})
 
-    messages_sent = 0
+    payloads = []
     errors = []
-    details = []
+    details_by_group = {}
 
     for group_name in region_groups:
         group_config = config.get(group_name)
@@ -125,9 +104,11 @@ def handler(event, context):
             errors.append(f"Region group not found: {group_name}")
             continue
 
-        # Usa override se passado, senão usa config do grupo
         work_types = work_types_override if work_types_override else group_config.get("work_types", ["all"])
         locations = group_config.get("locations", [])
+
+        if group_name not in details_by_group:
+            details_by_group[group_name] = 0
 
         print(f"📍 Processing {group_name}: {len(locations)} locations × {len(work_types)} work_types")
 
@@ -146,10 +127,8 @@ def handler(event, context):
                 name_slug = name.lower().replace(" ", "-").replace(",", "")
                 if work_type == "all":
                     source_id = f"linkedin_{group_name}_{name_slug}_{geo_id}"
-                    wt_suffix = ""
                 else:
                     source_id = f"linkedin_{group_name}_{name_slug}_{work_type}_{geo_id}"
-                    wt_suffix = f"/{work_type}"
 
                 # Monta URL do LinkedIn
                 url = LINKEDIN_URL_TEMPLATE.format(
@@ -162,7 +141,6 @@ def handler(event, context):
                     url = url.replace("%22data%20engineer%22", keywords.replace(" ", "%20"))
 
                 # Monta payload completo
-                # Mantém estrutura bronze_prefix = "linkedin" para compatibilidade com Athena
                 payload = {
                     **BASE_PAYLOAD,
                     "source_id": source_id,
@@ -170,91 +148,123 @@ def handler(event, context):
                     "bronze_prefix": "linkedin"
                 }
 
-                try:
-                    # Envia para SQS (sem MessageGroupId para filas standard)
-                    send_params = {
-                        "QueueUrl": QUEUE_URL,
-                        "MessageBody": json.dumps(payload)
-                    }
+                payloads.append(payload)
+                details_by_group[group_name] += 1
 
-                    if ".fifo" in QUEUE_URL:
-                        send_params["MessageGroupId"] = source_id
+    return payloads, errors, details_by_group
 
-                    response = sqs_client.send_message(**send_params)
 
-                    wt_label = f" [{work_type}]" if work_type != "all" else ""
-                    print(f"✅ Sent: {name}{wt_label} → {response['MessageId'][:8]}")
-                    messages_sent += 1
-                    details.append({
-                        "location": name,
-                        "work_type": work_type,
-                        "source_id": source_id
-                    })
+def handler(event, context):
+    """
+    Gera payloads, salva no S3 e inicia Step Function orquestradora.
 
-                except Exception as e:
-                    error_msg = f"Failed to send message for {name} [{work_type}]: {str(e)}"
-                    print(f"❌ {error_msg}")
-                    errors.append(error_msg)
-
-    # Calcula totais esperados (considera override se existir)
-    total_expected = 0
-    for g in region_groups:
-        group_cfg = config.get(g)
-        if group_cfg:
-            locs = len(group_cfg.get("locations", []))
-            wts = len(work_types_override) if work_types_override else len(group_cfg.get("work_types", []))
-            total_expected += locs * wts
-
-    # Agrupa detalhes por region_group para o resumo
-    details_by_group = {}
-    for d in details:
-        group = d["source_id"].split("_")[1]  # linkedin_GROUP_name_...
-        if group not in details_by_group:
-            details_by_group[group] = []
-        details_by_group[group].append(d)
-
-    result = {
-        "statusCode": 200,
-        "messages_sent": messages_sent,
-        "total_expected": total_expected,
-        "region_groups": region_groups,
-        "queue_url": QUEUE_URL,
-        "summary_by_group": {g: len(msgs) for g, msgs in details_by_group.items()},
-        "errors": errors
+    Event format:
+    {
+        "region_groups": ["usa_states", "latin_america", "india"],
+        "work_types_override": ["remote"],  # opcional - sobrescreve config do grupo
+        "days": 30,  # opcional - filtro de tempo em dias (default: 30)
+        "keywords": "data engineer"  # opcional
     }
 
-    # Print resumo detalhado
+    Exemplos de days:
+    - days: 1 → últimas 24 horas
+    - days: 3 → últimos 3 dias
+    - days: 7 → última semana
+    - days: 30 → último mês (default)
+    - days: 90 → últimos 3 meses
+    """
+    if not BACKFILL_BUCKET:
+        raise ValueError("BACKFILL_BUCKET environment variable not set")
+    if not ORCHESTRATOR_STATE_MACHINE_ARN:
+        raise ValueError("ORCHESTRATOR_STATE_MACHINE_ARN environment variable not set")
+
+    # Gera todos os payloads
+    payloads, errors, details_by_group = generate_payloads(event)
+
+    if not payloads:
+        return {
+            "statusCode": 400,
+            "message": "No payloads generated",
+            "errors": errors
+        }
+
+    # Gera path único no S3
+    timestamp = datetime.utcnow().strftime("%Y/%m/%d/%H%M%S")
+    s3_key = f"backfill-manifests/{timestamp}/manifest.json"
+
+    # Salva payloads no S3
+    manifest = {
+        "created_at": datetime.utcnow().isoformat(),
+        "total_items": len(payloads),
+        "region_groups": list(details_by_group.keys()),
+        "items": payloads
+    }
+
+    s3_client.put_object(
+        Bucket=BACKFILL_BUCKET,
+        Key=s3_key,
+        Body=json.dumps(manifest),
+        ContentType="application/json"
+    )
+
+    print(f"✅ Manifest saved to s3://{BACKFILL_BUCKET}/{s3_key}")
+    print(f"   Total items: {len(payloads)}")
+
+    # Inicia Step Function orquestradora
+    execution_name = f"backfill-{datetime.utcnow().strftime('%Y%m%d-%H%M%S')}"
+
+    sfn_input = {
+        "manifest_bucket": BACKFILL_BUCKET,
+        "manifest_key": s3_key,
+        "total_items": len(payloads)
+    }
+
+    response = sfn_client.start_execution(
+        stateMachineArn=ORCHESTRATOR_STATE_MACHINE_ARN,
+        name=execution_name,
+        input=json.dumps(sfn_input)
+    )
+
+    print(f"✅ Started orchestrator: {execution_name}")
+    print(f"   Execution ARN: {response['executionArn']}")
+
+    # Print resumo
     print(f"\n{'='*60}")
     print(f"📊 BACKFILL FAN-OUT SUMMARY")
     print(f"{'='*60}")
-    print(f"🎯 Queue: {QUEUE_URL}")
-    print(f"📅 Time filter: {days} days (f_TPR=r{time_filter})")
-    print(f"📨 Messages sent: {messages_sent}/{total_expected}")
+    print(f"📦 Manifest: s3://{BACKFILL_BUCKET}/{s3_key}")
+    print(f"📨 Total payloads: {len(payloads)}")
     print(f"\n📍 By Region Group:")
     for group, count in details_by_group.items():
-        print(f"   • {group}: {len(count)} messages")
-
-    if work_types_override:
-        print(f"\n🔧 Work Types Override: {work_types_override}")
+        print(f"   • {group}: {count} items")
 
     if errors:
         print(f"\n⚠️  Errors ({len(errors)}):")
-        for err in errors[:5]:  # Mostra só os 5 primeiros
+        for err in errors[:5]:
             print(f"   • {err}")
         if len(errors) > 5:
             print(f"   ... and {len(errors) - 5} more")
 
     print(f"{'='*60}\n")
 
-    return result
+    return {
+        "statusCode": 200,
+        "execution_arn": response["executionArn"],
+        "execution_name": execution_name,
+        "manifest_bucket": BACKFILL_BUCKET,
+        "manifest_key": s3_key,
+        "total_items": len(payloads),
+        "summary_by_group": details_by_group,
+        "errors": errors
+    }
 
 
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Backfill Fan-out - Envia mensagens para SQS")
-    parser.add_argument("--send", action="store_true", help="Envia para AWS SQS (requer credenciais)")
-    parser.add_argument("--region-groups", nargs="+", default=["latin_america"], help="Region groups para processar (ex: usa_states latin_america europe_countries)")
+    parser = argparse.ArgumentParser(description="Backfill Fan-out - Gera payloads para Step Function")
+    parser.add_argument("--send", action="store_true", help="Envia para AWS (requer credenciais)")
+    parser.add_argument("--region-groups", nargs="+", default=["latin_america"], help="Region groups para processar")
     parser.add_argument("--work-types", nargs="+", help="Override work_types (ex: remote on_site hybrid)")
     parser.add_argument("--days", type=int, default=DEFAULT_DAYS, help=f"Filtro de tempo em dias (default: {DEFAULT_DAYS})")
     args = parser.parse_args()
@@ -266,49 +276,41 @@ if __name__ == "__main__":
     if args.work_types:
         test_event["work_types_override"] = args.work_types
 
-    config = load_geo_config()
-    work_types_override = test_event.get("work_types_override")
-
     if args.send:
         # Modo envio real para AWS
         import boto3
         from dotenv import load_dotenv
         load_dotenv()
 
-        sqs_client = boto3.client("sqs", region_name="us-east-1")
-        QUEUE_URL = os.environ.get("INGESTION_QUEUE_URL")
+        s3_client = boto3.client("s3", region_name="us-east-1")
+        sfn_client = boto3.client("stepfunctions", region_name="us-east-1")
+        BACKFILL_BUCKET = os.environ.get("BACKFILL_BUCKET")
+        ORCHESTRATOR_STATE_MACHINE_ARN = os.environ.get("ORCHESTRATOR_STATE_MACHINE_ARN")
 
-        if not QUEUE_URL:
-            print("❌ INGESTION_QUEUE_URL não configurada. Defina no .env ou variável de ambiente.")
+        if not BACKFILL_BUCKET or not ORCHESTRATOR_STATE_MACHINE_ARN:
+            print("❌ BACKFILL_BUCKET e ORCHESTRATOR_STATE_MACHINE_ARN são necessários.")
+            print("   Defina no .env ou variável de ambiente.")
             exit(1)
 
-        print(f"🚀 Sending to AWS SQS: {QUEUE_URL}\n")
+        print(f"🚀 Sending to AWS...")
+        print(f"   Bucket: {BACKFILL_BUCKET}")
+        print(f"   State Machine: {ORCHESTRATOR_STATE_MACHINE_ARN}\n")
 
         result = handler(test_event, None)
-        print(f"\n✅ Resultado: {result}")
+        print(f"\n✅ Resultado: {json.dumps(result, indent=2)}")
     else:
-        # Modo dry-run (apenas mostra o que seria enviado)
-        days = args.days
-        time_filter = days * SECONDS_PER_DAY
-
-        print("🧪 Test mode - showing what would be sent:")
+        # Modo dry-run (apenas mostra o que seria gerado)
+        print("🧪 Test mode - showing what would be generated:")
         print("   (use --send para enviar de verdade)\n")
-        print(f"📅 Time filter: {days} days (f_TPR=r{time_filter})")
 
-        for group_name in test_event["region_groups"]:
-            group_config = config.get(group_name, {})
-            work_types = work_types_override if work_types_override else group_config.get("work_types", [])
-            locations = group_config.get("locations", [])
+        payloads, errors, details_by_group = generate_payloads(test_event)
 
-            print(f"\n📍 {group_name}:")
-            print(f"   work_types: {work_types}" + (" (override)" if work_types_override else ""))
-            print(f"   locations: {len(locations)}")
-            print(f"   total calls: {len(locations) * len(work_types)}")
+        print(f"\n📊 Summary:")
+        print(f"   Total payloads: {len(payloads)}")
+        for group, count in details_by_group.items():
+            print(f"   • {group}: {count} items")
 
-            for loc in locations[:3]:  # Mostra só os 3 primeiros como exemplo
-                for wt in work_types:
-                    wt_code = config["work_type_codes"].get(wt, "1,2,3")
-                    print(f"   → {loc['name']} [{wt}]: f_WT={wt_code}")
-
-            if len(locations) > 3:
-                print(f"   ... e mais {len(locations) - 3} locations")
+        if payloads:
+            print(f"\n📋 Sample payloads (first 3):")
+            for p in payloads[:3]:
+                print(f"   • {p['source_id']}")

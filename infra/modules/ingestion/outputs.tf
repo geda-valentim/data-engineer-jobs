@@ -39,10 +39,30 @@ output "backfill_fanout_function_arn" {
   value       = aws_lambda_function.backfill_fanout.arn
 }
 
-# Step Function
+output "backfill_snapshot_downloader_function_name" {
+  description = "Nome da Lambda backfill snapshot downloader"
+  value       = aws_lambda_function.backfill_snapshot_downloader.function_name
+}
+
+output "backfill_snapshot_downloader_function_arn" {
+  description = "ARN da Lambda backfill snapshot downloader"
+  value       = aws_lambda_function.backfill_snapshot_downloader.arn
+}
+
+# Step Functions
 output "state_machine_arn" {
   description = "ARN da Step Function de ingestão"
   value       = aws_sfn_state_machine.bright_data_snapshot_ingestion.arn
+}
+
+output "orchestrator_state_machine_arn" {
+  description = "ARN da Step Function orquestradora (Distributed Map)"
+  value       = aws_sfn_state_machine.backfill_orchestrator.arn
+}
+
+output "orchestrator_state_machine_name" {
+  description = "Nome da Step Function orquestradora"
+  value       = aws_sfn_state_machine.backfill_orchestrator.name
 }
 
 # Glue Jobs
