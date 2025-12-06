@@ -21,3 +21,21 @@ resource "aws_s3_bucket" "glue_scripts" {
 resource "aws_s3_bucket" "athena_results" {
   bucket = var.athena_results_bucket_name
 }
+
+# Lifecycle policy para limpar resultados antigos do Athena
+resource "aws_s3_bucket_lifecycle_configuration" "athena_results_lifecycle" {
+  bucket = aws_s3_bucket.athena_results.id
+
+  rule {
+    id     = "delete-old-query-results"
+    status = "Enabled"
+
+    # Deleta objetos após 7 dias
+    expiration {
+      days = 7
+    }
+
+    # Aplica a todos os objetos no bucket
+    filter {}
+  }
+}

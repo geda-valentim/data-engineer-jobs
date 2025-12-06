@@ -89,3 +89,29 @@ resource "aws_iam_role_policy_attachment" "lambda_s3_bronze_attach" {
   role       = aws_iam_role.data_engineer_jobs_lambda_exec_role.name
   policy_arn = aws_iam_policy.lambda_s3_bronze.arn
 }
+
+# Permission Lambda -> SQS Companies Queue
+resource "aws_iam_policy" "lambda_sqs_companies" {
+  name        = "lambda-sqs-companies"
+  description = "Permite Lambda enviar mensagens para fila de companies"
+
+  policy = jsonencode({
+    Version = "2012-10-17",
+    Statement = [
+      {
+        Effect = "Allow",
+        Action = [
+          "sqs:SendMessage"
+        ],
+        Resource = [
+          module.ingestion.companies_queue_arn
+        ]
+      }
+    ]
+  })
+}
+
+resource "aws_iam_role_policy_attachment" "lambda_sqs_companies_attach" {
+  role       = aws_iam_role.data_engineer_jobs_lambda_exec_role.name
+  policy_arn = aws_iam_policy.lambda_sqs_companies.arn
+}

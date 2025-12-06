@@ -1,12 +1,13 @@
+import os
 import boto3
 import requests
 import shared
 import json
 import logging
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 # --------------------------------------------------
-# Logging básico (vai direto pro CloudWatch Logs)
+# Logging basico (vai direto pro CloudWatch Logs)
 # --------------------------------------------------
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -16,28 +17,30 @@ logger.setLevel(logging.INFO)
 # --------------------------------------------------
 s3_resource = boto3.resource("s3")
 cloudwatch = boto3.client("cloudwatch")
+sqs_client = boto3.client("sqs")
 
 data_bright_api = shared.get_brightdata_api_key()
 
 # --------------------------------------------------
 # Helpers
 # --------------------------------------------------
-def _parse_snapshot(raw_body: bytes, file_format: str) -> Tuple[int, Optional[Dict[str, Any]]]:
+def _parse_snapshot(raw_body: bytes, file_format: str) -> Tuple[int, Optional[Dict[str, Any]], List[Dict[str, Any]]]:
     """
-    Tenta interpretar o conteúdo do snapshot para:
+    Tenta interpretar o conteudo do snapshot para:
       - contar quantos registros vieram
       - pegar o primeiro item (para exemplo/log)
+      - retornar todos os items para processamento
 
     Suporta:
-      - json  -> array ou objeto único
+      - json  -> array ou objeto unico
       - jsonl -> um JSON por linha
 
     Retorna:
-      (count, first_item_dict_ou_None)
+      (count, first_item_dict_ou_None, all_items)
     """
     text = raw_body.decode("utf-8", errors="replace").strip()
     if not text:
-        return 0, None
+        return 0, None, []
 
     try:
         if file_format == "jsonl":
@@ -54,23 +57,98 @@ def _parse_snapshot(raw_body: bytes, file_format: str) -> Tuple[int, Optional[Di
             else:
                 items = [data]
         else:
-            # formatos não-JSON (csv, etc.) -> não vamos tentar parsear
-            return 0, None
+            # formatos nao-JSON (csv, etc.) -> nao vamos tentar parsear
+            return 0, None, []
 
         if not items:
-            return 0, None
+            return 0, None, []
 
-        return len(items), items[0]
+        return len(items), items[0], items
 
     except Exception as e:
-        logger.warning("Não consegui fazer parse do snapshot (%s): %s", file_format, e, exc_info=True)
-        return 0, None
+        logger.warning("Nao consegui fazer parse do snapshot (%s): %s", file_format, e, exc_info=True)
+        return 0, None, []
+
+
+def _extract_unique_companies(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Extrai companies unicas dos jobs.
+
+    Retorna lista de dicts com company_id, company_url, company_name.
+    Usa company_id como chave de deduplicacao.
+    """
+    seen = set()
+    companies = []
+
+    for item in items:
+        company_id = item.get("company_id")
+        company_url = item.get("company_url")
+        company_name = item.get("company_name")
+
+        # Precisa ter pelo menos company_id ou company_url
+        if not company_id and not company_url:
+            continue
+
+        # Usa company_id como chave, ou URL se nao tiver ID
+        key = company_id or company_url
+        if key in seen:
+            continue
+
+        seen.add(key)
+        companies.append({
+            "company_id": company_id,
+            "company_url": company_url,
+            "company_name": company_name,
+        })
+
+    return companies
+
+
+def _send_companies_to_sqs(companies: List[Dict[str, Any]], first_seen_at: str) -> int:
+    """
+    Envia companies para a fila SQS para serem buscadas.
+
+    Retorna quantidade de mensagens enviadas.
+    """
+    queue_url = os.getenv("COMPANIES_QUEUE_URL")
+    if not queue_url:
+        logger.info("COMPANIES_QUEUE_URL nao configurada, pulando envio de companies")
+        return 0
+
+    sent_count = 0
+    for company in companies:
+        try:
+            message = {
+                "company_id": company.get("company_id"),
+                "company_url": company.get("company_url"),
+                "company_name": company.get("company_name"),
+                "source": "job_ingestion",
+                "first_seen_at": first_seen_at,
+            }
+
+            sqs_client.send_message(
+                QueueUrl=queue_url,
+                MessageBody=json.dumps(message),
+            )
+            sent_count += 1
+
+        except Exception as e:
+            logger.warning(
+                "Erro ao enviar company %s para SQS: %s",
+                company.get("company_id") or company.get("company_url"),
+                e,
+            )
+
+    if sent_count > 0:
+        logger.info("Enviadas %d companies para SQS", sent_count)
+
+    return sent_count
 
 
 def _put_metric(namespace: str, name: str, value: float, dimensions: Optional[Dict[str, str]] = None):
     """
-    Envia uma métrica simples para o CloudWatch Metrics.
-    Dá pra usar depois em dashboards/alarms.
+    Envia uma metrica simples para o CloudWatch Metrics.
+    Da pra usar depois em dashboards/alarms.
     """
     dims = []
     if dimensions:
@@ -182,11 +260,11 @@ def save_to_s3(event, context):
     logger.info("📦 Snapshot baixado com %d bytes", content_length)
 
     # --------------------------------------------------
-    # Faz um parse leve só pra ter contagem e 1º registro
+    # Faz um parse leve pra ter contagem, 1o registro e todos items
     # --------------------------------------------------
-    record_count, first_item = _parse_snapshot(raw_body, file_format)
+    record_count, first_item, all_items = _parse_snapshot(raw_body, file_format)
 
-    # Tenta pegar alguns campos do 1º job (quando existir)
+    # Tenta pegar alguns campos do 1o job (quando existir)
     first_job_title = None
     first_company_name = None
     search_url = None
@@ -199,7 +277,7 @@ def save_to_s3(event, context):
         search_url = discovery.get("url")
 
     logger.info(
-        "🔎 Snapshot parseado: records=%s, first_job_title=%s, first_company_name=%s",
+        "Snapshot parseado: records=%s, first_job_title=%s, first_company_name=%s",
         record_count,
         first_job_title,
         first_company_name,
@@ -216,7 +294,7 @@ def save_to_s3(event, context):
         raise
 
     # --------------------------------------------------
-    # Envia métrica pro CloudWatch (pra dashboard/alarme)
+    # Envia metrica pro CloudWatch (pra dashboard/alarme)
     # --------------------------------------------------
     try:
         _put_metric(
@@ -229,8 +307,21 @@ def save_to_s3(event, context):
             },
         )
     except Exception:
-        # Já loga dentro do helper; não quebra a Lambda
+        # Ja loga dentro do helper; nao quebra a Lambda
         pass
+
+    # --------------------------------------------------
+    # Envia companies para SQS (para serem buscadas)
+    # --------------------------------------------------
+    companies_sent = 0
+    if all_items:
+        try:
+            unique_companies = _extract_unique_companies(all_items)
+            first_seen_at = f"{year_str}-{month_str}-{day_str}T{hour_str}:00:00Z"
+            companies_sent = _send_companies_to_sqs(unique_companies, first_seen_at)
+        except Exception as e:
+            # Nao quebra a Lambda se falhar envio de companies
+            logger.warning("Erro ao enviar companies para SQS: %s", e, exc_info=True)
 
     status = "SAVED_EMPTY" if record_count == 0 else "SAVED"
 
@@ -252,9 +343,11 @@ def save_to_s3(event, context):
         "example_job_title": first_job_title,
         "example_company_name": first_company_name,
         "search_url": search_url,
+        # Companies enviadas para busca
+        "companies_sent_to_sqs": companies_sent,
     }
 
-    logger.info("📤 Retorno para Step Functions: %s", json.dumps(result, ensure_ascii=False))
+    logger.info("Retorno para Step Functions: %s", json.dumps(result, ensure_ascii=False))
     return result
 
 

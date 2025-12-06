@@ -45,3 +45,27 @@ module "analytics" {
 #  source = "../../modules/monitoring"
 #  project_name = var.project_name
 #}
+
+# AI Enrichment Module - 3-Pass Bedrock Pipeline
+module "ai_enrichment" {
+  source = "../../modules/ai_enrichment"
+
+  project_name = var.project_name
+  environment  = var.environment
+  aws_region   = var.region
+
+  silver_bucket_name = module.storage.silver_bucket_name
+  silver_prefix      = "linkedin/"
+  silver_ai_prefix   = "linkedin_ai/"
+
+  # Lambda Layers
+  python_deps_layer_arn    = aws_lambda_layer_version.python_dependencies.arn
+  aws_sdk_pandas_layer_arn = local.aws_sdk_pandas_layer_arn
+
+  # openai.gpt-oss-120b-1:0: $0.00015/1K input, $0.0003/1K output (extremely cheap!)
+  bedrock_model_pass1 = "openai.gpt-oss-120b-1:0"
+  bedrock_model_pass2 = "openai.gpt-oss-120b-1:0"
+  bedrock_model_pass3 = "openai.gpt-oss-120b-1:0"
+
+  max_partitions_per_run = 10
+}
