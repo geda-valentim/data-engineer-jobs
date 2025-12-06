@@ -1,0 +1,1687 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI-Enriched Job Posting Schema",
+  "description": "Sequential 3-pass cascading context architecture for AI enrichment of LinkedIn job postings",
+  "version": "3.3",
+  "created": "2025-12-06",
+  "last_updated": "2025-12-06",
+  "changelog": "v3.3 - Added 19 new enrichment fields: Pass1 (+2 AI/ML detection: llm_genai_mentioned, feature_store_mentioned), Pass2 (+5 career development fields in new career_development group), Pass3 (+12 fields: new tech_culture_assessment group with 4 fields, expanded stakeholders_and_leadership from 3 to 6 fields, new company_context group with 5 fields). Improved job market insights and career growth signals. | v3.2 - Removed duplicate fields from Pass2: contract_type_normalized and compensation_type. Renamed contract_and_comp_type to employment_and_benefits.",
+
+  "_architecture": {
+    "philosophy": "Sequential 3-pass enrichment where each pass builds on previous results",
+    "pass1_factual": "Extract ONLY explicitly stated facts (99% deterministic, cheap model)",
+    "pass2_inference": "Normalize and classify with confidence/evidence (medium model)",
+    "pass3_complex": "Complex analysis with confidence scores (stronger model)",
+    "execution": "3 separate LLM calls - one for each pass sequentially",
+    "fault_tolerance": "Per-record error handling - failures marked, partition continues",
+    "cost_target": "~$0.0012 USD per job using openai.gpt-oss-120b-1:0"
+  },
+
+  "_critical_rules": {
+    "accuracy_over_completeness": "NEVER guess. Use null or 'not_mentioned' instead.",
+    "not_mentioned_policy": "ALL enum fields include 'not_mentioned' as valid option. An explicit 'not_mentioned' is better than an incorrect guess.",
+    "confidence_threshold": "Only include inferred fields if confidence >= 0.5. Otherwise use null or 'not_mentioned'.",
+    "anti_hallucination": "If not in text, it doesn't exist. null > guess."
+  },
+
+  "pass_definitions": {
+
+    "pass1_factual": {
+      "_description": "Extract ONLY explicitly stated facts from job posting text",
+      "_philosophy": "No inference, no interpretation. If not written, it's null.",
+      "_determinism": "99% - almost always the same result from same input",
+      "_model_suggestion": "openai.gpt-oss-120b-1:0 (cheap, fast, good enough for extraction)",
+      "_execution": "First LLM call - uses only raw job posting text",
+
+      "groups": {
+
+        "identification": {
+          "_description": "Basic job identification (5 fields)",
+          "_note": "These may come from scraper, not LLM",
+          "fields": {
+            "job_posting_id": {"type": "string", "example": "linkedin_7654321"},
+            "source": {"type": "string", "example": "linkedin"},
+            "scraped_at": {"type": "datetime"},
+            "job_title": {"type": "string", "example": "Senior Data Engineer - Streaming"},
+            "company_name": {"type": "string", "example": "TechCorp Financial"}
+          }
+        },
+
+        "compensation": {
+          "_description": "Salary and pay information as explicitly stated (10 core fields)",
+          "_extraction_rule": "ONLY extract if clearly disclosed. Do NOT estimate.",
+          "fields": {
+            "salary_disclosed": {
+              "type": "boolean",
+              "description": "Whether salary range is disclosed in posting"
+            },
+            "salary_min": {
+              "type": "number",
+              "description": "Minimum salary if disclosed",
+              "extraction_note": "Extract number only, no estimation"
+            },
+            "salary_max": {
+              "type": "number",
+              "description": "Maximum salary if disclosed"
+            },
+            "salary_currency": {
+              "type": "string",
+              "example": "USD",
+              "extraction_note": "Normalize $ → USD, € → EUR, £ → GBP, etc. Use ISO currency codes."
+            },
+            "salary_period": {
+              "type": "enum",
+              "values": ["yearly", "monthly", "hourly", "not_mentioned"],
+              "example": "yearly"
+            },
+            "salary_text_raw": {
+              "type": "string",
+              "description": "Original salary text from posting",
+              "example": "$180,000 - $220,000 per year"
+            },
+            "hourly_rate_min": {
+              "type": "number",
+              "description": "Minimum hourly rate if disclosed (for contractors/hourly positions)",
+              "extraction_note": "Extract number only, no estimation"
+            },
+            "hourly_rate_max": {
+              "type": "number",
+              "description": "Maximum hourly rate if disclosed"
+            },
+            "hourly_rate_currency": {
+              "type": "string",
+              "example": "USD",
+              "extraction_note": "Normalize $ → USD, € → EUR, £ → GBP, etc. Use ISO currency codes."
+            },
+            "hourly_rate_text_raw": {
+              "type": "string",
+              "description": "Original hourly rate text from posting",
+              "example": "$80-$120/hour"
+            },
+            "equity_mentioned": {
+              "type": "boolean",
+              "description": "Whether equity/stock is mentioned"
+            }
+          },
+          "flattened_columns": [
+            "ext_salary_disclosed",
+            "ext_salary_min",
+            "ext_salary_max",
+            "ext_salary_currency",
+            "ext_salary_period",
+            "ext_salary_text_raw",
+            "ext_hourly_rate_min",
+            "ext_hourly_rate_max",
+            "ext_hourly_rate_currency",
+            "ext_hourly_rate_text_raw",
+            "ext_equity_mentioned"
+          ]
+        },
+
+        "work_authorization": {
+          "_description": "Visa and work authorization requirements (4 fields)",
+          "_extraction_rule": "Copy exact text. Use 'not_mentioned' if not explicit.",
+          "fields": {
+            "visa_sponsorship_stated": {
+              "type": "enum",
+              "values": ["will_sponsor", "will_not_sponsor", "must_be_authorized", "not_mentioned"],
+              "description": "Visa sponsorship and work authorization requirement",
+              "value_meanings": {
+                "will_sponsor": "Company offers/provides visa sponsorship (e.g., 'We sponsor H1B visas')",
+                "will_not_sponsor": "No sponsorship offered but accepts those with existing authorization (e.g., 'No visa sponsorship available')",
+                "must_be_authorized": "Work authorization required to apply - blocks application without it (e.g., 'Must be authorized to work in US', 'US work authorization required')",
+                "not_mentioned": "No mention of visa or work authorization requirements"
+              },
+              "extraction_examples": {
+                "We provide H1B sponsorship": "will_sponsor",
+                "Visa sponsorship available": "will_sponsor",
+                "No visa sponsorship": "will_not_sponsor",
+                "Must be authorized to work in the United States": "must_be_authorized",
+                "US work authorization required": "must_be_authorized",
+                "Must have right to work in US": "must_be_authorized",
+                "No mention of visa/auth": "not_mentioned"
+              }
+            },
+            "work_auth_text": {
+              "type": "string",
+              "description": "Original work authorization text",
+              "example": "Must be authorized to work in the United States"
+            },
+            "citizenship_text": {
+              "type": "string",
+              "description": "Original citizenship requirement text if mentioned"
+            },
+            "security_clearance_stated": {
+              "type": "enum",
+              "values": ["required", "preferred", "not_mentioned"],
+              "description": "Security clearance requirement"
+            }
+          },
+          "flattened_columns": [
+            "ext_visa_sponsorship_stated",
+            "ext_work_auth_text",
+            "ext_citizenship_text",
+            "ext_security_clearance_stated"
+          ]
+        },
+
+        "work_model": {
+          "_description": "Work arrangement and employment type (4 fields)",
+          "_extraction_rule": "Extract as stated. 'hybrid' needs explicit mention.",
+          "fields": {
+            "work_model_stated": {
+              "type": "enum",
+              "values": ["remote", "hybrid", "onsite", "not_mentioned"],
+              "description": "Explicitly stated work model"
+            },
+            "employment_type_stated": {
+              "type": "enum",
+              "values": ["full_time", "contract", "internship", "part_time", "not_mentioned"],
+              "description": "Employment type as stated"
+            },
+            "contract_duration_stated": {
+              "type": "string",
+              "description": "Contract duration if mentioned",
+              "example": "6 months with possible extension"
+            },
+            "start_date_text": {
+              "type": "string",
+              "description": "Start date as stated",
+              "example": "Looking for someone to start ASAP"
+            }
+          },
+          "flattened_columns": [
+            "ext_work_model_stated",
+            "ext_employment_type_stated",
+            "ext_contract_duration_stated",
+            "ext_start_date_text"
+          ]
+        },
+
+        "skills_classified": {
+          "_description": "Skills separated by type and priority - must-have vs nice-to-have, hard vs soft (9 fields)",
+          "_extraction_rule": "Classify skills based on qualifiers: 'required', 'must have' → must_have; 'nice to have', 'preferred' → nice_to_have. Map soft skills to canonical names from soft_skills.yaml.",
+          "_soft_skills_integration": "Uses 22 canonical soft skills from /src/skills_detection/config/families/soft_skills.yaml v2.0",
+          "fields": {
+            "must_have_hard_skills": {
+              "type": "array",
+              "items": "string",
+              "description": "Technical skills marked as required/must-have/essential",
+              "example": ["Python", "SQL", "Spark", "AWS"],
+              "extraction_note": "Look for: 'required', 'must have', 'essential', 'mandatory'"
+            },
+            "nice_to_have_hard_skills": {
+              "type": "array",
+              "items": "string",
+              "description": "Technical skills marked as nice-to-have/preferred/bonus",
+              "example": ["Kafka", "Kubernetes", "Terraform"],
+              "extraction_note": "Look for: 'nice to have', 'preferred', 'bonus', 'plus', 'desirable'"
+            },
+            "must_have_soft_skills": {
+              "type": "array",
+              "items": "string",
+              "description": "Soft skills required (map to soft_skills.yaml canonical names)",
+              "example": ["Communication", "Leadership", "Problem Solving"],
+              "normalization": "Map variations to canonical from soft_skills.yaml",
+              "available_canonical_skills": [
+                "Communication", "Problem Solving", "Team Collaboration", "Leadership",
+                "Analytical Skills", "Attention to Detail", "Continuous Learning",
+                "Time Management", "Adaptability", "Initiative", "Critical Thinking",
+                "Organization", "Customer Focus", "Decision Making", "Mentoring",
+                "Presentation Skills", "Creativity", "Work Ethic", "Self-Motivation",
+                "Stress Management", "Conflict Resolution", "Empathy"
+              ],
+              "extraction_note": "Map 'excellent communication' → 'Communication', 'team player' → 'Team Collaboration', etc."
+            },
+            "nice_to_have_soft_skills": {
+              "type": "array",
+              "items": "string",
+              "description": "Soft skills preferred (map to soft_skills.yaml canonical names)",
+              "example": ["Mentoring", "Presentation Skills"],
+              "normalization": "Same as must_have_soft_skills"
+            },
+            "certifications_mentioned": {
+              "type": "array",
+              "items": "string",
+              "description": "Certifications mentioned in posting",
+              "example": ["AWS Certified Solutions Architect", "GCP Professional Data Engineer"]
+            },
+            "years_experience_min": {
+              "type": "number",
+              "description": "Minimum years of experience",
+              "extraction_examples": {
+                "5+ years": {"min": 5, "max": null},
+                "3-5 years": {"min": 3, "max": 5},
+                "At least 7 years": {"min": 7, "max": null},
+                "5 years experience": {"min": 5, "max": 5},
+                "Senior level (no number)": {"min": null, "max": null}
+              }
+            },
+            "years_experience_max": {
+              "type": "number",
+              "description": "Maximum years of experience if range given"
+            },
+            "years_experience_text": {
+              "type": "string",
+              "description": "Original experience text",
+              "example": "5-8 years of experience in data engineering"
+            },
+            "education_stated": {
+              "type": "string",
+              "description": "Education requirement as stated",
+              "example": "Bachelor's degree in Computer Science or related field"
+            },
+            "llm_genai_mentioned": {
+              "type": "boolean",
+              "description": "Whether LLMs, GenAI, GPT, RAG, or generative AI technologies are mentioned",
+              "extraction_keywords": ["LLM", "GPT", "ChatGPT", "Claude", "GenAI", "generative AI", "RAG", "retrieval augmented", "prompt engineering", "AI assistants", "copilot", "large language model", "foundation model"],
+              "example": true
+            },
+            "feature_store_mentioned": {
+              "type": "boolean",
+              "description": "Whether feature store platforms or feature engineering infrastructure are mentioned",
+              "extraction_keywords": ["feature store", "Feast", "Tecton", "Hopsworks", "SageMaker Feature Store", "Vertex AI Feature Store", "feature platform", "feature registry"],
+              "example": false
+            }
+          },
+          "flattened_columns": [
+            "ext_must_have_hard_skills",
+            "ext_nice_to_have_hard_skills",
+            "ext_must_have_soft_skills",
+            "ext_nice_to_have_soft_skills",
+            "ext_certifications_mentioned",
+            "ext_years_experience_min",
+            "ext_years_experience_max",
+            "ext_years_experience_text",
+            "ext_education_stated",
+            "ext_llm_genai_mentioned",
+            "ext_feature_store_mentioned"
+          ]
+        },
+
+        "contract_details": {
+          "_description": "Contract type and duration details (8 fields)",
+          "_extraction_rule": "Extract contract type, duration (both normalized and text), extension possibility, conversion to FTE, start date, probation period",
+          "fields": {
+            "contract_type": {
+              "type": "enum",
+              "values": ["permanent", "fixed_term", "contract_to_hire", "project_based", "seasonal", "not_mentioned"],
+              "description": "Type of employment contract",
+              "extraction_examples": {
+                "Full-time permanent": "permanent",
+                "6-month contract": "fixed_term",
+                "Contract to hire": "contract_to_hire",
+                "Project-based role": "project_based",
+                "Seasonal position": "seasonal"
+              }
+            },
+            "contract_duration_months": {
+              "type": "number",
+              "description": "Normalized contract duration in months (parse from text)",
+              "extraction_examples": {
+                "6-month contract": 6,
+                "12 months": 12,
+                "1 year": 12,
+                "2-year contract": 24,
+                "6-12 months": 6,
+                "Permanent": null
+              },
+              "extraction_note": "If range (e.g., '6-12 months'), use minimum value"
+            },
+            "contract_duration_text": {
+              "type": "string",
+              "description": "Original contract duration text from posting",
+              "example": "6-month contract with possible extension to 12 months"
+            },
+            "extension_possible": {
+              "type": "enum",
+              "values": ["yes", "likely", "no", "not_mentioned"],
+              "description": "Whether contract extension is possible",
+              "extraction_examples": {
+                "with possible extension": "yes",
+                "renewable contract": "likely",
+                "fixed 6 months": "no",
+                "No mention": "not_mentioned"
+              }
+            },
+            "conversion_to_fte": {
+              "type": "enum",
+              "values": ["yes_guaranteed", "yes_possible", "no", "not_mentioned"],
+              "description": "Whether contractor can convert to full-time employee",
+              "extraction_examples": {
+                "contract to hire": "yes_guaranteed",
+                "possible conversion to FTE": "yes_possible",
+                "contract only": "no"
+              }
+            },
+            "start_date": {
+              "type": "enum",
+              "values": ["immediate", "within_2_weeks", "within_month", "flexible", "specific_date", "not_mentioned"],
+              "description": "Normalized start date urgency",
+              "extraction_examples": {
+                "Start ASAP": "immediate",
+                "Immediate start": "immediate",
+                "Start in 2 weeks": "within_2_weeks",
+                "January 2024": "specific_date",
+                "Flexible start": "flexible"
+              }
+            },
+            "start_date_text": {
+              "type": "string",
+              "description": "Original start date text from posting",
+              "example": "Looking for someone to start ASAP"
+            },
+            "probation_period_text": {
+              "type": "string",
+              "description": "Probation period mentioned (if any)",
+              "example": "3-month probation period"
+            }
+          },
+          "flattened_columns": [
+            "ext_contract_type",
+            "ext_contract_duration_months",
+            "ext_contract_duration_text",
+            "ext_extension_possible",
+            "ext_conversion_to_fte",
+            "ext_start_date",
+            "ext_start_date_text",
+            "ext_probation_period_text"
+          ]
+        },
+
+        "contractor_rates": {
+          "_description": "Detailed rate information for contractors and hourly positions (7 fields)",
+          "_extraction_rule": "Extract pay type, daily rates, rate negotiability, overtime policy. Normalize currency codes.",
+          "fields": {
+            "pay_type": {
+              "type": "enum",
+              "values": ["salary", "hourly", "daily", "weekly", "monthly", "project_fixed", "not_mentioned"],
+              "description": "Type of payment structure",
+              "extraction_examples": {
+                "$150k/year": "salary",
+                "$80/hour": "hourly",
+                "£600/day": "daily",
+                "$50k for 6-month project": "project_fixed"
+              }
+            },
+            "daily_rate_min": {
+              "type": "number",
+              "description": "Minimum daily rate for contractors"
+            },
+            "daily_rate_max": {
+              "type": "number",
+              "description": "Maximum daily rate for contractors"
+            },
+            "daily_rate_currency": {
+              "type": "string",
+              "example": "USD",
+              "extraction_note": "Normalize £ → GBP, $ → USD, € → EUR. Use ISO currency codes."
+            },
+            "daily_rate_text_raw": {
+              "type": "string",
+              "description": "Original daily rate text from posting",
+              "example": "£500-£750 per day"
+            },
+            "rate_negotiable": {
+              "type": "enum",
+              "values": ["yes", "doe", "fixed", "not_mentioned"],
+              "description": "Whether rate is negotiable (DOE = depends on experience)",
+              "extraction_examples": {
+                "Rate negotiable": "yes",
+                "Salary DOE": "doe",
+                "Fixed rate": "fixed"
+              }
+            },
+            "overtime_paid": {
+              "type": "enum",
+              "values": ["yes", "no", "exempt", "not_mentioned"],
+              "description": "Whether overtime is paid",
+              "extraction_examples": {
+                "Overtime paid at 1.5x": "yes",
+                "Salaried exempt": "exempt",
+                "No overtime pay": "no"
+              }
+            }
+          },
+          "flattened_columns": [
+            "ext_pay_type",
+            "ext_daily_rate_min",
+            "ext_daily_rate_max",
+            "ext_daily_rate_currency",
+            "ext_daily_rate_text_raw",
+            "ext_rate_negotiable",
+            "ext_overtime_paid"
+          ]
+        },
+
+        "geographic_restrictions": {
+          "_description": "Structured geographic restrictions and location requirements (5 fields)",
+          "_extraction_rule": "Normalize country codes to ISO 3166 (US, CA, UK, BR, etc.). Extract geographic restriction type and residency requirements.",
+          "fields": {
+            "geo_restriction_type": {
+              "type": "enum",
+              "values": ["us_only", "eu_only", "uk_only", "latam_only", "apac_only", "specific_countries", "global", "not_mentioned"],
+              "description": "Primary geographic restriction",
+              "extraction_examples": {
+                "Must be based in US": "us_only",
+                "EU candidates only": "eu_only",
+                "Open to candidates in US, CA, UK": "specific_countries",
+                "Remote anywhere": "global"
+              }
+            },
+            "allowed_countries": {
+              "type": "array",
+              "items": "ISO 3166 country codes",
+              "description": "List of allowed countries",
+              "example": ["US", "CA", "UK", "BR", "MX"],
+              "extraction_note": "Normalize to 2-letter ISO codes. US = United States, BR = Brazil, UK = United Kingdom, etc."
+            },
+            "excluded_countries": {
+              "type": "array",
+              "items": "ISO 3166 country codes",
+              "description": "List of explicitly excluded countries",
+              "example": ["RU", "CN", "KP"]
+            },
+            "us_state_restrictions": {
+              "type": "array",
+              "items": "US state codes",
+              "description": "If US-only, list of allowed US states",
+              "example": ["CA", "NY", "TX", "WA", "CO"],
+              "extraction_note": "Use 2-letter state codes. California = CA, New York = NY, etc."
+            },
+            "residency_requirement": {
+              "type": "enum",
+              "values": ["must_be_resident", "willing_to_relocate", "no_requirement", "not_mentioned"],
+              "description": "Residency requirement",
+              "extraction_examples": {
+                "Must be based in Bay Area": "must_be_resident",
+                "Willing to relocate to London": "willing_to_relocate",
+                "Remote anywhere": "no_requirement"
+              }
+            }
+          },
+          "flattened_columns": [
+            "ext_geo_restriction_type",
+            "ext_allowed_countries",
+            "ext_excluded_countries",
+            "ext_us_state_restrictions",
+            "ext_residency_requirement"
+          ]
+        },
+
+        "benefits_structured": {
+          "_description": "Structured benefit flags + original array (6 fields)",
+          "_extraction_rule": "Keep original benefits_mentioned array. Extract boolean flags for key benefits: equity, learning budget, conference budget, hardware choice. Classify PTO policy.",
+          "fields": {
+            "benefits_mentioned": {
+              "type": "array",
+              "items": "string",
+              "description": "All benefits mentioned (keep existing unstructured array)",
+              "example": ["Health insurance", "401k matching", "Unlimited PTO", "Learning budget", "Conference attendance", "Equity"]
+            },
+            "equity_mentioned": {
+              "type": "boolean",
+              "description": "Whether equity/stock options are mentioned (already exists - keep)"
+            },
+            "learning_budget_mentioned": {
+              "type": "boolean",
+              "description": "Whether learning/education budget is mentioned",
+              "extraction_examples": {
+                "$2000 annual learning budget": true,
+                "Support for certifications": true,
+                "No learning budget mentioned": false
+              }
+            },
+            "conference_budget_mentioned": {
+              "type": "boolean",
+              "description": "Whether conference attendance/budget is mentioned",
+              "extraction_examples": {
+                "Conference attendance sponsored": true,
+                "Support for industry events": true
+              }
+            },
+            "hardware_choice_mentioned": {
+              "type": "boolean",
+              "description": "Whether hardware choice is mentioned",
+              "extraction_examples": {
+                "Choose your own laptop": true,
+                "Mac or Linux workstation": true
+              }
+            },
+            "pto_policy": {
+              "type": "enum",
+              "values": ["unlimited", "generous", "standard", "limited", "not_mentioned"],
+              "description": "PTO/vacation policy classification",
+              "extraction_examples": {
+                "Unlimited PTO": "unlimited",
+                "Unlimited vacation": "unlimited",
+                "4 weeks vacation": "generous",
+                "20 days PTO": "standard",
+                "10 days vacation": "limited"
+              }
+            }
+          },
+          "flattened_columns": [
+            "ext_benefits_mentioned",
+            "ext_equity_mentioned",
+            "ext_learning_budget_mentioned",
+            "ext_conference_budget_mentioned",
+            "ext_hardware_choice_mentioned",
+            "ext_pto_policy"
+          ]
+        }
+      },
+
+      "total_field_count": "~56 core fields (up from ~24)",
+      "output_structure": {
+        "_note": "Pass 1 returns nested JSON + flattened ext_* columns",
+        "nested": "enrichment.pass1_extraction.{group}.{field}",
+        "flattened": "ext_{field_name}"
+      }
+    },
+
+    "pass2_inference": {
+      "_description": "Normalize and classify facts from Pass 1 with confidence scores",
+      "_philosophy": "Use Pass 1 context to normalize and infer. Every field has value + confidence + evidence + source.",
+      "_confidence_threshold": "Only include if confidence >= 0.5, otherwise use null or 'not_mentioned'",
+      "_model_suggestion": "openai.gpt-oss-120b-1:0 (good for classification with context)",
+      "_execution": "Second LLM call - uses raw job posting + Pass 1 results as context",
+
+      "_field_structure": {
+        "_note": "ALL Pass 2 fields are inference objects with:",
+        "value": "The inferred/normalized value",
+        "confidence": "Float 0.0-1.0",
+        "evidence": "String explaining the reasoning",
+        "source": "One of: pass1_derived | inferred | combined"
+      },
+
+      "_confidence_scale": {
+        "0.9-1.0": "Directly from Pass 1 text or explicit mention",
+        "0.7-0.9": "Strong inference with multiple signals",
+        "0.5-0.7": "Moderate inference with 1-2 signals",
+        "0.3-0.5": "Weak inference - INCLUDE but flag low confidence",
+        "<0.5": "Do NOT include - use null or 'not_mentioned' instead"
+      },
+
+      "groups": {
+
+        "seniority_and_role": {
+          "_description": "Normalized seniority and role classification (4 fields)",
+          "_inference_basis": "Title, years experience, responsibilities mentioned",
+          "fields": {
+            "seniority_level": {
+              "type": "inference_object",
+              "value_enum": ["intern", "entry", "associate", "junior", "mid", "senior", "staff", "principal", "distinguished", "not_mentioned"],
+              "description": "Career level based on title + years experience + responsibilities. Use IC hierarchy: intern < entry < associate < junior < mid < senior < staff < principal < distinguished",
+              "extraction_examples": {
+                "Intern/Co-op in title": "intern",
+                "Entry-level, 0-1 years": "entry",
+                "Associate in title, 1-2 years": "associate",
+                "Junior in title, 1-3 years": "junior",
+                "Mid-level, 3-5 years, no title mention": "mid",
+                "Senior in title, 5-8 years": "senior",
+                "Staff Engineer in title, 8+ years, high impact": "staff",
+                "Principal Engineer, 10+ years, architecture scope": "principal",
+                "Distinguished/Fellow Engineer": "distinguished"
+              },
+              "confidence_guidelines": {
+                "0.9-1.0": "Title + years match perfectly (e.g., 'Senior Data Engineer' + 5-8 years)",
+                "0.7-0.9": "Title OR years match strongly, other signals support",
+                "0.5-0.7": "Inferred from responsibilities only, no explicit title/years",
+                "<0.5": "Conflicting signals (e.g., 'Senior' title but 2 years) - use not_mentioned"
+              },
+              "example": {
+                "value": "senior",
+                "confidence": 0.92,
+                "evidence": "5-8 years experience + 'senior' in title + tech lead responsibilities",
+                "source": "combined"
+              }
+            },
+            "job_family": {
+              "type": "inference_object",
+              "value_enum": ["data_engineer", "analytics_engineer", "ml_engineer", "mlops_engineer", "data_platform_engineer", "data_architect", "data_scientist", "data_analyst", "bi_engineer", "research_engineer", "not_mentioned"],
+              "description": "Primary role family. If hybrid role (e.g., 'DE + Analyst'), choose primary from title/responsibilities ratio. Flag with inf_scope_definition='multi_role'.",
+              "extraction_examples": {
+                "Data Engineer - pipelines, ETL/ELT": "data_engineer",
+                "Analytics Engineer - dbt, metrics, SQL modeling": "analytics_engineer",
+                "ML Engineer - model training, deployment": "ml_engineer",
+                "MLOps Engineer - ML infrastructure, CI/CD for models": "mlops_engineer",
+                "Data Platform Engineer - infra, data tools, enablement": "data_platform_engineer",
+                "Data Architect - architecture, standards, design": "data_architect",
+                "Data Scientist - statistical analysis, research, insights": "data_scientist",
+                "Data Analyst - BI, dashboards, reporting": "data_analyst",
+                "BI Engineer/Developer - BI platforms, semantic layers": "bi_engineer",
+                "Research Engineer - research + engineering hybrid": "research_engineer"
+              },
+              "example": {
+                "value": "data_engineer",
+                "confidence": 0.98,
+                "evidence": "Title is 'Data Engineer' and core focus is data pipelines",
+                "source": "pass1_derived"
+              }
+            },
+            "sub_specialty": {
+              "type": "inference_object",
+              "value_enum": ["streaming_realtime", "batch_etl", "data_warehouse", "data_lakehouse", "ml_infra", "mlops", "data_governance", "data_quality", "data_modeling", "cloud_migration", "reverse_etl", "api_development", "observability", "general", "not_mentioned"],
+              "description": "Technical sub-specialty or focus area within the role",
+              "extraction_examples": {
+                "Kafka + Flink + real-time processing": "streaming_realtime",
+                "Airflow + batch pipelines + scheduled jobs": "batch_etl",
+                "Snowflake/Redshift warehouse design": "data_warehouse",
+                "Databricks lakehouse + Delta Lake": "data_lakehouse",
+                "SageMaker infra + model serving": "ml_infra",
+                "MLflow + Kubeflow + ML CI/CD": "mlops",
+                "Data catalogs + lineage + compliance": "data_governance",
+                "Great Expectations + data testing + monitoring": "data_quality",
+                "Dimensional modeling + data vault + schemas": "data_modeling",
+                "AWS/GCP/Azure migration projects": "cloud_migration",
+                "Census/Hightouch + operational analytics": "reverse_etl",
+                "REST APIs + FastAPI + data services": "api_development",
+                "DataDog + monitoring + alerting for data": "observability",
+                "No specific focus, general data engineering": "general"
+              },
+              "example": {
+                "value": "streaming_realtime",
+                "confidence": 0.85,
+                "evidence": "Heavy focus on Kafka and real-time processing with Flink",
+                "source": "inferred"
+              }
+            },
+            "leadership_expectation": {
+              "type": "inference_object",
+              "value_enum": ["ic", "tech_lead_ic", "architect", "people_manager", "tech_and_people_lead", "not_mentioned"],
+              "description": "Leadership scope and type expected for this role",
+              "extraction_examples": {
+                "Build pipelines, no team mention": "ic",
+                "Technical guidance to team, no direct reports": "tech_lead_ic",
+                "Define architecture standards, technical vision": "architect",
+                "Manage 3-5 engineers, performance reviews": "people_manager",
+                "Lead team of 5 + set technical direction": "tech_and_people_lead"
+              },
+              "value_meanings": {
+                "ic": "Pure individual contributor - no leadership responsibilities",
+                "tech_lead_ic": "Technical leadership without direct reports (mentoring, code review, design decisions)",
+                "architect": "Architecture/design leadership, set standards and patterns",
+                "people_manager": "Direct reports, performance management, hiring",
+                "tech_and_people_lead": "Both technical direction AND people management responsibilities"
+              },
+              "example": {
+                "value": "tech_lead_ic",
+                "confidence": 0.78,
+                "evidence": "Mentoring junior engineers and code review mentioned, but no direct reports stated",
+                "source": "inferred"
+              }
+            }
+          },
+          "flattened_columns": [
+            "inf_seniority_level",
+            "inf_seniority_confidence",
+            "inf_job_family",
+            "inf_job_family_confidence",
+            "inf_sub_specialty",
+            "inf_sub_specialty_confidence",
+            "inf_leadership_expectation",
+            "inf_leadership_confidence"
+          ]
+        },
+
+        "stack_and_cloud": {
+          "_description": "Technology stack and infrastructure classification (5 fields)",
+          "_inference_basis": "Tools mentioned in Pass 1, cloud providers, databases",
+          "fields": {
+            "primary_cloud": {
+              "type": "inference_object",
+              "value_enum": ["aws", "azure", "gcp", "multi", "on_prem", "not_mentioned"],
+              "example": {
+                "value": "aws",
+                "confidence": 0.95,
+                "evidence": "AWS mentioned explicitly multiple times",
+                "source": "pass1_derived"
+              }
+            },
+            "secondary_clouds": {
+              "type": "inference_object",
+              "value_type": "array",
+              "example": {
+                "value": [],
+                "confidence": 0.90,
+                "evidence": "No other clouds mentioned",
+                "source": "pass1_derived"
+              }
+            },
+            "processing_paradigm": {
+              "type": "inference_object",
+              "value_enum": ["batch", "streaming", "hybrid", "not_mentioned"],
+              "example": {
+                "value": "streaming",
+                "confidence": 0.88,
+                "evidence": "Kafka, real-time processing emphasis",
+                "source": "inferred"
+              }
+            },
+            "orchestrator_category": {
+              "type": "inference_object",
+              "value_enum": ["airflow_like", "spark_native", "dbt_core", "cloud_native", "dagster_prefect", "not_mentioned"],
+              "example": {
+                "value": "airflow_like",
+                "confidence": 0.95,
+                "evidence": "Airflow explicitly mentioned",
+                "source": "pass1_derived"
+              }
+            },
+            "storage_layer": {
+              "type": "inference_object",
+              "value_enum": ["warehouse", "lake", "lakehouse", "mixed", "not_mentioned"],
+              "example": {
+                "value": "lakehouse",
+                "confidence": 0.82,
+                "evidence": "Snowflake mentioned with S3 data lake patterns",
+                "source": "inferred"
+              }
+            }
+          },
+          "flattened_columns": [
+            "inf_primary_cloud",
+            "inf_primary_cloud_confidence",
+            "inf_processing_paradigm",
+            "inf_processing_confidence",
+            "inf_orchestrator_category",
+            "inf_orchestrator_confidence",
+            "inf_storage_layer",
+            "inf_storage_confidence"
+          ]
+        },
+
+        "geo_and_work_model": {
+          "_description": "Normalized geographic and work model classification (3 fields)",
+          "_inference_basis": "Pass 1 work_model + location restrictions",
+          "fields": {
+            "remote_restriction": {
+              "type": "inference_object",
+              "value_enum": ["same_country", "same_timezone", "same_region", "anywhere", "not_mentioned"],
+              "example": {
+                "value": "same_region",
+                "confidence": 0.88,
+                "evidence": "Bay Area required but hybrid model allows flexibility",
+                "source": "combined"
+              }
+            },
+            "timezone_focus": {
+              "type": "inference_object",
+              "value_enum": ["americas", "europe", "apac", "global", "specific_country", "not_mentioned"],
+              "example": {
+                "value": "americas",
+                "confidence": 0.92,
+                "evidence": "Pacific Time Zone preferred mentioned",
+                "source": "pass1_derived"
+              }
+            },
+            "relocation_required": {
+              "type": "inference_object",
+              "value_type": "boolean",
+              "example": {
+                "value": false,
+                "confidence": 0.85,
+                "evidence": "Must be based in Bay Area - already resident",
+                "source": "inferred"
+              }
+            }
+          },
+          "flattened_columns": [
+            "inf_remote_restriction",
+            "inf_remote_confidence",
+            "inf_timezone_focus",
+            "inf_timezone_confidence",
+            "inf_relocation_required",
+            "inf_relocation_confidence"
+          ]
+        },
+
+        "visa_and_auth_normalized": {
+          "_description": "Normalized visa and authorization friendliness (3 fields)",
+          "_inference_basis": "Pass 1 work_auth + text analysis",
+          "fields": {
+            "h1b_friendly": {
+              "type": "inference_object",
+              "value_type": "boolean",
+              "example": {
+                "value": false,
+                "confidence": 0.90,
+                "evidence": "No visa sponsorship stated explicitly",
+                "source": "pass1_derived"
+              }
+            },
+            "opt_cpt_friendly": {
+              "type": "inference_object",
+              "value_type": "boolean",
+              "example": {
+                "value": false,
+                "confidence": 0.85,
+                "evidence": "Work authorization required suggests no student visa support",
+                "source": "inferred"
+              }
+            },
+            "citizenship_required": {
+              "type": "inference_object",
+              "value_enum": ["us_citizen_only", "us_or_gc", "work_auth_only", "any", "not_mentioned"],
+              "example": {
+                "value": "work_auth_only",
+                "confidence": 0.88,
+                "evidence": "Must be authorized to work - no citizenship requirement",
+                "source": "pass1_derived"
+              }
+            }
+          },
+          "flattened_columns": [
+            "inf_h1b_friendly",
+            "inf_h1b_confidence",
+            "inf_opt_cpt_friendly",
+            "inf_opt_confidence",
+            "inf_citizenship_required",
+            "inf_citizenship_confidence"
+          ]
+        },
+
+        "employment_and_benefits": {
+          "_description": "Employment classification and benefits assessment (2 fields)",
+          "_inference_basis": "Pass 1 employment_type + contract details + benefits mentioned",
+          "_note": "contract_type and compensation_type removed (use Pass1 ext_contract_type and ext_pay_type instead)",
+          "fields": {
+            "w2_vs_1099": {
+              "type": "inference_object",
+              "value_enum": ["w2", "c2c", "1099", "any", "not_mentioned"],
+              "description": "US tax classification inferred from employment type and job description",
+              "extraction_examples": {
+                "Full-time employee position": "w2",
+                "W2 employee mentioned": "w2",
+                "Independent contractor": "1099",
+                "Corp-to-corp contract": "c2c",
+                "W2 or C2C accepted": "any"
+              },
+              "example": {
+                "value": "w2",
+                "confidence": 0.90,
+                "evidence": "Full-time employee position suggests W2",
+                "source": "inferred"
+              }
+            },
+            "benefits_level": {
+              "type": "inference_object",
+              "value_enum": ["comprehensive", "standard", "basic", "none_mentioned", "not_mentioned"],
+              "description": "Overall benefits package quality based on Pass1 benefits flags",
+              "classification_criteria": {
+                "comprehensive": "4+ benefits mentioned including equity + learning/conferences + unlimited/generous PTO",
+                "standard": "2-3 standard benefits (health, 401k, PTO)",
+                "basic": "1-2 basic benefits mentioned",
+                "none_mentioned": "No benefits explicitly mentioned"
+              },
+              "example": {
+                "value": "comprehensive",
+                "confidence": 0.85,
+                "evidence": "Equity, unlimited PTO, learning budget, conferences mentioned",
+                "source": "pass1_derived"
+              }
+            }
+          },
+          "flattened_columns": [
+            "inf_w2_vs_1099",
+            "inf_w2_confidence",
+            "inf_benefits_level",
+            "inf_benefits_confidence"
+          ]
+        },
+
+        "career_development": {
+          "_description": "Career growth and development opportunities (5 fields)",
+          "_inference_basis": "Pass 1 job description text + responsibilities + company culture mentions",
+          "fields": {
+            "growth_path_clarity": {
+              "type": "inference_object",
+              "value_enum": ["explicit", "implied", "vague", "not_mentioned"],
+              "description": "How clearly the career growth path is articulated",
+              "extraction_examples": {
+                "Clear IC/management tracks mentioned": "explicit",
+                "Mentions promotion opportunities": "implied",
+                "Generic 'growth opportunities'": "vague",
+                "No career path mentioned": "not_mentioned"
+              },
+              "example": {
+                "value": "implied",
+                "confidence": 0.75,
+                "evidence": "Mentions 'growth opportunities' and 'career development' but no specific tracks",
+                "source": "inferred"
+              }
+            },
+            "mentorship_signals": {
+              "type": "inference_object",
+              "value_enum": ["explicit_yes", "implied", "not_mentioned"],
+              "description": "Whether mentorship is explicitly offered or implied",
+              "extraction_examples": {
+                "Formal mentorship program": "explicit_yes",
+                "Work with senior engineers": "implied",
+                "No mention": "not_mentioned"
+              },
+              "example": {
+                "value": "implied",
+                "confidence": 0.80,
+                "evidence": "Mentions working closely with senior staff engineers",
+                "source": "inferred"
+              }
+            },
+            "promotion_path_mentioned": {
+              "type": "inference_object",
+              "value_type": "boolean",
+              "description": "Whether promotion path or advancement is explicitly mentioned",
+              "example": {
+                "value": true,
+                "confidence": 0.90,
+                "evidence": "Explicitly states 'clear path to Staff Engineer'",
+                "source": "pass1_derived"
+              }
+            },
+            "internal_mobility_mentioned": {
+              "type": "inference_object",
+              "value_type": "boolean",
+              "description": "Whether internal mobility or role changes are mentioned",
+              "example": {
+                "value": false,
+                "confidence": 0.95,
+                "evidence": "No mention of internal transfers or team changes",
+                "source": "pass1_derived"
+              }
+            },
+            "career_tracks_available": {
+              "type": "inference_object",
+              "value_type": "array",
+              "possible_values": ["ic_track", "management_track", "specialist_track", "architect_track"],
+              "description": "Career tracks explicitly or implicitly available",
+              "example": {
+                "value": ["ic_track", "management_track"],
+                "confidence": 0.70,
+                "evidence": "Mentions both IC (Staff/Principal) and management (EM) paths",
+                "source": "inferred"
+              }
+            }
+          },
+          "flattened_columns": [
+            "inf_growth_path_clarity",
+            "inf_growth_path_confidence",
+            "inf_mentorship_signals",
+            "inf_mentorship_confidence",
+            "inf_promotion_path_mentioned",
+            "inf_promotion_confidence",
+            "inf_internal_mobility_mentioned",
+            "inf_internal_mobility_confidence",
+            "inf_career_tracks_available",
+            "inf_career_tracks_confidence"
+          ]
+        },
+
+        "requirements_classification": {
+          "_description": "Classification of job requirements strictness and clarity (3 fields)",
+          "_inference_basis": "Pass 1 skills + experience + education requirements",
+          "fields": {
+            "requirement_strictness": {
+              "type": "inference_object",
+              "value_enum": ["low", "medium", "high", "not_mentioned"],
+              "example": {
+                "value": "medium",
+                "confidence": 0.73,
+                "evidence": "Clear must-haves vs nice-to-haves distinction",
+                "source": "inferred"
+              }
+            },
+            "scope_definition": {
+              "type": "inference_object",
+              "value_enum": ["clear", "vague", "multi_role", "not_mentioned"],
+              "example": {
+                "value": "clear",
+                "confidence": 0.82,
+                "evidence": "Focused on data engineering, not multi-role hybrid",
+                "source": "inferred"
+              }
+            },
+            "skill_inflation_detected": {
+              "type": "inference_object",
+              "value_type": "boolean",
+              "description": "Whether job asks for unrealistic skill breadth for seniority",
+              "example": {
+                "value": false,
+                "confidence": 0.75,
+                "evidence": "Reasonable skill set for senior level",
+                "source": "inferred"
+              }
+            }
+          },
+          "flattened_columns": [
+            "inf_requirement_strictness",
+            "inf_strictness_confidence",
+            "inf_scope_definition",
+            "inf_scope_confidence",
+            "inf_skill_inflation_detected",
+            "inf_inflation_confidence"
+          ]
+        }
+      },
+
+      "total_field_count": "~22 inference fields (each with confidence/evidence/source)",
+      "output_structure": {
+        "nested": "enrichment.pass2_inference.{group}.{field}",
+        "flattened": "inf_{field_name} + inf_{field_name}_confidence"
+      }
+    },
+
+    "pass3_complex": {
+      "_description": "Complex analysis and insights using Pass 1 + Pass 2 context",
+      "_philosophy": "Actionable insights for candidates. Every score has confidence + evidence.",
+      "_model_suggestion": "openai.gpt-oss-120b-1:0 (120B params handles complex reasoning)",
+      "_execution": "Third LLM call - uses raw job posting + Pass 1 results + Pass 2 results as context",
+      "_all_fields_have_confidence": true,
+
+      "groups": {
+
+        "company_maturity": {
+          "_description": "Assessment of organization's data/tech maturity (4 fields)",
+          "_analysis_basis": "Pass 1 tools + practices + Pass 2 stack classification",
+          "fields": {
+            "data_maturity_score": {
+              "type": "integer",
+              "range": "1-5",
+              "description": "1=ad-hoc, 2=developing, 3=defined, 4=managed, 5=optimizing"
+            },
+            "data_maturity_level": {
+              "type": "enum",
+              "values": ["ad_hoc", "developing", "defined", "managed", "optimizing", "not_mentioned"]
+            },
+            "maturity_signals": {
+              "type": "array",
+              "description": "Positive indicators of maturity",
+              "example": ["modern_data_stack_adoption", "cicd_practices", "data_quality_testing"]
+            },
+            "maturity_confidence": {
+              "type": "float",
+              "range": "0.0-1.0",
+              "example": 0.82
+            },
+            "maturity_evidence": {
+              "type": "string",
+              "example": "Strong MDS (DBT, Airflow, Snowflake), CI/CD, data quality tools, governance for compliance. Missing: data catalog/mesh."
+            }
+          },
+          "flattened_columns": [
+            "anl_data_maturity_score",
+            "anl_data_maturity_level",
+            "anl_maturity_confidence"
+          ]
+        },
+
+        "red_flags": {
+          "_description": "Warning signs and risk assessment (4 core scores)",
+          "_analysis_basis": "Pass 1 + Pass 2 combined analysis looking for problematic patterns",
+          "fields": {
+            "scope_creep_score": {
+              "type": "float",
+              "range": "0.0-1.0",
+              "description": "0.0 = clear role, 1.0 = severe scope creep",
+              "example": 0.15
+            },
+            "scope_creep_evidence": {
+              "type": "string",
+              "example": "Well-defined DE role, no backend/ML/DevOps conflation"
+            },
+            "overtime_risk_score": {
+              "type": "float",
+              "range": "0.0-1.0",
+              "description": "0.0 = low risk, 1.0 = high risk of overtime/burnout",
+              "example": 0.35
+            },
+            "overtime_risk_evidence": {
+              "type": "string",
+              "example": "Startup environment with immediate need may mean pressure, but unlimited PTO is positive"
+            },
+            "role_clarity": {
+              "type": "enum",
+              "values": ["clear", "vague", "multi_role", "not_mentioned"],
+              "example": "clear"
+            },
+            "overall_red_flag_score": {
+              "type": "float",
+              "range": "0.0-1.0",
+              "description": "0.0 = no concerns, 1.0 = many serious concerns",
+              "example": 0.25
+            },
+            "overall_red_flag_assessment": {
+              "type": "string",
+              "example": "Low risk - well-defined role at funded startup with good signals"
+            }
+          },
+          "flattened_columns": [
+            "anl_scope_creep_score",
+            "anl_overtime_risk_score",
+            "anl_overall_red_flag_score"
+          ]
+        },
+
+        "stakeholders_and_leadership": {
+          "_description": "Team structure, reporting, and organizational context (6 fields)",
+          "_analysis_basis": "Pass 1 team_and_company + reporting mentions + organizational structure signals",
+          "fields": {
+            "reporting_structure_clarity": {
+              "type": "enum",
+              "values": ["clear", "mentioned", "vague", "not_mentioned"],
+              "example": "clear"
+            },
+            "manager_level_inferred": {
+              "type": "enum",
+              "values": ["director_plus", "senior_manager", "manager", "tech_lead", "not_mentioned"],
+              "example": "director_plus",
+              "inference_example": "Head of Data Engineering = director level"
+            },
+            "team_growth_velocity": {
+              "type": "enum",
+              "values": ["rapid_expansion", "steady_growth", "stable", "unknown", "not_mentioned"],
+              "confidence": "float",
+              "evidence": "string",
+              "example": {
+                "value": "rapid_expansion",
+                "confidence": 0.94,
+                "evidence": "Growing from 8 to 15 engineers (87% growth)"
+              }
+            },
+            "team_composition": {
+              "type": "inference_object",
+              "value_type": "object",
+              "description": "Team size and composition signals (total size, DE count, seniority mix)",
+              "example": {
+                "value": {
+                  "team_size": "8-15 engineers",
+                  "de_count": "5 data engineers",
+                  "seniority_mix": "mix of senior and mid-level"
+                },
+                "confidence": 0.80,
+                "evidence": "Mentions joining a team of 5 DEs within broader 15-person data org",
+                "source": "explicit"
+              }
+            },
+            "reporting_structure": {
+              "type": "inference_object",
+              "value_enum": ["reports_to_cto", "reports_to_director_data", "reports_to_manager", "reports_to_tech_lead", "matrix_reporting", "not_mentioned"],
+              "description": "Direct reporting line inferred from job description",
+              "extraction_examples": {
+                "Reports to CTO/VP Engineering": "reports_to_cto",
+                "Reports to Director/Head of Data": "reports_to_director_data",
+                "Reports to Engineering Manager": "reports_to_manager",
+                "Reports to Tech Lead": "reports_to_tech_lead",
+                "Multiple reporting lines mentioned": "matrix_reporting"
+              },
+              "example": {
+                "value": "reports_to_director_data",
+                "confidence": 0.88,
+                "evidence": "Job posting mentions 'reporting to Head of Data Engineering'",
+                "source": "explicit"
+              }
+            },
+            "cross_functional_embedded": {
+              "type": "inference_object",
+              "value_type": "boolean",
+              "description": "Whether role is embedded in cross-functional product teams vs centralized data team",
+              "example": {
+                "value": true,
+                "confidence": 0.75,
+                "evidence": "Mentions 'embedded with product teams' and 'work closely with PMs and designers'",
+                "source": "inferred"
+              }
+            }
+          },
+          "flattened_columns": [
+            "anl_reporting_structure_clarity",
+            "anl_manager_level",
+            "anl_team_growth_velocity",
+            "anl_team_growth_confidence",
+            "anl_team_composition",
+            "anl_team_composition_confidence",
+            "anl_reporting_structure",
+            "anl_reporting_confidence",
+            "anl_cross_functional_embedded",
+            "anl_cross_functional_confidence"
+          ]
+        },
+
+        "tech_culture": {
+          "_description": "Technical culture and work environment scores (3 core scores)",
+          "_analysis_basis": "Pass 1 benefits + practices + Pass 2 inference combined",
+          "fields": {
+            "work_life_balance_score": {
+              "type": "float",
+              "range": "0.0-1.0",
+              "description": "0.0 = poor signals, 1.0 = excellent signals",
+              "example": 0.75,
+              "signals": ["unlimited_pto", "hybrid_work_model", "no_oncall_mentioned"],
+              "evidence": "Unlimited PTO, hybrid flexibility, no mention of on-call or weekend work"
+            },
+            "growth_opportunities_score": {
+              "type": "float",
+              "range": "0.0-1.0",
+              "example": 0.85,
+              "signals": ["learning_budget", "conference_attendance", "mentoring_opportunity", "growing_team"],
+              "evidence": "Clear learning support, tech lead path, expanding team creates opportunities"
+            },
+            "tech_culture_score": {
+              "type": "float",
+              "range": "0.0-1.0",
+              "example": 0.80,
+              "signals": ["modern_stack", "ci_cd_practices", "code_review_culture", "testing_emphasis"],
+              "evidence": "Strong engineering practices, modern tooling, quality focus"
+            }
+          },
+          "flattened_columns": [
+            "anl_work_life_balance_score",
+            "anl_growth_opportunities_score",
+            "anl_tech_culture_score"
+          ]
+        },
+
+        "tech_culture_assessment": {
+          "_description": "Specific technical culture indicators and engineering practices (4 fields)",
+          "_analysis_basis": "Pass 1 benefits + tools + practices + job description text patterns",
+          "fields": {
+            "tech_culture_signals": {
+              "type": "inference_object",
+              "value_type": "array",
+              "possible_values": ["open_source", "internal_oss", "tech_blogs", "conference_speaking", "hackathons", "innovation_time", "not_mentioned"],
+              "description": "Indicators of strong technical culture (OSS contributions, blogging, speaking, hackathons, innovation time)",
+              "example": {
+                "value": ["open_source", "conference_speaking"],
+                "confidence": 0.85,
+                "evidence": "Mentions contributions to OSS projects and conference attendance support",
+                "source": "inferred"
+              }
+            },
+            "dev_practices_mentioned": {
+              "type": "inference_object",
+              "value_type": "array",
+              "possible_values": ["code_review", "pair_programming", "tdd", "ci_cd", "monitoring", "incident_response", "postmortems", "design_docs", "rfc_process", "not_mentioned"],
+              "description": "Development practices explicitly or implicitly mentioned",
+              "example": {
+                "value": ["code_review", "ci_cd", "monitoring"],
+                "confidence": 0.90,
+                "evidence": "Explicit mentions of peer review, automated testing, and observability",
+                "source": "explicit"
+              }
+            },
+            "innovation_signals": {
+              "type": "inference_object",
+              "value_enum": ["high", "medium", "low", "not_mentioned"],
+              "description": "Level of innovation and experimentation encouraged (new tech adoption, R&D time, experimentation culture)",
+              "extraction_examples": {
+                "Mentions R&D time, new tech exploration": "high",
+                "Mentions staying current with industry trends": "medium",
+                "Focused on maintaining existing systems": "low",
+                "No innovation mentions": "not_mentioned"
+              },
+              "example": {
+                "value": "medium",
+                "confidence": 0.70,
+                "evidence": "Mentions keeping up with modern data stack evolution",
+                "source": "inferred"
+              }
+            },
+            "tech_debt_awareness": {
+              "type": "inference_object",
+              "value_type": "boolean",
+              "description": "Whether tech debt management or refactoring is mentioned as part of responsibilities",
+              "example": {
+                "value": true,
+                "confidence": 0.80,
+                "evidence": "Mentions 'modernizing legacy pipelines' and 'improving code quality'",
+                "source": "explicit"
+              }
+            }
+          },
+          "flattened_columns": [
+            "anl_tech_culture_signals",
+            "anl_tech_culture_signals_confidence",
+            "anl_dev_practices_mentioned",
+            "anl_dev_practices_confidence",
+            "anl_innovation_signals",
+            "anl_innovation_confidence",
+            "anl_tech_debt_awareness",
+            "anl_tech_debt_confidence"
+          ]
+        },
+
+        "ai_ml_integration": {
+          "_description": "AI/ML maturity and tooling (2 fields)",
+          "_analysis_basis": "Pass 1 ml_tools + Pass 2 sub_specialty",
+          "fields": {
+            "ai_integration_level": {
+              "type": "enum",
+              "values": ["none", "basic_ml", "advanced_ml", "mlops", "genai_focus", "not_mentioned"],
+              "confidence": "float",
+              "evidence": "string",
+              "example": {
+                "value": "advanced_ml",
+                "confidence": 0.75,
+                "evidence": "MLflow and SageMaker mentioned, working with ML engineers"
+              }
+            },
+            "ml_tools_expected": {
+              "type": "array",
+              "items": "string",
+              "example": ["SageMaker", "MLflow"],
+              "description": "ML/AI tools mentioned or inferred from job description"
+            }
+          },
+          "flattened_columns": [
+            "anl_ai_integration_level",
+            "anl_ai_integration_confidence"
+          ]
+        },
+
+        "competition_and_timing": {
+          "_description": "Hiring urgency and competition assessment (2 fields)",
+          "_analysis_basis": "Pass 1 start_date + application_count + Pass 2 hiring_context",
+          "fields": {
+            "hiring_urgency": {
+              "type": "enum",
+              "values": ["immediate", "asap", "normal", "pipeline", "not_mentioned"],
+              "confidence": "float",
+              "evidence": "string",
+              "example": {
+                "value": "immediate",
+                "confidence": 0.90,
+                "evidence": "ASAP start date mentioned"
+              }
+            },
+            "competition_level": {
+              "type": "enum",
+              "values": ["low", "medium", "high", "very_high", "not_mentioned"],
+              "confidence": "float",
+              "evidence": "string",
+              "example": {
+                "value": "medium",
+                "confidence": 0.65,
+                "evidence": "89 applications, easy apply enabled, hybrid role in SF"
+              }
+            }
+          },
+          "flattened_columns": [
+            "anl_hiring_urgency",
+            "anl_hiring_urgency_confidence",
+            "anl_competition_level",
+            "anl_competition_confidence"
+          ]
+        },
+
+        "company_context": {
+          "_description": "Company stage, growth signals, and role context (5 fields)",
+          "_analysis_basis": "Pass 1 company mentions + team size + job description context + external signals",
+          "fields": {
+            "company_stage_inferred": {
+              "type": "inference_object",
+              "value_enum": ["startup_seed", "startup_series_a_b", "growth_stage", "established_tech", "enterprise", "not_mentioned"],
+              "description": "Inferred company stage based on team size, funding mentions, company description",
+              "extraction_examples": {
+                "Small team (5-20), founding team mentions": "startup_seed",
+                "Series A/B mentioned, 20-100 employees": "startup_series_a_b",
+                "Rapidly scaling, 100-500 employees": "growth_stage",
+                "Well-known tech company, stable growth": "established_tech",
+                "Large company (500+), multiple departments": "enterprise"
+              },
+              "example": {
+                "value": "startup_series_a_b",
+                "confidence": 0.75,
+                "evidence": "15-person data team, mentions recent funding round, fast growth",
+                "source": "inferred"
+              }
+            },
+            "hiring_velocity": {
+              "type": "inference_object",
+              "value_enum": ["aggressive", "steady", "replacement", "first_hire", "not_mentioned"],
+              "description": "Inferred hiring pace and context",
+              "extraction_examples": {
+                "Multiple open roles, rapid expansion": "aggressive",
+                "Regular hiring, team growing": "steady",
+                "Backfill or replacement mention": "replacement",
+                "First data engineer/analyst hire": "first_hire"
+              },
+              "example": {
+                "value": "aggressive",
+                "confidence": 0.82,
+                "evidence": "Posting mentions 'expanding team from 8 to 15' and multiple open roles",
+                "source": "inferred"
+              }
+            },
+            "team_size_signals": {
+              "type": "inference_object",
+              "value_enum": ["solo", "small_2_5", "medium_6_15", "large_16_50", "very_large_50_plus", "not_mentioned"],
+              "description": "Inferred data/engineering team size from job description",
+              "extraction_examples": {
+                "First hire, build from scratch": "solo",
+                "Small team mentioned (2-5 people)": "small_2_5",
+                "Team of 6-15 engineers": "medium_6_15",
+                "16-50 person team": "large_16_50",
+                "50+ team, multiple sub-teams": "very_large_50_plus"
+              },
+              "example": {
+                "value": "medium_6_15",
+                "confidence": 0.88,
+                "evidence": "Mentions 'join our team of 8 data engineers'",
+                "source": "explicit"
+              }
+            },
+            "funding_stage_signals": {
+              "type": "inference_object",
+              "value_enum": ["bootstrapped", "seed", "series_a", "series_b_plus", "public", "profitable", "not_mentioned"],
+              "description": "Funding or financial stage signals from job description",
+              "extraction_examples": {
+                "Bootstrapped or self-funded mentioned": "bootstrapped",
+                "Seed funding mentioned": "seed",
+                "Series A mentioned": "series_a",
+                "Series B+ mentioned": "series_b_plus",
+                "Public company (IPO mentioned)": "public",
+                "Profitability mentioned": "profitable"
+              },
+              "example": {
+                "value": "series_b_plus",
+                "confidence": 0.70,
+                "evidence": "Mentions 'well-funded startup' and rapid growth trajectory",
+                "source": "inferred"
+              }
+            },
+            "role_creation_type": {
+              "type": "inference_object",
+              "value_enum": ["new_headcount", "backfill", "team_expansion", "new_function", "not_mentioned"],
+              "description": "Whether this is a new role, replacement, or expansion",
+              "extraction_examples": {
+                "New role created for growth": "new_headcount",
+                "Replacement or backfill mentioned": "backfill",
+                "Expanding existing team": "team_expansion",
+                "Building new data function/team": "new_function"
+              },
+              "example": {
+                "value": "team_expansion",
+                "confidence": 0.85,
+                "evidence": "Mentions expanding data team to support new initiatives",
+                "source": "explicit"
+              }
+            }
+          },
+          "flattened_columns": [
+            "anl_company_stage_inferred",
+            "anl_company_stage_confidence",
+            "anl_hiring_velocity",
+            "anl_hiring_velocity_confidence",
+            "anl_team_size_signals",
+            "anl_team_size_confidence",
+            "anl_funding_stage_signals",
+            "anl_funding_stage_confidence",
+            "anl_role_creation_type",
+            "anl_role_creation_confidence"
+          ]
+        },
+
+        "summary": {
+          "_description": "Human-readable actionable summary for candidates",
+          "_purpose": "Help candidates quickly assess fit and prepare for interview",
+          "fields": {
+            "strengths": {
+              "type": "array",
+              "description": "Key positive aspects of this opportunity",
+              "example": [
+                "Transparent compensation ($180-220k + equity)",
+                "Strong modern data stack (Snowflake, DBT, Airflow)",
+                "Excellent learning culture (budget, conferences)"
+              ]
+            },
+            "concerns": {
+              "type": "array",
+              "description": "Potential downsides or risks to consider",
+              "example": [
+                "Immediate start date suggests time pressure",
+                "US work authorization required - no visa sponsorship"
+              ]
+            },
+            "best_fit_for": {
+              "type": "array",
+              "description": "Ideal candidate profiles for this role",
+              "example": [
+                "Senior DEs with 5-8 years wanting streaming/real-time focus",
+                "Engineers seeking tech lead path and mentoring opportunities"
+              ]
+            },
+            "red_flags_to_probe": {
+              "type": "array",
+              "description": "Questions to ask in interview to clarify concerns",
+              "example": [
+                "Ask about actual work hours and on-call expectations",
+                "Understand sprint cadence and deadline pressure"
+              ]
+            },
+            "negotiation_leverage": {
+              "type": "array",
+              "description": "Points of leverage for salary negotiation",
+              "example": [
+                "Strong streaming expertise (Kafka) is high-value",
+                "Compliance experience (SOX/PCI) is differentiator"
+              ]
+            },
+            "overall_assessment": {
+              "type": "string",
+              "description": "Concise overall evaluation (2-3 sentences)",
+              "example": "Strong opportunity for senior DE seeking modern stack, growth, and technical leadership. Competitive compensation, excellent learning culture, well-defined role. Main trade-offs are startup pace and Bay Area location requirement."
+            },
+            "recommendation_score": {
+              "type": "float",
+              "range": "0.0-1.0",
+              "description": "Overall recommendation score",
+              "example": 0.82
+            },
+            "recommendation_confidence": {
+              "type": "float",
+              "range": "0.0-1.0",
+              "example": 0.85
+            }
+          }
+        }
+      },
+
+      "total_field_count": "~18 analysis fields (all with confidence/evidence)",
+      "output_structure": {
+        "nested": "enrichment.pass3_analysis.{group}.{field}",
+        "flattened": "anl_{field_name}"
+      }
+    }
+  },
+
+  "execution_metadata": {
+    "_description": "Tracking metadata for pipeline execution",
+    "fields": {
+      "enriched_at": {"type": "datetime"},
+      "enrichment_version": {"type": "string", "example": "3.0"},
+      "pipeline_version": {"type": "string", "example": "cascading-3pass-v2"},
+
+      "pass1_success": {"type": "boolean"},
+      "pass1_model": {"type": "string", "example": "openai.gpt-oss-120b-1:0"},
+      "pass1_tokens_input": {"type": "integer"},
+      "pass1_tokens_output": {"type": "integer"},
+      "pass1_cost_usd": {"type": "float"},
+      "pass1_processing_time_ms": {"type": "integer"},
+      "pass1_errors": {"type": "string", "description": "Error details if failed"},
+
+      "pass2_success": {"type": "boolean"},
+      "pass2_model": {"type": "string"},
+      "pass2_tokens_input": {"type": "integer"},
+      "pass2_tokens_output": {"type": "integer"},
+      "pass2_cost_usd": {"type": "float"},
+      "pass2_processing_time_ms": {"type": "integer"},
+      "pass2_avg_confidence": {"type": "float"},
+      "pass2_errors": {"type": "string"},
+
+      "pass3_success": {"type": "boolean"},
+      "pass3_model": {"type": "string"},
+      "pass3_tokens_input": {"type": "integer"},
+      "pass3_tokens_output": {"type": "integer"},
+      "pass3_cost_usd": {"type": "float"},
+      "pass3_processing_time_ms": {"type": "integer"},
+      "pass3_avg_confidence": {"type": "float"},
+      "pass3_errors": {"type": "string"},
+
+      "total_tokens_input": {"type": "integer"},
+      "total_tokens_output": {"type": "integer"},
+      "total_cost_usd": {"type": "float"},
+      "total_processing_time_ms": {"type": "integer"},
+
+      "overall_success": {"type": "boolean"},
+      "fields_extracted": {"type": "integer"},
+      "fields_null": {"type": "integer"},
+      "extraction_completeness": {"type": "float"}
+    }
+  },
+
+  "example_complete_job": {
+    "_note": "See original v2.0 schema for complete example with all fields populated"
+  },
+
+  "implementation_notes": {
+    "model": "openai.gpt-oss-120b-1:0 for all passes",
+    "model_pricing": "$0.00015/1K input, $0.0003/1K output",
+    "target_cost": "~$0.0012 USD per job (current: $0.000593 for Pass 1)",
+    "execution_strategy": "3 separate sequential LLM calls - Pass 1, then Pass 2 (with Pass 1 context), then Pass 3 (with Pass 1+2 context)",
+    "fault_tolerance": "Per-record error handling - failures marked but partition continues",
+    "storage_format": "Parquet with nested JSON + flattened ext_*/inf_*/anl_* columns",
+    "confidence_threshold": "Only include inferred fields if confidence >= 0.5",
+    "anti_hallucination": "null > guess - prefer missing data over invented data",
+    "not_mentioned_enforcement": "ALL enum fields MUST include 'not_mentioned' option"
+  },
+
+  "analysis_use_cases": {
+    "for_candidates": [
+      "Filter by anl_overall_red_flag_score < 0.3 for low-risk opportunities",
+      "Match ext_skills_mentioned against resume",
+      "Find roles with anl_growth_opportunities_score > 0.75",
+      "Identify H1B-friendly roles via inf_h1b_friendly = true",
+      "Find remote-anywhere jobs via inf_remote_restriction = 'anywhere'",
+      "Get personalized summary.overall_assessment for each job"
+    ],
+    "for_market_analysis": [
+      "Salary trends: ext_salary_min/max by inf_seniority_level and inf_primary_cloud",
+      "Streaming vs batch adoption: inf_processing_paradigm over time",
+      "Data maturity by company stage: anl_data_maturity_score grouped by inf_company_stage",
+      "Visa sponsorship patterns: ext_visa_sponsorship_stated by business_domain",
+      "Work model trends: ext_work_model_stated over time and by region",
+      "AI/ML integration: anl_ai_integration_level by seniority and domain"
+    ]
+  },
+
+  "field_count_summary": {
+    "pass1_factual": "~58 extraction fields (identification, comp, work auth, work model, skills, contract, geo, benefits, AI/ML detection)",
+    "pass2_inference": "~25 inference fields × 4 attributes (value, confidence, evidence, source) = 100 total attributes (added career_development group)",
+    "pass3_complex": "~30 analysis fields with confidence/evidence (added tech_culture_assessment, company_context groups, expanded stakeholders_and_leadership)",
+    "metadata": "~20 execution tracking fields",
+    "total_nested_fields": "~163 total fields across all passes (increased from ~144, +19 new fields in v3.3)",
+    "total_flattened_columns": "~103 ext_* + inf_* + anl_* columns for Parquet queries (increased from ~66, +37 new columns in v3.3)",
+    "v3_3_changes": "Added 19 new enrichment fields: Pass1 +2 (llm_genai_mentioned, feature_store_mentioned), Pass2 +5 (career_development group), Pass3 +12 (tech_culture_assessment group +4, stakeholders_and_leadership +3, company_context group +5)",
+    "v3_2_changes": "Removed 2 duplicate fields from Pass2 (contract_type_normalized, compensation_type). Use Pass1 ext_contract_type and ext_pay_type instead."
+  }
+}

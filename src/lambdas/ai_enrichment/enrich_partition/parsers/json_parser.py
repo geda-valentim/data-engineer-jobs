@@ -145,6 +145,12 @@ def _try_fix_and_parse(text: str) -> Optional[Dict[str, Any]]:
         if cleaned.lower().startswith(prefix.lower()):
             cleaned = cleaned[len(prefix):].strip()
 
+    # Remove XML-like tags that LLMs sometimes add (e.g., <reasoning>...</reasoning>)
+    # Pattern matches: <tag>content</tag> or <tag> at start
+    cleaned = re.sub(r'<[^>]+>.*?</[^>]+>\s*', '', cleaned, flags=re.DOTALL)
+    cleaned = re.sub(r'^<[^>]+>\s*', '', cleaned)
+    cleaned = cleaned.strip()
+
     # Try parsing cleaned text
     result = _try_parse(cleaned)
     if result is not None:

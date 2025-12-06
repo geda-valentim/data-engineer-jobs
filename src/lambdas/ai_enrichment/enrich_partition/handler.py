@@ -67,6 +67,8 @@ def create_empty_enrichment() -> Dict[str, Any]:
 
         # Metrics (null for failures)
         "total_tokens_used": None,
+        "enrichment_input_tokens": None,
+        "enrichment_output_tokens": None,
         "enrichment_cost_usd": None,
         "avg_confidence_pass2": None,
         "avg_confidence_pass3": None,
@@ -91,6 +93,8 @@ def enrich_single_job(job: Dict[str, Any], bedrock_client: Optional[BedrockClien
     result = create_empty_enrichment()
     errors = []
     total_tokens = 0
+    total_input_tokens = 0
+    total_output_tokens = 0
     total_cost = 0.0
 
     job_id = job.get("job_posting_id", "unknown")
@@ -123,6 +127,8 @@ def enrich_single_job(job: Dict[str, Any], bedrock_client: Optional[BedrockClien
         )
 
         total_tokens += input_tokens + output_tokens
+        total_input_tokens += input_tokens
+        total_output_tokens += output_tokens
         total_cost += cost
 
         # Parse JSON response
@@ -175,6 +181,8 @@ def enrich_single_job(job: Dict[str, Any], bedrock_client: Optional[BedrockClien
 
     # Aggregate metrics
     result["total_tokens_used"] = total_tokens if total_tokens > 0 else None
+    result["enrichment_input_tokens"] = total_input_tokens if total_input_tokens > 0 else None
+    result["enrichment_output_tokens"] = total_output_tokens if total_output_tokens > 0 else None
     result["enrichment_cost_usd"] = round(total_cost, 6) if total_cost > 0 else None
     result["enrichment_errors"] = "; ".join(errors) if errors else None
 

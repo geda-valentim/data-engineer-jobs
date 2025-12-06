@@ -7,6 +7,11 @@ infra/secrets/secrets.env
 infra/layers/python-deps/python/
 data/*
 
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
 # Terraform
 **/.terraform/*
 *.tfstate
@@ -15,6 +20,8 @@ data/*
 !terraform.tfvars.example
 .terraform.lock.hcl
 
+.cache/
+.cache
 # Lambda deployment packages
 *.zip
 tree.txt
