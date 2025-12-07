@@ -1,0 +1,249 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.70,
+        "evidence": "Only Palantir Foundry and Hadoop (Hive, PySpark) are mentioned; no CI/CD, testing, monitoring, or data governance signals, indicating basic pipeline automation but limited maturity.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.70,
+        "evidence": "The limited tooling and lack of modern data‑stack practices align with a developing maturity level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "Job posting does not reference modern stack components, CI/CD, data quality testing, observability, or governance frameworks.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.10,
+        "confidence": 0.90,
+        "evidence": "Role is narrowly defined as senior data engineer with Palantir Foundry, Hive, and PySpark; no additional responsibilities (e.g., ML, DevOps) are listed.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.20,
+        "confidence": 0.80,
+        "evidence": "No mention of on‑call, fast‑paced environment, or overtime expectations; senior roles sometimes entail occasional extra hours, but no explicit risk signals.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.95,
+        "evidence": "Pass 2 marks scope definition as \"clear\" and the description focuses solely on senior data‑engineering duties.",
+        "source": "pass2_inference"
+      },
+      "overall_red_flag_score": {
+        "value": 0.25,
+        "confidence": 0.85,
+        "evidence": "Low scope creep and overtime risk, but lack of disclosed compensation, benefits, and visa sponsorship raise moderate concerns.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Job posting provides no information about who the role reports to.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No manager or director title appears in the description.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No indication of hiring pace or team expansion.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.90,
+        "evidence": "No details about team size, number of data engineers, or seniority mix are provided.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No reporting line is described.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "The posting does not mention working within product or cross‑functional squads.",
+        "source": "pass1_derived"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.40,
+        "confidence": 0.70,
+        "evidence": "No PTO policy, benefits, or work‑hour expectations are disclosed, leaving balance unclear.",
+        "source": "pass1_derived"
+      },
+      "growth_opportunities_score": {
+        "value": 0.30,
+        "confidence": 0.70,
+        "evidence": "No learning budget, mentorship, or career‑path information appears in the posting.",
+        "source": "pass1_derived"
+      },
+      "tech_culture_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Only specific technologies (Palantir Foundry, Hive, PySpark) are mentioned; no engineering practices or cultural initiatives are described.",
+        "source": "pass1_derived"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "No references to open‑source contributions, conferences, hackathons, or innovation time.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "The description lacks any mention of code review, CI/CD pipelines, testing, or monitoring.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No statements about experimentation, R&D, or adopting new technologies are present.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No discussion of legacy systems, refactoring, or tech‑debt reduction.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.90,
+        "evidence": "The posting does not mention machine‑learning pipelines, model serving, or related tooling.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No ML/AI tools are listed.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No start‑date or urgency language appears.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No data on applicant volume, location popularity, or ease of application.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No information about company size, funding round, or market stage is provided.",
+        "source": "pass1_derived"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No indication of aggressive or steady hiring patterns.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Team size is not disclosed.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No funding stage (seed, Series A, etc.) is mentioned.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "The posting does not state whether this is a new headcount, backfill, or expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "clear_requirements",
+      "well_defined_role",
+      "data_focused_role"
+    ],
+    "strength_details": [
+      "Explicit requirement for Palantir Foundry, Hive, and PySpark expertise.",
+      "Well‑defined senior data‑engineering position focused on batch ETL pipelines.",
+      "Data‑centric role emphasizing scalable solutions on a modern analytics platform."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "no_visa_sponsorship"
+    ],
+    "concern_details": [
+      "Compensation range and benefits are not disclosed in the posting.",
+      "No visa sponsorship; only U.S. residents (GA) are eligible."
+    ],
+    "best_fit_categories": [
+      "senior_data_engineers",
+      "pipeline_developers",
+      "data_generalists"
+    ],
+    "best_fit_details": [
+      "Senior data engineers with 8+ years of batch ETL experience.",
+      "Candidates proficient in Palantir Foundry, Hive, and PySpark.",
+      "Professionals comfortable with an on‑site role in Atlanta, GA."
+    ],
+    "probe_categories": [
+      "salary_range_details",
+      "visa_sponsorship_details",
+      "work_hour_expectations",
+      "role_scope_boundaries",
+      "team_size_composition"
+    ],
+    "probe_details": [
+      "What is the total compensation package (base, bonus, equity) for this role?",
+      "Is the company willing to sponsor work visas (H‑1B, O‑1, etc.)?",
+      "What are the typical weekly work hours and are there on‑call or overtime expectations?",
+      "Beyond Palantir Foundry, Hive, and PySpark, are there additional responsibilities (e.g., ML, data‑science collaboration)?",
+      "How many data engineers and other data team members will I be working with?"
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "rare_skill_match"
+    ],
+    "leverage_details": [
+      "Direct experience with Palantir Foundry aligns exactly with the core technology stack.",
+      "Expertise in Hadoop‑based batch processing (Hive, PySpark) is a niche skill set valued by the team."
+    ],
+    "overall_assessment": "The role offers a clear, senior‑level data‑engineering position with a focused technology stack (Palantir Foundry, Hive, PySpark). Compensation details are opaque and there is no visa sponsorship, which are the main drawbacks. Suitable for experienced DEs seeking an on‑site, data‑centric role in Atlanta.",
+    "recommendation_score": 0.60,
+    "recommendation_confidence": 0.85
+  }
+}

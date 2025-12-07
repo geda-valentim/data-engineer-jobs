@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.95,
+        "evidence": "Title includes \"Sr\" and 5+ years of experience required, matching senior level expectations.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is Data Engineer and responsibilities focus on pipelines, ETL, and data platforms.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.78,
+        "evidence": "Job description emphasizes ETL workflows, batch processing, and data warehousing without mention of streaming technologies.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.85,
+        "evidence": "Mentoring junior engineers and leading design of data solutions are required, but no direct reports are mentioned.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.85,
+        "evidence": "AWS Redshift, Azure Synapse, and GCP BigQuery are all explicitly listed as platforms to work with.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No additional cloud providers beyond AWS, Azure, and GCP are mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.85,
+        "evidence": "Focus on ETL workflows, Apache Airflow orchestration, and performance optimization indicates batch processing.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.96,
+        "evidence": "Apache Airflow is explicitly listed among required hard skills.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.88,
+        "evidence": "Required experience with AWS Redshift, Azure Synapse, and GCP BigQuery points to data‑warehouse storage.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.90,
+        "evidence": "Job is onsite in Minneapolis, MN with \"no remote work\" wording, restricting candidates to the United States.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.70,
+        "evidence": "Location is in the United States (Midwest), implying an Americas time‑zone focus.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No relocation assistance or requirement is mentioned; the role is onsite for candidates already in the area.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Visa sponsorship is not mentioned in the posting.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No reference to OPT/CPT eligibility; standard work‑authorization language suggests they are not targeted.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.88,
+        "evidence": "Posting states E‑Verify and that all qualified applicants will be considered, without specifying citizenship.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.95,
+        "evidence": "Employment type is listed as permanent/full‑time, indicating a W‑2 employee arrangement.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.90,
+        "evidence": "Extensive benefits list includes medical, dental, vision, life, disability, pet insurance, 401k, ESPP, learning budget, tuition reimbursement, and generous PTO.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.78,
+        "evidence": "Mentorship, promotional opportunities, and training are mentioned, but no specific career ladders are defined.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "explicit_yes",
+        "confidence": 0.92,
+        "evidence": "The posting explicitly states \"Mentor and guide junior data engineers, providing technical leadership and career development support.\"",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": true,
+        "confidence": 0.90,
+        "evidence": "The benefits section references \"promotional opportunities\" indicating a promotion path.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No language about internal transfers or lateral moves appears in the posting.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.65,
+        "evidence": "Emphasis on technical leadership and mentorship suggests an individual‑contributor track; no management responsibilities are described.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.85,
+        "evidence": "Extensive must‑have hard and soft skills list with few nice‑to‑have items indicates a stringent requirement set.",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Job description provides a focused set of responsibilities specific to data engineering.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Required skills and 5+ years of experience align with a senior data engineer role, showing no inflation.",
+        "source": "inferred"
+      }
+    }
+  }
+}

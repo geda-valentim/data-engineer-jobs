@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.95,
+        "evidence": "Job requires minimum 10 years experience and explicitly calls for a \"Senior, hands‑on data modeler\".",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_architect",
+        "confidence": 0.82,
+        "evidence": "Title and responsibilities focus on enterprise data warehouse modeling, dimensional design, and architecture of data assets.",
+        "source": "combined"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.86,
+        "evidence": "Responsibilities include developing conceptual, logical, and physical models for an enterprise data warehouse and using Kimball dimensional modeling.",
+        "source": "combined"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.81,
+        "evidence": "Mentors and educates team members and provides technical leadership of an Oracle data warehouse team, but no direct‑report responsibilities are listed.",
+        "source": "combined"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.65,
+        "evidence": "Only Oracle Cloud Infrastructure (OCI) is referenced, which is not among the allowed cloud categories (aws, azure, gcp, multi, on_prem).",
+        "source": "inferred"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No other cloud providers are mentioned in the posting.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.92,
+        "evidence": "Job emphasizes ETL activities, dimensional modeling, and data warehouse implementation without any streaming technologies.",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.94,
+        "evidence": "No workflow/orchestration tool (e.g., Airflow, Luigi, dbt) is referenced.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.88,
+        "evidence": "Mentions Star, Snowflake, and hybrid schemas, all of which are data‑warehouse technologies.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.96,
+        "evidence": "Requirement: \"Must live within 60 miles maximum from location\" (Sacramento, CA).",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No explicit timezone or regional focus is stated beyond the Sacramento location.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "Candidate must already reside within 60 miles; no relocation assistance is mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Visa sponsorship status is listed as \"not_mentioned\" in the extraction.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": "not_mentioned",
+        "confidence": 0.88,
+        "evidence": "No reference to OPT/CPT eligibility in the posting.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Neither citizenship nor work‑authorization requirements are specified.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.82,
+        "evidence": "Job title includes \"_W2_\" indicating a full‑time employee arrangement.",
+        "source": "combined"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.93,
+        "evidence": "Extraction shows no benefits listed.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "The posting does not discuss career ladders, promotion tracks, or growth opportunities.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.81,
+        "evidence": "Responsibilities include \"Mentors and educates team members on best practices\" indicating informal mentorship.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.94,
+        "evidence": "No language about promotions or advancement paths appears in the description.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.94,
+        "evidence": "The posting does not reference internal transfers or lateral moves.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No explicit mention of IC, management, specialist, or architect tracks.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.91,
+        "evidence": "Requires 10+ years experience, multiple specific Oracle tools, and a long list of mandatory hard and soft skills.",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Job description is focused specifically on data modeling for an enterprise data warehouse.",
+        "source": "pass1_derived"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.92,
+        "evidence": "The skill set aligns with a senior‑level data modeling role and matches the 10‑year experience requirement.",
+        "source": "combined"
+      }
+    }
+  }
+}

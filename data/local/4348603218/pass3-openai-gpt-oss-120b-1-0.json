@@ -1,0 +1,273 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 07:34:54",
+    "job_posting_id": "4348603218",
+    "job_title": "(USA) Senior, Data Engineer",
+    "company_name": "VIZIO",
+    "job_location": "Denver, CO",
+    "pass_name": "pass3",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 2,
+          "confidence": 0.75,
+          "evidence": "Uses Airflow, AWS, Hadoop, Spark, and Kafka but no explicit CI/CD pipelines, data catalog, or automated testing mentioned.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "developing",
+          "confidence": 0.75,
+          "evidence": "Corresponds to score 2 indicating developing data practices.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption",
+            "cloud_native"
+          ],
+          "confidence": 0.8,
+          "evidence": "Airflow, AWS services, Hadoop/Spark, and Kafka indicate adoption of a modern data stack and cloud‑first architecture.",
+          "source": "inferred"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.12,
+          "confidence": 0.9,
+          "evidence": "Role is narrowly defined as a data engineer (ETL, pipelines, modeling) with no mention of data science, dev‑ops, or product engineering responsibilities.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.22,
+          "confidence": 0.8,
+          "evidence": "No on‑call or 24/7 expectations are listed; benefits include generous PTO, suggesting a moderate to low risk of chronic overtime.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.95,
+          "evidence": "Responsibilities (design/implement ETL, manage pipelines, data modeling) are explicitly enumerated.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.2,
+          "confidence": 0.85,
+          "evidence": "Low scope creep and low overtime risk combined with clear responsibilities produce a low overall red‑flag rating.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "mentioned",
+          "confidence": 0.7,
+          "evidence": "Job mentions joining the Data Lake Engineering Team but does not specify a direct manager or reporting line.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "No title such as Head of Data Engineering, Director, or Manager is referenced in the posting.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "The posting does not discuss hiring trends or recent expansion of the data team.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.6,
+          "evidence": "No numbers or seniority breakdown are provided.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "No explicit reporting relationship is described.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.7,
+          "evidence": "The role collaborates with cross‑functional teams but is not described as being embedded within a product squad.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.7,
+          "confidence": 0.8,
+          "evidence": "Generous PTO, parental leave, and no on‑call mention indicate a reasonably good work‑life balance, though the role is onsite.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.65,
+          "confidence": 0.75,
+          "evidence": "Learning budget and tuition reimbursement are listed, but no explicit career ladder or mentorship program is described.",
+          "source": "pass1_derived"
+        },
+        "tech_culture_score": {
+          "value": 0.6,
+          "confidence": 0.75,
+          "evidence": "Modern tooling (Airflow, AWS, Spark, Kafka) is present, yet engineering practices such as CI/CD, code review, or testing are not mentioned.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [],
+          "confidence": 0.6,
+          "evidence": "No references to open‑source contributions, tech blogs, or conference speaking in the posting.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [],
+          "confidence": 0.7,
+          "evidence": "The description does not call out code review, CI/CD, testing, or monitoring practices.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.7,
+          "evidence": "No mention of R&D time, hackathons, or experimentation initiatives.",
+          "source": "pass1_derived"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.7,
+          "evidence": "The posting does not discuss refactoring, modernization, or tech‑debt reduction.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.9,
+          "evidence": "No machine‑learning pipelines, ML frameworks, or MLOps tools are referenced.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No ML‑related tools (e.g., SageMaker, MLflow) appear in the job description.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.7,
+          "evidence": "The posting does not specify an immediate or accelerated start date.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "not_mentioned",
+          "confidence": 0.7,
+          "evidence": "No data on applicant volume, easy‑apply, or location scarcity is provided.",
+          "source": "pass1_derived"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.9,
+          "evidence": "Walmart is a global Fortune‑500 retailer; VIZIO is an established public company.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.7,
+          "evidence": "No language about aggressive hiring or replacement is present.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.7,
+          "evidence": "No headcount numbers are disclosed.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "The organization is a mature public corporation; no startup‑type funding language appears.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "The posting does not state whether this is a new headcount, backfill, or expansion hire.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "transparent_salary",
+        "modern_tech_stack",
+        "learning_opportunities",
+        "competitive_compensation"
+      ],
+      "strength_details": [
+        "Salary range disclosed ($99k‑$198k) with equity component.",
+        "Modern data stack includes AWS, Airflow, Hadoop, Spark, and Kafka.",
+        "Learning budget and tuition reimbursement (Live Better U) support continuous education.",
+        "Comprehensive benefits package (medical, 401(k), PTO, parental leave)."
+      ],
+      "concern_categories": [
+        "no_visa_sponsorship",
+        "unclear_reporting"
+      ],
+      "concern_details": [
+        "Visa sponsorship is not mentioned, limiting eligibility to U.S. work‑authorized candidates.",
+        "Reporting line and manager level are not specified, creating uncertainty about hierarchy."
+      ],
+      "best_fit_categories": [
+        "senior_data_engineers",
+        "pipeline_developers",
+        "cloud_specialists"
+      ],
+      "best_fit_details": [
+        "Senior data engineers with 5+ years of experience in AWS, Airflow, and big‑data ecosystems.",
+        "Engineers focused on building and maintaining ETL pipelines and data lakes.",
+        "Candidates comfortable with cloud‑native services and distributed processing."
+      ],
+      "probe_categories": [
+        "team_size_composition",
+        "reporting_structure",
+        "tech_stack_details",
+        "work_hour_expectations",
+        "career_growth_path"
+      ],
+      "probe_details": [
+        "Ask about the size of the Data Lake Engineering team and the mix of senior vs. junior members.",
+        "Clarify who the role reports to (e.g., Data Engineering Manager, Director of Data).",
+        "Confirm which storage, orchestration, and processing tools are in active use beyond those listed.",
+        "Inquire about typical weekly hours, on‑call duties, and flexibility for remote work.",
+        "Discuss formal career progression, promotion criteria, and mentorship programs."
+      ],
+      "leverage_categories": [
+        "rare_skill_match",
+        "exact_experience_match"
+      ],
+      "leverage_details": [
+        "Deep experience with Kafka and Airflow is highly valued for the team’s streaming and orchestration needs.",
+        "Proven track record on AWS big‑data services aligns directly with the core platform."
+      ],
+      "overall_assessment": "The role offers a solid senior data‑engineering opportunity within a large, well‑resourced enterprise. Compensation is transparent and competitive, and the tech stack is modern and cloud‑native. The main drawbacks are the lack of visa sponsorship and limited visibility into reporting lines and career progression.",
+      "recommendation_score": 0.75,
+      "recommendation_confidence": 0.85
+    },
+    "tokens": 14616,
+    "input_tokens": 10390,
+    "output_tokens": 4226,
+    "cost": 0.0028263
+  }
+}

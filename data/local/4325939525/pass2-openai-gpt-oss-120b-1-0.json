@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 07:22:09",
+    "job_posting_id": "4325939525",
+    "job_title": "Sr. Data Engineer(hands on Palantir exp.)",
+    "company_name": "Pacer Group",
+    "job_location": "Atlanta, GA",
+    "pass_name": "pass2",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.95,
+          "evidence": "Title includes \"Sr.\" and required experience is 8-10 years, which aligns with senior level.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Job title explicitly states \"Data Engineer\" and responsibilities focus on data pipelines.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.8,
+          "evidence": "Required skills include Hive and PySpark, which are typical batch ETL technologies; no streaming tools are mentioned.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.85,
+          "evidence": "Job description lists only technical requirements and does not mention people management or team leadership responsibilities.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.92,
+          "evidence": "No cloud provider (AWS, Azure, GCP) is referenced in the posting or extracted data.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No secondary cloud providers are mentioned.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.85,
+          "evidence": "Experience required with Hive and PySpark, which are batch processing frameworks.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.93,
+          "evidence": "No orchestration tools (Airflow, Luigi, dbt, etc.) are cited.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.7,
+          "evidence": "Hive implies a data warehouse layer on Hadoop, while Hadoop/Hive ecosystems also serve as a data lake; both concepts are present.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.9,
+          "evidence": "Extraction shows \"locals only for onsite\" with a US‑only restriction and a specific state (GA).",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.75,
+          "evidence": "Job is limited to the United States (GA), implying a focus on the US time zones, but no explicit timezone is stated.",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "Requirement is for local candidates only; no relocation assistance is mentioned.",
+          "source": "pass1_derived"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Visa sponsorship is marked as \"not_mentioned\" in the extraction.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of OPT/CPT eligibility; work authorization is not discussed.",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.92,
+          "evidence": "Neither citizenship nor work‑authorization requirements are stated in the posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "not_mentioned",
+          "confidence": 0.94,
+          "evidence": "Employment type and contract type are both listed as \"not_mentioned\".",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.93,
+          "evidence": "No benefits (equity, PTO, learning budget, etc.) are listed in the extraction.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.92,
+          "evidence": "The posting does not discuss career progression, growth opportunities, or ladders.",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.92,
+          "evidence": "No mentorship programs or senior‑junior collaboration are referenced.",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No language about promotions or advancement paths appears in the posting.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "The job description does not mention internal transfers or mobility.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No career tracks (IC, management, specialist, architect) are described.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.85,
+          "evidence": "Four specific hard‑skill requirements are listed with no nice‑to‑have items, indicating a stringent set of must‑haves.",
+          "source": "pass1_derived"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "The description is concise and focuses solely on senior data‑engineering responsibilities.",
+          "source": "pass1_derived"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Required experience (8‑10 years) matches the senior title and the listed technical skills are appropriate for that level.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8611,
+    "input_tokens": 5468,
+    "output_tokens": 3143,
+    "cost": 0.0017630999999999997
+  }
+}

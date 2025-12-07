@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.85,
+        "evidence": "5+ years of experience required and responsibilities include mentoring and reviewing junior engineers, indicating senior‑level expectations despite the title lacking a senior qualifier.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Job title is \"Data Engineer\" and core duties revolve around building and maintaining data pipelines.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.78,
+        "evidence": "Description emphasizes building moderate‑complexity data pipelines, data cleaning, and modeling without mention of real‑time streaming technologies.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.80,
+        "evidence": "Candidate is expected to provide mentorship and code reviews for junior engineers but no direct‑report or people‑management duties are listed.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "gcp",
+        "confidence": 0.95,
+        "evidence": "Pass 1 hard skills list includes \"Google Cloud Platform\" and the posting repeatedly references GCP knowledge.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud providers are mentioned in the posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.75,
+        "evidence": "Pipelines are described as moderate‑complexity batch ETL processes; no streaming frameworks (e.g., Kafka, Flink) are referenced.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "The posting does not name any workflow/orchestration tool such as Airflow, Composer, or Dagster.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "No specific data warehouse (e.g., BigQuery) or lake (e.g., Cloud Storage) technologies are called out.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.95,
+        "evidence": "Location restriction is \"Las Condes, Santiago Metropolitan Region, Chile\" and work model is listed as onsite.",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.90,
+        "evidence": "The role is based in Chile, which falls in the Americas time zones.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No relocation assistance or requirement is mentioned; the job is onsite in a specific Chilean city.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Pass 1 extraction marks visa sponsorship as \"not_mentioned\".",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No language indicating acceptance of OPT/CPT visas is present.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Neither citizenship nor specific work‑authorization requirements are stated beyond the Chile location restriction.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "Employment type is not specified; no contract language (W2, C2C, 1099) appears in the posting.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.92,
+        "evidence": "Pass 1 extraction shows an empty benefits list and no equity, PTO, or other perks are described.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "The posting does not discuss career ladders, promotion tracks, or growth opportunities.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "explicit_yes",
+        "confidence": 0.92,
+        "evidence": "Soft skill requirement includes \"Mentoring\" and the description states the candidate will provide mentorship to junior data engineers.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No language about promotions, titles, or advancement paths is present.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "The posting does not reference internal transfers or mobility programs.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No mention of IC, management, specialist, or architect tracks.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.85,
+        "evidence": "Must‑have list includes many technical skills, 5+ years experience, cloud certification, and English proficiency; only two nice‑to‑have items are listed.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Job description focuses specifically on data engineering tasks without blending other roles.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "The required skill set aligns with a senior‑level data engineer; no unrealistic junior‑senior mismatch is observed.",
+        "source": "inferred"
+      }
+    }
+  }
+}
