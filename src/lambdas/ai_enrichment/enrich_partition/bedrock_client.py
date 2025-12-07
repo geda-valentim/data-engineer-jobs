@@ -103,16 +103,50 @@ class BedrockClient:
 
             except ClientError as e:
                 error_code = e.response.get("Error", {}).get("Code", "")
-                if error_code in ["ThrottlingException", "ServiceUnavailableException"]:
+                error_message = str(e)
+
+                # Retry on throttling, service unavailable, or transient validation errors
+                is_throttling = error_code in ["ThrottlingException", "ServiceUnavailableException"]
+                is_transient_error = (
+                    error_code == "ValidationException" and
+                    "EngineCore encountered an issue" in error_message
+                )
+
+                if is_throttling or is_transient_error:
                     last_error = e
                     delay = self.retry_delay * (2 ** attempt)
-                    logger.warning(f"Bedrock throttled, retrying in {delay}s (attempt {attempt + 1}/{self.max_retries})")
+                    reason = "throttled" if is_throttling else "transient error"
+                    logger.warning(f"Bedrock {reason}, retrying in {delay}s (attempt {attempt + 1}/{self.max_retries})")
                     time.sleep(delay)
                 else:
                     raise
 
         # All retries exhausted
         raise last_error or Exception("Bedrock invocation failed after retries")
+
+    def _is_openai_compatible(self, model_id: str) -> bool:
+        """Check if model uses OpenAI-compatible API format."""
+        # Models that use OpenAI-compatible format in Bedrock
+        openai_prefixes = (
+            "openai.",      # OpenAI models (gpt-oss-120b-1, etc.)
+            "moonshot.",    # Kimi K2
+            "deepseek.",    # DeepSeek R1
+            "minimax.",     # MiniMax M2
+            "qwen.",        # Qwen models
+            "mistral.",     # Mistral models
+            "google.",      # Gemma models
+            "meta.llama4",  # Llama 4 models
+        )
+        return any(model_id.startswith(prefix) for prefix in openai_prefixes)
+
+    def _is_thinking_model(self, model_id: str) -> bool:
+        """Check if model is a 'thinking' model that outputs reasoning by default."""
+        # Models that output <reasoning> or similar before the actual response
+        thinking_patterns = (
+            "kimi-k2-thinking",  # Kimi K2 Thinking
+            "deepseek.r1",       # DeepSeek R1
+        )
+        return any(pattern in model_id for pattern in thinking_patterns)
 
     def _build_request_body(
         self,
@@ -124,18 +158,24 @@ class BedrockClient:
     ) -> Dict:
         """Build request body based on model type."""
 
-        if model_id.startswith("openai.gpt-oss-120b-1:0"):
-            # OpenAI-compatible format (works for openai.gpt-oss-120b-1:0)
+        if self._is_openai_compatible(model_id):
+            # OpenAI-compatible format (works for most third-party models in Bedrock)
             messages = []
             if system:
                 messages.append({"role": "system", "content": system})
             messages.append({"role": "user", "content": prompt})
 
-            return {
+            body = {
                 "max_tokens": max_tokens,
                 "temperature": temperature,
                 "messages": messages,
             }
+
+            # Disable reasoning for "thinking" models to get direct JSON output
+            if self._is_thinking_model(model_id):
+                body["include_reasoning"] = False
+
+            return body
 
         elif model_id.startswith("anthropic.claude"):
             # Claude format
@@ -161,8 +201,8 @@ class BedrockClient:
     def _parse_response(self, model_id: str, response_body: Dict) -> Tuple[str, int, int]:
         """Parse response based on model type. Returns (text, input_tokens, output_tokens)."""
 
-        if model_id.startswith("openai.gpt-oss-120b-1:0"):
-            # OpenAI-compatible format (works for openai.gpt-oss-120b-1:0)
+        if self._is_openai_compatible(model_id):
+            # OpenAI-compatible format (works for most third-party models in Bedrock)
             text = response_body.get("choices", [{}])[0].get("message", {}).get("content", "")
             usage = response_body.get("usage", {})
             input_tokens = usage.get("prompt_tokens", 0)

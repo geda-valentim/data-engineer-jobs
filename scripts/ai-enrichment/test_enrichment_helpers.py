@@ -1,6 +1,6 @@
 """
 Helper functions for AI Enrichment tests.
-Includes cache management, S3 loading, and JSON export.
+Includes S3 loading and JSON export.
 """
 
 import os
@@ -12,15 +12,8 @@ from datetime import datetime
 from typing import Optional, List, Dict, Any
 
 
-def get_cache_dir() -> Path:
-    """Get cache directory path, creating it if needed."""
-    cache_dir = Path(__file__).parent.parent.parent / ".cache" / "enrichment"
-    cache_dir.mkdir(parents=True, exist_ok=True)
-    return cache_dir
-
-
-def get_cache_key(job: Dict[str, Any]) -> str:
-    """Generate cache key from job posting ID."""
+def get_job_id(job: Dict[str, Any]) -> str:
+    """Get job ID for file naming, generating hash if needed."""
     job_id = job.get('job_posting_id', '')
     if not job_id:
         # If no ID, hash the job content
@@ -30,178 +23,105 @@ def get_cache_key(job: Dict[str, Any]) -> str:
     return job_id.replace('/', '_').replace('\\', '_')
 
 
-def load_from_cache(job: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+def get_cache_dir() -> Path:
+    """Get cache directory path, creating it if needed."""
+    cache_dir = Path(__file__).parent.parent.parent / "data" / "local"
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    return cache_dir
+
+
+def load_from_cache(job: Dict[str, Any], model_id: str, pass_name: str = "pass1") -> Optional[Dict[str, Any]]:
     """
-    Load enrichment result from cache if available.
+    Load pass result from cache if available.
+    Cache path: data/local/{job_id}/{pass}-{model}.json
 
     Args:
         job: Job dictionary
+        model_id: Model ID used for this pass
+        pass_name: Pass name (pass1, pass2, pass3)
 
     Returns:
         Cached result or None if not found
     """
-    cache_key = get_cache_key(job)
-    cache_file = get_cache_dir() / f"{cache_key}.json"
+    job_id = get_job_id(job)
+    model_clean = model_id.replace(':', '-').replace('/', '-').replace('.', '-')
+    cache_file = get_cache_dir() / job_id / f"{pass_name}-{model_clean}.json"
 
     if cache_file.exists():
         try:
             with open(cache_file, 'r') as f:
                 cached = json.load(f)
-                return cached
+                return cached.get('result', cached)
         except Exception as e:
-            print(f"Warning: Could not load cache for {cache_key}: {e}")
+            print(f"Warning: Could not load cache for {job_id}/{pass_name}: {e}")
             return None
     return None
 
 
-def save_to_cache(job: Dict[str, Any], result: Dict[str, Any], pass2_result: Optional[Dict[str, Any]] = None):
+def save_to_cache(job: Dict[str, Any], model_id: str, result: Dict[str, Any], pass_name: str = "pass1"):
     """
-    Save enrichment result to cache (Pass 1 and optionally Pass 2/3).
+    Save pass result to cache.
+    Cache path: data/local/{job_id}/{pass}-{model}.json
 
     Args:
         job: Job dictionary
-        result: Pass 1 enrichment result
-        pass2_result: Optional Pass 2/3 result dict
+        model_id: Model ID used for this pass
+        result: Result data to cache
+        pass_name: Pass name (pass1, pass2, pass3)
     """
-    cache_key = get_cache_key(job)
-    cache_file = get_cache_dir() / f"{cache_key}.json"
-
-    try:
-        # Load existing cache if present
-        existing_cache = {}
-        if cache_file.exists():
-            try:
-                with open(cache_file, 'r') as f:
-                    existing_cache = json.load(f)
-            except:
-                pass
-
-        # Merge Pass 1 result
-        cache_data = {**existing_cache, **result}
-
-        # Add Pass 2/3 result if provided
-        if pass2_result:
-            cache_data.update(pass2_result)
-
-        with open(cache_file, 'w') as f:
-            json.dump(cache_data, f, indent=2, default=str)
-    except Exception as e:
-        print(f"Warning: Could not save cache for {cache_key}: {e}")
+    save_pass_result(job, pass_name, model_id, result)
 
 
-def save_results_to_json(
-    results: List[Dict[str, Any]],
-    test_type: str,
-    metadata: Optional[Dict[str, Any]] = None,
+def save_pass_result(
+    job: Dict[str, Any],
+    pass_name: str,
+    model_id: str,
+    result: Dict[str, Any],
+    base_dir: Optional[Path] = None,
 ) -> Optional[str]:
     """
-    Save enrichment results to JSON file in data/ folder.
+    Save a single pass result to ./{job_id}/{pass}-{model}.json
 
     Args:
-        results: List of job results with pass1/pass2/pass3 data
-        test_type: Type of test (pass1, pass2, pass3, compare)
-        metadata: Optional metadata dict (data_source, partition, etc.)
+        job: Job dictionary with job_posting_id
+        pass_name: Pass name (pass1, pass2, pass3)
+        model_id: Model ID used for this pass
+        result: Result data to save
+        base_dir: Base directory for output (default: script's parent/data/local)
 
     Returns:
         Path to saved file or None if failed
     """
     try:
-        # Create data directory if it doesn't exist
-        data_dir = Path(__file__).parent.parent.parent / "data" / "local"
-        data_dir.mkdir(parents=True, exist_ok=True)
+        # Get job ID
+        job_id = get_job_id(job)
 
-        # Generate filename with timestamp
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        filename = f"enrichment_results_{test_type}_{timestamp}.json"
-        filepath = data_dir / filename
+        # Create job directory
+        if base_dir is None:
+            base_dir = Path(__file__).parent.parent.parent / "data" / "local"
+        job_dir = base_dir / job_id
+        job_dir.mkdir(parents=True, exist_ok=True)
+
+        # Clean model ID for filename (replace special chars)
+        model_clean = model_id.replace(':', '-').replace('/', '-').replace('.', '-')
+
+        # Generate filename: {pass}-{model}.json
+        filename = f"{pass_name}-{model_clean}.json"
+        filepath = job_dir / filename
 
         # Build output structure
         output = {
             "metadata": {
                 "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-                "test_type": test_type,
-                "jobs_processed": len(results),
+                "job_posting_id": job.get("job_posting_id"),
+                "job_title": job.get("job_title"),
+                "company_name": job.get("company_name"),
+                "job_location": job.get("job_location"),
+                "pass_name": pass_name,
+                "model_id": model_id,
             },
-            "jobs": []
+            "result": result,
         }
-
-        # Add optional metadata
-        if metadata:
-            output["metadata"].update(metadata)
-
-        # Process each job result
-        for job_result in results:
-            job_data = {
-                "job_info": {
-                    "job_posting_id": job_result["job"].get("job_posting_id"),
-                    "job_title": job_result["job"].get("job_title"),
-                    "company_name": job_result["job"].get("company_name"),
-                    "job_location": job_result["job"].get("job_location"),
-                }
-            }
-
-            # Add Pass 1 data if available
-            if job_result.get("pass1_result"):
-                pass1 = job_result["pass1_result"]
-                job_data["pass1"] = {
-                    "success": pass1.get("pass1_success", False),
-                    "from_cache": job_result.get("pass1_from_cache", False),
-                    "extraction": {
-                        "skills_classified": {
-                            "must_have_hard_skills": pass1.get("ext_must_have_hard_skills"),
-                            "nice_to_have_hard_skills": pass1.get("ext_nice_to_have_hard_skills"),
-                            "must_have_soft_skills": pass1.get("ext_must_have_soft_skills"),
-                            "nice_to_have_soft_skills": pass1.get("ext_nice_to_have_soft_skills"),
-                            "certifications_mentioned": pass1.get("ext_certifications_mentioned"),
-                            "years_experience_min": pass1.get("ext_years_experience_min"),
-                            "years_experience_max": pass1.get("ext_years_experience_max"),
-                            "years_experience_text": pass1.get("ext_years_experience_text"),
-                            "education_stated": pass1.get("ext_education_stated"),
-                            "llm_genai_mentioned": pass1.get("ext_llm_genai_mentioned"),
-                            "feature_store_mentioned": pass1.get("ext_feature_store_mentioned"),
-                        },
-                        "compensation": {
-                            "salary_disclosed": pass1.get("ext_salary_disclosed"),
-                            "salary_min": pass1.get("ext_salary_min"),
-                            "salary_max": pass1.get("ext_salary_max"),
-                            "salary_currency": pass1.get("ext_salary_currency"),
-                            "salary_period": pass1.get("ext_salary_period"),
-                        },
-                        "work_authorization": {
-                            "visa_sponsorship_stated": pass1.get("ext_visa_sponsorship_stated"),
-                            "security_clearance_stated": pass1.get("ext_security_clearance_stated"),
-                        },
-                        "work_model": {
-                            "work_model_stated": pass1.get("ext_work_model_stated"),
-                            "employment_type_stated": pass1.get("ext_employment_type_stated"),
-                        },
-                    },
-                    "tokens": pass1.get("total_tokens_used", 0),
-                    "cost": pass1.get("total_cost", 0.0),
-                }
-
-            # Add Pass 2 data if available
-            if job_result.get("pass2_result"):
-                job_data["pass2"] = {
-                    "success": job_result.get("pass2_success", False),
-                    "from_cache": job_result.get("pass2_from_cache", False),
-                    "inference": job_result["pass2_result"],
-                    "tokens": job_result.get("pass2_tokens", 0),
-                    "cost": job_result.get("pass2_cost", 0.0),
-                }
-
-            # Add Pass 3 data if available
-            if job_result.get("pass3_result"):
-                job_data["pass3"] = {
-                    "success": job_result.get("pass3_success", False),
-                    "from_cache": job_result.get("pass3_from_cache", False),
-                    "analysis": job_result["pass3_result"].get("analysis", {}),
-                    "summary": job_result["pass3_result"].get("summary", {}),
-                    "tokens": job_result.get("pass3_tokens", 0),
-                    "cost": job_result.get("pass3_cost", 0.0),
-                }
-
-            output["jobs"].append(job_data)
 
         # Save to file
         with open(filepath, 'w', encoding='utf-8') as f:
@@ -210,7 +130,7 @@ def save_results_to_json(
         return str(filepath)
 
     except Exception as e:
-        print(f"\n⚠ Warning: Could not save results to JSON: {e}")
+        print(f"\n⚠ Warning: Could not save {pass_name} result: {e}")
         traceback.print_exc()
         return None
 

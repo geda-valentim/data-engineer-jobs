@@ -145,7 +145,28 @@ def _try_fix_and_parse(text: str) -> Optional[Dict[str, Any]]:
         if cleaned.lower().startswith(prefix.lower()):
             cleaned = cleaned[len(prefix):].strip()
 
-    # Remove XML-like tags that LLMs sometimes add (e.g., <reasoning>...</reasoning>)
+    # Remove "thinking" model output patterns (e.g., <reasoning>...</reasoning>, <think>...</think>)
+    # These models output their reasoning before the actual JSON
+    thinking_patterns = [
+        r'<reasoning>[\s\S]*?</reasoning>\s*',
+        r'<think>[\s\S]*?</think>\s*',
+        r'<thought>[\s\S]*?</thought>\s*',
+        r'<analysis>[\s\S]*?</analysis>\s*',
+    ]
+    for pattern in thinking_patterns:
+        cleaned = re.sub(pattern, '', cleaned, flags=re.IGNORECASE)
+
+    # Handle unclosed thinking tags (response truncated before closing tag)
+    # Remove everything from <reasoning> to the first { if tag is not closed
+    unclosed_thinking_patterns = [
+        r'^<reasoning>[\s\S]*?(?=\{)',
+        r'^<think>[\s\S]*?(?=\{)',
+        r'^<thought>[\s\S]*?(?=\{)',
+    ]
+    for pattern in unclosed_thinking_patterns:
+        cleaned = re.sub(pattern, '', cleaned, flags=re.IGNORECASE)
+
+    # Remove XML-like tags that LLMs sometimes add (e.g., <output>...</output>)
     # Pattern matches: <tag>content</tag> or <tag> at start
     cleaned = re.sub(r'<[^>]+>.*?</[^>]+>\s*', '', cleaned, flags=re.DOTALL)
     cleaned = re.sub(r'^<[^>]+>\s*', '', cleaned)

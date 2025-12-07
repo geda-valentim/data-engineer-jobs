@@ -25,16 +25,50 @@ from enrich_partition.parsers.validators import validate_inference_response, val
 
 # Import helper functions from test_enrichment_helpers
 from test_enrichment_helpers import (
-    get_cache_key,
+    get_job_id,
     load_from_cache,
     save_to_cache,
     load_jobs_from_s3,
-    save_results_to_json,
+    save_pass_result,
     print_comparison_table,
 )
 
+# Model configuration with pricing (per 1M tokens)
+AVAILABLE_MODELS = {
+    "gpt-oss": {
+        "id": "openai.gpt-oss-120b-1:0",
+        "name": "OpenAI GPT-OSS 120B",
+        "input_cost_per_1m": 0.15,
+        "output_cost_per_1m": 0.60,
+    },
+    "minimax-m2": {
+        "id": "minimax.minimax-m2",
+        "name": "MiniMax M2",
+        "input_cost_per_1m": 0.30,
+        "output_cost_per_1m": 1.20,
+    },
+    "qwen3-235b": {
+        "id": "qwen.qwen3-vl-235b-a22b",
+        "name": "Qwen3 235B",
+        "input_cost_per_1m": 0.22,
+        "output_cost_per_1m": 0.88,
+    },
+    "mistral-large": {
+        "id": "mistral.mistral-large-3-675b-instruct",
+        "name": "Mistral Large 675B",
+        "input_cost_per_1m": 2.00,
+        "output_cost_per_1m": 6.00,
+    },
+    "gemma-27b": {
+        "id": "google.gemma-3-27b-it",
+        "name": "Gemma 3 27B",
+        "input_cost_per_1m": 0.23,
+        "output_cost_per_1m": 0.38,
+    },
+}
 
-def test_multiple_jobs_comparison(use_s3: bool = False, date: Optional[str] = None, limit: int = 5, use_cache: bool = False):
+
+def test_multiple_jobs_comparison(use_s3: bool = False, date: Optional[str] = None, limit: int = 5, use_cache: bool = False, save_json: bool = False):
     """Test Pass 1 extraction with multiple real LinkedIn jobs and compare results."""
     print("\n" + "=" * 60)
     print("Testing Pass 1 Extraction - Multiple Jobs Comparison")
@@ -113,7 +147,7 @@ We are unable to consider visa sponsorship or C2C
         print(f"Using model: {model}")
         print(f"Region: {region}")
         if use_cache:
-            print(f"Cache: ENABLED (results will be saved/loaded from .cache/enrichment/)")
+            print(f"Cache: ENABLED (data/local/{{job_id}}/pass1-*.json)")
         print(f"Processing {len(linkedin_jobs)} real LinkedIn jobs...\n")
 
         # Create client once
@@ -124,6 +158,7 @@ We are unable to consider visa sponsorship or C2C
 
         # Process all jobs
         results = []
+        saved_files = []
         cache_hits = 0
         cache_misses = 0
 
@@ -131,18 +166,16 @@ We are unable to consider visa sponsorship or C2C
             print(f"[{i}/{len(linkedin_jobs)}] Processing: {job['job_title']} @ {job['company_name']}...", end=" ")
 
             # Try to load from cache if enabled
-            cached_result = None
             if use_cache:
-                cached_result = load_from_cache(job)
-                if cached_result:
-                    print(f"✓ (from cache)")
+                cached_result = load_from_cache(job, model, "pass1")
+                if cached_result and cached_result.get('pass1_success'):
+                    print("✓ (from cache)")
                     results.append(cached_result)
                     cache_hits += 1
                     continue
                 else:
                     cache_misses += 1
 
-            # Process with LLM if not cached
             try:
                 result = enrich_single_job(job, bedrock_client=client)
                 success = result.get('pass1_success', False)
@@ -150,9 +183,11 @@ We are unable to consider visa sponsorship or C2C
                 print(f"{status}")
                 results.append(result)
 
-                # Save to cache if enabled and successful
-                if use_cache and success:
-                    save_to_cache(job, result)
+                # Save result to ./{job_id}/pass1-{model}.json (also serves as cache)
+                if (save_json or use_cache) and success:
+                    filepath = save_pass_result(job, "pass1", model, result)
+                    if filepath and save_json:
+                        saved_files.append(filepath)
             except Exception as e:
                 print(f"✗ ERROR: {e}")
                 results.append({"pass1_success": False, "enrichment_errors": str(e)})
@@ -162,7 +197,8 @@ We are unable to consider visa sponsorship or C2C
             print(f"\nCache Statistics:")
             print(f"  Cache Hits: {cache_hits}")
             print(f"  Cache Misses: {cache_misses}")
-            print(f"  Cache Hit Rate: {cache_hits/(cache_hits+cache_misses)*100:.1f}%" if (cache_hits+cache_misses) > 0 else "  Cache Hit Rate: N/A")
+            total = cache_hits + cache_misses
+            print(f"  Cache Hit Rate: {cache_hits/total*100:.1f}%" if total > 0 else "  Cache Hit Rate: N/A")
 
         print("\n" + "=" * 120)
         print("RESULTS COMPARISON TABLE")
@@ -203,6 +239,12 @@ We are unable to consider visa sponsorship or C2C
         print(f"  Total Cost: ${total_cost:.6f}")
         print(f"  Average Cost per Job: ${avg_cost:.6f}")
 
+        # Print saved files
+        if save_json and saved_files:
+            print(f"\nSaved Files:")
+            for f in saved_files:
+                print(f"  ✓ {f}")
+
         return successful == len(results)
 
     except Exception as e:
@@ -212,7 +254,7 @@ We are unable to consider visa sponsorship or C2C
 
 
 def test_pass2_inference(use_s3: bool = False, date: Optional[str] = None, limit: int = 5, use_cache: bool = False, save_json: bool = False):
-    """Test Pass 2 inference using Pass 1 results (from cache or fresh execution)."""
+    """Test Pass 2 inference using Pass 1 results (use cache to skip Pass 1 if available)."""
     print("\n" + "=" * 120)
     print("Testing Pass 2 Inference")
     print("=" * 120)
@@ -255,7 +297,7 @@ def test_pass2_inference(use_s3: bool = False, date: Optional[str] = None, limit
         print(f"Using model (Pass 2): {model_pass2}")
         print(f"Region: {region}")
         if use_cache:
-            print(f"Cache: ENABLED (results will be saved/loaded from .cache/enrichment/)")
+            print(f"Cache: ENABLED (data/local/{{job_id}}/pass*-*.json)")
         print(f"Processing {len(linkedin_jobs)} jobs (Pass 1 → Pass 2)...\n")
 
         # Create client once
@@ -266,8 +308,7 @@ def test_pass2_inference(use_s3: bool = False, date: Optional[str] = None, limit
 
         # Track results for all jobs
         all_results = []
-
-        # Track cache statistics for Pass 1 and Pass 2 separately
+        saved_files = []
         pass1_cache_hits = 0
         pass1_cache_misses = 0
         pass2_cache_hits = 0
@@ -279,26 +320,26 @@ def test_pass2_inference(use_s3: bool = False, date: Optional[str] = None, limit
             print(f"{'=' * 120}")
 
             job_result = {"job": job}
+            pass1_from_cache = False
 
             # === PASS 1: Extraction ===
             print(f"\n→ Pass 1 (Extraction)...", end=" ")
 
-            pass1_from_cache = False
+            # Try to load Pass 1 from cache
             if use_cache:
-                cached_data = load_from_cache(job)
-                if cached_data and cached_data.get('pass1_success'):
-                    pass1_result = cached_data
+                cached_pass1 = load_from_cache(job, model_pass1, "pass1")
+                if cached_pass1 and cached_pass1.get('pass1_success'):
+                    pass1_result = cached_pass1
                     print("✓ (from cache)")
                     pass1_from_cache = True
                     pass1_cache_hits += 1
                 else:
                     pass1_cache_misses += 1
-                    pass1_from_cache = False
                     pass1_result = enrich_single_job(job, bedrock_client=client)
                     success = pass1_result.get('pass1_success', False)
                     print("✓" if success else "✗")
-                    if use_cache and success:
-                        save_to_cache(job, pass1_result)
+                    if success:
+                        save_to_cache(job, model_pass1, pass1_result, "pass1")
             else:
                 pass1_result = enrich_single_job(job, bedrock_client=client)
                 success = pass1_result.get('pass1_success', False)
@@ -306,6 +347,12 @@ def test_pass2_inference(use_s3: bool = False, date: Optional[str] = None, limit
 
             job_result["pass1_result"] = pass1_result
             job_result["pass1_from_cache"] = pass1_from_cache
+
+            # Save Pass 1 result if requested
+            if save_json and pass1_result.get('pass1_success') and not pass1_from_cache:
+                filepath = save_pass_result(job, "pass1", model_pass1, pass1_result)
+                if filepath:
+                    saved_files.append(filepath)
 
             if not pass1_result.get('pass1_success'):
                 print("  ⊘ Skipping Pass 2 (Pass 1 failed)")
@@ -316,37 +363,34 @@ def test_pass2_inference(use_s3: bool = False, date: Optional[str] = None, limit
             print(f"→ Pass 2 (Inference)...", end=" ")
 
             pass2_from_cache = False
+            # Try to load Pass 2 from cache
             if use_cache:
-                cached_data = load_from_cache(job)
-                if cached_data and cached_data.get('pass2_success'):
-                    pass2_result_raw = cached_data.get('pass2_result_raw', {})
-                    pass2_tokens = cached_data.get('pass2_tokens', 0)
-                    pass2_input_tokens = cached_data.get('pass2_input_tokens', 0)
-                    pass2_output_tokens = cached_data.get('pass2_output_tokens', 0)
-                    pass2_cost = cached_data.get('pass2_cost', 0.0)
+                cached_pass2 = load_from_cache(job, model_pass2, "pass2")
+                if cached_pass2:
+                    pass2_result_raw = cached_pass2.get('inference', cached_pass2)
+                    pass2_tokens = cached_pass2.get('tokens', 0)
+                    pass2_input_tokens = cached_pass2.get('input_tokens', 0)
+                    pass2_output_tokens = cached_pass2.get('output_tokens', 0)
+                    pass2_cost = cached_pass2.get('cost', 0.0)
                     print("✓ (from cache)")
                     pass2_from_cache = True
                     pass2_cache_hits += 1
                 else:
                     pass2_cache_misses += 1
-                    # Execute Pass 2
                     pass2_result_raw, pass2_tokens, pass2_input_tokens, pass2_output_tokens, pass2_cost = _execute_pass2(
                         client, job, pass1_result
                     )
                     print("✓" if pass2_result_raw else "✗")
-
-                    # Save Pass 2 to cache
-                    if use_cache and pass2_result_raw:
-                        save_to_cache(job, pass1_result, {
-                            "pass2_success": True,
-                            "pass2_result_raw": pass2_result_raw,
-                            "pass2_tokens": pass2_tokens,
-                            "pass2_input_tokens": pass2_input_tokens,
-                            "pass2_output_tokens": pass2_output_tokens,
-                            "pass2_cost": pass2_cost,
-                        })
+                    if pass2_result_raw:
+                        pass2_data = {
+                            "inference": pass2_result_raw,
+                            "tokens": pass2_tokens,
+                            "input_tokens": pass2_input_tokens,
+                            "output_tokens": pass2_output_tokens,
+                            "cost": pass2_cost,
+                        }
+                        save_to_cache(job, model_pass2, pass2_data, "pass2")
             else:
-                # Execute Pass 2
                 pass2_result_raw, pass2_tokens, pass2_input_tokens, pass2_output_tokens, pass2_cost = _execute_pass2(
                     client, job, pass1_result
                 )
@@ -360,6 +404,19 @@ def test_pass2_inference(use_s3: bool = False, date: Optional[str] = None, limit
             job_result["pass2_output_tokens"] = pass2_output_tokens
             job_result["pass2_cost"] = pass2_cost
 
+            # Save Pass 2 result if requested
+            if save_json and pass2_result_raw and not pass2_from_cache:
+                pass2_data = {
+                    "inference": pass2_result_raw,
+                    "tokens": pass2_tokens,
+                    "input_tokens": pass2_input_tokens,
+                    "output_tokens": pass2_output_tokens,
+                    "cost": pass2_cost,
+                }
+                filepath = save_pass_result(job, "pass2", model_pass2, pass2_data)
+                if filepath:
+                    saved_files.append(filepath)
+
             # Display Pass 2 results
             if pass2_result_raw:
                 _display_pass2_results(pass2_result_raw)
@@ -371,18 +428,8 @@ def test_pass2_inference(use_s3: bool = False, date: Optional[str] = None, limit
             print(f"\n{'=' * 120}")
             print("CACHE STATISTICS")
             print(f"{'=' * 120}")
-
-            print(f"\nPass 1 Cache Statistics:")
-            print(f"  Cache Hits: {pass1_cache_hits}")
-            print(f"  Cache Misses: {pass1_cache_misses}")
-            total_p1 = pass1_cache_hits + pass1_cache_misses
-            print(f"  Cache Hit Rate: {pass1_cache_hits/total_p1*100:.1f}%" if total_p1 > 0 else "  Cache Hit Rate: N/A")
-
-            print(f"\nPass 2 Cache Statistics:")
-            print(f"  Cache Hits: {pass2_cache_hits}")
-            print(f"  Cache Misses: {pass2_cache_misses}")
-            total_p2 = pass2_cache_hits + pass2_cache_misses
-            print(f"  Cache Hit Rate: {pass2_cache_hits/total_p2*100:.1f}%" if total_p2 > 0 else "  Cache Hit Rate: N/A")
+            print(f"\nPass 1: {pass1_cache_hits} hits, {pass1_cache_misses} misses")
+            print(f"Pass 2: {pass2_cache_hits} hits, {pass2_cache_misses} misses")
 
         # Print summary
         print(f"\n{'=' * 120}")
@@ -417,21 +464,11 @@ def test_pass2_inference(use_s3: bool = False, date: Optional[str] = None, limit
         print(f"  Total Cost: ${total_pass2_cost:.6f}")
         print(f"  Average Cost per Job: ${total_pass2_cost/len(all_results):.6f}" if all_results else "  Average Cost per Job: $0.000000")
 
-        # Save to JSON if requested
-        if save_json:
-            print(f"\n{'=' * 120}")
-            metadata = {
-                "data_source": "s3" if use_s3 else "local_mocks",
-                "cache_enabled": use_cache,
-            }
-            if use_s3 and partition_info:
-                metadata["partition"] = partition_info
-
-            filepath = save_results_to_json(all_results, "pass2", metadata)
-            if filepath:
-                print(f"✓ Results saved to: {filepath}")
-            else:
-                print(f"✗ Failed to save results to JSON")
+        # Print saved files
+        if save_json and saved_files:
+            print(f"\nSaved Files:")
+            for f in saved_files:
+                print(f"  ✓ {f}")
 
         return pass2_success == len(all_results)
 
@@ -442,7 +479,7 @@ def test_pass2_inference(use_s3: bool = False, date: Optional[str] = None, limit
 
 
 def test_pass3_analysis(use_s3: bool = False, date: Optional[str] = None, limit: int = 5, use_cache: bool = False, save_json: bool = False):
-    """Test Pass 3 complex analysis using Pass 1 + Pass 2 results (from cache or fresh execution)."""
+    """Test Pass 3 complex analysis using Pass 1 + Pass 2 results (use cache to skip previous passes if available)."""
     print("\n" + "=" * 120)
     print("Testing Pass 3 Complex Analysis")
     print("=" * 120)
@@ -487,7 +524,7 @@ def test_pass3_analysis(use_s3: bool = False, date: Optional[str] = None, limit:
         print(f"Using model (Pass 3): {model_pass3}")
         print(f"Region: {region}")
         if use_cache:
-            print(f"Cache: ENABLED (results will be saved/loaded from .cache/enrichment/)")
+            print(f"Cache: ENABLED (data/local/{{job_id}}/pass*-*.json)")
         print(f"Processing {len(linkedin_jobs)} jobs (Pass 1 → Pass 2 → Pass 3)...\n")
 
         # Create client once
@@ -498,8 +535,7 @@ def test_pass3_analysis(use_s3: bool = False, date: Optional[str] = None, limit:
 
         # Track results for all jobs
         all_results = []
-
-        # Track cache statistics for all passes
+        saved_files = []
         pass1_cache_hits = 0
         pass1_cache_misses = 0
         pass2_cache_hits = 0
@@ -513,26 +549,27 @@ def test_pass3_analysis(use_s3: bool = False, date: Optional[str] = None, limit:
             print(f"{'=' * 120}")
 
             job_result = {"job": job}
+            pass1_from_cache = False
+            pass2_from_cache = False
+            pass3_from_cache = False
 
             # === PASS 1: Extraction ===
             print(f"\n→ Pass 1 (Extraction)...", end=" ")
 
-            pass1_from_cache = False
             if use_cache:
-                cached_data = load_from_cache(job)
-                if cached_data and cached_data.get('pass1_success'):
-                    pass1_result = cached_data
+                cached_pass1 = load_from_cache(job, model_pass1, "pass1")
+                if cached_pass1 and cached_pass1.get('pass1_success'):
+                    pass1_result = cached_pass1
                     print("✓ (from cache)")
                     pass1_from_cache = True
                     pass1_cache_hits += 1
                 else:
                     pass1_cache_misses += 1
-                    pass1_from_cache = False
                     pass1_result = enrich_single_job(job, bedrock_client=client)
                     success = pass1_result.get('pass1_success', False)
                     print("✓" if success else "✗")
-                    if use_cache and success:
-                        save_to_cache(job, pass1_result)
+                    if success:
+                        save_to_cache(job, model_pass1, pass1_result, "pass1")
             else:
                 pass1_result = enrich_single_job(job, bedrock_client=client)
                 success = pass1_result.get('pass1_success', False)
@@ -540,6 +577,11 @@ def test_pass3_analysis(use_s3: bool = False, date: Optional[str] = None, limit:
 
             job_result["pass1_result"] = pass1_result
             job_result["pass1_from_cache"] = pass1_from_cache
+
+            if save_json and pass1_result.get('pass1_success') and not pass1_from_cache:
+                filepath = save_pass_result(job, "pass1", model_pass1, pass1_result)
+                if filepath:
+                    saved_files.append(filepath)
 
             if not pass1_result.get('pass1_success'):
                 print("  ⊘ Skipping Pass 2 and Pass 3 (Pass 1 failed)")
@@ -549,38 +591,33 @@ def test_pass3_analysis(use_s3: bool = False, date: Optional[str] = None, limit:
             # === PASS 2: Inference ===
             print(f"→ Pass 2 (Inference)...", end=" ")
 
-            pass2_from_cache = False
             if use_cache:
-                cached_data = load_from_cache(job)
-                if cached_data and cached_data.get('pass2_success'):
-                    pass2_result_raw = cached_data.get('pass2_result_raw', {})
-                    pass2_tokens = cached_data.get('pass2_tokens', 0)
-                    pass2_input_tokens = cached_data.get('pass2_input_tokens', 0)
-                    pass2_output_tokens = cached_data.get('pass2_output_tokens', 0)
-                    pass2_cost = cached_data.get('pass2_cost', 0.0)
+                cached_pass2 = load_from_cache(job, model_pass2, "pass2")
+                if cached_pass2:
+                    pass2_result_raw = cached_pass2.get('inference', cached_pass2)
+                    pass2_tokens = cached_pass2.get('tokens', 0)
+                    pass2_input_tokens = cached_pass2.get('input_tokens', 0)
+                    pass2_output_tokens = cached_pass2.get('output_tokens', 0)
+                    pass2_cost = cached_pass2.get('cost', 0.0)
                     print("✓ (from cache)")
                     pass2_from_cache = True
                     pass2_cache_hits += 1
                 else:
                     pass2_cache_misses += 1
-                    # Execute Pass 2
                     pass2_result_raw, pass2_tokens, pass2_input_tokens, pass2_output_tokens, pass2_cost = _execute_pass2(
                         client, job, pass1_result
                     )
                     print("✓" if pass2_result_raw else "✗")
-
-                    # Save Pass 2 to cache
-                    if use_cache and pass2_result_raw:
-                        save_to_cache(job, pass1_result, {
-                            "pass2_success": True,
-                            "pass2_result_raw": pass2_result_raw,
-                            "pass2_tokens": pass2_tokens,
-                            "pass2_input_tokens": pass2_input_tokens,
-                            "pass2_output_tokens": pass2_output_tokens,
-                            "pass2_cost": pass2_cost,
-                        })
+                    if pass2_result_raw:
+                        pass2_data = {
+                            "inference": pass2_result_raw,
+                            "tokens": pass2_tokens,
+                            "input_tokens": pass2_input_tokens,
+                            "output_tokens": pass2_output_tokens,
+                            "cost": pass2_cost,
+                        }
+                        save_to_cache(job, model_pass2, pass2_data, "pass2")
             else:
-                # Execute Pass 2
                 pass2_result_raw, pass2_tokens, pass2_input_tokens, pass2_output_tokens, pass2_cost = _execute_pass2(
                     client, job, pass1_result
                 )
@@ -594,6 +631,18 @@ def test_pass3_analysis(use_s3: bool = False, date: Optional[str] = None, limit:
             job_result["pass2_output_tokens"] = pass2_output_tokens
             job_result["pass2_cost"] = pass2_cost
 
+            if save_json and pass2_result_raw and not pass2_from_cache:
+                pass2_data = {
+                    "inference": pass2_result_raw,
+                    "tokens": pass2_tokens,
+                    "input_tokens": pass2_input_tokens,
+                    "output_tokens": pass2_output_tokens,
+                    "cost": pass2_cost,
+                }
+                filepath = save_pass_result(job, "pass2", model_pass2, pass2_data)
+                if filepath:
+                    saved_files.append(filepath)
+
             if not pass2_result_raw:
                 print("  ⊘ Skipping Pass 3 (Pass 2 failed)")
                 all_results.append(job_result)
@@ -602,46 +651,35 @@ def test_pass3_analysis(use_s3: bool = False, date: Optional[str] = None, limit:
             # === PASS 3: Complex Analysis ===
             print(f"→ Pass 3 (Analysis)...", end=" ")
 
-            pass3_from_cache = False
             if use_cache:
-                cached_data = load_from_cache(job)
-                if cached_data and cached_data.get('pass3_success'):
-                    pass3_analysis_raw = cached_data.get('pass3_analysis_raw', {})
-                    pass3_summary_raw = cached_data.get('pass3_summary_raw', {})
-                    pass3_tokens = cached_data.get('pass3_tokens', 0)
-                    pass3_input_tokens = cached_data.get('pass3_input_tokens', 0)
-                    pass3_output_tokens = cached_data.get('pass3_output_tokens', 0)
-                    pass3_cost = cached_data.get('pass3_cost', 0.0)
+                cached_pass3 = load_from_cache(job, model_pass3, "pass3")
+                if cached_pass3:
+                    pass3_analysis_raw = cached_pass3.get('analysis', {})
+                    pass3_summary_raw = cached_pass3.get('summary', {})
+                    pass3_tokens = cached_pass3.get('tokens', 0)
+                    pass3_input_tokens = cached_pass3.get('input_tokens', 0)
+                    pass3_output_tokens = cached_pass3.get('output_tokens', 0)
+                    pass3_cost = cached_pass3.get('cost', 0.0)
                     print("✓ (from cache)")
                     pass3_from_cache = True
                     pass3_cache_hits += 1
                 else:
                     pass3_cache_misses += 1
-                    # Execute Pass 3
                     pass3_analysis_raw, pass3_summary_raw, pass3_tokens, pass3_input_tokens, pass3_output_tokens, pass3_cost = _execute_pass3(
                         client, job, pass1_result, pass2_result_raw
                     )
                     print("✓" if pass3_analysis_raw else "✗")
-
-                    # Save Pass 3 to cache
-                    if use_cache and pass3_analysis_raw:
-                        save_to_cache(job, pass1_result, {
-                            "pass2_success": True,
-                            "pass2_result_raw": pass2_result_raw,
-                            "pass2_tokens": pass2_tokens,
-                            "pass2_input_tokens": pass2_input_tokens,
-                            "pass2_output_tokens": pass2_output_tokens,
-                            "pass2_cost": pass2_cost,
-                            "pass3_success": True,
-                            "pass3_analysis_raw": pass3_analysis_raw,
-                            "pass3_summary_raw": pass3_summary_raw,
-                            "pass3_tokens": pass3_tokens,
-                            "pass3_input_tokens": pass3_input_tokens,
-                            "pass3_output_tokens": pass3_output_tokens,
-                            "pass3_cost": pass3_cost,
-                        })
+                    if pass3_analysis_raw:
+                        pass3_data = {
+                            "analysis": pass3_analysis_raw,
+                            "summary": pass3_summary_raw,
+                            "tokens": pass3_tokens,
+                            "input_tokens": pass3_input_tokens,
+                            "output_tokens": pass3_output_tokens,
+                            "cost": pass3_cost,
+                        }
+                        save_to_cache(job, model_pass3, pass3_data, "pass3")
             else:
-                # Execute Pass 3
                 pass3_analysis_raw, pass3_summary_raw, pass3_tokens, pass3_input_tokens, pass3_output_tokens, pass3_cost = _execute_pass3(
                     client, job, pass1_result, pass2_result_raw
                 )
@@ -658,6 +696,19 @@ def test_pass3_analysis(use_s3: bool = False, date: Optional[str] = None, limit:
             job_result["pass3_output_tokens"] = pass3_output_tokens
             job_result["pass3_cost"] = pass3_cost
 
+            if save_json and pass3_analysis_raw and not pass3_from_cache:
+                pass3_data = {
+                    "analysis": pass3_analysis_raw,
+                    "summary": pass3_summary_raw,
+                    "tokens": pass3_tokens,
+                    "input_tokens": pass3_input_tokens,
+                    "output_tokens": pass3_output_tokens,
+                    "cost": pass3_cost,
+                }
+                filepath = save_pass_result(job, "pass3", model_pass3, pass3_data)
+                if filepath:
+                    saved_files.append(filepath)
+
             # Display Pass 3 results
             if pass3_analysis_raw:
                 _display_pass3_results(pass3_analysis_raw, pass3_summary_raw)
@@ -669,24 +720,9 @@ def test_pass3_analysis(use_s3: bool = False, date: Optional[str] = None, limit:
             print(f"\n{'=' * 120}")
             print("CACHE STATISTICS")
             print(f"{'=' * 120}")
-
-            print(f"\nPass 1 Cache Statistics:")
-            print(f"  Cache Hits: {pass1_cache_hits}")
-            print(f"  Cache Misses: {pass1_cache_misses}")
-            total_p1 = pass1_cache_hits + pass1_cache_misses
-            print(f"  Cache Hit Rate: {pass1_cache_hits/total_p1*100:.1f}%" if total_p1 > 0 else "  Cache Hit Rate: N/A")
-
-            print(f"\nPass 2 Cache Statistics:")
-            print(f"  Cache Hits: {pass2_cache_hits}")
-            print(f"  Cache Misses: {pass2_cache_misses}")
-            total_p2 = pass2_cache_hits + pass2_cache_misses
-            print(f"  Cache Hit Rate: {pass2_cache_hits/total_p2*100:.1f}%" if total_p2 > 0 else "  Cache Hit Rate: N/A")
-
-            print(f"\nPass 3 Cache Statistics:")
-            print(f"  Cache Hits: {pass3_cache_hits}")
-            print(f"  Cache Misses: {pass3_cache_misses}")
-            total_p3 = pass3_cache_hits + pass3_cache_misses
-            print(f"  Cache Hit Rate: {pass3_cache_hits/total_p3*100:.1f}%" if total_p3 > 0 else "  Cache Hit Rate: N/A")
+            print(f"\nPass 1: {pass1_cache_hits} hits, {pass1_cache_misses} misses")
+            print(f"Pass 2: {pass2_cache_hits} hits, {pass2_cache_misses} misses")
+            print(f"Pass 3: {pass3_cache_hits} hits, {pass3_cache_misses} misses")
 
         # Print summary
         print(f"\n{'=' * 120}")
@@ -723,21 +759,11 @@ def test_pass3_analysis(use_s3: bool = False, date: Optional[str] = None, limit:
         print(f"  Total Cost: ${total_pass3_cost:.6f}")
         print(f"  Average Cost per Job: ${total_pass3_cost/len(all_results):.6f}" if all_results else "  Average Cost per Job: $0.000000")
 
-        # Save to JSON if requested
-        if save_json:
-            print(f"\n{'=' * 120}")
-            metadata = {
-                "data_source": "s3" if use_s3 else "local_mocks",
-                "cache_enabled": use_cache,
-            }
-            if use_s3 and partition_info:
-                metadata["partition"] = partition_info
-
-            filepath = save_results_to_json(all_results, "pass3", metadata)
-            if filepath:
-                print(f"✓ Results saved to: {filepath}")
-            else:
-                print(f"✗ Failed to save results to JSON")
+        # Print saved files
+        if save_json and saved_files:
+            print(f"\nSaved Files:")
+            for f in saved_files:
+                print(f"  ✓ {f}")
 
         return pass3_success == len(all_results)
 
@@ -903,4 +929,173 @@ def _display_pass3_results(analysis: Dict[str, Any], summary: Dict[str, Any]):
     if summary.get('recommendation_score') is not None:
         rec_score = summary.get('recommendation_score', 0.0)
         rec_conf = summary.get('recommendation_confidence', 0.0)
-        print(f"⭐ Recommendation Score: {rec_score:.2f} (confidence: {rec_conf:.2f})")
+        # Handle dict case (nested value key)
+        if isinstance(rec_score, dict):
+            rec_score = rec_score.get('value', rec_score.get('score', 0.0))
+        if isinstance(rec_conf, dict):
+            rec_conf = rec_conf.get('value', rec_conf.get('confidence', 0.0))
+        # Ensure numeric values
+        try:
+            rec_score = float(rec_score) if rec_score is not None else 0.0
+            rec_conf = float(rec_conf) if rec_conf is not None else 0.0
+            print(f"⭐ Recommendation Score: {rec_score:.2f} (confidence: {rec_conf:.2f})")
+        except (TypeError, ValueError):
+            print(f"⭐ Recommendation Score: {rec_score} (confidence: {rec_conf})")
+
+
+# ============================================================================
+# Multiple Models Comparison
+# ============================================================================
+
+def test_multiple_models(
+    use_s3: bool = False,
+    date: Optional[str] = None,
+    limit: int = 5,
+    save_json: bool = True,
+    models: Optional[List[str]] = None,
+    pass_type: str = "pass1",
+    use_cache: bool = False
+):
+    """
+    Test extraction/inference across multiple models and compare results.
+    Reuses existing test functions by temporarily overriding env vars.
+
+    Args:
+        use_s3: Use jobs from S3 bucket
+        date: Partition date (YYYY-MM-DD)
+        limit: Number of jobs to process
+        save_json: Save results to data/local/{job_id}/{pass}-{model}.json
+        models: List of model keys to test (default: all available)
+        pass_type: Which pass to test (pass1, pass2, pass3)
+        use_cache: Enable caching of results
+    """
+    print("\n" + "=" * 120)
+    print(f"Testing Multiple Models - {pass_type.upper()}")
+    print("=" * 120)
+
+    # Determine which models to test
+    if models:
+        test_models = {k: v for k, v in AVAILABLE_MODELS.items() if k in models}
+        invalid = [m for m in models if m not in AVAILABLE_MODELS]
+        if invalid:
+            print(f"Warning: Unknown models ignored: {invalid}")
+    else:
+        test_models = AVAILABLE_MODELS
+
+    if not test_models:
+        print("Error: No valid models to test")
+        print(f"Available models: {list(AVAILABLE_MODELS.keys())}")
+        return False
+
+    print(f"\nModels to test ({len(test_models)}):")
+    for key, model in test_models.items():
+        print(f"  • {key}: {model['name']} ({model['id']})")
+        print(f"    Cost: ${model['input_cost_per_1m']}/1M input, ${model['output_cost_per_1m']}/1M output")
+
+    # Save original env vars
+    original_pass1 = os.getenv("BEDROCK_MODEL_PASS1")
+    original_pass2 = os.getenv("BEDROCK_MODEL_PASS2")
+    original_pass3 = os.getenv("BEDROCK_MODEL_PASS3")
+
+    model_results = {}
+
+    try:
+        # Run test for each model
+        for model_key, model_config in test_models.items():
+            model_id = model_config['id']
+            model_name = model_config['name']
+
+            print(f"\n{'=' * 120}")
+            print(f"MODEL: {model_name} ({model_id})")
+            print(f"{'=' * 120}")
+
+            # Override env vars for this model
+            os.environ["BEDROCK_MODEL_PASS1"] = model_id
+            os.environ["BEDROCK_MODEL_PASS2"] = model_id
+            os.environ["BEDROCK_MODEL_PASS3"] = model_id
+
+            # Call existing test function based on pass_type
+            try:
+                if pass_type == "pass1":
+                    success = test_multiple_jobs_comparison(
+                        use_s3=use_s3,
+                        date=date,
+                        limit=limit,
+                        use_cache=use_cache,
+                        save_json=save_json
+                    )
+                elif pass_type == "pass2":
+                    success = test_pass2_inference(
+                        use_s3=use_s3,
+                        date=date,
+                        limit=limit,
+                        use_cache=use_cache,
+                        save_json=save_json
+                    )
+                elif pass_type == "pass3":
+                    success = test_pass3_analysis(
+                        use_s3=use_s3,
+                        date=date,
+                        limit=limit,
+                        use_cache=use_cache,
+                        save_json=save_json
+                    )
+                else:
+                    print(f"Unknown pass type: {pass_type}")
+                    success = False
+
+                model_results[model_key] = {
+                    "name": model_name,
+                    "model_id": model_id,
+                    "success": success,
+                    "input_cost_per_1m": model_config['input_cost_per_1m'],
+                    "output_cost_per_1m": model_config['output_cost_per_1m'],
+                }
+
+            except Exception as e:
+                print(f"ERROR testing {model_name}: {e}")
+                traceback.print_exc()
+                model_results[model_key] = {
+                    "name": model_name,
+                    "model_id": model_id,
+                    "success": False,
+                    "error": str(e),
+                }
+
+    finally:
+        # Restore original env vars
+        if original_pass1:
+            os.environ["BEDROCK_MODEL_PASS1"] = original_pass1
+        elif "BEDROCK_MODEL_PASS1" in os.environ:
+            del os.environ["BEDROCK_MODEL_PASS1"]
+
+        if original_pass2:
+            os.environ["BEDROCK_MODEL_PASS2"] = original_pass2
+        elif "BEDROCK_MODEL_PASS2" in os.environ:
+            del os.environ["BEDROCK_MODEL_PASS2"]
+
+        if original_pass3:
+            os.environ["BEDROCK_MODEL_PASS3"] = original_pass3
+        elif "BEDROCK_MODEL_PASS3" in os.environ:
+            del os.environ["BEDROCK_MODEL_PASS3"]
+
+    # Print summary
+    print(f"\n{'=' * 120}")
+    print("MULTIPLE MODELS - FINAL SUMMARY")
+    print(f"{'=' * 120}")
+
+    print(f"\n{'Model':<30} | {'Status':<10} | {'Input $/1M':<12} | {'Output $/1M':<12}")
+    print("-" * 70)
+
+    for model_key, result in model_results.items():
+        status = "✓ OK" if result.get('success') else "✗ FAIL"
+        if 'error' in result:
+            status = "✗ ERROR"
+        input_cost = f"${result.get('input_cost_per_1m', 0):.2f}"
+        output_cost = f"${result.get('output_cost_per_1m', 0):.2f}"
+        print(f"{result['name'][:29]:<30} | {status:<10} | {input_cost:<12} | {output_cost:<12}")
+
+    print(f"\nResults saved to: data/local/{{job_id}}/{pass_type}-{{model}}.json")
+    print("Compare results by inspecting the JSON files for each model.")
+
+    return all(r.get('success', False) for r in model_results.values())

@@ -4,12 +4,20 @@ Local test script for AI Enrichment pipeline.
 Tests Bedrock connectivity and S3 access.
 
 Usage:
-    python scripts/test_enrichment_local.py
-    python scripts/test_enrichment_local.py --bedrock-only
-    python scripts/test_enrichment_local.py --s3-only
-    python scripts/test_enrichment_local.py --compare --s3-source --cache
-    python scripts/test_enrichment_local.py --pass2 --cache --save-json
-    python scripts/test_enrichment_local.py --pass3 --s3-source --date=2025-12-05 --limit=5 --cache --save-json
+    python scripts/ai-enrichment/test_enrichment_local.py
+    python scripts/ai-enrichment/test_enrichment_local.py --bedrock-only
+    python scripts/ai-enrichment/test_enrichment_local.py --s3-only
+    python scripts/ai-enrichment/test_enrichment_local.py --compare --s3-source --cache --save-json
+    python scripts/ai-enrichment/test_enrichment_local.py --pass2 --cache --save-json
+    python scripts/ai-enrichment/test_enrichment_local.py --pass3 --s3-source --date=2025-12-05 --limit=5 --cache --save-json
+
+Multiple Models Comparison:
+    python scripts/ai-enrichment/test_enrichment_local.py --multiple-models --s3-source --date=2025-12-05 --limit=3
+    python scripts/ai-enrichment/test_enrichment_local.py --multiple-models --models=gpt-oss,kimi-k2,deepseek-r1 --s3-source --limit=5
+    python scripts/ai-enrichment/test_enrichment_local.py --multiple-models --pass-type=pass2 --models=gpt-oss,minimax-m2 --s3-source --limit=3
+
+Available models:
+    gpt-oss, kimi-k2, deepseek-r1, minimax-m2, qwen3-235b, mistral-large, gemma-27b, llama4-maverick
 """
 
 import os
@@ -32,6 +40,8 @@ from test_enrichment_passes import (
     test_multiple_jobs_comparison,
     test_pass2_inference,
     test_pass3_analysis,
+    test_multiple_models,
+    AVAILABLE_MODELS,
 )
 
 load_dotenv()
@@ -313,14 +323,17 @@ def main():
     parser.add_argument("--bedrock-only", action="store_true", help="Only test Bedrock connectivity")
     parser.add_argument("--s3-only", action="store_true", help="Only test S3 access")
     parser.add_argument("--pass1", action="store_true", help="Test Pass 1 extraction with sample job")
-    parser.add_argument("--pass2", action="store_true", help="Test Pass 2 inference using Pass 1 results (use --cache to load Pass 1 from cache)")
-    parser.add_argument("--pass3", action="store_true", help="Test Pass 3 complex analysis using Pass 1 + Pass 2 results (use --cache to load from cache)")
+    parser.add_argument("--pass2", action="store_true", help="Test Pass 2 inference using Pass 1 results")
+    parser.add_argument("--pass3", action="store_true", help="Test Pass 3 complex analysis using Pass 1 + Pass 2 results")
     parser.add_argument("--compare", action="store_true", help="Test Pass 1 with multiple real LinkedIn jobs and compare")
     parser.add_argument("--s3-source", action="store_true", help="Use real jobs from S3 bucket instead of mocks (requires --compare, --pass2, or --pass3)")
     parser.add_argument("--date", type=str, help="Partition date in YYYY-MM-DD format (uses latest hour of that day). Defaults to most recent partition if not specified. Requires --s3-source.")
     parser.add_argument("--limit", type=int, default=5, help="Number of jobs to process (default: 5). Used with --s3-source.")
-    parser.add_argument("--cache", action="store_true", help="Enable caching of Pass 1, Pass 2, and Pass 3 results (saves cost during testing)")
-    parser.add_argument("--save-json", action="store_true", help="Save complete results to JSON file in data/local/ folder")
+    parser.add_argument("--cache", action="store_true", help="Enable caching of Pass 1/2/3 results to data/local/{job_id}/ (saves cost during testing)")
+    parser.add_argument("--save-json", action="store_true", help="Save results to data/local/{job_id}/{pass}-{model}.json")
+    parser.add_argument("--multiple-models", action="store_true", help="Test across multiple models and compare results")
+    parser.add_argument("--models", type=str, help=f"Comma-separated list of models to test. Available: {','.join(AVAILABLE_MODELS.keys())}")
+    parser.add_argument("--pass-type", type=str, default="pass1", choices=["pass1", "pass2", "pass3"], help="Which pass to test with --multiple-models (default: pass1)")
     args = parser.parse_args()
 
     # Show full help if requested
@@ -339,13 +352,33 @@ def main():
 
     results = []
 
+    # Infer pass_type from --pass2 or --pass3 flags if not explicitly set
+    pass_type = args.pass_type
+    if args.pass2 and pass_type == "pass1":
+        pass_type = "pass2"
+    elif args.pass3 and pass_type == "pass1":
+        pass_type = "pass3"
+
+    # If --multiple-models is specified, test across multiple models
+    if args.multiple_models:
+        models_list = args.models.split(',') if args.models else None
+        results.append(("Multiple Models Comparison", test_multiple_models(
+            use_s3=args.s3_source,
+            date=args.date,
+            limit=args.limit,
+            save_json=args.save_json or True,  # Always save for comparison
+            models=models_list,
+            pass_type=pass_type,
+            use_cache=args.cache
+        )))
     # If --compare is specified, run multi-job comparison
-    if args.compare:
+    elif args.compare:
         results.append(("Multi-Job Comparison", test_multiple_jobs_comparison(
             use_s3=args.s3_source,
             date=args.date,
             limit=args.limit,
-            use_cache=args.cache
+            use_cache=args.cache,
+            save_json=args.save_json
         )))
     # If --pass2 is specified, test Pass 2 inference
     elif args.pass2:
