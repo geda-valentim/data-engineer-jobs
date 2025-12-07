@@ -126,6 +126,9 @@ def enrich_single_job(job: Dict[str, Any], bedrock_client: Optional[BedrockClien
             pass_name="pass1",
         )
 
+        # Store raw response for debugging
+        result["pass1_raw_response"] = response_text
+
         total_tokens += input_tokens + output_tokens
         total_input_tokens += input_tokens
         total_output_tokens += output_tokens

@@ -60,12 +60,19 @@ class BedrockClient:
         """Get model ID for a specific pass."""
         return self.model_ids.get(pass_name, "openai.gpt-oss-120b-1:0")
 
+    # Default max_tokens per pass (Pass 3 needs more due to large JSON schema)
+    DEFAULT_MAX_TOKENS = {
+        "pass1": 4096,
+        "pass2": 4096,
+        "pass3": 32768,  # Pass 3 has ~500 lines of structured JSON output
+    }
+
     def invoke(
         self,
         prompt: str,
         system: Optional[str] = None,
         pass_name: str = "pass1",
-        max_tokens: int = 4096,
+        max_tokens: Optional[int] = None,
         temperature: float = 0.1,
     ) -> Tuple[str, int, int, float]:
         """
@@ -75,13 +82,16 @@ class BedrockClient:
             prompt: User prompt
             system: System prompt (optional)
             pass_name: Which pass (for model selection)
-            max_tokens: Max output tokens
+            max_tokens: Max output tokens (uses pass-specific default if None)
             temperature: Model temperature (low for structured output)
 
         Returns:
             Tuple of (response_text, input_tokens, output_tokens, cost_usd)
         """
         model_id = self.get_model_id(pass_name)
+        # Use pass-specific default if max_tokens not provided
+        if max_tokens is None:
+            max_tokens = self.DEFAULT_MAX_TOKENS.get(pass_name, 4096)
         body = self._build_request_body(model_id, prompt, system, max_tokens, temperature)
 
         # Retry loop with exponential backoff
@@ -143,6 +153,7 @@ class BedrockClient:
         """Check if model is a 'thinking' model that outputs reasoning by default."""
         # Models that output <reasoning> or similar before the actual response
         thinking_patterns = (
+            "openai.gpt-oss",    # GPT-OSS models output <reasoning> tags
             "kimi-k2-thinking",  # Kimi K2 Thinking
             "deepseek.r1",       # DeepSeek R1
         )

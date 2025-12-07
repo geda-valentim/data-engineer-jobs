@@ -355,41 +355,69 @@ Values: "new_headcount" | "backfill" | "team_expansion" | "new_function" | "not_
 - **team_expansion**: Expanding existing team
 - **new_function**: Building new data function/team
 
-## SUMMARY (Human-readable insights)
+## SUMMARY (Structured + Human-readable insights)
 
-### strengths
-Type: array of strings
+IMPORTANT: For each summary array, provide BOTH:
+1. `*_categories`: Array of enum values from controlled vocabulary (for cross-model consensus)
+2. `*_details`: Array of human-readable descriptions (for context and analysis)
 
-Key positive aspects (3-5 bullet points):
+### strength_categories
+Type: array of enums (REQUIRED)
+Values: ["competitive_compensation", "transparent_salary", "equity_offered", "modern_tech_stack", "cloud_native", "remote_friendly", "hybrid_work", "flexible_schedule", "career_growth_clear", "learning_opportunities", "clear_requirements", "well_defined_role", "strong_benefits", "work_life_balance", "collaborative_culture", "diverse_team", "data_focused_role", "established_company", "startup_energy", "visa_sponsorship"]
+
+Select 2-5 categories that best describe the job's strengths.
+
+### strength_details
+Type: array of strings (REQUIRED)
+Human-readable descriptions of strengths (3-5 bullet points):
 - "Transparent compensation ($180-220k + equity)"
 - "Strong modern data stack (Snowflake, dbt, Airflow)"
-- "Excellent learning culture (budget, conferences)"
 
-### concerns
-Type: array of strings
+### concern_categories
+Type: array of enums (REQUIRED)
+Values: ["vague_requirements", "unclear_responsibilities", "salary_not_disclosed", "below_market_pay", "no_visa_sponsorship", "citizenship_required", "on_call_expected", "overtime_likely", "scope_creep_risk", "jack_of_all_trades", "legacy_technology", "tech_debt_heavy", "high_turnover_signals", "backfill_role", "unclear_reporting", "travel_required", "relocation_required", "limited_growth", "startup_risk", "contract_short_term"]
 
-Potential downsides or risks (2-4 bullet points):
+Select 1-4 categories that best describe concerns about the job.
+
+### concern_details
+Type: array of strings (REQUIRED)
+Human-readable descriptions of concerns (2-4 bullet points):
 - "Immediate start date suggests time pressure"
 - "US work authorization required - no visa sponsorship"
 
-### best_fit_for
-Type: array of strings
+### best_fit_categories
+Type: array of enums (REQUIRED)
+Values: ["senior_data_engineers", "mid_level_engineers", "junior_engineers", "cloud_specialists", "platform_architects", "pipeline_developers", "analytics_engineers", "ml_engineers", "data_generalists", "startup_enthusiasts", "enterprise_experienced", "remote_workers", "career_changers", "leadership_track", "technical_specialists"]
 
-Ideal candidate profiles (2-3 bullet points):
+Select 2-4 candidate profiles this role is best suited for.
+
+### best_fit_details
+Type: array of strings (REQUIRED)
+Human-readable descriptions of ideal candidates (2-3 bullet points):
 - "Senior DEs with 5-8 years wanting streaming/real-time focus"
 - "Engineers seeking tech lead path and mentoring opportunities"
 
-### red_flags_to_probe
-Type: array of strings
+### probe_categories
+Type: array of enums (REQUIRED)
+Values: ["team_size_composition", "reporting_structure", "tech_stack_details", "on_call_expectations", "work_hour_expectations", "remote_policy_details", "career_growth_path", "salary_range_details", "visa_sponsorship_details", "role_scope_boundaries", "tech_debt_situation", "team_turnover_history", "company_financials", "project_timeline", "success_metrics"]
 
-Questions to ask in interview (3-5 questions):
+Select 3-5 topics the candidate should probe during interviews.
+
+### probe_details
+Type: array of strings (REQUIRED)
+Human-readable questions to ask in interview (3-5 questions):
 - "Ask about actual work hours and on-call expectations"
 - "Understand sprint cadence and deadline pressure"
 
-### negotiation_leverage
-Type: array of strings
+### leverage_categories
+Type: array of enums (REQUIRED)
+Values: ["rare_skill_match", "exact_experience_match", "exceeds_requirements", "multiple_competing_offers", "high_market_demand", "domain_expertise", "leadership_experience", "quick_availability", "local_candidate", "referral_connection"]
 
-Points of leverage for salary negotiation (2-3 points):
+Select 1-3 points of negotiation leverage.
+
+### leverage_details
+Type: array of strings (REQUIRED)
+Human-readable negotiation points (2-3 points):
 - "Strong streaming expertise (Kafka) is high-value"
 - "Compliance experience (SOX/PCI) is differentiator"
 
@@ -647,24 +675,29 @@ Return ONLY valid JSON. Start with {{ and end with }}.
     }}
   }},
   "summary": {{
-    "strengths": [
+    "strength_categories": ["transparent_salary", "modern_tech_stack", "learning_opportunities", "well_defined_role"],
+    "strength_details": [
       "Transparent compensation ($180-220k + equity)",
       "Strong modern data stack (Snowflake, dbt, Airflow)",
       "Excellent learning culture (budget, conferences)"
     ],
-    "concerns": [
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship"],
+    "concern_details": [
       "Immediate start date suggests time pressure",
       "US work authorization required - no visa sponsorship"
     ],
-    "best_fit_for": [
+    "best_fit_categories": ["senior_data_engineers", "pipeline_developers", "leadership_track"],
+    "best_fit_details": [
       "Senior DEs with 5-8 years wanting streaming/real-time focus",
       "Engineers seeking tech lead path and mentoring opportunities"
     ],
-    "red_flags_to_probe": [
+    "probe_categories": ["work_hour_expectations", "on_call_expectations", "career_growth_path"],
+    "probe_details": [
       "Ask about actual work hours and on-call expectations",
       "Understand sprint cadence and deadline pressure"
     ],
-    "negotiation_leverage": [
+    "leverage_categories": ["rare_skill_match", "domain_expertise"],
+    "leverage_details": [
       "Strong streaming expertise (Kafka) is high-value",
       "Compliance experience (SOX/PCI) is differentiator"
     ],

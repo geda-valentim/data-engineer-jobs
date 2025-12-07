@@ -30,6 +30,7 @@ from test_enrichment_helpers import (
     save_to_cache,
     load_jobs_from_s3,
     save_pass_result,
+    save_raw_response,
     print_comparison_table,
 )
 
@@ -182,6 +183,11 @@ We are unable to consider visa sponsorship or C2C
                 status = "✓" if success else "✗"
                 print(f"{status}")
                 results.append(result)
+
+                # Save raw response for debugging
+                pass1_raw = result.pop('pass1_raw_response', None)
+                if pass1_raw:
+                    save_raw_response(job, "pass1", model, pass1_raw)
 
                 # Save result to ./{job_id}/pass1-{model}.json (also serves as cache)
                 if (save_json or use_cache) and success:
@@ -377,9 +383,12 @@ def test_pass2_inference(use_s3: bool = False, date: Optional[str] = None, limit
                     pass2_cache_hits += 1
                 else:
                     pass2_cache_misses += 1
-                    pass2_result_raw, pass2_tokens, pass2_input_tokens, pass2_output_tokens, pass2_cost = _execute_pass2(
+                    pass2_result_raw, pass2_tokens, pass2_input_tokens, pass2_output_tokens, pass2_cost, pass2_raw = _execute_pass2(
                         client, job, pass1_result
                     )
+                    # Save raw response for debugging
+                    if pass2_raw:
+                        save_raw_response(job, "pass2", model_pass2, pass2_raw)
                     print("✓" if pass2_result_raw else "✗")
                     if pass2_result_raw:
                         pass2_data = {
@@ -391,9 +400,12 @@ def test_pass2_inference(use_s3: bool = False, date: Optional[str] = None, limit
                         }
                         save_to_cache(job, model_pass2, pass2_data, "pass2")
             else:
-                pass2_result_raw, pass2_tokens, pass2_input_tokens, pass2_output_tokens, pass2_cost = _execute_pass2(
+                pass2_result_raw, pass2_tokens, pass2_input_tokens, pass2_output_tokens, pass2_cost, pass2_raw = _execute_pass2(
                     client, job, pass1_result
                 )
+                # Save raw response for debugging
+                if pass2_raw:
+                    save_raw_response(job, "pass2", model_pass2, pass2_raw)
                 print("✓" if pass2_result_raw else "✗")
 
             job_result["pass2_result"] = pass2_result_raw
@@ -604,9 +616,12 @@ def test_pass3_analysis(use_s3: bool = False, date: Optional[str] = None, limit:
                     pass2_cache_hits += 1
                 else:
                     pass2_cache_misses += 1
-                    pass2_result_raw, pass2_tokens, pass2_input_tokens, pass2_output_tokens, pass2_cost = _execute_pass2(
+                    pass2_result_raw, pass2_tokens, pass2_input_tokens, pass2_output_tokens, pass2_cost, pass2_raw = _execute_pass2(
                         client, job, pass1_result
                     )
+                    # Save raw response for debugging
+                    if pass2_raw:
+                        save_raw_response(job, "pass2", model_pass2, pass2_raw)
                     print("✓" if pass2_result_raw else "✗")
                     if pass2_result_raw:
                         pass2_data = {
@@ -618,9 +633,12 @@ def test_pass3_analysis(use_s3: bool = False, date: Optional[str] = None, limit:
                         }
                         save_to_cache(job, model_pass2, pass2_data, "pass2")
             else:
-                pass2_result_raw, pass2_tokens, pass2_input_tokens, pass2_output_tokens, pass2_cost = _execute_pass2(
+                pass2_result_raw, pass2_tokens, pass2_input_tokens, pass2_output_tokens, pass2_cost, pass2_raw = _execute_pass2(
                     client, job, pass1_result
                 )
+                # Save raw response for debugging
+                if pass2_raw:
+                    save_raw_response(job, "pass2", model_pass2, pass2_raw)
                 print("✓" if pass2_result_raw else "✗")
 
             job_result["pass2_result"] = pass2_result_raw
@@ -665,9 +683,12 @@ def test_pass3_analysis(use_s3: bool = False, date: Optional[str] = None, limit:
                     pass3_cache_hits += 1
                 else:
                     pass3_cache_misses += 1
-                    pass3_analysis_raw, pass3_summary_raw, pass3_tokens, pass3_input_tokens, pass3_output_tokens, pass3_cost = _execute_pass3(
+                    pass3_analysis_raw, pass3_summary_raw, pass3_tokens, pass3_input_tokens, pass3_output_tokens, pass3_cost, pass3_raw = _execute_pass3(
                         client, job, pass1_result, pass2_result_raw
                     )
+                    # Save raw response for debugging
+                    if pass3_raw:
+                        save_raw_response(job, "pass3", model_pass3, pass3_raw)
                     print("✓" if pass3_analysis_raw else "✗")
                     if pass3_analysis_raw:
                         pass3_data = {
@@ -680,9 +701,12 @@ def test_pass3_analysis(use_s3: bool = False, date: Optional[str] = None, limit:
                         }
                         save_to_cache(job, model_pass3, pass3_data, "pass3")
             else:
-                pass3_analysis_raw, pass3_summary_raw, pass3_tokens, pass3_input_tokens, pass3_output_tokens, pass3_cost = _execute_pass3(
+                pass3_analysis_raw, pass3_summary_raw, pass3_tokens, pass3_input_tokens, pass3_output_tokens, pass3_cost, pass3_raw = _execute_pass3(
                     client, job, pass1_result, pass2_result_raw
                 )
+                # Save raw response for debugging
+                if pass3_raw:
+                    save_raw_response(job, "pass3", model_pass3, pass3_raw)
                 print("✓" if pass3_analysis_raw else "✗")
 
             job_result["pass3_result"] = {
@@ -778,7 +802,11 @@ def test_pass3_analysis(use_s3: bool = False, date: Optional[str] = None, limit:
 # ============================================================================
 
 def _execute_pass2(client: BedrockClient, job: Dict[str, Any], pass1_result: Dict[str, Any]) -> tuple:
-    """Execute Pass 2 inference and return results."""
+    """Execute Pass 2 inference and return results.
+
+    Returns:
+        Tuple of (inference_result, total_tokens, input_tokens, output_tokens, cost, raw_response)
+    """
     try:
         # Extract Pass 1 results
         pass1_extraction = {k: v for k, v in pass1_result.items() if k.startswith('ext_')}
@@ -806,7 +834,7 @@ def _execute_pass2(client: BedrockClient, job: Dict[str, Any], pass1_result: Dic
         parsed, parse_error = parse_llm_json(raw_response)
         if not parsed:
             print(f"\n  Error parsing Pass 2 response: {parse_error}")
-            return None, 0, 0, 0, 0.0
+            return None, 0, 0, 0, 0.0, raw_response
 
         # Validate Pass 2 structure
         is_valid, validation_errors = validate_inference_response(parsed)
@@ -816,16 +844,20 @@ def _execute_pass2(client: BedrockClient, job: Dict[str, Any], pass1_result: Dic
         # Extract inference section
         inference_result = parsed.get('inference', {})
 
-        return inference_result, total_tokens, input_tokens, output_tokens, cost
+        return inference_result, total_tokens, input_tokens, output_tokens, cost, raw_response
 
     except Exception as e:
         print(f"\n  Error in Pass 2: {e}")
         traceback.print_exc()
-        return None, 0, 0, 0, 0.0
+        return None, 0, 0, 0, 0.0, None
 
 
 def _execute_pass3(client: BedrockClient, job: Dict[str, Any], pass1_result: Dict[str, Any], pass2_result: Dict[str, Any]) -> tuple:
-    """Execute Pass 3 analysis and return results."""
+    """Execute Pass 3 analysis and return results.
+
+    Returns:
+        Tuple of (analysis_raw, summary_raw, total_tokens, input_tokens, output_tokens, cost, raw_response)
+    """
     try:
         # Extract Pass 1 results
         pass1_extraction = {k: v for k, v in pass1_result.items() if k.startswith('ext_')}
@@ -840,12 +872,11 @@ def _execute_pass3(client: BedrockClient, job: Dict[str, Any], pass1_result: Dic
             pass2_inference=pass2_result
         )
 
-        # Call Bedrock
+        # Call Bedrock (uses DEFAULT_MAX_TOKENS from BedrockClient for pass3)
         raw_response, input_tokens, output_tokens, cost = client.invoke(
             prompt=user_prompt,
             system=system_prompt,
             pass_name="pass3",
-            max_tokens=4096,
             temperature=0.1
         )
         total_tokens = input_tokens + output_tokens
@@ -854,23 +885,27 @@ def _execute_pass3(client: BedrockClient, job: Dict[str, Any], pass1_result: Dic
         parsed, parse_error = parse_llm_json(raw_response)
         if not parsed:
             print(f"\n  Error parsing Pass 3 response: {parse_error}")
-            return None, None, 0, 0, 0, 0.0
+            return None, None, 0, 0, 0, 0.0, raw_response
 
         # Validate Pass 3 structure
         is_valid, validation_errors = validate_analysis_response(parsed)
         if not is_valid:
             print(f"\n  Warning: Validation errors in Pass 3 response: {validation_errors}")
+            # Debug: show what keys are in the parsed response
+            print(f"  Debug: parsed keys = {list(parsed.keys()) if parsed else 'None'}")
+            if "Missing or invalid 'analysis' key" in str(validation_errors):
+                print(f"  Debug: raw_response first 500 chars = {raw_response[:500] if raw_response else 'None'}...")
 
         # Extract analysis and summary
         analysis_raw = parsed.get('analysis', {})
         summary_raw = parsed.get('summary', {})
 
-        return analysis_raw, summary_raw, total_tokens, input_tokens, output_tokens, cost
+        return analysis_raw, summary_raw, total_tokens, input_tokens, output_tokens, cost, raw_response
 
     except Exception as e:
         print(f"\n  Error in Pass 3: {e}")
         traceback.print_exc()
-        return None, None, 0, 0, 0, 0.0
+        return None, None, 0, 0, 0, 0.0, None
 
 
 def _display_pass2_results(pass2_result: Dict[str, Any]):

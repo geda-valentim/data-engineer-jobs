@@ -353,10 +353,29 @@ def validate_analysis_response(data: Optional[Dict[str, Any]]) -> Tuple[bool, Li
     if not isinstance(summary, dict):
         errors.append("Missing or invalid 'summary' section")
     else:
-        for field in ["strengths", "concerns", "best_fit_for", "red_flags_to_probe",
-                     "negotiation_leverage", "overall_assessment", "recommendation_score"]:
+        # v3.4 schema: *_categories + *_details (preferred)
+        # v3.3 schema: strengths, concerns, etc. (legacy)
+        # Accept either format for backward compatibility
+
+        # Required scalar fields (both versions)
+        for field in ["overall_assessment", "recommendation_score"]:
             if field not in summary:
                 errors.append(f"Missing field in summary: {field}")
+
+        # Check for v3.4 OR v3.3 format for each array field
+        array_field_pairs = [
+            ("strength_categories", "strengths"),
+            ("concern_categories", "concerns"),
+            ("best_fit_categories", "best_fit_for"),
+            ("probe_categories", "red_flags_to_probe"),
+            ("leverage_categories", "negotiation_leverage"),
+        ]
+
+        for new_field, old_field in array_field_pairs:
+            has_new = new_field in summary
+            has_old = old_field in summary
+            if not has_new and not has_old:
+                errors.append(f"Missing field in summary: {new_field} or {old_field}")
 
     # Validate confidence scores
     confidence_errors = _validate_confidence_scores(analysis)

@@ -172,16 +172,74 @@ PASS3_FIELDS: Dict[str, Tuple[str, str]] = {
 }
 
 # Summary fields from Pass 3 (not inference objects)
+# v3.4: Split into category arrays (enum, for consensus) and detail arrays (string, for context)
 PASS3_SUMMARY_FIELDS: Dict[str, str] = {
+    # Category arrays (controlled vocabulary - for inter-model consensus)
+    "summary.strength_categories": ARRAY,
+    "summary.concern_categories": ARRAY,
+    "summary.best_fit_categories": ARRAY,
+    "summary.probe_categories": ARRAY,
+    "summary.leverage_categories": ARRAY,
+    # Detail arrays (free text - for human analysis)
+    "summary.strength_details": ARRAY,
+    "summary.concern_details": ARRAY,
+    "summary.best_fit_details": ARRAY,
+    "summary.probe_details": ARRAY,
+    "summary.leverage_details": ARRAY,
+    # Legacy fields (backward compatibility)
     "summary.strengths": ARRAY,
     "summary.concerns": ARRAY,
     "summary.best_fit_for": ARRAY,
     "summary.red_flags_to_probe": ARRAY,
     "summary.negotiation_leverage": ARRAY,
+    # Scalar fields
     "summary.overall_assessment": STRING,
     "summary.recommendation_score": NUMERIC,
     "summary.recommendation_confidence": NUMERIC,
 }
+
+# Valid enum values for summary category fields
+SUMMARY_STRENGTH_CATEGORIES = [
+    "competitive_compensation", "transparent_salary", "equity_offered",
+    "modern_tech_stack", "cloud_native", "remote_friendly", "hybrid_work",
+    "flexible_schedule", "career_growth_clear", "learning_opportunities",
+    "clear_requirements", "well_defined_role", "strong_benefits",
+    "work_life_balance", "collaborative_culture", "diverse_team",
+    "data_focused_role", "established_company", "startup_energy", "visa_sponsorship"
+]
+
+SUMMARY_CONCERN_CATEGORIES = [
+    "vague_requirements", "unclear_responsibilities", "salary_not_disclosed",
+    "below_market_pay", "no_visa_sponsorship", "citizenship_required",
+    "on_call_expected", "overtime_likely", "scope_creep_risk",
+    "jack_of_all_trades", "legacy_technology", "tech_debt_heavy",
+    "high_turnover_signals", "backfill_role", "unclear_reporting",
+    "travel_required", "relocation_required", "limited_growth",
+    "startup_risk", "contract_short_term"
+]
+
+SUMMARY_BEST_FIT_CATEGORIES = [
+    "senior_data_engineers", "mid_level_engineers", "junior_engineers",
+    "cloud_specialists", "platform_architects", "pipeline_developers",
+    "analytics_engineers", "ml_engineers", "data_generalists",
+    "startup_enthusiasts", "enterprise_experienced", "remote_workers",
+    "career_changers", "leadership_track", "technical_specialists"
+]
+
+SUMMARY_PROBE_CATEGORIES = [
+    "team_size_composition", "reporting_structure", "tech_stack_details",
+    "on_call_expectations", "work_hour_expectations", "remote_policy_details",
+    "career_growth_path", "salary_range_details", "visa_sponsorship_details",
+    "role_scope_boundaries", "tech_debt_situation", "team_turnover_history",
+    "company_financials", "project_timeline", "success_metrics"
+]
+
+SUMMARY_LEVERAGE_CATEGORIES = [
+    "rare_skill_match", "exact_experience_match", "exceeds_requirements",
+    "multiple_competing_offers", "high_market_demand", "domain_expertise",
+    "leadership_experience", "quick_availability", "local_candidate",
+    "referral_connection"
+]
 
 
 def get_field_type(field_name: str) -> str:

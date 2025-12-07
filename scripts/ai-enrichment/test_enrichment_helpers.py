@@ -78,6 +78,7 @@ def save_pass_result(
     model_id: str,
     result: Dict[str, Any],
     base_dir: Optional[Path] = None,
+    raw_response: Optional[str] = None,
 ) -> Optional[str]:
     """
     Save a single pass result to ./{job_id}/{pass}-{model}.json
@@ -88,6 +89,7 @@ def save_pass_result(
         model_id: Model ID used for this pass
         result: Result data to save
         base_dir: Base directory for output (default: script's parent/data/local)
+        raw_response: Optional raw LLM response text to include
 
     Returns:
         Path to saved file or None if failed
@@ -123,6 +125,10 @@ def save_pass_result(
             "result": result,
         }
 
+        # Include raw response if provided
+        if raw_response is not None:
+            output["raw_response"] = raw_response
+
         # Save to file
         with open(filepath, 'w', encoding='utf-8') as f:
             json.dump(output, f, indent=2, ensure_ascii=False, default=str)
@@ -132,6 +138,48 @@ def save_pass_result(
     except Exception as e:
         print(f"\n⚠ Warning: Could not save {pass_name} result: {e}")
         traceback.print_exc()
+        return None
+
+
+def save_raw_response(
+    job: Dict[str, Any],
+    pass_name: str,
+    model_id: str,
+    raw_response: str,
+    base_dir: Optional[Path] = None,
+) -> Optional[str]:
+    """
+    Save raw LLM response to ./{job_id}/{pass}-{model}-raw.txt
+
+    Args:
+        job: Job dictionary with job_posting_id
+        pass_name: Pass name (pass1, pass2, pass3)
+        model_id: Model ID used for this pass
+        raw_response: Raw LLM response text
+        base_dir: Base directory for output
+
+    Returns:
+        Path to saved file or None if failed
+    """
+    try:
+        job_id = get_job_id(job)
+
+        if base_dir is None:
+            base_dir = Path(__file__).parent.parent.parent / "data" / "local"
+        job_dir = base_dir / job_id
+        job_dir.mkdir(parents=True, exist_ok=True)
+
+        model_clean = model_id.replace(':', '-').replace('/', '-').replace('.', '-')
+        filename = f"{pass_name}-{model_clean}-raw.txt"
+        filepath = job_dir / filename
+
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(raw_response)
+
+        return str(filepath)
+
+    except Exception as e:
+        print(f"\n⚠ Warning: Could not save raw response: {e}")
         return None
 
 
