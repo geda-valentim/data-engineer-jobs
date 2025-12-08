@@ -1,0 +1,239 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "Mentions MS Fabric and Power BI, which are modern tools, but lacks explicit signals about CI/CD, testing, or governance practices.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Score of 3 aligns with 'defined' maturity level: documented processes and modern tools but inconsistent governance.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.80,
+        "evidence": "Explicit mention of MS Fabric (modern tool) and Power BI for reporting. No other maturity signals like CI/CD, testing, or governance are clearly stated.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.4,
+        "confidence": 0.85,
+        "evidence": "Role combines technical hands-on work (Data Architect) with leadership (mentoring Data Engineer and Data Scientist) and AI exploration, suggesting moderate scope expansion.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.5,
+        "confidence": 0.75,
+        "evidence": "Role is exempt and mentions 'practical AI applications' with third-party partners, which may imply time pressure. However, standard benefits like PTO are mentioned, suggesting some work-life balance.",
+        "source": "combined"
+      },
+      "role_clarity": {
+        "value": "multi_role",
+        "confidence": 0.85,
+        "evidence": "Role is described as a 'player-coach' combining hands-on architecture, team leadership, and AI exploration.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.45,
+        "confidence": 0.80,
+        "evidence": "Moderate scope creep and overtime risk, but role clarity is reasonable and no severe red flags detected.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Job posting does not explicitly state who the role reports to, only mentions 'leading a small team'.",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.5,
+        "evidence": "No explicit mention of reporting structure or manager title in the job posting.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.5,
+        "evidence": "No clear signals about team growth velocity beyond leading a small team.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "small_2_5",
+          "de_count": "1 data engineer",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.75,
+        "evidence": "Mentions leading a small team that includes a Data Engineer and Data Scientist, implying a team size of 2-5.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.6,
+        "evidence": "Job posting does not specify reporting lines beyond leading a team.",
+        "source": "inferred"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions partnering with business leaders and a third-party AI partner, suggesting cross-functional collaboration.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.75,
+        "evidence": "Exempt role may imply time pressure, but PTO is mentioned as a benefit. No explicit signals about work hours or flexibility beyond remote work.",
+        "source": "combined"
+      },
+      "growth_opportunities_score": {
+        "value": 0.6,
+        "confidence": 0.70,
+        "evidence": "Mentions mentoring and leadership opportunities, but lacks explicit signals about learning budgets or career paths.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.6,
+        "confidence": 0.75,
+        "evidence": "Modern tools like MS Fabric and Power BI are mentioned, but no explicit signals about CI/CD, testing, or innovation culture beyond AI exploration.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.6,
+        "evidence": "No explicit mention of open source contributions, tech blogs, conference speaking, or innovation time in the job posting.",
+        "source": "inferred"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.6,
+        "evidence": "No explicit mention of code review, pair programming, TDD, or other dev practices beyond hands-on technical work.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Mentions exploring practical AI applications, which suggests some innovation, but no broader signals like experimentation culture or R&D time.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit mention of tech debt management, refactoring, or code quality improvements in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.85,
+        "evidence": "Mentions partnering with AI teams and exploring practical AI applications, but no advanced MLOps tools or GenAI focus beyond pilots.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.6,
+        "evidence": "No explicit mention of ML tools beyond MS Fabric and Power BI for AI applications. AI exploration is more conceptual at this stage.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit mention of hiring urgency beyond standard full-time role language.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.7,
+        "evidence": "Remote US-wide role with disclosed salary range may attract moderate competition. No signals about application volume or location-based competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.6,
+        "evidence": "No explicit signals about company size, funding, or stage beyond being an Equal Opportunity Employer.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.6,
+        "evidence": "No clear signals about hiring velocity beyond leading a small team.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "small_2_5",
+        "confidence": 0.85,
+        "evidence": "Mentions leading a small team of a Data Engineer and Data Scientist, implying a small team size.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit mention of funding stage or profitability in the job posting.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.75,
+        "evidence": "Role is part of a small team expansion to drive data and AI capabilities.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["transparent_salary", "modern_tech_stack", "leadership_experience", "remote_friendly"],
+    "strength_details": [
+      "Transparent salary range ($140,000 - $170,000) provides clarity for negotiation.",
+      "Modern Microsoft data stack (MS Fabric, Power BI) offers exposure to cutting-edge tools.",
+      "Opportunity to lead a small team and mentor Data Engineers/Data Scientists, ideal for those seeking a 'player-coach' role.",
+      "Fully remote role with no location restrictions within the US, providing flexibility."
+    ],
+    "concern_categories": ["scope_creep_risk", "overtime_likely", "unclear_reporting", "not_mentioned_visa_sponsorship"],
+    "concern_details": [
+      "Role combines hands-on architecture, team leadership, and AI exploration, which may lead to scope creep if not managed well.",
+      "Exempt status and potential time pressure with AI pilots could risk overtime or work-life imbalance.",
+      "Unclear reporting structure (who does the Data Architect report to?) may impact role expectations and career growth.",
+      "No mention of visa sponsorship, which could be a concern for non-US candidates despite the EOE statement."
+    ],
+    "best_fit_categories": ["senior_data_engineers", "data_architects", "leadership_track", "technical_specialists"],
+    "best_fit_details": [
+      "Senior Data Engineers with 5+ years of experience in Microsoft environments (Azure, MS Fabric, Power BI).",
+      "Data Architects seeking a hands-on leadership role with a focus on scalable ERP integrations.",
+      "Candidates interested in a 'player-coach' role combining technical depth with mentorship opportunities."
+    ],
+    "probe_categories": ["role_scope_boundaries", "work_hour_expectations", "reporting_structure", "team_growth_velocity", "ai_ml_integration_details"],
+    "probe_details": [
+      "Ask for clarity on role boundaries: How is time divided between hands-on work, leadership, and AI exploration?",
+      "Inquire about work-hour expectations and whether exempt status translates to overtime or flexible hours.",
+      "Clarify reporting structure: Who will you report to, and how does the leadership team support this role?",
+      "Understand the team's growth trajectory: Is this part of a larger expansion, and what are the future hiring plans?",
+      "Explore AI/ML integration: What specific AI tools or frameworks are being used, and how mature are these initiatives?"
+    ],
+    "leverage_categories": ["exact_experience_match", "leadership_experience", "domain_expertise"],
+    "leverage_details": [
+      "Proven experience as a Data Architect in Microsoft environments is a strong match for this role.",
+      "Leadership and mentoring skills are explicitly required, providing leverage for candidates with prior team leadership.",
+      "ERP integration experience (Salesforce, Procore, Sage Intacct) is highly valued and could be a differentiator."
+    ],
+    "overall_assessment": "This is a well-defined 'player-coach' role for a senior Data Architect with leadership aspirations in a Microsoft-centric environment. The salary is transparent and competitive, and the remote-friendly policy is a major advantage. However, candidates should be cautious about potential scope creep, exempt status implications, and unclear reporting structures. The role is best suited for those with strong Azure, MS Fabric, and ERP integration experience who are eager to mentor a small team and explore AI applications.",
+    "recommendation_score": 0.7,
+    "recommendation_confidence": 0.85
+  }
+}
+```

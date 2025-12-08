@@ -1,0 +1,248 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through the job posting systematically and extract only explicitly stated information.
+
+Looking at the job posting:
+
+**Title**: Data Modeler_W2_ Sacramento CA
+**Company**: Chelsoft Solutions Co.
+**Location**: Sacramento, CA
+
+**Description Analysis:**
+
+1. **Compensation**: No salary information is mentioned, so salary_disclosed = false, all salary fields = null
+
+2. **Work Authorization**: 
+   - No mention of visa sponsorship
+   - No mention of work authorization requirements
+   - No mention of citizenship requirements
+   - No mention of security clearance
+   - So: visa_sponsorship_stated = "not_mentioned", work_auth_text = null, citizenship_text = null, security_clearance_stated = "not_mentioned"
+
+3. **Work Model**:
+   - "Hybrid work required. Two days a week in office required. Monday and Wednesday each week."
+   - "Must live within 60 miles maximum from location"
+   - "Local to Sac, CA preferred"
+   - This indicates hybrid work model
+   - employment_type: Not explicitly stated, but given it's a W2 position and mentions "employee" type work, likely full_time
+   - work_model_stated = "hybrid"
+   - location_restriction_text = "Must live within 60 miles maximum from location"
+   - employment_type_stated = "full_time" (inferred from W2 context)
+
+4. **Contract Details**:
+   - This appears to be a permanent position (W2 employee)
+   - No mention of contract duration, extension, conversion, start date, probation
+   - contract_type = "permanent"
+   - All other contract fields = null
+
+5. **Contractor Rates**: Not applicable as this appears to be a permanent employee position
+
+6. **Skills Classification**:
+   Let me analyze the requirements section:
+
+   **Mandatory Requirements:**
+   - "Minimum of ten (10) years demonstrable experience in the data management space with at least 5 years specializing in database design"
+   - "Minimum of five (5) years of experience as a data analyst or in other quantitative analysis or related disciplines"
+   - "Minimum of five (5) years of demonstrated experience with ER/Studio data modeling application"
+   - "Minimum of five (5) years of relevant experience in relational data modeling and dimensional data modeling, statistical analysis, and machine learning"
+   - "Excellent communication and collaboration skills"
+   - "At least 2 years experience working on Star, Snowflake, and/or Hybrid schemas"
+
+   **Desired Requirements:**
+   - "At least 2 years experience working on Oracle Autonomous Data Warehouse (ADW) specifically installed in an OCI environment"
+   - "Expert level Kimball Dimensional Data Modeling experience"
+   - "Expert level experience developing in Oracle SQL Developer or ER/Studio Data Architect for Oracle"
+   - "Ability to develop and perform Extract, Transform and Load (ETL) activities using Oracle tools and PLL SQL/SQL with at least 2 years experience"
+   - "Ability to perform technical leadership of a Oracle data warehouse team"
+
+   **Key Responsibilities mention:**
+   - "Expert level command of ER/STUDIO Data Architect modeling application"
+   - "Strong ability to articulate data modeling principles"
+   - "Excellent presentation skills"
+   - "Ability to translate business and functional requirements into technical requirements"
+
+   **Must-have hard skills** (from mandatory requirements and strong qualifiers):
+   - "ER/Studio Data Architect" (mentioned as "Expert level command")
+   - "data management" (10 years experience)
+   - "database design" (5 years experience)
+   - "data analyst" (5 years experience)
+   - "quantitative analysis" (5 years experience)
+   - "relational data modeling" (5 years experience)
+   - "dimensional data modeling" (5 years experience)
+   - "statistical analysis" (5 years experience)
+   - "machine learning" (5 years experience)
+   - "Star schemas" (2 years experience)
+   - "Snowflake schemas" (2 years experience)
+   - "Hybrid schemas" (2 years experience)
+
+   **Nice-to-have hard skills** (from desired requirements):
+   - "Oracle Autonomous Data Warehouse (ADW)" (2 years experience)
+   - "OCI environment" (2 years experience)
+   - "Kimball Dimensional Data Modeling" (expert level)
+   - "Oracle SQL Developer" (expert level)
+   - "ETL activities" (2 years experience)
+   - "PLL SQL/SQL" (2 years experience)
+   - "technical leadership" (Oracle data warehouse team)
+
+   **Must-have soft skills**:
+   - "Excellent communication and collaboration skills" (strong qualifier)
+   - "Strong ability to articulate data modeling principles" (strong qualifier)
+   - "Excellent presentation skills" (strong qualifier)
+
+   **Nice-to-have soft skills**:
+   - "Mentoring and educating team members" (mentioned in responsibilities but not with strong qualifiers)
+
+   **Certifications mentioned**:
+   - "Certifications - Oracle" (explicitly mentioned)
+
+   **Experience**:
+   - years_experience_min = 10 (from "Minimum of ten (10) years demonstrable experience")
+   - years_experience_max = null
+   - years_experience_text = "Minimum of ten (10) years demonstrable experience in the data management space with at least 5 years specializing in database design"
+
+   **Education**:
+   - No specific education requirements mentioned
+   - education_level = null
+   - education_area = null
+   - education_requirement = "not_mentioned"
+   - education_text_raw = null
+
+   **AI/ML Technologies**:
+   - "machine learning" is mentioned but this is traditional ML, not GenAI/LLM
+   - llm_genai_mentioned = false
+   - feature_store_mentioned = false
+
+7. **Geographic Restrictions**:
+   - "Must live within 60 miles maximum from location"
+   - "Local to Sac, CA preferred"
+   - geo_restriction_type = "us_only" (implied by US location)
+   - us_state_restrictions = ["CA"] (Sacramento, CA)
+   - residency_requirement = "must_be_resident"
+
+8. **Benefits**: No benefits mentioned
+
+9. **Context**: No team info or company description provided
+
+Let me count the fields and check completeness:
+
+Fields found: I need to count how many fields have actual values vs null
+Fields null: Count of null fields
+
+Let me structure this properly:
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "hybrid",
+      "location_restriction_text": "Must live within 60 miles maximum from location",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "ER/Studio Data Architect",
+        "data management",
+        "database design",
+        "data analyst",
+        "quantitative analysis",
+        "relational data modeling",
+        "dimensional data modeling",
+        "statistical analysis",
+        "machine learning",
+        "Star schemas",
+        "Snowflake schemas",
+        "Hybrid schemas"
+      ],
+      "nice_to_have_hard_skills": [
+        "Oracle Autonomous Data Warehouse (ADW)",
+        "OCI environment",
+        "Kimball Dimensional Data Modeling",
+        "Oracle SQL Developer",
+        "ETL activities",
+        "PLL SQL/SQL",
+        "technical leadership"
+      ],
+      "must_have_soft_skills": [
+        "Communication",
+        "Team Collaboration",
+        "Presentation Skills"
+      ],
+      "nice_to_have_soft_skills": [
+        "Mentoring"
+      ],
+      "certifications_mentioned": [
+        "Oracle"
+      ],
+      "years_experience_min": 10,
+      "years_experience_max": null,
+      "years_experience_text": "Minimum of ten (10) years demonstrable experience in the data management space with at least 5 years specializing in database design",
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "us_only",
+      "allowed_countries": null,
+      "excluded_countries": null,
+      "us_state_restrictions": ["CA"],
+      "residency_requirement": "must_be_resident"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": null,
+      "company_description_text": null
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 28,
+    "fields_null": 32
+  }
+}
+```

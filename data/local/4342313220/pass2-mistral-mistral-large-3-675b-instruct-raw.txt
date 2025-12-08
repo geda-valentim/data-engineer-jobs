@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.6,
+        "evidence": "The role mentions 'Data Engineer (모델링)' and requires skills like SQL, Python, and workflow managers (Airflow, Luigi, etc.), but does not explicitly state years of experience or seniority level. The probation period is mentioned as 3 months, which is typical for mid-level roles in some organizations.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title explicitly states 'Data Engineer', and responsibilities focus on data pipelines, modeling, and infrastructure.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_modeling",
+        "confidence": 0.85,
+        "evidence": "Title includes '(모델링)' which translates to 'modeling', and the description emphasizes data modeling, data quality, and data governance.",
+        "source": "combined"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.7,
+        "evidence": "The role mentions managing data pipelines, mentoring junior staff, and reviewing projects, which suggests technical leadership without direct people management responsibilities.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit mention of cloud providers or services in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No cloud providers mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.7,
+        "evidence": "Mentions CDC (Change Data Capture) and real-time events, as well as workflow managers like Airflow which are typically used for batch processing.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.8,
+        "evidence": "Airflow, Luigi, Dagster, and Prefect are mentioned as workflow managers, with Airflow being the most traditional in this group.",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.75,
+        "evidence": "Mentions data lakes (S3 patterns) and data warehouses (Snowflake patterns), along with Databricks which can operate in a lakehouse environment.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Location is stated as Seoul, South Korea, but no explicit remote work restrictions are mentioned.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No timezone requirements or team distribution details are provided.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "The role is based in Seoul, South Korea, and does not mention relocation support or packages, suggesting the candidate must already be in the location.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "The job posting explicitly states that the role requires work authorization in South Korea and does not mention visa sponsorship for other countries like the US.",
+        "source": "inferred"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "The job posting emphasizes work authorization in South Korea, which implies no support for OPT/CPT or student visas.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit mention of citizenship requirements in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit mention of contract type (W2, C2C, 1099) in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.9,
+        "evidence": "No benefits are explicitly mentioned in the Pass 1 extraction results.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.6,
+        "evidence": "The job posting mentions 'growth opportunities' and 'career development' but does not specify explicit career tracks or promotion ladders.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.7,
+        "evidence": "The posting mentions 'working with senior staff' and 'mentoring junior staff', suggesting informal mentorship opportunities.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit mention of promotion or advancement paths in the job posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No discussion of internal mobility or role changes in the job posting.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.6,
+        "evidence": "The job posting implies a focus on individual growth and technical leadership but does not explicitly mention management or specialist tracks.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.7,
+        "evidence": "The job posting lists specific must-have skills (SQL, Python, workflow managers) and nice-to-have skills (CDC, data quality tools), indicating a balanced but not overly strict requirement set.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.8,
+        "evidence": "The responsibilities are well-defined around data engineering, modeling, and pipeline operations, with a clear focus on data quality and governance.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "The must-have skills (SQL, Python, workflow managers) and responsibilities align reasonably with mid-level data engineering roles.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

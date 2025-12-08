@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 00:33:46",
+    "job_posting_id": "4325939213",
+    "job_title": "Senior Data Engineer (SQL, Python, Snowflake)",
+    "company_name": "Tata Consultancy Services",
+    "job_location": "Cupertino, CA",
+    "pass_name": "pass2",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Senior Data Engineer' and requires 8+ years of experience in Data Engineering",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title is 'Senior Data Engineer' and core responsibilities focus on data pipeline creation and SQL/Python skills",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "data_warehouse",
+          "confidence": 0.85,
+          "evidence": "Snowflake Database is explicitly mentioned as a required skill, indicating a focus on data warehousing",
+          "source": "pass1_derived"
+        },
+        "leadership_expectation": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "No explicit or implied signals about leadership expectations (e.g., mentoring, code review, direct reports)",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No cloud providers or services explicitly mentioned in the job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No secondary clouds mentioned in the job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.7,
+          "evidence": "Data pipeline creation is mentioned, but no explicit tools or terms related to streaming (e.g., Kafka, Flink, real-time) are present. SQL and Snowflake are typically associated with batch processing",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No orchestration tools or categories explicitly mentioned in the job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.95,
+          "evidence": "Snowflake Database is explicitly mentioned, which is a data warehouse solution",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.85,
+          "evidence": "Location is specified as 'Cupertino, CA', which implies a regional restriction (Bay Area) unless remote work is explicitly allowed. No remote work model is mentioned, so defaulting to same_region",
+          "source": "inferred"
+        },
+        "timezone_focus": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No timezone requirements or team distribution mentioned in the job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Job posting specifies location as 'Cupertino, CA' but does not mention relocation assistance or requirements. No evidence of relocation package or explicit relocation requirement",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Pass 1 extraction states 'ext_visa_sponsorship_stated' as 'not_mentioned'",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No explicit mention of OPT/CPT support or student visa eligibility. Pass 1 extraction does not provide signals for OPT/CPT friendliness",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No discussion of work authorization, citizenship, or green card requirements in the job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.8,
+          "evidence": "Salary range is disclosed for a full-time role, and benefits are typically associated with W2 employment. No contract type mentioned, but inferred from context",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "Pass 1 extraction shows 'ext_benefits_mentioned' as an empty array, indicating no benefits were discussed",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit or implied signals about career growth paths or opportunities in the job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No mention of mentorship, coaching, or working with senior engineers beyond the generic job description",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit or implied mention of promotion paths or advancement opportunities",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal mobility, transfers, or role changes in the job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No explicit or implied signals about available career tracks (IC, management, specialist, architect)",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.8,
+          "evidence": "Pass 1 extraction shows only 'must_have' skills with no 'nice_to_have' skills listed, indicating high strictness in requirements",
+          "source": "pass1_derived"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Job description focuses on a single role (Senior Data Engineer) with well-defined responsibilities such as SQL, Python, and Snowflake",
+          "source": "pass1_derived"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.75,
+          "evidence": "Requirements (8+ years, SQL, Python, Snowflake) align reasonably with the seniority level inferred from the title and experience",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7487,
+    "input_tokens": 5720,
+    "output_tokens": 1767,
+    "cost": 0.009254
+  }
+}

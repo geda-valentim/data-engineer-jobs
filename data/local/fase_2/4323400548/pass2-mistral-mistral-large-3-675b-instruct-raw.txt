@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Senior Data Engineer' and requires 4+ years of experience with at least 2 years in data operations or infrastructure",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is 'Senior Data Engineer' and responsibilities focus on data pipelines, ETL/ELT, and data infrastructure",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "hybrid",
+        "confidence": 0.65,
+        "evidence": "Mentions both ETL/ELT (batch) and data streaming platforms like Kafka/Kinesis (streaming) in nice-to-have skills",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.80,
+        "evidence": "Responsibilities include collaborating with stakeholders, optimizing pipelines, and contributing to team formation and practices, but no direct reports mentioned",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "aws",
+        "confidence": 0.95,
+        "evidence": "AWS mentioned explicitly in qualifications and must-have skills (e.g., AWS Athena, AWS cloud platforms)",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud providers explicitly mentioned beyond AWS",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.70,
+        "evidence": "ETL/ELT (batch) is a must-have, and Kafka/Kinesis (streaming) is mentioned as nice-to-have, suggesting hybrid paradigm",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "dagster_prefect",
+        "confidence": 0.75,
+        "evidence": "Dagster, Airflow, and Prefect mentioned explicitly in must-have skills, with no clear primary orchestrator",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.65,
+        "evidence": "Mentions datalake technologies (must-have) and AWS Athena (data warehousing optimization) in qualifications",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.80,
+        "evidence": "Hybrid work model requires in-person attendance at Boston office on core days, implying same region (Boston, MA metro)",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.50,
+        "evidence": "No explicit timezone requirements mentioned beyond hybrid office days",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Hybrid work model allows flexibility but does not mention relocation assistance or requirement",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Visa sponsorship is not mentioned explicitly, and 'actively seek applications from all individuals' does not clarify H1B support",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No explicit mention of OPT/CPT or student visa support, and the inclusive language does not imply eligibility for student visas",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "any",
+        "confidence": 0.75,
+        "evidence": "Job posting states 'actively seek applications from all individuals, no matter how they identify' and no work authorization restrictions mentioned",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time employment type and benefits mentioned (e.g., equity, ERGs) strongly imply W2 status",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.80,
+        "evidence": "Equity mentioned, ERGs for mentorship/networking, and a 'comprehensive total rewards package' implies premium benefits",
+        "source": "combined"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions 'learning and growth are continuous' and 'investing in developing others' in company description and values",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.80,
+        "evidence": "ERGs mentioned for mentorship and development opportunities, and 'Lift As We Climb' value suggests mentorship culture",
+        "source": "combined"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion paths or advancement tracks in the job posting or Pass 1 results",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No discussion of internal mobility, lateral moves, or role changes in the job posting",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.65,
+        "evidence": "Role focuses on technical leadership and data engineering responsibilities without direct reports, and mentions 'Senior Data Engineer' title",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Distinct must-have and nice-to-have skills listed, with a balanced ratio between required and preferred qualifications",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Job description and responsibilities are focused on data engineering tasks, with no ambiguity or multi-role hybrid",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Must-have skills align well with 4+ years of experience for a senior data engineering role, no unrealistic expectations detected",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

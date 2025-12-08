@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 00:04:14",
+    "job_posting_id": "4323400548",
+    "job_title": "Senior Data Engineer",
+    "company_name": "SimpliSafe",
+    "job_location": "Boston, MA",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.92,
+          "evidence": "Title explicitly states 'Senior Data Engineer' and requires 4+ years experience with 2+ years focused on data infrastructure, aligning with senior level expectations",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Job title is 'Senior Data Engineer' and responsibilities focus on data pipelines, orchestration, storage, and analytics infrastructure",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.85,
+          "evidence": "Strong emphasis on ETL/ELT, data orchestration tools (Dagster, Airflow, Prefect), and data warehousing (AWS Athena), with streaming mentioned only as 'nice to have'",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.78,
+          "evidence": "Responsibilities focus on technical implementation and collaboration, with no mention of managing people or teams; 'contribute to formation of new team' suggests IC contribution to team norms, not people management",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "aws",
+          "confidence": 0.95,
+          "evidence": "AWS explicitly mentioned as primary cloud platform, with specific services like AWS Athena and CloudFormation listed in must-have skills",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [
+            "azure",
+            "gcp"
+          ],
+          "confidence": 0.9,
+          "evidence": "Qualifications mention 'AWS or other public cloud platforms (e.g., Azure, GCP)', indicating secondary cloud options are acceptable but AWS is primary",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.88,
+          "evidence": "Must-have skills include batch-oriented tools (Airflow, ETL/ELT) while streaming platforms (Kafka, Kinesis) are listed as 'nice to have', suggesting both paradigms are relevant",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "dagster_prefect",
+          "confidence": 0.95,
+          "evidence": "Dagster, Airflow, and Prefect are explicitly listed as required data orchestration tools, with Dagster and Prefect representing modern orchestrators",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "lakehouse",
+          "confidence": 0.82,
+          "evidence": "Must-have skills include 'datalake technologies' and 'Iceberg' format, indicating lakehouse architecture, while also mentioning data warehousing with AWS Athena",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.88,
+          "evidence": "Location specified as Boston, MA with hybrid work model requiring in-office presence on core days, implying regional restriction",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "americas",
+          "confidence": 0.92,
+          "evidence": "Location in Boston, MA (Eastern Time) with hybrid work model requiring in-office presence on core days, indicating Americas timezone focus",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.85,
+          "evidence": "Hybrid work model requires presence in Boston office on core days, implying relocation may be necessary for candidates not already in the area",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Visa sponsorship status is 'not_mentioned' in Pass 1 extraction, and no indication of sponsorship in job posting",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of student visa support, and requirement for 4+ years experience suggests not targeting recent graduates",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.88,
+          "evidence": "No citizenship requirement mentioned, but work authorization implied by full-time employment and location in US",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Full-time permanent position with comprehensive benefits package including equity, suggesting W2 employment",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "comprehensive",
+          "confidence": 0.85,
+          "evidence": "Mentions comprehensive total rewards package, equity, annual bonus, medical, retirement, lifestyle benefits, and free SimpliSafe system",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Company description mentions 'learning and growth are continuous' but no specific career tracks or promotion paths are detailed",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.8,
+          "evidence": "Mentions collaborative environment and working with analysts, engineers, and product managers, suggesting opportunities to learn from others, but no formal mentorship program mentioned",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of promotion paths or advancement opportunities in the job posting",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal transfers, lateral moves, or exploring different roles within the company",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.7,
+          "evidence": "No specific career tracks (IC, management, specialist, architect) mentioned in the job posting or company description",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.73,
+          "evidence": "Clear distinction between must-have and nice-to-have skills, with reasonable requirements for senior level position",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.82,
+          "evidence": "Focused on data engineering responsibilities with specific technical requirements, not combining multiple roles",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.75,
+          "evidence": "Skills required (4+ years experience, AWS, SQL, Python, ETL/ELT, orchestration tools) are reasonable for a senior data engineer role",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8709,
+    "input_tokens": 6937,
+    "output_tokens": 1772,
+    "cost": 0.010481
+  }
+}

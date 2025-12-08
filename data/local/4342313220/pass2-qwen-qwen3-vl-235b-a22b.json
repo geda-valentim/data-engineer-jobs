@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 00:15:26",
+    "job_posting_id": "4342313220",
+    "job_title": "Data Engineer (모델링)",
+    "company_name": "MUSINSA 무신사",
+    "job_location": "Seoul, Seoul, South Korea",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.75,
+          "evidence": "No explicit years mentioned, but requirements (SQL, Python, workflow managers) suggest mid-level experience; title 'Data Engineer' without senior/staff prefix",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Job title is 'Data Engineer (모델링)' and responsibilities focus on data modeling, pipelines, and infrastructure",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "data_modeling",
+          "confidence": 0.92,
+          "evidence": "Title explicitly includes '(모델링)' meaning 'modeling', and responsibilities emphasize data modeling and pipeline design",
+          "source": "pass1_derived"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.85,
+          "evidence": "No mention of people management, mentoring, or architectural leadership; focus is on individual execution and collaboration",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No cloud providers mentioned in job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No cloud platforms mentioned at all",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.75,
+          "evidence": "Mentions CDC pipelines (batch) and user behavior events (streaming), suggesting both paradigms",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "airflow_like",
+          "confidence": 0.95,
+          "evidence": "Airflow, Luigi, Dagster, Prefect listed as required skills — all fall under Airflow-like or modern workflow managers",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No specific storage technologies (warehouse, lake, lakehouse) mentioned",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.95,
+          "evidence": "Location specified as Seoul, South Korea; work model is onsite; geo restriction is KR only",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.95,
+          "evidence": "Only South Korea mentioned as allowed country; no timezone flexibility indicated",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.9,
+          "evidence": "Onsite work model in Seoul; residency requirement implies relocation needed for non-residents",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No visa sponsorship mentioned; location is South Korea, not US; H1B is US-specific",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "OPT/CPT are US student visa categories; job is in South Korea with no mention of international student support",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.85,
+          "evidence": "Residency requirement implies must be authorized to work in South Korea, but no citizenship requirement stated",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Full-time permanent position in South Korea; standard employment contract implied",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits listed in Pass 1 extraction or job posting",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.65,
+          "evidence": "Mentions 'growth opportunities' and 'challenges' but no specific career tracks or promotion paths",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Mentions collaboration with other teams and data projects, implying peer/senior interaction, but no formal mentorship program",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of promotions, advancement, or career progression in job posting or Pass 1",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal transfers, role changes, or lateral moves",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No career tracks (IC, management, architect, specialist) mentioned",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear must-have skills (SQL, Python, workflow managers) and nice-to-have (Great Expectations, Databricks) — balanced requirement structure",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused on data modeling, pipeline operations, and data infrastructure — well-defined scope",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Skills required (SQL, Python, Airflow, etc.) are reasonable for a mid-level data engineer; no unrealistic combinations",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 13077,
+    "input_tokens": 11475,
+    "output_tokens": 1602,
+    "cost": 0.014679
+  }
+}

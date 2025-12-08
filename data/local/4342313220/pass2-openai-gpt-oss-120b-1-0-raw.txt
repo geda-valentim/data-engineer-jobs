@@ -2,27 +2,27 @@
   "inference": {
     "seniority_and_role": {
       "seniority_level": {
-        "value": "senior",
-        "confidence": 0.62,
-        "evidence": "Title is generic Data Engineer and responsibilities include advanced pipeline orchestration, data quality, and Databricks usage, suggesting a senior‑level role despite no explicit years of experience.",
+        "value": "mid",
+        "confidence": 0.66,
+        "evidence": "Title is generic Data Engineer with no seniority qualifier and no years of experience stated; required skill set suggests more than entry level but not explicitly senior.",
         "source": "inferred"
       },
       "job_family": {
         "value": "data_engineer",
         "confidence": 0.98,
-        "evidence": "Job title explicitly states \"Data Engineer\" and the description focuses on data pipelines, workflow management, and data quality.",
+        "evidence": "Job title explicitly says \"Data Engineer\" and responsibilities focus on data pipelines, modeling, and quality.",
         "source": "pass1_derived"
       },
       "sub_specialty": {
         "value": "batch_etl",
-        "confidence": 0.71,
-        "evidence": "Mentions Airflow, Luigi, Dagster, Prefect and data‑quality tools (Great Expectations, Soda) which are typical for batch ETL pipelines; no streaming technologies are referenced.",
+        "confidence": 0.77,
+        "evidence": "Mentions Airflow, Luigi, Dagster, Prefect and CDC pipelines, all typical of batch/ETL workloads; no streaming technologies are listed.",
         "source": "inferred"
       },
       "leadership_expectation": {
         "value": "ic",
-        "confidence": 0.85,
-        "evidence": "No mention of people‑management responsibilities or direct reports; the role is described in purely technical terms.",
+        "confidence": 0.86,
+        "evidence": "No references to people‑management, team lead or direct reports; responsibilities are technical execution.",
         "source": "inferred"
       }
     },
@@ -30,138 +30,138 @@
       "primary_cloud": {
         "value": "not_mentioned",
         "confidence": 0.92,
-        "evidence": "The posting lists tools (Databricks, Airflow, etc.) but does not specify any cloud provider such as AWS, Azure, or GCP.",
+        "evidence": "The posting lists Databricks and data‑quality tools but does not name any cloud provider (AWS, Azure, GCP).",
         "source": "pass1_derived"
       },
       "secondary_clouds": {
         "value": [],
-        "confidence": 0.90,
-        "evidence": "No additional cloud providers are referenced in the job description.",
+        "confidence": 0.95,
+        "evidence": "No additional cloud providers are referenced in the text.",
         "source": "pass1_derived"
       },
       "processing_paradigm": {
         "value": "batch",
-        "confidence": 0.88,
-        "evidence": "Workflow managers (Airflow, Luigi, Dagster, Prefect) and data‑quality frameworks are mentioned; no streaming or real‑time processing tools are listed.",
+        "confidence": 0.85,
+        "evidence": "Orchestration tools mentioned (Airflow, Luigi, Dagster, Prefect) are primarily used for batch scheduling; no streaming frameworks are cited.",
         "source": "inferred"
       },
       "orchestrator_category": {
         "value": "airflow_like",
-        "confidence": 0.95,
-        "evidence": "Airflow, Luigi, Dagster, and Prefect are explicitly listed as workflow managers.",
+        "confidence": 0.81,
+        "evidence": "Airflow is explicitly listed among required skills; other orchestrators are mentioned but Airflow is the canonical example.",
         "source": "pass1_derived"
       },
       "storage_layer": {
         "value": "not_mentioned",
-        "confidence": 0.85,
-        "evidence": "The description does not reference data warehouses (e.g., Snowflake, Redshift) or data lakes (e.g., S3, ADLS).",
+        "confidence": 0.90,
+        "evidence": "The description talks about data pipelines and modeling but does not specify warehouses, lakes, or lakehouses.",
         "source": "pass1_derived"
       }
     },
     "geo_and_work_model": {
       "remote_restriction": {
         "value": "same_country",
-        "confidence": 0.94,
-        "evidence": "Location restriction is \"Seoul, Seoul, South Korea\" and work model is listed as onsite.",
+        "confidence": 0.95,
+        "evidence": "Location restriction field lists only \"KR\" (South Korea) as allowed country.",
         "source": "pass1_derived"
       },
       "timezone_focus": {
-        "value": "specific_country",
-        "confidence": 0.91,
-        "evidence": "The role is limited to South Korea, which places it in the APAC region; the restriction is specific to a single country.",
-        "source": "inferred"
+        "value": "apac",
+        "confidence": 0.90,
+        "evidence": "Job is based in Seoul, South Korea, which falls in the APAC region.",
+        "source": "pass1_derived"
       },
       "relocation_required": {
         "value": false,
-        "confidence": 0.63,
-        "evidence": "Onsite work in Seoul is required but the posting does not mention a relocation package, implying candidates are expected to already reside in Korea.",
+        "confidence": 0.82,
+        "evidence": "No relocation language appears; the role is tied to a specific city (Seoul).",
         "source": "inferred"
       }
     },
     "visa_and_authorization": {
       "h1b_friendly": {
-        "value": null,
-        "confidence": 0.48,
-        "evidence": "Visa sponsorship is not mentioned in the posting.",
+        "value": false,
+        "confidence": 0.92,
+        "evidence": "Pass 1 extraction shows visa sponsorship is \"not_mentioned\"; Korean companies typically do not sponsor H‑1B.",
         "source": "pass1_derived"
       },
       "opt_cpt_friendly": {
-        "value": null,
-        "confidence": 0.48,
-        "evidence": "No reference to OPT/CPT or student visas is present.",
-        "source": "pass1_derived"
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of OPT/CPT or student‑visa friendliness; work authorization is implied for Korean residents.",
+        "source": "inferred"
       },
       "citizenship_required": {
-        "value": null,
-        "confidence": 0.48,
-        "evidence": "No citizenship or work‑authorization restrictions are stated beyond the country‑specific location requirement.",
-        "source": "pass1_derived"
+        "value": "work_auth_only",
+        "confidence": 0.71,
+        "evidence": "Geo restriction to South Korea suggests candidates must be authorized to work in Korea, but citizenship is not explicitly required.",
+        "source": "inferred"
       }
     },
     "contract_and_compensation": {
       "w2_vs_1099": {
-        "value": null,
-        "confidence": 0.48,
-        "evidence": "Employment type and contract type are not mentioned.",
-        "source": "pass1_derived"
+        "value": "w2",
+        "confidence": 0.63,
+        "evidence": "Typical Korean full‑time roles are employee (W‑2) positions; no contract or C2C language is present.",
+        "source": "inferred"
       },
       "benefits_level": {
         "value": "none_mentioned",
-        "confidence": 0.88,
-        "evidence": "The benefits array is empty and no equity, PTO, or other perks are described.",
+        "confidence": 0.94,
+        "evidence": "Pass 1 extraction lists no benefits, equity, learning or conference budgets.",
         "source": "pass1_derived"
       }
     },
     "career_development": {
       "growth_path_clarity": {
-        "value": "vague",
-        "confidence": 0.66,
-        "evidence": "The description talks about \"Core Engineering Mission\" and data platform work but does not outline explicit career ladders or promotion tracks.",
-        "source": "inferred"
+        "value": "not_mentioned",
+        "confidence": 0.84,
+        "evidence": "The posting does not discuss promotion ladders, career tracks, or growth opportunities.",
+        "source": "not_mentioned"
       },
       "mentorship_signals": {
         "value": "not_mentioned",
-        "confidence": 0.90,
-        "evidence": "No mentorship program or senior‑to‑junior learning statements are present.",
-        "source": "pass1_derived"
+        "confidence": 0.88,
+        "evidence": "No reference to mentorship programs, senior partners, or learning from experienced staff.",
+        "source": "not_mentioned"
       },
       "promotion_path_mentioned": {
         "value": false,
-        "confidence": 0.92,
-        "evidence": "The posting contains no language about promotions, titles, or advancement paths.",
+        "confidence": 0.91,
+        "evidence": "No language about promotions or advancement paths appears in the text.",
         "source": "pass1_derived"
       },
       "internal_mobility_mentioned": {
         "value": false,
-        "confidence": 0.92,
-        "evidence": "There is no mention of internal transfers or lateral moves within the company.",
+        "confidence": 0.93,
+        "evidence": "The job description does not mention internal transfers or mobility programs.",
         "source": "pass1_derived"
       },
       "career_tracks_available": {
         "value": [],
-        "confidence": 0.78,
-        "evidence": "No explicit IC, management, specialist, or architect tracks are described.",
+        "confidence": 0.90,
+        "evidence": "No explicit mention of IC, management, specialist, or architect tracks.",
         "source": "not_mentioned"
       }
     },
     "requirements_classification": {
       "requirement_strictness": {
         "value": "high",
-        "confidence": 0.84,
-        "evidence": "A long list of mandatory hard skills (SQL, Python, Airflow, Luigi, Dagster, Prefect, Great Expectations, Soda, Databricks) with no nice‑to‑have items indicates a strict requirement set.",
+        "confidence": 0.78,
+        "evidence": "A long list of mandatory hard skills (SQL, Python, Airflow, Luigi, Dagster, Prefect, Databricks, Great Expectations, Soda) with no nice‑to‑have items.",
         "source": "inferred"
       },
       "scope_definition": {
         "value": "clear",
-        "confidence": 0.86,
-        "evidence": "The job description focuses specifically on data engineering tasks (pipeline orchestration, data quality, Databricks) without mixing other roles.",
+        "confidence": 0.91,
+        "evidence": "The responsibilities focus specifically on data engineering, modeling, pipeline quality, and platform work; no unrelated duties are mixed.",
         "source": "inferred"
       },
       "skill_inflation_detected": {
-        "value": null,
-        "confidence": 0.48,
-        "evidence": "Years of experience are not specified, making it impossible to assess inflation relative to seniority.",
-        "source": "not_mentioned"
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Required skill set aligns with a mid‑level data engineer; no unrealistic senior‑level expectations are present.",
+        "source": "inferred"
       }
     }
   }

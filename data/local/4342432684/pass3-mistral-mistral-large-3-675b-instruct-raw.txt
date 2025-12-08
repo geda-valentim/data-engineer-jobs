@@ -1,0 +1,237 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.85,
+        "evidence": "Mentions Oracle ADW and OCI, which are modern but not part of a typical 'best-in-class' stack; explicit focus on Kimball dimensional modeling and data warehouse implementation suggests defined practices, but lack of broader MDS signals (e.g., dbt, Airflow) limits confidence in higher maturity levels",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.85,
+        "evidence": "Matches data_maturity_score of 3 with signals like structured data modeling and warehouse implementation, but no explicit mention of governance, CI/CD, or observability tools beyond Oracle ecosystem",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["data_governance"],
+        "confidence": 0.75,
+        "evidence": "Mentions 'enterprise data management framework' and documentation of data flows, which implies governance; no explicit signals for CI/CD, testing, or monitoring reduce confidence in other areas",
+        "source": "inferred"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.6,
+        "confidence": 0.80,
+        "evidence": "Role combines data modeling, business/system analysis, mentoring, and some ETL responsibilities, which are distinct but related; however, it also includes 'predictive data modeling' and 'machine learning', which are not core data engineering tasks and suggest moderate scope creep",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.5,
+        "confidence": 0.75,
+        "evidence": "High experience requirements (10+ years) and hybrid work model suggest structured environment, but 'data analyst' conflation and lack of PTO/overtime mentions imply moderate risk of overtime",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "multi_role",
+        "confidence": 0.85,
+        "evidence": "Role blends data modeling, business analysis, mentoring, and predictive modeling, which are distinct responsibilities",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.55,
+        "confidence": 0.80,
+        "evidence": "Moderate scope creep (data modeling + analysis + ML) and lack of protective factors (PTO, overtime pay) offset by clear requirements and defined role boundaries",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.6,
+        "evidence": "No explicit mention of reporting structure or manager title beyond 'architect' collaboration",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.5,
+        "evidence": "No clear signals to infer manager level; mentions working with 'architect' but no explicit reporting line",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.55,
+        "evidence": "No explicit mention of team growth velocity or hiring plans beyond role requirements",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.95,
+        "evidence": "No team size or composition details provided beyond mentoring duties",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No explicit reporting structure mentioned; only collaboration with 'architect' is noted",
+        "source": "inferred"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Role appears to be part of a centralized data team focused on enterprise data warehouse tasks, with no explicit mention of cross-functional embedding",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.70,
+        "evidence": "Hybrid work model (2 days in office) is a positive signal, but lack of PTO or overtime mentions and high experience requirements suggest moderate balance",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.6,
+        "confidence": 0.75,
+        "evidence": "Mentoring duties and technical leadership expectations imply growth opportunities, but no explicit learning budget, conference support, or career paths mentioned",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.65,
+        "confidence": 0.75,
+        "evidence": "Focus on Oracle tools and lack of broader modern stack signals suggest a moderate tech culture; emphasis on documentation and best practices is positive but not enough to infer a strong culture",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No explicit signals for open source, tech blogs, conference speaking, or innovation time mentioned in the job posting",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.90,
+        "evidence": "No explicit development practices (code review, pair programming, CI/CD) mentioned beyond Oracle tooling and data modeling",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.75,
+        "evidence": "Focus on Oracle-specific tools and lack of experimentation or new tech mentions suggest low innovation signals",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No explicit mention of tech debt management or refactoring in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.75,
+        "evidence": "Mentions 'predictive data modeling' and 'machine learning' as supportive skills, but no explicit ML tools or frameworks beyond generic terms",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML/AI tools explicitly mentioned beyond generic 'machine learning' and 'statistical analysis'",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit urgency signals (e.g., 'immediate start') beyond hybrid work requirement",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Hybrid role in Sacramento (less competitive than SF/NYC), no salary transparency, and niche Oracle tooling reduce competition; however, lack of broader benefits and high experience requirements may attract a moderate number of applicants",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No company description or funding signals provided in the job posting or Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit hiring velocity signals beyond the role itself",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit team size or composition details provided beyond mentoring duties",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No funding stage signals mentioned in the job posting or Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No explicit mention of whether this is a new headcount, backfill, or team expansion",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "data_focused_role", "ic_track"],
+    "strength_details": [
+      "Strong focus on data modeling and enterprise data warehouse implementation, which are core data engineering skills",
+      "Experience with Oracle ADW and OCI is a niche but valuable skill set in government/state projects",
+      "Hybrid work model (2 days in office) offers flexibility while maintaining collaboration"
+    ],
+    "concern_categories": ["scope_creep_risk", "salary_not_disclosed", "no_visa_sponsorship", "legacy_technology"],
+    "concern_details": [
+      "Role combines data modeling, business analysis, and predictive modeling, which may lead to scope creep",
+      "No salary range disclosed, making it difficult to assess compensation competitiveness",
+      "No visa sponsorship offered, and geographic proximity to Sacramento is strictly required",
+      "Heavy reliance on Oracle tools (ADW, OCI, PLL/SQL) may indicate legacy technology focus or limited modern stack adoption"
+    ],
+    "best_fit_categories": ["senior_data_engineers", "data_generalists", "career_changers"],
+    "best_fit_details": [
+      "Senior data engineers with 10+ years of experience in data modeling and warehouse projects, particularly those familiar with Oracle tools",
+      "Data generalists who can bridge modeling, analysis, and ETL tasks, especially in government/state domains",
+      "Candidates with Oracle certifications or prior Oracle ecosystem experience looking to transition into a hands-on leadership role"
+    ],
+    "probe_categories": ["role_scope_boundaries", "work_hour_expectations", "salary_range_details", "tech_stack_details", "career_growth_path"],
+    "probe_details": [
+      "Clarify the balance between data modeling, business analysis, and predictive modeling tasks",
+      "Ask about typical work hours, sprint deadlines, and overtime expectations",
+      "Request salary range details to ensure alignment with market rates",
+      "Understand the broader tech stack beyond Oracle tools (e.g., orchestration, monitoring, CI/CD practices)",
+      "Inquire about career growth paths and opportunities for advancement or specialization"
+    ],
+    "leverage_categories": ["exact_experience_match", "domain_expertise"],
+    "leverage_details": [
+      "Candidates with 10+ years in data modeling and Oracle tooling (ER/Studio, ADW, OCI) have strong leverage due to exact experience match",
+      "Prior state/government experience is a rare and valuable skill in this role, which can be used for negotiation"
+    ],
+    "overall_assessment": "This role is a specialized opportunity for senior data engineers with deep Oracle ADW/OCI and data modeling expertise, particularly in government or state projects. While the hybrid work model and hands-on leadership focus are attractive, the combination of data modeling, business analysis, and predictive tasks may lead to scope creep. Candidates should probe for clarity on role boundaries, compensation, and tech stack maturity to ensure alignment with their career goals.",
+    "recommendation_score": 0.6,
+    "recommendation_confidence": 0.85
+  }
+}
+```

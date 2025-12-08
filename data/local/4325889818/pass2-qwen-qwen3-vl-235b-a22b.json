@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 00:08:34",
+    "job_posting_id": "4325889818",
+    "job_title": "Senior Data Engineer – Commerce Data Pipelines",
+    "company_name": "aKUBE",
+    "job_location": "Santa Monica, CA",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.85,
+          "evidence": "Title explicitly states 'Senior Data Engineer' and requires 3+ years experience, which aligns with senior level in many organizations despite being on the lower end of typical senior ranges.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Job title is 'Senior Data Engineer' and responsibilities focus on ETL pipelines, data modeling, and SQL tuning — core data engineering functions.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.9,
+          "evidence": "Must-have skills include ETL design/development, Airflow orchestration, and performance tuning — all indicative of batch ETL work. No streaming tools (Kafka, Flink, etc.) mentioned.",
+          "source": "pass1_derived"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.85,
+          "evidence": "No mention of mentoring, managing teams, or architectural leadership. Responsibilities focus on building/maintaining pipelines and collaborating cross-functionally — typical IC role.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "aws",
+          "confidence": 0.9,
+          "evidence": "Redshift is explicitly listed as a required skill, which is an AWS service. Snowflake is also mentioned but is cloud-agnostic; Redshift anchors the primary cloud to AWS.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No other cloud platforms (Azure, GCP) or services mentioned in skills or responsibilities.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.9,
+          "evidence": "ETL pipelines, Airflow orchestration, and scheduled data quality checks are all batch-oriented. No real-time or streaming tools mentioned.",
+          "source": "pass1_derived"
+        },
+        "orchestrator_category": {
+          "value": "airflow_like",
+          "confidence": 0.95,
+          "evidence": "Airflow is explicitly listed as a required skill under 'ETL orchestration tools'.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.9,
+          "evidence": "Snowflake and Redshift are both data warehouse technologies. No mention of data lakes, lakehouse formats (Delta, Iceberg), or raw storage layers.",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.85,
+          "evidence": "Location restricted to Seattle, Santa Monica, or NYC — all major US metro areas. Hybrid model (4 days onsite) implies regional presence required.",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "americas",
+          "confidence": 0.88,
+          "evidence": "Locations specified (Seattle, Santa Monica, NYC) are all in North America, implying Americas timezone focus.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.85,
+          "evidence": "Hybrid model requires 4 days onsite in one of three specific cities — implies candidate must relocate or already be in one of those locations.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Work authorization text explicitly excludes H1B: 'All valid EADs except OPT, CPT, H1B'.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Work authorization text explicitly excludes OPT and CPT: 'All valid EADs except OPT, CPT, H1B'.",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.9,
+          "evidence": "Work authorization requirement states 'GC, USC, All valid EADs except OPT, CPT, H1B' — implies authorization to work in US is required, but not necessarily citizenship.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.95,
+          "evidence": "Explicitly states 'Up to $92.5/hr on W2 depending on experience (no C2C or 1099 or sub-contract)'.",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "Pass 1 extraction shows 'ext_benefits_mentioned: []' — no benefits listed in job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No mention of career paths, promotion ladders, or advancement opportunities in the job description or qualifications.",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No mention of mentorship programs, assigned mentors, or learning from senior staff.",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of promotions, advancement, or career progression in the job posting.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal transfers, lateral moves, or exploring other roles within the company.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No mention of IC, management, specialist, or architect tracks in the job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear 'Must Have' list with 10 hard skills and 3 soft skills, but no 'Nice to Have' skills — suggests moderate strictness without being overly rigid.",
+          "source": "pass1_derived"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused on data engineering with specific responsibilities: ETL pipelines, data modeling, SQL tuning, and data quality — no ambiguity or multi-role blending.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Senior title with 3+ years experience is reasonable. Skills required (SQL, ETL, Airflow, Snowflake/Redshift) are standard for senior data engineers — no unrealistic combinations or inflated expectations.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7788,
+    "input_tokens": 5963,
+    "output_tokens": 1825,
+    "cost": 0.009613
+  }
+}

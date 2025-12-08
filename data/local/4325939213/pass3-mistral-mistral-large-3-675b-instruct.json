@@ -1,0 +1,279 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 00:34:34",
+    "job_posting_id": "4325939213",
+    "job_title": "Senior Data Engineer (SQL, Python, Snowflake)",
+    "company_name": "Tata Consultancy Services",
+    "job_location": "Cupertino, CA",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.75,
+          "evidence": "Mentions modern tools like Snowflake (data warehouse) and advanced SQL/Python skills, but lacks explicit signals for CI/CD, testing, or governance practices. Team size and structure are not detailed, but the focus on Snowflake suggests some level of defined processes.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.75,
+          "evidence": "Matches the data_maturity_score of 3, indicating documented processes and modern tooling but limited governance or advanced maturity signals.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption"
+          ],
+          "confidence": 0.8,
+          "evidence": "Snowflake is explicitly mentioned as a required skill, which is a modern data warehouse tool. No other signals (e.g., CI/CD, testing, governance) are present in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.15,
+          "confidence": 0.9,
+          "evidence": "Role is focused on data engineering with no conflation of responsibilities (e.g., backend, ML, DevOps). The title and description align tightly with data pipeline creation and SQL/Python/Snowflake expertise.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "Job posting is from Tata Consultancy Services (TCS), a large IT services company often associated with client-facing roles and potential overtime expectations. However, no explicit signals (e.g., 'fast-paced', 'immediate start') are present to confirm this risk.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "Responsibilities are well-defined (data pipeline creation, SQL, Python, Snowflake) and align with a typical senior data engineering role. No ambiguity in the core focus of the role.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.4,
+          "confidence": 0.8,
+          "evidence": "Moderate risk due to potential overtime expectations (common in IT services) and lack of disclosed benefits. However, the role clarity and absence of scope creep mitigate some concerns.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred reporting structure mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No reporting structure or leadership signals are present to infer the manager's level.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "unknown",
+          "confidence": 0.9,
+          "evidence": "No explicit or inferred signals about team growth velocity or hiring plans in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.95,
+          "evidence": "No team composition details provided in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred reporting structure mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No signals indicating embedded cross-functional work (e.g., 'product teams', 'PMs'). Role appears to be part of a centralized data team.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "No explicit signals about work-life balance (e.g., PTO, hybrid flexibility). However, the lack of urgency terms (e.g., 'immediate start') suggests moderate balance, but this is speculative.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.3,
+          "confidence": 0.7,
+          "evidence": "No explicit signals about learning budgets, mentorship, or career growth. The role's focus on senior-level experience may imply limited structured growth opportunities for candidates.",
+          "source": "pass1_derived"
+        },
+        "tech_culture_score": {
+          "value": 0.5,
+          "confidence": 0.75,
+          "evidence": "Modern tooling (Snowflake) is mentioned, but no explicit signals about development practices (e.g., code review, CI/CD) or innovation culture. The lack of details limits confidence in a strong tech culture.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred signals about open source contributions, tech blogs, conference speaking, or innovation time in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No explicit or inferred development practices (e.g., code review, CI/CD, monitoring) are mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred signals about innovation or experimentation culture.",
+          "source": "pass1_derived"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit or inferred signals about tech debt management or refactoring in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.95,
+          "evidence": "No mention of ML/AI tools, frameworks, or responsibilities in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No ML/AI tools or frameworks mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred signals about hiring urgency (e.g., 'immediate', 'ASAP') in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "high",
+          "confidence": 0.7,
+          "evidence": "Location is Cupertino, CA (Bay Area), which is a competitive market for data engineering roles. Salary range is below market for senior DEs with 8+ years of experience, which may attract fewer candidates but also suggests higher competition for those who do apply.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.95,
+          "evidence": "Tata Consultancy Services (TCS) is a large, established IT services and consulting company with global operations and enterprise-scale clients. The job posting does not suggest startup or growth-stage characteristics.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred signals about hiring velocity or team expansion plans.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred signals about team size in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No funding stage signals (e.g., 'bootstrapped', 'seed', 'public') mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred signals about whether this is a new headcount, backfill, or team expansion role.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "clear_requirements",
+        "well_defined_role"
+      ],
+      "strength_details": [
+        "Clear and well-defined role focused on data engineering (SQL, Python, Snowflake).",
+        "Explicitly states required skills, reducing ambiguity for candidates."
+      ],
+      "concern_categories": [
+        "salary_not_disclosed",
+        "below_market_pay",
+        "no_visa_sponsorship",
+        "overtime_likely"
+      ],
+      "concern_details": [
+        "Salary range ($90,000 - $145,000) is significantly below market for a Senior Data Engineer with 8+ years of experience in the Bay Area (typical range is $160,000 - $220,000).",
+        "No benefits (e.g., PTO, equity, learning budget) are disclosed, which is unusual for a senior role.",
+        "No mention of visa sponsorship or work authorization flexibility, which may limit international candidates.",
+        "Role is based in Cupertino, CA (Bay Area), a high-cost location, with no remote work signals, increasing the risk of overtime expectations in client-facing IT services roles."
+      ],
+      "best_fit_categories": [
+        "senior_data_engineers",
+        "data_generalists",
+        "enterprise_experienced"
+      ],
+      "best_fit_details": [
+        "Senior data engineers with 8+ years of experience who are comfortable with SQL, Python, and Snowflake and are seeking roles in enterprise environments.",
+        "Data generalists with broad experience in batch processing and data warehousing who may not require cutting-edge innovation or high compensation.",
+        "Candidates with prior experience in IT services or consulting, particularly those familiar with client-facing roles and potential overtime expectations."
+      ],
+      "probe_categories": [
+        "salary_range_details",
+        "work_hour_expectations",
+        "remote_policy_details",
+        "benefits_details",
+        "team_size_composition"
+      ],
+      "probe_details": [
+        "Ask for clarification on the full compensation package, including benefits, bonuses, and equity (if applicable).",
+        "Probe about typical work hours and overtime expectations, especially given the client-facing nature of TCS roles.",
+        "Clarify remote work policies (e.g., hybrid, fully remote) and whether there are any flexibility options for the Cupertino, CA location.",
+        "Understand the team size, composition, and growth plans to assess collaboration and workload distribution.",
+        "Inquire about career growth paths and mentorship opportunities within TCS or the client's organization."
+      ],
+      "leverage_categories": [
+        "local_candidate",
+        "domain_expertise"
+      ],
+      "leverage_details": [
+        "Candidates already based in the Bay Area may have an advantage due to the lack of relocation or visa sponsorship requirements.",
+        "Strong expertise in Snowflake, SQL, and Python could be leveraged for negotiation, though the below-market salary limits this."
+      ],
+      "overall_assessment": "This role is a clear but narrowly defined opportunity for a senior data engineer with 8+ years of experience. The primary concerns are the below-market salary range for the Bay Area and lack of disclosed benefits, which may indicate a compensation package that does not align with typical senior DE expectations. The enterprise context of TCS suggests stability but may also imply limited innovation or growth opportunities. Candidates should prioritize probing compensation, work hours, and remote policies during interviews.",
+      "recommendation_score": {
+        "value": 0.4,
+        "confidence": 0.8,
+        "evidence": "Moderate recommendation due to below-market salary and lack of benefits disclosure, despite role clarity and enterprise stability."
+      }
+    },
+    "tokens": 12676,
+    "input_tokens": 9592,
+    "output_tokens": 3084,
+    "cost": 0.015760000000000003
+  }
+}

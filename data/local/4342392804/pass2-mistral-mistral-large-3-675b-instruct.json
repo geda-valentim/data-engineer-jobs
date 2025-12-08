@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 00:44:09",
+    "job_posting_id": "4342392804",
+    "job_title": "Sr Data Engineer - Onsite",
+    "company_name": "Bio-Techne",
+    "job_location": "Minneapolis, MN",
+    "pass_name": "pass2",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.92,
+          "evidence": "Title explicitly states 'Senior Data Engineer' and requires 5+ years of professional experience in data engineering or related roles.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title is 'Sr Data Engineer' and core responsibilities focus on data pipelines, ETL workflows, and cloud data platforms.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "data_warehouse",
+          "confidence": 0.85,
+          "evidence": "AWS Redshift, Azure Synapse, and GCP BigQuery are mentioned as core responsibilities, indicating a focus on data warehousing.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.78,
+          "evidence": "Role mentions mentoring junior engineers, providing technical leadership, and enforcing coding standards, but does not mention direct reports or people management.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "multi",
+          "confidence": 0.8,
+          "evidence": "AWS, Azure, and GCP are all mentioned as part of the cloud data platforms without a clear primary focus.",
+          "source": "inferred"
+        },
+        "secondary_clouds": {
+          "value": [
+            "aws",
+            "azure",
+            "gcp"
+          ],
+          "confidence": 0.95,
+          "evidence": "All three major cloud providers (AWS, Azure, GCP) are explicitly mentioned in the job posting.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.7,
+          "evidence": "Apache Spark (often used for batch) and Airflow (used for orchestrating both batch and streaming) are mentioned, but no explicit streaming tools or paradigms are highlighted.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "airflow_like",
+          "confidence": 0.95,
+          "evidence": "Apache Airflow is explicitly mentioned as a workflow orchestration tool.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.85,
+          "evidence": "AWS Redshift, Azure Synapse, and GCP BigQuery (warehouse) are mentioned alongside general cloud-based data platforms, which may include data lakes.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.8,
+          "evidence": "Job posting specifies 'Onsite role- no remote work' and location is 'Minneapolis, MN', implying same region (onsite).",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "not_mentioned",
+          "confidence": 0.0,
+          "evidence": "No timezone or team distribution information provided.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.6,
+          "evidence": "Job is onsite with no mention of remote work, suggesting relocation may be necessary if not already in the area.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of H1B sponsorship in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of OPT/CPT or student visa eligibility, and onsite requirement may imply work authorization is needed upfront.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "any",
+          "confidence": 0.7,
+          "evidence": "Job posting states 'All qualified applicants will receive consideration for employment without regard to... national origin', implying no citizenship requirement.",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Job posting mentions 'full-time employee' and benefits starting on day one, indicating W2 employment.",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "comprehensive",
+          "confidence": 0.85,
+          "evidence": "Multiple premium benefits mentioned including medical, dental, vision, life, disability insurances, 401k, ESPP, HSA, FSA, paid holidays, PTO, parental leave, tuition reimbursement, and internship programs.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Job posting mentions 'promotional opportunities' and 'career development', but does not specify explicit career tracks like IC to Staff or management paths.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "explicit_yes",
+          "confidence": 0.9,
+          "evidence": "Job posting explicitly mentions 'mentorship' and 'mentoring junior engineers'.",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": true,
+          "confidence": 0.8,
+          "evidence": "Job posting states 'promotional opportunities' explicitly.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal mobility, lateral moves, or team changes in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track",
+            "management_track"
+          ],
+          "confidence": 0.7,
+          "evidence": "Job mentions 'promotional opportunities' and 'career development' alongside leadership and mentoring, implying potential for both IC and management tracks.",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.8,
+          "evidence": "Pass 1 extraction shows a long list of 'must_have_hard_skills' and 'must_have_soft_skills' with few 'nice_to_have' skills.",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Job description is focused on data engineering responsibilities and does not combine multiple roles.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.75,
+          "evidence": "Requirements align well with the senior level (5+ years, leadership, and mentoring).",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8659,
+    "input_tokens": 6862,
+    "output_tokens": 1797,
+    "cost": 0.010456
+  }
+}

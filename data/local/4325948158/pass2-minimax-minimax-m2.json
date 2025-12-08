@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 23:44:04",
+    "job_posting_id": "4325948158",
+    "job_title": "Data Engineer",
+    "company_name": "Manchester Digital",
+    "job_location": "Manchester, England, United Kingdom",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.7,
+          "evidence": "Title is 'Data Engineer' without senior designation, substantial responsibilities but no explicit senior-level requirements or years of experience specified",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.95,
+          "evidence": "Title is explicitly 'Data Engineer' with core responsibilities focused on data warehousing, ELT pipelines, data integration, and data modeling",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.75,
+          "evidence": "Focus on ELT pipelines, automated data processing, data warehousing solutions with technologies like Snowflake, BigQuery, Redshift, and DBT for batch transformations",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.8,
+          "evidence": "No mention of direct reports, team management, or leadership responsibilities; focus on individual contribution, collaboration, and technical execution",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "aws",
+          "confidence": 0.95,
+          "evidence": "AWS explicitly mentioned multiple times including 'AWS cloud infrastructure' and 'AWS CDK' as required skills",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "Only AWS mentioned among cloud providers; BigQuery and Redshift mentioned but as data warehouse technologies, not primary cloud platforms",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.8,
+          "evidence": "Focus on ELT pipelines, automated data processing, and CI/CD practices with no real-time or streaming technologies mentioned",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "Jenkins mentioned for CI automation but no specific data orchestration tools like Airflow, Dagster, or similar are mentioned",
+          "source": "inferred"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.9,
+          "evidence": "Explicit focus on data warehousing solutions with Snowflake, BigQuery, and Redshift mentioned as core cloud data platforms",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.85,
+          "evidence": "UK-only restriction stated with hybrid model requiring minimum 50% office time, indicating need to be physically present in UK",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "europe",
+          "confidence": 0.8,
+          "evidence": "UK-based company with offices in Manchester, London, and Bristol, indicating UK/Europe timezone focus",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.75,
+          "evidence": "Hybrid model with 50% office requirement and UK-only restriction implies need to relocate to UK for non-UK residents",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "UK-based company with no visa sponsorship mentioned; H1B is US-specific visa not applicable to UK work authorization",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "UK-based company context makes US student visa programs (OPT/CPT) not applicable; no mention of student visa support",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.8,
+          "evidence": "No citizenship requirements mentioned; focus on ability to work in UK without specific immigration status restrictions",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Full-time permanent employee position with comprehensive benefits package indicates employment contract structure",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "comprehensive",
+          "confidence": 0.9,
+          "evidence": "Extensive benefits including competitive salary, pension matching up to 6%, private healthcare, bonus scheme, share awards, training budget, and 25-31 days PTO",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.6,
+          "evidence": "Mentions 'continuous learning', 'talent development programmes', and 'ongoing technical training' but no specific career progression paths or advancement tracks",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Mentions 'dynamic and experienced Data Engineering team' and collaboration with stakeholders, implying working with experienced professionals",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No specific promotion, advancement, or career progression paths mentioned in the job description",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal transfers, lateral moves, or exploring different roles within the organization",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.5,
+          "evidence": "No specific career tracks (IC, management, specialist, architect) mentioned; only general development programmes referenced",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear distinction between must-have technical skills and nice-to-have skills like AI tools, with balanced mix of requirements",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused job description specifically for data engineering role with well-defined responsibilities and clear technical requirements",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Skill requirements appear reasonable for mid-level data engineer role with appropriate mix of technical and soft skills",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 9912,
+    "input_tokens": 6904,
+    "output_tokens": 3008,
+    "cost": 0.012920000000000001
+  }
+}

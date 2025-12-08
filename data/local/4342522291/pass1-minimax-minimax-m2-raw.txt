@@ -1,0 +1,197 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+First, let me identify the key information:
+
+**Title**: Data Architect & Leader
+**Company**: Addison Group
+**Location**: Houston, TX (but mentions remote anywhere in US)
+
+**Compensation**: $140,000 - $170,000 / Annually
+
+Let me extract each field according to the rules:
+
+1. **compensation**:
+   - salary_disclosed: true (explicitly stated)
+   - salary_min: 140000
+   - salary_max: 170000
+   - salary_currency: USD (since $ is mentioned)
+   - salary_period: yearly (mentioned "Annually")
+   - salary_text_raw: "$140,000 - $170,000 / Annually"
+   - hourly_rate fields: null (not mentioned)
+
+2. **work_authorization**:
+   - visa_sponsorship_stated: not_mentioned (no mention of visa sponsorship)
+   - work_auth_text: null
+   - citizenship_text: null
+   - security_clearance_stated: not_mentioned
+
+3. **work_model**:
+   - work_model_stated: remote (explicitly says "Remote, anywhere in the US")
+   - location_restriction_text: "Remote, anywhere in the US"
+   - employment_type_stated: full_time (mentions "Full-Time")
+
+4. **contract_details**:
+   - contract_type: permanent (full-time position, no mention of contract)
+   - contract_duration_months: null
+   - contract_duration_text: null
+   - extension_possible: not_mentioned
+   - conversion_to_fte: not_mentioned
+   - start_date: not_mentioned
+   - start_date_text: null
+   - probation_period_text: null
+
+5. **contractor_rates**: not_mentioned (this is a full-time position)
+
+6. **skills_classified**:
+   Let me analyze the skills mentioned:
+   
+   **Hard Skills**:
+   - "Proven experience as a Data Architect within a Microsoft environment" - must_have (strong qualifier "proven")
+   - "Strong integration background" - must_have (strong qualifier "strong")
+   - "Microsoft environment" - must_have (core requirement)
+   - "MS Fabric for ETL processes" - must_have (specific technology mentioned)
+   - "Power BI" - must_have (specific technology mentioned)
+   - "ERP integrations (experience with at least two of: Salesforce, Procore, Sage Intacct)" - must_have (specific requirement)
+   - "Practical, applied AI experience" - must_have (strong qualifier "practical, applied")
+   - "AI applications", "indexing and building agents/copilots" - must_have (AI experience required)
+
+   **Soft Skills**:
+   - "Leadership experience with a hands-on, collaborative style" - must_have (strong qualifier "leadership experience")
+   - "polished" - nice_to_have (weak qualifier)
+   - "collaborative style" - must_have (mentioned as requirement)
+
+   **Education**:
+   - No specific education mentioned, so education_level: null, education_area: null, education_requirement: not_mentioned
+
+   **Experience**:
+   - "Proven experience as a Data Architect" - years_experience_min: null (no specific number), years_experience_text: "Proven experience as a Data Architect"
+
+   **AI/ML**:
+   - llm_genai_mentioned: true (mentions "AI applications", "agents/copilots", "AI experience")
+
+   **Feature Store**:
+   - feature_store_mentioned: false (no mention of feature stores)
+
+7. **geographic_restrictions**:
+   - geo_restriction_type: us_only (mentions "anywhere in the US")
+   - allowed_countries: ["US"]
+   - excluded_countries: null
+   - us_state_restrictions: null
+   - residency_requirement: no_requirement (remote anywhere in US)
+
+8. **benefits_structured**:
+   - benefits_mentioned: ["medical", "dental", "vision", "401(k)", "PTO"]
+   - equity_mentioned: false
+   - learning_budget_mentioned: false
+   - conference_budget_mentioned: false
+   - hardware_choice_mentioned: false
+   - pto_policy: not_mentioned (just mentions PTO but no policy details)
+
+9. **context**:
+   - team_info_text: "leading a small team that includes a Data Engineer and Data Scientist"
+   - company_description_text: null
+
+Let me double-check my classification of skills according to the rules:
+
+For hard skills, I need to look at qualifiers:
+- "Proven experience as a Data Architect" - "proven" is a strong qualifier, so must_have
+- "Strong integration background" - "strong" is a strong qualifier, so must_have
+- "Practical, applied AI experience" - "practical, applied" are strong qualifiers, so must_have
+
+For soft skills:
+- "Leadership experience" - "leadership experience" is a strong qualifier, so must_have
+- "collaborative style" - mentioned as part of leadership requirement, so must_have
+
+The job mentions AI applications and agents/copilots, which would fall under LLM/GenAI, so llm_genai_mentioned should be true.
+
+Now let me count the fields and create the final JSON.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": true,
+      "salary_min": 140000,
+      "salary_max": 170000,
+      "salary_currency": "USD",
+      "salary_period": "yearly",
+      "salary_text_raw": "$140,000 - $170,000 / Annually",
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "remote",
+      "location_restriction_text": "Remote, anywhere in the US",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": ["Data Architect", "Microsoft environment", "MS Fabric", "ETL processes", "Power BI", "ERP integrations", "Salesforce", "Procore", "Sage Intacct", "AI applications", "AI experience"],
+      "nice_to_have_hard_skills": [],
+      "must_have_soft_skills": ["Leadership", "Team Collaboration"],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": "Proven experience as a Data Architect",
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": true,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "us_only",
+      "allowed_countries": ["US"],
+      "excluded_countries": null,
+      "us_state_restrictions": null,
+      "residency_requirement": "no_requirement"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": ["medical", "dental", "vision", "401(k)", "PTO"],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "leading a small team that includes a Data Engineer and Data Scientist",
+      "company_description_text": null
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 21
+  }
+}
+```

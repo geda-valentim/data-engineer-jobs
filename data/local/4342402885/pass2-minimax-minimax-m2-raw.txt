@@ -1,0 +1,223 @@
+<reasoning>Let me analyze this job posting and Pass 1 extraction results to infer the job characteristics according to the rules provided.
+
+First, let me understand what we have:
+
+**Original Job Posting Analysis:**
+- Title: "BI - SR Data Engineer" (Senior Data Engineer)
+- Company: IT4W (Business Intelligence company, Microsoft partner)
+- Location: Arkansas, United States
+- Language: Spanish (with some English terms)
+- Focus: Business Intelligence, data architecture, ETL development
+- Tech stack: Microsoft Fabric, Synapse Analytics, Azure Data Factory, Power BI, SQL, Python, DAX
+- Work model: Hybrid or remote
+- Benefits: Comprehensive package mentioned
+
+**Pass 1 Extraction Results:**
+- Work model: hybrid
+- Location: Arkansas, United States
+- Employment type: full_time
+- Contract type: permanent
+- Must-have skills: data architecture design, ETL development, Microsoft Fabric, Synapse Analytics, Azure Data Factory, Power BI, SQL, Python, DAX
+- Nice-to-have skills: continuous improvement, process optimization, scalable architecture practices, data governance
+- Benefits: Comprehensive list including competitive salary, hybrid/remote work, health insurance, vacation, training, etc.
+- Learning budget: mentioned
+- No visa sponsorship mentioned
+- No equity mentioned
+- PTO policy: generous
+
+Now let me infer each field according to the rules:
+
+**Seniority and Role:**
+- seniority_level: "SR Data Engineer" clearly indicates senior level (confidence 0.9+)
+- job_family: This is clearly a data_engineer role focused on BI and ETL (confidence 0.9+)
+- sub_specialty: Focus on batch ETL and data warehouse/lakehouse (confidence 0.8+)
+- leadership_expectation: Senior role with client interaction, but no mention of direct reports (tech_lead_ic, confidence 0.7+)
+
+**Stack and Cloud:**
+- primary_cloud: Microsoft Azure heavily mentioned (Synapse Analytics, Azure Data Factory, Microsoft Fabric) - confidence 0.9+
+
+
+- secondary_clouds: No other clouds mentioned - empty array
+- processing_paradigm: ETL development suggests batch processing primarily - confidence 0.8+
+- orchestrator_category: Azure Data Factory mentioned - cloud_native - confidence 0.9+
+- storage_layer: Both Lakehouse and Warehouse mentioned - mixed - confidence 0.8+
+
+I'll continue analyzing the geographic and work model characteristics. The role appears to have specific location constraints in Arkansas, with a hybrid work approach. The timezone focus seems to be centered on the United States, with no specific regional restrictions beyond the state requirement. The work model suggests flexibility between remote and in-person collaboration.
+
+Regarding visa and authorization, the position requires standard work authorization without specific sponsorship details. The employment structure indicates a traditional W2 full-time arrangement with a comprehensive benefits package.
+
+Career development opportunities seem promising, with implied growth potential and a collaborative environment. The role appears to offer professional development through technical training and strategic project participation, though specific promotion paths aren't explicitly defined.
+
+The requirements suggest a balanced approach, with clear technical expectations and a focus on data engineering expertise. The role demands strong technical skills in data architecture and ETL development, balanced with interpersonal capabilities for client interaction.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'SR Data Engineer' (Senior Data Engineer) with senior-level responsibilities including architecture design and client presentations",
+        "source": "pass1_derived"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is Data Engineer with core focus on ETL development, data architecture, and BI solutions",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.85,
+        "evidence": "Primary focus on ETL development, data warehouse/lakehouse architecture, and batch processing pipelines",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.75,
+        "evidence": "Senior role with client presentations and architecture design responsibilities, but no mention of direct reports or people management",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.95,
+        "evidence": "Microsoft Azure services heavily emphasized: Synapse Analytics, Azure Data Factory, and Microsoft Fabric mentioned as core requirements",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud providers mentioned beyond Microsoft Azure ecosystem",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.82,
+        "evidence": "Primary focus on ETL development and scheduled data pipelines, no real-time streaming mentioned",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.90,
+        "evidence": "Azure Data Factory explicitly mentioned as core requirement for pipeline orchestration",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.80,
+        "evidence": "Both Lakehouse and Warehouse architectures explicitly mentioned as design options",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.85,
+        "evidence": "Location specified as Arkansas, United States with hybrid/remote work model available",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.88,
+        "evidence": "US-based position (Arkansas) with hybrid/remote model suggesting Americas timezone compatibility",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Hybrid or remote work scheme mentioned, no relocation requirements stated",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned in job posting, standard for US positions without explicit sponsorship",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No mention of student visa support, position appears to require existing work authorization",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.85,
+        "evidence": "No citizenship requirements mentioned, standard work authorization implied for US position",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time employee position with comprehensive benefits package indicates W2 employment",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.88,
+        "evidence": "Extensive benefits list including health insurance, vacation, training, flexible work, and unique perks like birthday day off and meal allowances",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions collaborative environment focused on professional growth and participation in strategic projects, but no specific career tracks mentioned",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Technical training from onboarding and collaborative environment suggest mentorship opportunities",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit promotion or advancement path mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers or role mobility opportunities",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.65,
+        "evidence": "Senior IC role with technical focus, no management track mentioned",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.78,
+        "evidence": "Clear must-have vs nice-to-have distinction with specific technical requirements and senior-level expectations",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Well-defined data engineering role with specific responsibilities in BI and ETL development",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Skill requirements align well with senior data engineer level, no unrealistic expectations detected",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.92,
+        "evidence": "Title 'Sr Data Engineer' and 5+ years of experience align with senior level.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "The job title is 'Sr Data Engineer' and the description focuses on data pipeline design and implementation.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.75,
+        "evidence": "Focus on ETL workflows and data warehousing suggests a batch-oriented role. Cloud data platforms also support batch processing.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.78,
+        "evidence": "The role involves mentoring junior engineers, suggesting technical leadership, but there's no mention of direct reports.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.90,
+        "evidence": "AWS Redshift, Azure Synapse, and GCP BigQuery are all mentioned, indicating a multi-cloud environment.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "While multiple clouds are mentioned, none is clearly prioritized as the primary one.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.85,
+        "evidence": "Emphasis on ETL workflows and data warehousing suggests a batch processing focus.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.95,
+        "evidence": "Apache Airflow is explicitly mentioned as a required skill.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.82,
+        "evidence": "The mention of Redshift, Synapse, and BigQuery points towards a data warehousing focus.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "The job posting states 'onsite role - no remote work', but the location is Minneapolis, MN. No country or timezone restrictions are explicitly stated.",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.85,
+        "evidence": "The location is Minneapolis, MN, which falls within the Americas timezone.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "The job posting does not mention relocation assistance or requirements.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "The job posting does not mention H1B sponsorship.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of OPT/CPT or student visas.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.88,
+        "evidence": "No specific citizenship requirements are mentioned, implying work authorization is sufficient.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "The job posting describes a full-time position, suggesting a W2 employment arrangement.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.85,
+        "evidence": "The job posting lists a wide range of benefits, including health insurance, 401k, and paid time off.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "The job posting mentions 'promotional opportunities' and 'career development' but doesn't specify clear career tracks.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.80,
+        "evidence": "The role involves mentoring junior engineers, suggesting mentorship opportunities.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": true,
+        "confidence": 0.90,
+        "evidence": "The job posting explicitly mentions 'promotional opportunities'.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "There is no mention of internal transfers or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.65,
+        "evidence": "Mentions 'Staff Engineer' implying an IC track, but no management track is explicitly stated.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.73,
+        "evidence": "The job posting includes both 'must-have' and 'nice-to-have' skills, indicating a balanced set of requirements.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.82,
+        "evidence": "The job description is focused on data engineering tasks and responsibilities.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "The required skills are reasonable for a senior data engineer role.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

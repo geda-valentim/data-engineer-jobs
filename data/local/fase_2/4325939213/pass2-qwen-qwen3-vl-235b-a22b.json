@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 02:13:52",
+    "job_posting_id": "4325939213",
+    "job_title": "Senior Data Engineer (SQL, Python, Snowflake)",
+    "company_name": "Tata Consultancy Services",
+    "job_location": "Cupertino, CA",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Senior Data Engineer' and requires 8+ years of experience, which aligns with senior level in data engineering roles.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Job title is 'Senior Data Engineer' and responsibilities focus on SQL, Python, and data pipeline creation — core data engineering functions.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.85,
+          "evidence": "Mentions 'Data pipeline creation' and 'Snowflake Database' — typical batch ETL patterns; no streaming or real-time tools mentioned.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.9,
+          "evidence": "No mention of team leadership, mentoring, or people management responsibilities — pure individual contributor role.",
+          "source": "pass1_derived"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "Snowflake is mentioned but no cloud provider (AWS, Azure, GCP) is specified — Snowflake can run on any cloud or hybrid.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No cloud providers mentioned at all — only Snowflake, which is cloud-agnostic.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.8,
+          "evidence": "Focus on SQL, data pipelines, and Snowflake — all typically associated with batch processing; no streaming tools (Kafka, Flink, etc.) mentioned.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No orchestrator tools (Airflow, dbt, Dagster, etc.) mentioned in requirements or description.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.85,
+          "evidence": "Snowflake is explicitly mentioned — a cloud data warehouse — with no reference to data lakes or lakehouse technologies.",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.9,
+          "evidence": "Location specified as 'Cupertino, CA' and work model is 'onsite' — implies must be in Bay Area region.",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.95,
+          "evidence": "Geo restriction is 'US only' with state restriction 'CA' — focused on United States, specifically California.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.85,
+          "evidence": "Onsite work model in Cupertino, CA — implies relocation may be required if not already based there.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Visa sponsorship is 'not_mentioned' — no indication of H1B sponsorship availability.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of student visas or OPT/CPT — combined with 8+ years experience requirement, suggests not open to students.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.88,
+          "evidence": "Geo restriction is 'US only' and no citizenship requirement stated — implies must be authorized to work in US (H1B, EAD, GC, etc.).",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Employment type is 'full_time' and 'permanent' — standard W2 employee structure.",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits listed in extraction — no health, PTO, equity, or learning budget mentioned.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No mention of career paths, advancement opportunities, or promotion ladders in job description or requirements.",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No mention of mentorship programs, senior collaboration, or learning opportunities.",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of promotions, advancement, or career progression in the job posting.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal transfers, role changes, or mobility opportunities.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No career tracks (IC, management, specialist, architect) mentioned or implied.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.85,
+          "evidence": "All skills listed are 'must have' — no 'nice to have' skills — and 8+ years experience is a strict requirement.",
+          "source": "pass1_derived"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.8,
+          "evidence": "Focused on data engineering with specific tools (SQL, Python, Snowflake) — not a hybrid or multi-role position.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "8+ years experience for senior role is reasonable; skills (SQL, Python, Snowflake) are standard for senior data engineers.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7116,
+    "input_tokens": 5419,
+    "output_tokens": 1697,
+    "cost": 0.008813
+  }
+}

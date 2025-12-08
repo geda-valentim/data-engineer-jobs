@@ -1,0 +1,234 @@
+<reasoning>I need to analyze the original job posting and Pass 1 extraction results to infer job characteristics. Let me break this down systematically.
+
+First, let me understand what I have:
+
+1. Original job posting: This is for a "Data Engineer (모델링)" position at MUSINSA in Seoul, South Korea. The text is in Korean, so I'll need to translate key parts to understand the requirements.
+
+2. Pass 1 extraction results: This gives me structured data about the job posting including skills, work model, benefits, etc.
+
+Let me analyze each section:
+
+## SENIORITY AND ROLE ANALYSIS
+
+**seniority_level**: 
+- The title is "Data Engineer" without explicit seniority indicators
+- From Pass 1, I see must-have skills include SQL, Python, data modeling, workflow managers (Airflow, Luigi, Dagster, Prefect)
+- Nice-to-have includes data quality tools, Great Expectations, Soda, Databricks
+- No specific years of experience mentioned
+- The role seems to be focused on data platform work, which typically requires some experience
+- Looking at the Korean text, this appears to be a mid-to-senior level role given the complexity of responsibilities mentioned
+- I should classify this as "mid" level since there's no explicit "Senior" in title but the requirements suggest substantial experience
+
+**job_family**: 
+- Title is clearly "Data Engineer"
+- Core responsibilities involve data pipelines, data modeling, workflow management
+- This is clearly a data_engineer role
+
+**sub_specialty**: 
+- From the description, they mention CDC (Change Data Capture), user behavior events, search data
+- They work with data marts and key indicator tables
+- They mention workflow managers like Airflow, Luigi, Dagster, Prefect
+- This suggests batch ETL and data modeling focus
+- No streaming/realtime mentioned specifically
+- This would be "batch_etl" or "data_modeling"
+
+**leadership_expectation**: 
+- No mention of direct reports or people management
+- No explicit technical leadership mentioned
+- This appears to be a pure IC role
+- "ic" would be appropriate
+
+## STACK AND CLOUD ANALYSIS
+
+
+I'll investigate the cloud infrastructure and data processing requirements. The role involves multiple workflow management tools, suggesting a flexible, multi-platform approach to data engineering. The absence of a specific cloud provider indicates potential hybrid or multi-cloud strategies, with a strong emphasis on batch processing and data modeling capabilities.
+
+The data platform team seems to focus on establishing robust data infrastructure standards, collecting diverse data sources, and creating reliable data marts for business intelligence. Their approach emphasizes data quality and governance through comprehensive platform management.
+
+The workflow management tools span multiple orchestration frameworks, indicating a need for versatile data pipeline management. The team appears to prioritize data reliability and systematic data processing across various sources.
+
+Cloud infrastructure remains unspecified, suggesting potential flexibility in technology stack selection. The data processing approach leans towards batch processing, with a focus on creating structured data marts and key performance indicators.
+
+The storage layer strategy seems to involve a mixed approach, potentially combining warehouse and lakehouse architectures to support diverse data management needs.
+
+Geographically, the role is centered in Seoul, South Korea, with no explicit remote work options mentioned. The position appears to require local presence, likely involving full-time employment with standard Korean work authorization requirements.
+
+Visa and employment details suggest a standard local hiring approach, with no specific international sponsorship indicated. The role seems designed for candidates already authorized to work in South Korea.
+
+Contractually, the position appears to be a permanent full-time role, with a standard 3-month probation period. Benefits seem minimal, focusing primarily on the probationary salary structure.
+
+Career development opportunities seem limited, with no explicit growth paths, mentorship programs, or internal mobility mentioned. The role appears to have a clear, defined scope within the data engineering domain, without significant skill inflation or unrealistic expectations.
+
+The requirements suggest a focused, entry to mid-level position with straightforward technical expectations and a transparent hiring process.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.75,
+        "evidence": "Data Engineer title without explicit seniority, but complex requirements including data modeling, multiple workflow managers, and data platform responsibilities suggest substantial experience beyond entry level",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Data Engineer' and core responsibilities involve data pipelines, modeling, and platform work",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_modeling",
+        "confidence": 0.82,
+        "evidence": "Strong emphasis on data modeling, data marts, key indicator tables, and data quality management. Focus on CDC, user behavior events, and search data processing",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "No mention of direct reports, team leadership, or mentoring responsibilities. Pure individual contributor role focused on technical execution",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific cloud provider mentioned in job posting or Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No cloud providers mentioned at all",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.80,
+        "evidence": "Focus on CDC, scheduled data processing, data marts creation, and workflow managers suggests batch processing approach. No real-time streaming mentioned",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "dagster_prefect",
+        "confidence": 0.90,
+        "evidence": "Pass 1 extraction shows must-have skills include multiple orchestrators: Airflow, Luigi, Dagster, Prefect - modern orchestrator category",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No specific data warehouse, lake, or lakehouse technologies mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.85,
+        "evidence": "Location specified as Seoul, South Korea with no mention of remote work options",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.90,
+        "evidence": "Specific location requirement (Seoul, South Korea) indicates country-specific timezone focus",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.80,
+        "evidence": "Position based in Seoul with no remote options, implying relocation to Seoul area would be necessary for non-residents",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Korean company in Seoul with no mention of international visa sponsorship. Korean text suggests local hiring focus",
+        "source": "inferred"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No mention of student visa support, position appears to require Korean work authorization",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.75,
+        "evidence": "Korean company likely requires work authorization in South Korea, but no specific citizenship requirement mentioned",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.85,
+        "evidence": "Full-time permanent position with probation period suggests traditional employment (W2 equivalent in Korean context)",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "basic",
+        "confidence": 0.80,
+        "evidence": "Only benefit mentioned is 3-month probation period with 100% salary. No comprehensive benefits package described",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No career progression, growth opportunities, or advancement paths mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mention of mentorship programs, working with senior staff, or collaborative learning environment",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion, advancement, or career progression mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers, role changes, or mobility opportunities",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career tracks, paths, or advancement opportunities mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Clear distinction between must-have skills (SQL, Python, workflow managers) and nice-to-have skills (data quality tools, Databricks), suggesting balanced requirements",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused job description clearly defining data engineering role with specific responsibilities around data platform, modeling, and quality management",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Requirements appear reasonable for mid-level data engineer role - SQL, Python, workflow managers are standard expectations without excessive inflation",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

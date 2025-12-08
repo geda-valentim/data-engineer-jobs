@@ -217,7 +217,66 @@ Communication, Problem Solving, Team Collaboration, Leadership, Analytical Skill
 - **feature_store_mentioned**: Set to true ONLY if feature store platforms or feature engineering infrastructure are explicitly mentioned
   - Keywords: "feature store", "Feast", "Tecton", "Hopsworks", "SageMaker Feature Store", "Vertex AI Feature Store", "feature platform", "feature registry"
   - Example: "Experience with Feast feature store" → true
-  - Example: "Feature engineering experience" → false (generic feature engineering, not feature store)"""
+  - Example: "Feature engineering experience" → false (generic feature engineering, not feature store)
+
+## EDUCATION EXTRACTION RULES
+Extract education requirements into structured fields. NORMALIZE degree levels and areas.
+
+**Degree Level Normalization** (education_level):
+- "PhD", "Doctorate", "Ph.D.", "Doctor" → "PHD"
+- "Master's", "Masters", "MS", "MSc", "M.S.", "MBA", "MA" → "MASTERS"
+- "Bachelor's", "Bachelors", "BS", "BSc", "B.S.", "BA", "B.A.", "undergraduate degree" → "BACHELORS"
+- "Associate's", "Associates", "AA", "AS", "2-year degree" → "ASSOCIATES"
+- "High school", "GED", "diploma" → "HIGH_SCHOOL"
+- "Bootcamp", "certification program" → "BOOTCAMP"
+- If no education mentioned → null
+
+**Degree Area Normalization** (education_area):
+Extract the MAIN field of study ONLY if explicitly mentioned. Common normalizations:
+- "Computer Science", "CS", "CompSci" → "Computer Science"
+- "Computer Engineering", "CE" → "Computer Engineering"
+- "Software Engineering", "SE" → "Software Engineering"
+- "Data Science", "Data Analytics" → "Data Science"
+- "Information Technology", "IT", "Information Systems", "MIS" → "Information Technology"
+- "Electrical Engineering", "EE" → "Electrical Engineering"
+- "Mathematics", "Math", "Applied Math", "Statistics" → "Mathematics/Statistics"
+- "Physics" → "Physics"
+- "Engineering" (generic) → "Engineering"
+- "Business", "Business Administration" → "Business"
+
+⚠️ IMPORTANT: Return null for education_area when:
+- No specific field of study is mentioned
+- Only says "related field", "relevant field", "similar field"
+- Only says "or equivalent", "technical degree", "STEM degree"
+- Examples that should return null:
+  - "Bachelor's degree required" → area: null
+  - "BS in related field" → area: null
+  - "Degree in a technical discipline" → area: null
+  - "STEM degree preferred" → area: null
+
+**Education Requirement Type** (education_requirement):
+- "required" → Explicitly stated as mandatory
+- "preferred" → Stated as nice-to-have or preferred
+- "or_equivalent" → Accepts equivalent experience in lieu of degree
+- "not_mentioned" → No education requirements stated
+
+**Multiple Degrees**:
+- If multiple degree levels are acceptable (e.g., "BS or MS"), use the MINIMUM required (e.g., "BACHELORS")
+- Note the full text in education_text_raw
+
+**Examples**:
+- "Bachelor's degree in Computer Science or related field required"
+  → level: "BACHELORS", area: "Computer Science", requirement: "required"
+- "MS/PhD in Machine Learning preferred"
+  → level: "MASTERS", area: "Machine Learning", requirement: "preferred"
+- "BS in CS or equivalent experience"
+  → level: "BACHELORS", area: "Computer Science", requirement: "or_equivalent"
+- "5+ years experience (degree not required)"
+  → level: null, area: null, requirement: "not_mentioned"
+- "Bachelor's degree required" (no area specified)
+  → level: "BACHELORS", area: null, requirement: "required"
+- "BSCS or BSEE"
+  → level: "BACHELORS", area: "Computer Science", requirement: "required" (use first area)"""
 
 
 USER_PROMPT_TEMPLATE = """## INPUT
@@ -291,7 +350,10 @@ Your response must start with {{ and end with }}.
       "years_experience_min": number or null,
       "years_experience_max": number or null,
       "years_experience_text": string or null,
-      "education_stated": string or null,
+      "education_level": "PHD" | "MASTERS" | "BACHELORS" | "ASSOCIATES" | "HIGH_SCHOOL" | "BOOTCAMP" | null,
+      "education_area": string or null,
+      "education_requirement": "required" | "preferred" | "or_equivalent" | "not_mentioned",
+      "education_text_raw": string or null,
       "llm_genai_mentioned": boolean,
       "feature_store_mentioned": boolean
     }},

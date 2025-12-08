@@ -12,6 +12,7 @@ from test_pass1 import test_multiple_jobs_comparison
 from test_pass2 import test_pass2_inference
 from test_pass3 import test_pass3_analysis
 from test_execution_helpers import AVAILABLE_MODELS
+from test_enrichment_helpers import load_jobs_from_s3
 
 
 def test_multiple_models(
@@ -59,6 +60,24 @@ def test_multiple_models(
         print(f"  • {key}: {model['name']} ({model['id']})")
         print(f"    Cost: ${model['input_cost_per_1m']}/1M input, ${model['output_cost_per_1m']}/1M output")
 
+    # Pre-load jobs from S3 ONCE (optimization to avoid repeated S3 calls)
+    preloaded_jobs = None
+    preloaded_partition_info = None
+    if use_s3:
+        print(f"\n{'=' * 120}")
+        print("PRE-LOADING JOBS FROM S3 (once for all models)")
+        print(f"{'=' * 120}")
+        if date:
+            print(f"  Date: {date} (latest hour)")
+        else:
+            print(f"  Using most recent partition")
+        print(f"  Limit: {limit} jobs")
+
+        preloaded_jobs, preloaded_partition_info = load_jobs_from_s3(date_str=date, limit=limit)
+        print(f"  ✓ Loaded {len(preloaded_jobs)} jobs from partition")
+        if preloaded_partition_info:
+            print(f"  Partition: {preloaded_partition_info['year']}-{preloaded_partition_info['month']}-{preloaded_partition_info['day']} Hour {preloaded_partition_info['hour']}")
+
     # Save original env vars
     original_pass1 = os.getenv("BEDROCK_MODEL_PASS1")
     original_pass2 = os.getenv("BEDROCK_MODEL_PASS2")
@@ -82,6 +101,7 @@ def test_multiple_models(
             os.environ["BEDROCK_MODEL_PASS3"] = model_id
 
             # Call existing test function based on pass_type
+            # Pass pre-loaded jobs to avoid repeated S3 calls
             try:
                 if pass_type == "pass1":
                     success = test_multiple_jobs_comparison(
@@ -89,7 +109,9 @@ def test_multiple_models(
                         date=date,
                         limit=limit,
                         use_cache=use_cache,
-                        save_json=save_json
+                        save_json=save_json,
+                        preloaded_jobs=preloaded_jobs,
+                        preloaded_partition_info=preloaded_partition_info
                     )
                 elif pass_type == "pass2":
                     success = test_pass2_inference(
@@ -97,7 +119,9 @@ def test_multiple_models(
                         date=date,
                         limit=limit,
                         use_cache=use_cache,
-                        save_json=save_json
+                        save_json=save_json,
+                        preloaded_jobs=preloaded_jobs,
+                        preloaded_partition_info=preloaded_partition_info
                     )
                 elif pass_type == "pass3":
                     success = test_pass3_analysis(
@@ -105,7 +129,9 @@ def test_multiple_models(
                         date=date,
                         limit=limit,
                         use_cache=use_cache,
-                        save_json=save_json
+                        save_json=save_json,
+                        preloaded_jobs=preloaded_jobs,
+                        preloaded_partition_info=preloaded_partition_info
                     )
                 else:
                     print(f"Unknown pass type: {pass_type}")

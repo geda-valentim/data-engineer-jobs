@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 02:28:18",
+    "job_posting_id": "4325889818",
+    "job_title": "Senior Data Engineer – Commerce Data Pipelines",
+    "company_name": "aKUBE",
+    "job_location": "Santa Monica, CA",
+    "pass_name": "pass2",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Senior Data Engineer' and requires 3+ years of data engineering experience, which aligns with senior level expectations.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title is 'Senior Data Engineer' and core responsibilities focus on ETL pipelines, data modeling, and SQL performance tuning.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.85,
+          "evidence": "ETL design and development, Airflow (batch orchestration), and Snowflake/Redshift (warehouse) are explicitly mentioned with strong emphasis.",
+          "source": "combined"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.7,
+          "evidence": "Responsibilities include partnering with business and analytics teams, designing scalable solutions, and performance tuning, which imply technical leadership without direct people management.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit cloud providers (AWS, Azure, GCP) or cloud services mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No secondary cloud providers mentioned.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.8,
+          "evidence": "ETL pipelines, Airflow (scheduled jobs), and no explicit mention of streaming tools or real-time processing.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "airflow_like",
+          "confidence": 0.95,
+          "evidence": "Airflow explicitly mentioned as a must-have ETL orchestration tool.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.9,
+          "evidence": "Snowflake and Redshift (warehouse technologies) explicitly mentioned; no lakehouse or lake-specific tools discussed.",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.85,
+          "evidence": "Job posting specifies hybrid work model with onsite requirements in Seattle, WA; Santa Monica, CA; or NYC, indicating regional restrictions.",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit timezone requirements mentioned beyond location-based hybrid model.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Hybrid work model implies candidate must already be resident in one of the specified locations (Seattle, WA; Santa Monica, CA; or NYC).",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Pass 1 states 'All valid EADs except OPT, CPT, H1B', explicitly excluding H1B sponsorship.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Pass 1 explicitly excludes OPT and CPT in work authorization text.",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "us_or_gc",
+          "confidence": 0.88,
+          "evidence": "Work authorization text mentions 'GC, USC' (Green Card and US Citizen) as acceptable, implying US citizenship or green card required.",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Job posting explicitly states 'W2 depending on experience (no C2C or 1099 or sub-contract)'.",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits or perks mentioned in Pass 1 results or job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No discussion of career growth paths, promotion ladders, or advancement opportunities in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.65,
+          "evidence": "Responsibilities include partnering with business, analytics, and infrastructure teams, which may involve learning from experienced team members.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of promotions, advancement, or career paths.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No discussion of internal mobility, lateral moves, or role changes.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No explicit or implied career tracks mentioned.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.8,
+          "evidence": "Job posting lists multiple 'Must Have' skills with strict qualifiers (e.g., 'required', 'strong grounding') and only one 'nice to have' skill.",
+          "source": "combined"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Job description focuses on a single role (Senior Data Engineer) with well-defined responsibilities such as ETL design, data modeling, and SQL tuning.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.75,
+          "evidence": "Requirements align well with senior-level expectations (3+ years of experience, advanced SQL, ETL design, and performance tuning).",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7950,
+    "input_tokens": 6201,
+    "output_tokens": 1749,
+    "cost": 0.009699
+  }
+}

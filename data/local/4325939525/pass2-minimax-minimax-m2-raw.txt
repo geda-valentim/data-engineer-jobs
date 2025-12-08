@@ -1,0 +1,401 @@
+<reasoning>Let me analyze the job posting and Pass 1 extraction results to infer the job characteristics according to the rules provided.
+
+First, let me understand what we have:
+
+**Original Job Posting:**
+- Title: Sr. Data Engineer(hands on Palantir exp.)
+- Company: Pacer Group
+- Location: Atlanta, GA
+- Looking for locals only for onsite and independent candidate
+- 8-10 years of strong Data Engineering experience
+- Hands-on experience in Palantir Foundry
+- Experience with Hadoop-based technologies including Hive, PySpark
+
+**Pass 1 Extraction:**
+- Work model: onsite
+- Location restriction: "Looking for locals only for onsite"
+- Employment type: full_time
+- Contract type: permanent
+- Must have hard skills: Data Engineering, Palantir Foundry, Hadoop-based technologies, Hive, PySpark
+- Years experience: 8-10 years
+- Geo restriction: us_only
+- Benefits mentioned: none
+- Equity mentioned: false
+- Learning budget: false
+- Conference budget: false
+- Hardware choice: false
+- PTO policy: not_mentioned
+
+Now let me infer each field:
+
+**1. SENIORITY AND ROLE:**
+
+**seniority_level:**
+- Title has "Sr." which indicates senior level
+- 8-10 years experience matches senior level
+- This is a clear match, confidence should be high (0.9+)
+- Value: "senior"
+- Source: combined (title + years experience)
+
+**job_family:**
+- Title is "Data Engineer"
+- Core responsibilities are data engineering focused
+- This is clear, confidence 0.9+
+- Value: "data_engineer"
+- Source: pass1_derived
+
+**sub_specialty:**
+- Palantir Foundry mentioned - this is a data platform/analytics platform
+- Hadoop-based technologies (Hive, PySpark) - suggests data processing/ETL
+- No specific mention of streaming, ML, etc.
+- This seems like general data engineering with focus on data platforms
+
+
+- Value: "general"
+- Confidence: moderate (0.6) - inferred from tools mentioned
+- Source: inferred
+
+**leadership_expectation:**
+- Senior level suggests some technical leadership
+- No mention of direct reports or people management
+- Palantir Foundry experience suggests hands-on technical work
+- Value: "tech_lead_ic"
+- Confidence: moderate (0.6) - inferred from seniority
+- Source: inferred
+
+**2. STACK AND CLOUD:**
+
+**primary_cloud:**
+- No specific cloud provider mentioned
+- Hadoop-based technologies could be on-premise or cloud
+- Palantir Foundry is a platform that can run on multiple clouds
+- Value: "not_mentioned"
+- Confidence: high (0.9) - no cloud mentioned
+- Source: pass1_derived
+
+**secondary_clouds:**
+- No clouds mentioned at all
+- Value: []
+- Confidence: high (0.9)
+- Source: pass1_derived
+
+**processing_paradigm:**
+- Hadoop-based technologies (Hive, PySpark) typically used for batch processing
+- No mention of streaming technologies like Kafka, Kinesis, etc.
+- Value: "batch"
+- Confidence: moderate (0.7) - inferred from Hadoop ecosystem
+- Source: inferred
+
+**orchestrator_category:**
+- No specific orchestrator mentioned
+- Hadoop ecosystem might use Oozie or similar, but not explicitly stated
+- Value: "not_mentioned"
+- Confidence: high (0.9)
+- Source: pass1_derived
+
+**storage_layer:**
+- Hadoop ecosystem suggests data lake patterns
+- Hive is typically used with HDFS (data lake)
+- No mention of data warehouses like Snowflake, Redshift
+- Value: "lake"
+- Confidence: moderate (0.7) - inferred from Hadoop/Hive
+- Source: inferred
+
+**3. GEO AND WORK MODEL:**
+
+**remote_restriction:**
+- "Looking for locals only for onsite" - this is very clear
+- Must be local to Atlanta, GA area
+- Value: "same_region"
+- Confidence: high (0.9) - explicit statement
+- Source: pass1_derived
+
+**timezone_focus:**
+- Location is Atlanta, GA (Eastern Time)
+- No specific timezone requirements mentioned beyond being local
+- Value: "specific_country" (US)
+- Confidence: moderate (0.6) - inferred from location
+- Source: inferred
+
+**relocation_required:**
+- "Looking for locals only" suggests they want people already in the area
+- No mention of relocation packages
+- Value: false
+- Confidence: high (0.9) - locals only implies no relocation needed
+- Source: pass1_derived
+
+**4. VISA AND AUTHORIZATION:**
+
+**h1b_friendly:**
+- No mention of visa sponsorship
+- "Looking for locals only" suggests they want US residents/citizens
+- Value: false
+- Confidence: high (0.9) - no sponsorship mentioned
+- Source: pass1_derived
+
+**opt_cpt_friendly:**
+- "Looking for locals only" suggests they want established residents
+- No mention of student visa support
+- Value: false
+- Confidence: high (0.9) - locals only implies established work authorization
+- Source: pass1_derived
+
+**citizenship_required:**
+- "Looking for locals only" suggests US work authorization required
+- No specific citizenship requirement mentioned
+- Value: "work_auth_only"
+- Confidence: high (0.9) - locals only implies work authorization
+- Source: pass1_derived
+
+**5. CONTRACT AND COMPENSATION:**
+
+**w2_vs_1099:**
+- Employment type: full_time
+- Contract type: permanent
+- This suggests W2 employment
+- Value: "w2"
+- Confidence: high (0.9) - full-time permanent suggests W2
+- Source: pass1_derived
+
+**benefits_level:**
+- Benefits mentioned: none
+- Equity mentioned: false
+- Learning budget: false
+- Conference budget: false
+- PTO policy: not_mentioned
+- Value: "none_mentioned"
+- Confidence: high (0.9) - no benefits mentioned
+- Source: pass1_derived
+
+**6. CAREER DEVELOPMENT:**
+
+**growth_path_clarity:**
+- No mention of career growth, advancement, or development
+- Value: "not_mentioned"
+- Confidence: high (0.9) - no career development mentioned
+- Source: pass1_derived
+
+**mentorship_signals:**
+- No mention of mentorship, senior staff, or learning opportunities
+- Value: "not_mentioned"
+- Confidence: high (0.9) - no mentorship signals
+- Source: pass1_derived
+
+**promotion_path_mentioned:**
+- No mention of promotion or advancement opportunities
+- Value: false
+- Confidence: high (0.9) - no promotion mentions
+- Source: pass1_derived
+
+**internal_mobility_mentioned:**
+- No mention of internal transfers or role changes
+- Value: false
+- Confidence: high (0.9) - no mobility mentions
+- Source: pass1_derived
+
+**career_tracks_available:**
+- No mention of career tracks or paths
+- Value: []
+- Confidence: high (0.9) - no career tracks mentioned
+- Source: pass1_derived
+
+**7. REQUIREMENTS CLASSIFICATION:**
+
+**requirement_strictness:**
+- Must have skills: Data Engineering, Palantir Foundry, Hadoop-based technologies, Hive, PySpark
+- Nice to have skills: none
+- All requirements are must-haves, no nice-to-haves mentioned
+- This suggests high strictness
+- Value: "high"
+- Confidence: moderate (0.7) - all skills are must-haves
+- Source: inferred
+
+**scope_definition:**
+- Job title is clear: Senior Data Engineer
+- Responsibilities are focused on data engineering
+- Not a multi-role hybrid position
+- Value: "clear"
+- Confidence: high (0.9) - focused job description
+- Source: inferred
+
+**skill_inflation_detected:**
+- Senior level with 8-10 years experience is reasonable
+- Skills mentioned (Palantir, Hadoop, Hive, PySpark) are appropriate for senior data engineer
+- No unrealistic skill combinations
+- Value: false
+- Confidence: high (0.9) - reasonable requirements for seniority
+- Source: inferred
+
+Let me compile this into the required JSON format.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.95,
+        "evidence": "Title contains 'Sr.' and requires 8-10 years experience, which matches senior level expectations",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Job title is 'Data Engineer' and core responsibilities focus on data engineering with Palantir Foundry and Hadoop technologies",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "general",
+        "confidence": 0.65,
+        "evidence": "Palantir Foundry and Hadoop-based technologies suggest general data engineering focus rather than specific streaming, ML, or governance specialization",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.68,
+        "evidence": "Senior level position suggests technical leadership expectations, but no mention of direct reports or people management responsibilities",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "No specific cloud provider mentioned - Hadoop-based technologies and Palantir Foundry can run on multiple platforms",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No cloud providers mentioned at all in the job posting",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.72,
+        "evidence": "Hadoop-based technologies (Hive, PySpark) are typically used for batch processing rather than real-time streaming",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific orchestration tools mentioned - Hadoop ecosystem might use Oozie but not explicitly stated",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "lake",
+        "confidence": 0.75,
+        "evidence": "Hadoop ecosystem with Hive suggests data lake patterns using HDFS rather than modern data warehouses",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.95,
+        "evidence": "Explicitly states 'Looking for locals only for onsite' requiring candidates to be local to Atlanta, GA area",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.68,
+        "evidence": "Located in Atlanta, GA (US) with local requirement, suggesting US work authorization focus",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.88,
+        "evidence": "Looking for locals only implies candidates should already be in the Atlanta area, no relocation assistance mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.92,
+        "evidence": "No visa sponsorship mentioned and 'locals only' requirement suggests preference for established US work authorization",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Looking for locals only and no mention of student visa support suggests established work authorization required",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.85,
+        "evidence": "Locals only requirement implies US work authorization needed but no specific citizenship requirement stated",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.92,
+        "evidence": "Full-time permanent employment type strongly suggests W2 employee status rather than contractor arrangement",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits, equity, learning budget, conference budget, or PTO policy mentioned in job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No mention of career growth, advancement opportunities, or development programs in the job description",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "No mention of mentorship programs, working with senior staff, or learning opportunities",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of promotion opportunities, advancement paths, or career progression",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers, role changes, or mobility opportunities",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No mention of career tracks, IC paths, management paths, or specialist tracks",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.78,
+        "evidence": "All listed skills (Data Engineering, Palantir Foundry, Hadoop, Hive, PySpark) are must-haves with no nice-to-have skills mentioned",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.88,
+        "evidence": "Focused job description for Senior Data Engineer role with specific technical requirements, not a multi-role hybrid position",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "8-10 years experience requirement is appropriate for senior level, and skills mentioned are reasonable for data engineering role",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

@@ -1,0 +1,240 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.85,
+        "evidence": "Mentions 'newly developing AI Competence Center' and hybrid focus on AI/ML and data pipelines, but no explicit signals of mature governance or optimization practices.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.85,
+        "evidence": "Score of 3 aligns with 'defined' maturity level. The role mentions structured AI/ML projects and integration into business processes, but lacks explicit governance or advanced patterns like data mesh.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption", "data_governance"],
+        "confidence": 0.85,
+        "evidence": "Explicit mention of Azure services (Azure ML, Microsoft Fabric) and Azure DevOps suggests adoption of modern tools. Data governance, privacy, and ethical AI practices are mentioned, indicating awareness of governance.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.3,
+        "confidence": 0.9,
+        "evidence": "Role is primarily focused on AI/ML data engineering but includes collaboration with business stakeholders and data governance, suggesting some scope expansion but within reasonable bounds.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.8,
+        "evidence": "Hybrid work model and five weeks of paid vacation are protective factors, but 'newly developing' and 'AI Competence Center' may imply moderate startup pace and time pressure.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.9,
+        "evidence": "Responsibilities are well-defined: data transformation for AI/ML, model deployment, automation, collaboration, and governance.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.85,
+        "evidence": "Composite score considering moderate scope creep (0.3), startup pace (0.4), and clear role definition. No severe red flags but some concerns about workload and pace.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.7,
+        "evidence": "Mentions 'under AI Tech Lead' but does not specify exact reporting hierarchy or manager title.",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "tech_lead",
+        "confidence": 0.8,
+        "evidence": "Role mentions reporting to an 'AI Tech Lead', which aligns with the 'tech_lead' manager level.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "rapid_expansion",
+        "confidence": 0.8,
+        "evidence": "AI Competence Center is 'newly developing' and the role is part of team expansion efforts.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "small_2_5",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.6,
+        "evidence": "AI Competence Center is described as 'newly developing', suggesting a small team. No explicit count of data engineers or seniority mix provided.",
+        "source": "inferred"
+      },
+      "reporting_structure": {
+        "value": "reports_to_tech_lead",
+        "confidence": 0.8,
+        "evidence": "Role explicitly mentions being 'under AI Tech Lead'.",
+        "source": "explicit"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions collaborating with business stakeholders and integrating AI into real-world business processes, suggesting cross-functional embedding.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.7,
+        "confidence": 0.85,
+        "evidence": "Five weeks of paid vacation and hybrid work model are strong positive signals. No negative signals like on-call or overtime mentioned.",
+        "source": "pass1_derived"
+      },
+      "growth_opportunities_score": {
+        "value": 0.8,
+        "confidence": 0.8,
+        "evidence": "Internal and external trainings, certifications, and workshops are mentioned. Role emphasizes continuous learning and innovation.",
+        "source": "explicit"
+      },
+      "tech_culture_score": {
+        "value": 0.75,
+        "confidence": 0.8,
+        "evidence": "Modern cloud stack (Azure ML, Microsoft Fabric) and focus on automation, but no explicit mentions of advanced dev practices like TDD or design docs.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["internal_oss", "conference_speaking"],
+        "confidence": 0.7,
+        "evidence": "Mentions 'internal trainings' and 'workshops', which may imply internal open-source culture. No explicit signals for open-source contributions, but 'certifications' and 'workshops' suggest a focus on skill development and innovation.",
+        "source": "inferred"
+      },
+      "dev_practices_mentioned": {
+        "value": ["ci_cd", "monitoring"],
+        "confidence": 0.8,
+        "evidence": "Azure DevOps is mentioned, which implies CI/CD practices. Monitoring is implied through 'deploy and monitor AI models'.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.7,
+        "evidence": "Role mentions 'staying curious about new technologies' and 'continuous learning', but no explicit R&D time or experimentation culture stated.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit mentions of tech debt management, refactoring, or legacy system modernization.",
+        "source": "inferred"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "mlops",
+        "confidence": 0.85,
+        "evidence": "Role explicitly mentions deploying and monitoring AI models on Azure, automating workflows, and integrating APIs, which aligns with MLOps focus.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": ["Azure ML"],
+        "confidence": 0.9,
+        "evidence": "Azure ML is explicitly mentioned in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.0,
+        "evidence": "No explicit urgency signals like 'immediate start' or 'ASAP'.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.7,
+        "evidence": "Hybrid role in Prague (not a high-competition location like SF/NYC), but no salary disclosure or premium benefits may reduce competition. No explicit application count or Easy Apply signals.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "growth_stage",
+        "confidence": 0.7,
+        "evidence": "Company is established (Mattoni 1873) but is expanding into AI/ML with a 'newly developing AI Competence Center', suggesting growth-stage initiatives.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "Role is part of a 'newly developing AI Competence Center', implying steady hiring for team expansion rather than aggressive scaling.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "small_2_5",
+        "confidence": 0.8,
+        "evidence": "AI Competence Center is described as 'newly developing', suggesting a small team. No explicit team size mentioned beyond the broader Mattoni Digital team.",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.0,
+        "evidence": "No funding stage signals (e.g., bootstrapped, seed, series A/B, public) mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.85,
+        "evidence": "Role is part of a 'newly developing AI Competence Center', indicating expansion of the existing data team to support AI/ML initiatives.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "learning_opportunities", "remote_friendly", "work_life_balance", "data_focused_role"],
+    "strength_details": [
+      "Modern AI/ML and cloud stack (Azure ML, Microsoft Fabric) with hands-on deployment and automation work.",
+      "Strong focus on continuous learning with internal/external trainings, certifications, and workshops.",
+      "Hybrid work model and flexible working hours provide good work-life balance signals.",
+      "Five weeks of paid vacation is generous and aligns with European standards.",
+      "Role is clearly data-focused with opportunities to work on AI/ML integration from conception to deployment."
+    ],
+    "concern_categories": ["scope_creep_risk", "unclear_reporting", "startup_risk", "no_visa_sponsorship"],
+    "concern_details": [
+      "Role combines data engineering, AI/ML deployment, and business collaboration, which may lead to scope creep if not managed well.",
+      "Reporting structure is vague - mentions 'under AI Tech Lead' but no clarity on broader hierarchy or team composition.",
+      "AI Competence Center is 'newly developing', which may imply some startup risk or instability in projects and priorities.",
+      "No visa sponsorship mentioned, and role requires fluency in Czech/Slovak, limiting opportunities for non-local candidates."
+    ],
+    "best_fit_categories": ["ml_engineers", "mid_level_engineers", "analytics_engineers", "technical_specialists"],
+    "best_fit_details": [
+      "Mid-level engineers with 1-3 years of experience in AI/ML model deployment and data pipeline automation.",
+      "Candidates with a background in MLOps or analytics engineering looking to specialize in Azure-based AI/ML solutions.",
+      "Technical specialists who enjoy cross-functional collaboration and have strong Python/SQL skills."
+    ],
+    "probe_categories": ["role_scope_boundaries", "team_size_composition", "career_growth_path", "tech_debt_situation", "success_metrics"],
+    "probe_details": [
+      "Ask for clarity on the reporting structure: Who will be your direct manager, and how does the AI Competence Center fit into the broader organization?",
+      "Probe about the team composition: How many data engineers are currently in the AI Competence Center, and what is the seniority mix?",
+      "Understand the boundaries of the role: How much time is expected to be spent on data engineering vs. AI model deployment vs. stakeholder collaboration?",
+      "Inquire about success metrics for the role: How will your contributions be measured, and what are the KPIs for the AI Competence Center?",
+      "Ask about tech debt and legacy systems: Are there existing data pipelines or AI models that need modernization, and how is tech debt managed?"
+    ],
+    "leverage_categories": ["domain_expertise", "exact_experience_match", "quick_availability"],
+    "leverage_details": [
+      "Candidates with experience in AI/ML model deployment (especially LLMs or Computer Vision) and Azure ML/Fabric can leverage this as a rare skill match.",
+      "Mid-level engineers with exactly 1+ years of hands-on AI/ML experience may have strong negotiation leverage.",
+      "If you are fluent in Czech/Slovak and available to start quickly, this can be a key differentiator in negotiations."
+    ],
+    "overall_assessment": "This role is a strong opportunity for mid-level AI/ML or data engineers looking to work in a newly developing AI Competence Center with a modern Azure-based stack. The hybrid work model, flexible hours, and generous PTO are excellent for work-life balance. However, candidates should clarify role boundaries, reporting structure, and long-term stability due to the startup-like nature of the AI initiative.",
+    "recommendation_score": 0.7,
+    "recommendation_confidence": 0.85
+  }
+}
+```

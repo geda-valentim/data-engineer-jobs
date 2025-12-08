@@ -1,0 +1,282 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 00:24:33",
+    "job_posting_id": "4342432684",
+    "job_title": "Data Modeler_W2_ Sacramento CA",
+    "company_name": "Chelsoft Solutions Co.",
+    "job_location": "Sacramento, CA",
+    "pass_name": "pass3",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 2,
+          "confidence": 0.75,
+          "evidence": "Heavy reliance on Oracle tools (ADW, ER/Studio) with no mention of modern data stack (dbt, Airflow, Snowflake), CI/CD, or data quality testing tools. Focus on dimensional modeling and ETL suggests developing practices.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "developing",
+          "confidence": 0.75,
+          "evidence": "Matches score of 2 - basic pipelines with Oracle tools, no modern governance or quality monitoring mentioned.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "cloud_native"
+          ],
+          "confidence": 0.7,
+          "evidence": "Oracle Autonomous Data Warehouse (ADW) in OCI environment indicates cloud-native architecture, but no other modern maturity signals present.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.25,
+          "confidence": 0.85,
+          "evidence": "Focused on data modeling, ETL, and data warehouse implementation with clear responsibilities. No conflation with ML, DevOps, or frontend roles.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.45,
+          "confidence": 0.7,
+          "evidence": "Contract role with 10+ years experience requirement suggests high expectations; no PTO or work-life balance signals mentioned. Hybrid work (2 days in office) may indicate some flexibility.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "Well-defined responsibilities centered on data modeling, dimensional modeling, ETL, and mentoring. No vague or multi-role descriptions.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.35,
+          "confidence": 0.75,
+          "evidence": "Moderate risk due to contract nature, high experience requirement, and lack of benefits/work-life balance signals. Role itself is well-defined with no scope creep.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No information about reporting manager or team structure in job posting.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No managerial titles or reporting structure mentioned in job description.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "unknown",
+          "confidence": 0.8,
+          "evidence": "No information about team size, growth trajectory, or hiring velocity in job posting.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.95,
+          "evidence": "No details about team size or composition provided in job description.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No information about reporting lines or organizational structure in job posting.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of embedded work with product teams or cross-functional collaboration beyond standard stakeholder interaction.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.45,
+          "confidence": 0.75,
+          "evidence": "No PTO, unlimited time off, or work-life balance signals mentioned. Contract role with hybrid work (2 days in office) suggests some flexibility but no protective factors.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.35,
+          "confidence": 0.8,
+          "evidence": "No mention of learning budget, conferences, mentorship programs, or career paths. Mentoring team members is mentioned but not as a formal growth opportunity.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.5,
+          "confidence": 0.75,
+          "evidence": "Oracle-centric stack with no mention of modern engineering practices (CI/CD, code review, testing). Focus on traditional data warehousing rather than innovation.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.95,
+          "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.95,
+          "evidence": "No explicit mention of code review, CI/CD, monitoring, incident response, or other development practices.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.75,
+          "evidence": "Focus on traditional data warehousing and dimensional modeling with no mention of experimentation, R&D, or new technology exploration.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of tech debt management, refactoring, or code quality improvement initiatives.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.95,
+          "evidence": "No mention of ML, AI, or GenAI in job description. Focus is entirely on data modeling and warehousing.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No ML tools mentioned in requirements or nice-to-haves.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No mention of immediate start, ASAP, or urgent hiring needs.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Contract role with 10+ years experience requirement may limit applicant pool, but location (Sacramento, CA) and hybrid work may attract candidates. No application count available.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "established_tech",
+          "confidence": 0.75,
+          "evidence": "Contract role with state/government experience requirement suggests established organization rather than startup. Oracle-centric stack also indicates established enterprise environment.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "replacement",
+          "confidence": 0.7,
+          "evidence": "Contract role with specific experience requirements suggests backfill or replacement rather than aggressive expansion.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No information about team size or composition provided in job description.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No information about funding stage or financial status in job posting.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "backfill",
+          "confidence": 0.75,
+          "evidence": "Contract role with specific experience requirements and state/government focus suggests replacement rather than new headcount or team expansion.",
+          "source": "inferred"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "well_defined_role",
+        "data_focused_role",
+        "established_company",
+        "cloud_native"
+      ],
+      "strength_details": [
+        "Clear, focused data modeling role with specific responsibilities",
+        "Oracle Cloud (OCI/ADW) experience required - cloud-native environment",
+        "Established organization with state/government experience requirement"
+      ],
+      "concern_categories": [
+        "vague_requirements",
+        "salary_not_disclosed",
+        "no_visa_sponsorship",
+        "overtime_likely",
+        "limited_growth"
+      ],
+      "concern_details": [
+        "Salary not disclosed - contract role with hourly pay may be below market",
+        "No visa sponsorship mentioned - US work authorization required",
+        "Limited growth opportunities - no career path or learning budget mentioned",
+        "Contract role with 10+ years experience may indicate high expectations and potential overtime"
+      ],
+      "best_fit_categories": [
+        "senior_data_engineers",
+        "data_warehouse_specialists",
+        "oracle_specialists",
+        "contract_workers"
+      ],
+      "best_fit_details": [
+        "Senior data modelers with 10+ years experience in Oracle environments",
+        "Candidates with state/government data warehousing experience",
+        "Contract workers seeking Oracle ADW/OCI projects"
+      ],
+      "probe_categories": [
+        "salary_range_details",
+        "visa_sponsorship_details",
+        "career_growth_path",
+        "team_size_composition",
+        "work_hour_expectations"
+      ],
+      "probe_details": [
+        "Ask about expected hourly rate or daily rate for contract position",
+        "Clarify if any visa sponsorship is available for non-US citizens",
+        "Inquire about team size and reporting structure",
+        "Understand expected work hours and any overtime requirements"
+      ],
+      "leverage_categories": [
+        "rare_skill_match",
+        "exact_experience_match",
+        "domain_expertise"
+      ],
+      "leverage_details": [
+        "10+ years experience with ER/Studio and Oracle ADW is a rare combination",
+        "State/government data warehousing experience is a valuable differentiator",
+        "Kimball Dimensional Modeling expertise is highly specialized"
+      ],
+      "overall_assessment": "Suitable for senior data modelers with Oracle ADW/OCI experience seeking contract work in government/state sector. Well-defined role with clear responsibilities but limited growth opportunities and no salary transparency. Contract nature and high experience requirement suggest potential for demanding work expectations.",
+      "recommendation_score": 0.55,
+      "recommendation_confidence": 0.75
+    },
+    "tokens": 12343,
+    "input_tokens": 9814,
+    "output_tokens": 2529,
+    "cost": 0.014872
+  }
+}

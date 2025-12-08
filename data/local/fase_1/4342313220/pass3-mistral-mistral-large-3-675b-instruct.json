@@ -1,0 +1,260 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 00:21:25",
+    "job_posting_id": "4342313220",
+    "job_title": "Data Engineer (모델링)",
+    "company_name": "MUSINSA 무신사",
+    "job_location": "Seoul, Seoul, South Korea",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 4,
+          "confidence": 0.85,
+          "evidence": "Job posting mentions modern data stack tools (Snowflake, dbt, Airflow, Dagster, Prefect) and practices (CI/CD, data quality testing, observability, and compliance). The focus on data governance and quality further supports a managed maturity level.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "managed",
+          "confidence": 0.85,
+          "evidence": "Matches the data_maturity_score of 4, with explicit mentions of data governance, quality tools, and modern stack adoption.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption",
+            "cicd_practices",
+            "data_quality_testing",
+            "data_governance"
+          ],
+          "confidence": 0.9,
+          "evidence": "Mentions Snowflake, dbt, Airflow, Dagster, Prefect (modern stack), CI/CD, data quality tools (Great Expectations, Soda), and data governance practices.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.2,
+          "confidence": 0.9,
+          "evidence": "Role is focused on data engineering with a clear emphasis on data modeling, pipelines, and infrastructure. No conflation with unrelated roles like backend/frontend or DevOps.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.4,
+          "confidence": 0.8,
+          "evidence": "Mentions 'fast-paced environment' and 'immediate need' but also implies a focus on data quality and governance, which suggests structured work. No explicit signals of long hours or on-call duties.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.95,
+          "evidence": "Job description outlines specific responsibilities such as data modeling, CDC pipelines, workflow management, and data quality testing.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.3,
+          "confidence": 0.85,
+          "evidence": "Low scope creep and moderate overtime risk due to startup pace, but strong maturity signals and governance practices mitigate concerns.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "vague",
+          "confidence": 0.7,
+          "evidence": "Original posting does not explicitly clarify reporting lines beyond mentioning collaboration with senior data engineers and cross-functional teams.",
+          "source": "inferred"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "No explicit mention of manager title or level in the job posting or Pass 2 inference.",
+          "source": "inferred"
+        },
+        "team_growth_velocity": {
+          "value": "steady_growth",
+          "confidence": 0.75,
+          "evidence": "Mentions 'data team expansion' and 'OCMP (One Core Multi Platform) strategy', suggesting planned but not rapid growth.",
+          "source": "inferred"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "medium_6_15",
+            "de_count": "5+ data engineers",
+            "seniority_mix": "senior and mid-level"
+          },
+          "confidence": 0.8,
+          "evidence": "Original posting mentions collaboration with senior data engineers and implies a broader data team of 8-15 members.",
+          "source": "inferred"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "No explicit reporting structure mentioned in the job posting or Pass 2 inference.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.75,
+          "evidence": "Original posting mentions collaboration with product teams and PMs, suggesting embedded cross-functional work.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.65,
+          "confidence": 0.75,
+          "evidence": "Mentions 'fast-paced environment' but does not discuss overtime or on-call. No explicit work-life balance signals beyond a probation period mention.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.8,
+          "confidence": 0.85,
+          "evidence": "Job posting emphasizes data modeling, pipeline modernization, and collaboration with senior engineers, implying growth opportunities. Pass 2 mentions 'implied growth path' and 'mentorship signals'.",
+          "source": "combined"
+        },
+        "tech_culture_score": {
+          "value": 0.85,
+          "confidence": 0.9,
+          "evidence": "Strong focus on modern data stack, CI/CD, testing, and governance. Mentions of code review and collaboration with senior engineers further support a robust tech culture.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "conference_speaking"
+          ],
+          "confidence": 0.7,
+          "evidence": "Pass 2 mentions 'implied mentorship' and 'growth path', while original posting discusses presenting successful cases, which may include conferences.",
+          "source": "inferred"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "code_review",
+            "ci_cd",
+            "data_quality_testing"
+          ],
+          "confidence": 0.9,
+          "evidence": "Original posting explicitly mentions code review, CI/CD, and data quality testing (Great Expectations, Soda).",
+          "source": "explicit"
+        },
+        "innovation_signals": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Mentions modernizing pipelines and adopting new tools (Dagster, Prefect), but no explicit signals of dedicated innovation time or hackathons.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": true,
+          "confidence": 0.85,
+          "evidence": "Original posting mentions 'modernizing legacy pipelines' and 'improving code quality', indicating awareness of tech debt.",
+          "source": "explicit"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.8,
+          "evidence": "No explicit mention of ML/AI tools or responsibilities in the job posting or Pass 1 extraction. Focus is on data engineering and modeling.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No ML/AI tools or frameworks mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "asap",
+          "confidence": 0.8,
+          "evidence": "Original posting mentions 'immediate need' and 'successful cases in the past' to drive current initiatives, suggesting urgency but not immediacy.",
+          "source": "inferred"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Location is Seoul (not a hyper-competitive market like SF/NYC), but the role requires a mix of senior and mid-level skills with a focus on modern tools, which may attract a moderate number of applicants.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "growth_stage",
+          "confidence": 0.8,
+          "evidence": "MUSINSA is a well-known Korean fashion platform with a data team of 8-15 engineers, suggesting a growth-stage company. The emphasis on modernization and governance aligns with scaling efforts.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.85,
+          "evidence": "Original posting mentions team expansion and collaboration with senior engineers, indicating planned growth rather than aggressive scaling.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "medium_6_15",
+          "confidence": 0.88,
+          "evidence": "Original posting mentions joining a team of 5+ data engineers within a broader data organization of 8-15 members.",
+          "source": "explicit"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit funding stage or signals mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "team_expansion",
+          "confidence": 0.85,
+          "evidence": "Original posting mentions 'data team expansion' and 'OCMP strategy', indicating this role is part of team growth rather than a backfill or new function.",
+          "source": "explicit"
+        }
+      }
+    },
+    "summary": {
+      "strengths": [
+        "Modern data stack adoption (Snowflake, dbt, Airflow, Dagster, Prefect) with a focus on data quality and governance",
+        "Clear, well-defined role scope with emphasis on data modeling and pipeline modernization",
+        "Tech debt awareness and structured development practices (CI/CD, code review)",
+        "Collaboration with senior engineers and cross-functional teams, offering mentorship opportunities",
+        "Growth-stage company with expanding data team, providing career development potential"
+      ],
+      "concerns": [
+        "Fast-paced environment may imply moderate overtime risk, though not explicitly stated",
+        "Work authorization required in South Korea, with no mention of visa sponsorship for international candidates",
+        "Seoul location may limit remote or hybrid flexibility, increasing competition for local candidates"
+      ],
+      "best_fit_for": [
+        "Data engineers with experience in data modeling and pipeline modernization (CDC, workflow managers)",
+        "Mid-to-senior level candidates comfortable with cross-functional collaboration and technical leadership",
+        "Professionals seeking a structured yet evolving data environment in a growth-stage company"
+      ],
+      "red_flags_to_probe": [
+        "Ask about actual work hours and whether overtime is common or compensated",
+        "Clarify the team's sprint cadence and how deadlines are managed in practice",
+        "Inquire about the company's approach to work authorization and visa support for non-Korean candidates",
+        "Understand the expected balance between batch and streaming workloads (e.g., Kafka/Flink vs. Airflow)"
+      ],
+      "negotiation_leverage": [
+        "Expertise in modern workflow managers (Dagster, Prefect) is a differentiator",
+        "Experience with data quality tools (Great Expectations, Soda) strengthens candidacy",
+        "Prior success in modernizing legacy pipelines or implementing CI/CD in data teams is valuable"
+      ],
+      "overall_assessment": "This role at MUSINSA is a strong opportunity for data engineers specializing in modeling and pipeline modernization, particularly those with experience in CDC and modern orchestrators. The company demonstrates mature data practices and tech debt awareness, though the fast-paced environment and Seoul location may require candidates to probe work-life balance and visa support during interviews.",
+      "recommendation_score": {
+        "value": 0.75,
+        "confidence": 0.85,
+        "evidence": "Balanced strengths (modern stack, role clarity, growth opportunities) with manageable concerns (moderate overtime risk, visa/work authorization requirements)."
+      }
+    },
+    "tokens": 17645,
+    "input_tokens": 14832,
+    "output_tokens": 2813,
+    "cost": 0.020458000000000004
+  }
+}

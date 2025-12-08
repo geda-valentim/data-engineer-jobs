@@ -1,0 +1,237 @@
+<reasoning>Let me analyze this job posting for AI Data Engineer at Mattoni 1873 in Prague, Czechia. I need to go through each inference category systematically.
+
+First, let me understand the role:
+- Title: AI Data Engineer
+- Location: Prague, Czechia
+- Experience: 1+ years
+- Focus: AI/ML model training, deployment, data pipelines
+- Cloud: Microsoft Azure
+- Languages: Czech/Slovak (fluent), English (advanced)
+
+Now let me work through each inference category:
+
+## SENIORITY AND ROLE
+
+### seniority_level
+- Title: "AI Data Engineer" (no "Senior" or "Junior" modifier)
+- Experience: 1+ years
+- Responsibilities: "Prepare and transform data", "Deploy and monitor AI models", "Automate workflows", "Collaborate with senior AI developer"
+- This suggests entry to mid-level, not senior
+- The person will be "collaborating with senior AI developer" which suggests they're not senior themselves
+- 1+ years is on the lower end
+- Confidence: This seems like "mid" level - not entry level (they have hands-on experience) but not senior (collaborating with seniors, only 1+ years)
+
+### job_family
+- Title explicitly says "AI Data Engineer"
+- Core responsibilities: data pipelines, AI model deployment, data transformation
+- This is clearly a data engineering role with AI/ML focus
+- Confidence: Very high - this is explicitly stated
+
+### sub_specialty
+- Focus on AI/ML model training and deployment
+- Azure ML, Microsoft Fabric mentioned
+- API integration
+- This seems like "ml_infra" or "mlops" - infrastructure for ML models
+- Not specifically streaming or batch ETL
+- Confidence: Medium-high for "ml_infra"
+
+### leadership_expectation
+- No mention of direct reports
+- Collaborating with senior AI developer (not leading them)
+- No mention of mentoring others
+- This is clearly "ic" - individual contributor with no leadership responsibilities
+- Confidence: High
+
+## STACK AND CLOUD
+
+
+I'll focus on the cloud infrastructure and technical approach. The role is heavily Azure-centric, with clear ML infrastructure and deployment focus. The primary cloud is definitively Azure, with no secondary cloud platforms mentioned. The processing approach appears hybrid, combining both batch and streaming data handling. The orchestrator category leans towards cloud-native solutions, specifically Azure DevOps and Microsoft Fabric. The storage layer seems to be a mixed approach, leveraging Azure's data warehouse and lake capabilities.
+
+## GEO AND WORK MODEL
+The role offers a hybrid work model with flexibility in Prague. No specific timezone restrictions are mentioned, and relocation isn't required since the position is already based in Prague. The work arrangement allows for both remote and in-office work, providing candidates with a balanced approach to employment.
+
+## VISA AND AUTHORIZATION
+The job posting lacks explicit details about visa sponsorship or specific work authorization requirements. The language requirements suggest local or EU candidates would be preferred, with Czech/Slovak fluency being a key requirement. No clear indication of international visa support is provided.
+
+## CONTRACT AND COMPENSATION
+The position appears to be a standard full-time employment arrangement, likely using a W2 contract type. The benefits package seems comprehensive, including flexible working hours, hybrid work options, extensive vacation time, and additional perks like meal allowances and professional development opportunities.
+
+## CAREER DEVELOPMENT
+The role offers clear growth potential with internal and external training, certifications, and workshops. While no explicit mentorship program is mentioned, the collaborative environment suggests opportunities for learning from senior team members. The company emphasizes continuous learning and innovation, providing a supportive environment for professional advancement.
+
+The promotion path remains somewhat ambiguous, with no direct mention of advancement opportunities. Internal mobility is not explicitly discussed, leaving the career trajectory open to interpretation.
+
+## REQUIREMENTS CLASSIFICATION
+The job requirements strike a balance between essential and preferred qualifications. The role has a clear, focused scope centered on AI data engineering, with a realistic skill set that aligns with the position's technical demands. The expectations appear reasonable and aligned with industry standards for mid-level AI engineering roles.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.75,
+        "evidence": "Title is 'AI Data Engineer' without senior/junior modifier, 1+ years experience, collaborating with senior AI developer suggests not senior level",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "mlops_engineer",
+        "confidence": 0.92,
+        "evidence": "Title explicitly 'AI Data Engineer', core focus on AI/ML model deployment, monitoring, and infrastructure rather than traditional data engineering",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "ml_infra",
+        "confidence": 0.82,
+        "evidence": "Focus on AI/ML model training, deployment on Azure ML, Microsoft Fabric, and infrastructure for AI workflows",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.88,
+        "evidence": "No mention of direct reports, mentoring, or team leadership; collaborating with senior AI developer suggests individual contributor role",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.95,
+        "evidence": "Multiple Azure services explicitly mentioned: Azure ML, Microsoft Fabric, Azure DevOps, Azure services",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "Only Azure services mentioned, no other cloud providers referenced",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.78,
+        "evidence": "AI model training (batch processing) combined with model deployment and monitoring (potentially real-time), automation workflows",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.85,
+        "evidence": "Azure DevOps and Microsoft Fabric mentioned as orchestration tools, both are cloud-native Azure services",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.75,
+        "evidence": "Microsoft Fabric suggests data warehouse capabilities, while AI/ML workflows often involve data lake patterns for model training data",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.82,
+        "evidence": "Hybrid work model with Prague office location, requires being in Prague metro area (Palmovka metro station mentioned)",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "europe",
+        "confidence": 0.88,
+        "evidence": "Prague, Czechia location with Czech/Slovak language requirement suggests European timezone focus",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Hybrid work model allows flexibility, no mention of relocation assistance or requirements",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned, Czech/Slovak language requirement suggests local/EU candidates preferred",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No mention of student visa support, language requirements suggest work authorization in Czechia/EU required",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.75,
+        "evidence": "Czech/Slovak fluency required suggests work authorization in Czechia needed, but no explicit citizenship requirement",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.88,
+        "evidence": "Full-time position with comprehensive benefits package suggests traditional employment (W2 equivalent in Czechia)",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.90,
+        "evidence": "Extensive benefits: 5 weeks vacation, meal allowance, pension contributions, insurance, training, certifications, multisport card, flexible hours",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.78,
+        "evidence": "Mentions focus on development, internal/external trainings, certifications, workshops, and continuous learning opportunities",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Collaborating with senior AI developer mentioned, part of developing AI Competence Center suggests learning from experienced team",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No explicit promotion or advancement path mentioned, focus is on skill development and training",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers, role changes, or mobility opportunities",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.70,
+        "evidence": "Focus on technical skills development, AI/ML expertise building suggests IC track, no management track mentioned",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.78,
+        "evidence": "Clear distinction between must-haves (Python, SQL, Azure, 1+ years) and nice-to-haves (Computer Vision), balanced requirements",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.88,
+        "evidence": "Focused AI Data Engineer role with specific responsibilities: data prep, model deployment, automation, clear scope",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.82,
+        "evidence": "Reasonable skill requirements for 1+ years experience: Python, SQL, Azure services, AI model experience aligns with mid-level expectations",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

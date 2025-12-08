@@ -1,0 +1,250 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 00:10:05",
+    "job_posting_id": "4342323073",
+    "job_title": "Software & Data Engineer - Palantir Foundry",
+    "company_name": "Ursa Major",
+    "job_location": "Berthoud, CO",
+    "pass_name": "pass3",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 2,
+          "confidence": 0.75,
+          "evidence": "Focus on Palantir Foundry for data pipelines and ontology suggests structured data practices, but no mention of modern data stack tools (dbt, Airflow, Snowflake), CI/CD, or data quality testing. Limited signals of governance or monitoring.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "developing",
+          "confidence": 0.75,
+          "evidence": "Matches score of 2 - basic pipelines and platform usage (Foundry) but no advanced practices mentioned.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption"
+          ],
+          "confidence": 0.7,
+          "evidence": "Palantir Foundry is a modern data platform, but no other modern stack tools (dbt, Airflow, etc.) mentioned. No CI/CD, testing, or governance signals.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.1,
+          "confidence": 0.9,
+          "evidence": "Role is clearly defined as Software & Data Engineer focused on Palantir Foundry - no conflation with data science, analytics, or DevOps responsibilities.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.4,
+          "confidence": 0.75,
+          "evidence": "Startup environment in aerospace/defense with 'accelerate how we design, build, and test' language suggests fast pace, but unlimited PTO and no on-call mentioned mitigate risk.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.95,
+          "evidence": "Specific responsibilities listed: design pipelines, develop ontology, configure integrations, document data logic - all focused on Foundry platform.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.25,
+          "confidence": 0.8,
+          "evidence": "Low risk - well-defined role with clear responsibilities, good benefits (unlimited PTO, equity), but startup pace and security clearance requirement add moderate risk.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "mentioned",
+          "confidence": 0.85,
+          "evidence": "Mentions collaborating with Product Owner and other Software & Data Engineers, but no specific manager or reporting line stated.",
+          "source": "inferred"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No manager title or level mentioned in job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "steady_growth",
+          "confidence": 0.75,
+          "evidence": "Mentions 'growing our internal software capabilities' and 'accelerate how we design, build, and test' suggesting expansion, but no specific growth metrics.",
+          "source": "inferred"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.65,
+          "evidence": "Mentions 'other Software & Data Engineers' but no team size or seniority mix specified.",
+          "source": "inferred"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No reporting structure specified in job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "Mentions 'collaborate with the Product Owner and stakeholders and users' suggesting embedded work with product teams.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.7,
+          "confidence": 0.85,
+          "evidence": "Unlimited PTO, no on-call mentioned, but aerospace/defense startup context may imply pressure. No explicit work-life balance statements.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.6,
+          "confidence": 0.75,
+          "evidence": "Equity grants and 'exciting challenges' mentioned, but no learning budget, conference support, or career path clarity. Growth implied but not structured.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.65,
+          "confidence": 0.8,
+          "evidence": "Palantir Foundry is modern, but no mention of engineering practices (code review, CI/CD, testing). Focus on manufacturing/IoT data suggests domain-specific challenges.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.95,
+          "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "agile",
+            "not_mentioned"
+          ],
+          "confidence": 0.85,
+          "evidence": "Only 'agile-inspired development methodologies' mentioned. No code review, CI/CD, monitoring, or other practices specified.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.75,
+          "evidence": "Focus on implementing tools and processes within Foundry, with no mention of experimentation, R&D, or new tech exploration.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of tech debt, refactoring, or code quality improvement initiatives.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.95,
+          "evidence": "No ML/AI mentioned in job posting or Pass 1 extraction. Focus is on data pipelines and ontology within Foundry.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No ML tools (SageMaker, MLflow, etc.) mentioned in job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "normal",
+          "confidence": 0.85,
+          "evidence": "Posted for minimum of 3 days, 'remain open until filled' - standard hiring timeline with no urgency signals.",
+          "source": "inferred"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Colorado location (less competitive than SF/NYC), but aerospace/defense niche and Palantir Foundry specialization may limit applicant pool. No application count available.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "startup_series_a_b",
+          "confidence": 0.75,
+          "evidence": "Aerospace/defense startup with 'growing internal software capabilities' and equity grants, suggesting Series A/B stage. No explicit funding mentioned.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.8,
+          "evidence": "Mentions 'growing our internal software capabilities' and 'accelerate how we design, build, and test' suggesting ongoing hiring, but no aggressive expansion signals.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "small_2_5",
+          "confidence": 0.75,
+          "evidence": "Mentions 'other Software & Data Engineers' implying small team (2-5), but no exact size given. Aerospace/defense context suggests lean team.",
+          "source": "inferred"
+        },
+        "funding_stage_signals": {
+          "value": "series_a",
+          "confidence": 0.7,
+          "evidence": "Equity grants and growth focus suggest Series A funding, but no explicit funding stage mentioned.",
+          "source": "inferred"
+        },
+        "role_creation_type": {
+          "value": "new_headcount",
+          "confidence": 0.8,
+          "evidence": "Mentions 'growing our internal software capabilities' and 'accelerate how we design, build, and test' suggesting new role created for growth, not backfill.",
+          "source": "inferred"
+        }
+      }
+    },
+    "summary": {
+      "strengths": [
+        "Clear, focused role on Palantir Foundry with specific responsibilities",
+        "Strong benefits package including unlimited PTO and equity grants",
+        "Niche aerospace/defense domain with national security impact"
+      ],
+      "concerns": [
+        "Limited data maturity signals - no modern stack tools or engineering practices mentioned",
+        "US citizenship/permanent residency and security clearance required - restrictive for international candidates",
+        "Limited growth path clarity and no innovation/learning culture signals"
+      ],
+      "best_fit_for": [
+        "Mid-level data engineers (1-5 years) with Palantir Foundry experience",
+        "Candidates seeking aerospace/defense domain experience and national security impact",
+        "Engineers comfortable with onsite work in Colorado and security clearance requirements"
+      ],
+      "red_flags_to_probe": [
+        "Ask about actual team size and seniority mix of the data engineering team",
+        "Understand the sprint cadence and deadline pressure in aerospace/defense context",
+        "Clarify if there are opportunities for skill development beyond Foundry platform"
+      ],
+      "negotiation_leverage": [
+        "Palantir Foundry expertise is specialized and valuable in aerospace/defense sector",
+        "Manufacturing/IoT data experience is a differentiator for this role",
+        "Equity grants and unlimited PTO are strong negotiation points"
+      ],
+      "overall_assessment": "Solid opportunity for mid-level data engineers seeking specialized Palantir Foundry experience in aerospace/defense. Clear role with good benefits, but limited data maturity signals and growth path clarity. Main trade-offs are location requirement, security clearance, and narrow tech stack focus.",
+      "recommendation_score": 0.65,
+      "recommendation_confidence": 0.8
+    },
+    "tokens": 11900,
+    "input_tokens": 9385,
+    "output_tokens": 2515,
+    "cost": 0.014415
+  }
+}

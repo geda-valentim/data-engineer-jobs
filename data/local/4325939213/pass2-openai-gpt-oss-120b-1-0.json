@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2025-12-07 07:20:58",
+    "timestamp": "2025-12-07 23:19:16",
     "job_posting_id": "4325939213",
     "job_title": "Senior Data Engineer (SQL, Python, Snowflake)",
     "company_name": "Tata Consultancy Services",
@@ -14,57 +14,57 @@
         "seniority_level": {
           "value": "senior",
           "confidence": 0.95,
-          "evidence": "Title includes 'Senior' and 8+ years of experience required (ext_years_experience_min).",
+          "evidence": "Title includes 'Senior' and 8+ years of experience required",
           "source": "combined"
         },
         "job_family": {
           "value": "data_engineer",
           "confidence": 0.98,
-          "evidence": "Title 'Senior Data Engineer' and responsibilities focus on SQL, Python, pipelines, Snowflake.",
+          "evidence": "Title and responsibilities focus on SQL, Python, data pipelines and Snowflake",
           "source": "pass1_derived"
         },
         "sub_specialty": {
-          "value": "batch_etl",
+          "value": "data_warehouse",
           "confidence": 0.8,
-          "evidence": "Job mentions data pipeline creation and Snowflake but no streaming technologies; implies batch ETL work.",
+          "evidence": "Snowflake is explicitly mentioned, which is a cloud data warehouse platform",
           "source": "inferred"
         },
         "leadership_expectation": {
           "value": "ic",
-          "confidence": 0.85,
-          "evidence": "No mention of people‑management or tech‑lead duties; only individual contributor responsibilities listed.",
-          "source": "inferred"
+          "confidence": 0.9,
+          "evidence": "No mention of people‑management or technical‑lead responsibilities",
+          "source": "pass1_derived"
         }
       },
       "stack_and_cloud": {
         "primary_cloud": {
           "value": "not_mentioned",
           "confidence": 0.95,
-          "evidence": "No cloud provider (AWS, Azure, GCP) is referenced in the posting.",
+          "evidence": "Job posting does not reference any cloud provider (AWS, Azure, GCP, etc.)",
           "source": "pass1_derived"
         },
         "secondary_clouds": {
           "value": [],
           "confidence": 0.95,
-          "evidence": "No other cloud platforms are mentioned.",
+          "evidence": "No other cloud platforms are mentioned",
           "source": "pass1_derived"
         },
         "processing_paradigm": {
           "value": "batch",
-          "confidence": 0.75,
-          "evidence": "Focus on data pipeline creation and Snowflake suggests batch processing; no streaming tools are listed.",
+          "confidence": 0.7,
+          "evidence": "Only generic 'data pipeline creation' is mentioned; no streaming technologies are listed",
           "source": "inferred"
         },
         "orchestrator_category": {
           "value": "not_mentioned",
           "confidence": 0.95,
-          "evidence": "No orchestration technology (Airflow, dbt, etc.) is cited.",
+          "evidence": "No orchestration tool (Airflow, Luigi, etc.) is referenced",
           "source": "pass1_derived"
         },
         "storage_layer": {
           "value": "warehouse",
           "confidence": 0.9,
-          "evidence": "Snowflake is a cloud data warehouse solution.",
+          "evidence": "Snowflake is a data warehouse solution",
           "source": "pass1_derived"
         }
       },
@@ -72,39 +72,39 @@
         "remote_restriction": {
           "value": "same_region",
           "confidence": 0.85,
-          "evidence": "Location is specified as Cupertino, CA with no remote option mentioned, implying work in the same Bay Area region.",
-          "source": "combined"
+          "evidence": "Location is specified as Cupertino, CA with no remote work language",
+          "source": "pass1_derived"
         },
         "timezone_focus": {
           "value": "specific_country",
           "confidence": 0.85,
-          "evidence": "Job is located in the United States; therefore the focus is on US time zones.",
+          "evidence": "Job is tied to a US city (Cupertino, CA); no broader timezone mention",
           "source": "pass1_derived"
         },
         "relocation_required": {
           "value": false,
-          "confidence": 0.6,
-          "evidence": "The posting does not state a relocation requirement; only a specific city is listed.",
-          "source": "inferred"
+          "confidence": 0.9,
+          "evidence": "No relocation requirement is stated in the posting",
+          "source": "pass1_derived"
         }
       },
       "visa_and_authorization": {
         "h1b_friendly": {
           "value": false,
-          "confidence": 0.6,
-          "evidence": "Visa sponsorship is not mentioned in the posting.",
+          "confidence": 0.9,
+          "evidence": "Visa sponsorship is not mentioned",
           "source": "pass1_derived"
         },
         "opt_cpt_friendly": {
           "value": false,
-          "confidence": 0.6,
-          "evidence": "No reference to OPT/CPT eligibility.",
+          "confidence": 0.9,
+          "evidence": "No reference to OPT/CPT eligibility",
           "source": "pass1_derived"
         },
         "citizenship_required": {
           "value": "not_mentioned",
           "confidence": 0.9,
-          "evidence": "No citizenship or work‑authorization constraints are provided.",
+          "evidence": "No citizenship or work‑authorization restrictions are provided",
           "source": "pass1_derived"
         }
       },
@@ -112,13 +112,13 @@
         "w2_vs_1099": {
           "value": "not_mentioned",
           "confidence": 0.9,
-          "evidence": "Employment type and contract type are listed as 'not_mentioned'.",
+          "evidence": "Employment type (W2, C2C, 1099) is not specified",
           "source": "pass1_derived"
         },
         "benefits_level": {
           "value": "none_mentioned",
           "confidence": 0.9,
-          "evidence": "Benefits array is empty; no perks are described.",
+          "evidence": "No benefits (health, PTO, equity, etc.) are listed",
           "source": "pass1_derived"
         }
       },
@@ -126,58 +126,58 @@
         "growth_path_clarity": {
           "value": "not_mentioned",
           "confidence": 0.9,
-          "evidence": "The description does not discuss career progression or growth tracks.",
+          "evidence": "Posting does not discuss career progression or growth paths",
           "source": "pass1_derived"
         },
         "mentorship_signals": {
           "value": "not_mentioned",
           "confidence": 0.9,
-          "evidence": "No mentorship or coaching language appears in the posting.",
+          "evidence": "No mentorship program or mentorship language is present",
           "source": "pass1_derived"
         },
         "promotion_path_mentioned": {
           "value": false,
           "confidence": 0.9,
-          "evidence": "No mention of promotion or advancement pathways.",
+          "evidence": "No mention of promotion or advancement opportunities",
           "source": "pass1_derived"
         },
         "internal_mobility_mentioned": {
           "value": false,
           "confidence": 0.9,
-          "evidence": "No reference to internal transfers or mobility.",
+          "evidence": "No reference to internal transfers or mobility",
           "source": "pass1_derived"
         },
         "career_tracks_available": {
           "value": [],
           "confidence": 0.9,
-          "evidence": "No career tracks (IC, management, specialist, architect) are described.",
+          "evidence": "No career track options (IC, management, specialist, architect) are described",
           "source": "pass1_derived"
         }
       },
       "requirements_classification": {
         "requirement_strictness": {
-          "value": "high",
-          "confidence": 0.85,
-          "evidence": "Explicit requirement of 8+ years and specific hard skills (SQL, Python, pipelines, Snowflake); only one soft skill listed as nice‑to‑have.",
-          "source": "combined"
+          "value": "medium",
+          "confidence": 0.8,
+          "evidence": "Clear must‑have hard skills and 8+ years; only one nice‑to‑have soft skill listed",
+          "source": "pass1_derived"
         },
         "scope_definition": {
           "value": "clear",
           "confidence": 0.9,
-          "evidence": "Job description is narrowly focused on data engineering tasks without mixing other roles.",
+          "evidence": "Job description is focused solely on data engineering responsibilities",
           "source": "pass1_derived"
         },
         "skill_inflation_detected": {
           "value": false,
           "confidence": 0.9,
-          "evidence": "The skill set aligns with expectations for a senior data engineer with 8+ years of experience.",
-          "source": "inferred"
+          "evidence": "Skill set (SQL, Python, pipelines, Snowflake) aligns with expectations for a senior data engineer with 8+ years",
+          "source": "pass1_derived"
         }
       }
     },
-    "tokens": 9203,
-    "input_tokens": 5455,
-    "output_tokens": 3748,
-    "cost": 0.00194265
+    "tokens": 8993,
+    "input_tokens": 5497,
+    "output_tokens": 3496,
+    "cost": 0.0018733499999999998
   }
 }

@@ -36,16 +36,28 @@ def test_pass3_analysis(
     date: Optional[str] = None,
     limit: int = 5,
     use_cache: bool = False,
-    save_json: bool = False
+    save_json: bool = False,
+    preloaded_jobs: Optional[List[Dict[str, Any]]] = None,
+    preloaded_partition_info: Optional[Dict[str, Any]] = None
 ):
-    """Test Pass 3 complex analysis using Pass 1 + Pass 2 results (use cache to skip previous passes if available)."""
+    """Test Pass 3 complex analysis using Pass 1 + Pass 2 results (use cache to skip previous passes if available).
+
+    Args:
+        preloaded_jobs: Optional pre-loaded jobs to avoid repeated S3 calls (for multiple model testing)
+        preloaded_partition_info: Optional partition info from pre-loaded jobs
+    """
     print("\n" + "=" * 120)
     print("Testing Pass 3 Complex Analysis")
     print("=" * 120)
 
-    # Load jobs from S3 or use hardcoded mocks
-    partition_info = None
-    if use_s3:
+    # Use pre-loaded jobs if provided, otherwise load from S3 or use mocks
+    partition_info = preloaded_partition_info
+    if preloaded_jobs is not None:
+        linkedin_jobs = preloaded_jobs
+        print(f"\nUsing {len(linkedin_jobs)} pre-loaded jobs")
+        if partition_info:
+            print(f"  Partition: {partition_info['year']}-{partition_info['month']}-{partition_info['day']} Hour {partition_info['hour']}")
+    elif use_s3:
         print("\nLoading jobs from S3 bucket...")
         if date:
             print(f"  Date: {date} (latest hour)")
@@ -115,24 +127,26 @@ def test_pass3_analysis(
             # === PASS 1: Extraction ===
             print(f"\n→ Pass 1 (Extraction)...", end=" ")
 
-            if use_cache:
-                cached_pass1 = load_from_cache(job, model_pass1, "pass1")
-                if cached_pass1 and cached_pass1.get('pass1_success'):
-                    pass1_result = cached_pass1
-                    print("✓ (from cache)")
-                    pass1_from_cache = True
-                    pass1_cache_hits += 1
-                else:
-                    pass1_cache_misses += 1
-                    pass1_result = enrich_single_job(job, bedrock_client=client)
-                    success = pass1_result.get('pass1_success', False)
-                    print("✓" if success else "✗")
-                    if success:
-                        save_to_cache(job, model_pass1, pass1_result, "pass1")
+            # Always check for existing results first to avoid re-running expensive LLM calls
+            cached_pass1 = load_from_cache(job, model_pass1, "pass1")
+            if cached_pass1 and cached_pass1.get('pass1_success'):
+                pass1_result = cached_pass1
+                print("✓ (cached)")
+                pass1_from_cache = True
+                pass1_cache_hits += 1
             else:
+                # No cache found, execute Pass 1
+                pass1_cache_misses += 1
                 pass1_result = enrich_single_job(job, bedrock_client=client)
                 success = pass1_result.get('pass1_success', False)
                 print("✓" if success else "✗")
+                # Save raw response for debugging (always, even on failure)
+                pass1_raw = pass1_result.pop('pass1_raw_response', None)
+                if pass1_raw:
+                    save_raw_response(job, "pass1", model_pass1, pass1_raw)
+                # Save to cache for future runs
+                if success:
+                    save_to_cache(job, model_pass1, pass1_result, "pass1")
 
             job_result["pass1_result"] = pass1_result
             job_result["pass1_from_cache"] = pass1_from_cache
@@ -150,36 +164,20 @@ def test_pass3_analysis(
             # === PASS 2: Inference ===
             print(f"→ Pass 2 (Inference)...", end=" ")
 
-            if use_cache:
-                cached_pass2 = load_from_cache(job, model_pass2, "pass2")
-                if cached_pass2:
-                    pass2_result_raw = cached_pass2.get('inference', cached_pass2)
-                    pass2_tokens = cached_pass2.get('tokens', 0)
-                    pass2_input_tokens = cached_pass2.get('input_tokens', 0)
-                    pass2_output_tokens = cached_pass2.get('output_tokens', 0)
-                    pass2_cost = cached_pass2.get('cost', 0.0)
-                    print("✓ (from cache)")
-                    pass2_from_cache = True
-                    pass2_cache_hits += 1
-                else:
-                    pass2_cache_misses += 1
-                    pass2_result_raw, pass2_tokens, pass2_input_tokens, pass2_output_tokens, pass2_cost, pass2_raw = execute_pass2(
-                        client, job, pass1_result
-                    )
-                    # Save raw response for debugging
-                    if pass2_raw:
-                        save_raw_response(job, "pass2", model_pass2, pass2_raw)
-                    print("✓" if pass2_result_raw else "✗")
-                    if pass2_result_raw:
-                        pass2_data = {
-                            "inference": pass2_result_raw,
-                            "tokens": pass2_tokens,
-                            "input_tokens": pass2_input_tokens,
-                            "output_tokens": pass2_output_tokens,
-                            "cost": pass2_cost,
-                        }
-                        save_to_cache(job, model_pass2, pass2_data, "pass2")
+            # Always check for existing results first to avoid re-running expensive LLM calls
+            cached_pass2 = load_from_cache(job, model_pass2, "pass2")
+            if cached_pass2:
+                pass2_result_raw = cached_pass2.get('inference', cached_pass2)
+                pass2_tokens = cached_pass2.get('tokens', 0)
+                pass2_input_tokens = cached_pass2.get('input_tokens', 0)
+                pass2_output_tokens = cached_pass2.get('output_tokens', 0)
+                pass2_cost = cached_pass2.get('cost', 0.0)
+                print("✓ (cached)")
+                pass2_from_cache = True
+                pass2_cache_hits += 1
             else:
+                # No cache found, execute Pass 2
+                pass2_cache_misses += 1
                 pass2_result_raw, pass2_tokens, pass2_input_tokens, pass2_output_tokens, pass2_cost, pass2_raw = execute_pass2(
                     client, job, pass1_result
                 )
@@ -187,6 +185,16 @@ def test_pass3_analysis(
                 if pass2_raw:
                     save_raw_response(job, "pass2", model_pass2, pass2_raw)
                 print("✓" if pass2_result_raw else "✗")
+                # Save to cache for future runs
+                if pass2_result_raw:
+                    pass2_data = {
+                        "inference": pass2_result_raw,
+                        "tokens": pass2_tokens,
+                        "input_tokens": pass2_input_tokens,
+                        "output_tokens": pass2_output_tokens,
+                        "cost": pass2_cost,
+                    }
+                    save_to_cache(job, model_pass2, pass2_data, "pass2")
 
             job_result["pass2_result"] = pass2_result_raw
             job_result["pass2_from_cache"] = pass2_from_cache
@@ -216,38 +224,21 @@ def test_pass3_analysis(
             # === PASS 3: Complex Analysis ===
             print(f"→ Pass 3 (Analysis)...", end=" ")
 
-            if use_cache:
-                cached_pass3 = load_from_cache(job, model_pass3, "pass3")
-                if cached_pass3:
-                    pass3_analysis_raw = cached_pass3.get('analysis', {})
-                    pass3_summary_raw = cached_pass3.get('summary', {})
-                    pass3_tokens = cached_pass3.get('tokens', 0)
-                    pass3_input_tokens = cached_pass3.get('input_tokens', 0)
-                    pass3_output_tokens = cached_pass3.get('output_tokens', 0)
-                    pass3_cost = cached_pass3.get('cost', 0.0)
-                    print("✓ (from cache)")
-                    pass3_from_cache = True
-                    pass3_cache_hits += 1
-                else:
-                    pass3_cache_misses += 1
-                    pass3_analysis_raw, pass3_summary_raw, pass3_tokens, pass3_input_tokens, pass3_output_tokens, pass3_cost, pass3_raw = execute_pass3(
-                        client, job, pass1_result, pass2_result_raw
-                    )
-                    # Save raw response for debugging
-                    if pass3_raw:
-                        save_raw_response(job, "pass3", model_pass3, pass3_raw)
-                    print("✓" if pass3_analysis_raw else "✗")
-                    if pass3_analysis_raw:
-                        pass3_data = {
-                            "analysis": pass3_analysis_raw,
-                            "summary": pass3_summary_raw,
-                            "tokens": pass3_tokens,
-                            "input_tokens": pass3_input_tokens,
-                            "output_tokens": pass3_output_tokens,
-                            "cost": pass3_cost,
-                        }
-                        save_to_cache(job, model_pass3, pass3_data, "pass3")
+            # Always check for existing results first to avoid re-running expensive LLM calls
+            cached_pass3 = load_from_cache(job, model_pass3, "pass3")
+            if cached_pass3:
+                pass3_analysis_raw = cached_pass3.get('analysis', {})
+                pass3_summary_raw = cached_pass3.get('summary', {})
+                pass3_tokens = cached_pass3.get('tokens', 0)
+                pass3_input_tokens = cached_pass3.get('input_tokens', 0)
+                pass3_output_tokens = cached_pass3.get('output_tokens', 0)
+                pass3_cost = cached_pass3.get('cost', 0.0)
+                print("✓ (cached)")
+                pass3_from_cache = True
+                pass3_cache_hits += 1
             else:
+                # No cache found, execute Pass 3
+                pass3_cache_misses += 1
                 pass3_analysis_raw, pass3_summary_raw, pass3_tokens, pass3_input_tokens, pass3_output_tokens, pass3_cost, pass3_raw = execute_pass3(
                     client, job, pass1_result, pass2_result_raw
                 )
@@ -255,6 +246,17 @@ def test_pass3_analysis(
                 if pass3_raw:
                     save_raw_response(job, "pass3", model_pass3, pass3_raw)
                 print("✓" if pass3_analysis_raw else "✗")
+                # Save to cache for future runs
+                if pass3_analysis_raw:
+                    pass3_data = {
+                        "analysis": pass3_analysis_raw,
+                        "summary": pass3_summary_raw,
+                        "tokens": pass3_tokens,
+                        "input_tokens": pass3_input_tokens,
+                        "output_tokens": pass3_output_tokens,
+                        "cost": pass3_cost,
+                    }
+                    save_to_cache(job, model_pass3, pass3_data, "pass3")
 
             job_result["pass3_result"] = {
                 "analysis": pass3_analysis_raw,

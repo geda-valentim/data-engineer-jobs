@@ -4,77 +4,77 @@
       "seniority_level": {
         "value": "senior",
         "confidence": 0.95,
-        "evidence": "Title includes \"Senior\" and required 5+ years of experience, matching senior level expectations.",
+        "evidence": "Title includes \"Senior\" and required 5+ years of experience, matching typical senior level expectations.",
         "source": "combined"
       },
       "job_family": {
         "value": "data_engineer",
-        "confidence": 0.99,
-        "evidence": "Job title is \"Data Engineer\" and responsibilities focus on ETL pipelines, data modeling, and big‑data tools.",
+        "confidence": 0.98,
+        "evidence": "Title is \"Data Engineer\" and responsibilities focus on ETL pipelines, data models, and big‑data tools.",
         "source": "pass1_derived"
       },
       "sub_specialty": {
         "value": "batch_etl",
         "confidence": 0.78,
-        "evidence": "Primary responsibilities mention designing and implementing ETL processes, Airflow orchestration, and batch‑oriented tools (Hadoop, Spark).",
+        "evidence": "Job description emphasizes design and implementation of ETL processes, use of Apache Airflow, and batch‑oriented data pipelines.",
         "source": "inferred"
       },
       "leadership_expectation": {
         "value": "ic",
-        "confidence": 0.85,
-        "evidence": "No mention of people‑management duties or direct reports; role focuses on technical delivery.",
-        "source": "inferred"
+        "confidence": 0.92,
+        "evidence": "No mention of people‑management responsibilities, direct reports, or formal leadership roles; focus is on individual contribution.",
+        "source": "pass1_derived"
       }
     },
     "stack_and_cloud": {
       "primary_cloud": {
         "value": "aws",
         "confidence": 0.99,
-        "evidence": "Explicit mention of \"AWS cloud services\" and related tools (S3, Redshift, etc.) in the posting.",
+        "evidence": "AWS cloud services are explicitly listed among required skills (e.g., \"AWS cloud services\").",
         "source": "pass1_derived"
       },
       "secondary_clouds": {
         "value": [],
         "confidence": 0.95,
-        "evidence": "No other cloud providers are referenced in the job description.",
+        "evidence": "No other cloud providers (Azure, GCP, etc.) are mentioned in the posting.",
         "source": "pass1_derived"
       },
       "processing_paradigm": {
         "value": "hybrid",
-        "confidence": 0.85,
-        "evidence": "Both batch orchestration (Apache Airflow) and streaming technology (Kafka) are listed.",
+        "confidence": 0.78,
+        "evidence": "Both streaming technology (Kafka) and batch orchestration (Apache Airflow) are referenced, indicating a hybrid processing model.",
         "source": "inferred"
       },
       "orchestrator_category": {
         "value": "airflow_like",
-        "confidence": 0.98,
-        "evidence": "Apache Airflow is explicitly called out as a data pipeline tool.",
+        "confidence": 0.96,
+        "evidence": "Apache Airflow is explicitly mentioned as a data pipeline tool.",
         "source": "pass1_derived"
       },
       "storage_layer": {
         "value": "lake",
         "confidence": 0.75,
-        "evidence": "Team is described as a \"Data Lake Engineering Team\" and AWS storage services (e.g., S3) are implied.",
+        "evidence": "Team is described as a \"Data Lake Engineering Team\" and formats like Avro, Parquet are highlighted, suggesting a data lake focus.",
         "source": "inferred"
       }
     },
     "geo_and_work_model": {
       "remote_restriction": {
-        "value": "same_region",
-        "confidence": 0.80,
-        "evidence": "Location is fixed to Denver, CO and work model is listed as \"onsite\".",
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Job posting provides a physical location (Denver, CO) but does not specify remote, hybrid, or on‑site requirements.",
         "source": "pass1_derived"
       },
       "timezone_focus": {
-        "value": "americas",
-        "confidence": 0.85,
-        "evidence": "Job is based in Denver, Colorado (Mountain Time), indicating a focus on U.S. time zones.",
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No timezone or regional work‑hour constraints are described.",
         "source": "pass1_derived"
       },
       "relocation_required": {
         "value": false,
-        "confidence": 0.85,
-        "evidence": "No relocation assistance or requirement is mentioned; the role is tied to a specific Denver office.",
+        "confidence": 0.92,
+        "evidence": "The posting does not mention any relocation assistance or requirement; it simply lists the Denver location.",
         "source": "pass1_derived"
       }
     },
@@ -82,86 +82,86 @@
       "h1b_friendly": {
         "value": false,
         "confidence": 0.90,
-        "evidence": "Visa sponsorship is listed as \"not_mentioned\" in the extraction.",
+        "evidence": "Visa sponsorship is listed as \"not_mentioned\" in the extraction results.",
         "source": "pass1_derived"
       },
       "opt_cpt_friendly": {
         "value": false,
-        "confidence": 0.85,
-        "evidence": "No reference to OPT/CPT eligibility; work authorization is implied for U.S. workers.",
+        "confidence": 0.90,
+        "evidence": "No reference to OPT/CPT or student visa support; work authorization is implied for standard employees.",
         "source": "pass1_derived"
       },
       "citizenship_required": {
-        "value": "work_auth_only",
-        "confidence": 0.85,
-        "evidence": "No citizenship clause; only work‑authorization is implied for U.S. locations.",
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Neither citizenship nor specific work‑authorization restrictions are stated.",
         "source": "pass1_derived"
       }
     },
     "contract_and_compensation": {
       "w2_vs_1099": {
         "value": "w2",
-        "confidence": 0.90,
-        "evidence": "Contract type is \"permanent\" with full‑time benefits, indicating a W‑2 employee arrangement.",
+        "confidence": 0.95,
+        "evidence": "Contract type is \"permanent\" and benefits (health, 401k, PTO) are described, indicating a full‑time employee (W‑2) arrangement.",
         "source": "pass1_derived"
       },
       "benefits_level": {
         "value": "comprehensive",
         "confidence": 0.90,
-        "evidence": "Benefits list includes medical, vision, dental, 401(k), equity, tuition reimbursement, learning budget, and many additional perks.",
+        "evidence": "Extensive benefits list includes medical, vision, dental, 401(k), stock purchase, life insurance, generous PTO, parental leave, education benefits, and more.",
         "source": "pass1_derived"
       }
     },
     "career_development": {
       "growth_path_clarity": {
-        "value": "vague",
-        "confidence": 0.65,
-        "evidence": "The posting mentions a dynamic team and opportunities but provides no specific career ladder or track details.",
-        "source": "inferred"
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "The posting describes the team and role but does not discuss promotion tracks, career ladders, or growth pathways.",
+        "source": "pass1_derived"
       },
       "mentorship_signals": {
-        "value": "implied",
-        "confidence": 0.60,
-        "evidence": "Collaboration with cross‑functional teams is noted, suggesting informal mentorship, but no formal program is described.",
-        "source": "inferred"
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No explicit or implied mentorship programs or senior‑to‑junior coaching are referenced.",
+        "source": "pass1_derived"
       },
       "promotion_path_mentioned": {
         "value": false,
         "confidence": 0.92,
-        "evidence": "No language about promotion pathways or advancement ladders appears in the posting.",
+        "evidence": "There is no language about promotions, advancement, or career ladders in the description.",
         "source": "pass1_derived"
       },
       "internal_mobility_mentioned": {
         "value": false,
-        "confidence": 0.95,
-        "evidence": "The description does not reference internal transfers or mobility programs.",
+        "confidence": 0.92,
+        "evidence": "The posting does not mention internal transfers, lateral moves, or mobility programs.",
         "source": "pass1_derived"
       },
       "career_tracks_available": {
         "value": [],
-        "confidence": 0.60,
-        "evidence": "No explicit mention of IC, management, specialist, or architect tracks.",
+        "confidence": 0.80,
+        "evidence": "No specific career tracks (IC, management, specialist, architect) are identified in the posting.",
         "source": "pass1_derived"
       }
     },
     "requirements_classification": {
       "requirement_strictness": {
-        "value": "high",
-        "confidence": 0.85,
-        "evidence": "A long list of mandatory hard skills with no nice‑to‑have items indicates a stringent requirement set.",
+        "value": "medium",
+        "confidence": 0.82,
+        "evidence": "A substantial list of must‑have hard skills is provided alongside a shorter nice‑to‑have list, indicating a balanced (medium) strictness.",
         "source": "pass1_derived"
       },
       "scope_definition": {
         "value": "clear",
-        "confidence": 0.90,
-        "evidence": "The role is narrowly defined around data engineering tasks (ETL, pipelines, modeling).",
+        "confidence": 0.92,
+        "evidence": "The responsibilities are narrowly focused on data engineering tasks (ETL, pipelines, modeling) without overlapping roles.",
         "source": "pass1_derived"
       },
       "skill_inflation_detected": {
         "value": false,
-        "confidence": 0.85,
-        "evidence": "Required 5+ years aligns with the senior title and listed skill set; expectations are realistic.",
-        "source": "inferred"
+        "confidence": 0.90,
+        "evidence": "Required 5+ years of experience aligns with the senior title and the listed skill set; no unrealistic expectations are evident.",
+        "source": "pass1_derived"
       }
     }
   }

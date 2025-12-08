@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 02:40:02",
+    "job_posting_id": "4323400548",
+    "job_title": "Senior Data Engineer",
+    "company_name": "SimpliSafe",
+    "job_location": "Boston, MA",
+    "pass_name": "pass2",
+    "model_id": "google.gemma-3-27b-it"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.92,
+          "evidence": "Title is 'Senior Data Engineer' and experience requirement is 4+ years.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "The job title is 'Senior Data Engineer' and the description focuses on data pipeline design and implementation.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.75,
+          "evidence": "Mentions ETL/ELT, schema design, and data lake technologies, indicating a focus on batch data processing.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.78,
+          "evidence": "The role involves contributing to team norms and practices, suggesting technical leadership without direct reports.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "aws",
+          "confidence": 0.95,
+          "evidence": "AWS services (Athena, S3) are explicitly mentioned.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No other cloud providers are mentioned.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.75,
+          "evidence": "Mentions both batch ETL/ELT and potential for real-time data flows.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "dagster_prefect",
+          "confidence": 0.95,
+          "evidence": "Dagster, Airflow, and Prefect are explicitly mentioned as orchestration tools.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "lakehouse",
+          "confidence": 0.82,
+          "evidence": "Mentions data lake technologies and table formats like Iceberg, suggesting a lakehouse architecture.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.75,
+          "evidence": "The role is located in Boston, MA, and requires a hybrid work model with two core days in the office.",
+          "source": "inferred"
+        },
+        "timezone_focus": {
+          "value": "americas",
+          "confidence": 0.92,
+          "evidence": "The location is Boston, MA, indicating a focus on the Americas timezone.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "The job description does not mention relocation assistance.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "The job description does not mention H1B sponsorship.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "The job description does not mention OPT/CPT.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.88,
+          "evidence": "The job description does not specify citizenship requirements, implying work authorization is sufficient.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "The role is described as a full-time position, suggesting a W2 employment type.",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "standard",
+          "confidence": 0.75,
+          "evidence": "The job description mentions standard benefits like wellness, retirement, and medical.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "The job description mentions a collaborative environment and opportunities for growth, but does not specify clear career tracks.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.8,
+          "evidence": "The job description mentions working with talented individuals and contributing to team norms, suggesting mentorship opportunities.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": true,
+          "confidence": 0.85,
+          "evidence": "The job description mentions a path to Staff Engineer.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "The job description does not mention internal mobility.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track"
+          ],
+          "confidence": 0.7,
+          "evidence": "Mentions a path to Staff Engineer, indicating an IC track.",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.73,
+          "evidence": "The job description includes both 'must-have' and 'nice-to-have' skills.",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.82,
+          "evidence": "The job description focuses on data engineering responsibilities.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.75,
+          "evidence": "The required skills are reasonable for a senior data engineer role.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 9039,
+    "input_tokens": 7365,
+    "output_tokens": 1674,
+    "cost": 0.010713
+  }
+}

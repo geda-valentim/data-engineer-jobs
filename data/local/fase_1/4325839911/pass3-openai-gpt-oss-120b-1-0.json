@@ -1,0 +1,255 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-06 21:38:14",
+    "job_posting_id": "4325839911",
+    "job_title": "AI Data Engineer",
+    "company_name": "Mattoni 1873",
+    "job_location": "Prague, Prague, Czechia",
+    "pass_name": "pass3",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 2,
+          "confidence": 0.75,
+          "evidence": "Only Azure services (Azure ML, Fabric, DevOps) are mentioned; no orchestration, data warehouse, CI/CD, or data quality tooling is described, indicating basic pipelines and some automation but limited governance.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "developing",
+          "confidence": 0.75,
+          "evidence": "Score of 2 maps to the \"developing\" maturity level.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "cloud_native",
+            "data_governance"
+          ],
+          "confidence": 0.7,
+          "evidence": "Job mentions Azure cloud services and references data governance, privacy, and ethical AI practices.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.15,
+          "confidence": 0.9,
+          "evidence": "The description focuses solely on AI data engineering tasks (data prep, model deployment, workflow automation) with no mention of unrelated responsibilities such as full‑stack development or DevOps.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.25,
+          "confidence": 0.8,
+          "evidence": "Benefits list flexible hours and hybrid work; no on‑call or weekend work is mentioned, suggesting low overtime risk.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "Pass2 scope_definition is \"clear\" and responsibilities are explicitly listed (data prep, model deployment, API integration).",
+          "source": "pass2_inference"
+        },
+        "overall_red_flag_score": {
+          "value": 0.2,
+          "confidence": 0.85,
+          "evidence": "Low scope creep, low overtime risk, and clear role definition combine to a low overall red‑flag rating.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "The posting mentions an \"AI Tech Lead\" but does not state who the engineer reports to.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No manager title (e.g., Head of Data, Director) is provided.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No information about hiring pace or team expansion is included.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.8,
+          "evidence": "The posting only says \"join our newly developing AI Competence Center\" without size details.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No explicit reporting line is described.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "The role collaborates with senior AI developer and business stakeholders, indicating cross‑functional work.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.75,
+          "confidence": 0.8,
+          "evidence": "Benefits include flexible hours, hybrid work, and standard PTO; no on‑call or overtime expectations are listed.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.8,
+          "confidence": 0.8,
+          "evidence": "Internal & external trainings, certifications, workshops are explicitly mentioned.",
+          "source": "pass1_derived"
+        },
+        "tech_culture_score": {
+          "value": 0.65,
+          "confidence": 0.75,
+          "evidence": "Modern Azure stack and learning budget are positive, but no explicit engineering practices (code review, CI/CD) are described.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.8,
+          "evidence": "No mention of open‑source contributions, tech blogs, or hackathons.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "The posting does not reference code review, CI/CD pipelines, testing, or monitoring practices.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Creation of a new AI Competence Center suggests a focus on new initiatives, though specific innovation programs are not detailed.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "No language about refactoring, modernizing legacy pipelines, or reducing technical debt appears.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "mlops",
+          "confidence": 0.75,
+          "evidence": "Responsibilities include preparing data for model training, deploying and monitoring AI models on Azure, which aligns with MLOps activities.",
+          "source": "combined"
+        },
+        "ml_tools_expected": {
+          "value": [
+            "Azure ML",
+            "Microsoft Fabric"
+          ],
+          "confidence": 0.95,
+          "evidence": "Both tools are explicitly listed in the required skills section.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No language such as \"immediate start\" or \"asap\" appears in the posting.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No data on applicant volume, location desirability, or salary competitiveness is provided.",
+          "source": "pass1_derived"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "established_tech",
+          "confidence": 0.7,
+          "evidence": "Mattoni 1873 is a long‑standing beverage brand; the AI Competence Center is a new initiative within an existing company.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No explicit statement about hiring speed or multiple open roles.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "Team size is not disclosed in the posting.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No funding round or capital raise is referenced.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "team_expansion",
+          "confidence": 0.7,
+          "evidence": "The role is part of a \"newly developing AI Competence Center,\" indicating expansion of the data/AI team.",
+          "source": "inferred"
+        }
+      }
+    },
+    "summary": {
+      "strengths": [
+        "Hybrid work model with flexible hours",
+        "Comprehensive benefits package (vacation, meal allowance, pension, transport, wellness)",
+        "Learning budget and internal/external training opportunities",
+        "Focus on AI/ML projects using modern Azure services"
+      ],
+      "concerns": [
+        "No disclosed salary or equity information",
+        "Location limited to Prague with no remote‑anywhere option",
+        "Limited visibility into career progression, reporting line, and team size"
+      ],
+      "best_fit_for": [
+        "Junior to mid‑level data engineers (1‑3 years) with strong Python/SQL skills and Azure experience",
+        "Candidates interested in AI/ML model deployment and MLOps on Azure",
+        "Professionals who value structured learning opportunities and a hybrid office environment"
+      ],
+      "red_flags_to_probe": [
+        "What is the reporting line and who will be the direct manager?",
+        "Can you describe the typical career path and promotion criteria for this role?",
+        "Is there any on‑call or overtime expectation for model monitoring?",
+        "How large is the current AI/Data team and what is the expected growth?"
+      ],
+      "negotiation_leverage": [
+        "Demonstrated experience deploying and monitoring AI models on Azure (Azure ML, Fabric)",
+        "Hands‑on work with LLMs or computer‑vision models, which are explicitly required",
+        "Experience establishing data pipelines and workflow automation in a cloud‑native environment"
+      ],
+      "overall_assessment": "The role offers a solid entry point into AI‑focused data engineering within an established company, with good benefits and a clear learning budget. Lack of salary transparency and limited detail on team structure/career progression are the main uncertainties.",
+      "recommendation_score": 0.7,
+      "recommendation_confidence": 0.85
+    },
+    "tokens": 12871,
+    "input_tokens": 9006,
+    "output_tokens": 3865,
+    "cost": 0.0025104
+  }
+}

@@ -1,0 +1,151 @@
+<reasoning>I need to carefully extract information from this Korean job posting for MUSINSA (무신사), which is a Korean fashion tech company. Let me go through the job posting systematically and extract only explicitly stated information.
+
+Looking at the job posting:
+
+**Title**: Data Engineer (모델링) - This is a Data Engineer position focused on modeling
+
+**Company**: MUSINSA 무신사
+
+**Location**: Seoul, Seoul, South Korea
+
+Let me analyze the content:
+
+The posting is in Korean, so I need to extract what I can understand and translate. The posting appears to be about a data engineering team at MUSINSA TECH, which is the tech subsidiary of MUSINSA (a Korean fashion company).
+
+Key sections I can identify:
+
+1. **Company Description**: MUSINSA is a Korean fashion company, and MUSINSA TECH is their tech subsidiary. They have brands like 29CM and are expanding globally.
+
+2. **Job Responsibilities**: 
+   - Data modeling work to improve business performance
+   - Building data infrastructure and pipelines
+   - Working with various data sources (CDC, user behavior events, search data)
+   - Creating data marts and key indicator tables
+   - Data quality management
+   - Ensuring data security and governance
+
+3. **Required Skills**:
+   - SQL and Python for data extraction and processing
+   - Experience with data modeling
+   - Experience with workflow managers (Airflow, Luigi, Dagster, Prefect)
+   - Experience with data quality tools (Great Expectations, Soda)
+   - Experience with Databricks-based data warehouse environments
+
+4. **Preferred Skills**:
+   - Collaboration with multiple departments
+   - Experience with data quality platforms
+   - Experience with Databricks-based data warehouse environments
+   - Experience with data lineage and governance
+
+5. **Work Schedule**: 
+   - Regular working hours
+   - Full-time position
+   - Interview process: 1st interview - 2nd interview - final interview - final offer
+
+6. **Benefits**: 
+   - 3-month probation period
+   - 100% salary during probation
+   - If there are legal issues during the interview process, the offer may be canceled
+
+Let me extract the information according to the required format:
+
+
+I'll focus on the specific details of the position, noting the key requirements and expectations for this data engineering role. The position requires strong technical skills in SQL and Python, with experience in data modeling and workflow management. The role involves building robust data infrastructure and ensuring data quality across various sources.
+
+The compensation details are not explicitly mentioned, so I'll mark those as not disclosed. The work model appears to be full-time, with the location being Seoul, South Korea. The contract type seems to be permanent, though no specific duration is provided.
+
+The skills classification highlights must-have technical competencies like SQL, Python, and data modeling, along with workflow management tools. Soft skills and specific certifications aren't detailed in this section.
+
+Education requirements are not specified, and no specific visa or work authorization details are provided. The geographic context suggests a South Korean tech environment, with no explicit restrictions mentioned.
+
+Benefits are limited to a 3-month probation period with full salary, and the company context involves MUSINSA TECH as a tech subsidiary of a major Korean fashion company.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": "3-month probation period"
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": ["SQL", "Python", "data modeling", "workflow manager", "Airflow", "Luigi", "Dagster", "Prefect"],
+      "nice_to_have_hard_skills": ["data quality tools", "Great Expectations", "Soda", "Databricks", "data warehouse"],
+      "must_have_soft_skills": [],
+      "nice_to_have_soft_skills": ["collaboration", "cross-functional work"],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": ["3-month probation period with 100% salary"],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "MUSINSA TECH [Team Introduction] data platform team - responsible for establishing data infrastructure standards and managing data quality. The team collects data from various sources including CDC, user behavior events, and search data, and creates data marts and key indicator tables for business use. They also maintain data quality platforms to ensure data reliability and governance.",
+      "company_description_text": "MUSINSA is a Korean fashion company that has grown into a global brand. MUSINSA TECH is the tech subsidiary that develops technology to support business growth. They operate brands like 29CM and are expanding globally through OCMP (One Core Multi Platform) strategy."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 37
+  }
+}
+```

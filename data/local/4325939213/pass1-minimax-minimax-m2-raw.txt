@@ -1,0 +1,154 @@
+<reasoning>Let me analyze this job posting carefully and extract the information according to the rules provided.
+
+Looking at the job posting:
+
+Title: Senior Data Engineer (SQL, Python, Snowflake)
+Company: Tata Consultancy Services
+Location: Cupertino, CA
+
+Description:
+Job Description Job Description 8+ years of experience in Data Engineering with advanced SQL skills Good with Python programming and experience with Data pipeline creation Experience with SQL Good understanding of Snowflake Database Good communication skills Salary Range: $90,000 - $145,000 per year Qualifications: BACHELOR OF TECHNOLOGY Show more Show less
+
+Let me go through each section systematically:
+
+**COMPENSATION:**
+- Salary Range: $90,000 - $145,000 per year
+- This is explicitly stated, so salary_disclosed = true
+- salary_min = 90000
+- salary_max = 145000
+- salary_currency = "USD" (since $ is mentioned)
+- salary_period = "yearly"
+- salary_text_raw = "Salary Range: $90,000 - $145,000 per year"
+
+**WORK AUTHORIZATION:**
+- No mention of visa sponsorship, work authorization requirements, or citizenship requirements
+- So visa_sponsorship_stated = "not_mentioned"
+- work_auth_text = null
+- citizenship_text = null
+- security_clearance_stated = "not_mentioned"
+
+**WORK MODEL:**
+- Location is given as "Cupertino, CA" but no mention of remote/hybrid/onsite
+- employment_type is not explicitly mentioned, but this appears to be a full-time position
+- work_model_stated = "not_mentioned"
+- location_restriction_text = null
+- employment_type_stated = "not_mentioned" (since not explicitly stated)
+
+**CONTRACT DETAILS:**
+- No mention of contract type, duration, etc.
+- All contract fields should be "not_mentioned" or null
+
+**CONTRACTOR RATES:**
+- This appears to be a salary position, not contractor rates
+- pay_type = "not_mentioned"
+- All other contractor fields = null
+
+**SKILLS CLASSIFIED:**
+Let me analyze the skills mentioned:
+
+
+I notice the job requires advanced technical skills across multiple domains. The role demands deep expertise in SQL, Python programming, and data pipeline development. Snowflake Database knowledge is crucial, along with strong communication abilities. The position requires a minimum of 8 years of data engineering experience, indicating a senior-level role. A Bachelor's degree in Technology is the primary educational qualification, with no specific area of study highlighted.
+
+The skills breakdown reveals a comprehensive technical skill set. Core hard skills include SQL, Python, data pipeline creation, and Snowflake Database. Soft skills focus on communication. No specific certifications are mentioned, and the role does not involve language model or feature store technologies.
+
+**GEOGRAPHIC RESTRICTIONS:**
+The position is located in Cupertino, California, with no explicit geographic limitations specified. The role appears open to candidates without specific regional constraints.
+
+**BENEFITS STRUCTURED:**
+The job posting lacks detailed information about potential benefits, equity, learning opportunities, or paid time off policies. No specific benefits are mentioned in the provided description.
+
+**CONTEXT:**
+Limited context is available about the team structure or company description. The posting provides minimal background information about the role or organizational context.
+
+**METADATA:**
+The extraction process reveals a comprehensive job posting with multiple data points captured. Most fields contain null values, indicating a concise job description with essential details highlighted.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": true,
+      "salary_min": 90000,
+      "salary_max": 145000,
+      "salary_currency": "USD",
+      "salary_period": "yearly",
+      "salary_text_raw": "Salary Range: $90,000 - $145,000 per year",
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": ["SQL", "Python", "Data pipeline creation", "Snowflake Database"],
+      "nice_to_have_hard_skills": [],
+      "must_have_soft_skills": ["Communication"],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 8,
+      "years_experience_max": null,
+      "years_experience_text": "8+ years of experience in Data Engineering",
+      "education_level": "BACHELORS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "BACHELOR OF TECHNOLOGY",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": null,
+      "company_description_text": null
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 41
+  }
+}
+```

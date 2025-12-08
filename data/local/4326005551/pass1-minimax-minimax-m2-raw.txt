@@ -1,0 +1,150 @@
+<reasoning>I need to carefully extract information from this Spanish job posting for a Data Engineering position at Equifax in Chile. Let me go through each section systematically.
+
+First, let me identify what information is explicitly stated:
+
+1. **Title**: Data Engineering USIS
+2. **Company**: Equifax
+3. **Location**: Las Condes, Santiago Metropolitan Region, Chile
+
+Now let me analyze the job description:
+
+**Responsibilities** (¿Qué vas a hacer?):
+- Apply knowledge of data characteristics and data supply patterns
+- Develop rules and monitoring processes to support data quality model
+- Prepare data for analytical use by building data pipelines to collect data from multiple sources and systems
+- Integrate, consolidate, clean and structure data for client use in solutions
+- Design, create and interpret large and highly complex datasets
+- Stay current with latest trends and advances in GCP (Google Cloud Platform) and related technologies
+- Understand best practices for data management, maintenance, reporting and security
+- Implement security best practices in pipelines and infrastructure
+- Develop and implement data quality checks and solve data anomalies
+- Provide guidance and mentoring to junior data engineers
+- Review dataset implementations by junior data engineers
+
+**Requirements** (¿Qué experiencia que necesitas?):
+- Bachelor's degree (BS) in STEM area or equivalent; Master's strongly preferred
+- 5+ years of experience as data engineer or related role
+- Cloud certification strongly preferred
+- Advanced skills in programming languages like Python or SQL, and intermediate experience with scripting languages
+- Understanding and intermediate experience with Google Cloud Platforms and general cloud computing concepts, as well as basic knowledge of other cloud environments
+- Experience building and maintaining data pipelines of moderate complexity, troubleshooting, transforming and entering data in data pipeline for content to be digestible and usable for future projects
+- Experience designing and implementing data models of moderate complexity and experience enabling optimization to improve performance
+- Demonstrate advanced skills in Git use and CI/CD integration
+- Intermediate/Advanced English
+
+**Differentiators** (¿Qué podría diferenciarte?):
+- Previous experience working for financial market
+- Previous experience working in regional teams
+- Advanced English
+
+Now let me extract the structured information:
+
+**Compensation**: No salary information is mentioned → salary_disclosed: false, all salary fields null
+
+**Work Authorization**: No mention of visa sponsorship or work authorization requirements → visa_sponsorship_stated: "not_mentioned", work_auth_text: null, citizenship_text: null, security_clearance_stated: "not_mentioned"
+ 
+I'll analyze the work model and contract details for this position. The job appears to be a full-time role based on the comprehensive nature of the responsibilities and requirements. The location is specifically in Las Condes, Santiago, Chile, which suggests an onsite position. No specific contract type or duration is mentioned, so I'll default to a permanent, full-time employment arrangement.
+
+The employment type is clearly full-time, with no indication of contract work, part-time status, or internship. The location is fixed in Chile, reinforcing the onsite work model. No remote or hybrid work options are suggested in the job description.
+
+Skills classification reveals a strong focus on technical expertise. The must-have hard skills include Python, SQL, data pipelines, Google Cloud Platform, and cloud computing. Nice-to-have skills encompass scripting languages, Git, CI/CD, and data modeling. The role requires significant experience, with a minimum of 5 years in data engineering.
+
+The educational background demands a Bachelor's degree in STEM fields, with a Master's degree being strongly preferred. While no specific area is mandated, the STEM requirement suggests a technical or scientific undergraduate program.
+
+The position emphasizes intermediate to advanced English proficiency, indicating potential international collaboration or communication requirements. No specific language certifications are mentioned, but the language skill is clearly valued.
+
+Geographically, the role is centered in Chile, with no explicit global or remote work options suggested. The focus appears to be on local talent within the Chilean market.
+
+Benefits are not comprehensively detailed, with no specific perks, equity, learning budgets, or conference support mentioned. The PTO policy remains unspecified, leaving potential candidates to inquire about leave arrangements.
+
+The company context reveals Equifax as a financial services organization, suggesting a data-driven environment with potential exposure to complex financial datasets and compliance requirements.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Las Condes, Santiago Metropolitan Region, Chile",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": ["Python", "SQL", "data pipelines", "Google Cloud Platform", "cloud computing", "data integration", "data consolidation", "data cleaning", "data structuring", "data modeling", "data quality", "Git", "CI/CD integration"],
+      "nice_to_have_hard_skills": ["scripting languages", "other cloud environments", "data optimization", "financial market experience", "regional team experience"],
+      "must_have_soft_skills": ["mentoring", "guidance"],
+      "nice_to_have_soft_skills": ["English proficiency"],
+      "certifications_mentioned": ["Cloud certification"],
+      "years_experience_min": 5,
+      "years_experience_max": null,
+      "years_experience_text": "5+ años de experiencia",
+      "education_level": "BACHELORS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "Título de Licenciatura (BS) en un área STEM o disciplina equivalente; se prefiere fuertemente una Maestría",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "specific_countries",
+      "allowed_countries": ["CL"],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "equipo regional de Chile y US",
+      "company_description_text": null
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 25
+  }
+}
+```

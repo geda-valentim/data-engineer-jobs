@@ -1,0 +1,247 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-06 23:58:49",
+    "job_posting_id": "4325829597",
+    "job_title": "Go Anywhere SFTP Data Engineer",
+    "company_name": "Tata Consultancy Services",
+    "job_location": "Cincinnati, OH",
+    "pass_name": "pass3",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 2,
+          "confidence": 0.75,
+          "evidence": "Focus on SFTP, batch transfers, and manual scripting (Python/Shell) with no mention of modern data stack tools (dbt, Airflow, data catalogs) or automated testing/CI/CD. Tools like GoAnywhere and Solimar suggest legacy or specialized file transfer systems rather than modern data engineering practices.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "developing",
+          "confidence": 0.75,
+          "evidence": "Matches score of 2 - basic automation and pipelines exist but lack modern governance, monitoring, or scalable architecture.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "cloud_native"
+          ],
+          "confidence": 0.65,
+          "evidence": "Azure Cloud is a must-have, indicating cloud adoption, but no other maturity signals like CI/CD, data quality testing, or governance tools are mentioned.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.25,
+          "confidence": 0.8,
+          "evidence": "Role is narrowly focused on SFTP data engineering with specific tools (GoAnywhere, WinSCP, Solimar) and responsibilities (file transfers, security, SOC controls). No conflation with data science, analytics, or DevOps.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.75,
+          "confidence": 0.85,
+          "evidence": "Explicit requirement for 'after-hours and weekends on-call duties' indicates high availability expectations and potential for burnout. No mention of PTO, work-life balance, or protective factors.",
+          "source": "pass1_derived"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "Well-defined responsibilities centered on SFTP data ingestion, security, monitoring, and incident management. No vague or multi-role descriptions.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.65,
+          "confidence": 0.78,
+          "evidence": "Moderate risk due to high overtime risk (on-call) and low data maturity, offset by clear role definition and reasonable experience requirements.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No information about reporting manager, team structure, or organizational hierarchy provided in job posting.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No managerial titles or reporting lines mentioned in the job description.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "unknown",
+          "confidence": 0.65,
+          "evidence": "No information about team size, growth plans, or hiring velocity. Role appears to be a backfill or maintenance position rather than expansion.",
+          "source": "inferred"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.5,
+          "evidence": "No details about team size or composition provided in job posting.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No reporting structure details provided in job description.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.75,
+          "evidence": "Role focuses on SFTP operations and vendor collaboration, suggesting a centralized or infrastructure-focused team rather than embedded in product teams.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.25,
+          "confidence": 0.85,
+          "evidence": "Explicit requirement for after-hours and weekend on-call duties with no mention of PTO, flexible hours, or work-life balance policies. Strong negative signal for work-life balance.",
+          "source": "pass1_derived"
+        },
+        "growth_opportunities_score": {
+          "value": 0.3,
+          "confidence": 0.8,
+          "evidence": "No mention of learning budget, conferences, mentorship, career paths, or growth opportunities. Role appears maintenance-focused with legacy tools.",
+          "source": "pass1_derived"
+        },
+        "tech_culture_score": {
+          "value": 0.4,
+          "confidence": 0.75,
+          "evidence": "Focus on legacy tools (GoAnywhere, Solimar, WinSCP) and manual scripting with no mention of modern engineering practices (CI/CD, testing, code reviews, documentation).",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.95,
+          "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.95,
+          "evidence": "No mention of code review, CI/CD, testing, monitoring, incident response, or design documentation processes.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.8,
+          "evidence": "Focus on maintaining existing SFTP pipelines and vendor integrations with no mention of innovation, experimentation, or new technology adoption.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of tech debt, refactoring, or modernization efforts. Role appears focused on sustaining current operations.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.95,
+          "evidence": "No mention of ML, AI, or data science collaboration. Role is purely focused on SFTP data transfer and security.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No ML tools mentioned or implied in job description.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "normal",
+          "confidence": 0.85,
+          "evidence": "No urgency signals like 'ASAP' or 'immediate start'. Standard full-time permanent role posting.",
+          "source": "inferred"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Onsite role in Cincinnati, OH (lower competition than tech hubs) with specific tool requirements (GoAnywhere, Solimar) limiting candidate pool. Salary range ($80-85k) is modest for data engineering.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.9,
+          "evidence": "Tata Consultancy Services is a large global IT services company with established operations. Role focuses on enterprise SFTP infrastructure and compliance (SOC controls).",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "replacement",
+          "confidence": 0.8,
+          "evidence": "Role appears to be a maintenance position for existing SFTP infrastructure with no signals of team expansion or new initiatives.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No information about team size or structure provided in job posting.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "Tata Consultancy Services is a public company; no funding stage signals relevant.",
+          "source": "inferred"
+        },
+        "role_creation_type": {
+          "value": "backfill",
+          "confidence": 0.75,
+          "evidence": "Role appears to be maintaining existing SFTP infrastructure with specific compliance and operational requirements, suggesting a backfill rather than new function or expansion.",
+          "source": "inferred"
+        }
+      }
+    },
+    "summary": {
+      "strengths": [
+        "Clear, focused role with specific SFTP and security responsibilities",
+        "Azure Cloud experience required - relevant for cloud migration",
+        "Onsite role in Cincinnati, OH - potentially lower cost of living"
+      ],
+      "concerns": [
+        "After-hours and weekend on-call duties indicate poor work-life balance",
+        "Low salary range ($80-85k) for data engineering role with 3-5 years experience",
+        "Legacy tooling (GoAnywhere, Solimar) with no modern data stack or innovation signals"
+      ],
+      "best_fit_for": [
+        "Mid-level data engineers seeking stable enterprise roles with SFTP specialization",
+        "Candidates prioritizing location (Cincinnati, OH) over compensation or tech stack"
+      ],
+      "red_flags_to_probe": [
+        "Ask about actual on-call rotation frequency and compensation for after-hours work",
+        "Understand team size and whether this is a solo SFTP role or part of larger data team",
+        "Clarify if there are opportunities to modernize pipelines or work with newer technologies"
+      ],
+      "negotiation_leverage": [
+        "Experience with GoAnywhere and Solimar is niche and valuable for this specific role",
+        "Azure Cloud and SFTP security expertise are in demand for enterprise compliance"
+      ],
+      "overall_assessment": "This is a maintenance-focused SFTP data engineering role at an enterprise IT services company. The role offers clear responsibilities and location stability but comes with significant drawbacks including mandatory on-call duties, low compensation, and legacy technology stack. Best suited for candidates prioritizing job security and location over career growth or modern tech stack.",
+      "recommendation_score": 0.45,
+      "recommendation_confidence": 0.75
+    },
+    "tokens": 11262,
+    "input_tokens": 8782,
+    "output_tokens": 2480,
+    "cost": 0.013742
+  }
+}

@@ -3,98 +3,98 @@
     "seniority_and_role": {
       "seniority_level": {
         "value": "senior",
-        "confidence": 0.85,
-        "evidence": "Title \"Data Architect & Leader\" and responsibility for leading a team indicate a senior‑level position.",
+        "confidence": 0.75,
+        "evidence": "Title includes \"Leader\" and responsibilities include leading a team and owning architecture, indicating senior-level responsibility.",
         "source": "combined"
       },
       "job_family": {
         "value": "data_architect",
-        "confidence": 0.95,
-        "evidence": "Job title and core responsibilities focus on architectural design, data modeling, and integration within a Microsoft environment.",
+        "confidence": 0.97,
+        "evidence": "Job title explicitly states \"Data Architect\" and the description focuses on architectural design of data platforms.",
         "source": "pass1_derived"
       },
       "sub_specialty": {
         "value": "data_lakehouse",
-        "confidence": 0.80,
-        "evidence": "Mentions using MS Fabric for ETL and building advanced reporting; Fabric supports lakehouse architectures.",
+        "confidence": 0.68,
+        "evidence": "Mentions use of Microsoft Fabric for ETL and advanced reporting, which aligns with lakehouse concepts combining lake and warehouse capabilities.",
         "source": "inferred"
       },
       "leadership_expectation": {
         "value": "tech_and_people_lead",
-        "confidence": 0.85,
-        "evidence": "Described as a \"player‑coach\" role leading a small team (Data Engineer and Data Scientist) with hands‑on technical work.",
+        "confidence": 0.81,
+        "evidence": "Described as a \"player‑coach\" role leading a small team (Data Engineer and Data Scientist) with hands‑on mentoring, indicating both technical and people leadership.",
         "source": "combined"
       }
     },
     "stack_and_cloud": {
       "primary_cloud": {
         "value": "azure",
-        "confidence": 0.90,
-        "evidence": "Must have experience in a \"Microsoft environment\" and use of MS Fabric, which are Azure services.",
-        "source": "pass1_derived"
+        "confidence": 0.95,
+        "evidence": "All required technologies are Microsoft‑centric (MS Fabric, Power BI, ERP integrations) which are Azure services.",
+        "source": "inferred"
       },
       "secondary_clouds": {
         "value": [],
-        "confidence": 0.90,
-        "evidence": "No other cloud providers are mentioned in the posting.",
+        "confidence": 0.92,
+        "evidence": "No other cloud platforms are mentioned in the posting.",
         "source": "pass1_derived"
       },
       "processing_paradigm": {
         "value": "batch",
-        "confidence": 0.85,
-        "evidence": "Focus on ETL processes and reporting; no streaming or real‑time technologies are referenced.",
+        "confidence": 0.80,
+        "evidence": "Focus on ETL processes, ERP integrations, and reporting rather than real‑time streaming technologies.",
         "source": "inferred"
       },
       "orchestrator_category": {
         "value": "not_mentioned",
         "confidence": 0.95,
-        "evidence": "The posting does not name any workflow/orchestration tool such as Airflow, Dagster, etc.",
+        "evidence": "The posting does not reference any workflow/orchestration tool such as Airflow, Dagster, etc.",
         "source": "pass1_derived"
       },
       "storage_layer": {
-        "value": "warehouse",
-        "confidence": 0.80,
-        "evidence": "Architectural design across a large Microsoft environment with thousands of tables and stored procedures suggests a relational data warehouse approach.",
+        "value": "lakehouse",
+        "confidence": 0.70,
+        "evidence": "Use of Microsoft Fabric suggests a lakehouse architecture that blends data lake and warehouse capabilities.",
         "source": "inferred"
       }
     },
     "geo_and_work_model": {
       "remote_restriction": {
-        "value": "same_country",
-        "confidence": 0.90,
-        "evidence": "Location restriction text: \"Remote, anywhere in the US\" (US‑only).",
+        "value": "anywhere",
+        "confidence": 0.96,
+        "evidence": "Location field states \"Remote, anywhere in the US\".",
         "source": "pass1_derived"
       },
       "timezone_focus": {
         "value": "americas",
-        "confidence": 0.70,
+        "confidence": 0.62,
         "evidence": "Remote work limited to the United States implies a focus on American time zones.",
         "source": "inferred"
       },
       "relocation_required": {
         "value": false,
         "confidence": 0.95,
-        "evidence": "The role is fully remote within the US; no relocation language is present.",
-        "source": "inferred"
+        "evidence": "The role is fully remote within the US, with no relocation language.",
+        "source": "pass1_derived"
       }
     },
     "visa_and_authorization": {
       "h1b_friendly": {
         "value": false,
         "confidence": 0.90,
-        "evidence": "Visa sponsorship is not mentioned; default assumption is no sponsorship.",
+        "evidence": "Visa sponsorship is listed as \"not_mentioned\" in the extraction.",
         "source": "pass1_derived"
       },
       "opt_cpt_friendly": {
         "value": false,
-        "confidence": 0.80,
-        "evidence": "No reference to OPT/CPT or student visas; work authorization is implied for standard employees.",
+        "confidence": 0.85,
+        "evidence": "No mention of OPT/CPT eligibility; work authorization is implied.",
         "source": "inferred"
       },
       "citizenship_required": {
         "value": "work_auth_only",
-        "confidence": 0.90,
-        "evidence": "Remote US‑only role; only work authorization in the US is required, no citizenship restriction stated.",
+        "confidence": 0.88,
+        "evidence": "No citizenship restriction is stated; only US remote eligibility is required, indicating work‑authorization only.",
         "source": "pass1_derived"
       }
     },
@@ -102,68 +102,65 @@
       "w2_vs_1099": {
         "value": "w2",
         "confidence": 0.95,
-        "evidence": "Job type is Full‑Time, Exempt, and described as a permanent position, indicating a W‑2 employee.",
-        "source": "inferred"
+        "evidence": "Employment type is \"full_time\" and contract type is \"permanent\", typical of W‑2 employment.",
+        "source": "combined"
       },
       "benefits_level": {
         "value": "standard",
-        "confidence": 0.85,
-        "evidence": "Benefits listed: medical, dental, vision, 401(k), PTO – typical standard package.",
+        "confidence": 0.86,
+        "evidence": "Benefits listed (medical, dental, vision, 401(k), PTO) match a standard benefits package.",
         "source": "pass1_derived"
       }
     },
     "career_development": {
       "growth_path_clarity": {
-        "value": "implied",
-        "confidence": 0.75,
-        "evidence": "The posting mentions leadership and a player‑coach role but does not spell out explicit career ladders.",
+        "value": "vague",
+        "confidence": 0.71,
+        "evidence": "The posting mentions leadership and mentorship but does not outline specific career tracks or promotion ladders.",
         "source": "inferred"
       },
       "mentorship_signals": {
         "value": "implied",
-        "confidence": 0.70,
-        "evidence": "Leading and mentoring a small team suggests informal mentorship, though no formal program is described.",
+        "confidence": 0.77,
+        "evidence": "The role includes mentoring a small team, indicating informal mentorship but no formal program is described.",
         "source": "inferred"
       },
       "promotion_path_mentioned": {
         "value": false,
-        "confidence": 0.90,
+        "confidence": 0.92,
         "evidence": "No language about promotion, advancement, or career ladders appears in the posting.",
         "source": "pass1_derived"
       },
       "internal_mobility_mentioned": {
         "value": false,
-        "confidence": 0.90,
-        "evidence": "The posting does not reference internal transfers or mobility opportunities.",
+        "confidence": 0.93,
+        "evidence": "The description does not reference internal transfers or mobility opportunities.",
         "source": "pass1_derived"
       },
       "career_tracks_available": {
-        "value": [
-          "ic_track",
-          "management_track"
-        ],
-        "confidence": 0.60,
-        "evidence": "Role blends deep technical responsibilities (architect) with people‑leadership (team lead), implying both IC and management tracks.",
+        "value": ["ic_track", "management_track"],
+        "confidence": 0.62,
+        "evidence": "The role blends technical architecture with people leadership, implying both individual contributor and management tracks.",
         "source": "inferred"
       }
     },
     "requirements_classification": {
       "requirement_strictness": {
         "value": "medium",
-        "confidence": 0.80,
-        "evidence": "A clear list of required hard and soft skills with no explicit \"nice‑to‑have\" items; balanced but not overly restrictive.",
+        "confidence": 0.74,
+        "evidence": "A clear list of required hard and soft skills is provided with no nice‑to‑have items, indicating a balanced requirement set.",
         "source": "inferred"
       },
       "scope_definition": {
         "value": "clear",
-        "confidence": 0.90,
-        "evidence": "Job description focuses specifically on data architecture, integration, and leading a small team – a well‑defined scope.",
+        "confidence": 0.84,
+        "evidence": "The job description focuses specifically on data architecture and leadership, without mixing unrelated roles.",
         "source": "inferred"
       },
       "skill_inflation_detected": {
         "value": false,
-        "confidence": 0.85,
-        "evidence": "Required skill set aligns with a senior‑level data architect role; no unrealistic junior‑level expectations are present.",
+        "confidence": 0.80,
+        "evidence": "The required skill set aligns with a senior‑level data architect role; no unrealistic junior‑level expectations are present.",
         "source": "inferred"
       }
     }

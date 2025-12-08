@@ -1,0 +1,273 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 23:18:51",
+    "job_posting_id": "4325829597",
+    "job_title": "Go Anywhere SFTP Data Engineer",
+    "company_name": "Tata Consultancy Services",
+    "job_location": "Cincinnati, OH",
+    "pass_name": "pass3",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 2,
+          "confidence": 0.78,
+          "evidence": "Job description only mentions SFTP file transfers, GoAnywhere, and manual patching with no reference to modern orchestration, CI/CD, or data quality tools, indicating a developing but not fully defined data practice.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "developing",
+          "confidence": 0.78,
+          "evidence": "Score of 2 maps to the \"developing\" maturity level.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No mention of modern data stack components (e.g., dbt, Airflow), CI/CD pipelines, data quality testing, or monitoring tools.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.2,
+          "confidence": 0.85,
+          "evidence": "Responsibilities are narrowly focused on SFTP ingestion, pipeline maintenance, SOC controls, and on‑call support; no other domains (e.g., analytics, ML) are included.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.65,
+          "confidence": 0.8,
+          "evidence": "Explicit requirement for after‑hours and weekend on‑call duties combined with a modest salary range suggests higher likelihood of overtime.",
+          "source": "pass1_extraction"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "Job posting lists a concise set of SFTP‑centric tasks without blending other engineering or analytics responsibilities.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.45,
+          "confidence": 0.8,
+          "evidence": "Low scope creep but moderate overtime risk, no benefits disclosed, and unclear reporting structure raise some concerns while the role itself is well defined.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "The posting does not specify to whom the engineer reports.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No manager or director title appears in the description.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No language about hiring sprees or team expansion is present.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.85,
+          "evidence": "The posting provides no details on team size or composition.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No reporting line is described.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.75,
+          "evidence": "No indication that the role is embedded within product or cross‑functional squads; it appears to be a centralized operational position.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.3,
+          "confidence": 0.8,
+          "evidence": "On‑call weekends are required and no PTO, flexible schedule, or work‑life balance language is mentioned.",
+          "source": "pass1_extraction"
+        },
+        "growth_opportunities_score": {
+          "value": 0.2,
+          "confidence": 0.75,
+          "evidence": "No mention of career ladders, mentorship, learning budgets, or conference support.",
+          "source": "pass1_extraction"
+        },
+        "tech_culture_score": {
+          "value": 0.25,
+          "confidence": 0.8,
+          "evidence": "The tech stack is limited to SFTP tools and Azure; no modern engineering practices (code review, CI/CD, monitoring) are described.",
+          "source": "pass1_extraction"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No references to open‑source contributions, tech blogs, conferences, or hackathons.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "The posting does not list code review, pair programming, TDD, CI/CD, monitoring, or incident‑response practices.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No language about experimentation, R&D time, or exploring new technologies.",
+          "source": "pass1_derived"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of refactoring, tech‑debt reduction, or modernization initiatives.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.95,
+          "evidence": "The job description contains no reference to machine learning, model serving, or related tooling.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No ML/AI tools are listed among required or nice‑to‑have skills.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "The posting does not state an immediate or accelerated start date.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No data on applicant volume, easy‑apply, or location scarcity is provided.",
+          "source": "pass1_derived"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.95,
+          "evidence": "Tata Consultancy Services is a global IT services firm with thousands of employees, fitting the enterprise category.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No indication of aggressive or steady hiring cadence.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No team size is disclosed in the posting.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "TCS is a publicly traded, fully funded enterprise; no startup‑type funding stage is relevant.",
+          "source": "inferred"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "The posting does not state whether this is a new headcount, backfill, or expansion role.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "transparent_salary",
+        "clear_requirements",
+        "well_defined_role",
+        "data_focused_role"
+      ],
+      "strength_details": [
+        "Salary range is explicitly disclosed ($80k‑$85k per year).",
+        "The role has a narrow, well‑defined focus on SFTP data ingestion and pipeline maintenance.",
+        "Specific technical stack (GoAnywhere MFT, Azure, Python/Shell) is clearly listed.",
+        "Clear expectations around SOC controls and incident management."
+      ],
+      "concern_categories": [
+        "overtime_likely",
+        "limited_benefits",
+        "no_visa_sponsorship"
+      ],
+      "concern_details": [
+        "After‑hours and weekend on‑call duties are required.",
+        "No benefits, PTO, equity, or learning budget are mentioned.",
+        "Visa sponsorship is not offered; only existing work authorization is acceptable."
+      ],
+      "best_fit_categories": [
+        "mid_level_engineers",
+        "pipeline_developers",
+        "data_generalists"
+      ],
+      "best_fit_details": [
+        "Engineers with 3‑5 years of experience building data pipelines and SFTP integrations.",
+        "Candidates comfortable with operational responsibilities such as on‑call support and SOC compliance.",
+        "Professionals seeking a focused, operational data engineering role within a large enterprise."
+      ],
+      "probe_categories": [
+        "work_hour_expectations",
+        "on_call_expectations",
+        "benefits_details",
+        "career_growth_path",
+        "team_structure"
+      ],
+      "probe_details": [
+        "What is the typical weekly work hour expectation and how is the on‑call rotation scheduled?",
+        "Can you detail the benefits package, PTO policy, and whether any equity or bonus components exist?",
+        "What opportunities exist for career advancement or moving into senior/lead positions?",
+        "How large is the data engineering team and who will I report to?",
+        "Is there any mentorship or training program for skill development?"
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "rare_skill_match",
+        "quick_availability"
+      ],
+      "leverage_details": [
+        "Extensive experience with GoAnywhere MFT directly aligns with the core responsibilities.",
+        "Specialized SFTP pipeline expertise is uncommon and highly relevant.",
+        "Immediate availability can help fill the role quickly, reducing time‑to‑hire."
+      ],
+      "overall_assessment": "The position offers a clearly defined SFTP‑focused data engineering role with transparent compensation at a large enterprise. It is well suited for mid‑level engineers with relevant file‑transfer experience, though the modest salary, on‑call duties, and lack of benefits are notable trade‑offs.",
+      "recommendation_score": 0.65
+    },
+    "tokens": 14299,
+    "input_tokens": 9510,
+    "output_tokens": 4789,
+    "cost": 0.0028631999999999998
+  }
+}

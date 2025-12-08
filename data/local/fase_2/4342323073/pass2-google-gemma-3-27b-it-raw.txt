@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.75,
+        "evidence": "1-5 years of experience suggests mid-level, but title is broad",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is Software & Data Engineer, core responsibilities are data engineering tasks.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "general",
+        "confidence": 0.65,
+        "evidence": "Responsibilities cover a broad range of data engineering tasks within Foundry, no specific specialization is highlighted.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.70,
+        "evidence": "Responsibilities focus on individual contribution and collaboration, no mention of direct reports or management.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.55,
+        "evidence": "Palantir Foundry is the primary platform, not a cloud provider. No specific cloud services are mentioned.",
+        "source": "inferred"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No other cloud providers are mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 0.50,
+        "evidence": "The job description doesn't specify batch or streaming processing.",
+        "source": "not_mentioned"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.70,
+        "evidence": "Palantir Foundry provides its own orchestration capabilities, which can be considered cloud-native.",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.50,
+        "evidence": "The job description doesn't specify a particular storage layer.",
+        "source": "not_mentioned"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.75,
+        "evidence": "Location is Berthoud, CO, suggesting a preference for candidates in the area.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.85,
+        "evidence": "Location in Colorado suggests a focus on the Americas timezone.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No mention of relocation assistance or requirements.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "Explicitly requires US Citizenship or Permanent Residency.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Requires US Citizenship or Permanent Residency, excluding student visas.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "us_citizen_only",
+        "confidence": 0.95,
+        "evidence": "Explicitly states US Citizenship or Permanent Residency is required.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time exempt position with benefits suggests W2 employment.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.85,
+        "evidence": "Offers a wide range of benefits including PTO, insurance, retirement plan, and equity.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.65,
+        "evidence": "Mentions growth as a company, but no specific career tracks.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Collaboration with senior engineers suggests potential for learning and mentorship.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.60,
+        "evidence": "Focus on individual contribution suggests an IC track.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Mix of required and desired skills.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "The job description focuses on a specific role within Palantir Foundry.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Skills and experience requirements are reasonable for a mid-level data engineer.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

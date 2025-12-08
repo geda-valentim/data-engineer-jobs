@@ -1,0 +1,234 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.82,
+        "evidence": "Mentions MS Fabric, Power BI, ERP integrations, and a focus on data architecture, indicating defined processes and modern tools. However, lacks explicit mentions of data governance or advanced practices like data mesh.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.82,
+        "evidence": "Matches score of 3.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.75,
+        "evidence": "Mentions MS Fabric and Power BI, indicating adoption of modern tools.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.20,
+        "confidence": 0.88,
+        "evidence": "Role is clearly defined as Data Architect & Leader, with a focus on data architecture and team leadership. No indication of significant scope beyond data-related responsibilities.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.72,
+        "evidence": "Startup environment and 'ASAP' start date suggest potential for pressure, but benefits and remote work offer some mitigation.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "The job description clearly outlines the responsibilities and expectations for the Data Architect & Leader role.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.30,
+        "confidence": 0.78,
+        "evidence": "Relatively low risk due to well-defined role and positive signals, but startup pace and immediate start date warrant caution.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "clear",
+        "confidence": 0.95,
+        "evidence": "The job posting explicitly states that the role reports to the Head of Data Engineering.",
+        "source": "explicit"
+      },
+      "manager_level_inferred": {
+        "value": "director_plus",
+        "confidence": 0.92,
+        "evidence": "Reporting to the Head of Data Engineering suggests a director-level or higher manager.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "rapid_expansion",
+        "confidence": 0.85,
+        "evidence": "The team is expanding from 8 to 15 engineers, indicating rapid growth.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "8-15 engineers",
+          "de_count": "5 data engineers",
+          "seniority_mix": "mix of senior and mid-level"
+        },
+        "confidence": 0.80,
+        "evidence": "Mentions joining a team of 5 DEs within a broader 15-person data organization.",
+        "source": "explicit"
+      },
+      "reporting_structure": {
+        "value": "reports_to_director_data",
+        "confidence": 0.95,
+        "evidence": "Job posting explicitly states reporting to Head of Data Engineering.",
+        "source": "explicit"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions partnering with business leaders and a third-party AI partner, suggesting cross-functional collaboration.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.70,
+        "confidence": 0.80,
+        "evidence": "Remote work, PTO, and no on-call expectations are positive signals, but 'ASAP' start date introduces some risk.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.80,
+        "confidence": 0.82,
+        "evidence": "Expanding team, leadership role, and focus on AI capabilities suggest growth opportunities.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.75,
+        "confidence": 0.85,
+        "evidence": "Modern data stack (MS Fabric, Power BI) and focus on AI indicate a reasonably strong tech culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["conference_speaking"],
+        "confidence": 0.65,
+        "evidence": "Mentions 'expanding their data and AI capabilities' which could imply conference attendance.",
+        "source": "inferred"
+      },
+      "dev_practices_mentioned": {
+        "value": ["ci_cd"],
+        "confidence": 0.70,
+        "evidence": "Mentions 'modernizing legacy pipelines' which could imply CI/CD practices.",
+        "source": "inferred"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Exploring AI applications suggests some level of innovation.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.80,
+        "evidence": "Mentions 'modernizing legacy pipelines' indicating awareness of tech debt.",
+        "source": "explicit"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.75,
+        "evidence": "Mentions partnering with an AI partner and exploring AI applications, but no advanced ML infrastructure is mentioned.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": ["SageMaker", "MLflow"],
+        "confidence": 0.70,
+        "evidence": "Mentions working with an AI partner, suggesting potential use of ML tools.",
+        "source": "inferred"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.90,
+        "evidence": "The job posting states 'ASAP' start date.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Remote position in a competitive market (US) with a clear job description.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "startup_series_a_b",
+        "confidence": 0.75,
+        "evidence": "Rapid team growth and focus on expanding data capabilities suggest a Series A/B stage startup.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "rapid_expansion",
+        "confidence": 0.85,
+        "evidence": "Expanding team from 8 to 15 engineers indicates rapid growth.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.88,
+        "evidence": "Team size is between 6 and 15 engineers.",
+        "source": "explicit"
+      },
+      "funding_stage_signals": {
+        "value": "series_b_plus",
+        "confidence": 0.70,
+        "evidence": "Mentions 'well-funded startup' and rapid growth.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.85,
+        "evidence": "Expanding data team to support new initiatives.",
+        "source": "explicit"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["transparent_salary", "modern_tech_stack", "learning_opportunities", "well_defined_role"],
+    "strength_details": [
+      "Transparent compensation ($140k - $170k)",
+      "Modern data stack (MS Fabric, Power BI)",
+      "Growth opportunities with expanding team and AI focus",
+      "Clear role definition as Data Architect & Leader"
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship"],
+    "concern_details": [
+      "ASAP start date suggests potential for time pressure",
+      "US work authorization required - no visa sponsorship"
+    ],
+    "best_fit_categories": ["senior_data_engineers", "pipeline_developers", "leadership_track"],
+    "best_fit_details": [
+      "Experienced Data Architects with MS stack expertise",
+      "Engineers comfortable with leadership and mentoring",
+      "Candidates seeking a fast-paced startup environment"
+    ],
+    "probe_categories": ["work_hour_expectations", "team_dynamics", "ai_strategy"],
+    "probe_details": [
+      "Inquire about typical work hours and expectations for meeting deadlines",
+      "Understand the team's culture and collaboration style",
+      "Learn more about the company's AI strategy and how this role contributes"
+    ],
+    "leverage_categories": ["rare_skill_match", "domain_expertise"],
+    "leverage_details": [
+      "Strong MS stack experience is highly valuable",
+      "Experience with ERP integrations (Salesforce, Procore, Sage Intacct) is a differentiator"
+    ],
+    "overall_assessment": "This is a strong opportunity for a senior Data Architect seeking a leadership role in a growing startup. The modern tech stack, clear role definition, and competitive compensation are attractive. However, candidates should be prepared for a fast-paced environment and potential for long hours.",
+    "recommendation_score": 0.80,
+    "recommendation_confidence": 0.85
+  }
+}
+```

@@ -1,0 +1,234 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.82,
+        "evidence": "Modern data stack (Snowflake, dbt, Airflow), CI/CD practices mentioned, but limited details on data governance.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.82,
+        "evidence": "Matches score of 3.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption", "cicd_practices"],
+        "confidence": 0.85,
+        "evidence": "Mentions dbt, Airflow, and CI/CD pipelines.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.20,
+        "confidence": 0.88,
+        "evidence": "The role is clearly focused on data engineering tasks, with no indication of overlapping responsibilities.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.40,
+        "confidence": 0.72,
+        "evidence": "Startup environment and 'immediate start' suggest potential for pressure, but benefits package is positive.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "The job description provides a well-defined scope of responsibilities for a data engineer.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.30,
+        "confidence": 0.78,
+        "evidence": "Generally positive signals, but startup pace and location restrictions are potential drawbacks.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "clear",
+        "confidence": 0.92,
+        "evidence": "The job posting explicitly states reporting to the Head of Data Engineering.",
+        "source": "explicit"
+      },
+      "manager_level_inferred": {
+        "value": "director_plus",
+        "confidence": 0.95,
+        "evidence": "Reporting to the 'Head of Data Engineering' suggests a director-level manager.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.85,
+        "evidence": "The team is expanding from 8 to 15 engineers, indicating a moderate growth rate.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "8-15 engineers",
+          "de_count": "5 data engineers",
+          "seniority_mix": "mix of senior and mid-level"
+        },
+        "confidence": 0.80,
+        "evidence": "Mentions joining a team of 5 DEs within a broader 15-person data organization.",
+        "source": "explicit"
+      },
+      "reporting_structure": {
+        "value": "reports_to_director_data",
+        "confidence": 0.90,
+        "evidence": "The job posting states reporting to the Head of Data Engineering.",
+        "source": "explicit"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions collaboration with data scientists and business stakeholders, and working with product teams.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.70,
+        "confidence": 0.80,
+        "evidence": "Generous benefits, PTO, and a focus on employee well-being are positive signals.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.80,
+        "confidence": 0.82,
+        "evidence": "Mentorship, training, and career development opportunities are mentioned.",
+        "source": "combined"
+      },
+      "tech_culture_score": {
+        "value": 0.75,
+        "confidence": 0.85,
+        "evidence": "Modern tech stack, CI/CD practices, and a focus on quality are positive indicators.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["innovation_time"],
+        "confidence": 0.70,
+        "evidence": "Mentions fostering a culture of empowerment and innovation.",
+        "source": "inferred"
+      },
+      "dev_practices_mentioned": {
+        "value": ["code_review", "ci_cd", "monitoring"],
+        "confidence": 0.90,
+        "evidence": "Explicit mentions of peer review, automated testing, and observability.",
+        "source": "explicit"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Mentions fostering a culture of innovation, but no specific R&D time is mentioned.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.80,
+        "evidence": "Mentions 'modernizing legacy pipelines' and 'improving code quality'.",
+        "source": "explicit"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.75,
+        "evidence": "Mentions working with data scientists, suggesting some ML integration.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": ["SageMaker", "MLflow"],
+        "confidence": 0.88,
+        "evidence": "Both tools explicitly mentioned in job description.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "immediate",
+        "confidence": 0.90,
+        "evidence": "The job posting mentions an 'immediate start' date.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Minneapolis location, hybrid role, and competitive salary suggest moderate competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "growth_stage",
+        "confidence": 0.75,
+        "evidence": "Expanding team, mentions recent funding, and rapid growth.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.85,
+        "evidence": "Expanding team from 8 to 15 engineers.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.88,
+        "evidence": "Mentions a team of 8 data engineers.",
+        "source": "explicit"
+      },
+      "funding_stage_signals": {
+        "value": "series_b_plus",
+        "confidence": 0.70,
+        "evidence": "Mentions 'well-funded startup' and rapid growth trajectory.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.85,
+        "evidence": "Mentions expanding the data team to support new initiatives.",
+        "source": "explicit"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["transparent_salary", "modern_tech_stack", "learning_opportunities", "well_defined_role"],
+    "strength_details": [
+      "Transparent compensation ($100k - $165k + equity)",
+      "Strong modern data stack (Snowflake, dbt, Airflow)",
+      "Excellent learning culture (budget, conferences, mentorship)"
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship", "location_restriction"],
+    "concern_details": [
+      "Immediate start date suggests potential for time pressure",
+      "US work authorization required - no visa sponsorship",
+      "Onsite role in Minneapolis, MN"
+    ],
+    "best_fit_categories": ["senior_data_engineers", "pipeline_developers", "cloud_specialists"],
+    "best_fit_details": [
+      "Senior DEs with 5+ years of experience in cloud data warehousing",
+      "Engineers proficient in Python, SQL, and data pipeline development",
+      "Candidates seeking a collaborative and innovative environment"
+    ],
+    "probe_categories": ["work_hour_expectations", "team_culture", "tech_debt_situation"],
+    "probe_details": [
+      "Ask about typical work hours and expectations for overtime",
+      "Inquire about the team's culture and collaboration style",
+      "Understand the current state of tech debt and plans for modernization"
+    ],
+    "leverage_categories": ["rare_skill_match", "domain_expertise"],
+    "leverage_details": [
+      "Experience with all three major cloud providers (AWS, Azure, GCP) is valuable",
+      "Experience in the biotech or healthcare industry is a plus"
+    ],
+    "overall_assessment": "This is a strong opportunity for a senior data engineer seeking a challenging role in a growing company with a modern tech stack. The role offers competitive compensation, excellent learning opportunities, and a well-defined scope. The main trade-offs are the potential for long hours and the location requirement.",
+    "recommendation_score": 0.80,
+    "recommendation_confidence": 0.85
+  }
+}
+```

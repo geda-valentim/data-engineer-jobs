@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'SR Data Engineer' (senior) and mentions 'Perfil senior' in requirements.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is 'SR Data Engineer' and core responsibilities focus on ETL development and data architecture.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "lakehouse",
+        "confidence": 0.80,
+        "evidence": "Explicit mention of 'Lakehouse' in responsibilities and architecture design focus.",
+        "source": "pass1_derived"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.75,
+        "evidence": "Responsibilities include designing scalable solutions, validating developments, and collaborating on architecture choices, which imply technical leadership without direct people management.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.98,
+        "evidence": "Dominio (dominance) of Microsoft Azure services (Synapse Analytics, Azure Data Factory) and company is a Microsoft partner.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No other cloud providers mentioned beyond Azure.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.70,
+        "evidence": "Mentions 'ETL' (batch) and 'Lakehouse' (which can support both batch and streaming), but no explicit streaming tools or paradigms are stated. Hybrid inferred due to Lakehouse flexibility.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.90,
+        "evidence": "Azure Data Factory is a cloud-native orchestrator for ETL processes.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.85,
+        "evidence": "Explicit mention of both 'Lakehouse' and 'Warehouse' in responsibilities, indicating a mixed storage approach.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.60,
+        "evidence": "Hybrid or remote work mentioned but no explicit restrictions on country, timezone, or region stated beyond project/client needs.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.50,
+        "evidence": "No timezone requirements explicitly mentioned, only hybrid/remote work model.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Hybrid or remote work model suggests relocation is not required.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned in Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No signals indicating support for OPT/CPT or student visas.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit mention of work authorization or citizenship requirements.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time employment type and 'contratación en relación de dependencia' (employment relationship) imply W2 contract.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.85,
+        "evidence": "Multiple premium benefits mentioned: family healthcare, extended paternity leave, technical training from onboarding, hybrid/remote work perks (travel, internet reimbursement, food allowance), and additional day off policies.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions 'foco en tu crecimiento profesional' and 'impulsamos el talento', indicating growth opportunities but no explicit career tracks.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.65,
+        "evidence": "Mentions 'ambiente colaborativo' and 'impulsamos el talento', suggesting informal mentorship opportunities.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion paths or advancement tracks.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal mobility or lateral moves in the job posting.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.60,
+        "evidence": "Mentions 'crecimiento profesional' and senior role, implying potential IC track growth, but no explicit tracks stated.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "All listed skills are under 'must_have_hard_skills' and 'must_have_soft_skills' with no 'nice_to_have' skills, indicating high strictness.",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Job description and responsibilities are well-defined and focused on data engineering tasks (ETL, architecture, validation).",
+        "source": "pass1_derived"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Requirements align with a senior data engineer role (e.g., architecture design, ETL development, autonomy). No unrealistic skill combinations detected.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

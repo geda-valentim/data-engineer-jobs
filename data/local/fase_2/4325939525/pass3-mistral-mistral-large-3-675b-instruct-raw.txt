@@ -1,0 +1,241 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "Mentions Palantir Foundry and Hadoop-based technologies (Hive, PySpark), which are modern but not explicitly paired with advanced governance or MLOps tools. No signals of CI/CD, testing, or monitoring practices outside Palantir's ecosystem.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Score of 3 aligns with 'defined' maturity level, indicating documented processes and some governance but not fully managed or optimized.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No explicit mention of modern data stack adoption, CI/CD, data quality testing, or governance tools beyond Palantir Foundry. Hadoop-based tools are legacy but still widely used in defined maturity environments.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.2,
+        "confidence": 0.90,
+        "evidence": "Role is focused on data engineering with no conflation of responsibilities (e.g., ML, DevOps, or backend). The requirement for Palantir Foundry is niche but aligns with DE scope.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.5,
+        "confidence": 0.80,
+        "evidence": "'Looking for locals only' and lack of work-life balance signals (e.g., PTO, hybrid flexibility) suggest potential time pressure. However, no explicit mentions of overtime or on-call reduce confidence in this score.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Job description explicitly defines the role as a Sr. Data Engineer with hands-on Palantir Foundry experience and Hadoop-based technologies. Scope is well-delineated.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.82,
+        "evidence": "Composite score derived from moderate overtime risk (0.5) and high requirement strictness (from Pass 2). No severe red flags but lacks protective signals like PTO or work-life balance mentions.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit or inferred reporting structure mentioned in the job posting or Pass 1/Pass 2 results.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No mention of reporting lines or manager titles in the job posting or Pass 2 inference.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No signals of team growth velocity or expansion in the job posting or Pass 2 results.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.95,
+        "evidence": "No explicit or inferred team composition details provided in the job posting or Pass 1/Pass 2 results.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure details mentioned in the job posting or Pass 2 results.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of cross-functional embedding or collaboration with product teams. Role appears independent.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.4,
+        "confidence": 0.75,
+        "evidence": "No PTO policy or work-life balance signals mentioned. 'Looking for locals only' may imply rigid onsite expectations, but no explicit negative signals (e.g., overtime, on-call) reduce confidence.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.3,
+        "confidence": 0.70,
+        "evidence": "No explicit mentions of learning budgets, mentorship, or career paths. However, senior role in a growing company may offer some growth opportunities.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.5,
+        "confidence": 0.75,
+        "evidence": "Palantir Foundry is a modern tool, but Hadoop-based technologies are legacy. No signals of CI/CD, testing, or other engineering practices reduce confidence in a strong tech culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No explicit or inferred signals of open source contributions, tech blogs, or conference speaking in the job posting or Pass 1/Pass 2 results.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No explicit or inferred development practices (e.g., code review, CI/CD) mentioned beyond Palantir Foundry and Hadoop tools.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No signals of innovation or experimentation culture provided in the job posting or Pass 2 results.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit or inferred mentions of tech debt management or refactoring in the job posting or Pass 2 results.",
+        "source": "inferred"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of ML/AI tools, frameworks, or responsibilities in the job posting or Pass 1/Pass 2 results.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML/AI tools mentioned or inferred in the job posting or Pass 1/Pass 2 results.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit urgency signals (e.g., 'immediate start', 'ASAP') in the job posting or Pass 1/Pass 2 results.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Atlanta is not a high-competition location (e.g., SF/NYC), but the niche requirement for Palantir Foundry may limit the candidate pool, reducing competition. No salary disclosure or remote flexibility signals further reduce competition confidence.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No company stage signals (e.g., funding, team size) provided in the job posting or Pass 1/Pass 2 results.",
+        "source": "pass1_derived"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit or inferred hiring velocity signals (e.g., multiple open roles, team expansion) beyond the role itself.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit or inferred team size signals provided in the job posting or Pass 1/Pass 2 results.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No funding stage signals (e.g., 'well-funded', 'recent funding round') mentioned in the job posting or Pass 1/Pass 2 results.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit or inferred signals about whether this is a new role, backfill, or team expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "well_defined_role", "exact_experience_match", "local_candidate"],
+    "strength_details": [
+      "Role is well-defined as a Sr. Data Engineer with a clear focus on Palantir Foundry and Hadoop-based technologies (Hive, PySpark).",
+      "Niche requirement for Palantir Foundry experience may align perfectly with candidates who have this rare skill.",
+      "Onsite role in Atlanta with preference for local candidates reduces ambiguity for relocation or remote work expectations."
+    ],
+    "concern_categories": ["no_visa_sponsorship", "work_life_balance", "not_mentioned_benefits", "legacy_technology"],
+    "concern_details": [
+      "'Looking for locals only' implies no visa sponsorship or work authorization flexibility, limiting candidate pool.",
+      "Lack of PTO policy or work-life balance signals may indicate potential overtime or rigid work hours.",
+      "No benefits (e.g., equity, learning budget) or compensation details mentioned, which is unusual for a senior role.",
+      "Hadoop-based technologies (Hive, PySpark) are legacy, suggesting possible outdated infrastructure or tech debt."
+    ],
+    "best_fit_categories": ["senior_data_engineers", "technical_specialists", "pipeline_developers"],
+    "best_fit_details": [
+      "Senior Data Engineers with 8-10 years of experience, particularly those with hands-on Palantir Foundry expertise.",
+      "Technical specialists who have worked with Hadoop-based technologies and are comfortable with batch processing.",
+      "Candidates seeking a focused, well-defined role without scope creep or embedded cross-functional responsibilities."
+    ],
+    "probe_categories": ["team_size_composition", "reporting_structure", "work_hour_expectations", "remote_policy_details", "tech_stack_details"],
+    "probe_details": [
+      "Ask about the size and composition of the data engineering team and broader data organization.",
+      "Clarify the reporting structure and who the direct manager for this role would be.",
+      "Probe for actual work hours, on-call expectations, and how deadlines are managed to assess overtime risk.",
+      "Inquire about the company's stance on remote work or hybrid flexibility, even if the role is onsite.",
+      "Understand the full tech stack, including cloud providers, orchestration tools, and data governance practices."
+    ],
+    "leverage_categories": ["rare_skill_match", "exact_experience_match", "local_candidate"],
+    "leverage_details": [
+      "Hands-on experience with Palantir Foundry is a rare and highly specific skill, which could provide strong negotiation leverage.",
+      "8-10 years of data engineering experience aligns exactly with the role's requirements, positioning you as a precise fit.",
+      "Being a local candidate may simplify logistics and reduce hiring friction, offering additional leverage."
+    ],
+    "overall_assessment": "This role is a strong fit for senior Data Engineers with hands-on Palantir Foundry experience, offering a clear and focused scope. However, the lack of transparency around compensation, benefits, and work-life balance, combined with legacy Hadoop technologies, suggests potential concerns about tech debt and company culture. Candidates should prioritize probing these areas during interviews.",
+    "recommendation_score": {
+      "value": 0.65,
+      "confidence": 0.80,
+      "evidence": "Role is well-defined and niche, but missing critical signals around compensation, benefits, and tech culture create uncertainty. Moderate recommendation for candidates who align with the rare skill requirement and are comfortable with onsite work in Atlanta."
+    }
+  }
+}
+```

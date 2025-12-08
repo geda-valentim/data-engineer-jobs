@@ -1,0 +1,231 @@
+<reasoning>Let me analyze this Korean job posting for MUSINSA (a Korean fashion company) for a Data Engineer position. I need to carefully examine both the original posting and the Pass 1 extraction results to make inferences about various job characteristics.
+
+First, let me understand what I know from the Pass 1 extraction:
+- Location: Seoul, South Korea (onsite only)
+- Employment: Full-time, permanent contract
+- Must-have skills: SQL, Python, data modeling, data extraction, data processing, data quality management, workflow management, Airflow, Luigi, Dagster, Prefect
+- Nice-to-have: data quality frameworks, Great Expectations, Soda, Databricks, data warehouse development
+- Soft skills: Problem Solving, Communication, Team Collaboration
+- No salary information disclosed
+- No visa sponsorship mentioned
+- No benefits mentioned
+- No specific years of experience required
+- No education requirements
+- No certifications mentioned
+
+Now let me analyze each inference category:
+
+**Seniority and Role:**
+- Title: "Data Engineer (모델링)" - this suggests a data engineer with modeling focus
+- No specific years mentioned, but the role seems to be at a mid to senior level based on the complexity of responsibilities
+- Job family: Clearly data_engineer based on title and responsibilities
+- Sub specialty: The role mentions data modeling, data quality management, workflow management - this suggests batch_etl and data_modeling focus
+- Leadership: No mention of direct reports or team leadership, seems like an IC role
+
+**Stack and Cloud:**
+- Primary cloud: Not explicitly mentioned in the text, but Databricks is mentioned which could be on any cloud
+- Processing paradigm: Mentions CDC (Change Data Capture), user behavior events, search data - this suggests both batch and streaming capabilities
+- Orchestrator: Airflow, Luigi, Dagster, Prefect are all mentioned - this is clearly airflow_like category
+- Storage: Mentions data warehouse development and Databricks - could be warehouse or lakehouse
+
+**Geo and Work Model:**
+- Remote restriction: "same_country" - must be in Seoul, South Korea
+
+
+- Timezone: "specific_country" - South Korea
+- Relocation: Not applicable since it's already in Seoul
+
+**Visa and Authorization:**
+- H1B: Not applicable (Korean company, Korean location)
+- OPT/CPT: Not applicable (Korean location)
+- Citizenship: Likely "work_auth_only" for South Korea
+
+**Contract and Compensation:**
+- W2 vs 1099: Likely "w2" for Korean full-time employment
+- Benefits: "none_mentioned" - no benefits listed
+
+**Career Development:**
+- Growth path: Vague mentions of growth but no specific tracks
+- Mentorship: Implied through team collaboration
+- Promotion: Not mentioned
+- Internal mobility: Not mentioned
+- Career tracks: Not specified
+
+**Requirements Classification:**
+- Requirement strictness: Medium - clear must-haves vs nice-to-haves
+- Scope definition: Clear - focused data engineering role
+- Skill inflation: No - reasonable requirements for the role
+
+I'll focus on the nuanced details of this data engineering position, highlighting the specific technical requirements and role characteristics that define the opportunity.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.65,
+        "evidence": "No specific years mentioned, but complex responsibilities in data modeling, quality management, and multiple orchestration tools suggest mid-level experience",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Data Engineer' and core responsibilities focus on data pipelines, modeling, and processing",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_modeling",
+        "confidence": 0.82,
+        "evidence": "Title includes '(모델링)' meaning modeling, and responsibilities emphasize data modeling, quality management, and workflow orchestration",
+        "source": "combined"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.88,
+        "evidence": "No mention of team leadership, direct reports, or mentoring responsibilities - pure individual contributor role focused on technical execution",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific cloud provider mentioned in the job posting or Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No cloud providers mentioned at all",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.78,
+        "evidence": "Mentions CDC (Change Data Capture), user behavior events, and search data which suggests real-time streaming, plus batch processing for data warehouse development",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.95,
+        "evidence": "Airflow explicitly mentioned as required skill, along with Luigi, Dagster, and Prefect - all workflow orchestration tools",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.75,
+        "evidence": "Mentions data warehouse development as nice-to-have skill, and Databricks which often uses warehouse patterns",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.95,
+        "evidence": "Location specified as Seoul, South Korea with onsite work model, indicating must be in South Korea",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.92,
+        "evidence": "Location restricted to Seoul, South Korea - specific country requirement",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Must already be in Seoul, South Korea - no relocation mentioned, just location requirement",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Korean company in Seoul location - H1B visa not applicable, no visa sponsorship mentioned",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Korean company location suggests no student visa support, no mention of international candidates",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.75,
+        "evidence": "Korean company would require work authorization in South Korea, but no specific citizenship requirements mentioned",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.88,
+        "evidence": "Full-time permanent position at Korean company suggests W2 employment structure",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits, equity, PTO, or other compensation details mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.68,
+        "evidence": "Mentions team collaboration and continuous learning but no specific career progression paths or advancement opportunities",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.72,
+        "evidence": "Team collaboration mentioned and working with experienced team members implied through team structure description",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of promotion opportunities, advancement paths, or career growth within the role",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers, role changes, or mobility opportunities within the company",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No specific career tracks mentioned - IC, management, or specialist paths not discussed",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.78,
+        "evidence": "Clear distinction between must-have skills (SQL, Python, orchestration tools) and nice-to-have skills (data quality frameworks, Databricks)",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.88,
+        "evidence": "Focused data engineering role with specific technical requirements and clear responsibilities around data modeling and pipeline development",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.82,
+        "evidence": "Requirements are reasonable for a mid-level data engineer role - SQL, Python, orchestration tools are standard expectations",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

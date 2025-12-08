@@ -33,16 +33,28 @@ def test_multiple_jobs_comparison(
     date: Optional[str] = None,
     limit: int = 5,
     use_cache: bool = False,
-    save_json: bool = False
+    save_json: bool = False,
+    preloaded_jobs: Optional[List[Dict[str, Any]]] = None,
+    preloaded_partition_info: Optional[Dict[str, Any]] = None
 ):
-    """Test Pass 1 extraction with multiple real LinkedIn jobs and compare results."""
+    """Test Pass 1 extraction with multiple real LinkedIn jobs and compare results.
+
+    Args:
+        preloaded_jobs: Optional pre-loaded jobs to avoid repeated S3 calls (for multiple model testing)
+        preloaded_partition_info: Optional partition info from pre-loaded jobs
+    """
     print("\n" + "=" * 60)
     print("Testing Pass 1 Extraction - Multiple Jobs Comparison")
     print("=" * 60)
 
-    # Load jobs from S3 or use hardcoded mocks
-    partition_info = None
-    if use_s3:
+    # Use pre-loaded jobs if provided, otherwise load from S3 or use mocks
+    partition_info = preloaded_partition_info
+    if preloaded_jobs is not None:
+        linkedin_jobs = preloaded_jobs
+        print(f"\nUsing {len(linkedin_jobs)} pre-loaded jobs")
+        if partition_info:
+            print(f"  Partition: {partition_info['year']}-{partition_info['month']}-{partition_info['day']} Hour {partition_info['hour']}")
+    elif use_s3:
         print("\nLoading jobs from S3 bucket...")
         if date:
             print(f"  Date: {date} (latest hour)")

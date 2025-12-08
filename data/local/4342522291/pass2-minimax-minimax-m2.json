@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 00:00:38",
+    "job_posting_id": "4342522291",
+    "job_title": "Data Architect & Leader",
+    "company_name": "Addison Group",
+    "job_location": "Houston, TX",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "staff",
+          "confidence": 0.9,
+          "evidence": "Data Architect title with leadership responsibilities, $140k-$170k compensation, and 'player-coach' role leading team indicates senior/staff level",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_architect",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Data Architect' with architectural design responsibilities across large MS environment",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "general",
+          "confidence": 0.7,
+          "evidence": "Broad architectural role covering ETL, ERP integrations, AI applications, and reporting - no specific niche specialization mentioned",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_and_people_lead",
+          "confidence": 0.9,
+          "evidence": "Explicitly described as 'player-coach' role leading small team with mentoring responsibilities and hands-on technical work",
+          "source": "pass1_derived"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "azure",
+          "confidence": 0.95,
+          "evidence": "Strong Microsoft ecosystem focus with MS Fabric for ETL, Power BI for reporting, and large MS environment mentioned",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No other cloud providers mentioned, pure Microsoft ecosystem throughout",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.8,
+          "evidence": "MS Fabric used for ETL processes, no real-time streaming mentioned, traditional data warehouse patterns",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "cloud_native",
+          "confidence": 0.9,
+          "evidence": "MS Fabric mentioned for ETL processes, which is Microsoft's cloud-native orchestration platform",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.75,
+          "evidence": "Large MS environment with thousands of tables and Power BI reporting suggests data warehouse architecture",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "anywhere",
+          "confidence": 0.95,
+          "evidence": "Explicitly states 'Remote, anywhere in the US' indicating fully distributed remote work",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "americas",
+          "confidence": 0.8,
+          "evidence": "US-only restriction implies Americas timezone focus, though no specific timezone requirements mentioned",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Remote position with 'anywhere in the US' indicates no relocation required",
+          "source": "pass1_derived"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No visa sponsorship mentioned in job posting, standard practice is to explicitly state if available",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.7,
+          "evidence": "No mention of student visa support, and senior-level role typically requires work authorization",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.8,
+          "evidence": "US-only remote position suggests work authorization requirement without specific citizenship mandate",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.95,
+          "evidence": "Full-time exempt position with comprehensive benefits package indicates W2 employment",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "standard",
+          "confidence": 0.85,
+          "evidence": "Medical, dental, vision, 401(k), and PTO mentioned - standard 5-benefit package without premium perks",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.6,
+          "evidence": "Player-coach role suggests growth opportunity but no specific career tracks or advancement paths mentioned",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "explicit_yes",
+          "confidence": 0.9,
+          "evidence": "Explicitly mentions mentoring a small team as core responsibility",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No specific promotion, advancement, or career progression paths mentioned",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal transfers, lateral moves, or role changes within organization",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "management_track"
+          ],
+          "confidence": 0.6,
+          "evidence": "Leadership role suggests management track, but no IC track or specialist paths mentioned",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Mix of 'must have' requirements with some flexibility ('at least two of' ERP systems), balanced approach",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused Data Architect role with well-defined responsibilities, single clear role not multi-role hybrid",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Reasonable skill set for senior data architect level, $140k-$170k compensation appropriate for scope",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 9043,
+    "input_tokens": 5936,
+    "output_tokens": 3107,
+    "cost": 0.012150000000000001
+  }
+}

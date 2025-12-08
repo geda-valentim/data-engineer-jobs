@@ -1,0 +1,404 @@
+<reasoning>Let me analyze this job posting and Pass 1 extraction results to infer the job characteristics according to the rules provided.
+
+First, let me understand what we have:
+
+**Original Job Posting:**
+- Title: Software & Data Engineer - Palantir Foundry
+- Company: Ursa Major (aerospace/defense)
+- Location: Berthoud, CO
+- Salary: $90,000 - $115,000
+- US Citizenship or Permanent Residency required
+- Security clearance required
+- On-site work model
+- 1-5 years software development + 1+ years data engineering experience
+- Palantir Foundry platform focus
+
+**Pass 1 Extraction Results:**
+- Salary disclosed: $90k-$115k
+- Visa: must be authorized (US citizen or permanent resident)
+- Security clearance required
+- Work model: onsite
+- Location: Berthoud, CO
+- Employment: full-time permanent
+- Must-have skills: Software Development, Data Engineering, Palantir Foundry, etc.
+- Nice-to-have: Manufacturing, Industrial Systems, IoT Data
+- Years experience: 1-5 years software + 1+ years data
+- Benefits: comprehensive (unlimited PTO, equity, health, etc.)
+
+Now let me infer each field:
+
+**SENIORITY AND ROLE:**
+
+1. **seniority_level**: 
+   - Title: "Software & Data Engineer" (no "Senior" in title)
+   - Experience: 1-5 years software + 1+ years data engineering
+   - This suggests mid-level rather than senior
+   - For data engineering, 1-5 years is typically mid-level
+   - Confidence: 0.7-0.8 (title doesn't have "senior" but experience suggests mid-level)
+   - Value: "mid"
+
+2. **job_family**:
+   - Title explicitly says "Software & Data Engineer"
+   - Core responsibilities: data pipelines, workflows, data integrations
+   - This is clearly data engineering
+   - Confidence: 0.95 (very clear from title and responsibilities)
+   - Value: "data_engineer"
+
+3. **sub_specialty**:
+   - Focus on Palantir Foundry platform
+   - Data pipelines and workflows
+   - Manufacturing/industrial systems mentioned as nice-to-have
+   - This seems like general data engineering with some manufacturing focus
+   - Confidence: 0.6-0.7 (some signals but not very specific)
+   - Value: "general"
+
+4. **leadership_expectation**:
+   - No mention of direct reports
+   - No mention of mentoring or leading teams
+   - Collaborative role with Product Owner and other engineers
+   - This suggests pure IC role
+   - Confidence: 0.8 (clear from job description)
+   - Value: "ic"
+
+**STACK AND CLOUD:**
+
+1. **primary_cloud**:
+   - No specific cloud provider mentioned
+   - Palantir Foundry is mentioned but that's a platform, not a cloud
+   - No AWS, Azure, GCP mentioned
+   - This is tricky - Palantir Foundry could be cloud-based but not specified
+   - Confidence: <0.5 (no clear signals)
+   - Value: "not_mentioned"
+
+2. **secondary_clouds**:
+   - No clouds mentioned at all
+   - Empty array
+   - Confidence: 0.9
+   - Value: []
+
+3. **processing_paradigm**:
+   - Mentions "data pipelines and workflows"
+   - No specific streaming or batch technologies mentioned
+   - Could be either, but no clear signals
+   - Confidence: <0.5
+   - Value: "not_mentioned"
+
+4. **orchestrator_category**:
+   - No specific orchestrator mentioned (no Airflow, etc.)
+   - Palantir Foundry might have its own orchestration but not specified
+   - Confidence: <0.5
+   - Value: "not_mentioned"
+
+5. **storage_layer**:
+   - No specific data warehouse, lake, or lakehouse mentioned
+   - Palantir Foundry manages data but storage specifics not detailed
+   - Confidence: <0.5
+   - Value: "not_mentioned"
+
+**GEO AND WORK MODEL:**
+
+1. **remote_restriction**:
+   - Work model stated as "onsite"
+   - Location: Berthoud, CO
+   - This suggests same_location restriction
+   - But the options are: same_country, same_timezone, same_region, anywhere
+   - "same_region" would be most appropriate for onsite Berthoud, CO
+   - Confidence: 0.8 (onsite requirement is clear)
+   - Value: "same_region"
+
+2. **timezone_focus**:
+   - Location: Berthoud, CO (Mountain Time Zone)
+   - No specific timezone requirements mentioned
+   - Onsite role would naturally be in Mountain Time
+   - Confidence: 0.7 (inferred from location)
+   - Value: "specific_country" (US, but more specifically Colorado/Mountain region)
+
+3. **relocation_required**:
+   - Onsite role in Berthoud, CO
+   - Must already be in location or willing to relocate
+   - No relocation package mentioned
+   - This suggests relocation would be required for non-locals
+   - Confidence: 0.8
+   - Value: true
+
+**VISA AND AUTHORIZATION:**
+
+1. **h1b_friendly**:
+   - "US Citizenship or Permanent Residency" required
+   - This explicitly excludes H1B sponsorship
+   - Confidence: 0.95 (very clear)
+   - Value: false
+
+2. **opt_cpt_friendly**:
+   - "US Citizenship or Permanent Residency" required
+   - This excludes student visas (OPT/CPT)
+   - Confidence: 0.9
+   - Value: false
+
+3. **citizenship_required**:
+   - "US Citizenship or Permanent Residency" required
+   - This is more restrictive than just work authorization
+   - Confidence: 0.9
+   - Value: "us_or_gc"
+
+**CONTRACT AND COMPENSATION:**
+
+1. **w2_vs_1099**:
+   - "Full-time Exempt" classification
+   - "Permanent" contract type
+   - Benefits package included
+   - This clearly indicates W2 employment
+   - Confidence: 0.9
+   - Value: "w2"
+
+2. **benefits_level**:
+   - Comprehensive benefits listed: unlimited PTO, equity, health insurance, 401k, etc.
+   - This is a very comprehensive package
+   - Confidence: 0.9
+   - Value: "comprehensive"
+
+**CAREER DEVELOPMENT:**
+
+1. **growth_path_clarity**:
+   - No specific career tracks mentioned
+   - No promotion paths discussed
+   - Generic mentions of growth but very vague
+   - Confidence: 0.6 (some growth implied but very vague)
+   - Value: "vague"
+
+2. **mentorship_signals**:
+   - Mentions working with Product Owner and other engineers
+   - No specific mentorship program mentioned
+   - No "learn from senior engineers" type language
+   - Confidence: 0.5 (very weak signals)
+   - Value: "not_mentioned"
+
+3. **promotion_path_mentioned**:
+   - No promotion or advancement mentioned
+   - No career progression discussed
+   - Confidence: 0.9
+   - Value: false
+
+4. **internal_mobility_mentioned**:
+   - No mention of internal transfers or role changes
+   - No team mobility discussed
+   - Confidence: 0.9
+   - Value: false
+
+5. **career_tracks_available**:
+   - No career tracks mentioned at all
+   - No IC track, management track, etc. discussed
+   - Confidence: 0.5 (too little information)
+   - Value: []
+
+**REQUIREMENTS CLASSIFICATION:**
+
+1. **requirement_strictness**:
+   - Clear "Required Qualifications" vs "Desired Experience" sections
+   - Mix of must-haves and nice-to-haves
+   - Not extremely strict, but has clear requirements
+   - Confidence: 0.7
+   - Value: "medium"
+
+2. **scope_definition**:
+   - Focused job description on Software & Data Engineer role
+   - Clear responsibilities around Palantir Foundry
+   - Not a multi-role hybrid position
+   - Confidence: 0.8
+   - Value: "clear"
+
+3. **skill_inflation_detected**:
+   - 1-5 years experience for this role seems reasonable
+   - Skills listed are appropriate for the level
+   - No unrealistic expectations
+   - Confidence: 0.8
+   - Value: false
+
+Let me double-check my confidence levels and make sure I'm following the rules:
+
+- Only infer with confidence >= 0.5
+- Every field must have value + confidence + evidence + source
+- Source must be one of: "pass1_derived" | "inferred" | "combined"
+- Never guess - use "not_mentioned" when unclear
+
+Looking at my analysis, I have a few fields with confidence < 0.5 that I should set to "not_mentioned":
+- primary_cloud: <0.5 → "not_mentioned"
+- processing_paradigm: <0.5 → "not_mentioned" 
+
+
+- orchestrator_category: <0.5 → "not_mentioned"
+- storage_layer: <0.5 → "not_mentioned"
+
+I'll mark these additional fields as "not_mentioned" to ensure I maintain the required confidence threshold and provide clear, accurate information about the job posting's technical specifications.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.75,
+        "evidence": "Title is 'Software & Data Engineer' without 'Senior', but requires 1-5 years software development + 1+ years data engineering experience, which aligns with mid-level expectations",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Software & Data Engineer' and core responsibilities focus on data pipelines, workflows, data integrations, and data management within Palantir Foundry",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "general",
+        "confidence": 0.65,
+        "evidence": "Focus on Palantir Foundry platform with data pipelines and workflows, plus manufacturing/industrial systems as nice-to-have, indicating general data engineering with some domain specialization",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "No mention of direct reports, mentoring, or team leadership; role focuses on collaboration with Product Owner and other engineers on implementation tasks",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.45,
+        "evidence": "No specific cloud provider (AWS, Azure, GCP) mentioned; Palantir Foundry is a platform but cloud provider not specified",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No cloud providers mentioned beyond Palantir Foundry platform",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 0.40,
+        "evidence": "Mentions data pipelines and workflows but no specific streaming (Kafka) or batch (Airflow) technologies to determine processing type",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.35,
+        "evidence": "No specific orchestration tools mentioned; Palantir Foundry may have internal orchestration but not specified",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.40,
+        "evidence": "No specific data warehouse, lake, or lakehouse technologies mentioned; Palantir Foundry manages data but storage specifics not detailed",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.85,
+        "evidence": "Work model stated as 'onsite' with specific location 'Berthoud, CO', requiring presence in that geographic region",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.75,
+        "evidence": "US citizenship/permanent residency required with onsite location in Berthoud, CO, indicating US-based role with Mountain Time Zone focus",
+        "source": "combined"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.80,
+        "evidence": "Onsite role in Berthoud, CO with no relocation package mentioned, implying candidates not already in the area would need to relocate",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "Explicitly requires 'US Citizenship or Permanent Residency', which excludes H1B visa sponsorship",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "US citizenship or permanent residency requirement excludes student visa holders on OPT/CPT",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "us_or_gc",
+        "confidence": 0.90,
+        "evidence": "States 'US Citizenship or Permanent Residency' requirement, indicating US citizen or green card holder status needed",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Classification as 'Full-time Exempt' with comprehensive benefits package and 'permanent' contract type indicates W2 employment",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.90,
+        "evidence": "Extensive benefits including unlimited PTO, equity grants, comprehensive health insurance, 401k matching, and additional voluntary benefits",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.60,
+        "evidence": "Mentions that work will 'directly shape how Ursa Major continues its growth' but no specific career progression paths or advancement opportunities detailed",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.45,
+        "evidence": "Mentions collaboration with Product Owner and other engineers but no specific mentorship program or learning from senior staff mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of promotion, advancement, or career progression opportunities in the job description",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers, role changes, or mobility opportunities within the company",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.50,
+        "evidence": "No specific career tracks (IC, management, specialist, architect) mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Clear distinction between 'Required Qualifications' (must-have) and 'Desired Experience' (nice-to-have), with balanced but not overly strict requirements",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused job description specifically on Software & Data Engineer role within Palantir Foundry, with well-defined responsibilities and clear scope",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "1-5 years software development + 1+ years data engineering experience is reasonable for mid-level role; skills listed are appropriate and not inflated",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

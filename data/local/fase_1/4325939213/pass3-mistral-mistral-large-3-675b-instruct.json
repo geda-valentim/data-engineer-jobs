@@ -1,0 +1,254 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 00:16:02",
+    "job_posting_id": "4325939213",
+    "job_title": "Senior Data Engineer (SQL, Python, Snowflake)",
+    "company_name": "Tata Consultancy Services",
+    "job_location": "Cupertino, CA",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.75,
+          "evidence": "Mentions Snowflake (modern tool) and advanced SQL (structured practice), but lacks explicit signals for CI/CD, testing, or governance. Experience requirement suggests some maturity, but no clear evidence of managed or optimizing practices.",
+          "source": "combined"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.75,
+          "evidence": "Matches the data_maturity_score of 3. Snowflake adoption and structured data pipeline experience suggest defined processes, but lack of additional signals limits confidence in higher maturity levels.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption"
+          ],
+          "confidence": 0.8,
+          "evidence": "Snowflake is explicitly mentioned as a nice-to-have skill, suggesting adoption of modern data warehouse technology.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.2,
+          "confidence": 0.95,
+          "evidence": "Role is clearly focused on data engineering with no conflation of responsibilities (e.g., no mention of ML, DevOps, or backend/frontend duties).",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "No explicit signals of overtime (e.g., 'fast-paced', 'immediate start'), but also no protective factors mentioned (e.g., PTO, work-life balance). The lack of details suggests moderate risk, typical of consulting or enterprise roles.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "Job description explicitly states responsibilities (SQL, Python, data pipelines) and seniority level (8+ years), aligning with a focused data engineering role.",
+          "source": "pass1_derived"
+        },
+        "overall_red_flag_score": {
+          "value": 0.35,
+          "confidence": 0.8,
+          "evidence": "Composite score derived from scope_creep_score (0.2) and overtime_risk_score (0.5), with no additional red flags detected in requirements or role definition.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 1.0,
+          "evidence": "No explicit or inferred reporting structure mentioned in the job posting or Pass 1/Pass 2 results.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 1.0,
+          "evidence": "No manager or reporting structure mentioned to infer manager level.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 1.0,
+          "evidence": "No signals of team growth velocity (e.g., expansion, hiring pace) mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.9,
+          "evidence": "No team composition details provided in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 1.0,
+          "evidence": "No reporting structure details available in the job posting or Pass 1/Pass 2 results.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.6,
+          "evidence": "No explicit mention of embedded cross-functional work, but the lack of details on team structure limits confidence in this inference.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.4,
+          "confidence": 0.7,
+          "evidence": "No explicit work-life balance signals (e.g., PTO, hybrid/remote flexibility), but no negative signals (e.g., 'fast-paced', on-call) either. Salary range and consulting context suggest moderate risk.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.5,
+          "confidence": 0.65,
+          "evidence": "No explicit growth opportunities (e.g., mentorship, learning budget) mentioned, but seniority level and consulting role may offer exposure to diverse projects and clients.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.5,
+          "confidence": 0.75,
+          "evidence": "Mentions modern tool (Snowflake) and structured practices (SQL, Python), but lacks explicit signals for CI/CD, testing, or innovation culture. Consulting context may imply varied tech culture exposure.",
+          "source": "combined"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No explicit or inferred signals of open source, tech blogs, conferences, or innovation time mentioned in the job posting or Pass 1/Pass 2 results.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.85,
+          "evidence": "No explicit development practices (e.g., code review, CI/CD, monitoring) mentioned beyond basic tool requirements.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No signals of innovation (e.g., R&D, experimentation) mentioned in the job posting or Pass 1/Pass 2 results.",
+          "source": "pass1_derived"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit or inferred mentions of tech debt management or refactoring in the job posting or Pass 1/Pass 2 results.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.95,
+          "evidence": "No AI/ML tools or responsibilities mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No ML/AI tools mentioned or inferred in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit hiring urgency signals (e.g., 'immediate start', 'ASAP') mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "high",
+          "confidence": 0.6,
+          "evidence": "Location (Cupertino, CA) is a competitive tech hub, and salary range is disclosed but below market average for senior roles, which may attract fewer candidates. However, lack of remote flexibility could limit competition.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.85,
+          "evidence": "Tata Consultancy Services is a well-established global IT services and consulting company with enterprise-level maturity and scale.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit signals of hiring velocity (e.g., multiple open roles, expansion) mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit team size signals mentioned in the job posting or Pass 1 results beyond the role itself.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No funding stage signals (e.g., bootstrapped, seed, series_a) mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit signals of whether this is a new headcount, backfill, or team expansion.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strengths": [
+        "Clear and focused role scope (data engineering with SQL, Python, and Snowflake)",
+        "Enterprise-level company with global presence (Tata Consultancy Services)",
+        "Senior-level position with reasonable experience requirement (8+ years)"
+      ],
+      "concerns": [
+        "Salary range ($90,000 - $145,000) is below market average for senior data engineers in Cupertino, CA",
+        "No benefits, work-life balance, or growth opportunities mentioned",
+        "No visa sponsorship or work authorization flexibility signals"
+      ],
+      "best_fit_for": [
+        "Experienced data engineers with strong SQL and Python skills looking for stable enterprise roles",
+        "Candidates with prior consulting experience who are comfortable with potential client-driven deadlines",
+        "Professionals seeking exposure to modern data warehouse tools (Snowflake) in a structured environment"
+      ],
+      "red_flags_to_probe": [
+        "Ask about work-life balance and overtime expectations, especially given the consulting context",
+        "Inquire about benefits (e.g., PTO, health insurance, bonuses) since none are listed",
+        "Clarify team structure and whether the role is embedded in cross-functional teams or centralized",
+        "Understand the role's growth opportunities and career paths within the company",
+        "Discuss the company's approach to tech debt and modernization efforts"
+      ],
+      "negotiation_leverage": [
+        "8+ years of experience in data engineering is a strong differentiator",
+        "Advanced SQL and Python skills are highly valued and may justify higher compensation",
+        "Snowflake expertise is a niche skill that could strengthen your position"
+      ],
+      "overall_assessment": "This role is a clear senior data engineering position at an enterprise-level consulting firm, offering stability and exposure to modern tools like Snowflake. However, the salary range is significantly below market for Cupertino, CA, and the lack of benefits or work-life balance signals is concerning. Candidates should probe for hidden red flags and negotiate compensation aggressively.",
+      "recommendation_score": {
+        "value": 0.5,
+        "confidence": 0.8,
+        "evidence": "Neutral recommendation due to below-market salary and lack of benefits/work-life balance signals, balanced by enterprise stability and modern tool exposure."
+      }
+    },
+    "tokens": 11421,
+    "input_tokens": 8666,
+    "output_tokens": 2755,
+    "cost": 0.014176000000000001
+  }
+}

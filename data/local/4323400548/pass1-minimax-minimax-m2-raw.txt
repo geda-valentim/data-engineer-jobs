@@ -1,0 +1,213 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules. Let me go through each section systematically.
+
+First, let me identify the key information:
+
+**Title**: Senior Data Engineer
+**Company**: SimpliSafe
+**Location**: Boston, MA
+
+Now let me extract the required information:
+
+**Compensation**:
+- The posting mentions: "The target annual base pay range for this role is $111,800 to $164,000."
+- This is salary, yearly, in USD
+- salary_disclosed: true
+- salary_min: 111800
+- salary_max: 164000
+- salary_currency: "USD"
+- salary_period: "yearly"
+- salary_text_raw: "The target annual base pay range for this role is $111,800 to $164,000."
+
+**Work Authorization**:
+- I need to look for visa sponsorship mentions
+- I see: "We wholeheartedly embrace and actively seek applications from all individuals, no matter how they identify."
+- Also: "If a reasonable accommodation may be needed to fully participate in the job application or interview process, to perform the essential functions of a position, or to receive other benefits and privileges of employment, please contact careers@simplisafe.com."
+- No explicit mention of visa sponsorship, work authorization requirements, or citizenship requirements
+- visa_sponsorship_stated: "not_mentioned"
+- work_auth_text: null
+- citizenship_text: null
+- security_clearance_stated: "not_mentioned"
+
+**Work Model**:
+- The posting mentions: "We're embracing a hybrid work model that enables our teams to split their time between office and home. Hybrid for us means we expect our teams to come together in our state-of-the-art office on two core days, typically Tuesday and Wednesday, to work together in person, and teams can choose where they work for the remainder of the week."
+- work_model_stated: "hybrid"
+- location_restriction_text: null
+- employment_type_stated: "full_time" (implied from the nature of the role)
+
+
+- contract_type: "permanent" (standard for full-time positions)
+
+**Contract Details**:
+- No specific contract information provided
+- contract_type: "not_mentioned"
+- contract_duration_months: null
+- contract_duration_text: null
+- extension_possible: "not_mentioned"
+- conversion_to_fte: "not_mentioned"
+- start_date: "not_mentioned"
+- start_date_text: null
+- probation_period_text: null
+
+**Contractor Rates**:
+- This is a full-time position, not contractor
+- pay_type: "not_mentioned"
+- All other contractor rate fields: null
+
+**Skills Classification**:
+I'll analyze the must-have and nice-to-have hard skills based on the job requirements. The role demands strong technical expertise in data engineering, with specific focus on cloud platforms, data transformation, and infrastructure management. Key technical skills include AWS, Python, SQL, and experience with data orchestration tools like Dagster or Airflow.
+
+The soft skills emphasize collaboration, problem-solving, and a passion for data-driven solutions. Communication and teamwork appear crucial, given the role's cross-functional nature and the need to work with various stakeholders across the organization.
+
+Education requirements suggest a bachelor's degree in a technical field, with significant practical experience in software or data engineering. The role prioritizes hands-on expertise over formal credentials, valuing real-world problem-solving capabilities.
+
+The company culture highlights customer-centricity, collaboration, and continuous improvement. Key values include maintaining humility, working as a unified team, and supporting each other's professional growth. The environment emphasizes agility, efficiency, and a willingness to tackle challenges across different domains.
+
+Compensation and benefits reflect a comprehensive approach to employee support. The package includes competitive base pay, potential bonus participation, equity opportunities, and a robust benefits suite covering medical, retirement, and lifestyle needs. The organization demonstrates a commitment to employee wellness and security.
+
+The company actively promotes diversity and inclusion, welcoming individuals from all backgrounds. They provide support for potential workplace accommodations and maintain a transparent, equitable approach to compensation and career development.
+
+Geographic considerations reveal a US-focused hiring strategy, with specific location requirements in Boston. The role emphasizes local presence and potential relocation for the right candidate.
+
+Benefits highlight a holistic approach to employee well-being, offering comprehensive healthcare, professional development resources, and unique perks like home security systems. The organization demonstrates a commitment to supporting both professional and personal growth.
+
+The company culture emphasizes collaboration, continuous learning, and mutual support. With a focus on teamwork and individual development, they create an environment where employees can thrive and contribute meaningfully to the organization's mission.
+
+The total rewards package extends beyond traditional compensation, including potential equity participation and a full spectrum of lifestyle benefits. This comprehensive approach reflects a strategic investment in employee satisfaction and long-term engagement.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": true,
+      "salary_min": 111800,
+      "salary_max": 164000,
+      "salary_currency": "USD",
+      "salary_period": "yearly",
+      "salary_text_raw": "The target annual base pay range for this role is $111,800 to $164,000.",
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "hybrid",
+      "location_restriction_text": null,
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "AWS",
+        "Azure",
+        "GCP",
+        "SQL",
+        "AWS Athena",
+        "Python",
+        "ETL/ELT",
+        "schema design",
+        "datalake technologies",
+        "Dagster",
+        "Airflow",
+        "Prefect",
+        "CI/CD pipelines",
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "CloudFormation",
+        "JSON",
+        "Avro",
+        "Parquet",
+        "Iceberg"
+      ],
+      "nice_to_have_hard_skills": [
+        "home security technology",
+        "consumer IoT products",
+        "data analytics",
+        "data quality",
+        "data catalog tools",
+        "Kafka",
+        "Kinesis",
+        "Spark",
+        "cost optimization strategies"
+      ],
+      "must_have_soft_skills": [
+        "Communication",
+        "Team Collaboration",
+        "Problem Solving"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 4,
+      "years_experience_max": null,
+      "years_experience_text": "4+ years of experience in software engineering, data engineering, or a related field, with at least 2 years focused on data operations or data infrastructure",
+      "education_level": "BACHELORS",
+      "education_area": "Computer Science",
+      "education_requirement": "or_equivalent",
+      "education_text_raw": "Bachelor's degree in Computer Science, Engineering, Mathematics, or a related field or equivalent practical experience",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "us_only",
+      "allowed_countries": ["US"],
+      "excluded_countries": [],
+      "us_state_restrictions": ["MA"],
+      "residency_requirement": "willing_to_relocate"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [
+        "comprehensive total rewards package",
+        "wellness support",
+        "security for SimpliSafers and their families",
+        "Free SimpliSafe system and professional monitoring for your home",
+        "Employee Resource Groups (ERGs)",
+        "medical benefits",
+        "retirement benefits",
+        "lifestyle benefits",
+        "annual bonus program",
+        "equity",
+        "other forms of compensation"
+      ],
+      "equity_mentioned": true,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "As a Senior Data Engineer on our Core Engineering Data Team, you will design and implement integrated systems for data flows from our products and services to our shared analytical platforms and downstream ML, Engineering, and Product applications. Contribute to the formation of our new team, assisting with the development of team norms, practices, and charter.",
+      "company_description_text": "SimpliSafe is a leading innovator in the home security industry, dedicated to making every home a safe home. With a mission to provide accessible and comprehensive security solutions, we design and build user-centric products that empower individuals and families to protect what matters most. We believe in a collaborative and agile environment where learning and growth are continuous."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 19
+  }
+}
+```

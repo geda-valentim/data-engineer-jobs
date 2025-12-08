@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.75,
+        "evidence": "3-5 years experience aligns with mid-level, core DE responsibilities",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is Data Engineer, core focus on pipelines and data modeling",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.70,
+        "evidence": "Focus on data extraction, transformation, and loading from various sources.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "No mention of direct reports or team management responsibilities.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.65,
+        "evidence": "Databricks and Snowflake are mentioned, but not tied to a specific cloud provider.",
+        "source": "inferred"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other clouds mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.80,
+        "evidence": "Focus on ETL/ELT processes and data modeling suggests batch processing.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.55,
+        "evidence": "No specific orchestration tool mentioned.",
+        "source": "not_mentioned"
+      },
+      "storage_layer": {
+        "value": "lakehouse",
+        "confidence": 0.75,
+        "evidence": "Snowflake and Databricks suggest a lakehouse architecture.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.60,
+        "evidence": "Hybrid/remote flexibility mentioned, but no specific location restrictions.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.50,
+        "evidence": "No specific timezone mentioned.",
+        "source": "not_mentioned"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Hybrid/remote flexibility suggests no relocation is required.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship stated explicitly.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of student visas or OPT/CPT.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.50,
+        "evidence": "No citizenship requirements specified.",
+        "source": "not_mentioned"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time employee position suggests W2.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "standard",
+        "confidence": 0.70,
+        "evidence": "Development opportunities and ownership are mentioned, but limited details on comprehensive benefits.",
+        "source": "inferred"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions 'growth opportunities' but lacks specific career tracks.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Working with an international, smart, and ambitious team suggests learning opportunities.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotions or advancement.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.70,
+        "evidence": "Focus on individual contributions and technical expertise.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Mix of 'must-haves' and 'nice-to-haves' in the job description.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Focused job description with well-defined responsibilities.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Skills align with the mid-level seniority and job responsibilities.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

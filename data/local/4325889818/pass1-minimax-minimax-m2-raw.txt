@@ -1,0 +1,139 @@
+<reasoning>Let me carefully analyze this job posting to extract the required information according to the rules.
+
+Looking at the job posting:
+
+**Title**: Senior Data Engineer – Commerce Data Pipelines
+**Company**: aKUBE
+**Location**: Santa Monica, CA
+
+**Compensation**: 
+- "Rate Range : Up to$92.5/hr on W2 depending on experience (no C2C or 1099 or sub-contract)"
+- This is hourly rate, so hourly_rate_max: 92.5, hourly_rate_currency: USD, hourly_rate_text_raw: "Up to$92.5/hr on W2 depending on experience"
+- salary_disclosed: false (no annual salary mentioned)
+
+**Work Authorization**:
+- "Work Authorization : GC, USC, All valid EADs except OPT, CPT, H1B"
+- This means they will accept Green Card holders, US Citizens, and EAD holders but NOT OPT, CPT, or H1B
+- This is "will_not_sponsor" since they explicitly exclude certain visa types
+- work_auth_text: "GC, USC, All valid EADs except OPT, CPT, H1B"
+
+**Work Model**:
+- "Onsite/ Hybrid/ Remote: Hybrid (4 days a week onsite, Friday - Remote)"
+- work_model_stated: "hybrid"
+- location_restriction_text: "4 days a week onsite, Friday - Remote"
+- employment_type_stated: "full_time" (implied by the nature of the role)
+
+**Contract Details**:
+- "Duration : 10 months"
+- This is a fixed term contract
+- contract_type: "fixed_term"
+- contract_duration_months: 10
+- contract_duration_text: "10 months"
+- extension_possible: "not_mentioned" (not explicitly stated)
+- conversion_to_fte: "not_mentioned" (not explicitly stated)
+- start_date: "not_mentioned" (not explicitly stated)
+
+**Contractor Rates**:
+- "pay_type": "hourly" (mentioned as "$92.5/hr")
+
+
+- "rate_negotiable": "doe" (depending on experience)
+
+**Skills Classification**:
+I'll analyze the required technical skills and qualifications. The role demands advanced data engineering expertise, focusing on SQL, ETL design, and data modeling. Key requirements include dimensional modeling, ETL orchestration tools like Airflow, and proficiency in Python or PySpark. The position requires a Bachelor's degree and 3+ years of data engineering experience, with strong analytical and communication skills being crucial for cross-functional collaboration.
+
+The soft skills emphasize analytical reasoning, communication, and cross-functional teamwork. No specific certifications are mentioned, and the role doesn't involve LLM or GenAI technologies. The educational requirement is a Bachelor's degree, with the specific field not explicitly defined.
+
+Geographic restrictions are not specified, and no additional benefits are outlined in the job description.
+
+I'll carefully map out the technical and soft skill requirements, ensuring a comprehensive understanding of the role's demands and qualifications.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": 92.5,
+      "hourly_rate_currency": "USD",
+      "hourly_rate_text_raw": "Up to$92.5/hr on W2 depending on experience"
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "will_not_sponsor",
+      "work_auth_text": "GC, USC, All valid EADs except OPT, CPT, H1B",
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "hybrid",
+      "location_restriction_text": "4 days a week onsite, Friday - Remote",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "fixed_term",
+      "contract_duration_months": 10,
+      "contract_duration_text": "10 months",
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "hourly",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "doe",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": ["SQL", "ETL design and development", "Data modeling", "dimensional models", "normalization", "ETL orchestration tools", "Airflow", "Data Quality frameworks", "Performance tuning", "Python", "PySpark", "Snowflake", "Redshift"],
+      "nice_to_have_hard_skills": ["Nifi"],
+      "must_have_soft_skills": ["Analytical Reasoning", "Communication", "Cross-functional Collaboration"],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 3,
+      "years_experience_max": null,
+      "years_experience_text": "3+ years of data engineering experience",
+      "education_level": "BACHELORS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "Bachelor's degree required",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": null,
+      "company_description_text": null
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 21
+  }
+}
+```

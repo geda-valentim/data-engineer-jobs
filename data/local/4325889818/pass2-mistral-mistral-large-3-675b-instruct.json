@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 00:32:25",
+    "job_posting_id": "4325889818",
+    "job_title": "Senior Data Engineer – Commerce Data Pipelines",
+    "company_name": "aKUBE",
+    "job_location": "Santa Monica, CA",
+    "pass_name": "pass2",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.92,
+          "evidence": "Title explicitly states 'Senior Data Engineer' and requires 3+ years of data engineering experience.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title is 'Senior Data Engineer' and core responsibilities focus on ETL pipelines, data modeling, and SQL/performance tuning.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.85,
+          "evidence": "Core focus on ETL design, development, and orchestration (Airflow), with no explicit mention of streaming or real-time tools.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.75,
+          "evidence": "Responsibilities include partnering with cross-functional teams and performance tuning, suggesting technical leadership without direct reports.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of AWS, Azure, or GCP services in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No secondary clouds mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.88,
+          "evidence": "ETL pipelines and Airflow are mentioned as core responsibilities, with no explicit focus on streaming or real-time processing.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "airflow_like",
+          "confidence": 0.95,
+          "evidence": "Airflow explicitly mentioned as a must-have tool for ETL orchestration.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.9,
+          "evidence": "Snowflake and Redshift are explicitly mentioned as required storage solutions, with no lakehouse or mixed patterns indicated.",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.85,
+          "evidence": "Hybrid work model requires 4 days onsite in Santa Monica, CA, Seattle, WA, or NYC, implying regional restrictions.",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit timezone requirements mentioned beyond location-based hybrid model.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Hybrid work model implies candidate must already be resident in allowed locations (Santa Monica, CA, Seattle, WA, or NYC).",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Work authorization text explicitly excludes H1B sponsorship.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Work authorization text explicitly excludes OPT and CPT.",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "us_or_gc",
+          "confidence": 0.88,
+          "evidence": "Work authorization text mentions GC (Green Card) and USC (US Citizen) as accepted statuses, with no additional citizenship restrictions.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Hourly rate text explicitly states 'W2 only' and excludes C2C or 1099.",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits are mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or implied discussion of career growth paths in the job posting.",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No formal or informal mentorship signals detected in the job posting.",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of promotion or advancement paths in the job posting.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No discussion of internal mobility or role changes in the job posting.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No career tracks (IC, management, specialist, architect) explicitly or implicitly mentioned.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.75,
+          "evidence": "Long list of must-have skills and 'Bachelor’s degree required' stated explicitly, with minimal nice-to-have skills.",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Job description focuses on a single role with well-defined responsibilities in ETL, data modeling, and SQL tuning.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": true,
+          "confidence": 0.65,
+          "evidence": "Requires 3+ years of experience but lists advanced skills like performance tuning and data quality frameworks typically associated with mid-to-senior roles.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7948,
+    "input_tokens": 6267,
+    "output_tokens": 1681,
+    "cost": 0.009629
+  }
+}

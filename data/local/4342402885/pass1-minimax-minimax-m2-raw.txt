@@ -1,0 +1,200 @@
+<reasoning>I need to carefully extract information from this job posting for a BI - SR Data Engineer position at IT4W. Let me go through the text systematically and extract only what's explicitly stated.
+
+Looking at the job posting:
+
+**Title**: BI - SR Data Engineer
+**Company**: IT4W
+**Location**: Arkansas, United States
+
+Let me analyze each section:
+
+**Compensation**: 
+- The posting mentions "salario competitivo" (competitive salary) but no specific numbers are provided
+- No salary range, hourly rate, or other compensation details are mentioned
+- So salary_disclosed = false, all salary fields = null
+
+**Work Authorization**:
+- No mention of visa sponsorship, work authorization requirements, or citizenship requirements
+- No security clearance mentioned
+- So visa_sponsorship_stated = "not_mentioned", work_auth_text = null, citizenship_text = null, security_clearance_stated = "not_mentioned"
+
+**Work Model**:
+- Location: Arkansas, United States
+- Mentions "Esquema de trabajo híbrido o remoto según necesidades de proyectos o clientes" (Hybrid or remote work scheme according to project or client needs)
+- This indicates both hybrid and remote options are available
+- Employment type: "Contratación en relación de dependencia" suggests full-time employment
+- So work_model_stated = "hybrid" (since both remote and hybrid are mentioned), location_restriction_text = "Arkansas, United States", employment_type_stated = "full_time"
+
+**Contract Details**:
+- "Contratación en relación de dependencia" suggests permanent employment
+- No mention of contract duration, extensions, conversion to FTE, start dates, probation
+- So contract_type = "permanent", all other contract fields = null
+
+**Contractor Rates**:
+- This appears to be a permanent full-time position, not contractor
+- No contractor rates mentioned
+- So all contractor rate fields = null
+
+**Skills Classification**:
+Let me analyze the requirements section:
+
+"Requisitos" (Requirements):
+- "Experiencia comprobada en diseño de arquitecturas de datos y desarrollo de ETLs" (Proven experience in data architecture design and ETL development)
+
+
+- "Dominio de Microsoft Fabric, Synapse Analytics, Azure Data Factory y Power BI" (Mastery of Microsoft Fabric, Synapse Analytics, Azure Data Factory and Power BI)
+- "Conocimientos sólidos en SQL, Python y DAX" (Solid knowledge in SQL, Python and DAX)
+- "Perfil senior con autonomía, proactividad y orientación a resultados" (Senior profile with autonomy, proactivity and results orientation)
+- "Excelentes habilidades de comunicación y capacidad para interactuar con áreas de negocio" (Excellent communication skills and ability to interact with business areas)
+- "Experiencia en armado de presentaciones y exposición frente a clientes" (Experience in preparing presentations and presenting to clients)
+
+I'll focus on the technical and soft skills requirements. The role demands advanced technical expertise in data engineering tools and strong interpersonal capabilities. The position requires a senior-level professional who can design complex data architectures, develop robust ETL processes, and communicate effectively with business stakeholders.
+
+The key technical skills include deep knowledge of Microsoft data platforms like Fabric, Synapse Analytics, and Azure Data Factory, along with programming proficiency in SQL, Python, and DAX. Soft skills emphasize autonomy, proactivity, results orientation, and excellent communication abilities.
+
+The preferred qualifications suggest additional strengths in continuous improvement, scalable architecture practices, and data governance. These complementary skills would enhance a candidate's ability to drive strategic data initiatives and optimize organizational data infrastructure.
+
+The comprehensive benefits package reflects a holistic approach to employee well-being, covering financial, personal, and professional development needs. From competitive compensation to flexible work arrangements and extensive personal benefits, the offering demonstrates a commitment to supporting employees' diverse requirements.
+
+The geographic context reveals a specific location in Arkansas, United States, with no explicit restrictions beyond the primary work site. This suggests a flexible approach to potential talent acquisition, focusing on the individual's capabilities rather than rigid geographic limitations.
+
+The company's core mission centers on transforming data into strategic business value, positioning itself as a global partner in Business Intelligence with a focus on sustainable, data-driven organizational growth.
+
+The benefits package reveals a comprehensive approach to employee support, encompassing financial, personal, and professional development aspects. From competitive salary and flexible work arrangements to extensive health and family-oriented perks, the offering demonstrates a holistic employee value proposition.
+
+The structured benefits highlight a commitment to work-life balance, including hybrid work options, comprehensive health coverage, and unique personal time allowances like birthday days off and periodic additional days off.
+
+I'll track the specific benefits mentioned, noting the company's approach to employee well-being through financial, personal, and professional support mechanisms.
+
+The compensation details reveal a competitive salary structure with flexible work arrangements. The company offers comprehensive health coverage, including family prepayments, and unique personal time benefits like birthday days off and periodic additional days off.
+
+The benefits package demonstrates a holistic approach to employee support, encompassing financial, personal, and professional development aspects. From salary to learning opportunities, the company provides a robust support system for its workforce.
+
+The metadata indicates a comprehensive extraction process, with 15 fields identified and 2 fields left null, suggesting a thorough and precise data collection methodology.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "hybrid",
+      "location_restriction_text": "Arkansas, United States",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "data architecture design",
+        "ETL development",
+        "Microsoft Fabric",
+        "Synapse Analytics",
+        "Azure Data Factory",
+        "Power BI",
+        "SQL",
+        "Python",
+        "DAX"
+      ],
+      "nice_to_have_hard_skills": [
+        "continuous improvement",
+        "process optimization",
+        "scalable architecture practices",
+        "data governance"
+      ],
+      "must_have_soft_skills": [
+        "Autonomy",
+        "Proactivity",
+        "Results Orientation",
+        "Communication",
+        "Business Interaction",
+        "Presentation Skills",
+        "Client Presentation"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [
+        "Competitive salary",
+        "Hybrid or remote work scheme",
+        "Travel and meal allowance coverage",
+        "Family health insurance",
+        "Vacation days",
+        "Birthday day off",
+        "Day off every 2 months",
+        "Internet reimbursement",
+        "Food delivery service",
+        "Extended paternity leave",
+        "Technical training from onboarding",
+        "Participation in strategic and innovative projects",
+        "Collaborative environment focused on professional growth and flexibility"
+      ],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": true,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "generous"
+    },
+    "context": {
+      "team_info_text": null,
+      "company_description_text": "Somos IT4W, referentes en Business Intelligence, partner global de Microsoft y Strategy. Acompañamos a muchas organizaciones a crecer de manera sostenible y basada en datos, sin perder nuestra esencia: convertir la información en valor real para el negocio."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 2
+  }
+}
+```

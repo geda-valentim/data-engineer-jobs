@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 00:20:46",
+    "job_posting_id": "4342313220",
+    "job_title": "Data Engineer (모델링)",
+    "company_name": "MUSINSA 무신사",
+    "job_location": "Seoul, Seoul, South Korea",
+    "pass_name": "pass2",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "Title is 'Data Engineer (모델링)' which does not explicitly match IC hierarchy levels, and years of experience are not clearly stated in Pass 1 or original posting.",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title explicitly states 'Data Engineer', and responsibilities focus on data pipelines, modeling, and infrastructure.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "data_modeling",
+          "confidence": 0.95,
+          "evidence": "Title includes '(모델링)' (modeling), and job description emphasizes data modeling, data quality, and data pipelines.",
+          "source": "combined"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.75,
+          "evidence": "Mentions 'code review' and 'data quality management' which imply technical leadership without direct people management responsibilities.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of AWS, Azure, or GCP services in Pass 1 or original posting. Tools like Databricks and Kafka are cloud-agnostic or mentioned in a general context.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No secondary cloud providers are mentioned in Pass 1 or original posting.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.8,
+          "evidence": "Mentions both 'CDC' (streaming/real-time) and 'data pipelines' (which can include batch processing). Tools like Kafka and Flink are associated with streaming, while Airflow is batch-oriented.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "dagster_prefect",
+          "confidence": 0.7,
+          "evidence": "Pass 1 lists 'workflow manager (Airflow, Luigi, Dagster, Prefect)' as a must-have, with no explicit focus on Airflow. Dagster and Prefect are modern orchestrators and are grouped separately from Airflow/Luigi in the description.",
+          "source": "inferred"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.8,
+          "evidence": "Mentions 'data warehouse' and 'data lake' patterns, including 'Snowflake' (warehouse) and 'S3' (lake) in the context of managing data quality and pipelines.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "Location is explicitly stated as 'Seoul, South Korea', but no remote work restrictions are mentioned in Pass 1 or original posting.",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No timezone requirements or team distribution details are provided in Pass 1 or original posting.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Job posting specifies location as Seoul, South Korea, but does not mention relocation packages or requirements. Pass 1 states 'ext_residency_requirement' as 'not_mentioned'.",
+          "source": "combined"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Pass 1 states 'ext_visa_sponsorship_stated' as 'not_mentioned', and original posting does not discuss visa sponsorship.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Original posting mentions '입사지원자' (applicants) must have work authorization, implying no support for student visas like OPT/CPT.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "Original posting discusses work authorization but does not specify citizenship requirements (e.g., US citizenship or green card).",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "Pass 1 states 'ext_employment_type_stated' and 'ext_contract_type' as 'not_mentioned', and original posting does not clarify contract type.",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.9,
+          "evidence": "Pass 1 'ext_benefits_mentioned' is an empty array, and original posting does not discuss benefits beyond mentioning '입사지원자' (applicants) must have work authorization.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Original posting mentions '고객과 입장을 브랜드까지 표출할 수 있는' (ability to express customer and position to the brand level) and '성공적인 분을 통해' (through successful cases), suggesting growth opportunities but not explicit tracks.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Original posting mentions '시니어 데이터 엔지니어' (senior data engineers) and '고객과 입장을 브랜드까지 표출할 수 있는 개성을 자유롭게 표시할 수 있도록' (ability to freely express personality to the brand level with senior engineers), implying collaboration with senior team members.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of promotion or advancement paths in Pass 1 or original posting.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No discussion of internal mobility, lateral moves, or team changes in Pass 1 or original posting.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track"
+          ],
+          "confidence": 0.7,
+          "evidence": "Original posting mentions '시니어 데이터 엔지니어' (senior data engineers) and 'Staff Engineer' as potential growth paths, but no explicit management or specialist tracks are discussed.",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Pass 1 lists multiple 'must_have_hard_skills' (SQL, Python, data pipelines, data modeling, CDC, workflow manager) and distinguishes them from 'nice_to_have_hard_skills' (Databricks), indicating a balanced but structured approach.",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.8,
+          "evidence": "Job description focuses on data engineering tasks such as pipelines, modeling, and quality management, with no ambiguity or multi-role responsibilities.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Requirements are aligned with typical data engineering responsibilities, and no unrealistic skill combinations or excessive years of experience are demanded for the role's scope.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 14995,
+    "input_tokens": 12982,
+    "output_tokens": 2013,
+    "cost": 0.017008
+  }
+}

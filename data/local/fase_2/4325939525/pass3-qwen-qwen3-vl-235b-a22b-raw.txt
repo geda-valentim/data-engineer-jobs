@@ -1,0 +1,234 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.82,
+        "evidence": "Relies on Hadoop ecosystem (Hive, PySpark) which indicates developing maturity; no modern tools (dbt, Airflow, Snowflake) or governance practices mentioned.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.82,
+        "evidence": "Matches score of 2 - basic pipelines with Hadoop but no modern stack or quality monitoring mentioned.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["legacy_stack"],
+        "confidence": 0.85,
+        "evidence": "Mentions Hadoop, Hive, PySpark - legacy batch processing stack with no modern data tools or practices.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.15,
+        "confidence": 0.90,
+        "evidence": "Focused role on Palantir Foundry and Hadoop stack; no mention of ML, DevOps, or analytics responsibilities.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.75,
+        "evidence": "No work-life balance signals; onsite requirement and senior role may imply higher expectations; no PTO or flexibility mentioned.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Well-defined as Sr. Data Engineer with specific tech stack (Palantir, Hadoop, Hive, PySpark) and 8-10 years experience.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.78,
+        "evidence": "Moderate risk due to legacy stack and no work-life balance signals, but role is focused and senior-level.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about reporting structure, manager, or team hierarchy in job description.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No manager title or level mentioned in job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.85,
+        "evidence": "No information about team size, growth plans, or hiring velocity in job description.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.95,
+        "evidence": "No team size or composition details provided in job posting.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure details provided in job posting.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of cross-functional teams, product embedding, or collaboration with PMs/analysts.",
+        "source": "pass1_derived"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.40,
+        "confidence": 0.80,
+        "evidence": "Onsite requirement, no PTO or flexibility mentioned, no work-life balance signals; potential for overtime in senior role.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.30,
+        "confidence": 0.85,
+        "evidence": "No mention of learning budget, conferences, mentorship, or career progression; legacy stack may limit growth.",
+        "source": "pass1_derived"
+      },
+      "tech_culture_score": {
+        "value": 0.45,
+        "confidence": 0.85,
+        "evidence": "Legacy Hadoop stack with no modern practices (CI/CD, testing, documentation) mentioned; limited innovation signals.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No mention of open source, tech blogs, conferences, hackathons, or innovation time.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No development practices (code review, CI/CD, testing, monitoring) mentioned in job description.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.80,
+        "evidence": "Focus on legacy Hadoop stack with no mention of modernization, experimentation, or new tech exploration.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt, refactoring, or code quality improvement initiatives.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No ML/AI mentioned in job description or Pass 1 extraction; focus is on batch ETL with Hadoop stack.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools (SageMaker, MLflow, etc.) mentioned in job description or Pass 1 extraction.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No urgency signals (ASAP, immediate start) in job description or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Atlanta location (lower competition than SF/NYC), but senior role with specific Palantir experience may limit pool.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.75,
+        "evidence": "Requires 8-10 years experience and Palantir Foundry expertise, suggesting established company with mature data needs.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "replacement",
+        "confidence": 0.80,
+        "evidence": "Senior role with specific experience requirements suggests backfill rather than expansion.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No team size information provided in job posting.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No funding stage or financial information mentioned in job description.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "backfill",
+        "confidence": 0.80,
+        "evidence": "Senior role with specific experience requirements suggests replacement rather than new headcount or expansion.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["well_defined_role", "data_focused_role", "senior_level", "legacy_technology_expertise"],
+    "strength_details": [
+      "Clear senior data engineering role with specific Palantir Foundry and Hadoop expertise required",
+      "Focused on core data engineering responsibilities without scope creep",
+      "Opportunity for experienced engineers with legacy stack expertise"
+    ],
+    "concern_categories": ["legacy_technology", "no_visa_sponsorship", "limited_growth", "on_call_expected", "overtime_likely"],
+    "concern_details": [
+      "Legacy Hadoop stack with no modern data practices mentioned",
+      "US work authorization required - no visa sponsorship indicated",
+      "No growth opportunities or learning budget mentioned",
+      "Onsite requirement in Atlanta may imply higher workload expectations"
+    ],
+    "best_fit_categories": ["senior_data_engineers", "legacy_stack_specialists", "palantir_experts", "enterprise_experienced"],
+    "best_fit_details": [
+      "Senior DEs with 8-10 years experience in Hadoop ecosystem and Palantir Foundry",
+      "Engineers comfortable with legacy batch processing and enterprise environments",
+      "Candidates already in Atlanta or willing to relocate for onsite work"
+    ],
+    "probe_categories": ["tech_stack_details", "work_hour_expectations", "career_growth_path", "visa_sponsorship_details"],
+    "probe_details": [
+      "Ask about actual work hours and expectations for overtime",
+      "Understand if there are plans to modernize the data stack",
+      "Clarify if visa sponsorship is available for qualified candidates"
+    ],
+    "leverage_categories": ["rare_skill_match", "exact_experience_match", "local_candidate"],
+    "leverage_details": [
+      "Palantir Foundry expertise is a rare and valuable skill",
+      "8-10 years Hadoop experience matches exact requirements",
+      "Local Atlanta candidates have advantage for onsite requirement"
+    ],
+    "overall_assessment": "Specialized senior data engineering role requiring Palantir Foundry and Hadoop expertise. Well-defined scope but limited growth opportunities and legacy technology stack. Best suited for experienced engineers comfortable with enterprise environments and onsite work in Atlanta. Main concerns are lack of modern practices and no visa sponsorship.",
+    "recommendation_score": 0.55,
+    "recommendation_confidence": 0.80
+  }
+}

@@ -1,0 +1,372 @@
+<reasoning>Let me analyze this job posting carefully to infer the job characteristics according to the rules provided.
+
+First, let me understand what we have:
+
+**Original Job Posting Analysis:**
+- Title: Data Architect & Leader
+- Company: Addison Group
+- Location: Remote, anywhere in the US
+- Compensation: $140,000 - $170,000 / Annually
+- This is a "player-coach" role leading a small team (Data Engineer and Data Scientist)
+- Microsoft environment focus (MS Fabric, Power BI)
+- ERP integrations (Salesforce, Procore, Sage Intacct)
+- AI applications and practical AI experience
+- Benefits: medical, dental, vision, 401(k), PTO
+
+**Pass 1 Extraction Results:**
+- Remote work model
+- US only restriction
+- Full-time permanent position
+- Must-have skills: Data Architect, Microsoft environment, MS Fabric, ETL, Power BI, ERP integrations, AI applications
+- Must-have soft skills: Leadership, Team Collaboration
+- Benefits: medical, dental, vision, 401(k), PTO
+- No equity, learning budget, conference budget mentioned
+
+Now let me go through each inference category:
+
+## SENIORITY AND ROLE
+
+### seniority_level
+- Title: "Data Architect & Leader" - this is clearly a senior-level role
+- Compensation: $140k-$170k is senior level for data roles
+- Leading a team (mentor/leadership responsibilities)
+- "Proven experience as a Data Architect" mentioned
+- This is clearly a senior role, likely staff or principal level given the leadership component
+- Confidence: 0.9 (strong signals from title, compensation, and responsibilities)
+
+### job_family
+- Title: "Data Architect & Leader"
+- Core responsibilities: architectural design, ETL processes, data environment optimization
+- This is clearly a data architect role
+- Confidence: 0.95 (explicit in title and responsibilities)
+
+### sub_specialty
+- Focus on Microsoft environment (MS Fabric, Power BI)
+
+
+- ERP integrations with Salesforce, Procore, Sage Intacct
+- AI applications and practical AI experience
+- This appears to be a general data architecture role with AI/ML integration
+- Confidence: 0.7 (moderate inference from AI and integration focus)
+
+### leadership_expectation
+- "player-coach" role explicitly mentioned
+- Leading a small team (Data Engineer and Data Scientist)
+- Mentoring responsibilities
+- This is clearly "tech_and_people_lead" - both technical direction AND people management
+- Confidence: 0.9 (explicit "player-coach" and team leadership mentioned)
+
+## STACK AND CLOUD
+
+### primary_cloud
+- Microsoft environment focus
+- MS Fabric (Microsoft's cloud platform)
+- Power BI (Microsoft's BI tool)
+- This is clearly Azure-focused
+- Confidence: 0.95 (strong Microsoft ecosystem signals)
+
+### secondary_clouds
+- No other cloud providers mentioned
+- Pure Microsoft ecosystem
+- Confidence: 0.9 (no other clouds mentioned)
+
+### processing_paradigm
+- ETL processes mentioned
+- MS Fabric for ETL
+- No real-time streaming mentioned
+- This appears to be batch-oriented
+- Confidence: 0.8 (batch ETL focus)
+
+### orchestrator_category
+- MS Fabric mentioned for ETL processes
+- This is a cloud-native orchestrator
+- Confidence: 0.9 (MS Fabric is cloud-native orchestration)
+
+### storage_layer
+- Large MS environment with thousands of tables
+- Power BI for reporting
+- No specific data warehouse/lake mentioned
+- Likely warehouse-focused given Power BI and MS ecosystem
+- Confidence: 0.7 (moderate inference from Power BI and MS environment)
+
+## GEO AND WORK MODEL
+
+### remote_restriction
+- "Remote, anywhere in the US" explicitly stated
+- This is "anywhere" - fully remote
+- Confidence: 0.95 (explicit statement)
+
+### timezone_focus
+- "anywhere in the US" suggests Americas focus
+- No specific timezone requirements mentioned
+- This would be "americas" given US-only restriction
+- Confidence: 0.8 (US-only implies Americas timezone)
+
+### relocation_required
+- Remote position, no relocation needed
+- "anywhere in the US" suggests no relocation
+- Confidence: 0.9 (remote work model)
+
+## VISA AND AUTHORIZATION
+
+### h1b_friendly
+- No visa sponsorship mentioned
+- "not_mentioned" in Pass 1
+- Cannot assume sponsorship when not mentioned
+- Confidence: 0.9 (no mention = likely not sponsored)
+
+### opt_cpt_friendly
+- No mention of student visa support
+- "Work authorization required" would be typical language if they accepted students
+- No specific mention
+- Confidence: 0.7 (moderate inference from lack of mention)
+
+### citizenship_required
+- "Authorized to work in US" would be typical if they accept various statuses
+- No specific citizenship requirement mentioned
+- US-only restriction suggests work authorization requirement
+- This would be "work_auth_only"
+- Confidence: 0.8 (standard for US-only remote positions)
+
+## CONTRACT AND COMPENSATION
+
+### w2_vs_1099
+- "Full-Time, Exempt" position
+- Benefits mentioned (medical, dental, vision, 401k, PTO)
+- This is clearly W2 employment
+- Confidence: 0.95 (full-time exempt with benefits)
+
+### benefits_level
+- Medical, dental, vision, 401(k), PTO mentioned
+- No equity, learning budget, conference budget
+- This is a standard benefits package
+- Confidence: 0.85 (standard 5 benefits mentioned)
+
+## CAREER DEVELOPMENT
+
+### growth_path_clarity
+- No specific career tracks mentioned
+- "player-coach" role suggests growth opportunity
+- No explicit promotion paths or career ladders
+- This would be "vague" - generic growth mentions only
+- Confidence: 0.6 (moderate inference from role nature)
+
+### mentorship_signals
+- "mentoring a small team" explicitly mentioned
+- This is "explicit_yes" - formal mentoring responsibility
+- Confidence: 0.9 (explicit mentoring mentioned)
+
+### promotion_path_mentioned
+- No specific promotion or advancement mentioned
+- No career ladder or growth path discussed
+- This would be false
+- Confidence: 0.9 (no promotion mentions)
+
+### internal_mobility_mentioned
+- No mention of internal transfers or role changes
+- No team changes or lateral moves discussed
+- This would be false
+- Confidence: 0.9 (no mobility mentions)
+
+### career_tracks_available
+- No specific career tracks mentioned
+- "player-coach" role could imply management track
+- No IC track mentioned
+- This would be limited to management track
+- Confidence: 0.6 (moderate inference from leadership role)
+
+## REQUIREMENTS CLASSIFICATION
+
+### requirement_strictness
+- Mix of "must have" requirements
+- "Proven experience" language
+- Some flexibility implied ("at least two of" ERP systems)
+- This would be "medium" - balanced requirements
+- Confidence: 0.75 (moderate inference from language patterns)
+
+### scope_definition
+- Focused job description for Data Architect role
+- Clear responsibilities and requirements
+- Single clear role, not multi-role hybrid
+- This would be "clear"
+- Confidence: 0.85 (well-defined role)
+
+### skill_inflation_detected
+- Senior role with senior-level requirements
+- Reasonable skill set for data architect level
+- $140k-$170k is appropriate for this level
+- No unrealistic skill combinations
+- This would be false
+- Confidence: 0.8 (reasonable expectations)
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "staff",
+        "confidence": 0.90,
+        "evidence": "Data Architect title with leadership responsibilities, $140k-$170k compensation, and 'player-coach' role leading team indicates senior/staff level",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_architect",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Data Architect' with architectural design responsibilities across large MS environment",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "general",
+        "confidence": 0.70,
+        "evidence": "Broad architectural role covering ETL, ERP integrations, AI applications, and reporting - no specific niche specialization mentioned",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_and_people_lead",
+        "confidence": 0.90,
+        "evidence": "Explicitly described as 'player-coach' role leading small team with mentoring responsibilities and hands-on technical work",
+        "source": "pass1_derived"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.95,
+        "evidence": "Strong Microsoft ecosystem focus with MS Fabric for ETL, Power BI for reporting, and large MS environment mentioned",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud providers mentioned, pure Microsoft ecosystem throughout",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.80,
+        "evidence": "MS Fabric used for ETL processes, no real-time streaming mentioned, traditional data warehouse patterns",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.90,
+        "evidence": "MS Fabric mentioned for ETL processes, which is Microsoft's cloud-native orchestration platform",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.75,
+        "evidence": "Large MS environment with thousands of tables and Power BI reporting suggests data warehouse architecture",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "anywhere",
+        "confidence": 0.95,
+        "evidence": "Explicitly states 'Remote, anywhere in the US' indicating fully distributed remote work",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.80,
+        "evidence": "US-only restriction implies Americas timezone focus, though no specific timezone requirements mentioned",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Remote position with 'anywhere in the US' indicates no relocation required",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned in job posting, standard practice is to explicitly state if available",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "No mention of student visa support, and senior-level role typically requires work authorization",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.80,
+        "evidence": "US-only remote position suggests work authorization requirement without specific citizenship mandate",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.95,
+        "evidence": "Full-time exempt position with comprehensive benefits package indicates W2 employment",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "standard",
+        "confidence": 0.85,
+        "evidence": "Medical, dental, vision, 401(k), and PTO mentioned - standard 5-benefit package without premium perks",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.60,
+        "evidence": "Player-coach role suggests growth opportunity but no specific career tracks or advancement paths mentioned",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "explicit_yes",
+        "confidence": 0.90,
+        "evidence": "Explicitly mentions mentoring a small team as core responsibility",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No specific promotion, advancement, or career progression paths mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers, lateral moves, or role changes within organization",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["management_track"],
+        "confidence": 0.60,
+        "evidence": "Leadership role suggests management track, but no IC track or specialist paths mentioned",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Mix of 'must have' requirements with some flexibility ('at least two of' ERP systems), balanced approach",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused Data Architect role with well-defined responsibilities, single clear role not multi-role hybrid",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Reasonable skill set for senior data architect level, $140k-$170k compensation appropriate for scope",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

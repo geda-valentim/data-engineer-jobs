@@ -1,0 +1,237 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Mentions basic data engineering practices (scripting, automation) and some cloud integration (Azure), but lacks discussion of modern data stack tools, CI/CD, or governance beyond SFTP compliance.",
+        "source": "inferred"
+      },
+      "data_maturety_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Score of 2 aligns with 'developing' maturity level, indicating inconsistent automation and governance practices.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No explicit mention of modern data stack adoption, CI/CD, or governance tools beyond SFTP compliance.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.3,
+        "confidence": 0.85,
+        "evidence": "Role is primarily focused on SFTP and data pipeline tasks, but includes responsibilities like software updates/patching, incident management, and on-call duties that may overlap with DevOps or IT operations.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.7,
+        "confidence": 0.80,
+        "evidence": "Mentions 'after-hours and weekends on-call duties' and 'manage open incidents', which are strong indicators of high overtime risk. No PTO policy or work-life balance signals are mentioned.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "multi_role",
+        "confidence": 0.85,
+        "evidence": "Job description combines data engineering tasks with DevOps-like responsibilities (patching, on-call) and vendor collaboration, suggesting a multi-role expectation.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.6,
+        "confidence": 0.78,
+        "evidence": "Composite score derived from high scope creep (0.3), high overtime risk (0.7), and strict requirements with skill inflation (from Pass 2).",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit or inferred reporting structure mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure or manager title mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit or inferred signals about team growth velocity or hiring plans beyond the role itself.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.95,
+        "evidence": "No team size or composition details provided in the job posting.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit or inferred reporting structure mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Job posting mentions collaboration with 'external teams and vendors', implying cross-functional work but not embedded within product teams.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.2,
+        "confidence": 0.85,
+        "evidence": "Negative signals include 'after-hours and weekends on-call duties' and no PTO policy mentioned. No protective factors are noted.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.3,
+        "confidence": 0.80,
+        "evidence": "No learning budget, mentorship, or career growth paths mentioned. Role is strictly individual contributor with niche skill requirements.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.4,
+        "confidence": 0.75,
+        "evidence": "Mentions scripting and automation but lacks discussion of modern development practices (CI/CD, testing, observability). Focus is on maintenance and compliance rather than innovation.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No explicit or inferred signals about open source, tech blogs, or innovation time in the job posting.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["monitoring"],
+        "confidence": 0.80,
+        "evidence": "Mentions 'monitor and optimize SFTP performance' and 'manage open incidents', but no explicit discussion of code review, CI/CD, or other practices.",
+        "source": "inferred"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.75,
+        "evidence": "Responsibilities focus on maintenance, compliance, and incident management with no mention of innovation or experimentation.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.65,
+        "evidence": "Mentions 'troubleshoot SFTP connections' and 'address bottlenecks', which may imply awareness of tech debt, but no explicit refactoring or modernization efforts are discussed.",
+        "source": "inferred"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of ML/AI tools or integration in the job posting.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML/AI tools mentioned or inferred.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit urgency signals like 'immediate start' or 'ASAP' are mentioned, though niche skill requirements may imply urgency.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "high",
+        "confidence": 0.75,
+        "evidence": "Salary disclosed is below market for data engineering roles, which may attract fewer candidates but competition is still inferred due to niche skills and location (Cincinnati, OH is not a major tech hub).",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.95,
+        "evidence": "Tata Consultancy Services is a large, established IT services company with global operations, indicating enterprise stage despite lack of explicit signals in the posting.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit or inferred hiring velocity signals in the job posting.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit or inferred team size signals beyond the role's focus on SFTP tasks.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No funding stage signals mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit or inferred signals about whether this is a new role, backfill, or team expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["clear_requirements", "data_focused_role"],
+    "strength_details": [
+      "Salary range is disclosed ($80,000-$85,000), providing transparency for candidates.",
+      "Role is narrowly focused on data engineering tasks, particularly SFTP and pipeline development, which may appeal to specialists in this area."
+    ],
+    "concern_categories": ["below_market_pay", "on_call_expected", "overtime_likely", "scope_creep_risk", "skill_inflation_detected", "legacy_technology"],
+    "concern_details": [
+      "Salary range ($80,000-$85,000) is significantly below market for data engineers with 3-5 years of experience, especially in enterprise environments where compensation is typically higher.",
+      "After-hours and weekend on-call duties are explicitly mentioned, indicating potential overtime and work-life balance challenges.",
+      "Role includes software patching, incident management, and SOC controls, which are DevOps/IT operations responsibilities and may lead to scope creep.",
+      "Requires niche tools like GoAnywhere MFT and Solimar software, which may not align with typical mid-level data engineering experience, suggesting skill inflation.",
+      "Tech stack appears outdated with heavy emphasis on SFTP, WinSCP, and Microsoft server tools, which may limit exposure to modern data engineering practices."
+    ],
+    "best_fit_categories": ["technical_specialists", "mid_level_engineers", "data_generalists"],
+    "best_fit_details": [
+      "Mid-level data engineers with 3-5 years of experience who have specialized in SFTP, file transfers, and batch ETL processes.",
+      "Candidates with a strong background in scripting (Python, Shell) and troubleshooting data transfer issues, particularly in enterprise or IT services environments.",
+      "Data generalists comfortable with niche tools like GoAnywhere MFT and Solimar software, and who are open to DevOps-like responsibilities."
+    ],
+    "probe_categories": ["on_call_expectations", "work_hour_expectations", "role_scope_boundaries", "tech_debt_situation", "career_growth_path"],
+    "probe_details": [
+      "Ask about the frequency and expectations of on-call duties, including how incidents are managed during off-hours.",
+      "Clarify the typical work hours and whether weekend or overtime work is common beyond on-call duties.",
+      "Probe the boundaries of the role: What percentage of time is spent on data engineering vs. DevOps/IT operations tasks?",
+      "Understand the tech debt situation: Are there plans to modernize the SFTP-heavy infrastructure, or is this a long-term maintenance role?",
+      "Ask about career growth opportunities: Is there a clear path to senior data engineering or leadership roles, or will this role remain focused on niche tools?"
+    ],
+    "leverage_categories": ["exact_experience_match", "domain_expertise"],
+    "leverage_details": [
+      "Candidates with exact experience in GoAnywhere MFT, Solimar software, and SFTP automation can leverage this rare skill match to negotiate higher compensation.",
+      "Experience with Microsoft server tools and Azure Cloud may provide additional leverage if the company is heavily invested in these technologies."
+    ],
+    "overall_assessment": "This role is a niche opportunity for mid-level data engineers with specialized experience in SFTP, GoAnywhere MFT, and batch ETL processes. While the responsibilities are well-defined, the salary is below market, and the role includes DevOps-like tasks (on-call, patching, incident management) that may lead to scope creep. The tech stack appears outdated, which could limit exposure to modern data engineering practices. Candidates should weigh the pros of specialized experience against the cons of compensation and potential work-life imbalance.",
+    "recommendation_score": 0.4,
+    "recommendation_confidence": 0.85
+  }
+}
+```

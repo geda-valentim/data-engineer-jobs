@@ -1,0 +1,235 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.82,
+        "evidence": "Mentions modern data stack (Airflow, Python, Databricks), focus on quality (Great Expectations, Soda), and some CI/CD practices. Lacks data governance signals.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.82,
+        "evidence": "Matches score of 3.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption", "cicd_practices", "data_quality_testing"],
+        "confidence": 0.85,
+        "evidence": "Mentions Airflow, Databricks, Great Expectations, and Soda.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.20,
+        "confidence": 0.88,
+        "evidence": "The role is clearly focused on data engineering tasks, with no overlap into data science or analytics.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.65,
+        "confidence": 0.75,
+        "evidence": "The 'ASAP' start date and startup environment suggest potential for long hours. However, the lack of explicit mentions of on-call or tight deadlines mitigates this risk somewhat.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "The job description provides a detailed overview of the responsibilities and required skills for a data engineer.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.45,
+        "confidence": 0.78,
+        "evidence": "Moderate risk due to potential for long hours and lack of visa sponsorship, but overall a well-defined role.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "clear",
+        "confidence": 0.95,
+        "evidence": "The job description explicitly states that the role reports to the Head of Data Engineering.",
+        "source": "explicit"
+      },
+      "manager_level_inferred": {
+        "value": "director_plus",
+        "confidence": 0.92,
+        "evidence": "Reporting to the Head of Data Engineering suggests a director-level manager.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "rapid_expansion",
+        "confidence": 0.94,
+        "evidence": "The team is growing from 8 to 15 engineers, indicating rapid expansion.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "8-15 engineers",
+          "de_count": "5 data engineers",
+          "seniority_mix": "mix of senior and mid-level"
+        },
+        "confidence": 0.80,
+        "evidence": "Mentions joining a team of 5 DEs within a broader 15-person data organization.",
+        "source": "explicit"
+      },
+      "reporting_structure": {
+        "value": "reports_to_director_data",
+        "confidence": 0.95,
+        "evidence": "Job posting mentions 'reporting to Head of Data Engineering'",
+        "source": "explicit"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions working closely with product teams and PMs.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.65,
+        "confidence": 0.80,
+        "evidence": "ASAP start date is a negative, but the company is growing and has a modern stack.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.85,
+        "confidence": 0.82,
+        "evidence": "Expanding team, modern tech stack, and potential for learning and development.",
+        "source": "combined"
+      },
+      "tech_culture_score": {
+        "value": 0.80,
+        "confidence": 0.85,
+        "evidence": "Strong engineering practices, modern tooling, and a focus on quality.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["open_source", "tech_blogs"],
+        "confidence": 0.75,
+        "evidence": "Mentions OSS contributions and tech blogging.",
+        "source": "inferred"
+      },
+      "dev_practices_mentioned": {
+        "value": ["code_review", "ci_cd", "monitoring"],
+        "confidence": 0.90,
+        "evidence": "Explicit mentions of peer review, automated testing, and observability.",
+        "source": "explicit"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Mentions keeping up with modern data stack evolution.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.80,
+        "evidence": "Mentions 'modernizing legacy pipelines' and 'improving code quality'.",
+        "source": "explicit"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.75,
+        "evidence": "Mentions working with ML engineers and Databricks.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": ["SageMaker", "MLflow", "Databricks"],
+        "confidence": 0.88,
+        "evidence": "Databricks explicitly mentioned, SageMaker and MLflow inferred from ML focus.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "immediate",
+        "confidence": 0.90,
+        "evidence": "The job description states 'ASAP' start date.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "The role is in Seoul, South Korea, which may have a smaller talent pool than major tech hubs.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "startup_series_a_b",
+        "confidence": 0.75,
+        "evidence": "Rapid growth, expanding team, and mentions of funding.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "aggressive",
+        "confidence": 0.82,
+        "evidence": "The team is growing rapidly, indicating aggressive hiring.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.88,
+        "evidence": "Mentions a team of 8-15 engineers.",
+        "source": "explicit"
+      },
+      "funding_stage_signals": {
+        "value": "series_b_plus",
+        "confidence": 0.70,
+        "evidence": "Mentions being a well-funded startup.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.85,
+        "evidence": "Mentions expanding the data team.",
+        "source": "explicit"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "learning_opportunities", "well_defined_role", "strong_benefits"],
+    "strength_details": [
+      "Modern data stack (Airflow, Python, Databricks)",
+      "Excellent learning culture (budget, conferences)",
+      "Clear role definition and responsibilities",
+      "Unlimited PTO and hybrid work flexibility"
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship", "location_restriction"],
+    "concern_details": [
+      "ASAP start date suggests potential for long hours",
+      "No visa sponsorship available",
+      "Role requires working in Seoul, South Korea"
+    ],
+    "best_fit_categories": ["senior_data_engineers", "pipeline_developers", "cloud_specialists"],
+    "best_fit_details": [
+      "Experienced data engineers with a strong background in ETL pipelines",
+      "Engineers proficient in Python and Airflow",
+      "Candidates interested in working with modern cloud technologies"
+    ],
+    "probe_categories": ["work_hour_expectations", "team_turnover_history", "tech_debt_situation"],
+    "probe_details": [
+      "Ask about typical work hours and on-call expectations",
+      "Inquire about team turnover rates and reasons for departures",
+      "Understand the current state of tech debt and plans for addressing it"
+    ],
+    "leverage_categories": ["rare_skill_match", "domain_expertise"],
+    "leverage_details": [
+      "Strong experience with Airflow and Databricks is highly valuable",
+      "Experience with Korean e-commerce or retail data is a plus"
+    ],
+    "overall_assessment": "This is a strong opportunity for a data engineer seeking a challenging role in a fast-growing startup with a modern tech stack. The role offers excellent learning opportunities and a clear career path. However, candidates should be prepared for a potentially fast-paced environment and the requirement to work in Seoul, South Korea.",
+    "recommendation_score": 0.78,
+    "recommendation_confidence": 0.85
+  }
+}
+```

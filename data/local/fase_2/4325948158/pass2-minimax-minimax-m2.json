@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 02:01:52",
+    "job_posting_id": "4325948158",
+    "job_title": "Data Engineer",
+    "company_name": "Manchester Digital",
+    "job_location": "Manchester, England, United Kingdom",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.72,
+          "evidence": "Title is 'Data Engineer' without seniority indicator, but responsibilities include end-to-end development, data platform design, and technology recommendations suggesting mid-level experience",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title is Data Engineer, core focus on data warehousing, ELT pipelines, data integration, and data platform maintenance",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "data_warehouse",
+          "confidence": 0.88,
+          "evidence": "Explicitly mentions Data Warehouse/Kimball methodology, core cloud platforms (Snowflake, BigQuery, Redshift), and data warehousing solutions as key responsibilities",
+          "source": "pass1_derived"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.75,
+          "evidence": "Responsibilities include designing data infrastructure, recommending new technology, and collaborating with stakeholders, suggesting technical leadership without direct reports",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "multi",
+          "confidence": 0.85,
+          "evidence": "Mentions core cloud platforms including Snowflake, BigQuery, and Redshift with no clear primary, plus AWS CDK as nice-to-have",
+          "source": "combined"
+        },
+        "secondary_clouds": {
+          "value": [
+            "aws",
+            "gcp"
+          ],
+          "confidence": 0.8,
+          "evidence": "AWS CDK mentioned as nice-to-have, GCP via BigQuery mentioned as core platform",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.82,
+          "evidence": "Focus on ELT pipelines, automated data processing, and scheduled data transformations rather than real-time streaming",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "dbt_core",
+          "confidence": 0.9,
+          "evidence": "DBT explicitly mentioned as core data transformation technology with CI/CD practices",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.92,
+          "evidence": "Core cloud platforms are Snowflake, BigQuery, Redshift - all data warehouse solutions, plus explicit Data Warehouse/Kimball methodology mention",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.9,
+          "evidence": "UK only restriction stated, hybrid model requires minimum 50% office time in Manchester",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.88,
+          "evidence": "UK-based role with Manchester office requirement, no timezone flexibility mentioned",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Hybrid model allows remote work part-time, but candidates must already be in Manchester/UK area",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No visa sponsorship mentioned, UK-based role with no international relocation support",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of student visa support, UK work authorization implied but no specific student visa acceptance",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.8,
+          "evidence": "UK work authorization required but no citizenship or residency restrictions mentioned",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.92,
+          "evidence": "Full-time permanent position with comprehensive benefits package including pension, healthcare, equity - typical W2 employment structure",
+          "source": "combined"
+        },
+        "benefits_level": {
+          "value": "comprehensive",
+          "confidence": 0.88,
+          "evidence": "Extensive benefits including equity schemes, pension matching up to 6%, private healthcare, professional development, and 25-31 days PTO",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.68,
+          "evidence": "Mentions talent development programmes and professional qualification support, but no specific career progression paths outlined",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.72,
+          "evidence": "Dynamic and experienced team mentioned, ongoing technical training suggests collaborative learning environment",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit promotion or advancement paths mentioned in the job description",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal transfers, lateral moves, or exploring different roles within the company",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track"
+          ],
+          "confidence": 0.65,
+          "evidence": "Technical focus with data platform responsibilities suggests IC track, but no management track mentioned",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear distinction between must-have technical skills and nice-to-have preferences, balanced requirements without excessive strictness",
+          "source": "combined"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.88,
+          "evidence": "Focused data engineering role with well-defined responsibilities in data warehousing, pipelines, and platform maintenance",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.78,
+          "evidence": "Skills listed are appropriate for mid-level data engineer role, no unrealistic combinations or excessive experience requirements",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 9480,
+    "input_tokens": 6897,
+    "output_tokens": 2583,
+    "cost": 0.012063
+  }
+}

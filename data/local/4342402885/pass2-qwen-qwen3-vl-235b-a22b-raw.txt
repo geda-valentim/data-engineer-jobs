@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.95,
+        "evidence": "Job title explicitly states 'SR Data Engineer' and description mentions 'Perfil senior'",
+        "source": "pass1_derived"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is 'Data Engineer' and responsibilities focus on ETL, data architecture, and pipeline development",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.90,
+        "evidence": "Core responsibilities include developing ETLs, Azure Data Factory, and Synapse Analytics - all batch-oriented tools",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "No mention of managing people or teams; focus is on technical design, development, and client presentations",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.98,
+        "evidence": "Explicitly mentions Microsoft Fabric, Synapse Analytics, Azure Data Factory - all Azure services",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No other cloud platforms mentioned in requirements or description",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.90,
+        "evidence": "Focus on ETL development, Azure Data Factory, and Synapse Analytics - all primarily batch processing tools",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.95,
+        "evidence": "Azure Data Factory is a cloud-native orchestration tool mentioned as a must-have skill",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "lakehouse",
+        "confidence": 0.85,
+        "evidence": "Responsibilities include designing Lakehouse or Warehouse architectures, with Microsoft Fabric (a lakehouse platform) as a required skill",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.88,
+        "evidence": "Location specified as Arkansas, US with hybrid work model - implies regional restriction",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.92,
+        "evidence": "US-based company with Arkansas location, no specific timezone mentioned but implies Americas focus",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Hybrid work model mentioned with no relocation requirement stated",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of visa sponsorship in Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of student visa support; 'full_time' employment suggests work authorization required",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.88,
+        "evidence": "No citizenship requirement mentioned; 'full_time' position implies authorized to work in US",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.95,
+        "evidence": "Full-time permanent position with benefits mentioned (prepaga, vacation, etc.) suggests W2 employment",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.85,
+        "evidence": "Multiple premium benefits mentioned: family health insurance, extended parental leave, learning budget, flexible work, bonuses, and unique perks like birthday off and food delivery reimbursement",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Mentions 'foco en tu crecimiento profesional' but no specific career tracks or promotion ladder",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions 'Ambiente colaborativo' and working with clients, suggesting collaboration with senior team members",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotions or advancement paths in the job description",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers or role changes in the job description",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.70,
+        "evidence": "Senior role implies IC track progression; no mention of management or specialist tracks",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Clear distinction between must-have skills (7 items) and nice-to-have skills (4 items), with some flexibility implied",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused role on data engineering with specific responsibilities around ETL, architecture, and client presentations",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Skills required (SQL, Python, Azure tools) are reasonable for a senior data engineer role",
+        "source": "inferred"
+      }
+    }
+  }
+}

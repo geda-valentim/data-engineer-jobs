@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Senior Data Engineer' and requires 5+ years of experience, which aligns with senior level in data engineering roles.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Job title is 'Senior Data Engineer' and responsibilities focus on ETL, data pipelines, and data modeling — core data engineering functions.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.85,
+        "evidence": "Primary tools mentioned include Apache Airflow (batch orchestration), SQL, and ETL processes. Kafka is mentioned but not emphasized as primary focus; batch processing is more central to described duties.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.75,
+        "evidence": "No mention of managing people, mentoring, or technical leadership responsibilities. Role focuses on individual execution of pipelines and data models.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "aws",
+        "confidence": 0.95,
+        "evidence": "Explicitly mentions 'AWS cloud services' as a required skill, with no other cloud platforms referenced.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud providers (Azure, GCP) are mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.75,
+        "evidence": "Mentions both Kafka (streaming) and Apache Airflow (batch), indicating a hybrid processing environment.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.95,
+        "evidence": "Explicitly lists 'Apache Airflow' as a required tool, placing it in the Airflow-like orchestrator category.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.70,
+        "evidence": "Mentions both data lakes (via Hadoop, S3 implied by AWS) and data modeling/schema development, suggesting a mixed storage environment with both lake and warehouse patterns.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.88,
+        "evidence": "Location specified as Denver, CO with onsite work model, implying regional restriction (same state/region).",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.92,
+        "evidence": "Location is Denver, CO (US Mountain Time), and no global or APAC/EU teams mentioned — implies Americas timezone focus.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.85,
+        "evidence": "Onsite work model and specific Denver, CO location imply relocation is required for non-local candidates.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Pass 1 extraction states 'visa_sponsorship_stated: not_mentioned' — no indication of H1B sponsorship offered.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of student visa support; 'must be resident' and full-time onsite role imply OPT/CPT not supported.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.88,
+        "evidence": "Pass 1 extraction indicates 'residency_requirement: must_be_resident' — implies work authorization required, but no citizenship or green card requirement stated.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time permanent position with benefits (401k, health insurance, stock) strongly implies W2 employment.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.85,
+        "evidence": "Extensive benefits listed including equity (stock purchase), learning budget (Live Better U), PTO, parental leave, disability, and more — meets comprehensive threshold.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Mentions 'contribute to the future of data engineering' and 'drive innovation' but no specific career tracks, levels, or promotion paths are defined.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Mentions 'collaborate with cross-functional teams' and working in a 'dynamic team' — implies peer learning but no formal mentorship program or assigned mentor.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotions, advancement, or career progression paths in the job description or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers, lateral moves, or exploring other roles within the company.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.55,
+        "evidence": "No explicit mention of IC, management, architect, or specialist tracks. Too vague to confidently assign any track.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "All skills listed are under 'must have' with no 'nice to have' skills. Minimum 5+ years experience and specific tech stack required.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.82,
+        "evidence": "Focused on data engineering responsibilities: ETL, pipelines, data modeling, and governance — no hybrid or multi-role expectations.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Skills required (Python, SQL, Spark, Airflow, AWS) are standard for a senior data engineer with 5+ years experience — no unrealistic or inflated expectations.",
+        "source": "inferred"
+      }
+    }
+  }
+}

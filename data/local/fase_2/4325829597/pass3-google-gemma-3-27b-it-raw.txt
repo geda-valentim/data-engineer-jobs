@@ -1,0 +1,229 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Mentions SFTP, scripting, and basic data pipelines, but lacks advanced tooling or governance practices.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [],
+        "confidence": 0.60,
+        "evidence": "Limited evidence of modern data stack adoption or advanced practices.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.30,
+        "confidence": 0.80,
+        "evidence": "Role is primarily focused on SFTP data engineering, but includes incident management and software updates.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.70,
+        "confidence": 0.85,
+        "evidence": "Immediate start, after-hours/weekend on-call duties, and fast-paced environment suggest high overtime risk.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Job description focuses on specific SFTP data engineering tasks.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.60,
+        "confidence": 0.78,
+        "evidence": "Moderate risk due to overtime potential and some scope creep.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No specific reporting structure is mentioned.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No manager title is mentioned.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No information about team growth is provided.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.50,
+        "evidence": "No team size or composition details are available.",
+        "source": "explicit"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure is mentioned.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Focus on SFTP data transfer suggests a centralized data engineering function.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.30,
+        "confidence": 0.80,
+        "evidence": "After-hours/weekend on-call duties and immediate start date are negative signals.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.50,
+        "confidence": 0.70,
+        "evidence": "No specific growth opportunities are mentioned.",
+        "source": "pass1_derived"
+      },
+      "tech_culture_score": {
+        "value": 0.60,
+        "confidence": 0.75,
+        "evidence": "Basic scripting and cloud experience, but limited evidence of advanced engineering practices.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No signals of strong technical culture are present.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No specific development practices are mentioned.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.80,
+        "evidence": "Focus on maintaining existing SFTP integrations, little mention of innovation.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt or refactoring.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of AI or ML.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.99,
+        "evidence": "No ML tools are mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "immediate",
+        "confidence": 0.90,
+        "evidence": "ASAP start date mentioned.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "low",
+        "confidence": 0.65,
+        "evidence": "Cincinnati, OH location and limited details suggest lower competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.70,
+        "evidence": "Tata Consultancy Services is a large, established company.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "replacement",
+        "confidence": 0.75,
+        "evidence": "No mention of rapid expansion or multiple open roles.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "small_2_5",
+        "confidence": 0.60,
+        "evidence": "Limited information about team size.",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "profitable",
+        "confidence": 0.80,
+        "evidence": "TCS is a publicly traded, profitable company.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "backfill",
+        "confidence": 0.70,
+        "evidence": "No indication of a new role or team expansion.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["transparent_salary", "clear_requirements"],
+    "strength_details": [
+      "Transparent compensation ($80k-$85k)",
+      "Well-defined role focused on SFTP data engineering"
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship", "unclear_reporting"],
+    "concern_details": [
+      "Immediate start and on-call duties suggest potential for long hours",
+      "No visa sponsorship available",
+      "Reporting structure is unclear"
+    ],
+    "best_fit_categories": ["mid_level_engineers", "data_generalists"],
+    "best_fit_details": [
+      "Mid-level data engineers with 3-5 years of experience",
+      "Engineers comfortable with SFTP and scripting"
+    ],
+    "probe_categories": ["on_call_expectations", "work_hour_expectations", "reporting_structure"],
+    "probe_details": [
+      "Clarify on-call expectations and frequency",
+      "Understand typical work hours and workload",
+      "Determine reporting structure and manager's experience"
+    ],
+    "leverage_categories": [],
+    "leverage_details": [],
+    "overall_assessment": "This role offers a clear focus on SFTP data engineering with transparent compensation. However, the potential for overtime and lack of visa sponsorship are significant drawbacks. The lack of information about the team and reporting structure are also concerns.",
+    "recommendation_score": 0.55,
+    "recommendation_confidence": 0.80
+  }
+}
+```

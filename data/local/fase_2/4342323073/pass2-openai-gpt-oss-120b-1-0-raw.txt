@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.72,
+        "evidence": "Required 1-5 years of professional software development experience and no seniority indicator in title.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title includes \"Data Engineer\" and responsibilities focus on data pipelines, integrations, and dashboards.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "general",
+        "confidence": 0.80,
+        "evidence": "Job description emphasizes Palantir Foundry pipelines and ontology objects without specific streaming, batch, or warehouse focus.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "No mention of direct reports, people management, or technical lead responsibilities; collaboration only.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "The posting does not reference any cloud provider (AWS, Azure, GCP) or on‑premise infrastructure.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No additional cloud providers are mentioned in the posting.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "Neither streaming nor batch processing technologies are explicitly cited.",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No orchestration tool (Airflow, dbt, etc.) is referenced.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "The description does not specify data warehouses, lakes, or lakehouse technologies.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.85,
+        "evidence": "Location is listed as Berthoud, CO and work model is \"onsite\"; therefore candidates must be in the United States.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.70,
+        "evidence": "Only U.S. citizenship or permanent residency is required; no timezone or regional preference beyond the U.S. is stated.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "The posting does not mention a relocation package or requirement to move.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Visa sponsorship is not offered; the posting states \"must_be_authorized\" for work.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Work authorization is required and no mention of OPT/CPT eligibility is made.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "us_or_gc",
+        "confidence": 0.90,
+        "evidence": "Explicit text: \"US Citizenship or Permanent Residency\".",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.95,
+        "evidence": "Employment type is \"full_time\" and contract type is \"permanent\", indicating a standard employee (W‑2) arrangement.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.90,
+        "evidence": "Benefits list includes unlimited PTO, parental leave, medical/dental/vision, 401(k) options, equity grants, and many supplemental perks.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.75,
+        "evidence": "The description mentions \"growth\" of the company but provides no specific career tracks or promotion ladders.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Collaboration with a Product Owner and other engineers is noted, implying learning from more experienced teammates.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No language about promotions, ladders, or advancement opportunities appears in the posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "The posting does not reference internal transfers or lateral moves.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career track (IC, management, specialist, architect) is described.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.80,
+        "evidence": "A clear set of must‑have hard skills is listed alongside a short nice‑to‑have list, indicating balanced strictness.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "The role is specifically defined as a Software & Data Engineer working on Palantir Foundry, without overlapping responsibilities.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Required experience (1‑5 years) aligns with the listed technical skills; expectations are realistic for the seniority level.",
+        "source": "inferred"
+      }
+    }
+  }
+}

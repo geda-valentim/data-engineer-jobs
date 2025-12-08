@@ -1,0 +1,234 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Focus on SFTP transfers, manual scripting, and specific tools like GoAnywhere suggests developing maturity with basic automation but limited modern data stack adoption",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2 - basic pipelines with SFTP focus, no mention of data governance, quality testing, or modern orchestration",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["cloud_native"],
+        "confidence": 0.70,
+        "evidence": "Azure Cloud mentioned as must-have, indicating cloud adoption, but no other maturity signals like CI/CD, monitoring, or governance",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.25,
+        "confidence": 0.85,
+        "evidence": "Focused on SFTP data engineering with specific tools and responsibilities, no backend/ML/DevOps conflation",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.75,
+        "confidence": 0.80,
+        "evidence": "Explicit mention of 'after-hours and weekends on-call duties' indicates high overtime risk",
+        "source": "pass1_derived"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Well-defined responsibilities around SFTP data transfers, security, and monitoring",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.55,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to on-call requirements and limited growth signals, but role is well-defined",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about reporting structure or management hierarchy in job posting",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No manager title or level mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.80,
+        "evidence": "No information about team growth, expansion, or hiring velocity",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.65,
+        "evidence": "No details about team size or composition provided in job posting",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about who the role reports to",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of embedded work with product teams or cross-functional collaboration beyond vendor coordination",
+        "source": "pass1_derived"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.35,
+        "confidence": 0.80,
+        "evidence": "Explicit on-call duties for after-hours and weekends indicate poor work-life balance",
+        "source": "pass1_derived"
+      },
+      "growth_opportunities_score": {
+        "value": 0.25,
+        "confidence": 0.75,
+        "evidence": "No mention of learning budget, conferences, mentorship, or career progression paths",
+        "source": "pass1_derived"
+      },
+      "tech_culture_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "Focus on specific tools (GoAnywhere, WinSCP) with no mention of modern practices like CI/CD, testing, or documentation",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No mention of code review, CI/CD, monitoring, incident response, or design docs",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.80,
+        "evidence": "Focus on maintaining existing SFTP pipelines with no mention of innovation or new technology exploration",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of tech debt management, refactoring, or code quality improvement initiatives",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of ML, AI, or data science collaboration in job description",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools mentioned or implied in requirements",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No urgency signals like 'ASAP' or 'immediate start' mentioned",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Onsite role in Cincinnati, OH with specific tool requirements may limit applicant pool, but TCS is a large employer",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.90,
+        "evidence": "Tata Consultancy Services is a large, established global IT services company",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.80,
+        "evidence": "TCS typically hires steadily rather than aggressively expanding or replacing roles",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about team size provided in job posting",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.95,
+        "evidence": "Tata Consultancy Services is a publicly traded company",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about whether this is a new headcount, backfill, or expansion",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["transparent_salary", "well_defined_role", "data_focused_role", "established_company"],
+    "strength_details": [
+      "Transparent compensation ($80,000-$85,000 annual salary)",
+      "Clear, focused role on SFTP data engineering with specific tool requirements",
+      "Established company (Tata Consultancy Services) with stable employment"
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship", "limited_growth", "on_call_expected"],
+    "concern_details": [
+      "Explicit requirement for after-hours and weekend on-call duties",
+      "No mention of visa sponsorship - US work authorization likely required",
+      "No growth opportunities, learning budget, or career progression mentioned",
+      "Limited tech culture with no modern engineering practices or innovation signals"
+    ],
+    "best_fit_categories": ["mid_level_engineers", "cloud_specialists", "pipeline_developers", "enterprise_experienced"],
+    "best_fit_details": [
+      "Mid-level engineers (3-5 years) with SFTP and Azure experience",
+      "Candidates seeking stable enterprise roles with specific technical focus",
+      "Those comfortable with on-call responsibilities and maintenance-oriented work"
+    ],
+    "probe_categories": ["on_call_expectations", "work_hour_expectations", "career_growth_path", "team_size_composition"],
+    "probe_details": [
+      "Ask about frequency and duration of on-call duties",
+      "Understand typical work hours and weekend expectations",
+      "Inquire about opportunities for skill development and career progression",
+      "Ask about team structure and size for this specific role"
+    ],
+    "leverage_categories": ["exact_experience_match", "rare_skill_match"],
+    "leverage_details": [
+      "Experience with GoAnywhere MFT and Solimar software is specialized and valuable",
+      "Azure Cloud + SFTP expertise combination is specific and may be in demand"
+    ],
+    "overall_assessment": "Stable enterprise role with clear SFTP-focused responsibilities and transparent compensation. Significant concerns include mandatory on-call duties, limited growth opportunities, and lack of modern tech culture. Best suited for mid-level engineers seeking stable employment with specific technical requirements, but not ideal for those seeking innovation or work-life balance.",
+    "recommendation_score": 0.55,
+    "recommendation_confidence": 0.75
+  }
+}

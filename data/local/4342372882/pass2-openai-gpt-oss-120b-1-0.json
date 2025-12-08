@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2025-12-07 07:28:27",
+    "timestamp": "2025-12-07 23:23:16",
     "job_posting_id": "4342372882",
     "job_title": "Data Engineer",
     "company_name": "Wassching",
@@ -14,56 +14,56 @@
         "seniority_level": {
           "value": "mid",
           "confidence": 0.78,
-          "evidence": "Job requires 3‑5+ years of experience, which aligns with typical mid‑level data engineering roles.",
-          "source": "combined"
+          "evidence": "Required experience is 3–5+ years, which aligns with a mid‑level data engineer.",
+          "source": "inferred"
         },
         "job_family": {
           "value": "data_engineer",
           "confidence": 0.99,
-          "evidence": "Title is \"Data Engineer\" and responsibilities focus on pipelines, ETL/ELT, and data modeling.",
+          "evidence": "Title is \"Data Engineer\" and responsibilities focus on pipelines, modeling, and platform ownership.",
           "source": "pass1_derived"
         },
         "sub_specialty": {
-          "value": "batch_etl",
-          "confidence": 0.82,
-          "evidence": "Core duties involve data acquisition, transformation, and modeling with SQL/Python; streaming (Kafka) is only listed as a nice‑to‑have.",
+          "value": "streaming_realtime",
+          "confidence": 0.85,
+          "evidence": "Must‑have skills include streaming and Kafka; job description emphasizes real‑time data acquisition and event‑driven connections.",
           "source": "inferred"
         },
         "leadership_expectation": {
-          "value": "ic",
-          "confidence": 0.86,
-          "evidence": "No mention of people‑management responsibilities; role is described as technical ownership and collaboration.",
+          "value": "tech_lead_ic",
+          "confidence": 0.71,
+          "evidence": "Acts as technical owner of the Process Intelligence platform but no direct reports are mentioned.",
           "source": "inferred"
         }
       },
       "stack_and_cloud": {
         "primary_cloud": {
           "value": "not_mentioned",
-          "confidence": 0.96,
-          "evidence": "Job lists Databricks and Snowflake but does not specify any cloud provider (AWS, Azure, GCP).",
+          "confidence": 0.94,
+          "evidence": "No specific cloud provider (AWS, Azure, GCP) is referenced in the posting or Pass 1 extraction.",
           "source": "pass1_derived"
         },
         "secondary_clouds": {
           "value": [],
-          "confidence": 0.96,
-          "evidence": "No additional cloud platforms are referenced in the posting.",
+          "confidence": 0.94,
+          "evidence": "No additional cloud providers are mentioned.",
           "source": "pass1_derived"
         },
         "processing_paradigm": {
-          "value": "batch",
-          "confidence": 0.77,
-          "evidence": "Primary responsibilities are batch‑oriented ETL/ELT; streaming (Kafka) appears only as a nice‑to‑have.",
+          "value": "hybrid",
+          "confidence": 0.82,
+          "evidence": "Both streaming (Kafka) and batch/ETL (SQL, Python) technologies are listed as required.",
           "source": "inferred"
         },
         "orchestrator_category": {
           "value": "not_mentioned",
-          "confidence": 0.95,
-          "evidence": "The posting does not mention any workflow/orchestration tool such as Airflow, Dagster, etc.",
+          "confidence": 0.93,
+          "evidence": "No orchestration tool (Airflow, Luigi, etc.) is referenced.",
           "source": "pass1_derived"
         },
         "storage_layer": {
           "value": "mixed",
-          "confidence": 0.81,
+          "confidence": 0.77,
           "evidence": "Snowflake (data warehouse) and Databricks (lakehouse) are both listed as major platforms.",
           "source": "inferred"
         }
@@ -71,40 +71,40 @@
       "geo_and_work_model": {
         "remote_restriction": {
           "value": "same_country",
-          "confidence": 0.62,
-          "evidence": "Location is Amsterdam, Netherlands, and the posting mentions hybrid/remote flexibility but no explicit worldwide allowance.",
+          "confidence": 0.91,
+          "evidence": "Pass 1 extraction shows geo restriction type \"specific_countries\" with allowed country NL; hybrid/remote flexibility is offered within the Netherlands.",
           "source": "combined"
         },
         "timezone_focus": {
           "value": "europe",
-          "confidence": 0.92,
-          "evidence": "Office is in Amsterdam (Central European Time).",
-          "source": "pass1_derived"
+          "confidence": 0.9,
+          "evidence": "Location is Amsterdam (Central European Time).",
+          "source": "inferred"
         },
         "relocation_required": {
           "value": false,
-          "confidence": 0.91,
-          "evidence": "No relocation requirement is stated; hybrid/remote flexibility is offered.",
+          "confidence": 0.86,
+          "evidence": "Posting mentions hybrid/remote flexibility and does not require relocation to a different country.",
           "source": "inferred"
         }
       },
       "visa_and_authorization": {
         "h1b_friendly": {
           "value": false,
-          "confidence": 0.55,
-          "evidence": "Visa sponsorship is not mentioned in the posting.",
+          "confidence": 0.6,
+          "evidence": "Visa sponsorship is not mentioned in the posting or Pass 1 extraction.",
           "source": "pass1_derived"
         },
         "opt_cpt_friendly": {
           "value": false,
-          "confidence": 0.55,
-          "evidence": "No reference to OPT/CPT eligibility; work authorization is not discussed.",
-          "source": "inferred"
+          "confidence": 0.6,
+          "evidence": "No reference to OPT/CPT eligibility; work authorization is implied.",
+          "source": "pass1_derived"
         },
         "citizenship_required": {
           "value": "not_mentioned",
           "confidence": 0.94,
-          "evidence": "The posting does not specify any citizenship or work‑authorization requirements.",
+          "evidence": "No citizenship or work‑authorization restrictions are stated.",
           "source": "pass1_derived"
         }
       },
@@ -112,72 +112,72 @@
         "w2_vs_1099": {
           "value": "not_mentioned",
           "confidence": 0.94,
-          "evidence": "Employment type (full‑time, contractor, etc.) is not stated.",
+          "evidence": "Employment type (W2, C2C, 1099) is not specified.",
           "source": "pass1_derived"
         },
         "benefits_level": {
-          "value": "standard",
-          "confidence": 0.84,
-          "evidence": "Benefits listed are competitive compensation, development opportunities, and ownership from day one – typical of a standard package.",
+          "value": "none_mentioned",
+          "confidence": 0.94,
+          "evidence": "Pass 1 extraction lists no benefits, equity, or learning budget.",
           "source": "pass1_derived"
         }
       },
       "career_development": {
         "growth_path_clarity": {
           "value": "vague",
-          "confidence": 0.76,
-          "evidence": "The posting mentions \"development opportunities\" but provides no concrete career ladder or track.",
+          "confidence": 0.81,
+          "evidence": "Posting mentions \"plenty of development opportunities\" but provides no concrete career tracks.",
           "source": "inferred"
         },
         "mentorship_signals": {
           "value": "not_mentioned",
-          "confidence": 0.81,
-          "evidence": "No explicit or implied mentorship program is described.",
-          "source": "inferred"
+          "confidence": 0.93,
+          "evidence": "No mentorship program or senior‑mentor relationship is described.",
+          "source": "pass1_derived"
         },
         "promotion_path_mentioned": {
           "value": false,
           "confidence": 0.92,
-          "evidence": "No language about promotions or advancement paths appears in the posting.",
+          "evidence": "No language about promotion or advancement paths appears in the posting.",
           "source": "pass1_derived"
         },
         "internal_mobility_mentioned": {
           "value": false,
-          "confidence": 0.92,
-          "evidence": "The posting does not reference internal transfers or mobility.",
+          "confidence": 0.94,
+          "evidence": "The posting does not reference internal transfers or lateral moves.",
           "source": "pass1_derived"
         },
         "career_tracks_available": {
           "value": [],
           "confidence": 0.9,
-          "evidence": "No career tracks (IC, management, specialist, architect) are mentioned.",
+          "evidence": "No explicit IC, management, specialist, or architect tracks are mentioned.",
           "source": "pass1_derived"
         }
       },
       "requirements_classification": {
         "requirement_strictness": {
           "value": "medium",
-          "confidence": 0.81,
-          "evidence": "A clear set of must‑haves is listed alongside a sizable nice‑to‑have list, indicating balanced strictness.",
+          "confidence": 0.79,
+          "evidence": "Clear separation of must‑have and nice‑to‑have skills; not overly exhaustive.",
           "source": "inferred"
         },
         "scope_definition": {
           "value": "clear",
-          "confidence": 0.86,
-          "evidence": "The description focuses specifically on data engineering for process intelligence, without mixing other roles.",
+          "confidence": 0.9,
+          "evidence": "Job description focuses specifically on data engineering for process intelligence.",
           "source": "inferred"
         },
         "skill_inflation_detected": {
           "value": false,
-          "confidence": 0.79,
-          "evidence": "Required skills and experience (3‑5+ years) are appropriate for a mid‑level data engineer.",
+          "confidence": 0.84,
+          "evidence": "Required skill set aligns with 3–5+ years of experience; no unrealistic senior‑level expectations.",
           "source": "inferred"
         }
       }
     },
-    "tokens": 9493,
-    "input_tokens": 6458,
-    "output_tokens": 3035,
-    "cost": 0.0018792
+    "tokens": 9663,
+    "input_tokens": 6465,
+    "output_tokens": 3198,
+    "cost": 0.0019291499999999997
   }
 }

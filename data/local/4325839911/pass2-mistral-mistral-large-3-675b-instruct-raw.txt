@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.75,
+        "evidence": "1+ years of business hands-on experience with AI models mentioned, but title is 'AI Data Engineer' without explicit seniority qualifier. Responsibilities align with mid-level expectations (e.g., deploying models, collaborating with seniors).",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "ml_engineer",
+        "confidence": 0.90,
+        "evidence": "Title includes 'AI Data Engineer' and core focus is on preparing data for AI/ML model training, deploying AI models, and working with AI model APIs (LLMs, Computer Vision).",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "mlops",
+        "confidence": 0.80,
+        "evidence": "Deploying and monitoring AI models on Microsoft Azure, automating workflows, and integrating APIs suggest a focus on MLOps.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "Role is described as hands-on with no mention of direct reports, hiring, or reviews. Focus is on execution and collaboration with senior team members.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.95,
+        "evidence": "Azure services (Azure ML, Microsoft Fabric) and Azure DevOps explicitly mentioned.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud providers mentioned beyond Azure.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.60,
+        "evidence": "Mentions 'data pipelines' and 'automation' which could imply batch processing, but also 'deploying AI models' which may involve real-time or hybrid paradigms. No explicit tools for streaming (e.g., Kafka, Flink) mentioned.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.70,
+        "evidence": "Azure DevOps mentioned, which is a cloud-native orchestrator for CI/CD and workflow automation.",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.0,
+        "evidence": "No explicit mention of storage tools or paradigms (e.g., warehouse, lake, lakehouse).",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.80,
+        "evidence": "Location specified as 'Prague, Prague, Czechia' with hybrid work model, suggesting preference for candidates in the same region (Czechia/Prague).",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "europe",
+        "confidence": 0.90,
+        "evidence": "Location is Prague, Czechia, and no global or multi-timezone team distribution mentioned.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Hybrid work model and location requirement imply candidate must already be in Czechia/Prague, no relocation package mentioned.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned explicitly.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of OPT/CPT or student visa eligibility, and location is restricted to Czechia.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.60,
+        "evidence": "No explicit discussion of citizenship or work authorization requirements beyond location (Prague, Czechia).",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time employee position stated with benefits like paid vacation, pension insurance, and meal allowance.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "standard",
+        "confidence": 0.75,
+        "evidence": "Benefits mentioned include flexible working hours, hybrid work, paid vacation, meal allowance, and insurance contributions (pension, life, accident). No equity or premium perks like unlimited PTO or learning budgets.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions 'Focus on your development' and 'internal&external trainings, certifications, workshops' but no explicit career tracks or promotion ladder.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.80,
+        "evidence": "Collaboration with 'senior AI developer' and 'AI Tech Lead' suggests mentorship opportunities.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotions or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No discussion of internal mobility or lateral moves.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.60,
+        "evidence": "Role is hands-on and mentions 'Boost your Potential and Independence' which aligns with IC track, but no explicit tracks discussed.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Clear distinction between required skills (Python, SQL, Azure) and no nice-to-haves listed, but tone is welcoming and not overly strict.",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Job description focuses on specific responsibilities like data transformation for AI, model deployment, and API integration.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "1+ years of experience with AI models is reasonable for a mid-level role, and skills align with expectations.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

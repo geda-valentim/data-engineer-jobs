@@ -1,0 +1,251 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 00:00:16",
+    "job_posting_id": "4325839911",
+    "job_title": "AI Data Engineer",
+    "company_name": "Mattoni 1873",
+    "job_location": "Prague, Prague, Czechia",
+    "pass_name": "pass3",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 2,
+          "confidence": 0.75,
+          "evidence": "Basic cloud-native stack (Azure ML, Fabric, DevOps) with focus on AI model deployment, but no mention of data governance tools, testing frameworks, or monitoring beyond general 'ensure data governance'. Limited signals of mature practices.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "developing",
+          "confidence": 0.75,
+          "evidence": "Matches score of 2 - basic automation and cloud tools in place, but lacks advanced governance, quality testing, or observability specifics.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "cloud_native",
+            "modern_data_stack_adoption"
+          ],
+          "confidence": 0.8,
+          "evidence": "Explicit mention of Azure ML, Microsoft Fabric, Azure DevOps indicating cloud-native adoption. No mention of CI/CD practices, data quality testing, monitoring, or governance tools.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.45,
+          "confidence": 0.85,
+          "evidence": "Role combines data engineering (pipelines, transformation) with ML model deployment and monitoring, plus API integration and collaboration with business stakeholders. While focused, it blends DE and ML Ops responsibilities without clear separation.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.3,
+          "confidence": 0.75,
+          "evidence": "Hybrid work model, 5 weeks vacation, and learning focus suggest reasonable work-life balance. No 'fast-paced', 'wear many hats', or 'immediate start' mentioned. However, 'newly developing AI Competence Center' implies startup-like pressure.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Well-defined responsibilities: prepare data, deploy/monitor models, automate workflows, collaborate with stakeholders. Specific tools and outcomes mentioned.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.25,
+          "confidence": 0.78,
+          "evidence": "Low risk - role is focused, benefits are strong, and no extreme red flags. Moderate scope creep (DE + ML Ops) is offset by clear expectations and good work-life signals.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "mentioned",
+          "confidence": 0.8,
+          "evidence": "Mentions 'under AI Tech Lead' and 'collaborate with senior AI developer', indicating reporting line exists but not explicitly stated as 'reports to'.",
+          "source": "inferred"
+        },
+        "manager_level_inferred": {
+          "value": "tech_lead",
+          "confidence": 0.85,
+          "evidence": "Reports to 'AI Tech Lead', suggesting a technical leadership role rather than managerial or director level.",
+          "source": "inferred"
+        },
+        "team_growth_velocity": {
+          "value": "steady_growth",
+          "confidence": 0.75,
+          "evidence": "Mentions 'newly developing AI Competence Center' and 'first AI/ML projects', suggesting early-stage team building rather than rapid expansion or stable team.",
+          "source": "inferred"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "small_2_5",
+            "de_count": "1-2 data engineers",
+            "seniority_mix": "mix of junior and mid-level"
+          },
+          "confidence": 0.7,
+          "evidence": "Described as 'newly developing AI Competence Center' with 'AI Tech Lead' and 'senior AI developer', implying small team. No explicit size given, but context suggests 2-5 members.",
+          "source": "inferred"
+        },
+        "reporting_structure": {
+          "value": "reports_to_tech_lead",
+          "confidence": 0.85,
+          "evidence": "Explicitly states 'under AI Tech Lead', indicating direct reporting to a technical lead.",
+          "source": "explicit"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.75,
+          "evidence": "Mentions 'collaborate with senior AI developer and business stakeholders' and 'integrating AI into real-world business processes', suggesting embedded work with cross-functional teams.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.75,
+          "confidence": 0.8,
+          "evidence": "Hybrid work, flexible hours, 5 weeks vacation, and no on-call or weekend work mentioned. Strong benefits package supports work-life balance.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.8,
+          "confidence": 0.75,
+          "evidence": "Explicit mention of 'focus on your development', 'internal & external trainings, certifications, workshops', and 'build own designs', indicating strong learning and autonomy opportunities.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.7,
+          "confidence": 0.75,
+          "evidence": "Modern Azure stack (ML, Fabric, DevOps) and focus on innovation ('build own designs') suggest good tech culture. No mention of code reviews, testing, or open source, limiting score.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "ci_cd",
+            "monitoring"
+          ],
+          "confidence": 0.75,
+          "evidence": "Azure DevOps implies CI/CD practices. 'Monitor AI models' suggests monitoring, but no specifics on incident response or postmortems.",
+          "source": "inferred"
+        },
+        "innovation_signals": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Mentions 'build own designs', 'prove your solutions are great', and 'continuous learning and innovation', indicating some innovation culture, but no dedicated R&D time or experimentation mentioned.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of tech debt, refactoring, or code quality improvement initiatives in the job description.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "basic_ml",
+          "confidence": 0.8,
+          "evidence": "Focus on preparing data for training, deploying and monitoring models, integrating APIs. Mentions LLMs and Computer Vision models, but no MLOps infrastructure, feature stores, or advanced model serving mentioned.",
+          "source": "inferred"
+        },
+        "ml_tools_expected": {
+          "value": [
+            "Azure ML",
+            "Microsoft Fabric"
+          ],
+          "confidence": 0.85,
+          "evidence": "Explicitly mentioned in must-have skills. No other ML tools like MLflow, SageMaker, or feature stores referenced.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "normal",
+          "confidence": 0.8,
+          "evidence": "No 'ASAP', 'immediate start', or 'urgent' language. Described as 'newly developing' center, suggesting planned hiring rather than emergency.",
+          "source": "inferred"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.65,
+          "evidence": "Location in Prague (Czechia) reduces global competition compared to SF/NYC. Hybrid model and comprehensive benefits may attract candidates, but no application count or Easy Apply mentioned.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "growth_stage",
+          "confidence": 0.75,
+          "evidence": "Mattoni 1873 is an established brand (since 1873) developing a new AI Competence Center, suggesting a mature company investing in growth rather than a startup.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.75,
+          "evidence": "Building new AI team from scratch ('newly developing'), implying steady hiring to establish the function, not aggressive expansion or replacement.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "small_2_5",
+          "confidence": 0.7,
+          "evidence": "Described as 'newly developing AI Competence Center' with 'AI Tech Lead' and 'senior AI developer', suggesting small team size (2-5 members).",
+          "source": "inferred"
+        },
+        "funding_stage_signals": {
+          "value": "profitable",
+          "confidence": 0.8,
+          "evidence": "Mattoni 1873 is an established company (since 1873) with comprehensive benefits (pension, insurance, loans), suggesting profitability and stability rather than venture funding.",
+          "source": "inferred"
+        },
+        "role_creation_type": {
+          "value": "new_function",
+          "confidence": 0.85,
+          "evidence": "Explicitly mentions 'newly developing AI Competence Center' and 'participate in company first AI/ML projects', indicating this is a new function being built.",
+          "source": "explicit"
+        }
+      }
+    },
+    "summary": {
+      "strengths": [
+        "Strong benefits package including 5 weeks vacation, hybrid work, and learning budget",
+        "Opportunity to build AI/ML infrastructure from the ground up in an established company",
+        "Modern Azure stack (ML, Fabric, DevOps) with focus on innovation and autonomy"
+      ],
+      "concerns": [
+        "Limited data maturity signals - no mention of data governance, testing, or monitoring tools",
+        "Role blends data engineering and ML Ops responsibilities without clear separation"
+      ],
+      "best_fit_for": [
+        "Mid-level data engineers with 1-3 years experience seeking to specialize in AI/ML deployment",
+        "Candidates interested in building new data functions in established companies with growth potential"
+      ],
+      "red_flags_to_probe": [
+        "Ask about the current state of data pipelines and whether there are existing data quality or governance frameworks",
+        "Understand the team's current size and how much autonomy you'll have in designing solutions",
+        "Clarify expectations around model monitoring and incident response for deployed AI models"
+      ],
+      "negotiation_leverage": [
+        "Experience with Azure ML and Microsoft Fabric is highly specific and valuable for this role",
+        "Ability to integrate LLMs and Computer Vision models into business processes is a key differentiator"
+      ],
+      "overall_assessment": "Good opportunity for a mid-level data engineer to join a new AI Competence Center in an established company. Strong benefits and learning culture, with autonomy to build solutions. Main trade-offs are limited data maturity signals and blended DE/ML Ops responsibilities. Suitable for candidates seeking to specialize in AI deployment with Azure.",
+      "recommendation_score": 0.75,
+      "recommendation_confidence": 0.8
+    },
+    "tokens": 11633,
+    "input_tokens": 8942,
+    "output_tokens": 2691,
+    "cost": 0.014324
+  }
+}

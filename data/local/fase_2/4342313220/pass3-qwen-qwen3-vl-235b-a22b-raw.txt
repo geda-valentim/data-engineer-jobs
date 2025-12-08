@@ -1,0 +1,232 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "Mentions workflow managers (Airflow, Dagster), data quality tools (Great Expectations, Soda), and Databricks - indicating defined processes but no advanced governance or MLOps",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Matches score of 3 - documented processes with modern tools but no evidence of optimization or data mesh",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption", "data_quality_testing"],
+        "confidence": 0.80,
+        "evidence": "Explicitly mentions Airflow, Dagster, Great Expectations, Soda, Databricks - modern tools for orchestration and quality",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.15,
+        "confidence": 0.85,
+        "evidence": "Focused on data modeling, pipeline development, and infrastructure - no conflation with ML, analytics, or DevOps roles",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.40,
+        "confidence": 0.70,
+        "evidence": "Onsite work in Seoul with no PTO mentioned, but no explicit 'fast-paced' or 'wear many hats' language",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Specific requirements for SQL, Python, workflow managers; focused on data modeling and infrastructure",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.25,
+        "confidence": 0.75,
+        "evidence": "Low risk - well-defined DE role with clear requirements, no scope creep, moderate overtime risk",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No information about reporting manager or team structure in job posting or Pass 1/2",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No managerial titles or reporting structure mentioned anywhere in the job posting",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about team size changes or hiring velocity in job posting",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.95,
+        "evidence": "No details about team size, composition, or seniority levels provided",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about who the role reports to or organizational structure",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of working with product teams, PMs, or cross-functional collaboration; appears to be centralized data team",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.50,
+        "confidence": 0.70,
+        "evidence": "Onsite work in Seoul with no PTO or work-life balance mentions; no negative signals but limited positive indicators",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.60,
+        "confidence": 0.65,
+        "evidence": "Mentions 'growth opportunities' but no specific career paths, learning budget, or mentorship programs",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.70,
+        "confidence": 0.75,
+        "evidence": "Modern tools (Airflow, Databricks) and data quality focus suggest decent engineering practices, but no CI/CD or testing culture mentioned",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No explicit mentions of code review, CI/CD, monitoring, incident response, or design docs",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about R&D time, experimentation culture, or new tech exploration",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt management, refactoring, or code quality improvement initiatives",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No ML/AI mentioned in job posting; LLM/GenAI explicitly false in Pass 1; no ML tools beyond Databricks mentioned",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML-specific tools mentioned beyond Databricks (which is general data platform)",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No 'ASAP', 'immediate start', or urgency language in job posting",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No application count, location competitiveness, or salary competitiveness indicators available",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.70,
+        "evidence": "Mention of OCMP (One Core Multi Platform) and focus on scaling suggests established tech company rather than startup",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about hiring pace, multiple roles, or expansion plans",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about data/engineering team size provided",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No funding stage, investor information, or financial status mentioned",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No indication whether this is a new headcount, backfill, or team expansion",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "well_defined_role", "data_focused_role"],
+    "strength_details": [
+      "Strong modern data stack (Airflow, Databricks, Great Expectations)",
+      "Clear focus on data modeling and pipeline development",
+      "Well-defined requirements for SQL, Python, and workflow managers"
+    ],
+    "concern_categories": ["vague_requirements", "salary_not_disclosed", "on_call_expected", "overtime_likely"],
+    "concern_details": [
+      "No salary information disclosed - compensation unknown",
+      "Onsite work in Seoul with no work-life balance signals",
+      "No information about team structure or reporting lines"
+    ],
+    "best_fit_categories": ["mid_level_engineers", "pipeline_developers", "cloud_specialists"],
+    "best_fit_details": [
+      "Mid-level engineers with 3-5 years experience in data modeling and ETL",
+      "Candidates with experience in Airflow, Dagster, or similar workflow managers",
+      "Engineers comfortable with onsite work in Seoul and Korean market"
+    ],
+    "probe_categories": ["team_size_composition", "reporting_structure", "work_hour_expectations", "salary_range_details"],
+    "probe_details": [
+      "Ask about actual team size and composition of the data engineering team",
+      "Inquire about who the role reports to and team structure",
+      "Clarify expected work hours and any on-call requirements"
+    ],
+    "leverage_categories": ["exact_experience_match", "rare_skill_match"],
+    "leverage_details": [
+      "Experience with Databricks and data quality tools (Great Expectations) is valuable",
+      "Strong SQL and Python skills with workflow manager experience are key differentiators"
+    ],
+    "overall_assessment": "Solid opportunity for mid-level data engineers seeking to work with modern data tools in a Korean tech company. Clear role focus on data modeling and pipelines with good tooling. Main concerns are lack of compensation transparency, no work-life balance signals, and unclear team structure. Best suited for candidates comfortable with onsite work in Seoul.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.75
+  }
+}

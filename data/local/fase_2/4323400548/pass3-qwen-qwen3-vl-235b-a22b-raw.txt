@@ -1,0 +1,237 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.82,
+        "evidence": "Modern tools (AWS, Airflow, Dagster, Terraform), CI/CD practices, data quality testing, and governance mentioned, but no explicit data mesh or advanced MLOps patterns",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.82,
+        "evidence": "Matches score of 3 - documented processes, modern tools, some governance",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption", "cicd_practices", "data_quality_testing", "data_governance"],
+        "confidence": 0.85,
+        "evidence": "Mentions AWS, Airflow/Dagster, CI/CD, Docker/Kubernetes, Terraform, data security, and compliance policies",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.15,
+        "confidence": 0.88,
+        "evidence": "Well-defined data engineering role focused on pipelines, orchestration, and infrastructure without conflating with data science, analytics, or DevOps responsibilities",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.35,
+        "confidence": 0.72,
+        "evidence": "Startup environment with 'lean & nimble' culture and 'aim high' values suggests some pressure, but hybrid model and no explicit on-call or weekend work mentioned",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Specific responsibilities listed including pipeline design, orchestration, storage, monitoring, and data quality - focused on data engineering core functions",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.25,
+        "confidence": 0.78,
+        "evidence": "Low risk - well-defined role at funded startup with good signals (modern stack, hybrid work, comprehensive benefits)",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "mentioned",
+        "confidence": 0.88,
+        "evidence": "Mentions 'Senior Data Engineer on our Core Engineering Data Team' but doesn't specify direct manager title",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "manager",
+        "confidence": 0.75,
+        "evidence": "Reports to 'Core Engineering Data Team' - likely Engineering Manager level given team size and structure",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.70,
+        "evidence": "No explicit growth metrics, but 'collaborative and agile environment' and 'learning and growth are continuous' suggest ongoing expansion",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.60,
+        "evidence": "Only mentions 'Core Engineering Data Team' without specifying size or composition",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.65,
+        "evidence": "No explicit reporting line mentioned beyond team affiliation",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions collaborating with analysts, engineers, product managers, and stakeholders, suggesting embedded cross-functional work",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.75,
+        "confidence": 0.80,
+        "evidence": "Hybrid work model (2 core days in office), no mention of on-call or overtime, values include 'Lean & Nimble' suggesting efficiency over long hours",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.65,
+        "confidence": 0.70,
+        "evidence": "Company values mention 'learning and growth are continuous' but no specific programs, budgets, or career paths outlined",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.80,
+        "confidence": 0.85,
+        "evidence": "Modern stack (AWS, Airflow, Dagster, Terraform), CI/CD, infrastructure-as-code, and data quality focus indicate strong engineering practices",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.60,
+        "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["ci_cd", "monitoring", "design_docs"],
+        "confidence": 0.85,
+        "evidence": "Explicit mentions of CI/CD pipelines, monitoring performance/reliability, and designing data flows and table structures",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Values include 'Lean & Nimble' and 'Aim High', suggesting some innovation focus, but no specific R&D or experimentation programs mentioned",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.80,
+        "evidence": "Mentions 'optimize table structures', 'identify areas for improvement', and 'contribute to formation of new team' suggesting awareness of technical debt and improvement opportunities",
+        "source": "inferred"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.75,
+        "evidence": "Mentions working with downstream ML applications but no specific ML infrastructure or MLOps tools mentioned; streaming platforms like Kafka/Kinesis are 'nice to have'",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.65,
+        "evidence": "No specific ML tools mentioned in requirements; only general reference to 'downstream ML applications'",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "normal",
+        "confidence": 0.70,
+        "evidence": "No explicit urgency signals like 'ASAP' or 'immediate start'; standard hiring process implied",
+        "source": "inferred"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Boston location (moderate competition), hybrid work model, no salary disclosed in initial posting (though later revealed), likely 50-200 applicants",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "growth_stage",
+        "confidence": 0.75,
+        "evidence": "Established company in home security with mission-driven culture, comprehensive benefits, and focus on scaling data infrastructure",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.70,
+        "evidence": "No explicit hiring velocity mentioned, but 'collaborative and agile environment' suggests ongoing, regular hiring",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.75,
+        "evidence": "Mentions 'Core Engineering Data Team' - likely medium-sized team given company size and data focus",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.60,
+        "evidence": "No funding stage mentioned in job posting",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "new_headcount",
+        "confidence": 0.85,
+        "evidence": "Mentions 'contribute to the formation of our new team', suggesting this is a new role being created to build out the data function",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["transparent_salary", "modern_tech_stack", "well_defined_role", "hybrid_work", "data_focused_role"],
+    "strength_details": [
+      "Transparent compensation ($111,800-$164,000 + equity + comprehensive benefits)",
+      "Strong modern data stack (AWS, Airflow/Dagster, Terraform, Kubernetes)",
+      "Well-defined responsibilities focused on core data engineering functions",
+      "Hybrid work model (2 core days in Boston office, flexible remainder)",
+      "Clear data engineering focus without scope creep into analytics or ML"
+    ],
+    "concern_categories": ["no_visa_sponsorship", "limited_growth_details", "unclear_reporting"],
+    "concern_details": [
+      "Visa sponsorship not mentioned - likely requires US work authorization",
+      "Limited details on career growth paths or mentorship programs",
+      "Reporting structure not clearly defined beyond team affiliation"
+    ],
+    "best_fit_categories": ["senior_data_engineers", "cloud_specialists", "pipeline_developers", "startup_enthusiasts"],
+    "best_fit_details": [
+      "Senior DEs with 4+ years experience in cloud data infrastructure (AWS focus)",
+      "Engineers experienced with orchestration tools (Airflow/Dagster) and infrastructure-as-code",
+      "Candidates comfortable with hybrid work and startup culture values ('Lean & Nimble', 'No Ego')"
+    ],
+    "probe_categories": ["reporting_structure", "career_growth_path", "team_size_composition", "on_call_expectations", "tech_debt_situation"],
+    "probe_details": [
+      "Ask about who you'll report to and their management style",
+      "Understand the career progression path for senior data engineers",
+      "Clarify the size and composition of the Core Engineering Data Team",
+      "Inquire about on-call expectations and work hour norms",
+      "Ask about current tech debt and priorities for modernization"
+    ],
+    "leverage_categories": ["exact_experience_match", "cloud_specialist", "rare_skill_match"],
+    "leverage_details": [
+      "Strong AWS experience with Athena, Terraform, and orchestration tools is highly valuable",
+      "Experience with Dagster (mentioned first among orchestration tools) is a differentiator",
+      "Background in consumer IoT or home security technology would be advantageous"
+    ],
+    "overall_assessment": "Strong opportunity for senior data engineers seeking a well-defined role with modern cloud stack and hybrid work flexibility. Competitive compensation package with equity and comprehensive benefits. Main considerations are lack of visa sponsorship, limited career path details, and unclear reporting structure. Ideal for candidates with AWS expertise and interest in building data infrastructure in a growth-stage company.",
+    "recommendation_score": 0.78,
+    "recommendation_confidence": 0.85
+  }
+}

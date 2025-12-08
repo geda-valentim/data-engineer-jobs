@@ -1,0 +1,171 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.92,
+        "evidence": "Pass 1 lists minimum 3-5 years of related experience and the title does not include senior or staff qualifiers.",
+        "source": "pass1_derived"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.99,
+        "evidence": "Title explicitly contains \"Data Engineer\" and responsibilities focus on data pipelines and ingestion.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.86,
+        "evidence": "Job description emphasizes SFTP file transfers, scheduled data ingestion, and pipeline development rather than real‑time streaming.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.84,
+        "evidence": "No mention of people‑management duties; responsibilities are technical (on‑call, incident management, scripting).",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.91,
+        "evidence": "Pass 1 lists \"Experience with Azure Cloud\" as a required hard skill.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [
+          "aws",
+          "gcp"
+        ],
+        "confidence": 0.84,
+        "evidence": "Pass 1 lists AWS and GCP as \"nice to have\" cloud platforms.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.87,
+        "evidence": "The role centers on scheduled SFTP transfers and batch pipeline development; no streaming technologies are mentioned.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No orchestration tools (Airflow, Luigi, etc.) appear in the posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.96,
+        "evidence": "The posting does not reference data warehouses, lakes, or lakehouse technologies.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.86,
+        "evidence": "Location restriction is given as \"Cincinnati, OH\" with no remote work language, implying on‑site or regional work.",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.88,
+        "evidence": "The job is tied to a U.S. city (Cincinnati, OH), indicating a focus on the United States timezone.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.91,
+        "evidence": "No relocation language appears in the posting; the location is fixed, suggesting candidates must already be in the area.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": null,
+        "confidence": 0.5,
+        "evidence": "Visa sponsorship is not mentioned anywhere in the posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": null,
+        "confidence": 0.5,
+        "evidence": "No reference to OPT/CPT eligibility is present.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": null,
+        "confidence": 0.5,
+        "evidence": "The posting does not state any citizenship or work‑authorization restrictions.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.9,
+        "evidence": "Pass 1 indicates a permanent contract type, which for U.S. roles typically means a W‑2 employee with benefits.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.94,
+        "evidence": "Pass 1 shows an empty benefits array and no benefit language in the posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.93,
+        "evidence": "The posting contains no language about career ladders, promotion tracks, or growth opportunities.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "No mentorship programs or senior‑junior collaboration are referenced.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": null,
+        "confidence": 0.5,
+        "evidence": "There is no explicit mention of promotion or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": null,
+        "confidence": 0.5,
+        "evidence": "The posting does not discuss internal transfers or mobility.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No career track terminology (IC, management, specialist, architect) appears in the job description.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.84,
+        "evidence": "A clear set of required hard skills and 3‑5 years experience is listed, with a short nice‑to‑have list, indicating balanced strictness.",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.91,
+        "evidence": "The description focuses specifically on SFTP‑based data engineering tasks without mixing other roles.",
+        "source": "combined"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.86,
+        "evidence": "Required skills (Python, Shell, SFTP, Azure) align with a mid‑level data engineer with 3‑5 years experience.",
+        "source": "inferred"
+      }
+    }
+  }
+}

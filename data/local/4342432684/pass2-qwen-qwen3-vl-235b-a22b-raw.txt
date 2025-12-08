@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.95,
+        "evidence": "Title includes 'Senior' and requires 10+ years experience with 5+ years specializing in database design, aligning with senior level expectations",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.90,
+        "evidence": "Title is 'Data Modeler' with responsibilities including data modeling, ETL, data warehouse implementation, and dimensional modeling — core data engineering functions",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.92,
+        "evidence": "Heavy emphasis on dimensional modeling, EDW, Star/Snowflake schemas, and Oracle ADW — all data warehouse specialization",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.85,
+        "evidence": "Mentions mentoring team members, technical leadership of Oracle data warehouse team, and translating business requirements — indicates technical leadership without direct reports",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "oracle_cloud",
+        "confidence": 0.90,
+        "evidence": "Explicitly requires Oracle Autonomous Data Warehouse (ADW) in OCI environment, indicating Oracle Cloud as primary",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No other cloud platforms mentioned in requirements or nice-to-haves",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.85,
+        "evidence": "Focus on ETL, data warehouse implementation, and dimensional modeling — all batch-oriented processes",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.80,
+        "evidence": "Oracle tools (ADW, OCI) imply cloud-native orchestration; no mention of Airflow, dbt, or Dagster",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.90,
+        "evidence": "Explicit focus on Oracle ADW, dimensional modeling, and enterprise data warehouse — clearly warehouse-centric",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.90,
+        "evidence": "Must live within 60 miles of Sacramento, CA and work hybrid (2 days in office) — regional restriction",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.95,
+        "evidence": "US-only restriction with CA state requirement — focused on specific country and state",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Must already live within 60 miles of Sacramento — implies no relocation needed, already resident",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of visa sponsorship; contract role with residency requirement suggests no H1B support",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Contract role requiring 10+ years experience and local residency — unlikely to support student visas",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.88,
+        "evidence": "Must be authorized to work in US (implied by residency and contract type) but no citizenship requirement stated",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "c2c",
+        "confidence": 0.90,
+        "evidence": "Contract role with fixed-term employment type and hourly pay — typical C2C arrangement",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits listed in extraction; contract roles often exclude standard benefits",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No mention of career progression, promotion paths, or growth opportunities in job description",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Mentions mentoring team members on best practices — implies mentorship but not formal program",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of promotions, advancement, or career ladder in job posting",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers, lateral moves, or role changes",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career tracks (IC, management, architect) mentioned in job description",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.85,
+        "evidence": "Long list of mandatory skills and 10+ years experience required — strict qualifications",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Focused on data modeling, ETL, and data warehouse implementation — well-defined scope",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Senior role with 10+ years experience — requirements match seniority level appropriately",
+        "source": "inferred"
+      }
+    }
+  }
+}

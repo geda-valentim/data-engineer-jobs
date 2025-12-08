@@ -1,0 +1,289 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 00:13:27",
+    "job_posting_id": "4325948158",
+    "job_title": "Data Engineer",
+    "company_name": "Manchester Digital",
+    "job_location": "Manchester, England, United Kingdom",
+    "pass_name": "pass3",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 4,
+          "confidence": 0.85,
+          "evidence": "Mentions modern stack (Snowflake, dbt, AWS CDK), CI/CD practices (Jenkins), data quality testing, governance policies, and scalable architecture - indicating managed maturity level",
+          "source": "pass1_derived"
+        },
+        "data_maturity_level": {
+          "value": "managed",
+          "confidence": 0.85,
+          "evidence": "Score of 4 corresponds to managed level with strong practices, quality monitoring, and mature tooling",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption",
+            "cicd_practices",
+            "data_quality_testing",
+            "data_governance"
+          ],
+          "confidence": 0.9,
+          "evidence": "Explicit mentions of dbt, Jenkins, automated tests, and data governance policies",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.25,
+          "confidence": 0.8,
+          "evidence": "Focused on data engineering responsibilities (ELT, warehousing, modeling) without conflating with data science, analytics, or DevOps roles",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.3,
+          "confidence": 0.75,
+          "evidence": "Hybrid model with initial full-time office period suggests some intensity, but generous PTO (25-31 days) and no explicit 'fast-paced' language mitigate risk",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "Well-defined responsibilities including ELT pipelines, data modeling, governance, and platform maintenance",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.2,
+          "confidence": 0.8,
+          "evidence": "Low risk - clear role definition, comprehensive benefits, and mature data practices",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "mentioned",
+          "confidence": 0.75,
+          "evidence": "Mentions joining 'a dynamic and experienced Data Engineering team' but doesn't specify reporting manager",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "manager",
+          "confidence": 0.7,
+          "evidence": "No explicit manager title mentioned, but 'experienced team' suggests reporting to Engineering Manager level",
+          "source": "inferred"
+        },
+        "team_growth_velocity": {
+          "value": "steady_growth",
+          "confidence": 0.75,
+          "evidence": "Company is established (FTSE 250) with 1,500+ employees, suggesting stable growth rather than rapid expansion",
+          "source": "inferred"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "medium_6_15",
+            "de_count": "5-8 data engineers",
+            "seniority_mix": "mix of senior and mid-level"
+          },
+          "confidence": 0.75,
+          "evidence": "Mentions 'dynamic and experienced Data Engineering team' within larger 1,500+ employee company",
+          "source": "inferred"
+        },
+        "reporting_structure": {
+          "value": "reports_to_manager",
+          "confidence": 0.7,
+          "evidence": "Implied reporting to Engineering Manager given team size and company structure",
+          "source": "inferred"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "No mention of embedded work with product teams; focus is on building/maintaining centralized data platform",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.75,
+          "confidence": 0.85,
+          "evidence": "Generous PTO (25-31 days), hybrid model, no on-call mentioned, and extensive benefits including wellness programs",
+          "source": "pass1_derived"
+        },
+        "growth_opportunities_score": {
+          "value": 0.8,
+          "confidence": 0.8,
+          "evidence": "Mentions 'Ongoing technical training', 'Professional qualification support', and 'Talent development programmes'",
+          "source": "pass1_derived"
+        },
+        "tech_culture_score": {
+          "value": 0.85,
+          "confidence": 0.85,
+          "evidence": "Modern stack (Snowflake, dbt, AWS), CI/CD practices, testing emphasis, and continuous learning culture",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "tech_blogs",
+            "conference_speaking",
+            "innovation_time"
+          ],
+          "confidence": 0.75,
+          "evidence": "Mentions 'Ongoing technical training' and 'Talent development programmes' suggesting support for learning and innovation",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "ci_cd",
+            "monitoring",
+            "design_docs"
+          ],
+          "confidence": 0.85,
+          "evidence": "Explicit mentions of CI/CD practices (Jenkins), data quality testing, and maintaining data dictionary/model",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Mentions 'recommending and introducing new technology' and using AI tools like CoPilot and Snowflake Cortex",
+          "source": "pass1_derived"
+        },
+        "tech_debt_awareness": {
+          "value": true,
+          "confidence": 0.8,
+          "evidence": "Mentions 'maintaining and continuously enhancing the data platform' and 'ensuring data is compliant' suggesting awareness of quality and maintenance",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "basic_ml",
+          "confidence": 0.75,
+          "evidence": "Mentions AI tools (CoPilot, Snowflake Cortex) but no specific ML pipelines or MLOps infrastructure mentioned",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [
+            "Snowflake Cortex",
+            "CoPilot"
+          ],
+          "confidence": 0.85,
+          "evidence": "Explicitly mentioned in 'Other' section of job description",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "normal",
+          "confidence": 0.8,
+          "evidence": "No explicit urgency language like 'ASAP' or 'immediate start'; established company with structured hiring process",
+          "source": "inferred"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "UK-based role with hybrid model, likely moderate competition from local candidates",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "established_tech",
+          "confidence": 0.9,
+          "evidence": "FTSE 250 company, 1,500+ employees, listed on London Stock Exchange since 2018",
+          "source": "pass1_derived"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.85,
+          "evidence": "Established company with ongoing hiring rather than aggressive expansion or replacement",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "medium_6_15",
+          "confidence": 0.8,
+          "evidence": "Mentions 'dynamic and experienced Data Engineering team' within larger organization",
+          "source": "inferred"
+        },
+        "funding_stage_signals": {
+          "value": "public",
+          "confidence": 0.95,
+          "evidence": "Listed on London Stock Exchange since 2018, FTSE 250 company",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "new_headcount",
+          "confidence": 0.75,
+          "evidence": "Position described as 'exciting opportunity to join' suggesting new role rather than backfill",
+          "source": "inferred"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "modern_tech_stack",
+        "cloud_native",
+        "learning_opportunities",
+        "strong_benefits",
+        "work_life_balance",
+        "established_company"
+      ],
+      "strength_details": [
+        "Strong modern data stack (Snowflake, dbt, AWS CDK) with CI/CD practices",
+        "Excellent benefits package including equity (share awards), generous PTO (25-31 days), and professional development support",
+        "Established FTSE 250 company with stable growth and strong reputation as 'Best Company to Work For'"
+      ],
+      "concern_categories": [
+        "salary_not_disclosed",
+        "no_visa_sponsorship",
+        "relocation_required"
+      ],
+      "concern_details": [
+        "Salary not disclosed - candidate should negotiate based on market rates",
+        "UK work authorization required - no visa sponsorship mentioned",
+        "Hybrid model requires 50% in-office time in Manchester, likely requiring relocation for non-local candidates"
+      ],
+      "best_fit_categories": [
+        "mid_level_engineers",
+        "cloud_specialists",
+        "pipeline_developers",
+        "enterprise_experienced"
+      ],
+      "best_fit_details": [
+        "Mid-level data engineers (3-5 years) with experience in cloud data platforms and ELT pipelines",
+        "Engineers with AWS/Snowflake experience seeking stable enterprise environment with growth opportunities"
+      ],
+      "probe_categories": [
+        "salary_range_details",
+        "career_growth_path",
+        "remote_policy_details",
+        "tech_stack_details"
+      ],
+      "probe_details": [
+        "Ask about specific salary range and equity package details",
+        "Understand career progression opportunities within the data engineering team",
+        "Clarify hybrid work expectations and flexibility for remote work",
+        "Ask about specific implementation details of dbt and Snowflake architecture"
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "domain_expertise",
+        "cloud_specialists"
+      ],
+      "leverage_details": [
+        "Experience with financial services data requirements is valuable given company's domain",
+        "AWS CDK and Snowflake expertise are high-value skills for this role",
+        "Experience with data governance and compliance in regulated industries is a differentiator"
+      ],
+      "overall_assessment": "Strong opportunity for mid-level data engineers seeking to work with modern cloud technologies in a stable, established financial services company. Excellent benefits package, learning opportunities, and well-defined role. Main considerations are undisclosed salary, UK work authorization requirement, and potential relocation to Manchester. The company's FTSE 250 status and reputation as a great place to work provide significant stability and career growth potential.",
+      "recommendation_score": 0.85,
+      "recommendation_confidence": 0.85
+    },
+    "tokens": 13154,
+    "input_tokens": 10545,
+    "output_tokens": 2609,
+    "cost": 0.015763
+  }
+}

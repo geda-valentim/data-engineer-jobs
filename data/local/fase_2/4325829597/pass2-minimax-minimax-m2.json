@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 01:53:14",
+    "job_posting_id": "4325829597",
+    "job_title": "Go Anywhere SFTP Data Engineer",
+    "company_name": "Tata Consultancy Services",
+    "job_location": "Cincinnati, OH",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.75,
+          "evidence": "3-5 years experience requirement with responsibilities like incident management and on-call duties suggest mid-level rather than junior, but lack of explicit 'Senior' in title keeps confidence moderate",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Data Engineer' and core responsibilities focus on data pipelines, ingestion, and processing",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.85,
+          "evidence": "Heavy emphasis on SFTP file transfers, batch data processing, and managed file transfer (MFT) solutions rather than real-time streaming",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.8,
+          "evidence": "No mention of direct reports, team management, or leadership responsibilities - focused on individual technical work and collaboration",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "azure",
+          "confidence": 0.9,
+          "evidence": "Azure Cloud explicitly listed as required skill in must-have section",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [
+            "aws",
+            "gcp"
+          ],
+          "confidence": 0.75,
+          "evidence": "AWS and GCP mentioned as nice-to-have skills in the nice_to_have_hard_skills array",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.85,
+          "evidence": "SFTP file transfers, automated batch transfers, and file monitoring suggest batch processing paradigm rather than streaming",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No specific orchestration tools mentioned - focus is on scripting with Python/Shell for automation rather than formal orchestrators",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No specific data warehouse, lake, or storage systems mentioned - focus is on file transfer mechanisms rather than storage architecture",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.85,
+          "evidence": "Onsite work model specified with Cincinnati, OH location requirement",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "americas",
+          "confidence": 0.8,
+          "evidence": "Cincinnati, OH location suggests EST timezone, and on-call duties would require timezone alignment with US operations",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.85,
+          "evidence": "Onsite position in Cincinnati, OH with no remote work options implies relocation would be required for non-local candidates",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "No visa sponsorship mentioned in job posting, and TCS typically handles visa sponsorship through their internal processes but not explicitly stated",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.75,
+          "evidence": "No mention of student visa support, and 3-5 years experience requirement suggests preference for experienced candidates",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.8,
+          "evidence": "No citizenship requirement mentioned, implying only work authorization in US is needed",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Full-time employment type with salary range suggests W2 employee status rather than contractor arrangement",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits mentioned in job posting - only salary range provided",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No career growth, advancement, or development opportunities mentioned in job description",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No mentorship programs, senior staff collaboration, or learning opportunities mentioned",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No promotion opportunities, advancement paths, or career progression mentioned",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No internal transfers, role rotations, or mobility opportunities mentioned",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No career track information, IC paths, or management paths discussed",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear distinction between must-have skills (GoAnywhere, Azure, SFTP) and nice-to-have skills (AWS, GCP), with specific technical requirements",
+          "source": "combined"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused role specifically on SFTP data engineering with well-defined responsibilities and clear technical scope",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Skills required (3-5 years, SFTP, Azure, scripting) are reasonable and appropriate for mid-level data engineer position",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8736,
+    "input_tokens": 5845,
+    "output_tokens": 2891,
+    "cost": 0.011626999999999998
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 07:34:36",
+    "job_posting_id": "4348603218",
+    "job_title": "(USA) Senior, Data Engineer",
+    "company_name": "VIZIO",
+    "job_location": "Denver, CO",
+    "pass_name": "pass2",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.95,
+          "evidence": "Title includes \"Senior\" and required 5+ years of experience, matching senior level expectations.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.99,
+          "evidence": "Job title is \"Data Engineer\" and responsibilities focus on ETL pipelines, data modeling, and big‑data tools.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.78,
+          "evidence": "Primary responsibilities mention designing and implementing ETL processes, Airflow orchestration, and batch‑oriented tools (Hadoop, Spark).",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.85,
+          "evidence": "No mention of people‑management duties or direct reports; role focuses on technical delivery.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "aws",
+          "confidence": 0.99,
+          "evidence": "Explicit mention of \"AWS cloud services\" and related tools (S3, Redshift, etc.) in the posting.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No other cloud providers are referenced in the job description.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.85,
+          "evidence": "Both batch orchestration (Apache Airflow) and streaming technology (Kafka) are listed.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "airflow_like",
+          "confidence": 0.98,
+          "evidence": "Apache Airflow is explicitly called out as a data pipeline tool.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "lake",
+          "confidence": 0.75,
+          "evidence": "Team is described as a \"Data Lake Engineering Team\" and AWS storage services (e.g., S3) are implied.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.8,
+          "evidence": "Location is fixed to Denver, CO and work model is listed as \"onsite\".",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "americas",
+          "confidence": 0.85,
+          "evidence": "Job is based in Denver, Colorado (Mountain Time), indicating a focus on U.S. time zones.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No relocation assistance or requirement is mentioned; the role is tied to a specific Denver office.",
+          "source": "pass1_derived"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Visa sponsorship is listed as \"not_mentioned\" in the extraction.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No reference to OPT/CPT eligibility; work authorization is implied for U.S. workers.",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.85,
+          "evidence": "No citizenship clause; only work‑authorization is implied for U.S. locations.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Contract type is \"permanent\" with full‑time benefits, indicating a W‑2 employee arrangement.",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "comprehensive",
+          "confidence": 0.9,
+          "evidence": "Benefits list includes medical, vision, dental, 401(k), equity, tuition reimbursement, learning budget, and many additional perks.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.65,
+          "evidence": "The posting mentions a dynamic team and opportunities but provides no specific career ladder or track details.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.6,
+          "evidence": "Collaboration with cross‑functional teams is noted, suggesting informal mentorship, but no formal program is described.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.92,
+          "evidence": "No language about promotion pathways or advancement ladders appears in the posting.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "The description does not reference internal transfers or mobility programs.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.6,
+          "evidence": "No explicit mention of IC, management, specialist, or architect tracks.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.85,
+          "evidence": "A long list of mandatory hard skills with no nice‑to‑have items indicates a stringent requirement set.",
+          "source": "pass1_derived"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "The role is narrowly defined around data engineering tasks (ETL, pipelines, modeling).",
+          "source": "pass1_derived"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Required 5+ years aligns with the senior title and listed skill set; expectations are realistic.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 9470,
+    "input_tokens": 6709,
+    "output_tokens": 2761,
+    "cost": 0.0018346499999999997
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 07:21:25",
+    "job_posting_id": "4325939213",
+    "job_title": "Senior Data Engineer (SQL, Python, Snowflake)",
+    "company_name": "Tata Consultancy Services",
+    "job_location": "Cupertino, CA",
+    "pass_name": "pass3",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 2,
+          "confidence": 0.75,
+          "evidence": "Only Snowflake is mentioned as a modern warehouse; no orchestration (Airflow/dbt), CI/CD, or data quality tools are listed.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "developing",
+          "confidence": 0.75,
+          "evidence": "Score of 2 maps to the \"developing\" maturity level.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption"
+          ],
+          "confidence": 0.7,
+          "evidence": "Snowflake indicates adoption of a cloud data warehouse, but no other modern stack components are referenced.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.1,
+          "confidence": 0.9,
+          "evidence": "Job description is narrowly focused on SQL, Python, pipelines, and Snowflake with no mention of other disciplines (e.g., ML, DevOps).",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.2,
+          "confidence": 0.85,
+          "evidence": "No language about fast‑paced startup, on‑call, or urgent delivery; company is a large consulting firm which typically has standard hours.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.95,
+          "evidence": "Pass2 classifies scope_definition as \"clear\" and the posting lists only data‑engineering responsibilities.",
+          "source": "pass2_inference"
+        },
+        "overall_red_flag_score": {
+          "value": 0.15,
+          "confidence": 0.8,
+          "evidence": "Low scope creep, low overtime risk, but lack of benefits and vague reporting add minor concerns.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "The posting does not specify to whom the Senior Data Engineer reports.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No manager title (e.g., Head of Data, Director) is referenced.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No information about hiring pace or team expansion is provided.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.85,
+          "evidence": "The job posting contains no details about team size or composition.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No reporting line is described.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "No mention of being embedded in product or cross‑functional squads; appears to be a centralized data role.",
+          "source": "pass1_derived"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.6,
+          "confidence": 0.8,
+          "evidence": "No PTO, remote, or on‑call policies are described; typical for large enterprises where balance is average.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.4,
+          "confidence": 0.8,
+          "evidence": "The posting does not mention mentorship, learning budgets, or clear promotion paths.",
+          "source": "pass1_derived"
+        },
+        "tech_culture_score": {
+          "value": 0.45,
+          "confidence": 0.8,
+          "evidence": "Only Snowflake, SQL, and Python are listed; no CI/CD, testing, or observability tools are mentioned.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No explicit signals such as open‑source contributions, conference support, or hackathons are present.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "The description does not reference code review, CI/CD, testing, or monitoring practices.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No language about experimentation, R&D time, or adopting new technologies.",
+          "source": "pass1_derived"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of refactoring, tech‑debt reduction, or modernization initiatives.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.95,
+          "evidence": "The posting contains no reference to machine learning, AI, or related tooling.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No ML/AI tools are listed.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No start‑date or urgency language appears in the posting.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No data on applicant volume, easy‑apply, or location scarcity is provided.",
+          "source": "pass1_derived"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.95,
+          "evidence": "Tata Consultancy Services is a global, multi‑billion‑dollar consulting and technology services firm.",
+          "source": "pass1_derived"
+        },
+        "hiring_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No indication of aggressive or steady hiring cadence.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "Team size is not disclosed in the job description.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "As an established public corporation, traditional startup funding stages are not applicable.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "The posting does not state whether this is a new headcount, backfill, or expansion.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "transparent_salary",
+        "modern_tech_stack",
+        "data_focused_role",
+        "established_company"
+      ],
+      "strength_details": [
+        "Salary range is disclosed ($90k‑$145k per year).",
+        "Role centers on Snowflake, a modern cloud data warehouse.",
+        "Focused data‑engineering responsibilities (SQL, Python, pipelines).",
+        "Position is with Tata Consultancy Services, a large, stable enterprise."
+      ],
+      "concern_categories": [
+        "below_market_pay",
+        "no_visa_sponsorship",
+        "unclear_reporting"
+      ],
+      "concern_details": [
+        "Compensation may be low for senior DEs in the Bay Area market.",
+        "Visa sponsorship is not mentioned, potentially limiting non‑US candidates.",
+        "Reporting line and manager title are not specified."
+      ],
+      "best_fit_categories": [
+        "senior_data_engineers",
+        "pipeline_developers",
+        "enterprise_experienced"
+      ],
+      "best_fit_details": [
+        "Senior DEs with 8+ years of experience in SQL, Python, and Snowflake.",
+        "Engineers who prefer a stable, enterprise environment over a fast‑moving startup.",
+        "Candidates comfortable with a focused, non‑managerial individual contributor role."
+      ],
+      "probe_categories": [
+        "salary_range_details",
+        "reporting_structure",
+        "career_growth_path",
+        "work_hour_expectations",
+        "remote_policy_details"
+      ],
+      "probe_details": [
+        "Can you confirm the exact base salary and any bonus or equity components?",
+        "Who will be the direct manager and what is the reporting hierarchy?",
+        "What are the typical promotion criteria and career progression for DEs?",
+        "What are the expected weekly work hours and is overtime common?",
+        "Is any remote or hybrid work allowed, or is on‑site attendance required?"
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "rare_skill_match"
+      ],
+      "leverage_details": [
+        "Your 8+ years of Snowflake and pipeline experience aligns directly with the core requirements.",
+        "Deep expertise in Snowflake is relatively scarce and highly valued for this role."
+      ],
+      "overall_assessment": "The role offers a clear, focused data‑engineering scope with transparent compensation at a large, stable enterprise. Strengths include a modern warehouse stack and a well‑defined job description. Drawbacks are potentially below‑market pay for the region, no visa sponsorship, and lack of detail on reporting and growth paths.",
+      "recommendation_score": 0.65,
+      "recommendation_confidence": 0.8
+    },
+    "tokens": 12745,
+    "input_tokens": 9033,
+    "output_tokens": 3712,
+    "cost": 0.00246855
+  }
+}

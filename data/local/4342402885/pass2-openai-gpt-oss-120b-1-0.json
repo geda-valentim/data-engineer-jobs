@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 23:24:30",
+    "job_posting_id": "4342402885",
+    "job_title": "BI - SR Data Engineer",
+    "company_name": "IT4W",
+    "job_location": "Arkansas, United States",
+    "pass_name": "pass2",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.95,
+          "evidence": "Title includes \"SR\" (Senior) Data Engineer; no years specified but senior title implies senior level.",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Job title and responsibilities focus on ETL pipelines, data architecture, and warehouse/lakehouse design.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.85,
+          "evidence": "Responsibilities emphasize designing ETL processes, lakehouse/warehouse architecture, and using Azure Data Factory – typical batch data‑engineering work.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.75,
+          "evidence": "Senior role with autonomy and responsibility for architecture, but no mention of direct reports or people‑management duties.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "azure",
+          "confidence": 0.98,
+          "evidence": "Must‑have skills list includes Microsoft Fabric, Synapse Analytics, Azure Data Factory – all Azure services.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No other cloud providers are mentioned in the posting or extraction.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.9,
+          "evidence": "Focus on ETL development, lakehouse/warehouse design, and Azure Data Factory – all batch‑oriented tools.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "Extraction does not list any orchestrator (e.g., Airflow, Luigi, dbt, etc.).",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.8,
+          "evidence": "Job description mentions both Lakehouse and Data Warehouse solutions, indicating use of both lake and warehouse storage patterns.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.95,
+          "evidence": "ext_geo_restriction_type = \"us_only\" with allowed country US and state restriction AR (Arkansas).",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "americas",
+          "confidence": 0.9,
+          "evidence": "Location is in the United States (Arkansas), placing the role in the Americas time zones.",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Posting offers hybrid or remote work and does not mention any relocation requirement.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "ext_visa_sponsorship_stated = \"not_mentioned\"; no sponsorship language appears in the posting.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of OPT/CPT or student visa eligibility; work authorization is implied for US candidates.",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.85,
+          "evidence": "No explicit citizenship requirement; only US‑only location implies need for legal work authorization in the US.",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Contract type is \"permanent\" with full‑time employee benefits listed, indicating a W‑2 employment model.",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "standard",
+          "confidence": 0.75,
+          "evidence": "Benefits include health insurance, vacation days, birthday off, periodic day‑offs, internet reimbursement, food vouchers, extended paternity leave, and technical training – a solid standard package but no equity or premium perks.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.75,
+          "evidence": "Posting mentions \"ambiente colaborativo, con foco en tu crecimiento profesional\" but provides no concrete career ladder or track details.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.65,
+          "evidence": "Collaborative environment and interaction with business areas suggest informal mentorship, but no formal program is described.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No language about promotions, ladders, or moving to higher titles appears in the posting.",
+          "source": "inferred"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "The description does not reference internal transfers or mobility opportunities.",
+          "source": "inferred"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No explicit mention of IC, management, specialist, or architect tracks.",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.8,
+          "evidence": "Clear must‑have hard and soft skills list, with a short nice‑to‑have list, indicating a balanced but not overly strict set of requirements.",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "Job description is focused on data‑engineering responsibilities (ETL, architecture, lakehouse/warehouse) without mixing other roles.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Skill set (Azure Fabric, Synapse, ADF, SQL, Python, DAX) aligns with a senior data‑engineer role; no unrealistic senior‑level expectations for a junior candidate.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 9400,
+    "input_tokens": 6350,
+    "output_tokens": 3050,
+    "cost": 0.0018674999999999998
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 00:11:05",
+    "job_posting_id": "4325829597",
+    "job_title": "Go Anywhere SFTP Data Engineer",
+    "company_name": "Tata Consultancy Services",
+    "job_location": "Cincinnati, OH",
+    "pass_name": "pass2",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.85,
+          "evidence": "Title does not include seniority level, but required experience is 3-5 years which aligns with mid-level roles",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title explicitly mentions 'Data Engineer' and core responsibilities focus on data pipelines and ingestion",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.75,
+          "evidence": "Focus on SFTP, data transfers, and scheduled tasks like monthly SOC controls and software updates suggests batch ETL processing",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.8,
+          "evidence": "Responsibilities emphasize individual tasks (scripting, troubleshooting, monitoring) with no leadership or mentoring duties mentioned",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "azure",
+          "confidence": 0.9,
+          "evidence": "Azure Cloud is listed as a must-have skill, while AWS and GCP are only mentioned as nice-to-have",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [
+            "aws",
+            "gcp"
+          ],
+          "confidence": 0.9,
+          "evidence": "AWS and GCP are mentioned as nice-to-have skills under cloud platforms",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.8,
+          "evidence": "SFTP data transfers and monthly SOC controls indicate batch processing focus, no streaming tools mentioned",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No orchestration tools like Airflow, Luigi, or cloud-native orchestrators explicitly mentioned",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of data warehouse, lake, or lakehouse technologies beyond SFTP-related storage",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.8,
+          "evidence": "Location specified as Cincinnati, OH with no mention of remote work flexibility beyond potential hybrid",
+          "source": "inferred"
+        },
+        "timezone_focus": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No timezone requirements or team distribution details provided",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No relocation package or requirement mentioned, location specified as Cincinnati, OH without further context",
+          "source": "pass1_derived"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of visa sponsorship in the job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No explicit mention of OPT/CPT or student visa support, and no welcoming tone for students",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No citizenship or work authorization requirements explicitly stated",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Employment type stated as full-time permanent, which typically aligns with W2 employment",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits discussed in the job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No mention of career growth paths or advancement opportunities",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No signals of mentorship or working with senior engineers beyond typical collaboration",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No explicit mention of promotion or advancement paths",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal mobility or role changes in the job posting",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No career tracks explicitly or implicitly mentioned",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.8,
+          "evidence": "Most skills are listed as must-have with strict qualifiers, and only a few nice-to-have skills mentioned",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Job description is focused on SFTP data engineering with well-defined responsibilities",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.75,
+          "evidence": "Required 3-5 years of experience aligns well with mid-level data engineering roles, no unrealistic skill combinations",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7692,
+    "input_tokens": 6077,
+    "output_tokens": 1615,
+    "cost": 0.009307
+  }
+}

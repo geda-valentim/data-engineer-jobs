@@ -1,0 +1,256 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 00:20:07",
+    "job_posting_id": "4326005551",
+    "job_title": "Data Engineering USIS",
+    "company_name": "Equifax",
+    "job_location": "Las Condes, Santiago Metropolitan Region, Chile",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.85,
+          "evidence": "Equifax is an established enterprise in the financial data sector, with explicit mentions of data quality processes, CI/CD, and Git. Intermediate experience with GCP and cloud computing suggests a defined approach to data engineering practices.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.85,
+          "evidence": "Matches the data_maturity_score of 3, indicating documented processes, modern tools adoption, and some governance.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "data_quality_testing",
+            "ci_cd_practices",
+            "cloud_native"
+          ],
+          "confidence": 0.9,
+          "evidence": "Explicit mentions of data quality rules and processes, Git, and CI/CD integration. GCP is highlighted as a key cloud platform.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.2,
+          "confidence": 0.95,
+          "evidence": "Role is clearly focused on data engineering tasks such as building data pipelines, data quality, and mentoring junior engineers without conflating responsibilities with unrelated areas like ML, DevOps, or backend/frontend development.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.3,
+          "confidence": 0.75,
+          "evidence": "No explicit mentions of aggressive timelines, immediate start, or fast-paced environments. However, enterprise roles can sometimes involve unexpected deadlines or workload spikes.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.95,
+          "evidence": "Job description outlines specific responsibilities and required skills, focusing solely on data engineering tasks.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.25,
+          "confidence": 0.8,
+          "evidence": "Low scope creep and moderate overtime risk, but lack of explicit work-life balance or PTO signals introduces some uncertainty.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit mention of reporting structure or manager title in the job posting.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "Job posting does not specify the level of the manager or reporting line.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit signals about team growth velocity or hiring plans beyond the role itself.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "5+ data engineers",
+            "seniority_mix": "senior and junior"
+          },
+          "confidence": 0.8,
+          "evidence": "Mentions 'equipo regional de Chile y US' and responsibilities for mentoring junior data engineers, implying a mix of seniority levels. Team size is inferred from the mention of 5+ years of experience and junior engineers.",
+          "source": "inferred"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit mention of reporting structure in the job posting.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "Role involves working with a regional team covering Chile and US, suggesting cross-functional collaboration with stakeholders across different geographies and business units.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.5,
+          "confidence": 0.6,
+          "evidence": "No explicit mentions of work-life balance, PTO, or on-call expectations. However, the lack of negative signals (e.g., 'fast-paced', 'immediate start') suggests moderate balance.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.7,
+          "confidence": 0.8,
+          "evidence": "Mentions mentoring junior engineers and staying updated with the latest trends in GCP, which implies growth opportunities. No explicit learning budget or career paths are mentioned, but the enterprise context suggests structured development.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.75,
+          "confidence": 0.8,
+          "evidence": "Explicit focus on modern data engineering practices (CI/CD, Git, GCP), data quality, and staying updated with trends. No mention of innovation time or tech debt management, but the enterprise setting likely values these.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "conference_speaking"
+          ],
+          "confidence": 0.65,
+          "evidence": "Mentions staying updated with latest trends in GCP, which could imply support for conference attendance or speaking. No explicit signals for open source, tech blogs, or innovation time.",
+          "source": "inferred"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "code_review",
+            "ci_cd"
+          ],
+          "confidence": 0.9,
+          "evidence": "Explicit mentions of Git and CI/CD in Pass 1, and responsibilities for reviewing implementations by junior engineers imply code review practices.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Mentions staying updated with latest trends in GCP and proposing new solutions, but no explicit signals for experimentation or R&D time.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.6,
+          "evidence": "No explicit mentions of tech debt management, refactoring, or code quality improvements beyond general data quality processes.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.95,
+          "evidence": "No mention of ML/AI tools, frameworks, or responsibilities in the job posting.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No ML/AI tools or frameworks explicitly mentioned or inferred from the job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of hiring urgency or start date expectations in the job posting.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Role is located in Santiago, Chile, which may have lower competition than major US tech hubs. However, the requirement for regional collaboration and intermediate/advanced English could narrow the candidate pool.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.95,
+          "evidence": "Equifax is a well-known, established enterprise in the financial data and credit reporting industry with a global presence.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.65,
+          "evidence": "Mentions a regional team and responsibilities for mentoring junior engineers, implying steady hiring to support team growth. No explicit signals for aggressive expansion or backfill.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "medium_6_15",
+          "confidence": 0.8,
+          "evidence": "Inferred from the mention of a regional team and responsibilities for mentoring junior engineers, suggesting a medium-sized team.",
+          "source": "inferred"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit mention of funding stage or profitability in the job posting.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "team_expansion",
+          "confidence": 0.8,
+          "evidence": "Mentions joining a regional team and mentoring junior engineers, implying the role is part of an expansion rather than a backfill or new function.",
+          "source": "inferred"
+        }
+      }
+    },
+    "summary": {
+      "strengths": [
+        "Clear and focused data engineering role with a strong emphasis on data quality and pipeline development",
+        "Opportunity to mentor junior engineers, signaling leadership and growth potential",
+        "Modern cloud platform focus (GCP) with intermediate experience required, aligning with enterprise adoption trends",
+        "Regional collaboration scope, offering cross-functional exposure and experience in a global team",
+        "Enterprise context provides stability and structured processes, likely with established data governance"
+      ],
+      "concerns": [
+        "No explicit mention of work-life balance, PTO, or overtime expectations, which could be a risk in enterprise environments",
+        "Lack of transparency around compensation, benefits, and equity may make it harder to assess total rewards",
+        "No signals about visa sponsorship or work authorization flexibility, which could be a barrier for non-local candidates"
+      ],
+      "best_fit_for": [
+        "Senior data engineers with 5+ years of experience in building and maintaining data pipelines, particularly in GCP",
+        "Engineers with a passion for data quality and mentoring junior team members, seeking a leadership path without direct people management",
+        "Candidates looking for regional or cross-functional roles within an enterprise environment, with intermediate/advanced English skills"
+      ],
+      "red_flags_to_probe": [
+        "Ask about the team's work-life balance culture and expectations for overtime or on-call duties",
+        "Clarify the reporting structure and who the direct manager for this role is",
+        "Inquire about compensation structure, benefits, and whether cloud certifications are compensated or encouraged",
+        "Understand the team's approach to tech debt management and modernization efforts",
+        "Ask about the team's growth plans and how this role fits into future expansion"
+      ],
+      "negotiation_leverage": [
+        "Experience with GCP and cloud computing, especially if certified, could strengthen your position",
+        "Regional collaboration and mentoring skills are explicitly valued in the job posting",
+        "Data quality expertise is a differentiator for this role"
+      ],
+      "overall_assessment": "This is a well-defined senior data engineering role within Equifax, an established enterprise, focusing on data quality and pipeline development in GCP. The position offers leadership opportunities through mentoring and cross-regional collaboration but lacks transparency on compensation and work-life balance. Candidates should probe these areas during interviews.",
+      "recommendation_score": 0.75,
+      "recommendation_confidence": 0.85
+    },
+    "tokens": 12189,
+    "input_tokens": 9454,
+    "output_tokens": 2735,
+    "cost": 0.014924
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 00:18:17",
+    "job_posting_id": "4342372882",
+    "job_title": "Data Engineer",
+    "company_name": "Wassching",
+    "job_location": "Amsterdam, North Holland, Netherlands",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.85,
+          "evidence": "3-5+ years experience required, title is 'Data Engineer' without senior/staff designation, responsibilities align with mid-level data engineering roles",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Job title is explicitly 'Data Engineer' and core responsibilities focus on ETL/ELT, data modeling, and pipeline building",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.82,
+          "evidence": "Primary focus on ETL/ELT, data extraction from ERP systems, and process mining platforms; Kafka mentioned as nice-to-have, not core requirement",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.9,
+          "evidence": "No mention of managing people or technical leadership responsibilities; focus is on individual execution and collaboration with consultants",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "multi",
+          "confidence": 0.75,
+          "evidence": "Databricks and Snowflake mentioned as platforms, which can run on multiple clouds; no specific cloud provider explicitly stated",
+          "source": "inferred"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No specific cloud providers mentioned in the job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.8,
+          "evidence": "Focus on ETL/ELT, data extraction from legacy systems, and process mining; streaming technologies like Kafka are listed as nice-to-have, not core",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No orchestration tools (Airflow, Dagster, etc.) mentioned in the job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.75,
+          "evidence": "Snowflake (warehouse) and Databricks (lakehouse) mentioned, suggesting a combination of storage approaches",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.88,
+          "evidence": "Location specified as Amsterdam, Netherlands; hybrid/remote flexibility mentioned but likely within the same country given the context",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "europe",
+          "confidence": 0.92,
+          "evidence": "Based in Amsterdam, Netherlands, which is in the Europe timezone; no mention of global or multi-timezone requirements",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Hybrid/remote flexibility mentioned, suggesting relocation is not required; likely expects candidates to be based in or near Amsterdam",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of visa sponsorship; location is in the Netherlands, not the US, so H1B is not applicable",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "OPT/CPT are US-specific visas; job is based in the Netherlands, making these irrelevant",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.85,
+          "evidence": "No citizenship requirement mentioned; likely requires authorization to work in the Netherlands, as is standard for EU-based roles",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Full-time permanent position mentioned; benefits like development opportunities and ownership suggest employee status, not contractor",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "standard",
+          "confidence": 0.75,
+          "evidence": "Mentions competitive compensation, development opportunities, and hybrid/remote flexibility; lacks premium benefits like equity or learning/conference budgets",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Mentions 'plenty of development opportunities' and 'ownership from day one' but no specific career tracks or promotion paths",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Mentions working with consultants and stakeholders, suggesting collaboration with experienced team members, but no formal mentorship program",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of promotions, advancement, or career progression paths",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal transfers, lateral moves, or exploring different roles within the company",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.8,
+          "evidence": "No specific career tracks (IC, management, specialist, architect) mentioned in the job posting",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear distinction between must-haves (SQL, ETL/ELT, Databricks, Snowflake, SAP, Python) and nice-to-haves (PQL, Kafka, ITSM systems), suggesting balanced requirements",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused on data engineering for process intelligence, with well-defined responsibilities around data acquisition, transformation, platform ownership, and collaboration",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Skills required (SQL, ETL/ELT, Python, Databricks, Snowflake, SAP) are reasonable for a mid-level data engineer with 3-5+ years of experience",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8342,
+    "input_tokens": 6625,
+    "output_tokens": 1717,
+    "cost": 0.010059
+  }
+}

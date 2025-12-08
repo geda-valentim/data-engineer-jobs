@@ -1,0 +1,188 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me analyze the job posting text:
+
+Title: Sr. Data Engineer(hands on Palantir exp.)
+Company: Pacer Group
+Location: Atlanta, GA
+
+Description:
+Position: Sr. Data Engineer(hands on Palantir exp.) Location: Atlanta, GA Looking for locals only for onsite and independent candidate Technical Expertise • 8 - 10 years of strong Data Engineering experience •Hands-on experience in Palantir Foundry to design and implement scalable data solutions. •Experience with Hadoop-based technologies including, but not limited to: Hive, PySpark, etc. Show more Show less
+
+Let me go through each section systematically:
+
+1. **compensation**: No salary information is mentioned, so all compensation fields should be null/false.
+
+2. **work_authorization**: No mention of visa sponsorship, work authorization, or citizenship requirements. No security clearance mentioned. So:
+   - visa_sponsorship_stated: "not_mentioned"
+   - work_auth_text: null
+   - citizenship_text: null
+   - security_clearance_stated: "not_mentioned"
+
+3. **work_model**: 
+   - Location is Atlanta, GA
+   - Says "Looking for locals only for onsite" - this indicates onsite work model
+   - employment_type: Not explicitly mentioned, but this appears to be a full-time position based on context
+   - work_model_stated: "onsite"
+   - location_restriction_text: "Looking for locals only for onsite"
+   - employment_type_stated: "full_time"
+
+4. **contract_details**: No mention of contract type, duration, etc. This appears to be a permanent position.
+   - contract_type: "permanent" (inferred from full-time position)
+   - All other contract fields: null
+
+5. **contractor_rates**: Not applicable as this appears to be a permanent employee position.
+   - pay_type: "not_mentioned"
+   - All other contractor rate fields: null
+
+6. **skills_classified**:
+   - must_have_hard_skills: Based on the description, I need to identify skills with strong qualifiers:
+     - "8 - 10 years of strong Data Engineering experience" - "strong" is a strong qualifier
+     - "Hands-on experience in Palantir Foundry" - "hands-on" is a strong qualifier
+     - "Experience with Hadoop-based technologies" - this is mentioned without strong qualifier, but it's in the technical expertise section
+     - "Hive, PySpark" - these are specific technologies mentioned
+   - nice_to_have_hard_skills: None explicitly mentioned with weak qualifiers
+   - must_have_soft_skills: None explicitly mentioned
+   - nice_to_have_soft_skills: None explicitly mentioned
+   - certifications_mentioned: None mentioned
+   - years_experience_min: 8, years_experience_max: 10, years_experience_text: "8 - 10 years"
+   - education_level: Not mentioned
+   - education_area: Not mentioned
+   - education_requirement: "not_mentioned"
+   - education_text_raw: null
+   - llm_genai_mentioned: false (no mention of LLMs, GenAI, etc.)
+   - feature_store_mentioned: false (no mention of feature stores)
+
+7. **geographic_restrictions**:
+   - geo_restriction_type: "us_only" (based on "locals only" and Atlanta, GA location)
+   - allowed_countries: ["US"]
+   - excluded_countries: null
+   - us_state_restrictions: null
+   - residency_requirement: "must_be_resident" (based on "locals only")
+
+8. **benefits_structured**: No benefits mentioned
+   - benefits_mentioned: []
+   - equity_mentioned: false
+   - learning_budget_mentioned: false
+   - conference_budget_mentioned: false
+   - hardware_choice_mentioned: false
+   - pto_policy: "not_mentioned"
+
+9. **context**:
+   - team_info_text: null
+   - company_description_text: null
+
+Let me count the fields and check completeness:
+- Total fields in the schema: Let me count... compensation (10), work_authorization (4), work_model (3), contract_details (7), contractor_rates (6), skills_classified (15), geographic_restrictions (5), benefits_structured (6), context (2) = 58 fields
+- Fields with actual data: Let me count... compensation (0), work_authorization (1), work_model (3), contract_details (1), contractor_rates (1), skills_classified (4), geographic_restrictions (2), benefits_structured (0), context (0) = 12 fields
+- Fields that are null: 58 - 12 = 46 fields
+
+Wait, let me double-check the skills classification. Looking at the job posting again:
+
+"Technical Expertise • 8 - 10 years of strong Data Engineering experience •Hands-on experience in Palantir Foundry to design and implement scalable data solutions. •Experience with Hadoop-based technologies including, but not limited to: Hive, PySpark, etc."
+
+For skills classification:
+- "8 - 10 years of strong Data Engineering experience" - "strong" is a strong qualifier, so "Data Engineering" should be in must_have_hard_skills
+- "Hands-on experience in Palantir Foundry" - "hands-on" is a strong qualifier, so "Palantir Foundry" should be in must_have_hard_skills
+- "Experience with Hadoop-based technologies" - this is in the technical expertise section but doesn't have a strong qualifier. However, it's listed as part of the core technical requirements, so I should include it.
+- "Hive, PySpark" - these are specific technologies mentioned, should be in must_have_hard_skills
+
+Actually, let me reconsider the Hadoop-based technologies. The text says "Experience with Hadoop-based technologies including, but not limited to: Hive, PySpark, etc." This seems to be part of the core technical requirements, so these should be in must_have_hard_skills.
+
+Let me also check if there are any soft skills mentioned. Looking at the text again, I don't see any explicit soft skills mentioned like communication, leadership, etc.
+
+For the geographic restrictions, the text says "Looking for locals only for onsite" which clearly indicates they want local candidates only, so this is a US-only restriction with residency requirement.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Looking for locals only for onsite",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Data Engineering",
+        "Palantir Foundry",
+        "Hadoop-based technologies",
+        "Hive",
+        "PySpark"
+      ],
+      "nice_to_have_hard_skills": [],
+      "must_have_soft_skills": [],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 8,
+      "years_experience_max": 10,
+      "years_experience_text": "8 - 10 years",
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "us_only",
+      "allowed_countries": ["US"],
+      "excluded_countries": null,
+      "us_state_restrictions": null,
+      "residency_requirement": "must_be_resident"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": null,
+      "company_description_text": null
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 12,
+    "fields_null": 46
+  }
+}
+```

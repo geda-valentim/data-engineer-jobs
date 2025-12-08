@@ -1,0 +1,283 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 02:38:32",
+    "job_posting_id": "4342323073",
+    "job_title": "Software & Data Engineer - Palantir Foundry",
+    "company_name": "Ursa Major",
+    "job_location": "Berthoud, CO",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.8,
+          "evidence": "Role mentions Palantir Foundry (a modern data platform) and responsibilities include data pipelines, workflows, and integrations, suggesting structured data practices. However, no explicit mention of CI/CD, testing, or governance tools beyond Foundry's capabilities.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.8,
+          "evidence": "Matches the data_maturity_score of 3, indicating documented processes and some governance within Foundry.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption"
+          ],
+          "confidence": 0.85,
+          "evidence": "Palantir Foundry is a modern data platform, and the role involves designing pipelines and workflows within it.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.5,
+          "confidence": 0.75,
+          "evidence": "Role combines software engineering and data engineering responsibilities, which may indicate moderate scope creep. However, the focus remains primarily on Foundry applications and data pipelines.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.4,
+          "confidence": 0.7,
+          "evidence": "Startup environment with phrases like 'fast-paced' and 'urgent national security demands' suggest potential time pressure. However, unlimited PTO and exempt status may mitigate this risk.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "multi_role",
+          "confidence": 0.8,
+          "evidence": "Role explicitly combines software engineering and data engineering tasks, which may blur responsibilities for some candidates.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.45,
+          "confidence": 0.78,
+          "evidence": "Moderate scope creep and potential overtime risk are offset by unlimited PTO, equity grants, and a well-funded startup context.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "vague",
+          "confidence": 0.65,
+          "evidence": "Job posting mentions working with a Product Owner and other Software & Data Engineers but does not specify a direct reporting line or manager title.",
+          "source": "inferred"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.55,
+          "evidence": "No explicit mention of manager title or level, though the role is part of an internal development team which may imply a manager or tech lead.",
+          "source": "inferred"
+        },
+        "team_growth_velocity": {
+          "value": "steady_growth",
+          "confidence": 0.75,
+          "evidence": "Job posting mentions 'growing our internal software capabilities' and team expansion signals, but no explicit rapid scaling language.",
+          "source": "inferred"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "small_2_5",
+            "de_count": "2-5 data engineers",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.8,
+          "evidence": "Pass 1 mentions working with 'other Software & Data Engineers', implying a small team of 2-5 DEs within the Foundry development group.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit reporting structure mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.75,
+          "evidence": "Job posting mentions collaboration with Product Owners and stakeholders, implying cross-functional embedding.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.65,
+          "confidence": 0.75,
+          "evidence": "Unlimited PTO is a strong positive signal, but startup pace and urgency in the aerospace/defense sector may offset this.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.7,
+          "confidence": 0.7,
+          "evidence": "Team is expanding, and role involves shaping business intelligence applications, suggesting growth opportunities. No explicit learning budget or mentorship programs mentioned.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.6,
+          "confidence": 0.75,
+          "evidence": "Modern tooling (Palantir Foundry) is a positive signal, but no explicit mentions of CI/CD, testing, or broader engineering practices beyond Foundry.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No explicit signals of open source contributions, tech blogs, conference speaking, or innovation time mentioned in the job posting.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.85,
+          "evidence": "No explicit development practices (code review, pair programming, TDD, etc.) are mentioned beyond generic agile-inspired methodologies.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "medium",
+          "confidence": 0.65,
+          "evidence": "Job posting mentions 'revolutionize aerospace' and 'accelerate design/build/test processes', indicating some innovation focus, but no explicit R&D or experimentation culture.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "No explicit mention of tech debt management, refactoring, or code quality improvement in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.95,
+          "evidence": "No mention of ML/AI tools, frameworks, or responsibilities beyond generic data engineering tasks.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No ML/AI tools explicitly mentioned or inferred from the job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "asap",
+          "confidence": 0.85,
+          "evidence": "Job posting states 'This position will remain open until filled or adjusted based on the volume of applicants', implying urgency to hire quickly.",
+          "source": "inferred"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Location is Berthoud, CO (less competitive than major tech hubs), but Palantir Foundry expertise is niche and may attract a focused candidate pool. No application volume data provided.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "growth_stage",
+          "confidence": 0.75,
+          "evidence": "Company description mentions rapid expansion and revolutionizing aerospace/defense, implying growth stage. Team size signals (small_2_5) suggest it may still be early but well-funded.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.8,
+          "evidence": "Job posting mentions expanding internal software capabilities and a small team, indicating steady hiring rather than aggressive scaling.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "small_2_5",
+          "confidence": 0.8,
+          "evidence": "Pass 1 mentions working with 'other Software & Data Engineers', implying a small team of 2-5 engineers.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of funding stage in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "team_expansion",
+          "confidence": 0.85,
+          "evidence": "Job posting explicitly states the company is 'growing our internal software capabilities', indicating team expansion.",
+          "source": "explicit"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "equity_offered",
+        "strong_benefits",
+        "domain_expertise",
+        "team_expansion"
+      ],
+      "strength_details": [
+        "Comprehensive benefits package including unlimited PTO, medical/dental/vision insurance, and equity grants in the company.",
+        "Unique opportunity to work in aerospace/defense, a specialized and high-impact domain with national security implications.",
+        "Role is part of a team expansion, offering potential for career growth and shaping the company's data capabilities."
+      ],
+      "concern_categories": [
+        "scope_creep_risk",
+        "citizenship_required",
+        "salary_below_market",
+        "vague_reporting_structure"
+      ],
+      "concern_details": [
+        "Combined software and data engineering responsibilities may lead to scope creep and unclear priorities.",
+        "US citizenship or permanent residency is strictly required, limiting candidate pool and excluding visa sponsorship.",
+        "Base salary range ($90-115k) is below market for data engineering roles, especially in aerospace/defense where higher compensation is typical.",
+        "Reporting structure is vague, with no clear mention of manager title or level, which could impact career development visibility."
+      ],
+      "best_fit_categories": [
+        "data_generalists",
+        "mid_level_engineers",
+        "startup_enthusiasts",
+        "domain_expertise"
+      ],
+      "best_fit_details": [
+        "Mid-level engineers with 1-5 years of software development and 1+ years of data engineering experience, comfortable with broad responsibilities.",
+        "Data generalists who enjoy working with modern platforms like Palantir Foundry and have experience in manufacturing, industrial systems, or IoT data.",
+        "Candidates passionate about aerospace/defense and startups, seeking a role with mission-driven impact and growth potential."
+      ],
+      "probe_categories": [
+        "role_scope_boundaries",
+        "work_hour_expectations",
+        "remote_policy_details",
+        "career_growth_path",
+        "tech_stack_details"
+      ],
+      "probe_details": [
+        "Clarify the boundaries between software engineering and data engineering tasks to ensure alignment with your career goals.",
+        "Ask about actual work hours, sprint cadence, and deadline pressures, especially given the startup environment and urgency signals.",
+        "Probe remote work policies—does 'Berthoud, CO' imply on-site work, hybrid, or is remote flexibility possible for this role?",
+        "Understand career growth paths: Are there clear IC or leadership tracks, and how does the company support promotions?",
+        "Inquire about the broader tech stack: What cloud provider(s) and additional tools (e.g., CI/CD, monitoring) are used alongside Palantir Foundry?"
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "domain_expertise"
+      ],
+      "leverage_details": [
+        "Hands-on experience with Palantir Foundry is a rare and exact match for the role's requirements, providing strong negotiation leverage.",
+        "Domain expertise in manufacturing, industrial systems, or IoT data could be a differentiator, especially in aerospace/defense."
+      ],
+      "overall_assessment": "This role offers a unique opportunity for mid-level engineers with Palantir Foundry experience to contribute to a mission-driven aerospace/defense startup. The benefits package is strong, and the company is expanding its data capabilities, providing growth potential. However, candidates should be aware of below-market salary expectations, strict citizenship requirements, and potential scope creep due to the combined software and data engineering responsibilities.",
+      "recommendation_score": {
+        "value": 0.65,
+        "confidence": 0.8,
+        "evidence": "Balanced strengths and concerns, with niche appeal for Foundry experts and domain enthusiasts but trade-offs in salary and citizenship requirements."
+      }
+    },
+    "tokens": 13554,
+    "input_tokens": 10568,
+    "output_tokens": 2986,
+    "cost": 0.01654
+  }
+}

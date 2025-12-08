@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.65,
+        "evidence": "Title is 'Data Engineer' without explicit seniority level, and responsibilities suggest a role that is not entry-level but also not heavily leadership-focused.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title explicitly states 'Data Engineer' and responsibilities focus on data infrastructure, pipelines, and warehousing.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.85,
+        "evidence": "Core focus on developing Data Warehousing solutions and mentions of Data Warehouse/Kimball methodology.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.75,
+        "evidence": "Responsibilities emphasize individual contributions like building pipelines and data modeling, with no explicit mention of leadership or direct reports.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "aws",
+        "confidence": 0.95,
+        "evidence": "AWS cloud infrastructure explicitly mentioned, including AWS CDK.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud providers mentioned beyond AWS.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.70,
+        "evidence": "Mentions automating ELT pipelines (batch) and references 'cutting-edge technology' which may imply real-time components, though not explicitly stated.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "dbt_core",
+        "confidence": 0.80,
+        "evidence": "DBT explicitly mentioned as a data transformation technology, and no other orchestrators like Airflow or Spark-native tools are highlighted.",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.80,
+        "evidence": "Mentions Snowflake, BigQuery, and Redshift (warehouse) alongside general data platform and provisioning from various sources (potential lake components).",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.75,
+        "evidence": "Hybrid work model with initial full-time office requirement and headquarters in Manchester, suggesting regional proximity.",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.85,
+        "evidence": "Location restricted to UK and hybrid working model implies alignment with UK working hours/timezones.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Hybrid working model mentioned with no explicit relocation requirement or package.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of H1B sponsorship in Pass 1 results or job posting.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Job posting restricts location to UK, implying work authorization in UK is required, not OPT/CPT.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit mention of citizenship or work authorization requirements beyond UK location restriction.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Employment type is full-time and permanent, but no explicit contract type (W2/1099) mentioned for UK context.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.90,
+        "evidence": "Extensive benefits listed including equity (share awards), professional qualification support, talent development programs, hybrid working, and multiple healthcare/wellness schemes.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Mentions 'ongoing technical training', 'talent development programmes', and 'peer recognition scheme', indicating growth opportunities but no explicit career tracks.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions working in a 'dynamic and experienced Data Engineering team', suggesting opportunities to learn from senior colleagues.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion paths or advancement in the job posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No discussion of internal mobility or role changes in the job posting.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.65,
+        "evidence": "Mentions 'ongoing technical training' and 'talent development programmes', which align with individual contributor growth but no explicit tracks for management or other roles.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "Long list of 'must have' hard and soft skills with minimal 'nice to have' skills, indicating strict requirements.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Job description and responsibilities are focused on data engineering tasks and solutions.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": true,
+        "confidence": 0.70,
+        "evidence": "Requirements include a broad and advanced skill set (e.g., AWS CDK, multiple data warehousing technologies) typically expected for more senior roles, but seniority level is inferred as mid.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2025-12-07 07:18:16",
+    "timestamp": "2025-12-07 23:12:53",
     "job_posting_id": "4325839911",
     "job_title": "AI Data Engineer",
     "company_name": "Mattoni 1873",
@@ -13,65 +13,65 @@
       "seniority_and_role": {
         "seniority_level": {
           "value": "junior",
-          "confidence": 0.78,
-          "evidence": "Job requires 1+ years of experience and does not include senior qualifiers in title.",
+          "confidence": 0.75,
+          "evidence": "Job requires 1+ years of experience and does not include senior titles; typical for junior level.",
           "source": "combined"
         },
         "job_family": {
           "value": "data_engineer",
-          "confidence": 0.96,
-          "evidence": "Title is \"AI Data Engineer\" and responsibilities focus on data pipelines and model deployment.",
+          "confidence": 0.95,
+          "evidence": "Title is AI Data Engineer and responsibilities focus on data pipelines and model deployment.",
           "source": "pass1_derived"
         },
         "sub_specialty": {
           "value": "ml_infra",
-          "confidence": 0.75,
-          "evidence": "Role emphasizes preparing data for AI/ML model training, deploying and monitoring models on Azure ML, which aligns with ML infrastructure.",
+          "confidence": 0.8,
+          "evidence": "Responsibilities include preparing data for AI/ML model training and deploying AI models on Azure, indicating ML infrastructure focus.",
           "source": "inferred"
         },
         "leadership_expectation": {
           "value": "ic",
           "confidence": 0.85,
-          "evidence": "No mention of people management or direct reports; collaboration with senior AI developer only.",
-          "source": "pass1_derived"
+          "evidence": "Collaboration with senior AI developer is mentioned but no direct reports or people‑management duties.",
+          "source": "combined"
         }
       },
       "stack_and_cloud": {
         "primary_cloud": {
           "value": "azure",
           "confidence": 0.98,
-          "evidence": "Must‑have skills list includes Azure ML, Microsoft Fabric, Azure DevOps and job description mentions deploying models on Microsoft Azure.",
+          "evidence": "Must‑have skills list includes Azure services, Azure ML, Azure DevOps, and Microsoft Fabric.",
           "source": "pass1_derived"
         },
         "secondary_clouds": {
           "value": [],
-          "confidence": 0.95,
-          "evidence": "No other cloud providers are referenced in the posting.",
+          "confidence": 0.9,
+          "evidence": "No other cloud providers are mentioned in the posting or extracted skills.",
           "source": "pass1_derived"
         },
         "processing_paradigm": {
           "value": "batch",
           "confidence": 0.8,
-          "evidence": "Job talks about data pipelines, automation and workflow orchestration but does not mention streaming technologies such as Kafka or Kinesis.",
+          "evidence": "Job talks about preparing and transforming data for model training and does not mention streaming technologies.",
           "source": "inferred"
         },
         "orchestrator_category": {
           "value": "not_mentioned",
-          "confidence": 0.92,
-          "evidence": "No orchestration tools (Airflow, Luigi, Dagster, etc.) are cited in the posting.",
+          "confidence": 0.95,
+          "evidence": "No orchestration tools (Airflow, Luigi, Dagster, etc.) are referenced in the posting.",
           "source": "pass1_derived"
         },
         "storage_layer": {
           "value": "not_mentioned",
-          "confidence": 0.7,
-          "evidence": "The description references Azure services but does not specify a data warehouse, lake, or lakehouse solution.",
-          "source": "inferred"
+          "confidence": 0.95,
+          "evidence": "The description does not specify a data warehouse, data lake, or lakehouse technology.",
+          "source": "pass1_derived"
         }
       },
       "geo_and_work_model": {
         "remote_restriction": {
           "value": "same_country",
-          "confidence": 0.92,
+          "confidence": 0.9,
           "evidence": "Location restriction is \"Prague, Prague, Czechia\" and geo restriction type is specific_countries (CZ).",
           "source": "pass1_derived"
         },
@@ -84,7 +84,7 @@
         "relocation_required": {
           "value": false,
           "confidence": 0.85,
-          "evidence": "Posting does not mention any relocation assistance or requirement; hybrid work model assumes local presence.",
+          "evidence": "Posting does not mention relocation assistance or a requirement to move; it expects candidates to be based in Prague.",
           "source": "pass1_derived"
         }
       },
@@ -92,33 +92,33 @@
         "h1b_friendly": {
           "value": false,
           "confidence": 0.55,
-          "evidence": "No statement about H‑1B sponsorship; posting is for a Czech location.",
+          "evidence": "Visa sponsorship is not mentioned; absence of explicit sponsorship leads to a low‑confidence negative inference.",
           "source": "pass1_derived"
         },
         "opt_cpt_friendly": {
           "value": false,
           "confidence": 0.55,
-          "evidence": "No mention of OPT/CPT eligibility; role is based outside the United States.",
+          "evidence": "No reference to OPT/CPT eligibility; lack of mention results in a low‑confidence negative inference.",
           "source": "pass1_derived"
         },
         "citizenship_required": {
           "value": "not_mentioned",
-          "confidence": 0.92,
-          "evidence": "No citizenship or work‑authorization restrictions are described.",
+          "confidence": 0.6,
+          "evidence": "Neither citizenship nor work‑authorization requirements are explicitly stated.",
           "source": "pass1_derived"
         }
       },
       "contract_and_compensation": {
         "w2_vs_1099": {
-          "value": "not_mentioned",
-          "confidence": 0.92,
-          "evidence": "Employment type and contract type are listed as not_mentioned in the extraction.",
-          "source": "pass1_derived"
+          "value": "w2",
+          "confidence": 0.7,
+          "evidence": "Full‑time employee language and extensive benefits imply a W2 employment model, though not explicitly stated.",
+          "source": "inferred"
         },
         "benefits_level": {
-          "value": "standard",
-          "confidence": 0.78,
-          "evidence": "Benefits include flexible hours, hybrid work, paid vacation, meal allowance, pension, multisport card, etc., but no equity or unlimited PTO.",
+          "value": "comprehensive",
+          "confidence": 0.85,
+          "evidence": "Benefits list includes flexible hours, hybrid work, generous PTO, meal allowance, pension, learning budget, and many wellness perks.",
           "source": "pass1_derived"
         }
       },
@@ -126,58 +126,60 @@
         "growth_path_clarity": {
           "value": "implied",
           "confidence": 0.75,
-          "evidence": "Posting mentions internal & external trainings, certifications, and workshops but does not outline explicit career ladders.",
+          "evidence": "Posting mentions development opportunities (trainings, certifications) but does not define explicit career tracks.",
           "source": "inferred"
         },
         "mentorship_signals": {
           "value": "implied",
-          "confidence": 0.78,
-          "evidence": "Collaboration with a senior AI developer is highlighted, suggesting informal mentorship.",
+          "confidence": 0.75,
+          "evidence": "Collaboration with a senior AI developer suggests informal mentorship opportunities.",
           "source": "inferred"
         },
         "promotion_path_mentioned": {
           "value": false,
-          "confidence": 0.92,
-          "evidence": "No language about promotion, advancement, or career ladders appears in the posting.",
+          "confidence": 0.9,
+          "evidence": "No language about promotions or advancement paths appears in the posting.",
           "source": "pass1_derived"
         },
         "internal_mobility_mentioned": {
           "value": false,
-          "confidence": 0.92,
-          "evidence": "The posting does not reference internal transfers or lateral moves.",
+          "confidence": 0.9,
+          "evidence": "The description does not reference internal transfers or lateral moves.",
           "source": "pass1_derived"
         },
         "career_tracks_available": {
-          "value": [],
-          "confidence": 0.9,
-          "evidence": "No specific IC, management, specialist, or architect tracks are described.",
-          "source": "pass1_derived"
+          "value": [
+            "ic_track"
+          ],
+          "confidence": 0.6,
+          "evidence": "Only individual contributor responsibilities are described; no management or specialist tracks are mentioned.",
+          "source": "inferred"
         }
       },
       "requirements_classification": {
         "requirement_strictness": {
           "value": "high",
           "confidence": 0.8,
-          "evidence": "A long list of mandatory hard and soft skills is provided with no nice‑to‑have alternatives.",
-          "source": "pass1_derived"
+          "evidence": "All listed skills are under \"must have\" with no \"nice to have\" items, indicating a strict requirement set.",
+          "source": "inferred"
         },
         "scope_definition": {
           "value": "clear",
-          "confidence": 0.92,
-          "evidence": "Job description focuses specifically on AI Data Engineering responsibilities without blending other roles.",
-          "source": "pass1_derived"
+          "confidence": 0.85,
+          "evidence": "Job description focuses specifically on AI data engineering tasks without mixing other roles.",
+          "source": "inferred"
         },
         "skill_inflation_detected": {
-          "value": true,
+          "value": false,
           "confidence": 0.7,
-          "evidence": "Only 1+ years of experience is required, yet the role expects expertise with LLMs, computer vision models, Azure ML, and end‑to‑end AI pipelines.",
+          "evidence": "Required skills (Python, SQL, Azure services, AI model integration) align with a junior‑level expectation of 1+ years.",
           "source": "inferred"
         }
       }
     },
-    "tokens": 9425,
-    "input_tokens": 6071,
-    "output_tokens": 3354,
-    "cost": 0.0019168499999999997
+    "tokens": 9230,
+    "input_tokens": 6145,
+    "output_tokens": 3085,
+    "cost": 0.0018472499999999997
   }
 }

@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 00:25:20",
+    "job_posting_id": "4342522291",
+    "job_title": "Data Architect & Leader",
+    "company_name": "Addison Group",
+    "job_location": "Houston, TX",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.85,
+          "evidence": "Title 'Data Architect & Leader' implies senior level; responsibilities include leading a team and owning architecture, which aligns with senior expectations. No explicit years mentioned, but 'proven experience' suggests 5+ years.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_architect",
+          "confidence": 0.98,
+          "evidence": "Job title explicitly states 'Data Architect'; core responsibilities focus on architectural design, ERP integrations, and data environment optimization.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.82,
+          "evidence": "Mentions MS Fabric for ETL processes and Power BI for reporting, indicating batch-oriented data pipelines rather than streaming.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_and_people_lead",
+          "confidence": 0.9,
+          "evidence": "Explicitly described as a 'player-coach' role leading a small team (Data Engineer and Data Scientist), indicating both technical leadership and people management responsibilities.",
+          "source": "pass1_derived"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "azure",
+          "confidence": 0.95,
+          "evidence": "MS Fabric is a Microsoft Azure service; the entire environment is described as 'large MS environment', strongly indicating Azure as the primary cloud platform.",
+          "source": "inferred"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No other cloud platforms mentioned in the job description or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.85,
+          "evidence": "Focus on ETL processes via MS Fabric and Power BI reporting suggests batch-oriented data processing rather than real-time streaming.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "cloud_native",
+          "confidence": 0.88,
+          "evidence": "MS Fabric is a cloud-native orchestration and data integration platform within Azure, aligning with cloud-native orchestration.",
+          "source": "inferred"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.8,
+          "evidence": "Mentions 'several thousand tables, hundreds of stored procedures' in an MS environment, which is typical of data warehouse architectures (e.g., Azure SQL, Synapse).",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.9,
+          "evidence": "Location specified as 'Remote, anywhere in the US' — explicitly restricts to US residents only.",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "americas",
+          "confidence": 0.85,
+          "evidence": "US-only restriction implies focus on Americas time zones; no specific timezone mentioned, but US-based teams typically operate within Americas hours.",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Explicitly stated as 'Remote, anywhere in the US' — no relocation required.",
+          "source": "pass1_derived"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Visa sponsorship not mentioned; 'anywhere in the US' implies work authorization is required, suggesting no H1B sponsorship.",
+          "source": "inferred"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "No mention of student visas or OPT/CPT; 'full-time exempt' role suggests traditional employment requiring work authorization.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.88,
+          "evidence": "Location restriction to 'anywhere in the US' implies authorization to work in the US is required, but no citizenship or green card requirement stated.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Job type is 'Full-Time, Exempt' with benefits (medical, dental, 401k), indicating W2 employee status.",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "standard",
+          "confidence": 0.85,
+          "evidence": "Benefits listed include medical, dental, vision, 401(k), and PTO — standard package without equity, learning budget, or premium perks.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Mentions 'opportunity to make a lasting impact as they expand their data and AI capabilities' — implies growth potential but no explicit career tracks or promotion ladder.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Role includes 'mentoring a small team' — implies mentorship responsibility, but no formal mentorship program mentioned.",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of promotions, advancement, or career progression paths in the job description or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal transfers, lateral moves, or exploring other roles within the company.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track",
+            "management_track"
+          ],
+          "confidence": 0.7,
+          "evidence": "Role combines technical architecture (IC track) with team leadership (management track), suggesting both paths are relevant, though not explicitly stated.",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear must-have skills listed (Data Architecture, MS Environment, ERP Integrations, etc.) with no nice-to-haves — suggests moderate strictness, but no 'preferred' or flexible language.",
+          "source": "pass1_derived"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused on data architecture, ERP integrations, and AI applications within a Microsoft environment — well-defined scope without ambiguity or multi-role blending.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Skills required (Data Architecture, MS Fabric, Power BI, ERP integrations) are reasonable for a senior Data Architect role; no unrealistic combinations or junior-level expectations for senior responsibilities.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7874,
+    "input_tokens": 6074,
+    "output_tokens": 1800,
+    "cost": 0.009674
+  }
+}

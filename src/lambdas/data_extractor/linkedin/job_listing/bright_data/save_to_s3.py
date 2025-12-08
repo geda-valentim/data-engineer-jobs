@@ -106,7 +106,10 @@ def _extract_unique_companies(items: List[Dict[str, Any]]) -> List[Dict[str, Any
 
 def _send_companies_to_sqs(companies: List[Dict[str, Any]], first_seen_at: str) -> int:
     """
-    Envia companies para a fila SQS para serem buscadas.
+    Envia companies para a fila SQS FIFO para serem buscadas.
+
+    Usa MessageGroupId único para garantir processamento sequencial
+    e controle de concorrência (apenas uma Lambda processa por vez).
 
     Retorna quantidade de mensagens enviadas.
     """
@@ -114,6 +117,10 @@ def _send_companies_to_sqs(companies: List[Dict[str, Any]], first_seen_at: str) 
     if not queue_url:
         logger.info("COMPANIES_QUEUE_URL nao configurada, pulando envio de companies")
         return 0
+
+    # MessageGroupId único para garantir processamento sequencial
+    # Todas as mensagens no mesmo grupo são processadas uma por vez
+    message_group_id = "companies-fetch-group"
 
     sent_count = 0
     for company in companies:
@@ -129,6 +136,8 @@ def _send_companies_to_sqs(companies: List[Dict[str, Any]], first_seen_at: str) 
             sqs_client.send_message(
                 QueueUrl=queue_url,
                 MessageBody=json.dumps(message),
+                MessageGroupId=message_group_id,  # Obrigatório para FIFO
+                # MessageDeduplicationId não é necessário pois usamos content_based_deduplication
             )
             sent_count += 1
 
@@ -140,7 +149,7 @@ def _send_companies_to_sqs(companies: List[Dict[str, Any]], first_seen_at: str) 
             )
 
     if sent_count > 0:
-        logger.info("Enviadas %d companies para SQS", sent_count)
+        logger.info("Enviadas %d companies para SQS FIFO (grupo: %s)", sent_count, message_group_id)
 
     return sent_count
 

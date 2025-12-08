@@ -1,0 +1,275 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 07:26:05",
+    "job_posting_id": "4342313220",
+    "job_title": "Data Engineer (모델링)",
+    "company_name": "MUSINSA 무신사",
+    "job_location": "Seoul, Seoul, South Korea",
+    "pass_name": "pass3",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 2,
+          "confidence": 0.71,
+          "evidence": "Job lists modern workflow tools (Airflow, Luigi, Dagster, Prefect) and data‑quality frameworks (Great Expectations, Soda) but does not mention CI/CD pipelines, data catalog, governance, or cloud‑native storage, indicating a developing level of data maturity.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "developing",
+          "confidence": 0.71,
+          "evidence": "Score of 2 maps to the \"developing\" maturity level.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption",
+            "data_quality_testing",
+            "workflow_manager_adoption"
+          ],
+          "confidence": 0.78,
+          "evidence": "Explicit mention of Airflow, Luigi, Dagster, Prefect and Great Expectations / Soda shows adoption of modern stack and data‑quality testing.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.15,
+          "confidence": 0.86,
+          "evidence": "Responsibilities are limited to data pipeline orchestration, SQL/Python development, and data‑quality testing; no mention of dev‑ops, analytics, or product ownership.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.42,
+          "confidence": 0.68,
+          "evidence": "No explicit on‑call or overtime language, but the role is at a fast‑moving e‑commerce company which can imply occasional high‑tempo periods.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.81,
+          "evidence": "Job lists concrete hard‑skill requirements and specific tools, indicating a well‑defined technical scope.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.3,
+          "confidence": 0.78,
+          "evidence": "Low scope creep, moderate overtime risk, clear responsibilities, but lack of benefits and career‑path information raises some concerns.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.73,
+          "evidence": "The posting does not specify to whom the Data Engineer reports.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.62,
+          "evidence": "No manager title (e.g., Head of Data, Engineering Manager) appears in the description.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "unknown",
+          "confidence": 0.64,
+          "evidence": "No explicit statements about hiring sprees or team expansion.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": null,
+          "confidence": 0.55,
+          "evidence": "The posting provides no details on team size, DE headcount, or seniority mix.",
+          "source": "not_mentioned"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.73,
+          "evidence": "No reporting line is described.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.66,
+          "evidence": "The description focuses on platform work; there is no mention of being embedded in product or cross‑functional squads.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.32,
+          "confidence": 0.62,
+          "evidence": "No PTO policy, unlimited vacation, or remote‑work benefits are mentioned; absence of on‑call hints at average balance.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.35,
+          "confidence": 0.64,
+          "evidence": "No learning budget, mentorship program, or clear promotion path is described.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.55,
+          "confidence": 0.71,
+          "evidence": "Use of modern tooling (Databricks, Airflow, Great Expectations) shows technical competence, but lack of CI/CD, code‑review, or observability details limits the culture rating.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "modern_data_stack_adoption",
+            "data_quality_testing"
+          ],
+          "confidence": 0.78,
+          "evidence": "Explicit mention of Airflow/Luigi/Dagster/Prefect and Great Expectations/Soda.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [],
+          "confidence": 0.62,
+          "evidence": "No explicit references to code review, CI/CD pipelines, monitoring, or incident response.",
+          "source": "not_mentioned"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.66,
+          "evidence": "Job focuses on maintaining existing pipelines; no mention of experimentation, hackathons, or R&D time.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.68,
+          "evidence": "No language about refactoring, reducing technical debt, or modernizing legacy code.",
+          "source": "not_mentioned"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.92,
+          "evidence": "No ML, AI, or LLM related tools or responsibilities are listed.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.88,
+          "evidence": "No ML frameworks (e.g., MLflow, SageMaker) appear in the posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.71,
+          "evidence": "No start‑date or urgency language is provided.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "not_mentioned",
+          "confidence": 0.71,
+          "evidence": "No data on applicant volume, salary competitiveness, or location scarcity.",
+          "source": "pass1_derived"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "established_tech",
+          "confidence": 0.81,
+          "evidence": "MUSINSA is a well‑known Korean e‑commerce platform with a sizable engineering organization, indicating an established technology company.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.68,
+          "evidence": "No explicit hiring surge or replacement language; the posting appears as a regular open role.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.62,
+          "evidence": "No numbers about data‑team headcount are given.",
+          "source": "not_mentioned"
+        },
+        "funding_stage_signals": {
+          "value": "profitable",
+          "confidence": 0.73,
+          "evidence": "As an established e‑commerce player, MUSINSA is likely profitable rather than early‑stage funded.",
+          "source": "inferred"
+        },
+        "role_creation_type": {
+          "value": "new_headcount",
+          "confidence": 0.61,
+          "evidence": "The posting does not state it is a backfill; it reads as a fresh addition to the data platform team.",
+          "source": "inferred"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "modern_tech_stack",
+        "data_focused_role",
+        "well_defined_role",
+        "onsite_friendly"
+      ],
+      "strength_details": [
+        "Works with a modern data engineering stack (SQL, Python, Airflow/Luigi/Dagster/Prefect, Databricks, Great Expectations, Soda).",
+        "Clear, concrete technical requirements listed, reducing ambiguity for candidates.",
+        "Opportunity to contribute to core data platform of a leading Korean e‑commerce company.",
+        "On‑site role located in Seoul, suitable for candidates already residing in South Korea."
+      ],
+      "concern_categories": [
+        "salary_not_disclosed",
+        "no_visa_sponsorship",
+        "vague_career_path"
+      ],
+      "concern_details": [
+        "Compensation range is not provided, making salary negotiation uncertain.",
+        "No mention of visa sponsorship; likely limited to Korean citizens or residents.",
+        "Career progression, mentorship, and promotion pathways are not described."
+      ],
+      "best_fit_categories": [
+        "senior_data_engineers",
+        "pipeline_developers",
+        "enterprise_experienced"
+      ],
+      "best_fit_details": [
+        "Senior DEs (5+ years) comfortable with batch ETL pipelines and modern orchestration tools.",
+        "Engineers who enjoy building and maintaining data platforms at scale in a large organization.",
+        "Candidates seeking a stable, established tech environment rather than a high‑risk startup."
+      ],
+      "probe_categories": [
+        "salary_range_details",
+        "role_scope_boundaries",
+        "career_growth_path",
+        "work_hour_expectations",
+        "team_turnover_history"
+      ],
+      "probe_details": [
+        "Ask for the expected salary band and any bonus or equity components.",
+        "Clarify whether the role includes responsibilities beyond pipeline development (e.g., analytics, dev‑ops).",
+        "Inquire about formal promotion tracks, mentorship programs, and skill‑development budgets.",
+        "Confirm typical weekly work hours, on‑call duties, and weekend expectations.",
+        "Ask about recent turnover in the data team and reasons for any departures."
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "rare_skill_match"
+      ],
+      "leverage_details": [
+        "Demonstrated experience with multiple workflow managers (Airflow, Luigi, Prefect) aligns directly with the job’s toolset.",
+        "Hands‑on expertise with data‑quality frameworks (Great Expectations, Soda) is relatively rare and highly relevant."
+      ],
+      "overall_assessment": "The role offers a solid chance to work on a modern data platform at a well‑established Korean tech company, with clear technical expectations and a focus on batch pipelines. Compensation details and career‑growth information are lacking, and the position is limited to onsite work in Seoul without visa support.",
+      "recommendation_score": 0.66,
+      "recommendation_confidence": 0.78
+    },
+    "tokens": 18050,
+    "input_tokens": 13912,
+    "output_tokens": 4138,
+    "cost": 0.0033282
+  }
+}

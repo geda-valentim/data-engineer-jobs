@@ -1,11 +1,15 @@
 #####################################
 # Lambda - Companies Fetcher
 #####################################
+# Arquitetura simplificada usando SQS FIFO para controle de concorrência:
+# - SQS FIFO com MessageGroupId único garante processamento sequencial
+# - Lambda faz polling síncrono do Bright Data (aguarda snapshot ficar pronto)
+# - Não precisa de Step Function pois a FIFO já controla a concorrência
 
 # Zip do codigo da Lambda
 data "archive_file" "companies_fetcher_zip" {
   type        = "zip"
-  source_file = "${path.module}/../../../src/lambdas/companies_fetcher/handler.py"
+  source_dir  = "${path.module}/../../../src/lambdas/companies_fetcher"
   output_path = "${path.module}/lambda_packages/companies_fetcher.zip"
 }
 
@@ -15,7 +19,7 @@ resource "aws_lambda_function" "companies_fetcher" {
   role          = aws_iam_role.companies_fetcher_role.arn
   handler       = "handler.handler"
   runtime       = "python3.12"
-  timeout       = 120 # 2 min - API call + S3 save
+  timeout       = 360 # 6 min - polling síncrono aguardando snapshot (~5 min max)
   memory_size   = 256
 
   filename         = data.archive_file.companies_fetcher_zip.output_path
@@ -23,8 +27,8 @@ resource "aws_lambda_function" "companies_fetcher" {
 
   layers = [var.aws_lambda_layer_version_python_dependencies]
 
-  # Limita concorrencia para evitar rate limit da Bright Data API
-  reserved_concurrent_executions = 5
+  # NOTE: Concorrência controlada pela SQS FIFO com MessageGroupId único
+  # Apenas uma instância processa por vez para cada grupo
 
   environment {
     variables = {
@@ -43,7 +47,7 @@ resource "aws_lambda_function" "companies_fetcher" {
   }
 }
 
-# SQS Event Source Mapping
+# SQS FIFO Event Source Mapping
 resource "aws_lambda_event_source_mapping" "companies_fetcher_sqs" {
   event_source_arn = aws_sqs_queue.companies_queue.arn
   function_name    = aws_lambda_function.companies_fetcher.arn
@@ -53,9 +57,11 @@ resource "aws_lambda_event_source_mapping" "companies_fetcher_sqs" {
   # Permite partial batch failures
   function_response_types = ["ReportBatchItemFailures"]
 
-  # Scaling config
+  # NOTA: Para FIFO com MessageGroupId único, a concorrência é
+  # naturalmente limitada a 1 por grupo. O scaling_config abaixo
+  # é mantido como segurança adicional.
   scaling_config {
-    maximum_concurrency = 5 # Mesma concorrencia reservada
+    maximum_concurrency = 2
   }
 }
 
@@ -84,7 +90,7 @@ resource "aws_iam_role_policy_attachment" "companies_fetcher_logs" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
 
-# Permissao para SQS
+# Permissao para SQS FIFO
 resource "aws_iam_role_policy" "companies_fetcher_sqs" {
   name = "${var.project_name}-companies-fetcher-sqs"
   role = aws_iam_role.companies_fetcher_role.id

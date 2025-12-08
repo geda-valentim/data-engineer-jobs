@@ -1,0 +1,237 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Basic tools mentioned (SQL, Python, Snowflake) but no orchestration, testing, monitoring, or governance tools. Limited process signals suggest developing stage.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2 - basic pipelines with Snowflake but no advanced practices mentioned.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.70,
+        "evidence": "Snowflake is modern data warehouse, but no CI/CD, testing, monitoring, or governance tools mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.1,
+        "confidence": 0.85,
+        "evidence": "Focused on core DE skills (SQL, Python, Snowflake, pipelines) with no mention of ML, DevOps, or analytics responsibilities.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.70,
+        "evidence": "Onsite requirement in Cupertino (high cost area) with no PTO or work-life balance signals; consulting firm context suggests potential for client demands.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Well-defined senior DE role with specific technical requirements (SQL, Python, Snowflake, 8+ years).",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to low salary for senior role, onsite requirement, and lack of benefits/PTO info. Role itself is clear and focused.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about reporting structure, manager, or team in job description.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No manager title or level mentioned in job posting.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.80,
+        "evidence": "No information about team size, growth plans, or hiring velocity.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.95,
+        "evidence": "No team information provided in job description.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure details provided.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of working with product teams, PMs, or cross-functional collaboration; typical for consulting firm roles.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.4,
+        "confidence": 0.75,
+        "evidence": "Onsite requirement in high-cost area with no PTO, flexible hours, or work-life balance signals mentioned.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.3,
+        "confidence": 0.80,
+        "evidence": "No mention of learning budget, conferences, mentorship, or career progression paths.",
+        "source": "pass1_derived"
+      },
+      "tech_culture_score": {
+        "value": 0.5,
+        "confidence": 0.70,
+        "evidence": "Modern tool (Snowflake) mentioned but no engineering practices (CI/CD, testing, code review) or innovation signals.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No mention of open source, tech blogs, conferences, hackathons, or innovation time.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No development practices (code review, CI/CD, testing, monitoring) mentioned.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No signals of innovation, R&D time, or experimentation culture.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt, refactoring, or code quality improvement initiatives.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of ML, AI, or GenAI in job description or extracted skills.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools mentioned in job description.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No urgency signals (ASAP, immediate start) in job description.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Cupertino location (high competition area) with senior role, but salary range is below market for Bay Area, which may reduce competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.85,
+        "evidence": "Tata Consultancy Services is a large, established IT services company with global presence.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "Large company likely has regular hiring, but no specific velocity signals in job posting.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No team size information provided.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.90,
+        "evidence": "Tata Consultancy Services is a publicly traded company (NYSE: TCS).",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about whether this is a new headcount, backfill, or expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["well_defined_role", "transparent_salary", "data_focused_role", "established_company"],
+    "strength_details": [
+      "Clear senior data engineering role with specific technical requirements (SQL, Python, Snowflake)",
+      "Transparent salary range ($90k-$145k) for a senior position",
+      "Established company (Tata Consultancy Services) with global presence"
+    ],
+    "concern_categories": ["below_market_pay", "onsite_required", "no_visa_sponsorship", "limited_growth", "no_benefits_mentioned"],
+    "concern_details": [
+      "Salary range ($90k-$145k) is below market for senior DE in Cupertino (typically $180k+)",
+      "Onsite requirement in high-cost Bay Area with no remote flexibility",
+      "No visa sponsorship mentioned - likely requires existing US work authorization",
+      "No growth opportunities, learning budget, or career path information provided",
+      "No benefits (PTO, health insurance, equity) mentioned in job posting"
+    ],
+    "best_fit_categories": ["senior_data_engineers", "cloud_specialists", "enterprise_experienced", "local_candidates"],
+    "best_fit_details": [
+      "Senior DEs with 8+ years experience seeking stable enterprise role",
+      "Candidates already in Bay Area with existing work authorization",
+      "Engineers comfortable with onsite work and established company structure"
+    ],
+    "probe_categories": ["salary_range_details", "work_hour_expectations", "visa_sponsorship_details", "team_size_composition", "career_growth_path"],
+    "probe_details": [
+      "Ask for clarification on salary range - is this for entry-level or senior role?",
+      "Inquire about actual work hours and overtime expectations",
+      "Confirm if visa sponsorship is available for qualified candidates",
+      "Ask about team size and structure for this role",
+      "Understand potential career progression paths within the company"
+    ],
+    "leverage_categories": ["exceeds_requirements", "local_candidate", "rare_skill_match"],
+    "leverage_details": [
+      "8+ years experience exceeds typical senior DE requirements",
+      "Local candidates in Cupertino may have negotiation leverage",
+      "Strong Snowflake and Python expertise is valuable for this role"
+    ],
+    "overall_assessment": "Senior data engineering role at established company with clear technical requirements but concerning compensation for Bay Area location. Role is well-defined but lacks growth opportunities, benefits information, and flexibility. Best suited for local candidates with existing work authorization seeking stability over compensation.",
+    "recommendation_score": 0.55,
+    "recommendation_confidence": 0.75
+  }
+}

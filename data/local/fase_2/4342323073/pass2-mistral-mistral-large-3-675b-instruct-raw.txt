@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.85,
+        "evidence": "1-5 years of professional software development experience and 1+ years of data engineering experience aligns with mid-level expectations for a combined software and data engineering role.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title explicitly mentions 'Data Engineer' and core responsibilities focus on data pipelines, workflows, and integrations within Palantir Foundry.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "general",
+        "confidence": 0.70,
+        "evidence": "Role involves broad data engineering tasks within Palantir Foundry, including pipelines, integrations, and system optimization, but no specific focus on streaming, batch, or lakehouse paradigms is strongly implied.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.80,
+        "evidence": "Responsibilities emphasize collaboration and development tasks without explicit mention of technical leadership or people management.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit mention of cloud providers or services in the job posting or Pass 1 results. Palantir Foundry can operate across multiple clouds but is not tied to a specific one.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No secondary clouds mentioned or implied.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit mention of streaming or batch processing tools (e.g., Kafka, Flink, Airflow) beyond generic data pipelines in Foundry.",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Palantir Foundry is mentioned as the platform, but no specific orchestrator tools or categories are detailed.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Palantir Foundry is a data platform but does not explicitly define the storage layer as warehouse, lake, or lakehouse.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.70,
+        "evidence": "Location is specified as Berthoud, CO, which implies a regional restriction (Colorado or nearby states) unless remote work is clarified. No explicit remote work model is mentioned.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.60,
+        "evidence": "No timezone requirements are explicitly stated or implied beyond the location being Berthoud, CO.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No mention of relocation assistance or requirement in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Pass 1 states 'must_be_authorized' with explicit requirement for US citizenship, permanent residency, refugee, or asylum status.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Work authorization requirements explicitly exclude OPT/CPT or student visa eligibility.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "us_or_gc",
+        "confidence": 0.95,
+        "evidence": "Job posting explicitly states 'US Citizenship or Permanent Residency' and 'US CITIZENSHIP, PERMANENT RESIDENCY, REFUGEE OR ASYLUM STATUS IS REQUIRED'.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Pass 1 states 'full_time' employment type and 'permanent' contract type, which strongly implies W2.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.85,
+        "evidence": "Benefits include equity grants, unlimited PTO, medical/dental/vision insurance, retirement savings plan, and additional options like EAP and disability coverage.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions 'growth opportunities' and 'larger impact' but no explicit career tracks or promotion ladders are detailed.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Team collaboration with other Software & Data Engineers and senior stakeholders suggests mentorship opportunities.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion or advancement paths in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No discussion of internal mobility or role changes in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["not_mentioned"],
+        "confidence": 0.90,
+        "evidence": "No explicit or implied career tracks (IC, management, specialist, architect) are mentioned beyond generic growth signals.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "Pass 1 shows a clear distinction between required ('must have') and desired ('nice to have') qualifications, with strict work authorization requirements.",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Job responsibilities and qualifications are well-defined and focused on a specific role within Palantir Foundry.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Years of experience (1-5 years) align reasonably with mid-level seniority for the role's responsibilities.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

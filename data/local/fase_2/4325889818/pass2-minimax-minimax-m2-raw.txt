@@ -1,0 +1,355 @@
+<reasoning>Let me analyze this job posting step by step to infer the job characteristics based on the Pass 1 extraction results and the original job posting.
+
+First, let me review the key information from the Pass 1 extraction:
+
+1. **Basic Info:**
+   - Title: "Senior Data Engineer – Commerce Data Pipelines"
+   - Company: aKUBE
+   - Location: Santa Monica, CA
+   - Work model: hybrid (4 days onsite, Friday remote)
+   - Contract: 10 months fixed term
+   - Rate: Up to $92.5/hr on W2 (no C2C or 1099)
+   - Work authorization: GC, USC, All valid EADs except OPT, CPT, H1B
+
+2. **Skills:**
+   - Must have: SQL, ETL design/development, Data modeling, ETL orchestration tools, Data Quality frameworks, Performance tuning, Python, PySpark, Snowflake, Redshift
+   - Soft skills: Analytical Skills, Communication, Team Collaboration
+   - Experience: 3+ years
+   - Education: Bachelor's degree required
+
+3. **No mentions of:**
+   - Benefits, equity, learning budget, conference budget
+   - Career development, mentorship, promotion paths
+   - Team structure, company description
+
+Now let me infer each field:
+
+## SENIORITY AND ROLE
+
+**seniority_level:**
+- Title explicitly says "Senior Data Engineer"
+- 3+ years experience required
+- This matches the senior level (typically 5-8 years, but some companies use "senior" for 3+ years)
+- Confidence: 0.9 (explicit in title)
+
+**job_family:**
+- Title is "Data Engineer"
+- Core responsibilities are building ETL pipelines, data modeling, data quality
+- This is clearly data_engineer
+- Confidence: 0.95
+
+**sub_specialty:**
+- Focus on ETL pipelines, data modeling, orchestration tools
+- Mentions Snowflake/Redshift (data warehouse focus)
+
+
+- Batch ETL processing is the primary focus
+- Confidence: 0.85
+
+**leadership_expectation:**
+- No mention of direct reports or team management
+- Focus on individual contribution and technical work
+- Suggests a pure individual contributor role
+- Confidence: 0.8
+
+## STACK AND CLOUD
+
+**primary_cloud:**
+- Snowflake and Redshift are mentioned (both are cloud data warehouses)
+- Redshift is AWS-specific
+- Snowflake is cloud-agnostic but commonly used on AWS
+- No other cloud providers mentioned
+- Confidence: 0.8 (AWS implied through Redshift)
+
+**secondary_clouds:**
+- Only AWS mentioned (via Redshift)
+- No other cloud providers mentioned
+- Confidence: 0.9
+
+**processing_paradigm:**
+- ETL pipelines typically run in batch mode
+- No real-time or streaming technologies mentioned
+- Airflow is a batch orchestration tool
+- Confidence: 0.85
+
+**orchestrator_category:**
+- Airflow explicitly mentioned
+- Airflow is the classic "airflow_like" orchestrator
+- Confidence: 0.95
+
+**storage_layer:**
+- Snowflake and Redshift are data warehouses
+- No mention of data lakes or lakehouse technologies
+- Confidence: 0.9
+
+## GEO AND WORK MODEL
+
+**remote_restriction:**
+- Hybrid model: 4 days onsite, Friday remote
+- Locations: Seattle, WA / Santa Monica, CA / NYC
+- Must be able to come onsite 4 days a week
+- This implies same_region restriction
+- Confidence: 0.85
+
+**timezone_focus:**
+- US-only locations mentioned
+- No specific timezone requirements mentioned
+- But given US locations, likely Americas timezone
+- Confidence: 0.7
+
+**relocation_required:**
+- Already requires being in specific US cities
+- No relocation package mentioned
+- Must already be in one of the three cities
+- Confidence: 0.8
+
+## VISA AND AUTHORIZATION
+
+**h1b_friendly:**
+- Explicitly states "except OPT, CPT, H1B"
+- Will not sponsor H1B
+- Confidence: 0.95
+
+**opt_cpt_friendly:**
+- Explicitly excludes OPT and CPT
+- No student visa support
+- Confidence: 0.95
+
+**citizenship_required:**
+- Allows GC, USC, and valid EADs
+- This is work_auth_only (not requiring citizenship)
+- Confidence: 0.9
+
+## CONTRACT AND COMPENSATION
+
+**w2_vs_1099:**
+- Explicitly states "W2 only" and "no C2C or 1099"
+- This is clearly w2
+- Confidence: 0.95
+
+**benefits_level:**
+- No benefits mentioned at all
+- This is none_mentioned
+- Confidence: 0.9
+
+## CAREER DEVELOPMENT
+
+**growth_path_clarity:**
+- No mention of career growth, advancement, or development
+- Not mentioned
+- Confidence: 0.9
+
+**mentorship_signals:**
+- No mention of mentorship, senior staff, or learning opportunities
+- Not mentioned
+- Confidence: 0.9
+
+**promotion_path_mentioned:**
+- No mention of promotion or advancement
+- False
+- Confidence: 0.9
+
+**internal_mobility_mentioned:**
+- No mention of internal transfers or role changes
+- False
+- Confidence: 0.9
+
+**career_tracks_available:**
+- No mention of career tracks
+- Not mentioned
+- Confidence: 0.9
+
+## REQUIREMENTS CLASSIFICATION
+
+**requirement_strictness:**
+- Clear must-have vs nice-to-have distinction
+- Most requirements are must-haves
+- But reasonable for the level
+- Medium strictness
+- Confidence: 0.75
+
+**scope_definition:**
+- Focused job description for data engineering
+- Clear responsibilities and requirements
+- Not multi-role
+- Clear
+- Confidence: 0.85
+
+**skill_inflation_detected:**
+- 3+ years for senior level is reasonable
+- Skills mentioned are appropriate for data engineering
+- No skill inflation detected
+- False
+- Confidence: 0.8
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.90,
+        "evidence": "Title explicitly states 'Senior Data Engineer' with 3+ years experience requirement",
+        "source": "pass1_derived"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title is 'Data Engineer' with core focus on ETL pipelines, data modeling, and data quality frameworks",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.85,
+        "evidence": "Focus on ETL pipelines, data modeling, orchestration tools (Airflow), and warehouse technologies (Snowflake/Redshift) indicates batch processing emphasis",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.80,
+        "evidence": "No mention of direct reports, team management, or leadership responsibilities - pure individual contributor role focused on technical execution",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "aws",
+        "confidence": 0.80,
+        "evidence": "Redshift mentioned as required skill (AWS-specific service), Snowflake also mentioned but Redshift indicates AWS as primary cloud",
+        "source": "combined"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "Only AWS services (Redshift) and cloud-agnostic services (Snowflake) mentioned, no other cloud providers",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.85,
+        "evidence": "ETL pipelines and Airflow orchestration typically handle batch processing; no streaming or real-time technologies mentioned",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.95,
+        "evidence": "Airflow explicitly mentioned as required skill for ETL orchestration",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.90,
+        "evidence": "Snowflake and Redshift are both cloud data warehouse technologies, no data lake or lakehouse patterns mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.85,
+        "evidence": "Hybrid model requires 4 days onsite in specific US cities (Seattle, Santa Monica, NYC), indicating regional proximity requirement",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.70,
+        "evidence": "US-only locations mentioned (Seattle, Santa Monica, NYC) with no international timezone requirements specified",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.80,
+        "evidence": "Must already be located in one of the three specified US cities to meet 4-day onsite requirement",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "Explicitly states 'except OPT, CPT, H1B' in work authorization requirements",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "Explicitly excludes OPT and CPT from acceptable work authorizations",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.90,
+        "evidence": "Accepts GC, USC, and valid EADs - requires work authorization but not citizenship",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.95,
+        "evidence": "Explicitly states 'W2 only' and 'no C2C or 1099 or sub-contract'",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits, equity, PTO, or other compensation details mentioned in job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mention of career growth, advancement opportunities, or development paths",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mention of mentorship programs, working with senior staff, or learning opportunities",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of promotion opportunities, advancement paths, or career progression",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers, role changes, or mobility opportunities",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No mention of IC track, management track, or any career progression paths",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Clear distinction between must-have skills and no nice-to-haves listed, but requirements are reasonable for senior level",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused job description with specific data engineering responsibilities, not a multi-role hybrid position",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "3+ years experience for senior level and skill requirements are appropriate and realistic for data engineering role",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

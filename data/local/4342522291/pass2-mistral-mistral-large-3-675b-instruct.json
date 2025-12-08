@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 00:48:08",
+    "job_posting_id": "4342522291",
+    "job_title": "Data Architect & Leader",
+    "company_name": "Addison Group",
+    "job_location": "Houston, TX",
+    "pass_name": "pass2",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "principal",
+          "confidence": 0.8,
+          "evidence": "Title is 'Data Architect & Leader' with proven experience as a Data Architect and leadership expectations in a hands-on role.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_architect",
+          "confidence": 0.95,
+          "evidence": "Title explicitly mentions 'Data Architect' and responsibilities focus on architectural design in a Microsoft environment.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "data_modeling",
+          "confidence": 0.7,
+          "evidence": "Mentions ownership of architectural design across a large MS environment with thousands of tables and stored procedures.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_and_people_lead",
+          "confidence": 0.9,
+          "evidence": "Described as a 'player-coach' role leading a small team and driving architectural design.",
+          "source": "pass1_derived"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "azure",
+          "confidence": 0.95,
+          "evidence": "Microsoft environment and MS Fabric mentioned explicitly.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No other cloud providers mentioned beyond Microsoft/Azure.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.8,
+          "evidence": "ETL processes and MS Fabric mentioned, no explicit streaming tools or real-time emphasis.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "cloud_native",
+          "confidence": 0.7,
+          "evidence": "MS Fabric is a cloud-native orchestration tool for Microsoft environments.",
+          "source": "inferred"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.6,
+          "evidence": "Large Microsoft environment implies SQL Server or Azure warehouse, while ERP integrations suggest diverse storage needs.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "anywhere",
+          "confidence": 0.9,
+          "evidence": "Location explicitly states 'Remote, anywhere in the US'.",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.8,
+          "evidence": "Remote work allowed anywhere in the US, implying no strict timezone focus beyond US.",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "Remote work allowed anywhere in the US, no relocation signals.",
+          "source": "pass1_derived"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of visa sponsorship in Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No signals suggesting OPT/CPT or student visa support.",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "any",
+          "confidence": 0.9,
+          "evidence": "Equal Opportunity Employer statement implies no citizenship restrictions beyond work authorization.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Full-time, exempt position with benefits mentioned suggests W2 employment.",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "standard",
+          "confidence": 0.8,
+          "evidence": "Medical, dental, vision, 401(k), and PTO mentioned (2-3 basic benefits).",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.6,
+          "evidence": "Mentions opportunity to make a lasting impact but no specific career tracks or growth paths.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "explicit_yes",
+          "confidence": 0.9,
+          "evidence": "Explicitly states mentoring a small team as part of the role.",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of promotion or advancement paths.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No discussion of internal mobility or role changes.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track",
+            "management_track"
+          ],
+          "confidence": 0.7,
+          "evidence": "Role is a 'player-coach' implying both individual contributor and management responsibilities.",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.8,
+          "evidence": "Strong language around 'proven experience' and 'must have' skills with no 'nice to have' skills listed.",
+          "source": "pass1_derived"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.8,
+          "evidence": "Well-defined responsibilities focusing on data architecture and leadership in a Microsoft environment.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.7,
+          "evidence": "Requirements align with a principal-level role (e.g., leadership, hands-on architecture).",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7884,
+    "input_tokens": 6330,
+    "output_tokens": 1554,
+    "cost": 0.009438
+  }
+}

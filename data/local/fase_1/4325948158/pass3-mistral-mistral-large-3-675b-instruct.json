@@ -1,0 +1,261 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 00:18:53",
+    "job_posting_id": "4325948158",
+    "job_title": "Data Engineer",
+    "company_name": "Manchester Digital",
+    "job_location": "Manchester, England, United Kingdom",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 4,
+          "confidence": 0.85,
+          "evidence": "Job posting mentions a 'state-of-the-art data platform' with modern tools like Snowflake, dbt, Airflow, Jenkins, and Fivetran. It also highlights data governance, compliance, and data quality testing as key responsibilities.",
+          "source": "pass1_derived"
+        },
+        "data_maturity_level": {
+          "value": "managed",
+          "confidence": 0.85,
+          "evidence": "Matches the data_maturity_score of 4, with strong signals for governance, quality, and modern tooling.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption",
+            "cicd_practices",
+            "data_quality_testing",
+            "data_governance"
+          ],
+          "confidence": 0.9,
+          "evidence": "Explicit mentions of Snowflake, dbt, Airflow, Jenkins (CI/CD), automated tests (data quality), and data governance policies (e.g., data dictionary, compliance).",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.2,
+          "confidence": 0.9,
+          "evidence": "Role is focused on data engineering tasks (e.g., ELT pipelines, data modeling, warehousing) with no conflation of backend, frontend, ML, or DevOps responsibilities.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.3,
+          "confidence": 0.8,
+          "evidence": "Job posting describes a 'fast-growing' and 'dynamic' environment, but hybrid working flexibility, 25-31 days of holiday, and comprehensive benefits (e.g., private healthcare, gym membership) mitigate overtime risk.",
+          "source": "combined"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.95,
+          "evidence": "Responsibilities are well-defined and specific to data engineering, including ELT pipelines, data modeling, governance, and platform maintenance.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.25,
+          "confidence": 0.85,
+          "evidence": "Low scope creep and moderate overtime risk, combined with clear role expectations and no severe red flags (e.g., no on-call, no unrealistic deadlines).",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit mention of reporting structure or manager title in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No evidence of manager title or reporting line in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "steady_growth",
+          "confidence": 0.75,
+          "evidence": "Company is 'fast-growing' with over 1,500 employees and a stated goal of expanding the data team. Named a 'Best 100 Companies to Work For' for six years, indicating sustained growth.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "5 data engineers",
+            "de_count": "5 data engineers",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.8,
+          "evidence": "Pass 1 extraction mentions 'a dynamic and experienced Data Engineering team at AJ Bell' and '5 data engineers' in the team info text.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit mention of reporting structure in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "Job posting mentions collaborating 'closely with key stakeholders and internal customers' and 'working with both technical and non-technical teams', implying cross-functional embedding.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.75,
+          "confidence": 0.85,
+          "evidence": "Hybrid working model (minimum 50% remote), 25-31 days of holiday, and benefits like gym membership and healthcare support work-life balance. No explicit overtime or on-call mentions.",
+          "source": "pass1_derived"
+        },
+        "growth_opportunities_score": {
+          "value": 0.85,
+          "confidence": 0.8,
+          "evidence": "Mentions 'ongoing technical training', 'professional qualification support', and 'talent development programmes'. Company is expanding, offering internal mobility and career growth potential.",
+          "source": "pass1_derived"
+        },
+        "tech_culture_score": {
+          "value": 0.85,
+          "confidence": 0.9,
+          "evidence": "Modern data stack adoption, CI/CD practices, data quality testing, and governance policies indicate a strong technical culture. Company emphasizes continuous learning and innovation.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "conference_speaking",
+            "continuous_learning"
+          ],
+          "confidence": 0.75,
+          "evidence": "Company supports 'ongoing technical training' and 'talent development programmes', which often include conference attendance. No explicit mention of open source or hackathons.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "ci_cd",
+            "code_review"
+          ],
+          "confidence": 0.8,
+          "evidence": "Job posting mentions 'modern CI/CD practices' and 'git-based source control system' (BitBucket), implying code review is part of the process. No explicit mention of pair programming, TDD, or postmortems.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Job posting mentions 'recommending and introducing new technology where needed' and 'cutting-edge technology', indicating a focus on innovation but not explicitly quantified.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "Mentions 'continuously enhancing the data platform' and 'modernizing' efforts, suggesting awareness of tech debt and improvement areas.",
+          "source": "inferred"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.9,
+          "evidence": "Job posting mentions AI tools like CoPilot and Snowflake Cortex, but these are not central to the role. No explicit ML pipeline or model serving responsibilities.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No ML-specific tools (e.g., SageMaker, MLflow, Kubeflow) are mentioned as requirements or responsibilities in the job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "normal",
+          "confidence": 0.7,
+          "evidence": "Job posting does not include immediate or ASAP start signals. It mentions a hybrid working model with an initial office immersion period, suggesting a standard hiring timeline.",
+          "source": "inferred"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.65,
+          "evidence": "Location is Manchester, UK (not a high-competition hub like London). Company is hybrid (not fully remote), and salary is not explicitly disclosed, though described as 'competitive'. Benefits are comprehensive, which may attract candidates but not necessarily inflate competition.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.95,
+          "evidence": "AJ Bell is a FTSE 250 company with over 1,500 employees, £103.3 billion in assets under management, and a Main Market listing on the London Stock Exchange. These are clear signals of an enterprise-stage company.",
+          "source": "pass1_derived"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.8,
+          "evidence": "Company is expanding its data team and mentions multiple open roles, but no aggressive hiring signals (e.g., rapid team growth percentages) are present.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "large_16_50",
+          "confidence": 0.75,
+          "evidence": "Data team is part of a broader 1,500-employee company, but the job posting mentions a 'Data Engineering team' of 5 engineers, suggesting a large but not massive data team within the enterprise.",
+          "source": "inferred"
+        },
+        "funding_stage_signals": {
+          "value": "public",
+          "confidence": 0.95,
+          "evidence": "AJ Bell is listed on the Main Market of the London Stock Exchange and is a FTSE 250 company, indicating it is publicly traded and well-funded.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "team_expansion",
+          "confidence": 0.8,
+          "evidence": "Job posting mentions joining an existing 'Data Engineering team' and contributing to the 'development of our state-of-the-art data platform', implying team expansion rather than backfill or new function.",
+          "source": "inferred"
+        }
+      }
+    },
+    "summary": {
+      "strengths": [
+        "Enterprise-stage company with strong financial backing (FTSE 250, public listing) and stability.",
+        "Modern data stack adoption (Snowflake, dbt, Airflow, Jenkins, Fivetran) with CI/CD and data governance practices.",
+        "Comprehensive benefits package, including hybrid working, 25-31 days of holiday, private healthcare, gym membership, and talent development programmes.",
+        "Clear and focused data engineering role with well-defined responsibilities, reducing scope creep risk.",
+        "Strong emphasis on continuous learning and professional growth, with support for technical training and qualifications."
+      ],
+      "concerns": [
+        "Initial office immersion period (full-time in-office for new team members) may require relocation or commuting to Manchester.",
+        "No explicit mention of visa sponsorship or work authorization support, which could limit international candidates.",
+        "Competition level may be higher due to the hybrid working model and lack of salary disclosure in the posting."
+      ],
+      "best_fit_for": [
+        "Mid-level Data Engineers with 3-5 years of experience looking to work in a modern, cloud-based data warehouse environment (Snowflake, dbt, Airflow).",
+        "Candidates seeking a stable enterprise role with hybrid flexibility and strong work-life balance signals.",
+        "Engineers interested in data governance, compliance, and platform enhancement as part of their career growth."
+      ],
+      "red_flags_to_probe": [
+        "Ask about the reporting structure and who the direct manager for this role is (e.g., Head of Data Engineering, Director, etc.).",
+        "Clarify the expectations around the initial office immersion period: duration, flexibility, and support for relocation/commuting.",
+        "Inquire about the team's sprint cadence, deadline pressures, and how overtime is managed in practice.",
+        "Understand the company's approach to work authorization and whether there are any implicit requirements beyond the UK-only geo restriction.",
+        "Discuss the team's growth plans and whether this role is part of a broader expansion or a specific backfill."
+      ],
+      "negotiation_leverage": [
+        "Experience with Snowflake, dbt, or Airflow is highly valued and could strengthen your position.",
+        "AWS expertise (including AWS CDK) is a must-have skill, making candidates with this background more competitive.",
+        "Data governance or compliance experience (e.g., financial services) could be a differentiator for salary or role seniority."
+      ],
+      "overall_assessment": "This is a strong opportunity for mid-level Data Engineers seeking a modern, enterprise-grade data platform role in the UK. AJ Bell offers a mature data environment, comprehensive benefits, and a focus on professional growth. The main trade-offs are the initial office immersion period and potential limitations for non-UK work-authorized candidates. The role is well-defined and aligns with industry best practices, making it a solid choice for career advancement.",
+      "recommendation_score": {
+        "value": 0.85,
+        "confidence": 0.9,
+        "evidence": "High recommendation due to modern stack, enterprise stability, clear role, and strong benefits. Concerns are minor and can be probed during interviews."
+      }
+    },
+    "tokens": 13401,
+    "input_tokens": 10245,
+    "output_tokens": 3156,
+    "cost": 0.016557
+  }
+}

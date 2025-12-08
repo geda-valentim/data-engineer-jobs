@@ -1,0 +1,192 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically:
+
+1. **Title and Company**: Data Engineer at Manchester Digital (though the company is actually AJ Bell based on the description)
+
+2. **Location**: Manchester, England, United Kingdom
+
+3. **Compensation**: I need to look for salary information. I see "Competitive starting salary" mentioned but no specific numbers, so salary_disclosed would be false.
+
+4. **Work Authorization**: I need to look for visa sponsorship or work authorization mentions. I don't see any specific mentions of visa sponsorship or work authorization requirements.
+
+5. **Work Model**: I see "Hybrid working" mentioned with details about spending minimum 50% of time in office, so this would be "hybrid".
+
+6. **Contract Details**: This appears to be a full-time permanent position based on the context, though no specific contract type is mentioned.
+
+7. **Skills**: I need to carefully classify hard and soft skills based on the qualifiers used.
+
+Let me go through the skills systematically:
+
+**Hard Skills mentioned:**
+- Core Cloud data platforms (e.g. Snowflake, BigQuery, Redshift) - mentioned as part of the role
+- Data transformation technology such as DBT - mentioned as part of the role
+- Visual Studio Code - mentioned as part of the role
+- Python - mentioned as part of the role
+- CI automation systems such as Jenkins - mentioned as part of the role
+- A git-based source control system such as BitBucket - mentioned as part of the role
+- Data Warehouse/Kimball methodology - mentioned as part of the role
+- Data replication technology such as Fivetran HVR - mentioned as part of the role
+- Docker and container orchestration tools - mentioned in "Other" section
+- AWS cloud infrastructure including AWS CDK - mentioned in "Other" section
+- MS SQL - mentioned in "Other" section
+- No SQL database such as Mongo - mentioned in "Other" section
+- AI Tools such as CoPilot, Snowflake Cortex - mentioned in "Other" section
+ 
+I'll analyze the soft skills and experience requirements. The role demands strong problem-solving abilities, excellent communication skills, and the capacity to work effectively with diverse teams. Key soft skills include adaptability, self-motivation, and a commitment to continuous learning. The position requires flexibility, customer focus, and the ability to work in dynamic environments like e-commerce or financial services.
+
+The experience requirements suggest a need for professionals with a proven track record in data engineering, particularly those who can navigate complex technical landscapes and collaborate across different organizational levels.
+
+The educational background indicates a preference for candidates with a Bachelor's degree in Computer Science or a related technical field, emphasizing the importance of formal education in this specialized role.
+
+The AI tools mentioned, including CoPilot and Snowflake Cortex, highlight the company's commitment to cutting-edge technology and innovative data engineering approaches.
+
+The role requires a minimum of 50% in-office presence, with new hires starting full-time to facilitate team integration and relationship building. The position offers a comprehensive benefits package, including competitive salary, flexible holiday options, pension schemes, and various employee support programs.
+
+The company culture emphasizes mutual respect, equal employment opportunities, and creating an inclusive environment where employees can bring their authentic selves to work.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": "Competitive starting salary",
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "hybrid",
+      "location_restriction_text": "minimum of 50% of your working time per month in the office",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Snowflake",
+        "BigQuery", 
+        "Redshift",
+        "DBT",
+        "Visual Studio Code",
+        "Python",
+        "Jenkins",
+        "BitBucket",
+        "Data Warehouse/Kimball methodology",
+        "Fivetran",
+        "HVR",
+        "Docker",
+        "container orchestration tools",
+        "AWS cloud infrastructure",
+        "AWS CDK",
+        "MS SQL",
+        "No SQL database",
+        "MongoDB"
+      ],
+      "nice_to_have_hard_skills": [
+        "AI Tools",
+        "CoPilot",
+        "Snowflake Cortex"
+      ],
+      "must_have_soft_skills": [
+        "Problem Solving",
+        "Communication",
+        "Analytical Skills",
+        "Team Collaboration",
+        "Customer Focus",
+        "Adaptability",
+        "Self-Motivation",
+        "Continuous Learning"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": "BACHELORS",
+      "education_area": "Computer Science",
+      "education_requirement": "preferred",
+      "education_text_raw": "Previous experience working in an e-commerce and/or financial services business",
+      "llm_genai_mentioned": true,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "uk_only",
+      "allowed_countries": ["GB"],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [
+        "Competitive starting salary",
+        "25 days holiday increasing to 31 days with length of service",
+        "Holiday buy and sell scheme",
+        "Pension schemes with matched contributions up to 6%",
+        "Discretionary bonus scheme",
+        "Annual free share awards scheme",
+        "Buy As You Earn (BAYE) Scheme",
+        "Health Cash Plan",
+        "Private healthcare scheme and dental plan",
+        "Free gym membership",
+        "Employee Assistance Programme",
+        "Bike loan scheme",
+        "Sick pay+ pledge",
+        "Enhanced maternity, paternity, and shared parental leave",
+        "Loans for travel season tickets",
+        "Death in service scheme",
+        "Paid time off for volunteer work",
+        "Charitable giving opportunities through salary sacrifice",
+        "Calendar of social events",
+        "Ongoing technical training",
+        "Professional qualification support",
+        "Talent development programmes",
+        "Peer recognition scheme",
+        "Monthly leadership breakfasts and lunches",
+        "Hybrid working"
+      ],
+      "equity_mentioned": true,
+      "learning_budget_mentioned": true,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "generous"
+    },
+    "context": {
+      "team_info_text": "dynamic and experienced Data Engineering team at AJ Bell",
+      "company_description_text": "AJ Bell is one of the fastest-growing investment platform businesses in the UK offering an award-winning range of solutions that caters for everyone, from professional financial advisers to DIY investors with little to no experience. We have over 644,000 customers using our award-winning platform propositions to manage assets totalling more than £103.3 billion. Our customers trust us with their investments, and by continuously striving to make investing easier, we aim to help even more people take control of their financial futures. Having listed on the Main Market of the London Stock Exchange in December 2018, AJ Bell is now a FTSE 250 company. Headquartered in Manchester with offices in central London and Bristol, we now have over 1,500 employees and have been named one of the UK's 'Best 100 Companies to Work For' for six consecutive years and in 2024 named a Great Place to Work®."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 21
+  }
+}
+```

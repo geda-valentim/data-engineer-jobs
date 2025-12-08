@@ -588,7 +588,7 @@ WRONG: nice_to_have (don't use section title)
 
 ```bash
 #Running by date 
-python scripts/ai-enrichment/test_enrichment_local.py --pass3  --s3-source  --date=2025-12-05  --limit=10  --save-json --multiple-models
+python scripts/ai-enrichment/test_enrichment_local.py --pass3  --s3-source  --date=2025-12-05   --save-json --multiple-models --limit=10 
  
 # Test Pass 1 only
 python scripts/ai-enrichment/test_enrichment_local.py --pass1

@@ -1,11 +1,18 @@
 #####################################
-# SQS - Fila de Companies
+# SQS FIFO - Fila de Companies
 #####################################
+# Usando FIFO com MessageGroupId único para garantir:
+# - Processamento sequencial (uma mensagem por vez)
+# - Lambda só recebe próxima mensagem após terminar a atual
+# - Controle de concorrência sem precisar de reserved_concurrent_executions
+# Ref: https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/fifo-queue-lambda-behavior.html
 
-# Dead Letter Queue para mensagens que falharam
+# Dead Letter Queue FIFO
 resource "aws_sqs_queue" "companies_dlq" {
-  name                      = "${var.project_name}-companies-to-fetch-dlq"
-  message_retention_seconds = 1209600 # 14 dias
+  name                        = "${var.project_name}-companies-to-fetch-dlq.fifo"
+  fifo_queue                  = true
+  content_based_deduplication = true
+  message_retention_seconds   = 1209600 # 14 dias
 
   tags = {
     Name    = "${var.project_name}-companies-to-fetch-dlq"
@@ -13,10 +20,15 @@ resource "aws_sqs_queue" "companies_dlq" {
   }
 }
 
-# Fila principal de companies
+# Fila principal de companies - FIFO
 resource "aws_sqs_queue" "companies_queue" {
-  name                       = "${var.project_name}-companies-to-fetch"
-  visibility_timeout_seconds = 300 # 5 min - tempo para Lambda processar
+  name                        = "${var.project_name}-companies-to-fetch.fifo"
+  fifo_queue                  = true
+  content_based_deduplication = true                 # Deduplica por hash do conteúdo
+  deduplication_scope         = "messageGroup"       # Deduplica dentro do grupo
+  fifo_throughput_limit       = "perMessageGroupId"  # Throughput por grupo
+
+  visibility_timeout_seconds = 420 # 7 min - tempo para SF completar
   message_retention_seconds  = 86400 # 1 dia
   receive_wait_time_seconds  = 20 # Long polling
 
@@ -27,7 +39,7 @@ resource "aws_sqs_queue" "companies_queue" {
 
   tags = {
     Name    = "${var.project_name}-companies-to-fetch"
-    Purpose = "Queue for companies to fetch from Bright Data"
+    Purpose = "Queue for companies to fetch from Bright Data - FIFO for concurrency control"
   }
 }
 

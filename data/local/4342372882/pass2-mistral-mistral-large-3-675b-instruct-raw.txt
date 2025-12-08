@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.85,
+        "evidence": "3–5+ years of experience mentioned in the requirements, aligned with mid-level data engineering roles. Title is 'Data Engineer' without senior modifiers.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title explicitly states 'Data Engineer', and core responsibilities focus on ETL/ELT, data modeling, and pipelines.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "process_mining",
+        "confidence": 0.90,
+        "evidence": "Core focus on process mining platforms (e.g., Celonis), PQL, and ERP data extraction (SAP). Kafka and streaming are nice-to-haves but not primary.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.75,
+        "evidence": "Role involves acting as technical owner of the Process Intelligence platform, translating technical realities into business impact, and collaborating with consultants/stakeholders. No direct people management mentioned.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit mention of AWS, Azure, GCP, or cloud services in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No secondary clouds mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.65,
+        "evidence": "Mentions both batch (ETL/ELT, data modeling) and streaming (Kafka, event-driven connections as nice-to-haves). No strong emphasis on either paradigm.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit mention of orchestrators like Airflow, Dagster, Prefect, or cloud-native alternatives.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.70,
+        "evidence": "Mentions major data platforms (Databricks, Snowflake) which are typically used for warehouse and lake patterns. No explicit lakehouse tools (Delta Lake, Iceberg) mentioned.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.75,
+        "evidence": "Location specified as Amsterdam, Netherlands, with hybrid/remote flexibility mentioned. Likely implies same region (Europe) for remote work.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "europe",
+        "confidence": 0.90,
+        "evidence": "Location is Amsterdam, Netherlands, and team is described as international but no specific timezone requirements beyond region.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Hybrid/remote flexibility mentioned, no explicit relocation package or requirement stated.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Pass 1 extraction states 'not_mentioned' for visa sponsorship, and location is outside the US.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of OPT/CPT or student visa support, and location is outside the US.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No discussion of citizenship or work authorization requirements in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Employment type is full-time and contract type is permanent, but no explicit mention of W2, C2C, or 1099 in the Netherlands context.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "standard",
+        "confidence": 0.70,
+        "evidence": "Benefits mentioned include competitive compensation, development opportunities, hybrid/remote flexibility, and a water-front workplace. No premium benefits like equity or learning budgets explicitly stated.",
+        "source": "inferred"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Mentions 'development opportunities' and 'grow' in the team description, but no explicit career tracks or promotion ladders.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.65,
+        "evidence": "Describes team as 'international, smart and ambitious' with collaboration emphasis, but no formal mentorship program mentioned.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotions or advancement paths in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No discussion of internal mobility or lateral moves in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.60,
+        "evidence": "Role emphasizes technical ownership and collaboration, suggesting an IC track. No explicit mention of management, specialist, or architect tracks.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Clear distinction between must-haves (8 skills) and nice-to-haves (6 skills), with balanced language in requirements.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Job description is focused on data engineering for process intelligence, with well-defined responsibilities and no ambiguity.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Must-haves align with mid-level data engineering roles (3–5+ years), no unrealistic skill combinations detected.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

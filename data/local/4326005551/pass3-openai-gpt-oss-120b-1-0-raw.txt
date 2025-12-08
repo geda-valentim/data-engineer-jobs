@@ -4,13 +4,13 @@
       "data_maturity_score": {
         "value": 2,
         "confidence": 0.75,
-        "evidence": "Only GCP, Git, CI/CD are mentioned; no orchestration, warehouse, or data quality tooling is specified, indicating basic automation but limited overall data platform maturity.",
+        "evidence": "Job mentions CI/CD and data quality checks but does not name modern stack components such as dbt, Airflow, or a data warehouse; governance tools are absent.",
         "source": "inferred"
       },
       "data_maturity_level": {
         "value": "developing",
         "confidence": 0.75,
-        "evidence": "Score 2 maps to the \"developing\" maturity level.",
+        "evidence": "Score of 2 maps to the \"developing\" maturity level.",
         "source": "inferred"
       },
       "maturity_signals": {
@@ -18,34 +18,34 @@
           "cicd_practices",
           "data_quality_testing"
         ],
-        "confidence": 0.78,
-        "evidence": "Job description explicitly requires CI/CD experience and mentions implementing data quality checks; no modern stack components (e.g., dbt, Airflow) are listed.",
-        "source": "pass1_derived"
+        "confidence": 0.8,
+        "evidence": "CI/CD is explicitly required; responsibilities include implementing data quality verifications.",
+        "source": "combined"
       }
     },
     "red_flags_and_role_quality": {
       "scope_creep_score": {
-        "value": 0.12,
+        "value": 0.15,
         "confidence": 0.9,
-        "evidence": "Responsibilities are limited to data pipeline building, data quality, and mentoring junior engineers; no mention of dev‑ops, analytics, or ML responsibilities.",
+        "evidence": "Responsibilities are limited to data pipeline construction, data quality, security, and junior mentorship – no unrelated duties.",
         "source": "inferred"
       },
       "overtime_risk_score": {
-        "value": 0.35,
+        "value": 0.25,
         "confidence": 0.8,
-        "evidence": "No explicit on‑call or overtime language, but senior onsite role at a large enterprise can imply occasional peak periods.",
+        "evidence": "No on‑call or overtime language; however, the role is at a large enterprise which can imply occasional high‑tempo periods.",
         "source": "inferred"
       },
       "role_clarity": {
         "value": "clear",
         "confidence": 0.95,
-        "evidence": "Job description lists a focused set of data‑engineering tasks and a mentorship component without ambiguous duties.",
+        "evidence": "Job description lists a focused set of data‑engineering tasks and mentorship duties without mixing other functions.",
         "source": "inferred"
       },
       "overall_red_flag_score": {
         "value": 0.22,
         "confidence": 0.85,
-        "evidence": "Low scope creep and moderate overtime risk combined with clear responsibilities produce a low overall red‑flag rating.",
+        "evidence": "Low scope creep, modest overtime risk, clear role, but missing salary, benefits, and reporting details raise minor concerns.",
         "source": "combined"
       }
     },
@@ -53,29 +53,25 @@
       "reporting_structure_clarity": {
         "value": "not_mentioned",
         "confidence": 0.8,
-        "evidence": "The posting does not specify to whom the Data Engineer reports.",
+        "evidence": "Posting does not specify to whom the Data Engineer reports.",
         "source": "pass1_derived"
       },
       "manager_level_inferred": {
         "value": "not_mentioned",
         "confidence": 0.7,
-        "evidence": "No manager title (e.g., Head of Data, Engineering Manager) is referenced.",
+        "evidence": "No manager title is provided in the description.",
         "source": "pass1_derived"
       },
       "team_growth_velocity": {
         "value": "not_mentioned",
-        "confidence": 0.75,
-        "evidence": "No statements about hiring pace or team expansion are present.",
+        "confidence": 0.7,
+        "evidence": "No explicit statements about hiring pace or team expansion.",
         "source": "pass1_derived"
       },
       "team_composition": {
-        "value": {
-          "team_size": "not_mentioned",
-          "de_count": "not_mentioned",
-          "seniority_mix": "not_mentioned"
-        },
-        "confidence": 0.8,
-        "evidence": "The posting provides no details on team size or composition.",
+        "value": null,
+        "confidence": 0.6,
+        "evidence": "No details on team size, number of engineers, or seniority mix are provided.",
         "source": "pass1_derived"
       },
       "reporting_structure": {
@@ -87,34 +83,34 @@
       "cross_functional_embedded": {
         "value": false,
         "confidence": 0.7,
-        "evidence": "The role is described as part of a regional data team, not embedded in product squads.",
-        "source": "inferred"
+        "evidence": "Job description does not mention working embedded in product or cross‑functional squads.",
+        "source": "pass1_derived"
       }
     },
     "tech_culture": {
       "work_life_balance_score": {
-        "value": 0.32,
-        "confidence": 0.75,
-        "evidence": "No PTO, flexible schedule, or remote options are mentioned; onsite requirement suggests a traditional work rhythm.",
+        "value": 0.4,
+        "confidence": 0.7,
+        "evidence": "No PTO, benefits, or remote‑work policies are mentioned; lack of such signals suggests a neutral to slightly negative balance.",
         "source": "inferred"
       },
       "growth_opportunities_score": {
-        "value": 0.28,
-        "confidence": 0.8,
-        "evidence": "The posting does not reference learning budgets, conferences, or clear promotion paths.",
-        "source": "pass1_derived"
+        "value": 0.5,
+        "confidence": 0.7,
+        "evidence": "Mentorship of junior engineers is noted, but there is no mention of learning budgets, conferences, or clear promotion paths.",
+        "source": "inferred"
       },
       "tech_culture_score": {
-        "value": 0.45,
-        "confidence": 0.8,
-        "evidence": "Presence of CI/CD and Git indicates some engineering rigor, but lack of modern data‑stack tools limits overall culture score.",
+        "value": 0.55,
+        "confidence": 0.75,
+        "evidence": "Presence of CI/CD and data‑quality focus indicates some engineering rigor, yet absence of modern stack tools and cultural perks limits the score.",
         "source": "inferred"
       }
     },
     "tech_culture_assessment": {
       "tech_culture_signals": {
         "value": [],
-        "confidence": 0.9,
+        "confidence": 0.8,
         "evidence": "No mention of open‑source contributions, tech blogs, conferences, or hackathons.",
         "source": "pass1_derived"
       },
@@ -123,79 +119,79 @@
           "ci_cd"
         ],
         "confidence": 0.85,
-        "evidence": "Job requires advanced CI/CD experience and advanced Git usage.",
+        "evidence": "Job requires advanced use of CI/CD pipelines.",
         "source": "pass1_derived"
       },
       "innovation_signals": {
         "value": "not_mentioned",
-        "confidence": 0.8,
+        "confidence": 0.7,
         "evidence": "No language about experimentation, R&D time, or exploring new technologies.",
         "source": "pass1_derived"
       },
       "tech_debt_awareness": {
         "value": false,
         "confidence": 0.8,
-        "evidence": "No reference to tech‑debt reduction or refactoring initiatives.",
+        "evidence": "No reference to refactoring, tech‑debt reduction, or modernization initiatives.",
         "source": "pass1_derived"
       }
     },
     "ai_ml_integration": {
       "ai_integration_level": {
         "value": "none",
-        "confidence": 0.9,
-        "evidence": "The posting contains no mention of machine‑learning models, feature stores, or MLOps tooling.",
+        "confidence": 0.85,
+        "evidence": "Job description contains no references to machine‑learning models, feature stores, or MLOps tooling.",
         "source": "pass1_derived"
       },
       "ml_tools_expected": {
         "value": [],
         "confidence": 0.9,
-        "evidence": "No ML‑related tools are listed in the hard‑skill requirements.",
+        "evidence": "No ML‑related tools are listed.",
         "source": "pass1_derived"
       }
     },
     "competition_and_timing": {
       "hiring_urgency": {
         "value": "not_mentioned",
-        "confidence": 0.85,
+        "confidence": 0.7,
         "evidence": "No language indicating immediate or accelerated hiring.",
         "source": "pass1_derived"
       },
       "competition_level": {
         "value": "not_mentioned",
-        "confidence": 0.8,
-        "evidence": "No data on applicant volume, salary competitiveness, or location scarcity.",
+        "confidence": 0.7,
+        "evidence": "No data on applicant volume or market competitiveness.",
         "source": "pass1_derived"
       }
     },
     "company_context": {
       "company_stage_inferred": {
         "value": "enterprise",
-        "confidence": 0.96,
+        "confidence": 0.9,
         "evidence": "Equifax is a globally recognized credit‑reporting enterprise with >10,000 employees.",
         "source": "inferred"
       },
       "hiring_velocity": {
         "value": "not_mentioned",
-        "confidence": 0.85,
-        "evidence": "No indication of aggressive or steady hiring cadence.",
+        "confidence": 0.8,
+        "evidence": "No explicit statements about hiring speed or multiple open roles.",
         "source": "pass1_derived"
       },
       "team_size_signals": {
         "value": "not_mentioned",
-        "confidence": 0.85,
+        "confidence": 0.8,
         "evidence": "Team size is not disclosed in the posting.",
         "source": "pass1_derived"
       },
       "funding_stage_signals": {
         "value": "not_mentioned",
         "confidence": 0.9,
-        "evidence": "Equifax is a public company; funding stage is irrelevant.",
-        "source": "inferred"
+        "evidence": "Equifax is a public company; funding stage is not applicable.",
+        "source": "pass1_derived"
       },
       "role_creation_type": {
         "value": "not_mentioned",
-        "confidence": 0.85,
-        "evidence": "The posting does not state whether this is a new headcount or a backfill.",
+        "confidence": 0.8,
+        "evidence": "No indication whether the role is a new headcount or a backfill.",
         "source": "pass1_derived"
       }
     }
@@ -203,68 +199,63 @@
   "summary": {
     "strength_categories": [
       "cloud_native",
-      "well_defined_role",
       "data_focused_role",
-      "established_company",
-      "clear_requirements"
+      "clear_requirements",
+      "well_defined_role"
     ],
     "strength_details": [
-      "Role is centered on GCP cloud‑native data engineering.",
-      "Clear, focused responsibilities with mentorship duties.",
-      "Strong emphasis on data quality, integration, and modeling.",
-      "Equifax is a large, stable enterprise with global presence.",
-      "High requirement strictness ensures well‑defined skill expectations."
+      "Strong focus on GCP cloud-native data engineering.",
+      "Clear, senior‑level data‑engineering responsibilities with mentorship duties.",
+      "High requirement strictness ensures qualified candidates.",
+      "Well‑defined scope without unrelated duties."
     ],
     "concern_categories": [
       "salary_not_disclosed",
       "no_visa_sponsorship",
-      "limited_growth",
-      "weak_work_life_balance"
+      "unclear_reporting",
+      "limited_growth"
     ],
     "concern_details": [
-      "Compensation range is not provided, making salary negotiation uncertain.",
-      "Visa sponsorship is not mentioned, limiting eligibility for non‑Chilean candidates.",
-      "No career‑path, learning budget, or promotion information is shared.",
-      "Onsite work model with no PTO or flexible schedule details suggests limited work‑life balance."
+      "Compensation range and benefits are not provided.",
+      "Visa sponsorship is not mentioned, limiting international candidates.",
+      "Reporting line and manager level are unspecified.",
+      "No explicit career‑path or learning‑budget information."
     ],
     "best_fit_categories": [
       "senior_data_engineers",
       "pipeline_developers",
-      "enterprise_experienced",
-      "data_generalists"
+      "data_generalists",
+      "enterprise_experienced"
     ],
     "best_fit_details": [
-      "Senior data engineers with 5+ years of batch ETL experience on GCP.",
-      "Professionals comfortable mentoring junior engineers and enforcing data quality.",
-      "Candidates who prefer stable, large‑enterprise environments over fast‑moving startups.",
-      "Engineers looking for a focused data‑engineering role without heavy ML or dev‑ops responsibilities."
+      "Senior DEs with 5+ years of batch ETL experience on GCP.",
+      "Engineers comfortable mentoring junior staff and owning end‑to‑end pipelines.",
+      "Candidates accustomed to large‑enterprise data environments."
     ],
     "probe_categories": [
-      "salary_range_details",
-      "benefits_details",
-      "career_growth_path",
+      "team_size_composition",
+      "reporting_structure",
+      "tech_stack_details",
       "work_hour_expectations",
-      "team_turnover_history"
+      "career_growth_path"
     ],
     "probe_details": [
-      "What is the total compensation package, including base, bonus, and equity?",
-      "Are there any PTO, health, or other benefit programs offered?",
-      "Can you describe the typical promotion or career‑advancement path for data engineers?",
-      "What are the expected weekly work hours and are there any on‑call duties?",
-      "Has the data engineering team experienced recent turnover, and if so, why?"
+      "What is the size and seniority mix of the data engineering team?",
+      "To whom does this role report, and what is the manager's level?",
+      "Which orchestration and storage technologies are currently used (e.g., Airflow, BigQuery)?",
+      "Are there on‑call duties or expectations for overtime?",
+      "What formal career progression or learning resources are offered?"
     ],
     "leverage_categories": [
       "exact_experience_match",
-      "domain_expertise",
-      "quick_availability"
+      "domain_expertise"
     ],
     "leverage_details": [
-      "5+ years of GCP‑based batch pipeline experience aligns directly with the role’s core needs.",
-      "Prior experience in the financial services sector (Equifax’s domain) is a strong differentiator.",
-      "Immediate availability can accelerate the hiring timeline if the role is urgent."
+      "5+ years of GCP‑focused data engineering aligns directly with the role.",
+      "Experience in the financial services sector (Equifax) is a strong differentiator."
     ],
-    "overall_assessment": "The position offers a well‑defined, senior data‑engineering role at a large, stable enterprise with a clear GCP focus. Compensation details and growth pathways are opaque, and there is no visa sponsorship, which may limit the candidate pool. Overall, it is a solid fit for experienced engineers seeking stability and a focused technical scope.",
-    "recommendation_score": 0.62,
-    "recommendation_confidence": 0.84
+    "overall_assessment": "The role offers a solid senior data‑engineering position within a large, stable enterprise, with clear technical expectations and mentorship responsibilities. Lack of disclosed compensation, benefits, and reporting details are the main drawbacks.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.8
   }
 }

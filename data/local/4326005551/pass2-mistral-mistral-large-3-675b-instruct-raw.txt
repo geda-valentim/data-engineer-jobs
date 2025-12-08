@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.9,
+        "evidence": "5+ años de experiencia como ingeniero de datos + mentoría a ingenieros junior + revisión de implementaciones",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title mentions Data Engineer, core responsibilities focus on data pipelines and data quality",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_quality",
+        "confidence": 0.7,
+        "evidence": "Strong emphasis on data quality, rules, and anomaly resolution in the description",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.85,
+        "evidence": "Mentoring junior engineers + reviewing implementations + providing guidance without direct reports mentioned",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "gcp",
+        "confidence": 0.95,
+        "evidence": "GCP (Google Cloud Platform) mentioned explicitly as a focus area",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": ["aws", "azure"],
+        "confidence": 0.6,
+        "evidence": "Basic knowledge of other cloud environments mentioned, likely includes AWS and Azure",
+        "source": "inferred"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.65,
+        "evidence": "Mentions data pipelines for collecting data (batch) + intermediate GCP experience (could include streaming)",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit mention of orchestration tools like Airflow, Spark, or others",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.6,
+        "evidence": "Intermediate GCP experience + data pipelines for analytical use suggests both warehouse and lake patterns",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.7,
+        "evidence": "Role is for regional team (Chile and US) with location in Santiago, Chile",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "global",
+        "confidence": 0.6,
+        "evidence": "Team is regional covering Chile and US, no strict timezone requirement mentioned",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of relocation packages or requirements, role is open to regional team",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No visa sponsorship mentioned in Pass 1 results",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No signals for OPT/CPT or student visa support in the posting",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit work authorization or citizenship requirements stated",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.8,
+        "evidence": "Full-time employment type stated in Pass 1, typical for W2 roles",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits mentioned in Pass 1 results",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.6,
+        "evidence": "Mentions providing mentoría to junior engineers, suggesting growth opportunities",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "explicit_yes",
+        "confidence": 0.9,
+        "evidence": "Explicitly states 'Proporcionar orientación y mentoría a ingenieros de datos junior'",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit mention of promotion paths or advancement tracks",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of internal mobility or role changes in the posting",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.6,
+        "evidence": "Mentoring junior engineers suggests IC track, but no explicit mention of management or other tracks",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.7,
+        "evidence": "Mix of required (5+ años, Licenciatura, Python, SQL) and preferred (Maestría, certificación en la nube) skills",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.8,
+        "evidence": "Well-defined responsibilities focusing on data engineering tasks",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "5+ years experience aligns with senior-level expectations, no unrealistic skill combinations",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

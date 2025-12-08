@@ -1,0 +1,218 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+First, let me identify the key information:
+
+**Title**: Sr Data Engineer - Onsite
+**Company**: Bio-Techne
+**Location**: Denver, CO
+
+**Compensation**: 
+- Pay Range $100,800.00 - $165,600.00
+- Also mentions "Employer salary range - 125-150K"
+- This is clearly yearly salary
+
+**Work Authorization**:
+- "Bio-Techne is an E-Verify Employer in the United States"
+- "All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or status as a protected veteran"
+- No specific mention of visa sponsorship
+
+**Work Model**:
+- "Onsite role- no remote work"
+- This is clearly onsite
+
+**Contract Details**:
+- This appears to be a permanent full-time position
+- No mention of contract terms
+
+**Skills Classification**:
+Let me analyze the skills mentioned:
+
+From "Essential Functions":
+- Architect, design, and maintain complex data pipelines and ETL workflows
+- Lead development of cloud-based data architectures (AWS Redshift, Azure Synapse, GCP BigQuery)
+- Optimize data storage, retrieval, and processing
+- Implement data governance, security, and compliance
+- Collaborate with cross-functional teams
+- Develop coding standards, documentation, quality assurance
+- Mentor junior data engineers
+- Troubleshoot data pipeline issues
+
+From "Knowledge, Skills, And Abilities (KSAOs)":
+- "Proven experience designing and managing cloud data platforms (AWS, Azure, GCP)" - this is strong qualifier
+- "Strong background in distributed data processing frameworks (Apache Spark) and workflow orchestration tools (Apache Airflow)" - strong qualifiers
+- "Expertise in Python, SQL, and advanced ETL concepts" - strong qualifiers
+- "Familiarity with CI/CD pipelines, containerization (Docker), and infrastructure-as-code tools is a plus" - weak qualifier
+
+
+- "Strong understanding of data architecture principles, scalability, and security" - strong qualifiers
+- "Ability to lead projects and mentor team members effectively" - strong qualifiers
+- "Excellent problem-solving skills and ability to work in a fast-paced environment" - strong qualifiers
+- "Strong communication and collaboration skills" - strong qualifiers
+- "Certifications such as AWS Certified Data Analytics, Google Cloud Professional Data Engineer, or Azure Data Engineer Associate are highly desirable" - weak qualifier
+
+I'll focus on the technical and leadership competencies that demonstrate the candidate's comprehensive skill set. The role requires a blend of deep technical expertise, strategic thinking, and interpersonal abilities. Key areas include cloud platform management, data engineering, and team leadership.
+
+The position demands advanced technical skills across multiple domains, with a strong emphasis on cloud technologies, data processing, and architectural design. Leadership and communication capabilities are equally critical for success in this senior engineering role.
+
+The compensation package reflects the senior level, with a salary range between $100,800 and $165,600, indicating a competitive offering for an experienced professional. The role is fully onsite in Denver, with no remote work flexibility.
+
+The position requires a Bachelor's degree in a technical field, with a preference for a Master's degree. Candidates should have at least 5 years of professional experience in data engineering or a related field, demonstrating a clear progression in their career.
+
+The benefits package is comprehensive, including medical, dental, vision, and life insurance from day one. Additional perks include 401k plans, stock purchase options, health savings accounts, and various leave policies, reflecting the company's commitment to employee well-being and financial security.
+
+The company culture emphasizes empowerment and innovation, encouraging employees to contribute new ideas and develop their careers through mentorship, training, and professional growth opportunities.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": true,
+      "salary_min": 100800,
+      "salary_max": 165600,
+      "salary_currency": "USD",
+      "salary_period": "yearly",
+      "salary_text_raw": "Pay Range $100,800.00 - $165,600.00",
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": "Bio-Techne is an E-Verify Employer in the United States. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or status as a protected veteran.",
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Onsite role- no remote work",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "salary",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "data pipelines",
+        "ETL workflows",
+        "AWS Redshift",
+        "Azure Synapse",
+        "GCP BigQuery",
+        "data storage optimization",
+        "data retrieval optimization",
+        "data processing optimization",
+        "data governance",
+        "data security",
+        "data compliance",
+        "coding standards",
+        "documentation",
+        "quality assurance",
+        "Apache Spark",
+        "Apache Airflow",
+        "Python",
+        "SQL",
+        "advanced ETL concepts",
+        "data architecture principles",
+        "scalability",
+        "security"
+      ],
+      "nice_to_have_hard_skills": [
+        "CI/CD pipelines",
+        "Docker",
+        "infrastructure-as-code tools",
+        "AWS Certified Data Analytics",
+        "Google Cloud Professional Data Engineer",
+        "Azure Data Engineer Associate"
+      ],
+      "must_have_soft_skills": [
+        "Leadership",
+        "Problem Solving",
+        "Communication",
+        "Team Collaboration"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [
+        "AWS Certified Data Analytics",
+        "Google Cloud Professional Data Engineer",
+        "Azure Data Engineer Associate"
+      ],
+      "years_experience_min": 5,
+      "years_experience_max": null,
+      "years_experience_text": "5+ years of professional experience in data engineering or related roles",
+      "education_level": "BACHELORS",
+      "education_area": "Computer Science",
+      "education_requirement": "required",
+      "education_text_raw": "Bachelor's degree in Computer Science, Data Engineering, Information Systems, or related field required; Master's degree preferred",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "us_only",
+      "allowed_countries": ["US"],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "must_be_resident"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [
+        "medical insurance",
+        "dental insurance",
+        "vision insurance",
+        "life insurance",
+        "short-term disability",
+        "long-term disability",
+        "pet insurance",
+        "legal and ID shield",
+        "401k plans",
+        "employee stock purchase plan (ESPP)",
+        "Health Saving Account (HSA)",
+        "Flexible Spending Account (FSA)",
+        "Dependent Care FSA",
+        "mentorship",
+        "promotional opportunities",
+        "training and development",
+        "tuition reimbursement",
+        "internship programs",
+        "employee resource groups",
+        "volunteer paid time off",
+        "employee events",
+        "charity drives",
+        "paid holidays",
+        "paid time off",
+        "paid parental leave"
+      ],
+      "equity_mentioned": true,
+      "learning_budget_mentioned": true,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "generous"
+    },
+    "context": {
+      "team_info_text": "Mentor and guide junior data engineers, providing technical leadership and career development support. Collaborate with cross-functional teams to integrate diverse data sources into enterprise data systems.",
+      "company_description_text": "By joining Bio-Techne, you'll join a company with a powerful and positive purpose of enabling cutting-edge research in Life Sciences and Clinical Diagnostics. Bio-Techne, and all of its brands, provides tools for researchers to further treat and prevent disease worldwide."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 21
+  }
+}
+```

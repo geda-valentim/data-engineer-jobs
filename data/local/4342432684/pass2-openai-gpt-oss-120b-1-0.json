@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2025-12-07 07:32:15",
+    "timestamp": "2025-12-07 23:25:22",
     "job_posting_id": "4342432684",
     "job_title": "Data Modeler_W2_ Sacramento CA",
     "company_name": "Chelsoft Solutions Co.",
@@ -14,32 +14,32 @@
         "seniority_level": {
           "value": "senior",
           "confidence": 0.95,
-          "evidence": "Job requires minimum 10 years experience and explicitly calls for a \"Senior, hands‑on data modeler\".",
+          "evidence": "Job description requires a minimum of 10 years experience and explicitly labels the role as Senior.",
           "source": "combined"
         },
         "job_family": {
           "value": "data_architect",
-          "confidence": 0.82,
-          "evidence": "Title and responsibilities focus on enterprise data warehouse modeling, dimensional design, and architecture of data assets.",
+          "confidence": 0.88,
+          "evidence": "Title and responsibilities focus on enterprise data warehouse modeling, conceptual/logical/physical design, and Kimball dimensional modeling, which aligns with a data architect role.",
           "source": "combined"
         },
         "sub_specialty": {
-          "value": "data_warehouse",
-          "confidence": 0.86,
-          "evidence": "Responsibilities include developing conceptual, logical, and physical models for an enterprise data warehouse and using Kimball dimensional modeling.",
-          "source": "combined"
+          "value": "data_modeling",
+          "confidence": 0.92,
+          "evidence": "Core duties are building conceptual, logical, and physical data models, dimensional modeling, and schema design (star, snowflake, hybrid).",
+          "source": "pass1_derived"
         },
         "leadership_expectation": {
           "value": "tech_lead_ic",
-          "confidence": 0.81,
-          "evidence": "Mentors and educates team members and provides technical leadership of an Oracle data warehouse team, but no direct‑report responsibilities are listed.",
-          "source": "combined"
+          "confidence": 0.85,
+          "evidence": "Mentors and educates team members, provides technical leadership of an Oracle data warehouse team, but no direct reports are mentioned.",
+          "source": "inferred"
         }
       },
       "stack_and_cloud": {
         "primary_cloud": {
           "value": "not_mentioned",
-          "confidence": 0.65,
+          "confidence": 0.7,
           "evidence": "Only Oracle Cloud Infrastructure (OCI) is referenced, which is not among the allowed cloud categories (aws, azure, gcp, multi, on_prem).",
           "source": "inferred"
         },
@@ -51,133 +51,133 @@
         },
         "processing_paradigm": {
           "value": "batch",
-          "confidence": 0.92,
-          "evidence": "Job emphasizes ETL activities, dimensional modeling, and data warehouse implementation without any streaming technologies.",
-          "source": "pass1_derived"
+          "confidence": 0.88,
+          "evidence": "Responsibilities include ETL activities, data warehouse implementation, and dimensional modeling—typical batch processing workloads.",
+          "source": "inferred"
         },
         "orchestrator_category": {
           "value": "not_mentioned",
-          "confidence": 0.94,
-          "evidence": "No workflow/orchestration tool (e.g., Airflow, Luigi, dbt) is referenced.",
+          "confidence": 0.95,
+          "evidence": "No orchestration tools (Airflow, Luigi, dbt, etc.) are referenced.",
           "source": "pass1_derived"
         },
         "storage_layer": {
           "value": "warehouse",
-          "confidence": 0.88,
-          "evidence": "Mentions Star, Snowflake, and hybrid schemas, all of which are data‑warehouse technologies.",
-          "source": "pass1_derived"
+          "confidence": 0.92,
+          "evidence": "Focus on enterprise data warehouse, star/snowflake/hybrid schemas, and Oracle Autonomous Data Warehouse.",
+          "source": "inferred"
         }
       },
       "geo_and_work_model": {
         "remote_restriction": {
           "value": "same_region",
-          "confidence": 0.96,
-          "evidence": "Requirement: \"Must live within 60 miles maximum from location\" (Sacramento, CA).",
+          "confidence": 0.93,
+          "evidence": "Must live within 60 miles of Sacramento, CA and hybrid work requires two days in‑office.",
           "source": "pass1_derived"
         },
         "timezone_focus": {
-          "value": "not_mentioned",
+          "value": "americas",
           "confidence": 0.8,
-          "evidence": "No explicit timezone or regional focus is stated beyond the Sacramento location.",
-          "source": "pass1_derived"
+          "evidence": "Location is in California, USA, implying a focus on the Americas time zones.",
+          "source": "inferred"
         },
         "relocation_required": {
           "value": false,
-          "confidence": 0.95,
-          "evidence": "Candidate must already reside within 60 miles; no relocation assistance is mentioned.",
-          "source": "pass1_derived"
+          "confidence": 0.9,
+          "evidence": "Candidate must already reside within 60 miles of the job site; no relocation is offered.",
+          "source": "inferred"
         }
       },
       "visa_and_authorization": {
         "h1b_friendly": {
-          "value": "not_mentioned",
-          "confidence": 0.9,
-          "evidence": "Visa sponsorship status is listed as \"not_mentioned\" in the extraction.",
+          "value": false,
+          "confidence": 0.92,
+          "evidence": "Visa sponsorship is listed as not_mentioned in the extraction.",
           "source": "pass1_derived"
         },
         "opt_cpt_friendly": {
-          "value": "not_mentioned",
-          "confidence": 0.88,
-          "evidence": "No reference to OPT/CPT eligibility in the posting.",
-          "source": "pass1_derived"
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of OPT/CPT eligibility; work authorization is implied for existing residents.",
+          "source": "inferred"
         },
         "citizenship_required": {
-          "value": "not_mentioned",
-          "confidence": 0.9,
-          "evidence": "Neither citizenship nor work‑authorization requirements are specified.",
+          "value": "work_auth_only",
+          "confidence": 0.88,
+          "evidence": "Requirement is to be a resident within 60 miles; no citizenship restriction is stated.",
           "source": "pass1_derived"
         }
       },
       "contract_and_compensation": {
         "w2_vs_1099": {
           "value": "w2",
-          "confidence": 0.82,
-          "evidence": "Job title includes \"_W2_\" indicating a full‑time employee arrangement.",
-          "source": "combined"
+          "confidence": 0.96,
+          "evidence": "Job title includes \"W2\" indicating a full‑time employee arrangement.",
+          "source": "pass1_derived"
         },
         "benefits_level": {
           "value": "none_mentioned",
-          "confidence": 0.93,
+          "confidence": 0.94,
           "evidence": "Extraction shows no benefits listed.",
           "source": "pass1_derived"
         }
       },
       "career_development": {
         "growth_path_clarity": {
-          "value": "not_mentioned",
-          "confidence": 0.92,
-          "evidence": "The posting does not discuss career ladders, promotion tracks, or growth opportunities.",
-          "source": "pass1_derived"
+          "value": "vague",
+          "confidence": 0.72,
+          "evidence": "The posting mentions senior level and mentoring but provides no explicit career ladder or promotion tracks.",
+          "source": "inferred"
         },
         "mentorship_signals": {
           "value": "implied",
-          "confidence": 0.81,
-          "evidence": "Responsibilities include \"Mentors and educates team members on best practices\" indicating informal mentorship.",
-          "source": "pass1_derived"
+          "confidence": 0.84,
+          "evidence": "Responsibilities include mentoring and educating team members, indicating informal mentorship.",
+          "source": "inferred"
         },
         "promotion_path_mentioned": {
           "value": false,
-          "confidence": 0.94,
-          "evidence": "No language about promotions or advancement paths appears in the description.",
+          "confidence": 0.9,
+          "evidence": "No language about promotion, advancement, or career ladders appears in the posting.",
           "source": "pass1_derived"
         },
         "internal_mobility_mentioned": {
           "value": false,
-          "confidence": 0.94,
-          "evidence": "The posting does not reference internal transfers or lateral moves.",
+          "confidence": 0.92,
+          "evidence": "The description does not reference internal transfers or mobility programs.",
           "source": "pass1_derived"
         },
         "career_tracks_available": {
           "value": [],
-          "confidence": 0.9,
-          "evidence": "No explicit mention of IC, management, specialist, or architect tracks.",
+          "confidence": 0.95,
+          "evidence": "No specific career tracks (IC, management, specialist, architect) are mentioned.",
           "source": "pass1_derived"
         }
       },
       "requirements_classification": {
         "requirement_strictness": {
           "value": "high",
-          "confidence": 0.91,
-          "evidence": "Requires 10+ years experience, multiple specific Oracle tools, and a long list of mandatory hard and soft skills.",
-          "source": "pass1_derived"
+          "confidence": 0.86,
+          "evidence": "The posting lists many mandatory hard and soft skills, specific years of experience, and detailed technology requirements.",
+          "source": "inferred"
         },
         "scope_definition": {
           "value": "clear",
-          "confidence": 0.9,
-          "evidence": "Job description is focused specifically on data modeling for an enterprise data warehouse.",
-          "source": "pass1_derived"
+          "confidence": 0.91,
+          "evidence": "The role is narrowly defined around data modeling for an enterprise data warehouse.",
+          "source": "inferred"
         },
         "skill_inflation_detected": {
           "value": false,
-          "confidence": 0.92,
-          "evidence": "The skill set aligns with a senior‑level data modeling role and matches the 10‑year experience requirement.",
-          "source": "combined"
+          "confidence": 0.9,
+          "evidence": "Required skills and experience align with a senior‑level data modeling position; no unrealistic expectations are evident.",
+          "source": "inferred"
         }
       }
     },
     "tokens": 9126,
-    "input_tokens": 6076,
-    "output_tokens": 3050,
-    "cost": 0.0018263999999999997
+    "input_tokens": 6113,
+    "output_tokens": 3013,
+    "cost": 0.00182085
   }
 }

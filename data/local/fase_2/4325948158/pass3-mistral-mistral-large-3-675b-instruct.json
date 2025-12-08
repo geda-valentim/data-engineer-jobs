@@ -1,0 +1,293 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 02:32:53",
+    "job_posting_id": "4325948158",
+    "job_title": "Data Engineer",
+    "company_name": "Manchester Digital",
+    "job_location": "Manchester, England, United Kingdom",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 4,
+          "confidence": 0.85,
+          "evidence": "Mentions modern data stack tools (Snowflake, dbt, Airflow), CI/CD practices (Jenkins), data quality testing (automated tests), and data governance (compliance, data dictionary, data classification policies).",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "managed",
+          "confidence": 0.85,
+          "evidence": "Matches the data_maturity_score of 4 with explicit mentions of governance, quality, and modern tooling.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption",
+            "cicd_practices",
+            "data_quality_testing",
+            "data_governance"
+          ],
+          "confidence": 0.9,
+          "evidence": "Job posting explicitly mentions dbt, Snowflake, BigQuery, Redshift, Jenkins (CI/CD), automated tests for data quality, and data governance policies.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.15,
+          "confidence": 0.9,
+          "evidence": "Role is clearly defined as a Data Engineer with no conflation of responsibilities such as Data Science, DevOps, or backend development.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.35,
+          "confidence": 0.8,
+          "evidence": "Hybrid work model and generous PTO are protective factors, but 'fast-growing' and 'initial full-time office period' suggest startup pace and potential time pressure.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "Responsibilities are well-defined and specific to data engineering tasks such as ELT pipelines, data modeling, and platform maintenance.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.25,
+          "confidence": 0.85,
+          "evidence": "Low scope creep and clear role definition, but moderate overtime risk due to growth pace and hybrid work initiation period.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "vague",
+          "confidence": 0.95,
+          "evidence": "Job posting mentions collaboration with stakeholders and internal customers but does not specify a direct reporting line or manager title beyond 'Head of Data Engineering' not being explicitly stated as the manager.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "director_plus",
+          "confidence": 0.5,
+          "evidence": "Inferred from the mention of 'Head of Data Engineering' which could imply a director-level role, but confidence is low due to lack of explicit reporting structure.",
+          "source": "inferred"
+        },
+        "team_growth_velocity": {
+          "value": "steady_growth",
+          "confidence": 0.85,
+          "evidence": "Company is expanding its data team and is in a growth phase with over 1,500 employees and a FTSE 250 listing.",
+          "source": "inferred"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "medium_6_15",
+            "de_count": "5+ data engineers",
+            "seniority_mix": "mix of senior and mid-level"
+          },
+          "confidence": 0.8,
+          "evidence": "Pass 1 mentions 'dynamic and experienced Data Engineering team' and Pass 2 infers a team size of 8-15 engineers within the data org.",
+          "source": "combined"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit reporting structure mentioned beyond being part of a data team; 'Head of Data Engineering' is likely the manager but not confirmed.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.75,
+          "evidence": "Job posting mentions collaborating closely with key stakeholders and internal customers, which suggests cross-functional engagement.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.75,
+          "confidence": 0.85,
+          "evidence": "Generous PTO policy (25-31 days), hybrid work model, and wellness benefits (gym, healthcare) are strong positive signals. However, the initial full-time office requirement and fast-growing environment may introduce time pressure.",
+          "source": "combined"
+        },
+        "growth_opportunities_score": {
+          "value": 0.85,
+          "confidence": 0.88,
+          "evidence": "Mentions 'ongoing technical training', 'professional qualification support', 'talent development programmes', and a growing team, all of which are strong indicators of growth opportunities.",
+          "source": "pass1_derived"
+        },
+        "tech_culture_score": {
+          "value": 0.8,
+          "confidence": 0.85,
+          "evidence": "Modern tech stack, emphasis on automation (CI/CD), testing, and governance, alongside strong development practices and innovation signals.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "tech_blogs",
+            "conference_speaking",
+            "internal_oss"
+          ],
+          "confidence": 0.6,
+          "evidence": "Mentions 'ongoing technical training' and 'professional qualification support' which could imply conference attendance, but not explicitly stated. 'Internal open source' is inferred from collaborative tooling but not confirmed.",
+          "source": "inferred"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "ci_cd",
+            "code_review",
+            "monitoring"
+          ],
+          "confidence": 0.9,
+          "evidence": "Explicit mentions of CI/CD (Jenkins), automated testing (data quality), and collaboration with stakeholders imply code review practices. Monitoring is inferred from data quality and observability focus.",
+          "source": "combined"
+        },
+        "innovation_signals": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Mentions 'recommending and introducing new technology where needed' and 'cutting-edge technology', indicating a focus on staying current but not explicit experimentation culture.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": true,
+          "confidence": 0.8,
+          "evidence": "Mentions 'maintaining and continuously enhancing the data platform' and 'modernizing legacy pipelines', indicating awareness of tech debt and proactive management.",
+          "source": "inferred"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "basic_ml",
+          "confidence": 0.7,
+          "evidence": "Mentions AI tools like CoPilot and Snowflake Cortex, which are basic ML/AI integrations, but no explicit ML pipeline or MLOps infrastructure details.",
+          "source": "inferred"
+        },
+        "ml_tools_expected": {
+          "value": [
+            "CoPilot",
+            "Snowflake Cortex"
+          ],
+          "confidence": 0.9,
+          "evidence": "Job posting explicitly mentions these AI tools under 'nice to have' skills.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "normal",
+          "confidence": 0.8,
+          "evidence": "No immediate or ASAP start date mentioned; hybrid model and regional focus suggest standard hiring timeline.",
+          "source": "inferred"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Location is restricted to the UK (Manchester), which limits candidate pool. Hybrid work model and lack of salary transparency may reduce competition slightly, but the modern tech stack and company reputation likely attract a moderate number of applicants.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "growth_stage",
+          "confidence": 0.85,
+          "evidence": "AJ Bell is a FTSE 250 company with over 1,500 employees, 644,000 customers, and £103.3 billion in assets under management. This indicates a well-established growth-stage company rather than a startup.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.8,
+          "evidence": "Job posting mentions expanding the data team but does not specify aggressive hiring targets or timelines.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "medium_6_15",
+          "confidence": 0.8,
+          "evidence": "Pass 1 mentions a 'Data Engineering team' and Pass 2 infers a broader team size of 8-15 engineers, suggesting medium-sized data org.",
+          "source": "combined"
+        },
+        "funding_stage_signals": {
+          "value": "public",
+          "confidence": 0.95,
+          "evidence": "AJ Bell is listed on the Main Market of the London Stock Exchange and is a FTSE 250 company, indicating public funding status.",
+          "source": "explicit"
+        },
+        "role_creation_type": {
+          "value": "team_expansion",
+          "confidence": 0.85,
+          "evidence": "Job posting mentions contributing to the development of the data platform and expanding the team to meet growing business needs.",
+          "source": "inferred"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "modern_tech_stack",
+        "learning_opportunities",
+        "career_growth_clear",
+        "strong_benefits",
+        "established_company",
+        "hybrid_work"
+      ],
+      "strength_details": [
+        "Modern data stack with tools like Snowflake, dbt, and AWS CDK, offering exposure to cutting-edge technologies.",
+        "Comprehensive benefits package including 25-31 days PTO, healthcare, gym membership, and professional qualification support.",
+        "Established FTSE 250 company with a strong reputation and financial stability, reducing risk compared to startups.",
+        "Hybrid work model provides flexibility while fostering collaboration and relationship-building in the office."
+      ],
+      "concern_categories": [
+        "salary_not_disclosed",
+        "overtime_likely",
+        "work_life_balance"
+      ],
+      "concern_details": [
+        "Salary is described as 'competitive' but no range is disclosed, making it difficult to assess compensation fit upfront.",
+        "Initial full-time office requirement and fast-growing environment may introduce time pressure or overtime expectations.",
+        "No explicit mention of visa sponsorship or work authorization support, which could limit opportunities for non-UK candidates."
+      ],
+      "best_fit_categories": [
+        "mid_level_engineers",
+        "data_warehouse_specialists",
+        "data_generalists",
+        "career_growth_seekers"
+      ],
+      "best_fit_details": [
+        "Mid-level Data Engineers with 3-5 years of experience looking to work on scalable data warehouse solutions and ELT pipelines.",
+        "Engineers with a strong foundation in data modeling, CI/CD, and cloud platforms who want to grow their skills in a collaborative environment.",
+        "Candidates seeking a balance between hybrid work flexibility and the opportunity to contribute to a modern, evolving data platform."
+      ],
+      "probe_categories": [
+        "salary_range_details",
+        "role_scope_boundaries",
+        "work_hour_expectations",
+        "career_growth_path",
+        "tech_debt_situation"
+      ],
+      "probe_details": [
+        "Ask for clarity on the salary range and how compensation is structured, including bonus and equity details.",
+        "Probe the boundaries of the role to confirm it remains focused on data engineering and does not expand into unrelated areas.",
+        "Understand the expectations around work hours, especially during the initial full-time office period and high-growth phases.",
+        "Inquire about career growth paths within the data team and how promotions or role advancements are typically handled.",
+        "Ask about the current state of technical debt in the data platform and how the team prioritizes modernization efforts."
+      ],
+      "leverage_categories": [
+        "domain_expertise",
+        "exact_experience_match",
+        "quick_availability"
+      ],
+      "leverage_details": [
+        "Experience in financial services or e-commerce is highly valued and could strengthen your candidacy.",
+        "Proficiency in the exact tools mentioned (Snowflake, dbt, AWS CDK, Docker) provides strong negotiation leverage.",
+        "Ability to start quickly (if applicable) could be advantageous given the team's expansion goals."
+      ],
+      "overall_assessment": "This role at AJ Bell is a strong opportunity for mid-level Data Engineers seeking to work with a modern tech stack in a growth-stage, financially stable company. The hybrid work model and comprehensive benefits package are attractive, but candidates should clarify salary expectations and work-hour policies to ensure alignment with their personal and professional goals. Ideal for those looking to specialize in data warehousing and ELT pipelines while growing their careers in a collaborative environment.",
+      "recommendation_score": 0.8,
+      "recommendation_confidence": 0.88
+    },
+    "tokens": 14162,
+    "input_tokens": 11016,
+    "output_tokens": 3146,
+    "cost": 0.017308
+  }
+}

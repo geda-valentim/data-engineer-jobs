@@ -78,6 +78,12 @@ def flatten_extraction(extraction: Optional[Dict[str, Any]]) -> Dict[str, Any]:
     result["ext_years_experience_min"] = _get_number(sc, "years_experience_min")
     result["ext_years_experience_max"] = _get_number(sc, "years_experience_max")
     result["ext_years_experience_text"] = _get_string(sc, "years_experience_text")
+    # Education - new structured fields
+    result["ext_education_level"] = _get_string(sc, "education_level")
+    result["ext_education_area"] = _get_string(sc, "education_area")
+    result["ext_education_requirement"] = _get_string(sc, "education_requirement")
+    result["ext_education_text_raw"] = _get_string(sc, "education_text_raw")
+    # Legacy field for backward compatibility (deprecated)
     result["ext_education_stated"] = _get_string(sc, "education_stated")
     result["ext_llm_genai_mentioned"] = _get_bool(sc, "llm_genai_mentioned")
     result["ext_feature_store_mentioned"] = _get_bool(sc, "feature_store_mentioned")
@@ -156,6 +162,12 @@ def _get_empty_extraction_columns() -> Dict[str, Any]:
         "ext_years_experience_min": None,
         "ext_years_experience_max": None,
         "ext_years_experience_text": None,
+        # Education - new structured fields
+        "ext_education_level": None,
+        "ext_education_area": None,
+        "ext_education_requirement": None,
+        "ext_education_text_raw": None,
+        # Legacy field for backward compatibility (deprecated)
         "ext_education_stated": None,
         "ext_llm_genai_mentioned": None,
         "ext_feature_store_mentioned": None,

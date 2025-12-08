@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-06 21:29:38",
+    "job_posting_id": "4326005551",
+    "job_title": "Data Engineering USIS",
+    "company_name": "Equifax",
+    "job_location": "Las Condes, Santiago Metropolitan Region, Chile",
+    "pass_name": "pass2",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.82,
+          "evidence": "Posting requires 5+ years of experience; title is Data Engineer without senior qualifier, but years indicate senior level.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title is Data Engineer and responsibilities focus on building data pipelines, data modeling, and data quality.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.76,
+          "evidence": "Responsibilities describe building and maintaining data pipelines of moderate complexity, with no explicit streaming technologies mentioned.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.78,
+          "evidence": "Mentoring and code review of junior data engineers are required, but no direct reports are mentioned.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "gcp",
+          "confidence": 0.96,
+          "evidence": "Job description repeatedly references Google Cloud Platform (GCP) and asks candidates to stay up‑to‑date with GCP trends.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No other cloud providers are mentioned in the posting.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.85,
+          "evidence": "Focus on building scheduled data pipelines and data quality checks; no streaming frameworks are cited.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.92,
+          "evidence": "The posting does not name any workflow/orchestration tool such as Airflow, Luigi, or Prefect.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No specific storage technologies (warehouse, lake, lakehouse) are referenced.",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.91,
+          "evidence": "Location restriction is Chile (ext_allowed_countries = [\"CL\"]). Candidates must be based in Chile.",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "americas",
+          "confidence": 0.89,
+          "evidence": "Chile operates in the Americas time zones; no other regions are referenced.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Job explicitly targets candidates in Chile; no relocation offer is mentioned.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.92,
+          "evidence": "Visa sponsorship is not mentioned (ext_visa_sponsorship_stated = not_mentioned).",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.81,
+          "evidence": "No language indicating acceptance of OPT/CPT; work authorization is implied for local candidates.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "The posting does not specify citizenship; only a country‑based location restriction is present.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.63,
+          "evidence": "Full‑time employee role is implied for a regional team; no contract type is stated.",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.94,
+          "evidence": "ext_benefits_mentioned array is empty; no benefits are described in the posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.93,
+          "evidence": "The posting does not discuss career ladders, promotion tracks, or growth opportunities.",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.84,
+          "evidence": "Responsibilities include providing mentorship and reviewing work of junior data engineers.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No language about promotion or advancement is present.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.92,
+          "evidence": "The posting does not reference internal transfers or mobility programs.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.88,
+          "evidence": "No career track options (IC, management, specialist, architect) are described.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.81,
+          "evidence": "Must‑have list includes several technical skills and 5+ years experience; nice‑to‑have list is empty, indicating a balanced but not overly strict set.",
+          "source": "combined"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "Job description is focused specifically on data engineering tasks without mixing other roles.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.86,
+          "evidence": "Required skills and experience level align with a senior data engineer role; no unrealistic expectations are evident.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8626,
+    "input_tokens": 6127,
+    "output_tokens": 2499,
+    "cost": 0.0016687499999999999
+  }
+}

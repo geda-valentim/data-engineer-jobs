@@ -185,10 +185,10 @@ def save_raw_response(
 
 def load_jobs_from_s3(date_str: Optional[str] = None, limit: int = 5) -> tuple[List[Dict[str, Any]], Dict[str, str]]:
     """
-    Load jobs from S3 silver bucket.
+    Load jobs from S3 silver bucket across multiple partitions if needed.
 
     Args:
-        date_str: Optional date in YYYY-MM-DD format
+        date_str: Optional date in YYYY-MM-DD format (will load from all hours of that day)
         limit: Number of jobs to return
 
     Returns:
@@ -234,37 +234,59 @@ def load_jobs_from_s3(date_str: Optional[str] = None, limit: int = 5) -> tuple[L
                 error_msg += f"  {date_key} (hours: {min(hours)}-{max(hours)})\n"
             raise ValueError(error_msg)
 
-        # Get partition with highest hour value
+        # Sort by hour descending (most recent first)
         matching_partitions.sort(key=lambda p: int(p['hour']), reverse=True)
-        selected = matching_partitions[0]
+        partitions_to_load = matching_partitions
     else:
-        # Use most recent partition overall
+        # Use most recent partitions overall
         partitions.sort(key=lambda p: (int(p['year']), int(p['month']), int(p['day']), int(p['hour'])), reverse=True)
-        selected = partitions[0]
+        partitions_to_load = partitions
 
-    # Load data from selected partition
-    df = read_partition(
-        year=selected['year'],
-        month=selected['month'],
-        day=selected['day'],
-        hour=selected['hour']
-    )
+    # Load jobs from multiple partitions until we reach the limit
+    all_jobs = []
+    first_partition = None
+    partitions_used = 0
 
-    if df is None or df.empty:
-        raise ValueError(f"Partition {selected['year']}-{selected['month']}-{selected['day']} hour {selected['hour']} is empty")
+    for partition in partitions_to_load:
+        if len(all_jobs) >= limit:
+            break
 
-    # Convert to list of dicts and limit
-    jobs = df.head(limit).to_dict('records')
+        df = read_partition(
+            year=partition['year'],
+            month=partition['month'],
+            day=partition['day'],
+            hour=partition['hour']
+        )
 
-    # Return jobs and partition info
+        if df is None or df.empty:
+            continue
+
+        # Track first partition for info
+        if first_partition is None:
+            first_partition = partition
+
+        # How many more jobs do we need?
+        remaining = limit - len(all_jobs)
+        partition_jobs = df.head(remaining).to_dict('records')
+        all_jobs.extend(partition_jobs)
+        partitions_used += 1
+
+    if not all_jobs:
+        raise ValueError(f"No jobs found in any partition")
+
+    if len(all_jobs) < limit:
+        print(f"  Note: Only found {len(all_jobs)} jobs across {partitions_used} partition(s)")
+
+    # Return jobs and partition info (from first partition)
     partition_info = {
-        'year': selected['year'],
-        'month': selected['month'],
-        'day': selected['day'],
-        'hour': selected['hour']
+        'year': first_partition['year'],
+        'month': first_partition['month'],
+        'day': first_partition['day'],
+        'hour': first_partition['hour'],
+        'partitions_used': partitions_used
     }
 
-    return jobs, partition_info
+    return all_jobs, partition_info
 
 
 def print_comparison_table(jobs, results):

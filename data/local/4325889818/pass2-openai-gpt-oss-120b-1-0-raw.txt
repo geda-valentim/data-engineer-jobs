@@ -4,77 +4,77 @@
       "seniority_level": {
         "value": "senior",
         "confidence": 0.95,
-        "evidence": "Job title explicitly says \"Senior Data Engineer\"; senior title overrides the 3+ years requirement.",
+        "evidence": "Job title includes \"Senior Data Engineer\"; senior title overrides the 3+ years experience requirement.",
         "source": "combined"
       },
       "job_family": {
         "value": "data_engineer",
-        "confidence": 0.98,
-        "evidence": "Title and responsibilities focus on data pipelines, ETL, and data modeling, which are core to the Data Engineer family.",
+        "confidence": 0.99,
+        "evidence": "Title and responsibilities focus on ETL pipelines, data modeling, and data warehouse technologies.",
         "source": "pass1_derived"
       },
       "sub_specialty": {
         "value": "batch_etl",
-        "confidence": 0.75,
-        "evidence": "Responsibilities emphasize ETL pipeline development, Airflow orchestration, and data warehouse technologies (Snowflake, Redshift) typical of batch processing.",
+        "confidence": 0.86,
+        "evidence": "Responsibilities emphasize ETL pipeline design, Airflow orchestration, and data warehouse platforms (Snowflake, Redshift) typical of batch processing.",
         "source": "inferred"
       },
       "leadership_expectation": {
         "value": "ic",
-        "confidence": 0.85,
-        "evidence": "No mention of people‑management duties, direct reports, or hiring responsibilities; the role is described as an individual contributor.",
+        "confidence": 0.81,
+        "evidence": "No mention of people‑management duties or direct reports; role is focused on technical delivery and collaboration.",
         "source": "inferred"
       }
     },
     "stack_and_cloud": {
       "primary_cloud": {
-        "value": "not_mentioned",
-        "confidence": 0.95,
-        "evidence": "Job posting lists Snowflake and Redshift but does not specify the underlying cloud provider (AWS, Azure, GCP).",
-        "source": "pass1_derived"
+        "value": "aws",
+        "confidence": 0.72,
+        "evidence": "Redshift is an AWS‑native data warehouse; Snowflake can run on AWS and is commonly used there. No other cloud providers are mentioned.",
+        "source": "inferred"
       },
       "secondary_clouds": {
         "value": [],
-        "confidence": 0.95,
-        "evidence": "No additional cloud platforms are referenced in the posting.",
+        "confidence": 0.90,
+        "evidence": "Only AWS‑related services (Redshift) are referenced; no Azure, GCP, or other clouds appear in the posting.",
         "source": "pass1_derived"
       },
       "processing_paradigm": {
         "value": "batch",
-        "confidence": 0.85,
-        "evidence": "Airflow (a batch scheduler) is the only orchestration tool mentioned; no streaming technologies are listed.",
+        "confidence": 0.93,
+        "evidence": "Job description centers on ETL pipeline creation, Airflow orchestration, and data warehouse loading – all batch‑oriented activities.",
         "source": "inferred"
       },
       "orchestrator_category": {
         "value": "airflow_like",
-        "confidence": 0.95,
-        "evidence": "Airflow is explicitly required in the \"Must Have\" skills.",
+        "confidence": 0.96,
+        "evidence": "Airflow is explicitly listed as a required ETL orchestration tool.",
         "source": "pass1_derived"
       },
       "storage_layer": {
         "value": "warehouse",
-        "confidence": 0.90,
-        "evidence": "Snowflake and Redshift are cloud data‑warehouse solutions; no lake or lakehouse technologies are cited.",
+        "confidence": 0.91,
+        "evidence": "Snowflake and Redshift are both data‑warehouse platforms; no lake‑specific storage is mentioned.",
         "source": "inferred"
       }
     },
     "geo_and_work_model": {
       "remote_restriction": {
         "value": "same_country",
-        "confidence": 0.90,
-        "evidence": "ext_geo_restriction_type is \"us_only\" and location text lists only US cities (Seattle, Santa Monica, NYC).",
-        "source": "pass1_derived"
+        "confidence": 0.86,
+        "evidence": "Location restriction lists US cities (Seattle, Santa Monica, NYC) and the hybrid model requires onsite presence four days a week.",
+        "source": "combined"
       },
       "timezone_focus": {
         "value": "americas",
-        "confidence": 0.70,
-        "evidence": "All listed locations are within the United States; no specific timezone is mandated, implying an Americas focus.",
-        "source": "inferred"
+        "confidence": 0.82,
+        "evidence": "All listed locations are within the Americas (US West and East coasts).",
+        "source": "pass1_derived"
       },
       "relocation_required": {
         "value": false,
-        "confidence": 0.80,
-        "evidence": "Job requires hybrid onsite work in specific US cities but does not state a relocation package or requirement.",
+        "confidence": 0.62,
+        "evidence": "The posting does not mention a relocation package or requirement; candidates must simply be able to work onsite in the listed US cities.",
         "source": "inferred"
       }
     },
@@ -82,32 +82,32 @@
       "h1b_friendly": {
         "value": false,
         "confidence": 0.95,
-        "evidence": "Work authorization text explicitly excludes H1B visas.",
+        "evidence": "ext_visa_sponsorship_stated = \"will_not_sponsor\"; H‑1B sponsorship is explicitly excluded.",
         "source": "pass1_derived"
       },
       "opt_cpt_friendly": {
         "value": false,
         "confidence": 0.95,
-        "evidence": "OPT and CPT are explicitly excluded from the allowed work authorizations.",
+        "evidence": "Work authorization text excludes OPT and CPT.",
         "source": "pass1_derived"
       },
       "citizenship_required": {
         "value": "work_auth_only",
         "confidence": 0.90,
-        "evidence": "Allowed work authorizations include GC, USC, and other valid EADs; no citizenship‑only clause is present.",
+        "evidence": "Accepts GC, US citizens, and any valid EADs (except OPT/CPT/H‑1B); no citizenship‑only clause.",
         "source": "pass1_derived"
       }
     },
     "contract_and_compensation": {
       "w2_vs_1099": {
         "value": "w2",
-        "confidence": 0.98,
-        "evidence": "Rate range states \"Up to $92.5/hr on W2\" and explicitly rules out C2C and 1099.",
+        "confidence": 0.96,
+        "evidence": "Rate line states \"Up to $92.5/hr on W2\" and explicitly says no C2C or 1099.",
         "source": "pass1_derived"
       },
       "benefits_level": {
         "value": "none_mentioned",
-        "confidence": 0.90,
+        "confidence": 0.92,
         "evidence": "ext_benefits_mentioned array is empty; no benefits are described in the posting.",
         "source": "pass1_derived"
       }
@@ -115,52 +115,52 @@
     "career_development": {
       "growth_path_clarity": {
         "value": "not_mentioned",
-        "confidence": 0.90,
+        "confidence": 0.93,
         "evidence": "The posting contains no language about career ladders, promotion tracks, or growth opportunities.",
         "source": "pass1_derived"
       },
       "mentorship_signals": {
         "value": "not_mentioned",
-        "confidence": 0.90,
-        "evidence": "No reference to mentorship programs, mentors, or learning from senior staff is present.",
+        "confidence": 0.94,
+        "evidence": "No reference to mentorship programs, assigned mentors, or learning from senior staff.",
         "source": "pass1_derived"
       },
       "promotion_path_mentioned": {
         "value": false,
-        "confidence": 0.90,
-        "evidence": "The description does not mention promotions, advancement paths, or future titles.",
+        "confidence": 0.92,
+        "evidence": "No statements about promotion, advancement, or moving to higher titles.",
         "source": "pass1_derived"
       },
       "internal_mobility_mentioned": {
         "value": false,
-        "confidence": 0.90,
-        "evidence": "No statements about internal transfers or mobility across teams are included.",
+        "confidence": 0.93,
+        "evidence": "The job description does not discuss internal transfers or lateral moves within the company.",
         "source": "pass1_derived"
       },
       "career_tracks_available": {
         "value": [],
         "confidence": 0.90,
-        "evidence": "The posting does not specify any career tracks (IC, management, specialist, architect).",
+        "evidence": "No mention of IC, management, specialist, or architect tracks.",
         "source": "pass1_derived"
       }
     },
     "requirements_classification": {
       "requirement_strictness": {
-        "value": "high",
-        "confidence": 0.85,
-        "evidence": "A long list of mandatory hard skills is provided, with only a single nice‑to‑have skill (Nifi).",
+        "value": "medium",
+        "confidence": 0.81,
+        "evidence": "A clear set of must‑have hard skills is listed, with only one nice‑to‑have skill (Nifi), indicating a balanced requirement level.",
         "source": "inferred"
       },
       "scope_definition": {
         "value": "clear",
         "confidence": 0.90,
-        "evidence": "Responsibilities are narrowly focused on data engineering tasks (ETL, modeling, quality checks) without overlapping roles.",
+        "evidence": "Responsibilities are narrowly focused on data engineering tasks (ETL, modeling, quality, performance).",
         "source": "inferred"
       },
       "skill_inflation_detected": {
-        "value": true,
-        "confidence": 0.75,
-        "evidence": "The role is titled \"Senior\" but requires only 3+ years of experience, which is low for a senior‑level position.",
+        "value": false,
+        "confidence": 0.73,
+        "evidence": "The required skill set (SQL, Python/PySpark, Airflow, Snowflake/Redshift) aligns with a senior data‑engineer role; 3+ years is modest but not unrealistic.",
         "source": "inferred"
       }
     }

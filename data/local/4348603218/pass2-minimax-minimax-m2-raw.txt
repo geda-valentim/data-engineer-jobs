@@ -1,0 +1,355 @@
+<reasoning>Let me analyze this job posting systematically to infer the required characteristics.
+
+First, let me review the key information from the job posting and Pass 1 extraction:
+
+**Key Details from Job Posting:**
+- Title: "Senior, Data Engineer" 
+- Company: VIZIO (but mentions Walmart/VIZIO partnership)
+- Location: Denver, CO (onsite)
+- Salary: $99,000 - $198,000 annually
+- Experience: 5+ years required
+- Education: BS/MS in Computer Science required
+- Work model: Onsite
+- Benefits: Comprehensive package mentioned
+
+**Pass 1 Extraction Key Points:**
+- Salary disclosed: $99K-$198K
+- Work model: onsite
+- Employment type: full_time
+- Contract type: permanent
+- Must-have skills: Python, Pyspark, SQL, Scala, AWS, Airflow, Hadoop, Spark, Kafka, etc.
+- Years experience: 5+ years
+- Education: Bachelor's required
+- Benefits: Medical, vision, dental, 401k, stock purchase, PTO, etc.
+- Geo restriction: US only
+
+Now let me infer each field:
+
+## SENIORITY AND ROLE
+
+**seniority_level**: 
+- Title explicitly says "Senior Data Engineer"
+- 5+ years experience required
+- This matches the senior level perfectly
+- Confidence: 0.95 (explicit title + matching experience requirement)
+
+**job_family**:
+- Title is "Data Engineer"
+- Core responsibilities are data engineering (ETL, pipelines, data models)
+- Skills are all data engineering focused
+- Confidence: 0.98 (clear from title and responsibilities)
+
+**sub_specialty**:
+- Mentions both batch (Airflow, ETL processes) and streaming (Kafka)
+- Big data tools (Hadoop, Spark, Kafka)
+- Data lake engineering team
+- This suggests a mix of batch and streaming, leaning toward data lake/warehouse
+- Confidence: 0.75 (hybrid approach with data lake focus)
+
+**leadership_expectation**:
+- Senior level but no mention of direct reports
+
+
+- Mentions collaboration with cross-functional teams
+- No explicit leadership responsibilities mentioned
+- This suggests a technical lead IC role without people management
+- Confidence: 0.70 (senior level implies some technical leadership)
+
+## STACK AND CLOUD
+
+**primary_cloud**:
+- Explicitly mentions "AWS cloud services"
+- Multiple AWS-specific tools mentioned
+- Confidence: 0.95 (AWS mentioned explicitly)
+
+**secondary_clouds**:
+- Only AWS mentioned, no other cloud providers
+- Confidence: 0.90 (no other clouds mentioned)
+
+**processing_paradigm**:
+- Mentions both batch (Airflow for scheduled pipelines) and streaming (Kafka)
+- ETL processes suggest batch, Kafka suggests streaming
+- Confidence: 0.80 (hybrid approach mentioned)
+
+**orchestrator_category**:
+- Explicitly mentions "Apache Airflow"
+- Confidence: 0.95 (Airflow explicitly mentioned)
+
+**storage_layer**:
+- Mentions data lake engineering team
+- Big data tools (Hadoop, Spark) suggest data lake patterns
+- No specific warehouse mentioned
+- Confidence: 0.75 (data lake focus)
+
+## GEO AND WORK MODEL
+
+**remote_restriction**:
+- Location: Denver, CO
+- Work model: onsite
+- No mention of remote work options
+- This suggests same_region restriction (Denver area)
+- Confidence: 0.85 (onsite requirement in specific location)
+
+**timezone_focus**:
+- Location is Denver, CO (Mountain Time)
+- No specific timezone requirements mentioned
+- US-only restriction suggests Americas focus
+- Confidence: 0.70 (inferred from US location)
+
+**relocation_required**:
+- Position is onsite in Denver, CO
+- No mention of relocation assistance
+- Suggests candidates should already be in the area
+- Confidence: 0.80 (onsite requirement implies local candidates)
+
+## VISA AND AUTHORIZATION
+
+**h1b_friendly**:
+- No mention of visa sponsorship
+- Work authorization requirements not explicitly stated
+- Standard corporate position suggests potential sponsorship
+- Confidence: 0.60 (unclear from text)
+
+**opt_cpt_friendly**:
+- No specific mention of student visa support
+- Work authorization requirements suggest standard employment
+- Confidence: 0.50 (not explicitly mentioned)
+
+**citizenship_required**:
+- No citizenship requirements mentioned
+- Standard work authorization language implied
+- Confidence: 0.70 (work authorization only)
+
+## CONTRACT AND COMPENSATION
+
+**w2_vs_1099**:
+- Full-time employee position
+- Comprehensive benefits package
+- Permanent contract type
+- Confidence: 0.90 (W2 employment structure)
+
+**benefits_level**:
+- Extensive benefits list: medical, vision, dental, 401k, stock purchase, PTO, etc.
+- Education benefit program mentioned
+- Comprehensive package with multiple premium benefits
+- Confidence: 0.85 (comprehensive benefits package)
+
+## CAREER DEVELOPMENT
+
+**growth_path_clarity**:
+- No specific career tracks mentioned
+- Generic growth opportunities implied
+- Confidence: 0.60 (vague growth mentions)
+
+**mentorship_signals**:
+- No explicit mentorship program mentioned
+- Collaborative team environment suggested
+- Confidence: 0.50 (minimal mentorship signals)
+
+**promotion_path_mentioned**:
+- No specific promotion path mentioned
+- Standard career progression implied
+- Confidence: 0.30 (no promotion path discussed)
+
+**internal_mobility_mentioned**:
+- No internal mobility programs mentioned
+- Team-specific role described
+- Confidence: 0.80 (no mobility mentions)
+
+**career_tracks_available**:
+- Senior level suggests IC track potential
+- No management track mentioned
+- Limited track information available
+- Confidence: 0.50 (minimal track information)
+
+## REQUIREMENTS CLASSIFICATION
+
+**requirement_strictness**:
+- Clear must-have vs nice-to-have distinction
+- Specific technical requirements listed
+- Balanced requirement approach
+- Confidence: 0.75 (medium strictness level)
+
+**scope_definition**:
+- Focused data engineering role
+- Clear responsibilities and requirements
+- Single, well-defined position
+- Confidence: 0.85 (clear scope definition)
+
+**skill_inflation_detected**:
+- Senior level requirements align with experience
+- Reasonable skill set for data engineering
+- No excessive or unrealistic requirements
+- Confidence: 0.80 (no skill inflation detected)
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Senior Data Engineer' and requires 5+ years experience, which perfectly matches senior level expectations",
+        "source": "pass1_derived"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is 'Data Engineer' and core responsibilities focus on ETL processes, data pipelines, data models, and data infrastructure - all core data engineering functions",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_lakehouse",
+        "confidence": 0.75,
+        "evidence": "Mentions 'Data Lake Engineering Team', big data tools (Hadoop, Spark, Kafka), and both batch processing (Airflow) and streaming capabilities, indicating hybrid data lake approach",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.70,
+        "evidence": "Senior level role with mentions of collaborating with cross-functional teams and driving data projects, suggesting technical leadership without direct reports",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "aws",
+        "confidence": 0.95,
+        "evidence": "Explicitly mentions 'AWS cloud services' multiple times and lists AWS-specific data pipeline tools",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "Only AWS cloud services mentioned, no other cloud providers referenced in the job description",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.80,
+        "evidence": "Mentions both batch processing (Airflow for ETL processes, scheduled pipelines) and streaming capabilities (Kafka for real-time data), indicating hybrid approach",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.95,
+        "evidence": "Explicitly mentions 'Apache Airflow' as the data pipeline orchestration tool",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "lake",
+        "confidence": 0.75,
+        "evidence": "Team is specifically called 'Data Lake Engineering Team' and mentions big data tools (Hadoop, Spark) typically used in data lake architectures",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.85,
+        "evidence": "Position is onsite in Denver, CO with no remote work options mentioned, requiring candidates to be in the Denver metropolitan area",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.70,
+        "evidence": "US-only restriction with Denver, CO location suggests Americas timezone focus, though no specific timezone requirements stated",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Onsite requirement in Denver suggests candidates should already be in the area, but no relocation assistance mentioned",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": true,
+        "confidence": 0.60,
+        "evidence": "No explicit visa sponsorship mention, but as a major corporation (Walmart/VIZIO) with full-time permanent positions, likely to offer sponsorship",
+        "source": "inferred"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.50,
+        "evidence": "No specific mention of student visa support, and 5+ years experience requirement suggests preference for experienced candidates",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.70,
+        "evidence": "No citizenship requirements mentioned, standard work authorization implied for US-based position",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time employee position with comprehensive benefits package (medical, 401k, stock purchase) indicates W2 employment structure",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.85,
+        "evidence": "Extensive benefits including medical/vision/dental coverage, 401k, stock purchase, PTO, parental leave, education programs, and disability coverage - 15+ benefit types",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.60,
+        "evidence": "Mentions 'drive impactful data projects' and 'contribute to the future of data engineering' but no specific career progression paths mentioned",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.65,
+        "evidence": "Mentions 'collaborate with cross-functional teams' and working in a 'dynamic' team environment, suggesting interaction with experienced colleagues",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No specific promotion or advancement paths mentioned in the job description",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers, role changes, or mobility programs within the organization",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.50,
+        "evidence": "Senior data engineer role suggests IC track progression potential, but no specific tracks mentioned",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Clear distinction between required qualifications (5+ years, specific technologies) and preferred qualifications, with balanced approach",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused job description with well-defined data engineering responsibilities, single clear role without scope creep",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Skills and requirements (Python, SQL, AWS, 5+ years) are appropriate and realistic for senior data engineer level",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

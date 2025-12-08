@@ -1,0 +1,275 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 4,
+        "confidence": 0.85,
+        "evidence": "Job posting mentions modern data stack tools (Airflow, Luigi, Dagster, Prefect), data quality testing (Great Expectations, Soda), and governance practices (data catalogs, lineage). Additionally, it references Databricks and CDC pipelines, which are indicative of managed data maturity.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "managed",
+        "confidence": 0.85,
+        "evidence": "Score of 4 aligns with 'managed' level, supported by explicit mentions of data quality, governance, and modern tooling.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [
+          "modern_data_stack_adoption",
+          "cicd_practices",
+          "data_quality_testing",
+          "data_governance"
+        ],
+        "confidence": 0.85,
+        "evidence": "Mentions workflow managers (Airflow, Luigi, Dagster, Prefect), data quality tools (Great Expectations, Soda), and data governance (catalogs, lineage). CI/CD is implied through the emphasis on modernizing pipelines and improving engineering practices.",
+        "source": "combined"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.3,
+        "confidence": 0.90,
+        "evidence": "Role is primarily focused on data engineering but includes responsibilities like data modeling, data quality management, and collaboration with cross-functional teams (e.g., product, ML engineers). This suggests moderate scope expansion but remains reasonable for a data engineering role.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.5,
+        "confidence": 0.80,
+        "evidence": "Mentions 'immediate start' and 'fast-paced environment' but also implies a focus on data quality and governance, which are protective factors. No explicit signals of unlimited PTO or hybrid flexibility are mentioned, but the probation period of 3 months suggests structured onboarding.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Responsibilities are well-defined, including data pipeline development, modeling, and governance. The role is explicitly titled 'Data Engineer (모델링)' and avoids conflation with unrelated functions like DevOps or frontend development.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.4,
+        "confidence": 0.82,
+        "evidence": "Moderate scope creep and overtime risk are balanced by clear role definition, modern tech stack, and strong maturity signals. No severe red flags are present, but candidates should probe further on work-life balance and project timelines.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.75,
+        "evidence": "The job posting mentions collaboration with 'senior staff' and 'mentoring junior staff' but does not explicitly clarify the reporting structure. The term 'Head of Data Engineering' is mentioned in the context of team expansion but not as a direct manager.",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "director_plus",
+        "confidence": 0.60,
+        "evidence": "The term 'Head of Data Engineering' is mentioned, which could imply a director-level manager, but the evidence is not explicit.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "rapid_expansion",
+        "confidence": 0.85,
+        "evidence": "Job posting mentions 'expanding team' and 'growing data organization', indicating rapid growth.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "medium_6_15",
+          "de_count": "5+ data engineers",
+          "seniority_mix": "mix of senior and mid-level"
+        },
+        "confidence": 0.80,
+        "evidence": "Pass 1 extraction mentions 'data pipeline team of 8 data engineers' and broader data org of 15 people. The seniority mix is inferred from the emphasis on mentoring and technical leadership.",
+        "source": "combined"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.75,
+        "evidence": "While 'Head of Data Engineering' is mentioned, it is unclear if this is the direct reporting line or part of a broader leadership structure.",
+        "source": "inferred"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Job posting mentions 'embedded with product teams' and collaboration with 'PMs' and 'ML engineers', indicating cross-functional work.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.70,
+        "evidence": "Mentions 'immediate start' and 'fast-paced environment', which are negative signals, but also emphasizes 'data quality' and 'governance', suggesting structured work. No explicit PTO or hybrid work policies are stated, but the focus on quality may imply reasonable expectations.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.85,
+        "confidence": 0.85,
+        "evidence": "Job posting mentions 'growth opportunities', 'mentoring junior staff', and 'expanding team', all of which are positive signals for career development.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.80,
+        "confidence": 0.85,
+        "evidence": "Strong emphasis on modern data stack tools (Airflow, Databricks), data quality testing (Great Expectations, Soda), and governance practices (catalogs, lineage). The mention of 'modernizing legacy pipelines' and 'improving code quality' further supports a healthy tech culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["conference_speaking"],
+        "confidence": 0.70,
+        "evidence": "Mentions 'conference budget' and 'keeping up with modern data stack evolution', which implies support for technical culture. No explicit signals of open source contributions or hackathons are mentioned.",
+        "source": "inferred"
+      },
+      "dev_practices_mentioned": {
+        "value": ["ci_cd", "monitoring", "data_quality_testing"],
+        "confidence": 0.85,
+        "evidence": "Job posting emphasizes CI/CD (implied through workflow managers), monitoring (data observability), and data quality testing (Great Expectations, Soda).",
+        "source": "inferred"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Mentions 'modern data stack evolution' and 'data-driven decision-making', indicating a focus on staying current with industry trends. No explicit signals of dedicated R&D time or experimentation culture are present.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.80,
+        "evidence": "Explicit mentions of 'modernizing legacy pipelines' and 'improving code quality' indicate strong awareness of technical debt.",
+        "source": "explicit"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.75,
+        "evidence": "Job posting mentions collaboration with ML engineers and use of CDC pipelines but does not explicitly reference advanced ML tools or GenAI frameworks.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "No explicit ML tools (e.g., SageMaker, MLflow) are mentioned in the job posting or Pass 1 extraction. The focus is on data pipeline infrastructure rather than ML-specific tooling.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.80,
+        "evidence": "Job posting mentions 'immediate start' and 'urgent need' to expand the data team, indicating hiring urgency.",
+        "source": "inferred"
+      },
+      "competition_level": {
+        "value": "high",
+        "confidence": 0.75,
+        "evidence": "Job is located in Seoul, South Korea, which is a competitive market for tech roles. Additionally, the role requires local work authorization, reducing the candidate pool but increasing competition among eligible applicants. The lack of salary disclosure may also attract more applicants, heightening competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "growth_stage",
+        "confidence": 0.80,
+        "evidence": "MUSINSA is described as a 'well-funded' company with a data team of 15 people and rapid expansion plans, suggesting it is in a growth stage rather than early startup or enterprise.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "aggressive",
+        "confidence": 0.85,
+        "evidence": "Job posting mentions expanding the data team and multiple open roles, indicating aggressive hiring to support growth initiatives.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.88,
+        "evidence": "Pass 1 extraction explicitly mentions a 'data pipeline team of 8 data engineers' and a broader data org of 15 people.",
+        "source": "explicit"
+      },
+      "funding_stage_signals": {
+        "value": "series_b_plus",
+        "confidence": 0.70,
+        "evidence": "MUSINSA is described as a 'well-funded' company with rapid expansion, which suggests Series B or later funding stage. No explicit funding details are provided.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.85,
+        "evidence": "Job posting mentions 'expanding data team' and 'growing data organization', indicating this is a new headcount for team expansion.",
+        "source": "explicit"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "modern_tech_stack",
+      "learning_opportunities",
+      "data_governance",
+      "team_expansion",
+      "tech_culture"
+    ],
+    "strength_details": [
+      "Modern data stack adoption (Airflow, Databricks, dbt, Great Expectations) signals a forward-thinking engineering environment.",
+      "Strong emphasis on data quality and governance (testing, catalogs, lineage) indicates mature data practices.",
+      "Growth-stage company with aggressive hiring plans offers opportunities to shape the data engineering function.",
+      "Cross-functional collaboration with product and ML teams provides exposure to diverse stakeholders and domain-driven work.",
+      "Tech debt awareness and modernization efforts suggest a healthy balance between innovation and maintenance."
+    ],
+    "concern_categories": [
+      "overtime_likely",
+      "work_life_balance",
+      "no_visa_sponsorship",
+      "location_restriction"
+    ],
+    "concern_details": [
+      "Immediate start date and 'fast-paced environment' imply potential time pressure and overtime risk. Candidates should probe actual work-hour expectations.",
+      "No explicit mention of PTO policies or work-life balance initiatives, which could be a concern given the hiring urgency signals.",
+      "South Korean work authorization required, with no visa sponsorship mentioned, limits the role to local candidates or those already authorized to work in the country.",
+      "Seoul-based location may be restrictive for remote or hybrid candidates, though the company's hybrid work patterns are implied for the future."
+    ],
+    "best_fit_categories": [
+      "senior_data_engineers",
+      "analytics_engineers",
+      "data_generalists",
+      "leadership_track"
+    ],
+    "best_fit_details": [
+      "Senior data engineers (5+ years) with experience in hybrid batch/streaming pipelines and data modeling will thrive in this role.",
+      "Candidates seeking technical leadership opportunities (e.g., mentoring, architecture decisions) without direct people management responsibilities are ideal.",
+      "Data generalists comfortable working in cross-functional teams and modernizing legacy systems will find this role actionable.",
+      "Engineers with prior experience in growth-stage companies or startups looking to expand their expertise in data governance and quality."
+    ],
+    "probe_categories": [
+      "work_hour_expectations",
+      "remote_policy_details",
+      "career_growth_path",
+      "tech_debt_situation",
+      "success_metrics"
+    ],
+    "probe_details": [
+      "Ask about the team's sprint cadence and how deadlines are managed to gauge work-life balance realities.",
+      "Clarify the remote work policy, especially given the Seoul location requirement and potential hybrid work signals.",
+      "Inquire about career growth paths within the data engineering team and how promotions are evaluated.",
+      "Understand the company's approach to technical debt: How much time is allocated for refactoring vs. new feature development?",
+      "Probe the success metrics for this role: Are they tied to data quality improvements, pipeline efficiency, or stakeholder satisfaction?"
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "domain_expertise",
+      "leadership_experience"
+    ],
+    "leverage_details": [
+      "Candidates with experience in Airflow, Databricks, or dbt can leverage this as a strong match for the role's requirements.",
+      "Prior leadership in data pipeline modernization or mentoring junior engineers is a high-value differentiator.",
+      "Experience with data catalogs, lineage, or compliance (e.g., SOX/PCI) aligns well with the company's governance focus and can be used as negotiation leverage."
+    ],
+    "overall_assessment": "This role at MUSINSA is a strong opportunity for senior data engineers seeking to work with a modern data stack in a growth-stage company. The emphasis on data quality, governance, and cross-functional collaboration suggests a mature yet evolving data engineering environment. However, candidates should be cautious about potential overtime risks and location restrictions, as the role requires South Korean work authorization and is based in Seoul. Probing work-life balance policies and career growth paths during interviews will be critical to making an informed decision.",
+    "recommendation_score": {
+      "value": 0.75,
+      "confidence": 0.85,
+      "evidence": "Role offers modern tech stack, growth opportunities, and clear responsibilities but has concerns around work-life balance and geo-restrictions."
+    }
+  }
+}
+```

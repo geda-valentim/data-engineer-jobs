@@ -1,0 +1,177 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through the job posting systematically and extract only explicitly stated information.
+
+Looking at the job posting:
+
+**Title**: Software & Data Engineer - Palantir Foundry
+**Company**: Ursa Major
+**Location**: Berthoud, CO
+
+Let me extract each section:
+
+**Compensation:**
+- "Colorado law requires us to tell you the base compensation range of this role, which is $90,000 - $115,000"
+- This is explicitly stated, so salary_disclosed = true
+- salary_min = 90000
+- salary_max = 115000
+- salary_currency = USD (since it's $)
+- salary_period = yearly (since it's a range for a role)
+- salary_text_raw = "$90,000 - $115,000"
+
+**Work Authorization:**
+- "US Citizenship or Permanent Residency" - this is required
+- "US CITIZENSHIP, PERMANENT RESIDENCY, REFUGEE OR ASYLUM STATUS IS REQUIRED"
+- "Eligibility to obtain and maintain a U.S. Security Clearance"
+- This indicates must_be_authorized since they require specific citizenship/residency status
+- work_auth_text = "US Citizenship or Permanent Residency" and "US CITIZENSHIP, PERMANENT RESIDENCY, REFUGEE OR ASYLUM STATUS IS REQUIRED"
+- citizenship_text = "US Citizenship or Permanent Residency"
+- security_clearance_stated = "required" (explicitly stated)
+
+**Work Model:**
+- Location is Berthoud, CO - this suggests onsite
+- No mention of remote or hybrid work
+- "Classification: Full-time Exempt" - so employment_type_stated = "full_time"
+- work_model_stated = "onsite" (since location is specified and no remote/hybrid mentioned)
+- location_restriction_text = "Berthoud, CO"
+
+**Contract Details:**
+- "Classification: Full-time Exempt" - this indicates permanent employment
+- No mention of contract terms, duration, etc.
+- contract_type = "permanent"
+- All other contract fields would be null/not_mentioned
+ 
+I'll analyze the contractor rates, which aren't applicable for this full-time position. The pay structure is salary-based, with no contractor-specific details to extract. The role is a standard employee position with a fixed annual compensation range.
+
+For skills classification, I'll focus on the technical requirements. The position demands expertise in software development and data engineering, with specific experience in Palantir Foundry. The role requires 1-5 years of professional software development and at least one year of data engineering experience. Key technical skills include hands-on experience with Palantir Foundry, data pipeline development, and ontology object creation.
+
+The soft skills requirements emphasize collaboration, with a focus on working effectively with product owners, stakeholders, and cross-functional teams. The role requires strong communication and interpersonal abilities to design intuitive interfaces and work within agile-inspired development methodologies.
+
+Education requirements are flexible, with no specific degree mandated. The position prioritizes practical experience over formal educational credentials.
+
+The role involves advanced data engineering and software development, specifically within the Palantir Foundry ecosystem. Key responsibilities include designing data pipelines, developing ontology objects, and creating intuitive interfaces for complex data systems.
+
+The position requires US citizenship or permanent residency, with a security clearance as a mandatory requirement. Geographic restrictions limit applicants to US residents, with no specific state-level limitations beyond the Colorado location.
+
+Benefits include unlimited PTO, comprehensive health insurance, and equity participation. The company offers a robust package supporting work-life balance and long-term employee investment.
+
+The role demands 1-5 years of software development experience, with hands-on Palantir Foundry expertise. Collaboration with product owners and stakeholders is essential for designing data-driven solutions in an agile environment.
+
+Key responsibilities include developing data pipelines, creating ontology objects, and optimizing system integrations. The position requires strong technical skills in data engineering and software development, with a focus on innovative problem-solving within a dynamic aerospace technology company.
+
+The compensation range of $90,000-$115,000 reflects the specialized nature of the role, emphasizing the critical importance of technical expertise and collaborative approach in advancing Ursa Major's propulsion and defense systems.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": true,
+      "salary_min": 90000,
+      "salary_max": 115000,
+      "salary_currency": "USD",
+      "salary_period": "yearly",
+      "salary_text_raw": "$90,000 - $115,000",
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "must_be_authorized",
+      "work_auth_text": "US Citizenship or Permanent Residency",
+      "citizenship_text": "US Citizenship or Permanent Residency",
+      "security_clearance_stated": "required"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Berthoud, CO",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "salary",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "exempt"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Software Development",
+        "Data Engineering",
+        "Palantir Foundry",
+        "Data Pipelines",
+        "Workflows",
+        "Ontology Objects",
+        "Data Integrations",
+        "System Optimization",
+        "Automation"
+      ],
+      "nice_to_have_hard_skills": [
+        "Manufacturing Systems",
+        "Industrial Systems",
+        "IoT Data"
+      ],
+      "must_have_soft_skills": [
+        "Team Collaboration",
+        "Communication"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 1,
+      "years_experience_max": 5,
+      "years_experience_text": "1-5 years of professional software development experience, 1+ years of data engineering experience",
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "us_only",
+      "allowed_countries": ["US"],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "must_be_resident"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [
+        "Unlimited PTO - Vacation, Sick, Personal, and Bereavement",
+        "Paid Parental and Adoptive Leave",
+        "Medical, Dental and Vision Insurance",
+        "Tax Advantage Accounts (HSA/FSA)",
+        "Employer Paid Short and Long Term Disability, Basic Life, AD&D",
+        "Additional Benefit Options Including Voluntary Life and Emergency Medical Transport",
+        "EAP Program",
+        "Retirement Savings Plan - Traditional 401(k) and a Roth 401(k)",
+        "Equity Grants in the Company"
+      ],
+      "equity_mentioned": true,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "unlimited"
+    },
+    "context": {
+      "team_info_text": "Collaborate with the Product Owner and other Software & Data Engineers on our internal Palantir Foundry development team, as well as stakeholders and users",
+      "company_description_text": "The future of aerospace and defense starts here. Ursa Major was founded to revolutionize how America and its allies access and apply high-performance propulsion, from hypersonics to solid rocket motors, satellite maneuvering and launch. We design and deliver propulsion and defense systems that solve the most urgent and critical national security demands."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 21
+  }
+}
+```

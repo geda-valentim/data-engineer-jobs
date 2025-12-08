@@ -1,0 +1,252 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 00:14:57",
+    "job_posting_id": "4325889818",
+    "job_title": "Senior Data Engineer – Commerce Data Pipelines",
+    "company_name": "aKUBE",
+    "job_location": "Santa Monica, CA",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.85,
+          "evidence": "Mentions modern data stack tools (Snowflake, Redshift, Airflow, PySpark) and practices (ETL orchestration, data quality frameworks, performance tuning). No explicit governance or data mesh patterns mentioned.",
+          "source": "pass1_derived"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.85,
+          "evidence": "Score of 3 aligns with 'defined' maturity level, indicating documented processes and modern tools but limited governance signals.",
+          "source": "pass1_derived"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption"
+          ],
+          "confidence": 0.85,
+          "evidence": "Explicit mention of Snowflake, Redshift, Airflow, and PySpark as required or preferred tools.",
+          "source": "pass1_derived"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit mention of reporting structure or manager title in the job posting or Pass 1/Pass 2 results.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No manager title or reporting structure mentioned in the job posting or Pass 1/Pass 2 results.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit signals about team growth velocity or hiring plans beyond the current role.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.9,
+          "evidence": "Pass 1 mentions partnering with business, analytics, and infrastructure teams but does not specify team size or composition. Pass 2 infers team composition but lacks explicit evidence.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit mention of reporting lines or manager in the job posting or Pass 1/Pass 2 results.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.8,
+          "evidence": "Job posting mentions partnering with business, analytics, and infrastructure teams, implying cross-functional collaboration.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.15,
+          "confidence": 0.9,
+          "evidence": "Role is focused on data engineering responsibilities (ETL, data modeling, SQL tuning, data quality). No conflation with unrelated roles like DevOps, ML, or backend/frontend engineering.",
+          "source": "pass1_derived"
+        },
+        "overtime_risk_score": {
+          "value": 0.4,
+          "confidence": 0.75,
+          "evidence": "Mentions 'fast-paced environment' and 'support Agile ceremonies', which could imply moderate overtime risk. No explicit protective factors like PTO or work-life balance mentioned.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "Responsibilities and qualifications are well-defined and specific to data engineering tasks.",
+          "source": "pass1_derived"
+        },
+        "overall_red_flag_score": {
+          "value": 0.35,
+          "confidence": 0.8,
+          "evidence": "Composite score considering scope creep (0.15), overtime risk (0.40), and strict requirements (high confidence in Pass 2). Role clarity is clear, but lack of protective factors increases red flag risk.",
+          "source": "combined"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.5,
+          "confidence": 0.75,
+          "evidence": "Hybrid work model (4 days onsite) and 'fast-paced environment' suggest moderate work-life balance. No PTO policy or explicit work-life balance signals mentioned.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.6,
+          "confidence": 0.7,
+          "evidence": "Cross-functional collaboration and modern tooling imply growth opportunities, but no explicit mentions of learning budgets, mentorship, or career paths.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.7,
+          "confidence": 0.85,
+          "evidence": "Modern data stack (Snowflake, Airflow) and emphasis on performance tuning, data quality, and analytical reasoning suggest a strong tech culture. Lack of explicit dev practices (e.g., CI/CD, code review) limits confidence.",
+          "source": "pass1_derived"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No explicit mentions of open source contributions, tech blogs, conference speaking, hackathons, or innovation time in the job posting or Pass 1/Pass 2 results.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "ci_cd",
+            "monitoring"
+          ],
+          "confidence": 0.75,
+          "evidence": "Pass 2 infers 'Airflow-like' orchestration tools (CI/CD signal) and job posting mentions 'ongoing pipeline monitoring' and 'automated Data Quality checks'. No explicit mentions of code review, pair programming, or TDD.",
+          "source": "inferred"
+        },
+        "innovation_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred signals about innovation culture or experimentation time.",
+          "source": "pass1_derived"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mentions of tech debt management, refactoring, or code quality improvements beyond performance tuning.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.95,
+          "evidence": "No mentions of ML/AI, MLflow, SageMaker, or GenAI in the job posting or Pass 1/Pass 2 results.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No ML/AI tools mentioned or inferred in the job posting or Pass 1/Pass 2 results.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit urgency signals like 'immediate start' or 'ASAP' in the job posting or Pass 1/Pass 2 results.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Hybrid role in competitive US locations (Santa Monica, CA/Seattle, WA/NYC) with strict work authorization requirements (no visa sponsorship) suggests medium competition. No salary disclosure or application count signals limit confidence.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred signals about company stage, funding, or size in the job posting or Pass 1/Pass 2 results.",
+          "source": "pass1_derived"
+        },
+        "hiring_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred signals about hiring velocity or role creation type.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit mention of team size or composition beyond cross-functional collaboration signals.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred signals about funding stage in the job posting or Pass 1/Pass 2 results.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit mention of whether this is a new headcount, backfill, or team expansion.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strengths": [
+        "Modern data stack tools (Snowflake, Redshift, Airflow, PySpark) are explicitly mentioned, offering exposure to industry-standard technologies.",
+        "Clear and focused role responsibilities, reducing scope creep risk for candidates who prefer well-defined data engineering work.",
+        "Hybrid work model provides flexibility with 4 days onsite and 1 remote day per week."
+      ],
+      "concerns": [
+        "No work authorization sponsorship (excludes OPT, CPT, H1B) may limit candidate pool and create barriers for some applicants.",
+        "Contract role (10 months) with no mention of extension or conversion to FTE could be a risk for candidates seeking long-term stability.",
+        "Lack of explicit work-life balance policies or PTO mentions may indicate moderate overtime risk in a 'fast-paced environment'."
+      ],
+      "best_fit_for": [
+        "Senior data engineers with 3+ years of experience and strong SQL/ETL skills who are already authorized to work in the US.",
+        "Candidates comfortable with hybrid work models and cross-functional collaboration in competitive tech hubs (Santa Monica, CA/Seattle, WA/NYC).",
+        "Engineers seeking contract roles with potential for skill validation in modern data stack environments."
+      ],
+      "red_flags_to_probe": [
+        "Ask about the team's actual work hours and expectations for overtime or weekend work in this 'fast-paced environment'.",
+        "Clarify the reporting structure and who the direct manager for this role is (not mentioned in posting).",
+        "Inquire about the possibility of contract extension or conversion to full-time employment after the 10-month term.",
+        "Understand the team's approach to tech debt management and whether there are dedicated efforts for refactoring or modernization."
+      ],
+      "negotiation_leverage": [
+        "Expertise in Snowflake or Redshift (high-demand warehouse technologies) could strengthen negotiation position.",
+        "Advanced SQL and ETL performance tuning skills are explicitly valued and may command higher rates.",
+        "Contract roles often have more flexible compensation structures, allowing for rate negotiation based on experience."
+      ],
+      "overall_assessment": "This is a well-defined contract role for a senior data engineer with a modern tool stack and hybrid work flexibility. The main trade-offs are the lack of visa sponsorship, unclear long-term stability, and potential overtime risks due to the fast-paced environment. Candidates should probe red flags during interviews to ensure alignment with their career goals.",
+      "recommendation_score": {
+        "value": 0.65,
+        "confidence": 0.8,
+        "evidence": "Role offers modern stack exposure and clear responsibilities but has concerns around contract stability and work authorization exclusivity."
+      }
+    },
+    "tokens": 12179,
+    "input_tokens": 9325,
+    "output_tokens": 2854,
+    "cost": 0.015033000000000001
+  }
+}

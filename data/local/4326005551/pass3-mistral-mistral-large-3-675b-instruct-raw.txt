@@ -1,0 +1,236 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 4,
+        "confidence": 0.85,
+        "evidence": "Equifax is a well-established enterprise with explicit mentions of data quality practices, intermediate GCP experience, and CI/CD integration. The focus on data governance, security, and structured data pipelines suggests mature data engineering processes.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "managed",
+        "confidence": 0.85,
+        "evidence": "Matches the data_maturity_score of 4, indicating strong practices, quality monitoring, and mature tooling.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["data_quality_testing", "data_governance", "cicd_practices"],
+        "confidence": 0.90,
+        "evidence": "Explicit mentions of data quality rules, processes, and anomaly resolution. Strong emphasis on CI/CD and Git practices. Intermediate GCP experience and security best practices suggest governance awareness.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.2,
+        "confidence": 0.95,
+        "evidence": "Role is clearly focused on data engineering tasks with no conflation of responsibilities such as backend development, data science, or DevOps.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.3,
+        "confidence": 0.80,
+        "evidence": "No explicit signals of aggressive timelines or overtime, but the enterprise context and regional team coverage might imply some operational pressure. No negative signals like 'fast-paced' or 'immediate start' are present in the description.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.95,
+        "evidence": "Responsibilities are well-defined and specific to data engineering, including data quality, pipeline development, and mentoring junior engineers.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.25,
+        "confidence": 0.85,
+        "evidence": "Low scope creep and no explicit overtime signals, but lack of benefits and compensation details raises some concerns.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.70,
+        "evidence": "No explicit mention of reporting structure or specific manager title beyond the regional team context.",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.60,
+        "evidence": "The job posting does not provide enough information to confidently infer the manager's level.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.75,
+        "evidence": "Mentions a regional team covering Chile and US, but no explicit signals of rapid expansion or team size changes.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.50,
+        "evidence": "Only mentions 'Equifax team regional de Chile y US' without specific team size or composition details.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit reporting structure mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "Mentions working within a regional team but does not explicitly state embedded cross-functional collaboration.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.6,
+        "confidence": 0.70,
+        "evidence": "No explicit negative signals regarding work-life balance, but the enterprise context and regional team coverage might imply some operational demands. No PTO or flexibility details mentioned.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.7,
+        "confidence": 0.80,
+        "evidence": "Mentorship and guidance responsibilities suggest growth opportunities. No explicit mention of learning budgets or conference attendance, but the enterprise context often supports these.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.75,
+        "confidence": 0.85,
+        "evidence": "Strong focus on modern data engineering practices, CI/CD, and data quality. No explicit mention of tech culture signals like open source or innovation time.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No explicit mentions of open source, tech blogs, conference speaking, or innovation time in the job posting.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["ci_cd", "code_review"],
+        "confidence": 0.85,
+        "evidence": "Explicit mention of CI/CD and Git. Inferred code review from 'revisar implementaciones'.",
+        "source": "combined"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Mentions staying updated with latest GCP trends and proposing new solutions, indicating some level of innovation.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions implementing improvements in data solutions and quality checks, suggesting awareness of tech debt.",
+        "source": "inferred"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of AI/ML, ML tools, or related responsibilities in the job posting.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML/AI tools or frameworks mentioned in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit hiring urgency mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Role is for a specific regional team (Chile and US) with no remote flexibility beyond the region. The enterprise context and lack of salary transparency might attract a moderate number of candidates.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.98,
+        "evidence": "Equifax is a well-established, global enterprise in the financial data industry.",
+        "source": "pass1_derived"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit hiring velocity mentioned beyond the regional team context.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit team size signals beyond regional team coverage.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No funding stage signals mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit mention of whether this is a new headcount, backfill, or team expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "data_governance", "career_growth_clear", "mentorship_signals"],
+    "strength_details": [
+      "Modern data engineering practices with a strong focus on data quality and structured pipelines.",
+      "Enterprise context suggests established processes and stability.",
+      "Mentorship and guidance responsibilities indicate clear growth opportunities within the data engineering field."
+    ],
+    "concern_categories": ["vague_reporting_structure", "salary_not_disclosed", "benefits_not_mentioned"],
+    "concern_details": [
+      "No explicit reporting structure or manager title mentioned, which could lead to unclear leadership dynamics.",
+      "Salary range is not disclosed, making it difficult to assess compensation competitiveness.",
+      "No benefits mentioned, which is unusual for an enterprise role and may indicate a lack of comprehensive benefits."
+    ],
+    "best_fit_categories": ["senior_data_engineers", "data_generalists", "technical_specialists"],
+    "best_fit_details": [
+      "Senior data engineers with 5+ years of experience in building and maintaining data pipelines.",
+      "Candidates with a strong background in data quality, governance, and CI/CD practices.",
+      "Engineers with intermediate GCP experience and a willingness to mentor junior team members."
+    ],
+    "probe_categories": ["reporting_structure", "salary_range_details", "work_hour_expectations", "role_scope_boundaries", "team_composition"],
+    "probe_details": [
+      "Ask for clarity on the reporting structure and who the direct manager for this role will be.",
+      "Request details on the salary range and how compensation is structured for this position.",
+      "Inquire about work-hour expectations, especially given the regional team coverage.",
+      "Understand the boundaries of the role and whether there are any additional responsibilities not mentioned in the posting.",
+      "Ask about the size and composition of the regional team to gauge collaboration and workload distribution."
+    ],
+    "leverage_categories": ["domain_expertise", "exact_experience_match"],
+    "leverage_details": [
+      "Experience in the financial market (especially credit bureaus or fintech) is highly valued and could strengthen your position.",
+      "Advanced skills in Python, SQL, and CI/CD align well with the role's requirements, providing negotiation leverage."
+    ],
+    "overall_assessment": "This role at Equifax offers a clear and focused opportunity for senior data engineers with a strong emphasis on data quality, governance, and modern practices within an enterprise environment. While the job posting lacks details on compensation, benefits, and reporting structure, the enterprise context suggests stability and established processes. Candidates should probe these areas during interviews to ensure alignment with expectations.",
+    "recommendation_score": 0.75,
+    "recommendation_confidence": 0.85
+  }
+}
+```

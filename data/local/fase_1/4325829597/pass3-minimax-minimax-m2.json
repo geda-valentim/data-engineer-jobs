@@ -1,0 +1,248 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-06 23:45:31",
+    "job_posting_id": "4325829597",
+    "job_title": "Go Anywhere SFTP Data Engineer",
+    "company_name": "Tata Consultancy Services",
+    "job_location": "Cincinnati, OH",
+    "pass_name": "pass3",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 2,
+          "confidence": 0.85,
+          "evidence": "Heavy focus on legacy SFTP transfers, manual processes, and basic scripting. No modern data stack mentioned (no dbt, Airflow, Snowflake, etc.). Emphasis on file monitoring and basic automation suggests developing stage with minimal structured practices.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "developing",
+          "confidence": 0.85,
+          "evidence": "Score of 2 indicates developing maturity level - basic automation exists but no modern data engineering practices, governance, or quality frameworks mentioned.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No modern data stack adoption, CI/CD practices, data quality testing, monitoring, or governance mentioned. Only legacy SFTP and basic scripting tools referenced.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.25,
+          "confidence": 0.8,
+          "evidence": "Role is focused on SFTP data transfers and file management, but includes multiple responsibilities: security, compliance, monitoring, on-call duties, and software updates. Some scope expansion but remains within data engineering domain.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.75,
+          "confidence": 0.85,
+          "evidence": "Explicit mention of 'after-hours and weekends on-call duties' and 'manage open incidents' indicates high likelihood of overtime and work-life balance issues.",
+          "source": "pass1_derived"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Well-defined role focused specifically on SFTP data transfers, file management, and related infrastructure. Clear responsibilities and requirements listed.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.65,
+          "confidence": 0.8,
+          "evidence": "Moderate to high risk due to on-call requirements, low salary for data engineering, limited growth opportunities, and legacy technology focus. However, role is clearly defined.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No reporting structure, manager level, or team hierarchy mentioned in job description.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No managerial titles or reporting relationships mentioned in job posting.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No team growth, expansion, or hiring velocity information provided.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.95,
+          "evidence": "No team size, composition, or data engineering team structure mentioned in job description.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No reporting structure or organizational hierarchy mentioned in job posting.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Role appears to be traditional centralized support function for SFTP operations rather than embedded cross-functional team work.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.25,
+          "confidence": 0.85,
+          "evidence": "Explicit on-call duties for after-hours and weekends, managing incidents, and software updates suggest poor work-life balance. No PTO, flexibility, or work-life balance benefits mentioned.",
+          "source": "pass1_derived"
+        },
+        "growth_opportunities_score": {
+          "value": 0.15,
+          "confidence": 0.8,
+          "evidence": "No learning budget, conference attendance, mentorship programs, career paths, or growth opportunities mentioned. Very narrow technical focus on legacy SFTP technology.",
+          "source": "pass1_derived"
+        },
+        "tech_culture_score": {
+          "value": 0.2,
+          "confidence": 0.85,
+          "evidence": "Legacy technology focus (SFTP, WinSCP), no modern development practices mentioned, no innovation culture signals, and maintenance-focused role rather than development.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No open source contributions, tech blogs, conference speaking, hackathons, or innovation time mentioned.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No modern development practices like code review, CI/CD, testing, monitoring, or design documentation mentioned.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.85,
+          "evidence": "Focus entirely on maintaining legacy SFTP systems and basic automation. No mention of new technology adoption, experimentation, or innovation initiatives.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of modernizing systems, improving code quality, reducing technical debt, or upgrading legacy infrastructure.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.95,
+          "evidence": "No AI, machine learning, or advanced analytics mentioned in job description. Focus is entirely on traditional file transfer operations.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No ML/AI tools, platforms, or technologies mentioned in job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "normal",
+          "confidence": 0.8,
+          "evidence": "No urgent hiring language, immediate start dates, or time pressure mentioned. Standard corporate hiring timeline expected.",
+          "source": "inferred"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "On-site position in Cincinnati limits geographic competition, but TCS is large company with standard hiring process. Moderate competition expected.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "established_tech",
+          "confidence": 0.9,
+          "evidence": "Tata Consultancy Services is a large, established multinational consulting corporation with stable, mature operations.",
+          "source": "pass1_derived"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.75,
+          "evidence": "TCS typically has steady, ongoing hiring for various positions rather than aggressive expansion or urgent backfills.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No team size or organizational structure mentioned in job description.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "public",
+          "confidence": 0.95,
+          "evidence": "Tata Consultancy Services is a publicly traded company (NYSE: TCS).",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No indication whether this is new headcount, backfill, team expansion, or new function creation.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strengths": [
+        "Stable employment with large, established company (TCS)",
+        "Clear, focused role definition with specific technical requirements",
+        "On-site position provides structure and routine",
+        "Entry-level to mid-level data engineering experience (3-5 years)"
+      ],
+      "concerns": [
+        "Very low salary range for data engineering ($80-85k)",
+        "On-call duties for after-hours and weekends",
+        "Legacy technology focus with no modern data stack",
+        "Limited career growth and learning opportunities",
+        "Narrow technical specialization in SFTP may limit future prospects"
+      ],
+      "best_fit_for": [
+        "Junior to mid-level data engineers seeking stable corporate role",
+        "Candidates with SFTP/file transfer experience looking for steady employment",
+        "Engineers prioritizing job security over cutting-edge technology"
+      ],
+      "red_flags_to_probe": [
+        "What is the actual on-call rotation schedule and frequency?",
+        "Are there opportunities to work with modern data technologies?",
+        "What is the career progression path within TCS?",
+        "How much overtime is typically required?",
+        "What training or certification support is provided?"
+      ],
+      "negotiation_leverage": [
+        "SFTP and managed file transfer expertise is specialized but niche",
+        "Azure cloud experience provides some leverage",
+        "Bachelor's degree requirement is standard but may offer negotiation room"
+      ],
+      "overall_assessment": "This is a traditional, maintenance-focused data engineering role at a large consulting firm. While it offers job stability and clear responsibilities, it comes with significant trade-offs including low compensation, on-call requirements, legacy technology focus, and limited growth opportunities. Best suited for engineers prioritizing stability over innovation or career advancement.",
+      "recommendation_score": 0.35,
+      "recommendation_confidence": 0.8
+    },
+    "tokens": 11459,
+    "input_tokens": 8670,
+    "output_tokens": 2789,
+    "cost": 0.014248
+  }
+}

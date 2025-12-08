@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 00:07:04",
+    "job_posting_id": "4325839911",
+    "job_title": "AI Data Engineer",
+    "company_name": "Mattoni 1873",
+    "job_location": "Prague, Prague, Czechia",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.75,
+          "evidence": "1+ years experience required, title 'AI Data Engineer' without senior/staff designation, responsibilities align with mid-level role (data prep, model deployment, API integration)",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title is 'AI Data Engineer', core responsibilities include data pipelines, data transformation, and model deployment - core data engineering functions",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "ml_infra",
+          "confidence": 0.85,
+          "evidence": "Focus on preparing data for AI/ML models, deploying and monitoring models on Azure, integrating model APIs - clearly ML infrastructure specialization",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.8,
+          "evidence": "Role reports to AI Tech Lead, collaborates with senior AI developer, no mention of managing people or leading teams - pure individual contributor role",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "azure",
+          "confidence": 0.95,
+          "evidence": "Azure services, Azure ML, Microsoft Fabric, Azure DevOps explicitly mentioned as required skills",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No other cloud platforms mentioned in requirements or description",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.75,
+          "evidence": "Focus on data preparation for model training and deployment, no mention of real-time streaming or event-driven architectures",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "cloud_native",
+          "confidence": 0.85,
+          "evidence": "Azure DevOps mentioned as required skill, which is Microsoft's cloud-native CI/CD and orchestration platform",
+          "source": "inferred"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.7,
+          "evidence": "Microsoft Fabric mentioned (which supports both data lake and data warehouse capabilities) and Azure services generally support mixed storage patterns",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.85,
+          "evidence": "Location specified as Prague, Czechia with hybrid work model - implies must be in Prague region for office days",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "europe",
+          "confidence": 0.9,
+          "evidence": "Based in Prague, Czechia - clearly focused on European timezone",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.8,
+          "evidence": "Location specified as Prague with hybrid work model - implies must be able to work from Prague office",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Based in Czechia, not US - H1B is US-specific visa, no mention of visa sponsorship for non-EU citizens",
+          "source": "inferred"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Based in Czechia, OPT/CPT are US student visa programs - not applicable, no mention of student visa support",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.75,
+          "evidence": "No explicit citizenship requirement mentioned, but location in Prague implies must be authorized to work in Czechia",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.85,
+          "evidence": "Full-time permanent position with comprehensive benefits package (pension, insurance, etc.) typical of W2 employment in Czechia",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "comprehensive",
+          "confidence": 0.85,
+          "evidence": "Extensive benefits listed including 5 weeks vacation, meal allowance, multisport card, pension contributions, insurance, loans, referral programs - comprehensive package",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Mentions 'Focus on your development', 'internal & external trainings, certifications, workshops', 'Boost your Potential and Independence' - implies growth opportunities but no specific career tracks",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.8,
+          "evidence": "Mentions collaborating with 'senior AI developer' and being part of 'AI Competence Center under AI Tech Lead' - implies working with senior team members",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of promotions, advancement, or career progression paths",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal transfers, lateral moves, or exploring other roles within the company",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.65,
+          "evidence": "No specific career tracks (IC, management, specialist, architect) mentioned in the job posting",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear must-have skills listed (Python, SQL, Azure services, etc.) with no nice-to-have skills - moderate strictness with specific technical requirements",
+          "source": "pass1_derived"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused role with specific responsibilities: prepare data for AI models, deploy models on Azure, automate workflows, integrate APIs - clear scope",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "1+ years experience required for mid-level role with reasonable skill set (Python, SQL, Azure, AI model experience) - no unrealistic expectations",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7760,
+    "input_tokens": 6058,
+    "output_tokens": 1702,
+    "cost": 0.009462
+  }
+}

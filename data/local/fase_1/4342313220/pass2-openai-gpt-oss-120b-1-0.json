@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-06 21:29:55",
+    "job_posting_id": "4342313220",
+    "job_title": "Data Engineer (모델링)",
+    "company_name": "MUSINSA 무신사",
+    "job_location": "Seoul, Seoul, South Korea",
+    "pass_name": "pass2",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.65,
+          "evidence": "Title is Data Engineer with broad responsibilities but no senior title or years of experience specified.",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title is Data Engineer and responsibilities focus on pipelines, modeling, and data platform work.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "data_modeling",
+          "confidence": 0.85,
+          "evidence": "Job description emphasizes data modeling, CDC, data quality testing, and pipeline development.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.75,
+          "evidence": "No mention of people‑management or technical‑lead responsibilities; role appears to be an individual contributor.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No specific cloud provider (AWS, GCP, Azure) is referenced in the posting.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No other cloud platforms are mentioned.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.73,
+          "evidence": "Mentions both CDC (real‑time change capture) and batch workflow orchestration (Airflow, Luigi).",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "airflow_like",
+          "confidence": 0.92,
+          "evidence": "Airflow is explicitly listed among required tools (Airflow, Luigi, Dagster, Prefect).",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "lake",
+          "confidence": 0.62,
+          "evidence": "References to data lake concepts and raw data storage patterns.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.96,
+          "evidence": "Location restriction to Seoul, South Korea; geo‑restriction type is specific_countries with allowed country KR.",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "apac",
+          "confidence": 0.95,
+          "evidence": "Job is based in South Korea, which is in the APAC region.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "On‑site role in Seoul with no relocation offer or requirement mentioned.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.92,
+          "evidence": "Visa sponsorship is not mentioned in the posting.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.88,
+          "evidence": "No reference to OPT/CPT or student visa support.",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No citizenship or work‑authorization text is provided.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "Employment type and contract type are not stated.",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.93,
+          "evidence": "Benefits array is empty; no benefits are described in the posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "The posting does not discuss career ladders, promotion tracks, or growth opportunities.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No mentorship program or mentorship language is present.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of promotion or advancement paths.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No reference to internal transfers or lateral moves.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.7,
+          "evidence": "No explicit IC, management, specialist, or architect tracks are described.",
+          "source": "not_mentioned"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.73,
+          "evidence": "A long list of required hard skills (SQL, Python, Airflow, Luigi, Dagster, Prefect, Great Expectations, Soda, Databricks, CDC) with no nice‑to‑have items.",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.88,
+          "evidence": "Job description focuses specifically on data engineering tasks and responsibilities.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.65,
+          "evidence": "Required skill set aligns with typical mid‑level data engineer expectations; no unrealistic senior‑level demands.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 15197,
+    "input_tokens": 11343,
+    "output_tokens": 3854,
+    "cost": 0.0028576499999999998
+  }
+}

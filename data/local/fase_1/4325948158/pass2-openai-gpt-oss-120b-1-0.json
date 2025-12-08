@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-06 21:29:26",
+    "job_posting_id": "4325948158",
+    "job_title": "Data Engineer",
+    "company_name": "Manchester Digital",
+    "job_location": "Manchester, England, United Kingdom",
+    "pass_name": "pass2",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.78,
+          "evidence": "Responsibilities include end‑to‑end data platform design, governance and advanced toolset (Snowflake, DBT, AWS CDK, Docker) indicating senior‑level expertise.",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.99,
+          "evidence": "Title is \"Data Engineer\" and core duties revolve around pipelines, warehousing and data modeling.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.85,
+          "evidence": "Focus on ELT pipelines, data warehousing solutions, and tools like DBT, Fivetran, HVR; no streaming technologies mentioned.",
+          "source": "pass1_derived"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.85,
+          "evidence": "Job description does not mention people‑management, team‑lead responsibilities or direct reports.",
+          "source": "pass1_derived"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "aws",
+          "confidence": 0.95,
+          "evidence": "Explicit mention of \"AWS cloud infrastructure\" and \"AWS CDK\" among required skills.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [
+            "gcp"
+          ],
+          "confidence": 0.8,
+          "evidence": "BigQuery (a GCP service) is listed alongside Snowflake and Redshift.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.88,
+          "evidence": "Responsibilities centre on ELT pipelines and data warehousing; no streaming technologies (e.g., Kafka, Kinesis) are mentioned.",
+          "source": "pass1_derived"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.92,
+          "evidence": "No orchestration tool such as Airflow, Luigi, Dagster, Prefect, or cloud‑native workflow services is referenced.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.9,
+          "evidence": "Key responsibilities include developing Data Warehousing solutions; Snowflake, BigQuery and Redshift are data‑warehouse platforms.",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.95,
+          "evidence": "ext_geo_restriction_type is \"uk_only\" and allowed_countries list contains only GB.",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "europe",
+          "confidence": 0.9,
+          "evidence": "Job location is Manchester, United Kingdom, which falls in the Europe time zone.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No relocation language is present; hybrid model assumes the candidate can work from the UK office.",
+          "source": "pass1_derived"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "Visa sponsorship is not mentioned and the role is limited to UK candidates.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No reference to OPT/CPT or student visa eligibility; work authorization is implied for UK residents.",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.85,
+          "evidence": "Geo restriction to the UK without explicit citizenship clause suggests only work‑authorization is required.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.95,
+          "evidence": "Employment type is full‑time permanent, indicating a standard employee (W‑2) arrangement.",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "comprehensive",
+          "confidence": 0.9,
+          "evidence": "Extensive benefits list includes equity, generous PTO, learning budget, health plans, gym, bonuses, and many additional perks.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Mentions of talent development programmes and professional qualification support indicate growth opportunities, but no explicit career ladder.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Collaboration with both technical and non‑technical teams is highlighted, suggesting informal mentorship, but no formal program is stated.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "The posting does not contain language about promotion, career ladders, or moving to higher titles.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No reference to internal transfers, lateral moves, or mobility programs.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No specific IC, management, specialist, or architect tracks are described.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.85,
+          "evidence": "Long list of mandatory hard and soft skills with no nice‑to‑have items indicates a stringent requirement set.",
+          "source": "pass1_derived"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "Job description is focused specifically on data engineering responsibilities without mixing other roles.",
+          "source": "pass1_derived"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.75,
+          "evidence": "The required skill set aligns with a senior data engineering role; no unrealistic junior‑level expectations are present.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 9894,
+    "input_tokens": 6877,
+    "output_tokens": 3017,
+    "cost": 0.0019366499999999998
+  }
+}

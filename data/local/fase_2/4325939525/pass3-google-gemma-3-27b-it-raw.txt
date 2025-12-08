@@ -1,0 +1,231 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "Mentions Palantir Foundry, Hadoop ecosystem, suggesting some data engineering practices, but lacks details on CI/CD, monitoring, or governance.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Matches score of 3.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.65,
+        "evidence": "Palantir Foundry is a modern data platform, but other signals are missing.",
+        "source": "inferred"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.20,
+        "confidence": 0.85,
+        "evidence": "The role is clearly focused on Data Engineering with specific technologies.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.60,
+        "confidence": 0.78,
+        "evidence": "Immediate start and 'locals only' suggest potential urgency and pressure. No work-life balance signals.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "The job description focuses on Data Engineering with specific technologies.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.45,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to potential time pressure and lack of work-life balance signals.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "mentioned",
+        "confidence": 0.70,
+        "evidence": "Mentions reporting to Head of Data Engineering, but no further details.",
+        "source": "explicit"
+      },
+      "manager_level_inferred": {
+        "value": "director_plus",
+        "confidence": 0.85,
+        "evidence": "Head of Data Engineering suggests a director-level manager.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.70,
+        "evidence": "The team is expanding, but the growth rate isn't explicitly stated as rapid.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.50,
+        "evidence": "No specific details about team size or composition are provided.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "reports_to_director_data",
+        "confidence": 0.85,
+        "evidence": "Job posting mentions 'reporting to Head of Data Engineering'",
+        "source": "explicit"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "No mention of being embedded within product teams.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.40,
+        "confidence": 0.70,
+        "evidence": "No explicit work-life balance signals, immediate start date suggests potential pressure.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.60,
+        "confidence": 0.65,
+        "evidence": "No specific growth opportunities are mentioned.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.65,
+        "confidence": 0.70,
+        "evidence": "Modern stack (Palantir, Hadoop) but limited information on engineering practices.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.50,
+        "evidence": "No signals of strong technical culture are present.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.50,
+        "evidence": "No development practices are explicitly mentioned.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No innovation or experimentation culture is mentioned.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt or refactoring.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No mention of AI or ML.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools are mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "immediate",
+        "confidence": 0.90,
+        "evidence": "ASAP start date mentioned.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Atlanta location, limited information on application volume.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "startup_series_a_b",
+        "confidence": 0.70,
+        "evidence": "Mentions 'well-funded startup' and expanding team.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "Expanding team, but no indication of rapid growth.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "small_2_5",
+        "confidence": 0.60,
+        "evidence": "Limited information on team size.",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "series_a",
+        "confidence": 0.65,
+        "evidence": "Mentions 'well-funded startup'.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.80,
+        "evidence": "Expanding team suggests a team expansion role.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "well_defined_role"],
+    "strength_details": [
+      "Utilizes modern data technologies like Palantir Foundry and Hadoop.",
+      "Clear focus on Data Engineering with specific technology requirements."
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship", "unclear_reporting"],
+    "concern_details": [
+      "Immediate start date suggests potential time pressure.",
+      "No visa sponsorship is offered.",
+      "Limited information about team structure and reporting lines."
+    ],
+    "best_fit_categories": ["senior_data_engineers", "pipeline_developers"],
+    "best_fit_details": [
+      "Experienced Data Engineers with Hadoop and Palantir Foundry expertise.",
+      "Engineers focused on building and maintaining data pipelines."
+    ],
+    "probe_categories": ["work_hour_expectations", "team_size_composition", "tech_stack_details"],
+    "probe_details": [
+      "Inquire about typical work hours and on-call expectations.",
+      "Understand the size and structure of the data engineering team.",
+      "Clarify the specific versions and configurations of the technologies used."
+    ],
+    "leverage_categories": ["rare_skill_match"],
+    "leverage_details": [
+      "Palantir Foundry experience is a valuable and potentially rare skill."
+    ],
+    "overall_assessment": "This role offers a chance to work with modern data technologies in a growing startup. However, candidates should be prepared for potential time pressure and a lack of work-life balance. The lack of visa sponsorship is a significant limitation.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.80
+  }
+}
+```

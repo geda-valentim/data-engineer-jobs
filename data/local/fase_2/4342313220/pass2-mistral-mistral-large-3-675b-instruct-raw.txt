@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "not_mentioned",
+        "confidence": 0.6,
+        "evidence": "Title includes 'Data Engineer' but no explicit seniority level (e.g., junior, mid, senior) is mentioned. The Korean term '(모델링)' suggests a modeling specialty but does not clarify seniority. Years of experience are not specified in a normalized way.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Data Engineer', and responsibilities focus on data pipelines, modeling, and infrastructure.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_modeling",
+        "confidence": 0.9,
+        "evidence": "Title includes '(모델링)' (modeling), and description emphasizes data modeling, pipeline design, and data quality.",
+        "source": "combined"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.7,
+        "evidence": "Mentions mentoring ('고객과 입점 브랜드가 개인의 성공을 자유롭게 표현할 수 있도록'), code reviews, and technical leadership without explicit people management duties.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No cloud providers (AWS, Azure, GCP) or cloud services explicitly mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No secondary clouds mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.7,
+        "evidence": "Mentions CDC (streaming/real-time) and '다양한 소스로부터 데이터' (diverse data sources) alongside workflow managers like Airflow (batch).",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "dagster_prefect",
+        "confidence": 0.6,
+        "evidence": "Lists modern orchestrators (Dagster, Prefect) as preferred alongside Airflow/Luigi, but no explicit primary orchestrator is stated.",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "lakehouse",
+        "confidence": 0.8,
+        "evidence": "Mentions Databricks ('데이터 품질 플랫폼(Great Expectations, Soda 등)과 Databricks 기반 데이터 웨어하우스 환경') and data quality tools (Great Expectations, Soda) which are commonly associated with lakehouse architectures.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Location is stated as Seoul, South Korea, but no explicit remote work restrictions (e.g., same country, timezone) are mentioned beyond the exclusion of KR in Pass 1 extraction, which is likely a misinterpretation of the original posting's location.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No timezone requirements or team distribution details are provided.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "Job posting is located in Seoul, South Korea, and mentions '입사지원 시점으로부터' (from the point of application) without explicit relocation requirements.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No H1B sponsorship mentioned, and job is based in South Korea where H1B is irrelevant.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "No mention of OPT/CPT or student visa support, and residency in South Korea is implied.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No citizenship or work authorization requirements explicitly stated for South Korea.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No contract type (W2, C2C, 1099) or employment type mentioned, as these are US-specific and not applicable in South Korea.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "standard",
+        "confidence": 0.6,
+        "evidence": "Mentions a 3-month probation period with full benefits after ('입사지원 시점으로부터 3개월간의 수습기간 이후 채용확정'), but no details on premium benefits like equity or learning budgets.",
+        "source": "inferred"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.6,
+        "evidence": "Mentions '고객과 입점 브랜드가 개인의 성공을 자유롭게 표현할 수 있도록' (supporting individual success) and '성장할 수 있는 데이터 인프라' (growable data infrastructure), but no explicit career tracks are outlined.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.7,
+        "evidence": "Mentions collaboration with senior engineers ('시니어 엔지니어와 협업') and technical leadership without formal mentorship program.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit mention of promotions or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of internal mobility or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.7,
+        "evidence": "Mentions '시니어 엔지니어' (senior engineers) and '데이터 인프라의 기술적 방향' (technical direction of data infrastructure), but no explicit management or specialist tracks are discussed.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.7,
+        "evidence": "Distinguishes between must-have ('SQL, Python, 데이터 파이프라인, CDC, Databricks') and nice-to-have ('data modeling, Airflow, Luigi, Dagster, Prefect, Great Expectations, Soda') skills with balanced language.",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.8,
+        "evidence": "Job description focuses on data engineering tasks (pipelines, modeling, quality) with a clear emphasis on Databricks and CDC.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "Must-have skills align with typical data engineering roles, and no unrealistic expectations (e.g., 10+ years for mid-level) are detected.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

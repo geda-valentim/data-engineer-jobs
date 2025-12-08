@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 02:18:10",
+    "job_posting_id": "4326005551",
+    "job_title": "Data Engineering USIS",
+    "company_name": "Equifax",
+    "job_location": "Las Condes, Santiago Metropolitan Region, Chile",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.9,
+          "evidence": "5+ years experience required + title 'Data Engineer' with mentoring responsibilities",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Job title explicitly 'Data Engineer' with core responsibilities around data pipelines and data modeling",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.8,
+          "evidence": "Focus on building data pipelines, integrating/consolidating/cleaning data, and data modeling - typical batch ETL work",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.85,
+          "evidence": "Explicitly mentions mentoring junior data engineers and reviewing their implementations, indicating technical leadership without direct reports",
+          "source": "pass1_derived"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "gcp",
+          "confidence": 0.95,
+          "evidence": "Explicitly mentions Google Cloud Platform (GCP) as primary cloud environment and staying current with GCP trends",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [
+            "aws",
+            "azure"
+          ],
+          "confidence": 0.7,
+          "evidence": "Mentions 'basic knowledge of other cloud environments' implying AWS/Azure as secondary possibilities",
+          "source": "inferred"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.8,
+          "evidence": "Focus on building data pipelines for data collection, integration, consolidation, cleaning - typical batch processing",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No specific orchestrator tools mentioned in job description or Pass 1 extraction",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.75,
+          "evidence": "Mentions preparing data for analytical use and building pipelines without specifying storage type, implying potential use of both warehouse and lake patterns",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.9,
+          "evidence": "Location specified as Santiago, Chile with geo restriction type 'specific_countries' including only Chile",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.95,
+          "evidence": "Location restricted to Chile only, implying Chilean timezone focus",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Location specified as Santiago, Chile with no mention of relocation, implying candidate must already be in Chile",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No visa sponsorship mentioned and location restricted to Chile, making H1B sponsorship unlikely",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Location in Chile and 5+ years experience requirement make student visa support unlikely",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.8,
+          "evidence": "No citizenship requirement mentioned, but location in Chile implies authorization to work in Chile is required",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.85,
+          "evidence": "Full-time position with mentoring responsibilities suggests traditional employment (W2) rather than contract",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits mentioned in job description or Pass 1 extraction",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Mentoring junior engineers and reviewing implementations implies growth potential, but no explicit career tracks mentioned",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "explicit_yes",
+          "confidence": 0.9,
+          "evidence": "Explicitly mentions 'Proporcionar orientación y mentoría a ingenieros de datos junior' (Provide guidance and mentorship to junior data engineers)",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No explicit mention of promotions or advancement paths in job description",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal transfers or role changes within the company",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track"
+          ],
+          "confidence": 0.7,
+          "evidence": "Mentoring junior engineers suggests IC track progression, but no explicit mention of management or other tracks",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.8,
+          "evidence": "Clear must-have skills (Python, SQL, GCP, Git, CI/CD) with some nice-to-have skills (scripting, cloud concepts, other clouds)",
+          "source": "pass1_derived"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused on data engineering responsibilities with specific tasks around data pipelines, quality, and modeling",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "5+ years experience requirement matches senior level expectations; skills are reasonable for senior data engineer role",
+          "source": "combined"
+        }
+      }
+    },
+    "tokens": 7712,
+    "input_tokens": 6120,
+    "output_tokens": 1592,
+    "cost": 0.009304
+  }
+}

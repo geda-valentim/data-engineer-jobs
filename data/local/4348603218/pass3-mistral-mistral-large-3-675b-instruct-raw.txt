@@ -1,0 +1,238 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 4,
+        "confidence": 0.85,
+        "evidence": "Mentions scalable data solutions, advanced data techniques, and data governance standards, suggesting structured practices. AWS, Airflow, Spark, and Kafka indicate a modern data stack. The role is part of a dedicated 'Data Lake Engineering Team' within a large organization (Walmart/VIZIO), implying defined processes and tooling.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "managed",
+        "confidence": 0.85,
+        "evidence": "Matches the data_maturity_score of 4, indicating strong practices, quality monitoring, and mature tooling.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption", "data_governance"],
+        "confidence": 0.90,
+        "evidence": "Explicit mentions of AWS, Airflow, Spark, and Kafka as required tools. Data governance is implied through 'ensuring data quality and governance standards are met'.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.3,
+        "confidence": 0.90,
+        "evidence": "Role primarily focuses on data engineering but includes 'hands-on experience in full-stack web development and REST APIs' as a requirement, which is not a core DE responsibility. This suggests minor scope expansion but remains largely clear.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.80,
+        "evidence": "Mentions 'dynamic' and 'fast-paced' environment, which are moderate signals for overtime risk. However, Walmart's comprehensive benefits (e.g., PTO, parental leave) and lack of aggressive timeline signals (e.g., 'immediate start') reduce this risk.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Responsibilities are well-defined (ETL, pipelines, data modeling, collaboration), though the inclusion of full-stack web development is slightly outside typical DE scope.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.85,
+        "evidence": "Composite score considering minor scope creep (full-stack requirement) and moderate overtime risk (startup pace signals). Role clarity and requirement strictness are otherwise well-defined.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.95,
+        "evidence": "Job posting states 'Data Lake Engineering Team at Walmart/VIZIO' but does not specify a direct manager or reporting line. The team is mentioned as part of Walmart/VIZIO's broader data strategy, but no explicit title for the reporting manager is provided.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit mention of the manager's title or level in the job posting or team description.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Team description focuses on current responsibilities and technologies but does not provide signals about growth velocity or hiring plans.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "5+ data engineers",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.70,
+        "evidence": "Team description mentions 'Data Lake Engineering Team' and implies multiple data engineers but does not provide explicit team size or seniority mix.",
+        "source": "inferred"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit mention of reporting structure or manager title in the job posting.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.80,
+        "evidence": "Job posting mentions collaborating with 'cross-functional teams to support data-driven projects', implying embedded work with other functions.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.7,
+        "confidence": 0.85,
+        "evidence": "Walmart offers comprehensive PTO benefits (including sick leave, parental leave) and no explicit signals of overtime or on-call work. However, the 'dynamic' and 'fast-paced' environment may imply some time pressure.",
+        "source": "combined"
+      },
+      "growth_opportunities_score": {
+        "value": 0.8,
+        "confidence": 0.80,
+        "evidence": "Live Better U education program and performance-based bonuses suggest strong growth opportunities. The role is part of a larger organization with potential for career development, though no explicit mentorship or promotion paths are mentioned.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.75,
+        "confidence": 0.85,
+        "evidence": "Modern tech stack (AWS, Airflow, Spark, Kafka) and emphasis on data governance and quality are positive signals. However, no explicit mentions of code review, testing, or documentation practices reduce confidence.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No explicit mentions of open source contributions, tech blogs, conference speaking, hackathons, or innovation time in the job posting.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["ci_cd", "monitoring"],
+        "confidence": 0.75,
+        "evidence": "Airflow is an orchestrator that often integrates with CI/CD pipelines. 'Ensuring data quality and governance standards' implies monitoring practices. No explicit mentions of code review, pair programming, or TDD.",
+        "source": "inferred"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Mentions 'cutting-edge technologies' and 'drive innovation', but no explicit signals of experimentation or R&D time.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mentions of tech debt management, refactoring, or modernization efforts beyond general 'advanced data techniques'.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mentions of ML/AI, MLflow, SageMaker, or GenAI in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML/AI tools mentioned or inferred from the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "normal",
+        "confidence": 0.80,
+        "evidence": "No explicit urgency signals (e.g., 'immediate start', 'ASAP') in the job posting, suggesting a standard hiring timeline.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Location is Denver, CO (not a high-competition hub like SF/NYC), but the role is part of a large organization with likely broader candidate interest. Salary range is disclosed and competitive, which may attract a moderate number of applicants.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.95,
+        "evidence": "VIZIO is a subsidiary of Walmart, a large, established enterprise with multiple departments and mature data practices.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.80,
+        "evidence": "Role is part of Walmart's broader hiring, which is typically steady and structured. No explicit signals of aggressive hiring or rapid expansion for this specific team.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.70,
+        "evidence": "Team composition mentions '5 data engineers' within a broader data org, suggesting a medium-sized team.",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit funding stage signals in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.80,
+        "evidence": "Role is part of a team described as focusing on 'scalable data solutions', implying expansion of an existing data function.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["competitive_compensation", "transparent_salary", "modern_tech_stack", "cloud_native", "strong_benefits", "established_company"],
+    "strength_details": [
+      "Competitive salary range ($99k-$198k USD) with performance-based bonuses, aligning with enterprise-level compensation.",
+      "Modern tech stack including AWS, Airflow, Spark, and Kafka, which are industry-standard tools for scalable data engineering.",
+      "Comprehensive benefits package (medical/vision/dental, 401(k), stock purchase, parental leave, military leave, education reimbursement) reflects Walmart's enterprise maturity and commitment to employee well-being."
+    ],
+    "concern_categories": ["scope_creep_risk", "overtime_likely", "no_visa_sponsorship", "unclear_reporting"],
+    "concern_details": [
+      "Full-stack web development and REST API experience are listed as must-have skills, which is unusual for a pure data engineering role and may indicate minor scope creep.",
+      "The 'dynamic' and 'fast-paced' environment, combined with cross-functional collaboration, could imply moderate overtime risk despite PTO benefits.",
+      "No visa sponsorship mentioned, and the role is restricted to US-based candidates, which may limit opportunities for international applicants.",
+      "Unclear reporting structure and manager level, as the job posting does not specify who the Senior Data Engineer will report to directly."
+    ],
+    "best_fit_categories": ["senior_data_engineers", "data_generalists", "pipeline_developers", "enterprise_experienced"],
+    "best_fit_details": [
+      "Senior data engineers with 5+ years of experience in cloud-based ecosystems (AWS) and big data tools (Spark, Kafka, Airflow).",
+      "Data generalists who have worked with both batch and streaming pipelines, as well as relational and NoSQL databases.",
+      "Engineers with experience in enterprise environments, particularly those familiar with data governance, scalability, and cross-functional collaboration."
+    ],
+    "probe_categories": ["role_scope_boundaries", "work_hour_expectations", "on_call_expectations", "career_growth_path", "team_composition"],
+    "probe_details": [
+      "Ask for clarification on the full-stack web development requirement: 'How much of this role will involve frontend or full-stack work versus core data engineering tasks?'",
+      "Probe work-hour expectations: 'What are the typical work hours for this team, and how often is overtime required?'",
+      "Understand on-call expectations: 'Is there an on-call rotation for this role, and if so, what is the frequency and compensation for it?'",
+      "Inquire about career growth: 'What are the career paths for Senior Data Engineers at Walmart/VIZIO, and how are promotions or advancements handled?'",
+      "Ask about team composition: 'How many data engineers are currently on the team, and what is the seniority mix?'"
+    ],
+    "leverage_categories": ["exact_experience_match", "domain_expertise", "high_market_demand"],
+    "leverage_details": [
+      "Candidates with exact experience in Python, PySpark, SQL, AWS, Airflow, Spark, and Kafka can leverage this as strong negotiation points for compensation and role scope.",
+      "Experience in data governance, compliance, or creating scalable data solutions in enterprise environments is highly valued and can be used for negotiation.",
+      "Data engineering roles are in high demand, particularly in cloud-native and hybrid processing environments, which may strengthen a candidate's position if they meet the core requirements."
+    ],
+    "overall_assessment": "This role at Walmart/VIZIO is a strong opportunity for senior data engineers with enterprise experience, particularly those comfortable with a modern cloud-native tech stack (AWS, Airflow, Spark, Kafka). The compensation and benefits are competitive and transparent, reflecting Walmart's established maturity. However, candidates should be cautious about the minor scope creep (full-stack requirement) and potential overtime due to the 'fast-paced' environment. The lack of visa sponsorship and unclear reporting structure are additional concerns for some applicants.",
+    "recommendation_score": 0.75,
+    "recommendation_confidence": 0.90
+  }
+}
+```

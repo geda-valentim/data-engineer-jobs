@@ -3,88 +3,94 @@
     "company_maturity": {
       "data_maturity_score": {
         "value": 3,
-        "confidence": 0.82,
-        "evidence": "Use of modern cloud services (AWS), orchestration tools (Airflow/Dagster/Prefect), CI/CD pipelines, and data quality testing indicates a defined level of data maturity.",
-        "source": "inferred"
+        "confidence": 0.78,
+        "evidence": "Job mentions modern orchestration (Airflow/Dagster/Prefect), IaC (Terraform/CloudFormation), CI/CD pipelines, data quality testing and governance practices, indicating a defined level of data maturity.",
+        "source": "combined"
       },
       "data_maturity_level": {
         "value": "defined",
-        "confidence": 0.82,
-        "evidence": "Score of 3 maps to the 'defined' maturity level.",
+        "confidence": 0.78,
+        "evidence": "Score of 3 maps to the \"defined\" maturity level.",
         "source": "inferred"
       },
       "maturity_signals": {
         "value": [
           "modern_data_stack_adoption",
           "cicd_practices",
-          "data_quality_testing"
+          "data_quality_testing",
+          "monitoring_observability",
+          "data_governance"
         ],
         "confidence": 0.85,
-        "evidence": "Job mentions AWS, Airflow/Dagster/Prefect, CI/CD, Docker/Kubernetes, and testing/validation of data pipelines.",
+        "evidence": "Airflow/Dagster, Terraform, CI/CD, testing/validation, monitoring of pipeline performance, and data security/catalog references.",
         "source": "pass1_derived"
       }
     },
     "red_flags_and_role_quality": {
       "scope_creep_score": {
         "value": 0.2,
-        "confidence": 0.88,
-        "evidence": "Role is focused on data engineering responsibilities; no mention of product development, dev‑ops, or data‑science ownership.",
+        "confidence": 0.85,
+        "evidence": "Responsibilities focus on data pipelines, platform, and team norms; no mention of dev‑ops, full‑stack, or ML model building.",
         "source": "inferred"
       },
       "overtime_risk_score": {
-        "value": 0.4,
-        "confidence": 0.72,
-        "evidence": "Hybrid model and startup environment suggest moderate pace, but no on‑call or explicit overtime language.",
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Hybrid model, no on‑call or weekend work mentioned, but the company is a fast‑growing startup which can imply occasional high‑tempo periods.",
         "source": "inferred"
       },
       "role_clarity": {
         "value": "clear",
-        "confidence": 0.90,
-        "evidence": "Responsibilities and required skills are explicitly listed for a senior data engineer.",
+        "confidence": 0.9,
+        "evidence": "Job title, years‑of‑experience requirement, and a focused list of data‑engineering duties provide a well‑defined role.",
         "source": "inferred"
       },
       "overall_red_flag_score": {
         "value": 0.25,
-        "confidence": 0.78,
-        "evidence": "Low scope creep, moderate overtime risk, and clear role definition combine to a low overall red‑flag rating.",
+        "confidence": 0.8,
+        "evidence": "Low scope creep, moderate overtime risk, and clear responsibilities lead to a low overall red‑flag rating.",
         "source": "combined"
       }
     },
     "stakeholders_and_leadership": {
       "reporting_structure_clarity": {
         "value": "mentioned",
-        "confidence": 0.70,
-        "evidence": "Posting references the Core Engineering Data Team but does not name a specific manager.",
+        "confidence": 0.7,
+        "evidence": "Posting states the role is on the Core Engineering Data Team but does not name a specific manager.",
         "source": "pass1_derived"
       },
       "manager_level_inferred": {
         "value": "not_mentioned",
-        "confidence": 0.60,
-        "evidence": "No title such as Head of Data Engineering or Engineering Manager is provided.",
-        "source": "pass1_derived"
+        "confidence": 0.6,
+        "evidence": "No explicit manager title (e.g., Head of Data, Director) is provided in the description.",
+        "source": "not_mentioned"
       },
       "team_growth_velocity": {
-        "value": "rapid_expansion",
-        "confidence": 0.70,
-        "evidence": "Language about \"contribute to the formation of our new team\" implies rapid team growth.",
+        "value": "stable",
+        "confidence": 0.7,
+        "evidence": "No language about rapid hiring or expansion; the team appears to be an established part of the organization.",
         "source": "inferred"
       },
       "team_composition": {
-        "value": null,
-        "confidence": 0.60,
-        "evidence": "No explicit team size or composition details are given.",
-        "source": "pass1_derived"
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.5,
+        "evidence": "The posting does not disclose the size or makeup of the data team.",
+        "source": "not_mentioned"
       },
       "reporting_structure": {
         "value": "not_mentioned",
-        "confidence": 0.70,
-        "evidence": "No reporting line is described in the posting.",
-        "source": "pass1_derived"
+        "confidence": 0.7,
+        "evidence": "No explicit reporting line is described.",
+        "source": "not_mentioned"
       },
       "cross_functional_embedded": {
         "value": false,
-        "confidence": 0.70,
-        "evidence": "Collaboration with analysts, engineers, and product managers is mentioned, but the role is not embedded within a product squad.",
+        "confidence": 0.6,
+        "evidence": "Collaboration is mentioned across analysts, engineers, and product managers, but the role is described as part of a central data team rather than embedded in a product squad.",
         "source": "inferred"
       }
     },
@@ -92,109 +98,106 @@
       "work_life_balance_score": {
         "value": 0.6,
         "confidence": 0.75,
-        "evidence": "Hybrid schedule and generous benefits are listed; however, no explicit PTO or on‑call policy is provided.",
+        "evidence": "Hybrid schedule with two mandatory office days; no PTO policy disclosed and no on‑call duties mentioned.",
         "source": "inferred"
       },
       "growth_opportunities_score": {
-        "value": 0.6,
-        "confidence": 0.70,
-        "evidence": "Company mentions a learning mindset but does not detail budgets, mentorship programs, or clear promotion paths.",
+        "value": 0.65,
+        "confidence": 0.7,
+        "evidence": "The posting highlights continuous learning, a mission‑driven culture, and the chance to help shape team norms, but no explicit learning budget or mentorship program is listed.",
         "source": "inferred"
       },
       "tech_culture_score": {
         "value": 0.7,
         "confidence": 0.75,
-        "evidence": "Modern tooling (AWS, Airflow, CI/CD, Terraform) and emphasis on testing indicate a solid technical culture.",
-        "source": "inferred"
+        "evidence": "Use of modern cloud services, orchestration tools, IaC, CI/CD, and data‑quality testing indicates a solid engineering culture.",
+        "source": "combined"
       }
     },
     "tech_culture_assessment": {
       "tech_culture_signals": {
-        "value": [],
-        "confidence": 0.60,
-        "evidence": "Job posting does not reference open‑source contributions, conference speaking, or hackathons.",
-        "source": "pass1_derived"
+        "value": ["not_mentioned"],
+        "confidence": 0.6,
+        "evidence": "No explicit mention of open‑source contributions, conference speaking, or hackathons.",
+        "source": "not_mentioned"
       },
       "dev_practices_mentioned": {
-        "value": [
-          "ci_cd",
-          "infrastructure_as_code"
-        ],
-        "confidence": 0.80,
-        "evidence": "Mentions CI/CD pipelines, Docker, Kubernetes, Terraform, and CloudFormation.",
+        "value": ["ci_cd", "monitoring"],
+        "confidence": 0.8,
+        "evidence": "Job lists CI/CD pipelines, Docker/Kubernetes, and monitoring of pipeline performance.",
         "source": "pass1_derived"
       },
       "innovation_signals": {
         "value": "not_mentioned",
-        "confidence": 0.60,
-        "evidence": "No explicit statements about innovation time, hackathons, or experimental projects.",
-        "source": "pass1_derived"
+        "confidence": 0.6,
+        "evidence": "No specific language about dedicated innovation time or experimental projects.",
+        "source": "not_mentioned"
       },
       "tech_debt_awareness": {
         "value": false,
-        "confidence": 0.70,
-        "evidence": "No mention of tech‑debt reduction or refactoring initiatives.",
-        "source": "pass1_derived"
+        "confidence": 0.7,
+        "evidence": "The description does not reference tech‑debt reduction or refactoring initiatives.",
+        "source": "not_mentioned"
       }
     },
     "ai_ml_integration": {
       "ai_integration_level": {
         "value": "none",
-        "confidence": 0.70,
-        "evidence": "Job references downstream ML applications but does not require building or operating ML pipelines.",
-        "source": "inferred"
+        "confidence": 0.85,
+        "evidence": "No machine‑learning pipelines, model serving, or MLOps tools are mentioned.",
+        "source": "pass1_derived"
       },
       "ml_tools_expected": {
         "value": [],
-        "confidence": 0.80,
-        "evidence": "No ML‑specific tools (e.g., SageMaker, MLflow) are listed.",
+        "confidence": 0.9,
+        "evidence": "No ML‑related tools appear in the required or nice‑to‑have lists.",
         "source": "pass1_derived"
       }
     },
     "competition_and_timing": {
       "hiring_urgency": {
-        "value": "not_mentioned",
-        "confidence": 0.60,
-        "evidence": "No start‑date or urgency language appears in the posting.",
+        "value": "normal",
+        "confidence": 0.7,
+        "evidence": "The posting does not specify an immediate or accelerated start date.",
         "source": "pass1_derived"
       },
       "competition_level": {
         "value": "not_mentioned",
-        "confidence": 0.60,
-        "evidence": "No data on applicant volume or market competitiveness is provided.",
-        "source": "pass1_derived"
+        "confidence": 0.6,
+        "evidence": "No data on applicant volume, salary competitiveness beyond the disclosed range, or location scarcity.",
+        "source": "not_mentioned"
       }
     },
     "company_context": {
       "company_stage_inferred": {
-        "value": "established_tech",
-        "confidence": 0.60,
-        "evidence": "SimpliSafe is a well‑known home‑security company with a sizable product portfolio, suggesting an established organization rather than an early‑stage startup.",
+        "value": "growth_stage",
+        "confidence": 0.7,
+        "evidence": "SimpliSafe is an established security‑tech company with multiple funding rounds and a sizable data organization, suggesting a growth‑stage organization.",
         "source": "inferred"
       },
       "hiring_velocity": {
-        "value": "not_mentioned",
-        "confidence": 0.60,
-        "evidence": "No explicit statements about hiring pace or multiple open roles.",
-        "source": "pass1_derived"
+        "value": "steady",
+        "confidence": 0.7,
+        "evidence": "No language about aggressive hiring sprees; the role appears to be a standard addition to an existing team.",
+        "source": "inferred"
       },
       "team_size_signals": {
         "value": "not_mentioned",
-        "confidence": 0.60,
-        "evidence": "Team size is not disclosed in the description.",
-        "source": "pass1_derived"
+        "confidence": 0.6,
+        "evidence": "The posting does not disclose the size of the data or engineering team.",
+        "source": "not_mentioned"
       },
       "funding_stage_signals": {
         "value": "not_mentioned",
-        "confidence": 0.60,
-        "evidence": "No funding round or capital‑raising information is included.",
-        "source": "pass1_derived"
+        "confidence": 0.6,
+        "evidence": "No explicit mention of seed, Series A/B, or later funding rounds.",
+        "source": "not_mentioned"
       },
       "role_creation_type": {
-        "value": "not_mentioned",
-        "confidence": 0.60,
-        "evidence": "Posting does not state whether the role is a new headcount or a backfill.",
-        "source": "pass1_derived"
+        "value": "team_expansion",
+        "confidence": 0.6,
+        "evidence": "The description notes \"contribute to the formation of our new team,\" implying a headcount added for expansion.",
+        "source": "inferred"
       }
     }
   },
@@ -202,57 +205,57 @@
     "strength_categories": [
       "transparent_salary",
       "modern_tech_stack",
-      "flexible_schedule",
+      "equity_offered",
       "well_defined_role"
     ],
     "strength_details": [
-      "Salary range disclosed ($111.8k‑$164k) with equity component.",
-      "Modern data stack: AWS, Airflow/Dagster/Prefect, CI/CD, Terraform.",
-      "Hybrid work model offering flexibility two days per week on‑site.",
-      "Clear, focused responsibilities for a senior data engineer."
+      "Transparent base salary range ($111.8k‑$164k) with equity participation.",
+      "Modern data stack: AWS, Airflow/Dagster/Prefect, Terraform, CI/CD pipelines.",
+      "Equity component included in total rewards package.",
+      "Clear senior data‑engineer responsibilities focused on pipelines and platform."
     ],
     "concern_categories": [
       "overtime_likely",
       "no_visa_sponsorship"
     ],
     "concern_details": [
-      "No visa sponsorship mentioned, limiting candidates requiring H‑1B or similar.",
-      "Startup pace and lack of explicit overtime policy could lead to occasional long hours."
+      "Hybrid Boston location requires on‑site presence; no remote‑first option.",
+      "Visa sponsorship is not mentioned, implying only candidates with existing US work authorization are considered."
     ],
     "best_fit_categories": [
       "senior_data_engineers",
       "pipeline_developers",
-      "data_generalists"
+      "cloud_specialists"
     ],
     "best_fit_details": [
-      "Senior DEs with 4+ years of experience in cloud‑based data pipelines.",
-      "Engineers comfortable with orchestration tools (Airflow/Dagster/Prefect) and IaC.",
-      "Candidates who enjoy building end‑to‑end data platforms and collaborating cross‑functionally."
+      "Senior data engineers with 4+ years experience in AWS‑based batch pipelines.",
+      "Professionals comfortable with orchestration (Airflow/Dagster) and IaC (Terraform).",
+      "Candidates who want to deepen cloud‑native data platform expertise."
     ],
     "probe_categories": [
       "work_hour_expectations",
       "on_call_expectations",
       "career_growth_path",
-      "tech_stack_details",
-      "role_scope_boundaries"
+      "team_size_composition",
+      "tech_stack_details"
     ],
     "probe_details": [
-      "What are the typical weekly work hours and is on‑call required?",
-      "Can you describe the promotion ladder for senior data engineers?",
-      "Which specific tools (e.g., dbt, Snowflake) are part of the production stack?",
-      "How much ownership will the role have over new data products versus maintenance?",
-      "What is the expected timeline for expanding the data team?"
+      "What are the typical weekly work hours and is overtime expected?",
+      "Is there any on‑call rotation or weekend support for data pipelines?",
+      "Can you describe the formal career ladder or promotion criteria for senior data engineers?",
+      "How many engineers are currently on the Core Engineering Data Team and what is the seniority mix?",
+      "Which specific tools (e.g., dbt, Great Expectations) are part of the long‑term data stack roadmap?"
     ],
     "leverage_categories": [
       "rare_skill_match",
       "domain_expertise"
     ],
     "leverage_details": [
-      "Deep experience with AWS data services (Athena, S3) is highly relevant.",
-      "Background in home‑security or IoT data pipelines adds domain value."
+      "Deep experience with AWS data services (Athena, Kinesis) is highly valued.",
+      "Background in home‑security or consumer IoT aligns with SimpliSafe’s product domain."
     ],
-    "overall_assessment": "The role offers a solid senior data engineering opportunity with a modern cloud stack, clear responsibilities, and transparent compensation. Growth potential exists within a well‑established company, though candidates should verify work‑hour expectations and visa support.",
+    "overall_assessment": "The role offers a solid senior data‑engineering position on a modern AWS‑centric stack with clear responsibilities and competitive compensation. Growth opportunities exist within a stable, mission‑driven company, though candidates should be comfortable with a hybrid Boston schedule and the lack of visa sponsorship.",
     "recommendation_score": 0.78,
-    "recommendation_confidence": 0.85
+    "recommendation_confidence": 0.82
   }
 }

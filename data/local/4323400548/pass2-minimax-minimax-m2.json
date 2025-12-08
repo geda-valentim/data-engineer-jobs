@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-07 23:28:54",
+    "job_posting_id": "4323400548",
+    "job_title": "Senior Data Engineer",
+    "company_name": "SimpliSafe",
+    "job_location": "Boston, MA",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.92,
+          "evidence": "Title explicitly states 'Senior Data Engineer' with 4+ years experience requirement, which aligns with senior level expectations",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title is 'Senior Data Engineer' and core responsibilities focus on data pipelines, orchestration, storage infrastructure, and data workflows",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.85,
+          "evidence": "Strong emphasis on ETL/ELT, data orchestration tools (Dagster, Airflow, Prefect), and data warehousing technologies like AWS Athena",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.78,
+          "evidence": "Mentions contributing to team formation, developing team norms and practices, but no direct reports mentioned - suggests technical leadership without people management",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "aws",
+          "confidence": 0.95,
+          "evidence": "AWS explicitly mentioned first among cloud platforms, with specific AWS services like Athena, and AWS-specific tools like CloudFormation mentioned",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [
+            "azure",
+            "gcp"
+          ],
+          "confidence": 0.88,
+          "evidence": "Azure and GCP mentioned as alternative cloud platforms alongside AWS, indicating multi-cloud capability is valued",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.82,
+          "evidence": "Primary focus on ETL/ELT pipelines, data orchestration tools, and scheduled data workflows rather than real-time streaming",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "dagster_prefect",
+          "confidence": 0.95,
+          "evidence": "Dagster, Airflow, and Prefect explicitly mentioned as required experience - modern orchestrators including both traditional (Airflow) and modern (Dagster, Prefect)",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "lakehouse",
+          "confidence": 0.8,
+          "evidence": "Mentions both data lake technologies and data warehousing (AWS Athena), plus modern table formats like Iceberg suggest lakehouse architecture",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.88,
+          "evidence": "Hybrid model requires being in Boston, MA office for core days, plus MA state restriction mentioned in Pass 1",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "americas",
+          "confidence": 0.85,
+          "evidence": "Boston, MA location with US-only restriction suggests EST timezone focus within Americas region",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.82,
+          "evidence": "Hybrid model requires being in Boston office for core days, and MA state restriction suggests relocation to Massachusetts area",
+          "source": "combined"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No visa sponsorship mentioned in job posting, and Pass 1 shows 'not_mentioned' for visa sponsorship",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of student visa support, and focus on experienced candidates (4+ years) suggests not targeting students",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.88,
+          "evidence": "No citizenship requirement mentioned, but US work authorization implied by US-only location restriction",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Full-time employee position with comprehensive benefits package including equity, medical, retirement - clearly W2 employment structure",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "comprehensive",
+          "confidence": 0.88,
+          "evidence": "Comprehensive total rewards package including equity, medical, retirement, lifestyle benefits, bonus program, and unique perks like free security system",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Mentions collaborative and agile environment where learning and growth are continuous, but no specific career tracks mentioned",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.8,
+          "evidence": "Collaborative environment mentioned and contributing to new team formation suggests working with experienced team members",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of promotion paths, advancement opportunities, or career progression in the job description",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal transfers, lateral moves, or exploring different roles within the company",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track"
+          ],
+          "confidence": 0.7,
+          "evidence": "Senior level position suggests IC track progression, but no management track mentioned - appears to be individual contributor focused",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.73,
+          "evidence": "Clear distinction between must-have skills (extensive list) and nice-to-have skills, with balanced language and reasonable expectations",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Well-defined Senior Data Engineer role with specific responsibilities focused on data engineering, not a multi-role hybrid position",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.78,
+          "evidence": "Skills and requirements align well with senior level expectations - 4+ years experience is appropriate, and technical stack is reasonable for the role level",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 9346,
+    "input_tokens": 6982,
+    "output_tokens": 2364,
+    "cost": 0.01171
+  }
+}

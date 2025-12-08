@@ -1,0 +1,234 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.82,
+        "evidence": "Mentions Azure services, automation, and data governance, but lacks details on data mesh or advanced monitoring. Indicates defined processes and modern tools.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.82,
+        "evidence": "Matches score of 3.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption", "cicd_practices", "data_quality_testing"],
+        "confidence": 0.75,
+        "evidence": "Mentions Azure services, automation, and data governance practices.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.20,
+        "confidence": 0.88,
+        "evidence": "Role is clearly focused on data engineering for AI/ML, with no overlap into data science or analytics.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.72,
+        "evidence": "Startup environment and 'ASAP' start date suggest potential for pressure, but benefits and flexible hours mitigate risk.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Well-defined responsibilities around data pipelines, model deployment, and automation.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.30,
+        "confidence": 0.78,
+        "evidence": "Generally low risk, with a clear role and good benefits. Startup pace is the main concern.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Reports to Head of Data Engineering.",
+        "source": "explicit"
+      },
+      "manager_level_inferred": {
+        "value": "director_plus",
+        "confidence": 0.92,
+        "evidence": "Head of Data Engineering suggests a director-level manager.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "rapid_expansion",
+        "confidence": 0.85,
+        "evidence": "Team growing from 8 to 15 engineers indicates rapid expansion.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "8-15 engineers",
+          "de_count": "5 data engineers",
+          "seniority_mix": "mix of senior and mid-level"
+        },
+        "confidence": 0.80,
+        "evidence": "Mentions joining a team of 5 DEs within a broader 15-person data org.",
+        "source": "explicit"
+      },
+      "reporting_structure": {
+        "value": "reports_to_director_data",
+        "confidence": 0.90,
+        "evidence": "Job posting mentions 'reporting to Head of Data Engineering'.",
+        "source": "explicit"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions working with product teams and business stakeholders.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.75,
+        "confidence": 0.80,
+        "evidence": "Flexible hours, hybrid work, generous PTO, and benefits contribute to a good work-life balance.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.85,
+        "confidence": 0.82,
+        "evidence": "Learning budget, conferences, and a growing team provide growth opportunities.",
+        "source": "combined"
+      },
+      "tech_culture_score": {
+        "value": 0.80,
+        "confidence": 0.85,
+        "evidence": "Modern stack, CI/CD, and focus on innovation indicate a strong tech culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["conference_speaking"],
+        "confidence": 0.70,
+        "evidence": "Mentions support for conference attendance.",
+        "source": "inferred"
+      },
+      "dev_practices_mentioned": {
+        "value": ["ci_cd", "monitoring"],
+        "confidence": 0.85,
+        "evidence": "Explicit mentions of CI/CD and monitoring.",
+        "source": "explicit"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Focus on integrating AI into business processes suggests some innovation.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt or refactoring.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "advanced_ml",
+        "confidence": 0.80,
+        "evidence": "Focus on deploying and monitoring AI/ML models on Azure, using tools like Azure ML and MLflow.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": ["Azure ML", "MLflow"],
+        "confidence": 0.90,
+        "evidence": "Both tools are explicitly mentioned in the job description.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.90,
+        "evidence": "Mentions 'ASAP' start date.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Prague location and hybrid work model suggest moderate competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "startup_series_a_b",
+        "confidence": 0.75,
+        "evidence": "Rapid team growth and focus on AI/ML suggest a Series A/B stage startup.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "rapid_expansion",
+        "confidence": 0.85,
+        "evidence": "Expanding team from 8 to 15 engineers.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.88,
+        "evidence": "Team size is between 6 and 15 engineers.",
+        "source": "explicit"
+      },
+      "funding_stage_signals": {
+        "value": "series_b_plus",
+        "confidence": 0.70,
+        "evidence": "Mentions 'well-funded startup' and rapid growth trajectory.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.85,
+        "evidence": "Expanding data team to support new initiatives.",
+        "source": "explicit"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "learning_opportunities", "well_defined_role", "work_life_balance"],
+    "strength_details": [
+      "Strong modern data stack (Azure ML, Microsoft Fabric, Airflow)",
+      "Excellent learning culture (budget, conferences, workshops)",
+      "Clear role focused on AI/ML data engineering",
+      "Good work-life balance (flexible hours, hybrid work, generous PTO)"
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship"],
+    "concern_details": [
+      "Startup environment and 'ASAP' start date may lead to pressure",
+      "No visa sponsorship available"
+    ],
+    "best_fit_categories": ["senior_data_engineers", "ml_engineers", "cloud_specialists"],
+    "best_fit_details": [
+      "Experienced data engineers with a strong AI/ML background",
+      "Engineers proficient in Azure cloud services",
+      "Candidates seeking a fast-paced, innovative environment"
+    ],
+    "probe_categories": ["work_hour_expectations", "team_turnover_history", "tech_debt_situation"],
+    "probe_details": [
+      "Ask about typical work hours and on-call expectations",
+      "Inquire about team turnover rate and reasons for departures",
+      "Understand the current state of tech debt and plans for addressing it"
+    ],
+    "leverage_categories": ["domain_expertise", "rare_skill_match"],
+    "leverage_details": [
+      "Experience with LLMs and Computer Vision models is highly valuable",
+      "Strong Azure cloud expertise is a differentiator"
+    ],
+    "overall_assessment": "This is a strong opportunity for a skilled data engineer with AI/ML experience seeking a challenging role in a rapidly growing startup. The modern tech stack, learning opportunities, and good work-life balance are attractive. The main trade-offs are the potential for long hours and the lack of visa sponsorship.",
+    "recommendation_score": 0.85,
+    "recommendation_confidence": 0.85
+  }
+}
+```

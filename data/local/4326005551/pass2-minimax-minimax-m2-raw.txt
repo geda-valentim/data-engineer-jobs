@@ -1,0 +1,243 @@
+<reasoning>Let me analyze this job posting step by step to infer the job characteristics.
+
+First, let me understand what I'm working with:
+
+1. **Original Job Posting**: This is a Spanish job posting for a "Data Engineering USIS" position at Equifax in Las Condes, Santiago, Chile. The role involves data engineering work with GCP focus.
+
+2. **Pass 1 Extraction Results**: This gives me structured data about the role including:
+   - 5+ years experience required
+   - Must have skills: Python, SQL, data pipelines, GCP, cloud computing, etc.
+   - Nice to have: scripting languages, other cloud environments, financial market experience
+   - On-site work model in Chile
+   - Full-time permanent position
+   - Bachelor's degree required, Master's preferred
+   - Cloud certification preferred
+   - English intermediate/advanced required
+
+Now let me go through each inference category:
+
+## SENIORITY AND ROLE
+
+**seniority_level**: 
+- The posting asks for "5+ años de experiencia como ingeniero de datos" (5+ years as data engineer)
+- The role involves mentoring junior engineers and reviewing their work
+- This suggests a senior level position
+- Confidence: 0.85 (strong inference from experience + responsibilities)
+
+**job_family**: 
+- Title is "Data Engineering USIS" 
+- Core responsibilities are building data pipelines, data integration, data modeling
+- This is clearly a data engineer role
+- Confidence: 0.95 (very clear from title and responsibilities)
+
+**sub_specialty**: 
+- Focus on data pipelines, data integration, data consolidation
+- Mentions "data pipelines de complejidad moderada" (moderate complexity)
+- No specific mention of streaming vs batch, but mentions "recopilar datos de múltiples fuentes"
+- This seems like general data engineering with batch ETL focus
+- Confidence: 0.75 (moderate inference)
+
+**leadership_expectation**: 
+- Mentions "Proporcionar orientación y mentoría a ingenieros de datos junior" (provide guidance and mentorship to junior data engineers)
+
+
+- Mentions "Revisar las implementaciones de conjuntos de datos realizadas por ingenieros de datos junior" (review implementations by junior data engineers)
+- No mention of direct reports or hiring responsibilities
+- This suggests tech lead IC role - technical leadership without people management
+- Confidence: 0.80 (strong inference from mentoring/reviewing responsibilities)
+
+I'll analyze the leadership expectations, focusing on the technical guidance and mentorship aspects. The role clearly involves supporting junior engineers through code reviews and providing technical direction, but without direct management responsibilities. This positions the candidate as a technical lead who can influence and develop the team's technical capabilities.
+
+The cloud infrastructure shows a strong preference for Google Cloud Platform, with specific requirements around data pipeline development and cloud computing concepts. The role demands advanced programming skills in Python and SQL, indicating a need for robust technical expertise in data engineering.
+
+The processing paradigm appears to lean towards batch processing, given the emphasis on scheduled data pipelines and moderate complexity data integration. While not explicitly stated, the job description suggests a structured approach to data movement and transformation.
+
+The orchestrator category remains unclear, with no specific workflow management tools explicitly mentioned. This leaves some ambiguity about the exact technical infrastructure and workflow management approach.
+
+The storage layer seems to be a hybrid model, combining data warehouse and data lake characteristics. The focus on preparing data for analytical use suggests a flexible approach to data storage and management.
+
+Geographically, the role is centered in Chile, with a specific on-site requirement in Las Condes. The timezone focus appears to be Chile-specific, with no indication of broader regional or global time zone considerations.
+
+Relocation requirements are straightforward - the position is fixed in Las Condes, with no mention of remote work or relocation assistance.
+
+Visa and work authorization details are not explicitly addressed, leaving some uncertainty about potential international candidates or specific work permit requirements.
+
+The employment structure suggests a traditional full-time position, likely with standard employee benefits, though specific compensation details are not provided.
+
+Career development opportunities seem limited, with no clear growth path, mentorship programs, or internal mobility mentioned. The role appears to be a static position without significant advancement prospects.
+
+Requirements are moderately strict, with a clear set of must-have technical skills and some preferred qualifications. The scope is well-defined, focusing specifically on data engineering without role ambiguity.
+
+The skill set appears balanced, with no significant inflation of requirements beyond the senior level expectations.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.85,
+        "evidence": "5+ years experience required plus mentoring junior engineers and reviewing their work indicates senior level",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title is Data Engineer, core responsibilities focus on building data pipelines, data integration, and data modeling",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.75,
+        "evidence": "Focus on data pipelines for collecting data from multiple sources, data consolidation and structuring suggests batch ETL work",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.80,
+        "evidence": "Mentions providing guidance and mentorship to junior data engineers and reviewing their implementations, but no direct reports mentioned",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "gcp",
+        "confidence": 0.95,
+        "evidence": "Google Cloud Platform mentioned explicitly multiple times as primary focus, with knowledge of other cloud environments as nice-to-have",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "Only mentions GCP as primary, other cloud environments listed as nice-to-have but not specified",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.78,
+        "evidence": "Focus on data pipelines for collecting data from multiple sources and systems suggests batch processing patterns",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific orchestration tools mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No specific data storage technologies mentioned, focus is on data pipelines and processing",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.90,
+        "evidence": "On-site work model required in Las Condes, Santiago, Chile - specific country restriction",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.88,
+        "evidence": "Location specified as Las Condes, Santiago, Chile with regional team mention suggests Chile-focused timezone",
+        "source": "combined"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.85,
+        "evidence": "On-site requirement in Las Condes implies relocation needed if not already in Santiago area",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned, position is in Chile so H1B not applicable",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Position in Chile, student visa programs like OPT/CPT are US-specific",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.80,
+        "evidence": "No citizenship requirements mentioned, standard work authorization would apply for Chile",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time permanent position suggests employee status (W2 equivalent in Chile)",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits mentioned in job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No career growth or advancement paths mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "explicit_yes",
+        "confidence": 0.90,
+        "evidence": "Explicitly mentions providing guidance and mentorship to junior data engineers",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion or advancement opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers or role changes",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No career tracks or paths mentioned in job description",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Clear distinction between must-have skills (Python, SQL, GCP) and nice-to-have (financial market, regional experience)",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Well-defined data engineering role with specific responsibilities and clear skill requirements",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Skills and requirements are appropriate for senior data engineer level with 5+ years experience",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

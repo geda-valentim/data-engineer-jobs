@@ -1,0 +1,268 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.85,
+        "evidence": "Mentions Google Cloud Platform, data quality practices, and CI/CD with Git, but lacks explicit details on governance tools or data mesh patterns",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.85,
+        "evidence": "Matches the data_maturity_score of 3, with documented processes and modern tools but limited governance signals",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [
+          "modern_data_stack_adoption",
+          "cicd_practices",
+          "data_quality_testing"
+        ],
+        "confidence": 0.85,
+        "evidence": "GCP, Python/SQL, Git, and CI/CD are explicitly mentioned; data quality processes are emphasized but tools are not specified",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.2,
+        "confidence": 0.95,
+        "evidence": "Role is focused on data engineering tasks (pipelines, quality, integration) with no conflation of unrelated responsibilities like ML, DevOps, or backend/frontend development",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.8,
+        "evidence": "Mentions 'regional team' and 'staying updated with trends' but lacks explicit signals like 'fast-paced' or 'immediate start'. No protective factors like PTO or work-life balance are mentioned, increasing uncertainty",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.95,
+        "evidence": "Responsibilities are well-defined and specific to data engineering, with clear distinctions between must-have and nice-to-have skills",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.3,
+        "confidence": 0.85,
+        "evidence": "Low scope creep and clear role definition, but moderate overtime risk due to lack of protective factors and potential startup pace",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.7,
+        "evidence": "No explicit mention of reporting structure or manager title beyond 'equipo regional'",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No manager title or reporting line explicitly stated in the job posting",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit signals about team growth velocity or hiring plans beyond the current role",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.6,
+        "evidence": "Only mentions 'equipo regional de Chile y US' without specifics on team size or seniority mix; inferred as likely small-medium due to regional focus",
+        "source": "inferred"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit reporting structure mentioned in the job posting",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.7,
+        "evidence": "Mentions working with a regional team spanning Chile and US, implying cross-functional collaboration, though not explicitly stated as embedded",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.7,
+        "evidence": "No explicit PTO or work-life balance signals, but regional team collaboration may imply flexibility. No negative signals like on-call or overtime mentioned, but confidence is lowered due to lack of protective factors",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.6,
+        "confidence": 0.75,
+        "evidence": "Mentions mentoring junior engineers and staying updated with GCP trends, but lacks explicit learning budgets, career paths, or conference support",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.7,
+        "confidence": 0.8,
+        "evidence": "Strong focus on modern cloud tools (GCP), CI/CD, and data quality practices, but no explicit signals about broader tech culture (e.g., design docs, RFCs)",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.9,
+        "evidence": "No explicit mentions of open source, tech blogs, conference speaking, or innovation time in the job posting",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["code_review", "ci_cd"],
+        "confidence": 0.85,
+        "evidence": "Explicitly mentions Git and CI/CD, and infers code review due to mentoring/reviewing junior implementations",
+        "source": "inferred"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.7,
+        "evidence": "Mentions staying updated with GCP trends and proposing new solutions, but lacks explicit innovation time or experimentation culture",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.7,
+        "evidence": "Mentions implementing data quality improvements and best practices for maintenance, implying awareness of technical debt",
+        "source": "inferred"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of ML/AI tools, frameworks, or responsibilities in the job posting",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML/AI tools or frameworks mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit urgency signals like 'immediate start' or 'ASAP' in the job posting",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Equifax is a well-known company, but the role is location-specific (Chile) and lacks salary transparency, which may reduce competition. However, regional roles can attract niche candidates, balancing competition",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.9,
+        "evidence": "Equifax is a large, established company in the financial data industry with global operations, not a startup or growth-stage company",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No explicit signals about hiring velocity or team expansion plans beyond the current role",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit team size mentioned beyond 'equipo regional'",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Equifax is a publicly traded company, but no funding stage signals are mentioned in the job posting",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit mention of whether this is a new headcount, backfill, or team expansion",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "modern_tech_stack",
+      "data_focused_role",
+      "mentoring_opportunities",
+      "established_company"
+    ],
+    "strength_details": [
+      "Modern cloud-focused tech stack with GCP as the primary platform, offering exposure to cutting-edge data engineering tools and practices",
+      "Clear, well-defined data engineering role with a strong emphasis on data quality, pipelines, and best practices for security and governance",
+      "Opportunity to mentor junior engineers and guide regional data initiatives, ideal for leadership-minded candidates",
+      "Equifax is a globally recognized enterprise in the financial data industry, providing stability and structured processes"
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "vague_reporting_structure",
+      "work_life_balance_uncertainty"
+    ],
+    "concern_details": [
+      "No salary range disclosed, which may lead to negotiation challenges or below-market offers",
+      "Reporting structure is vague - unclear who the direct manager is or what leadership level oversees the role",
+      "Lack of explicit work-life balance signals (e.g., PTO, overtime policies) raises concerns about time demands, especially given the regional team collaboration",
+      "No mention of benefits, which is unusual for an enterprise role and may indicate gaps in compensation packages"
+    ],
+    "best_fit_categories": [
+      "senior_data_engineers",
+      "data_generalists",
+      "technical_specialists",
+      "career_changers"
+    ],
+    "best_fit_details": [
+      "Senior data engineers with 5+ years of experience in building and optimizing data pipelines, especially those familiar with GCP",
+      "Data generalists who enjoy cross-functional collaboration and regional team dynamics in a structured enterprise environment",
+      "Technical specialists with a focus on data quality, governance, and compliance in financial data contexts",
+      "Candidates with prior experience in financial markets or regional teams, as these are explicitly valued differentiators"
+    ],
+    "probe_categories": [
+      "team_size_composition",
+      "reporting_structure",
+      "work_hour_expectations",
+      "remote_policy_details",
+      "career_growth_path",
+      "salary_range_details"
+    ],
+    "probe_details": [
+      "Ask for clarity on the team composition: How many data engineers are in the regional team, and what is the seniority mix?",
+      "Probe the reporting structure: Who will be the direct manager, and what is their level (e.g., Director, Manager, Tech Lead)?",
+      "Understand work-hour expectations: Are there core hours for collaboration with the US team, and is overtime expected or compensated?",
+      "Clarify remote work policies: Is this a hybrid role, and what are the expectations for in-office presence in Las Condes?",
+      "Inquire about career growth paths: Are there defined tracks for IC or management roles, and how are promotions handled?",
+      "Request salary range details: Given the lack of transparency, ask for the expected compensation range for this role"
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "domain_expertise"
+    ],
+    "leverage_details": [
+      "5+ years of data engineering experience is a direct match and can be leveraged for competitive compensation",
+      "Prior experience in financial markets or regional teams (Chile/US) is explicitly mentioned as a differentiator and can strengthen negotiation position"
+    ],
+    "overall_assessment": "This is a strong opportunity for senior data engineers seeking a modern, cloud-native role in a stable enterprise environment with a focus on data quality and regional collaboration. The lack of salary transparency and vague reporting structure are notable concerns, but the emphasis on GCP, CI/CD, and mentorship suggests a well-defined technical path. Candidates should prioritize probing team dynamics, work-hour expectations, and compensation details during interviews.",
+    "recommendation_score": 0.7,
+    "recommendation_confidence": 0.85
+  }
+}
+```

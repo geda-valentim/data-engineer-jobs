@@ -192,6 +192,104 @@ def fetch_company_from_brightdata(api_key: str, dataset_id: str, company_url: st
 
 
 # =============================================================================
+# Bright Data - Polling & Download
+# =============================================================================
+
+def check_snapshot_status(api_key: str, snapshot_id: str) -> str:
+    """Check snapshot status from Bright Data."""
+    url = f"https://api.brightdata.com/datasets/v3/progress/{snapshot_id}"
+    headers = {"Authorization": f"Bearer {api_key}"}
+
+    response = requests.get(url, headers=headers, timeout=30)
+    response.raise_for_status()
+    data = response.json()
+
+    return (data.get("status") or "").lower()
+
+
+def download_snapshot(api_key: str, snapshot_id: str) -> bytes:
+    """Download snapshot content from Bright Data."""
+    url = f"https://api.brightdata.com/datasets/v3/snapshot/{snapshot_id}"
+    headers = {"Authorization": f"Bearer {api_key}"}
+
+    response = requests.get(url, headers=headers, timeout=120)
+    response.raise_for_status()
+
+    return response.content
+
+
+def parse_company_data(raw_body: bytes) -> dict | None:
+    """Parse company data from snapshot content."""
+    text = raw_body.decode("utf-8", errors="replace").strip()
+    if not text:
+        return None
+
+    try:
+        if text.startswith("["):
+            data = json.loads(text)
+            return data[0] if data else None
+        else:
+            # JSONL - primeira linha
+            first_line = text.split("\n")[0].strip()
+            if first_line:
+                return json.loads(first_line)
+        return None
+    except Exception as e:
+        logger.warning("Erro ao parsear snapshot: %s", e)
+        return None
+
+
+def wait_for_snapshot_and_download(
+    api_key: str,
+    snapshot_id: str,
+    max_attempts: int = 30,
+    wait_seconds: int = 10,
+) -> dict | None:
+    """
+    Aguarda snapshot ficar pronto e baixa os dados.
+
+    Faz polling síncrono - a função só retorna quando o snapshot
+    está pronto ou após timeout.
+
+    Returns:
+        dict com dados da empresa ou None se timeout/erro
+    """
+    import time
+
+    for attempt in range(1, max_attempts + 1):
+        logger.info(
+            "Verificando snapshot %s (tentativa %d/%d)",
+            snapshot_id, attempt, max_attempts
+        )
+
+        try:
+            status = check_snapshot_status(api_key, snapshot_id)
+            logger.info("Snapshot %s status: %s", snapshot_id, status)
+
+            if status == "ready":
+                # Baixa os dados
+                raw_content = download_snapshot(api_key, snapshot_id)
+                logger.info("Snapshot %s baixado: %d bytes", snapshot_id, len(raw_content))
+
+                company_data = parse_company_data(raw_content)
+                return company_data
+
+            if status in ("failed", "error"):
+                logger.error("Snapshot %s falhou: %s", snapshot_id, status)
+                return None
+
+        except Exception as e:
+            logger.warning("Erro ao verificar snapshot %s: %s", snapshot_id, e)
+
+        # Aguarda antes da próxima tentativa
+        if attempt < max_attempts:
+            time.sleep(wait_seconds)
+
+    logger.warning("Timeout esperando snapshot %s após %d tentativas", snapshot_id, max_attempts)
+    return None
+
+
+# =============================================================================
 # S3 Operations
 # =============================================================================
 
@@ -285,24 +383,60 @@ def process_company_message(msg: dict, config: dict, api_key: str, table) -> dic
         # A Bright Data retorna um snapshot_id, nao os dados diretamente
         # Precisamos aguardar o snapshot ficar pronto
         if isinstance(result, dict) and "snapshot_id" in result:
-            # Por enquanto, vamos salvar o trigger response e marcar como pending
-            # A busca real dos dados sera feita por outro processo
-            logger.info("Snapshot triggered: %s", result.get("snapshot_id"))
+            snapshot_id = result.get("snapshot_id")
+            logger.info("Snapshot triggered: %s", snapshot_id)
+
+            # Aguarda snapshot ficar pronto (polling síncrono na própria Lambda)
+            # A concorrência é controlada pela SQS FIFO com MessageGroupId único
+            # que garante apenas uma Lambda processando por vez
+            company_data = wait_for_snapshot_and_download(
+                api_key=api_key,
+                snapshot_id=snapshot_id,
+                max_attempts=30,  # 30 x 10s = 5 minutos max
+                wait_seconds=10,
+            )
+
+            if company_data is None:
+                # Snapshot não ficou pronto a tempo
+                logger.warning("Snapshot %s timeout - marcando como failed", snapshot_id)
+                update_company_status(
+                    table=table,
+                    company_id=company_id,
+                    company_url=company_url,
+                    company_name=company_name,
+                    status="failed",
+                    refresh_days=config["refresh_days"],
+                    error="Snapshot timeout after 5 minutes",
+                )
+                put_metric("CompanyFetchFailed", dimensions={"ErrorType": "timeout"})
+                return {
+                    "status": "timeout",
+                    "company_id": company_id,
+                    "snapshot_id": snapshot_id,
+                }
+
+            # Snapshot pronto - salva no S3
+            s3_key = save_company_to_bronze(
+                bucket=config["bronze_bucket"],
+                company_id=company_id,
+                data=company_data,
+            )
 
             update_company_status(
                 table=table,
                 company_id=company_id,
                 company_url=company_url,
                 company_name=company_name,
-                status="pending",
-                refresh_days=1,  # Retry tomorrow
+                status="success",
+                refresh_days=config["refresh_days"],
             )
 
-            put_metric("CompanyFetchTriggered")
+            put_metric("CompanyFetchSuccess")
             return {
-                "status": "triggered",
+                "status": "success",
                 "company_id": company_id,
-                "snapshot_id": result.get("snapshot_id"),
+                "snapshot_id": snapshot_id,
+                "s3_key": s3_key,
             }
 
         # Se retornou dados diretamente (formato sincrono)
