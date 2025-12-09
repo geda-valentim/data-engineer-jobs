@@ -1,0 +1,180 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically:
+
+1. **Compensation**: No salary information is mentioned in the job posting, so all compensation fields should be null/false.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. Should be "not_mentioned".
+
+3. **Work Model**: 
+   - Location is "Bengaluru East, Karnataka, India" - this suggests onsite work
+   - No mention of remote or hybrid work
+   - No mention of employment type (full-time, contract, etc.)
+   - Should be "onsite" for work_model_stated and "not_mentioned" for employment_type_stated
+
+4. **Contract Details**: No mention of contract type, duration, etc. Should be "not_mentioned" for contract_type.
+
+5. **Contractor Rates**: No mention of contractor rates. Should be "not_mentioned" for pay_type.
+
+6. **Skills Classification**: Let me analyze the skills mentioned:
+
+**Required Technical And Professional Expertise:**
+- Experience with Apache Spark (PySpark): "In-depth knowledge" - this is a strong qualifier, so must_have
+- Big Data Technologies: "Familiarity with Hadoop, HDFS, Kafka" - this is a weaker qualifier, so nice_to_have
+- Data Engineering Skills: "Strong understanding of ETL pipelines, data modeling, and data warehousing concepts" - strong qualifier, must_have
+- Strong proficiency in Python: "Expertise in Python programming" - strong qualifier, must_have
+- Data Processing Frameworks: "Knowledge of data processing libraries such as Pandas, NumPy" - moderate qualifier, should be must_have
+- SQL Proficiency: "Experience writing optimized SQL queries" - strong qualifier, must_have
+- Cloud Platforms: "Experience working with cloud platforms like AWS, Azure, or GCP" - strong qualifier, must_have
+ 
+I'll continue analyzing the preferred technical skills, focusing on the nuanced language used to describe expertise levels. The preferred skills section reveals more subtle distinctions in qualification requirements. Monitoring and architecture strategy suggest strategic thinking and comprehensive system oversight. The mention of detection and prevention tools indicates a proactive approach to security and platform management. These skills appear to be supplementary, enhancing the core technical competencies with broader strategic and protective capabilities.
+
+The soft skills section lacks explicit behavioral requirements, which means I'll need to infer potential interpersonal competencies from the technical descriptions. The role demands collaboration, problem-solving, and continuous improvement mindset, though these aren't directly stated.
+
+Education requirements are notably absent, with no specific degree or certification mentioned. The role seems to prioritize practical experience over formal academic credentials.
+
+The job posting reveals a global technology company with a focus on innovation and technical excellence. Their consulting approach emphasizes deep technical expertise across diverse client sectors, suggesting a dynamic and challenging work environment.
+
+The role specifically targets data engineering professionals, highlighting the critical importance of advanced technical skills in distributed data processing and cloud technologies. Key qualifications include in-depth Spark knowledge, big data tool familiarity, and strong programming capabilities in Python and SQL.
+
+The position demands expertise across multiple domains: ETL pipeline design, data modeling, cloud platform experience, and proficiency with data processing libraries. These requirements indicate a senior-level role requiring comprehensive technical competency and strategic thinking.
+
+The role emphasizes continuous improvement, agile methodologies, and staying current with emerging technology trends. Candidates must demonstrate not just technical skills, but also the ability to drive innovation and deliver business value through creative problem-solving.
+
+The preferred qualifications suggest a focus on architecture strategy, end-to-end monitoring, and cross-functional collaboration. Detection and prevention tools for company products and customer-facing platforms indicate a holistic approach to technology development and security.
+
+The role requires deep technical expertise in data engineering, with strong emphasis on distributed data processing, big data technologies, and cloud platforms. Key skills include in-depth knowledge of Spark, Python programming, and experience with cloud infrastructure like AWS, Azure, or GCP.
+
+The position demands a strategic mindset, with responsibilities spanning solution design, continuous improvement, and staying current with technology trends. Candidates must demonstrate proficiency in ETL pipelines, data modeling, and data warehousing concepts.
+
+The role emphasizes collaboration across technology teams, including application development, enterprise architecture, testing services, and network engineering, highlighting the need for cross-functional communication and technical leadership.
+
+The position requires expertise in detection and prevention tools for company products and platform, suggesting a focus on security and proactive problem-solving. The role demands a strategic approach to technology implementation, with an emphasis on continuous improvement and innovative solution development.
+
+Key qualifications include in-depth knowledge of distributed data processing technologies like Spark, strong programming skills in Python, and experience with cloud platforms. The ideal candidate will have a proven track record in designing and implementing complex data engineering solutions that drive business value.
+
+The role emphasizes the importance of staying current with emerging technology trends and leveraging them to create creative, efficient solutions that meet user requirements and maximize business impact.
+
+I'll focus on extracting the key technical and professional skills required for this position, highlighting the critical competencies needed to excel in this dynamic data engineering role.
+
+The position demands deep technical expertise in distributed data processing, with strong emphasis on Spark and Python programming. Candidates must demonstrate comprehensive knowledge of big data technologies, cloud platforms, and data engineering fundamentals like ETL pipelines and data warehousing.
+
+Key qualifications include in-depth Spark knowledge, proficiency in Python, experience with cloud platforms like AWS or Azure, and strong SQL skills. The role requires someone who can design and implement complex data processing solutions while staying current with emerging technology trends.
+
+The position emphasizes continuous improvement, agile methodologies, and the ability to translate technical expertise into business value. Successful candidates will have a proven track record of building scalable, efficient data solutions across diverse technology stacks.
+
+I'll focus on extracting the key technical and professional skills required for this position, highlighting the critical competencies needed to excel in this dynamic data engineering role.
+
+The role demands deep technical expertise in distributed data processing, with strong emphasis on Spark and Python programming. Candidates must demonstrate comprehensive knowledge of big data technologies, cloud platforms, and data engineering fundamentals like ETL pipelines and data warehousing.
+
+Key qualifications include in-depth Spark knowledge, proficiency in Python, experience with cloud platforms like AWS or Azure, and strong SQL skills. The role requires someone who can design and implement complex data processing solutions while staying current with emerging technology trends.
+
+The position emphasizes continuous improvement, agile methodologies, and the ability to translate technical expertise into business value. Successful candidates will have a proven track record of building scalable, efficient data solutions across diverse technology stacks.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Bengaluru East, Karnataka, India",
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Apache Spark",
+        "PySpark",
+        "ETL pipelines",
+        "data modeling",
+        "data warehousing",
+        "Python",
+        "Pandas",
+        "NumPy",
+        "SQL",
+        "AWS",
+        "Azure",
+        "GCP"
+      ],
+      "nice_to_have_hard_skills": [
+        "Hadoop",
+        "HDFS",
+        "Kafka",
+        "architecture strategy",
+        "end-to-end monitoring",
+        "detection and prevention tools"
+      ],
+      "must_have_soft_skills": [],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology.",
+      "company_description_text": "IBM"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 31
+  }
+}
+```

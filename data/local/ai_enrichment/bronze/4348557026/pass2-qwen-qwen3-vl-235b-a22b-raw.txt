@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.75,
+        "evidence": "No explicit years mentioned, but Master's degree preferred and responsibilities suggest mid-level (designing pipelines, liaising with teams, not leading teams)",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is 'Data Engineer', core responsibilities focus on data pipelines, ETL, and data integration",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.85,
+        "evidence": "Explicitly mentions 'batch & stream processing' but emphasizes Informatica PowerCenter (batch ETL tool) and data migration, with no strong streaming-specific tools mentioned",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.90,
+        "evidence": "No mention of managing teams, mentoring, or technical leadership; responsibilities focus on individual execution and collaboration",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.90,
+        "evidence": "MS-Azure Cloud listed as 'preferred' and 'Cloud' skills required, with no other cloud platforms mentioned",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No other cloud platforms mentioned beyond Azure",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "Explicitly mentions 'batch & stream processing' in responsibilities",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.80,
+        "evidence": "Mentions 'cloud ETL/ELT tools' and Informatica PowerCenter (often used in cloud-native contexts), no specific orchestrator like Airflow or Dagster mentioned",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.75,
+        "evidence": "Mentions 'Data warehousing' and 'Big Data' (implying data lakes), suggesting both structured and unstructured storage",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.90,
+        "evidence": "Location specified as 'Pune, Maharashtra, India' and work model is 'onsite', implying must be in that region",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.95,
+        "evidence": "Location restricted to India, no mention of global or multi-timezone teams",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.85,
+        "evidence": "Onsite work model in Pune, India, implies relocation may be required if not already based there",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned, and location is India, not US",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of student visas or OPT/CPT; location in India makes it irrelevant",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.80,
+        "evidence": "Location in India implies local work authorization required, no citizenship requirement stated",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Employment type is 'full_time' and 'permanent', typical of W2 employment in India",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits listed in the job posting or extraction",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Mentions 'collaborating with diverse teams' and 'delivering expertise' but no specific career tracks or advancement paths",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions working with 'scientists, engineers, consultants and database administrators', implying collaboration with experienced team members",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of promotions, advancement, or career progression",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers or role changes",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.55,
+        "evidence": "No explicit career tracks mentioned; inferred from IBM's general structure but not stated in posting",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Clear must-have skills (Informatica, SQL, Python) and one nice-to-have (Azure), suggesting moderate strictness",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused on data engineering with specific tools and responsibilities, not a hybrid or vague role",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Skills required (Informatica, SQL, Python, cloud) are reasonable for a mid-level data engineer; no unrealistic combinations",
+        "source": "inferred"
+      }
+    }
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "Focus on data governance tools (Alation, Manta), lineage, metadata, and integration suggests defined processes but no mention of advanced practices like data mesh, MLOps, or comprehensive CI/CD/testing",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Matches score of 3 - documented governance processes, specific tooling, but lacks signals of optimization or innovation",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["data_governance", "modern_data_stack_adoption"],
+        "confidence": 0.80,
+        "evidence": "Explicit mention of Alation and Manta for governance and lineage; Elasticsearch and Splunk for search applications",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.65,
+        "confidence": 0.85,
+        "evidence": "Role combines data engineering, data governance, predictive modeling, statistical modeling, and enterprise search - multiple distinct responsibilities",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.55,
+        "confidence": 0.70,
+        "evidence": "Onsite requirement in Pune, India with no work-life balance signals; IBM consulting environment often implies client deadlines",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "multi_role",
+        "confidence": 0.88,
+        "evidence": "Title 'Data Consultant-Data Governance' but responsibilities span DE, ML modeling, and search implementation - multiple roles combined",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.55,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to scope creep, unclear boundaries, and potential for overtime in consulting environment",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.75,
+        "evidence": "Mentions 'work in IBM Consulting Client Innovation Centers' and 'collaborate with diverse teams' but no specific manager or reporting line",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No managerial titles or reporting structure mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.65,
+        "evidence": "No signals about team expansion, hiring velocity, or growth trajectory",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.60,
+        "evidence": "Mentions 'diverse teams' but no specific team size or composition details",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit reporting structure mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.80,
+        "evidence": "Mentions 'collaborating closely with diverse teams' including scientists, engineers, consultants - suggests embedded cross-functional work",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "Onsite requirement in Pune, no PTO or work-life balance signals mentioned; IBM consulting often implies client-driven deadlines",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.60,
+        "confidence": 0.75,
+        "evidence": "Mentorship implied through collaboration with diverse teams, but no explicit learning budget, conferences, or career paths mentioned",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.65,
+        "confidence": 0.80,
+        "evidence": "Modern tools (Alation, Manta, Elasticsearch, Splunk) but no mention of engineering practices, code reviews, CI/CD, or innovation culture",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No explicit mention of code review, CI/CD, testing, monitoring, or design docs",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.75,
+        "evidence": "Focus on implementing and maintaining existing tools (Alation, Manta) rather than innovation or experimentation",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of tech debt management, refactoring, or modernization efforts",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.80,
+        "evidence": "Mentions implementing predictive models and statistical modeling with machine learning techniques, but no MLOps or advanced ML infrastructure",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No specific ML tools (MLflow, SageMaker, etc.) mentioned in job description",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No urgency signals like 'ASAP', 'immediate start', or 'urgent need'",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "IBM brand attracts candidates, Pune location has moderate competition, no salary disclosed to gauge competitiveness",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a well-known, established technology company with global delivery centers",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.80,
+        "evidence": "IBM Consulting likely has regular hiring, but no signals of aggressive expansion or replacement",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No specific team size mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.95,
+        "evidence": "IBM is a publicly traded company",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No indication whether this is a new headcount, backfill, or expansion",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["established_company", "data_focused_role", "modern_tech_stack", "cloud_native"],
+    "strength_details": [
+      "Established tech company (IBM) with global delivery centers",
+      "Focused on data governance with modern tools (Alation, Manta, Elasticsearch, Splunk)",
+      "Opportunity to work with diverse teams including scientists and engineers"
+    ],
+    "concern_categories": ["scope_creep_risk", "vague_requirements", "overtime_likely", "limited_growth"],
+    "concern_details": [
+      "Role combines data engineering, governance, ML modeling, and search - high scope creep risk",
+      "Vague requirements with no experience level or career path specified",
+      "Onsite requirement in Pune with no work-life balance signals - potential for overtime",
+      "Limited growth signals with no explicit learning opportunities or promotion paths"
+    ],
+    "best_fit_categories": ["mid_level_engineers", "data_governance_specialists", "cloud_specialists"],
+    "best_fit_details": [
+      "Mid-level engineers with experience in data governance tools (Alation, Manta)",
+      "Candidates seeking established company environment with focus on data governance",
+      "Professionals comfortable with onsite work in Pune, India"
+    ],
+    "probe_categories": ["role_scope_boundaries", "work_hour_expectations", "career_growth_path", "tech_debt_situation"],
+    "probe_details": [
+      "Clarify the boundaries between data engineering, governance, and ML modeling responsibilities",
+      "Ask about typical work hours and client deadline pressures",
+      "Inquire about career progression opportunities within IBM Consulting",
+      "Understand the current state of tech debt and modernization plans"
+    ],
+    "leverage_categories": ["rare_skill_match", "domain_expertise"],
+    "leverage_details": [
+      "Expertise in Alation and Manta is a strong differentiator for this role",
+      "Experience with data lineage and governance in enterprise environments is valuable"
+    ],
+    "overall_assessment": "Opportunity at established tech company IBM with focus on data governance and modern tools. Role has significant scope creep risk combining multiple disciplines, vague requirements, and potential for overtime in consulting environment. Best suited for mid-level engineers with governance expertise seeking stable company environment.",
+    "recommendation_score": 0.60,
+    "recommendation_confidence": 0.75
+  }
+}

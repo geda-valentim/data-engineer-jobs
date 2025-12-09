@@ -1,0 +1,282 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 14:50:56",
+    "job_posting_id": "4348538586",
+    "job_title": "Data Engineer",
+    "company_name": "Accenture in India",
+    "job_location": "Bengaluru, Karnataka, India",
+    "pass_name": "pass3",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.75,
+          "evidence": "Modern data stack with Databricks, multi-cloud (AWS/Azure/GCP), PySpark, Airflow, and CI/CD practices mentioned. However, limited governance, quality testing, and monitoring signals suggest defined but not fully mature practices.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.75,
+          "evidence": "Matches score of 3 - documented processes with modern tools, but lacks comprehensive governance and quality frameworks",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption",
+            "cicd_practices",
+            "cloud_native"
+          ],
+          "confidence": 0.8,
+          "evidence": "Databricks platform, multi-cloud architecture, PySpark/Spark frameworks, Apache Airflow orchestration, and CI/CD pipelines mentioned",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.25,
+          "confidence": 0.85,
+          "evidence": "Well-defined data engineering role focused on pipelines, ETL/ELT, and data processing. No mention of data science, analytics, or DevOps responsibilities combined",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.65,
+          "confidence": 0.7,
+          "evidence": "Consulting firm (Accenture) with project-based work, performance optimization requirements, and no work-life balance mentions suggest potential for long hours during project deadlines",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "Very specific data engineering responsibilities, technical skills requirements, and clear job scope focused on data pipelines and processing",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.45,
+          "confidence": 0.75,
+          "evidence": "Moderate concerns - clear role definition but consulting environment may involve overtime, and limited growth/culture information provided",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No reporting structure, manager level, or team hierarchy information provided in the job posting",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No manager titles, reporting relationships, or leadership structure mentioned in the job description",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No information about team expansion, hiring plans, or growth trajectory provided",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": null,
+            "de_count": null,
+            "seniority_mix": null
+          },
+          "confidence": 0.95,
+          "evidence": "No team size, composition, or structure information mentioned in the job posting",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No reporting relationships, manager information, or organizational structure provided",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Mentions collaboration with data scientists, analysts, and engineers but suggests centralized data engineering team rather than embedded model",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.3,
+          "confidence": 0.75,
+          "evidence": "No work-life balance, PTO, or flexible work arrangements mentioned. Consulting environment with performance optimization focus suggests potential for extended hours",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.25,
+          "confidence": 0.8,
+          "evidence": "No learning budget, mentorship programs, career progression, or growth opportunities mentioned in the job description",
+          "source": "pass1_derived"
+        },
+        "tech_culture_score": {
+          "value": 0.45,
+          "confidence": 0.7,
+          "evidence": "Modern tech stack and tools mentioned, but no engineering practices, code review, testing culture, or innovation signals provided",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.95,
+          "evidence": "No open source contributions, tech blogs, conference speaking, hackathons, or innovation time mentioned",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "ci_cd"
+          ],
+          "confidence": 0.85,
+          "evidence": "CI/CD pipelines and DevOps practices mentioned as nice-to-have skills, but no other development practices like code review, testing, or monitoring detailed",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.75,
+          "evidence": "Focus on maintaining and optimizing existing data pipelines and systems, with no mention of experimentation, R&D, or innovation time",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of tech debt management, refactoring, or improving existing systems - focus is on building new pipelines and optimization",
+          "source": "inferred"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "basic_ml",
+          "confidence": 0.7,
+          "evidence": "Collaboration with data scientists mentioned and Databricks platform supports ML workloads, but no specific ML tools or advanced ML infrastructure detailed",
+          "source": "inferred"
+        },
+        "ml_tools_expected": {
+          "value": [
+            "Databricks"
+          ],
+          "confidence": 0.9,
+          "evidence": "Databricks Unified Data Analytics Platform explicitly required, which includes ML capabilities, but no specific ML tools like MLflow or SageMaker mentioned",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "normal",
+          "confidence": 0.85,
+          "evidence": "No immediate start dates, urgent hiring language, or time pressure indicators mentioned in the job posting",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.6,
+          "evidence": "Large consulting firm (Accenture) with standard requirements, onsite location in Bengaluru may limit some candidates, but competitive tech stack attracts talent",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.95,
+          "evidence": "Accenture is a large, established multinational consulting and professional services company with thousands of employees globally",
+          "source": "pass1_derived"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.75,
+          "evidence": "Large consulting firms typically have ongoing hiring for various projects and client needs, suggesting regular but not necessarily aggressive hiring",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "very_large_50_plus",
+          "confidence": 0.95,
+          "evidence": "Accenture is a major multinational corporation with large technology and data teams across multiple locations and projects",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "public",
+          "confidence": 0.95,
+          "evidence": "Accenture is a publicly traded company (NYSE: ACN) with established financial structure",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "team_expansion",
+          "confidence": 0.7,
+          "evidence": "Large consulting firms typically expand teams based on client project needs and business growth rather than one-time hires",
+          "source": "inferred"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "modern_tech_stack",
+        "cloud_native",
+        "data_focused_role",
+        "established_company"
+      ],
+      "strength_details": [
+        "Strong modern data stack with Databricks Unified Data Analytics Platform",
+        "Multi-cloud experience (AWS, Azure, GCP) providing valuable cross-platform skills",
+        "Well-defined data engineering role focused on pipelines and ETL/ELT processes",
+        "Large, stable enterprise company (Accenture) with global presence and resources"
+      ],
+      "concern_categories": [
+        "overtime_likely",
+        "limited_growth",
+        "work_life_balance",
+        "vague_requirements"
+      ],
+      "concern_details": [
+        "Consulting environment likely involves project deadlines and potential overtime",
+        "No career growth, learning opportunities, or mentorship programs mentioned",
+        "No work-life balance policies, PTO, or flexible work arrangements specified",
+        "Limited information about team structure, reporting, and company culture"
+      ],
+      "best_fit_categories": [
+        "mid_level_engineers",
+        "cloud_specialists",
+        "pipeline_developers"
+      ],
+      "best_fit_details": [
+        "Mid-level data engineers (5-6 years) seeking multi-cloud experience",
+        "Engineers with Databricks and PySpark expertise looking for enterprise projects",
+        "Candidates wanting to focus on data pipeline development and optimization"
+      ],
+      "probe_categories": [
+        "work_hour_expectations",
+        "team_size_composition",
+        "career_growth_path",
+        "project_assignment_process"
+      ],
+      "probe_details": [
+        "Ask about typical work hours, overtime expectations, and project deadlines",
+        "Understand team structure, reporting relationships, and collaboration model",
+        "Inquire about career progression, learning opportunities, and skill development",
+        "Clarify how projects are assigned and managed in the consulting environment"
+      ],
+      "leverage_categories": [
+        "rare_skill_match",
+        "domain_expertise"
+      ],
+      "leverage_details": [
+        "Strong Databricks and multi-cloud experience is valuable for enterprise consulting",
+        "Big Data processing and performance optimization skills are in high demand"
+      ],
+      "overall_assessment": "Solid opportunity for mid-level data engineers seeking multi-cloud and Databricks experience at a stable enterprise company. Strong technical stack and clear role definition. Main trade-offs are consulting environment pressures, limited growth opportunities, and lack of work-life balance information.",
+      "recommendation_score": 0.65,
+      "recommendation_confidence": 0.75
+    },
+    "tokens": 12862,
+    "input_tokens": 9703,
+    "output_tokens": 3159,
+    "cost": 0.016021
+  }
+}

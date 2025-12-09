@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.95,
+        "evidence": "12+ years of experience required, which aligns with senior level in data engineering roles",
+        "source": "pass1_derived"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Job title is 'Data Engineer-Data Modeling', and responsibilities focus on data modeling, architecture, and warehousing",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_modeling",
+        "confidence": 0.92,
+        "evidence": "Core focus on data modeling, dimensional modeling, and data governance; tools like Erwin and IBM Infosphere Data Architect are modeling-specific",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "No mention of people management, team leadership, or architectural oversight beyond individual contribution; responsibilities are technical and collaborative",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No cloud platforms (AWS, Azure, GCP) mentioned in job description or Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No cloud platforms mentioned at all",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.75,
+        "evidence": "Focus on data modeling, warehousing, and ETL-like activities (cleansing, integrating data) implies batch processing; no streaming tools mentioned",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No orchestration tools (Airflow, Dagster, etc.) mentioned",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.85,
+        "evidence": "Explicit mention of data warehousing concepts and dimensional modeling; relational databases emphasized",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.90,
+        "evidence": "Location specified as Pune, Maharashtra, India; onsite work model implies regional restriction",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.95,
+        "evidence": "Location restricted to India (Pune), no mention of global or multi-timezone teams",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.85,
+        "evidence": "Onsite work model + specific location (Pune) implies relocation may be required if not already based there",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned; location is India, not US, so H1B not applicable",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Location is India; OPT/CPT are US-specific student visas, not relevant here",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.80,
+        "evidence": "Must be resident in India (per geo restriction); implies local work authorization required, no citizenship requirement stated",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time permanent employment stated; typical for W2 in India/IBM context",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits listed in Pass 1 extraction or job description",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Mentions 'collaborative environment' and 'deep technical expertise' but no explicit career tracks or promotion paths",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Mentions partnering with scientists, engineers, consultants, and DBAs of all backgrounds — implies learning from experienced team members",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of promotions, advancement, or career progression in job description or Pass 1",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers, role changes, or mobility options",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.60,
+        "evidence": "No explicit mention of IC, management, or specialist tracks; inferred from IBM’s general structure but not stated",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.85,
+        "evidence": "All skills listed are 'must have' (no nice-to-haves); 12+ years experience required; specific tools and concepts mandated",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Focused on data modeling, architecture, and warehousing; responsibilities are well-defined and role-specific",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "12+ years experience aligns with senior data modeling role; skills are specific and realistic for that level",
+        "source": "inferred"
+      }
+    }
+  }
+}

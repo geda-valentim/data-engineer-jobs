@@ -1,0 +1,156 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+First, let me identify what information is explicitly stated in the job posting:
+
+**Job Details:**
+- Title: Data Engineer-Business Intelligence
+- Company: IBM
+- Location: Pune, Maharashtra, India
+
+**Compensation:**
+- No salary information mentioned → salary_disclosed: false, all salary fields null
+
+**Work Authorization:**
+- No mention of visa sponsorship or work authorization requirements → visa_sponsorship_stated: "not_mentioned"
+
+**Work Model:**
+- Location is specified as "Pune, Maharashtra, India" but no explicit mention of remote/hybrid/onsite → work_model_stated: "not_mentioned"
+- No employment type mentioned → employment_type_stated: "not_mentioned"
+
+**Contract Details:**
+- No contract type mentioned → contract_type: "not_mentioned"
+- No contract duration mentioned → contract_duration_months: null
+- No start date mentioned → start_date: "not_mentioned"
+
+**Contractor Rates:**
+- No contractor rates mentioned → pay_type: "not_mentioned"
+
+**Skills Classification:**
+Let me analyze the skills mentioned:
+
+**Required Technical And Professional Expertise:**
+- "Cognos Developer & Admin Required" → This is explicitly stated as required, so must_have_hard_skills: ["Cognos Developer", "Admin"]
+- "Experience: The resource should have a minimum of 3 years of experience of working in the in BI DW projects in areas pertaining to reporting and visualization using cognos" → years_experience_min: 3, years_experience_max: null, years_experience_text: "minimum of 3 years"
+- "He shall have good understanding of UNIX" → must_have_hard_skills: ["UNIX"]
+
+**Preferred Technical And Professional Experience:**
+- "Experience with various cloud and integration platforms (e.g. 
+
+AWS, Google, Azure)" → nice_to_have_hard_skills: ["AWS", "Google", "Azure"]
+- "Experience with an ETL/Data Integration tool (eg. IBM InfoSphere DataStage, Azure Data Factory, Informatica PowerCenter)" → nice_to_have_hard_skills: ["IBM InfoSphere DataStage", "Azure Data Factory", "Informatica PowerCenter"]
+
+**Soft Skills:**
+- "should be well conversant in English and should have excellent writing, MIS, communication, time management and multi-tasking skill" → must_have_soft_skills: ["Communication", "Time Management"]
+
+**Education:**
+- "Master's Degree" in Preferred Education section → education_level: "MASTERS"
+- "The resource should be full time MCA/M. Tech/B. Tech/B.E. and should preferably have relevant certifications" → This is confusing as it mentions both Master's and Bachelor's degrees. 
+
+I'll focus on the most specific requirement. The job posting emphasizes a full-time educational background in technology, with a preference for relevant certifications. The minimum qualification appears to be a Bachelor's degree in a technology-related field, with a Master's degree being preferred.
+
+The educational requirements suggest a strong technical foundation, with flexibility in the specific undergraduate degree. Relevant certifications are highlighted as an additional advantage for candidates.
+
+**Geographic Restrictions:**
+- Location is "Pune, Maharashtra, India" but no explicit geographic restrictions mentioned → geo_restriction_type: "not_mentioned"
+
+**Benefits:**
+- No benefits mentioned → all benefits fields null
+
+**Context:**
+- Company description: "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology." → company_description_text: [this text]
+- Team info: "Develop and maintain a strong working relationship with business and technical members of the team" → team_info_text: [this text]
+
+**AI/ML Technologies:**
+- No mention of LLMs, GenAI, or feature stores → llm_genai_mentioned: false, feature_store_mentioned: false
+
+Let me now structure this into the JSON format.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": ["Cognos Developer", "Admin", "UNIX"],
+      "nice_to_have_hard_skills": ["AWS", "Google", "Azure", "IBM InfoSphere DataStage", "Azure Data Factory", "Informatica PowerCenter"],
+      "must_have_soft_skills": ["Communication", "Time Management"],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 3,
+      "years_experience_max": null,
+      "years_experience_text": "minimum of 3 years",
+      "education_level": "BACHELORS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "The resource should be full time MCA/M. Tech/B. Tech/B.E. and should preferably have relevant certifications",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Develop and maintain a strong working relationship with business and technical members of the team",
+      "company_description_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 29
+  }
+}
+```

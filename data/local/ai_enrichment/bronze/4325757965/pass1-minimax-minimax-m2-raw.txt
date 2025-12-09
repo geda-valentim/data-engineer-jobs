@@ -1,0 +1,156 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through the job posting systematically and extract only explicitly stated information.
+
+Looking at the job posting:
+
+**Title**: Data Engineer-Business Intelligence
+**Company**: IBM
+**Location**: Pune, Maharashtra, India
+
+Let me analyze each section:
+
+1. **Compensation**: No salary information is mentioned in the job posting, so salary_disclosed = false and all salary fields should be null.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. So visa_sponsorship_stated = "not_mentioned" and work_auth_text = null.
+
+3. **Work Model**: 
+   - Location is specified as "Pune, Maharashtra, India" - this suggests onsite work
+   - No mention of remote or hybrid work options
+   - No mention of employment type (full-time, contract, etc.)
+   - work_model_stated should be "onsite" since a specific location is given
+   - employment_type_stated = "not_mentioned"
+
+4. **Contract Details**: No mention of contract type, duration, etc. So contract_type = "not_mentioned" and all other contract fields should be null.
+
+5. **Contractor Rates**: No mention of contractor rates, so all fields should be null.
+
+6. **Skills Classification**:
+   - Looking at the "Required Technical And Professional Expertise" section:
+     - "Tableau Desktop & Server" - this appears to be required
+     - "SQL, Oracle & Hive" - this appears to be required  
+     - "Communication Skills, Project Management" - these appear to be required
+     - "Multitasking, Collaborative Skills" - these appear to be required
+   - Looking at "Preferred Technical And Professional Experience":
+     - "Proven experience in developing and working Tableau driven dashboards, analytics" - this has "proven" which is a strong qualifier, so should be must_have
+     - "Ability to query and display large data sets while maximizing the performance of workbook" - this appears to be required
+     - "Ability to interpret technical or dashboard structure and translate complex business requirements to technical" - this appears to be required
+   - No specific years of experience mentioned
+   - Education: "Master's Degree Required" - so education_level = "MASTERS", education_requirement = "required", education_area = null (no specific field mentioned)
+   - No LLM/GenAI mentioned
+   - No feature store mentioned
+
+I'll focus on the technical skills and experience requirements. The role demands strong technical expertise in data visualization and database management. Key requirements include proficiency in Tableau, SQL, Oracle, and Hive, along with solid communication and project management skills. The position requires a Master's degree and proven experience in developing analytics dashboards, with the ability to optimize data performance and translate complex business needs into technical solutions.
+
+The soft skills emphasize collaborative and multitasking abilities, highlighting the need for professionals who can work effectively in dynamic environments. These skills complement the technical requirements, suggesting a holistic approach to data engineering that goes beyond pure technical competency.
+
+The preferred education requirement specifies a Master's Degree, indicating an advanced level of academic preparation. While no specific field of study is mentioned, the requirement suggests a rigorous educational background that supports the complex technical demands of the role.
+
+Geographic considerations reveal a specific location in Pune, Maharashtra, India, with no explicit restrictions mentioned. This implies a flexible approach to potential candidates, focusing more on skills and qualifications than geographic limitations.
+
+The benefits section remains unspecified, leaving room for potential negotiation or standard organizational policies. The context provides insight into IBM's consulting approach, emphasizing client innovation and technical expertise across various sectors.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Tableau Desktop",
+        "Tableau Server",
+        "SQL",
+        "Oracle",
+        "Hive",
+        "Tableau driven dashboards",
+        "analytics",
+        "query and display large data sets",
+        "maximizing workbook performance",
+        "interpret technical dashboard structure",
+        "translate business requirements to technical"
+      ],
+      "nice_to_have_hard_skills": [],
+      "must_have_soft_skills": [
+        "Communication",
+        "Project Management",
+        "Multitasking",
+        "Collaborative Skills"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "Master's Degree Required",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology",
+      "company_description_text": null
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 52
+  }
+}
+```

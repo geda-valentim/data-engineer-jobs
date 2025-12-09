@@ -1,0 +1,175 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules. Let me go through each section systematically.
+
+First, let me identify what information is explicitly stated in the job posting:
+
+**Title**: Data Engineer-Data Integration
+**Company**: IBM
+**Location**: Hyderabad, Telangana, India
+
+**Description sections**:
+- Introduction about working in IBM Consulting Client Innovation Centers
+- Role and Responsibilities section
+- Required Technical And Professional Expertise
+- Preferred Technical And Professional Experience
+
+Let me extract information systematically:
+
+**Compensation**: No salary information is mentioned, so all compensation fields should be null.
+
+**Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. So this should be "not_mentioned".
+
+**Work Model**: 
+- Location is specified as "Hyderabad, Telangana, India" - this suggests onsite work
+- No mention of remote or hybrid work options
+- Employment type not explicitly mentioned, but given it's a full-time role at IBM, I should check if "full_time" is mentioned
+- Looking at the text, there's no explicit "full-time" mention, so employment_type_stated should be "not_mentioned"
+- work_model_stated should be "onsite" since a specific location is given
+
+**Contract Details**: No mention of contract type, duration, etc. Should be "not_mentioned" for most fields.
+
+**Contractor Rates**: Not applicable since this appears to be a permanent position.
+
+**Skills Classification**: Let me analyze the technical requirements:
+
+From "Required Technical And Professional Expertise":
+- "Expertise in designing and implementing scalable data warehouse solutions on Snowflake" - this is a must-have skill
+- "Strong experience in building data ingestion and transformation pipelines using Talend" - must-have
+- "Proficiency in integrating data from cloud platforms into Snowflake using Talend and native Snowflake capabilities" - must-have
+- "Hands-on experience with dimensional and relational data modelling techniques" - must-have
+
+From "Preferred Technical And Professional Experience":
+- "Understanding of optimizing Snowflake workloads" - this has weak qualifier "understanding", so nice-to-have
+
+
+- "Ability to implement robust data validation, cleansing, and governance frameworks" - weak qualifier "ability", so nice-to-have
+- "Proficiency in SQL and/or Shell scripting" - this has "proficiency" which is a strong qualifier, so this should be must-have
+
+I'll continue analyzing the soft skills and technical requirements, focusing on the nuanced language used in the job description. The key is to distinguish between must-have and nice-to-have qualifications based on the strength of the language used.
+
+The soft skills section reveals minimal explicit requirements. While the role implies collaboration through team interactions, no specific soft skills are directly stated. I'll need to infer potential interpersonal competencies from the job's collaborative nature.
+
+Regarding professional experience, the posting lacks specific years of experience details. This suggests the role might be open to candidates with varying levels of expertise, emphasizing skills and potential over strict tenure requirements.
+
+The educational background section is similarly sparse. No explicit degree requirements are mentioned, leaving the educational qualification open to interpretation. This could indicate a flexible approach to candidate selection, focusing more on demonstrated capabilities than formal credentials.
+
+The technology landscape shows no direct references to cutting-edge AI or machine learning technologies. The role appears centered on traditional data engineering approaches, with no explicit mention of generative AI or advanced machine learning frameworks.
+
+**Geographic Restrictions**: The location is specified as Hyderabad, Telangana, India, which suggests a specific geographic requirement. This falls under the "specific_countries" category, with India (IN) as the allowed country.
+
+**Benefits**: The posting provides minimal information about potential benefits or compensation structures. No specific benefits, equity, learning opportunities, or time-off policies are detailed.
+
+**Context**: The company description highlights IBM's Consulting Client Innovation Centers, emphasizing their global reach in delivering technical and industry expertise across public and private sectors. The centers focus on providing locally-based skills to drive technological innovation and adoption.
+
+The role involves a Data Engineer working within these innovation centers, responsible for extracting meaningful insights from complex datasets. Key responsibilities include data gathering, storage, and processing, with a focus on both batch and real-time data handling. Collaboration with diverse teams is crucial for selecting optimal data management systems and identifying critical data for analysis.
+
+The position requires tackling database integration challenges and managing intricate, unstructured datasets. A significant aspect includes implementing and validating predictive models, creating statistical models tailored for big data environments, and designing enterprise search applications using technologies like Elasticsearch and Splunk to meet specific client requirements.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Hyderabad, Telangana, India",
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Snowflake",
+        "data warehouse solutions",
+        "Talend",
+        "data ingestion pipelines",
+        "data transformation pipelines",
+        "cloud platforms integration",
+        "dimensional data modelling",
+        "relational data modelling",
+        "SQL",
+        "Shell scripting"
+      ],
+      "nice_to_have_hard_skills": [
+        "Snowflake workload optimization",
+        "clustering keys",
+        "caching strategies",
+        "query profiling",
+        "data validation frameworks",
+        "data cleansing frameworks",
+        "data governance frameworks",
+        "ETL processes"
+      ],
+      "must_have_soft_skills": [],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "specific_countries",
+      "allowed_countries": ["IN"],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology.",
+      "company_description_text": "IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 49
+  }
+}
+```

@@ -1,0 +1,234 @@
+<reasoning>Let me analyze this job posting for MP Data in Liège, Belgium. I need to go through each inference category systematically.
+
+First, let me understand the job posting:
+- Title: Data Engineer - H/F - Liège
+- Company: MP Data
+- Location: Liege Metropolitan Area
+- Language: French (with some HTML entities)
+
+Key details from the job posting:
+- Pipeline Engineering with Python and PySpark
+- Apache Airflow for orchestration
+- Data Mesh architecture
+- AWS cloud (specifically S3)
+- Quality & robustness with unit testing
+- Must have: PySpark, Apache Airflow, AWS, Python, SQL, Data Mesh, Unit Testing
+- Nice to have: Understanding of Data Mesh principles, rigorous testing, autonomy, proactivity
+- Interview process: 5 steps including technical test
+
+Now let me go through each inference category:
+
+## SENIORITY AND ROLE
+
+### seniority_level
+The title is just "Data Engineer" without any seniority modifier. However, looking at the requirements:
+- PySpark expertise required
+- Apache Airflow experience required
+- AWS experience required
+- Data Mesh architecture experience
+- Unit testing rigor expected
+- Autonomy and proactivity mentioned
+
+This suggests a mid to senior level role. The combination of multiple advanced technologies (PySpark, Data Mesh, AWS) and the expectation of autonomy suggests this is likely a senior level position. However, no specific years of experience are mentioned.
+
+Confidence: 0.7 - This is inferred from the technical requirements and expectations, but no explicit seniority indicator in title.
+
+### job_family
+This is clearly a "data_engineer" role. The title is "Data Engineer" and the responsibilities are all about data pipelines, ETL/ELT, data processing, and data platform work.
+
+Confidence: 0.95 - Very clear from title and responsibilities.
+
+### sub_specialty
+Looking at the responsibilities:
+- Pipeline Engineering (ETL/ELT)
+- Apache Airflow orchestration
+- Data Mesh architecture
+- AWS S3 storage
+
+This seems to be focused on batch ETL/ELT pipelines with Airflow orchestration, not streaming/realtime. The mention of "pipelines massifs" (massive pipelines) suggests batch processing of large data volumes.
+ 
+The role involves technical leadership without direct management responsibilities. The position requires someone who can architect and optimize data solutions independently, demonstrating advanced technical skills in data engineering. The emphasis on autonomy and proactivity suggests a senior individual contributor role that focuses on technical expertise and system design.
+
+The cloud infrastructure is clearly AWS-centric, with specific mention of S3 storage. No alternative cloud platforms are referenced, indicating a focused AWS implementation. The processing approach centers on batch ETL/ELT pipelines, utilizing Apache Airflow for workflow orchestration. The storage strategy appears to lean towards a data lake architecture, leveraging S3's object storage capabilities.
+
+The work model remains ambiguous, with no explicit remote work policy specified. The location in Liège suggests potential regional work constraints, but the exact requirements are not clearly defined. The interview process hints at an in-person component, which might imply some level of on-site presence.
+
+Visa and work authorization details are notably absent from the job posting. The lack of specific visa sponsorship information leaves uncertainty for potential international candidates. The employment type seems to default to a standard full-time position, though no explicit contract details are provided.
+
+The benefits package appears minimal, with no comprehensive details about compensation, equity, or additional perks. This lack of information suggests a need for further clarification during the interview process.
+
+Career development opportunities seem limited, with no clear growth path or mentorship programs explicitly mentioned. The role appears focused on technical execution rather than long-term professional advancement.
+
+The requirements suggest a high level of technical expertise, with specific expectations around data engineering skills and experience. The strictness of qualifications indicates a preference for seasoned professionals who can immediately contribute to complex data infrastructure projects.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.72,
+        "evidence": "Advanced technical requirements including PySpark expertise, Data Mesh architecture, AWS experience, and expectations of autonomy and proactivity suggest senior level despite no explicit seniority in title",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title explicitly states 'Data Engineer' and all responsibilities focus on data pipelines, ETL/ELT, data processing, and data platform work",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.85,
+        "evidence": "Focus on 'pipelines massifs' (massive pipelines), Apache Airflow orchestration, and ETL/ELT processing indicates batch processing paradigm rather than streaming",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.78,
+        "evidence": "No mention of direct reports, team management, or hiring responsibilities; focus is on technical execution and autonomy",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "aws",
+        "confidence": 0.95,
+        "evidence": "AWS explicitly mentioned multiple times with specific reference to S3 storage service and AWS infrastructure",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "Only AWS mentioned, no other cloud providers referenced in the job posting",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.88,
+        "evidence": "Apache Airflow orchestration and focus on ETL/ELT pipelines indicates batch processing approach",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.95,
+        "evidence": "Apache Airflow explicitly mentioned as the orchestration tool for workflows",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "lake",
+        "confidence": 0.82,
+        "evidence": "AWS S3 mentioned as primary storage, which is object storage typical of data lake architectures",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mention of remote work policy, work model, or location restrictions in the job posting",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "europe",
+        "confidence": 0.85,
+        "evidence": "Job located in Liège, Belgium suggests European timezone focus, though no explicit timezone requirements mentioned",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Position based in Liège with no mention of relocation requirements or relocation packages",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned in job posting, and H1B is US-specific while this is a Belgian position",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of student visa support (OPT/CPT), and no work authorization discussion in posting",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No citizenship or work authorization requirements mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No contract type, employment type, or compensation structure mentioned in the job posting",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits, equity, PTO, or compensation details mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No career progression, growth opportunities, or advancement paths mentioned in the job posting",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mentorship programs, senior collaboration, or learning opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion, advancement, or career progression opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No internal transfers, role changes, or mobility opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career tracks, promotion paths, or advancement opportunities mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.82,
+        "evidence": "Clear distinction between 'Indispensables' (must-have) and 'Ce Qui Fera La Différence' (differentiating) skills, with multiple technical requirements marked as essential",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.88,
+        "evidence": "Well-defined role focused specifically on data engineering with clear responsibilities in pipeline engineering, orchestration, and cloud infrastructure",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Technical requirements (PySpark, Airflow, AWS, Data Mesh) are appropriate for senior data engineer level, no unrealistic skill combinations detected",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 13:25:15",
+    "job_posting_id": "4296706724",
+    "job_title": "Senior Data Engineer II",
+    "company_name": "ActBlue",
+    "job_location": "United States",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Senior Data Engineer II' with 5+ years experience required and technical leadership responsibilities including mentoring and code reviews",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.95,
+          "evidence": "Title is 'Senior Data Engineer II' with core focus on data pipelines, data architecture, ETL tools (Fivetran, DBT), and data modeling frameworks",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "hybrid",
+          "confidence": 0.88,
+          "evidence": "Mentions both 'real-time and batch data integrations', 'streaming platforms' as bonus, and 'reverse ETL workflows' - indicating hybrid batch/streaming approach with ML integration",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.82,
+          "evidence": "Mentions 'mentor junior engineers', 'code reviews', 'technical leadership through writing documentation' but no mention of direct reports or people management",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "multi",
+          "confidence": 0.85,
+          "evidence": "Mentions both AWS services (SageMaker, Redshift) and GCP services (Vertex AI) with no clear primary cloud preference",
+          "source": "combined"
+        },
+        "secondary_clouds": {
+          "value": [
+            "aws",
+            "gcp"
+          ],
+          "confidence": 0.85,
+          "evidence": "Both AWS (SageMaker, Redshift) and GCP (Vertex AI) mentioned, indicating multi-cloud environment",
+          "source": "combined"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.88,
+          "evidence": "Explicitly mentions 'real-time and batch data integrations' and 'streaming platforms' as bonus, indicating both batch and streaming processing",
+          "source": "pass1_derived"
+        },
+        "orchestrator_category": {
+          "value": "cloud_native",
+          "confidence": 0.75,
+          "evidence": "Mentions CI/CD automation and ML workflows using SageMaker/Vertex AI, suggesting cloud-native orchestration patterns even though specific tools not named",
+          "source": "inferred"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.8,
+          "evidence": "Mentions Redshift and PostgreSQL as analytical databases, with focus on data warehousing patterns rather than data lake approaches",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.9,
+          "evidence": "Remote position but restricted to specific US states listed, requiring US residency",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "americas",
+          "confidence": 0.88,
+          "evidence": "Remote work across all US time zones mentioned, indicating Americas focus rather than global",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "Position is fully remote with no mention of relocation requirements, only state residency restrictions",
+          "source": "pass1_derived"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "Explicitly states 'ActBlue is unable to sponsor work visas at this time'",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No visa sponsorship available and work authorization required, implying no support for student visa holders",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.9,
+          "evidence": "Requires work authorization but no citizenship requirement mentioned, allowing permanent residents and other authorized workers",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.95,
+          "evidence": "Full-time, salaried position with comprehensive benefits package indicates W2 employment",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "comprehensive",
+          "confidence": 0.92,
+          "evidence": "Extensive benefits including unlimited PTO, fully paid health insurance, 401k matching, parental leave, home office allowance, and additional perks",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Mentions technical leadership and mentoring opportunities but no specific career tracks or promotion ladders mentioned",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "explicit_yes",
+          "confidence": 0.85,
+          "evidence": "Explicitly mentions 'mentor junior engineers' as a responsibility",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of promotion opportunities, advancement paths, or career progression",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal transfers, lateral moves, or exploring different roles within the organization",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track"
+          ],
+          "confidence": 0.65,
+          "evidence": "Technical leadership role focused on individual contributor path with mentoring responsibilities, no management track mentioned",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.78,
+          "evidence": "Clear distinction between must-have skills (Python, SQL, 5+ years) and nice-to-have skills (TensorFlow, streaming platforms), balanced requirements",
+          "source": "combined"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.88,
+          "evidence": "Focused job description clearly defining data engineering responsibilities, single clear role without multi-role hybrid elements",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.82,
+          "evidence": "Skill requirements (Python, SQL, 5+ years) are appropriate and realistic for senior data engineer level, no unrealistic combinations",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 10458,
+    "input_tokens": 7502,
+    "output_tokens": 2956,
+    "cost": 0.013413999999999999
+  }
+}

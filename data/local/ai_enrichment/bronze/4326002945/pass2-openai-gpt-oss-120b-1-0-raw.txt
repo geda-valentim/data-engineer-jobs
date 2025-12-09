@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.65,
+        "evidence": "Title is Data Engineer with a required Master's degree but no years of experience are mentioned; typical mid-level expectations for such a role.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title explicitly states \"Data Engineer\".",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.70,
+        "evidence": "Required skills include SQL, Oracle, Hive and Tableau dashboards, indicating a focus on data warehousing and business intelligence reporting.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "Responsibilities involve individual feature development, debugging, and dashboard creation with no mention of people‑management or team‑lead duties.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "The posting does not reference any cloud platforms or services.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No additional cloud providers are mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.60,
+        "evidence": "Work revolves around SQL queries and Tableau reporting, which are typical batch‑oriented data processing activities.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No orchestration tools (e.g., Airflow, Luigi) are cited.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.60,
+        "evidence": "Use of relational databases (SQL, Oracle, Hive) suggests a data‑warehouse storage model.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.70,
+        "evidence": "Location is specified as Pune, Maharashtra, India with no remote‑work options described.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.70,
+        "evidence": "Job is based in India, implying work in the Indian time zone.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "The posting does not mention any relocation requirement; the role is tied to a specific city.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Visa sponsorship is not mentioned and the role is located in India.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No reference to OPT/CPT or student visas; the position is not US‑based.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No citizenship or work‑authorization language is provided.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Employment type (W2, C2C, 1099) is not stated.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "The posting lists no benefits such as health, PTO, equity, or learning budget.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No discussion of career ladders, promotion tracks, or growth opportunities.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mentorship or coaching programs are referenced.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "The description does not contain language about promotions or advancement.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers or mobility within the organization.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career tracks (IC, management, specialist, architect) are described.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "The posting lists required hard and soft skills but provides no extensive list of nice‑to‑have qualifications.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Job description is focused specifically on Data Engineer – Business Intelligence responsibilities.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Required skill set (SQL, Tableau, Oracle, Hive) aligns with typical expectations for a Data Engineer role.",
+        "source": "inferred"
+      }
+    }
+  }
+}

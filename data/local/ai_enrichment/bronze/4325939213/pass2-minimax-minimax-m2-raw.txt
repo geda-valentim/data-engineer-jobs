@@ -1,0 +1,342 @@
+<reasoning>Let me analyze the job posting and Pass 1 extraction results to make inferences about the job characteristics.
+
+Looking at the original job posting:
+- Title: "Senior Data Engineer (SQL, Python, Snowflake)"
+- Company: Tata Consultancy Services
+- Location: Cupertino, CA
+- Description mentions: "8+ years of experience in Data Engineering with advanced SQL skills", "Good with Python programming and experience with Data pipeline creation", "Good understanding of Snowflake Database", "Good communication skills"
+- Salary Range: $90,000 - $145,000 per year
+- Qualifications: "BACHELOR OF TECHNOLOGY"
+
+From Pass 1 extraction:
+- 8+ years experience required
+- Must have skills: SQL, Python, Data pipeline creation, Snowflake Database
+- Must have soft skills: Communication
+- Education: Bachelor's degree required
+- No visa sponsorship mentioned
+- No work model mentioned
+- No benefits mentioned
+- No contract type mentioned
+
+Now let me make inferences following the rules:
+
+## SENIORITY AND ROLE INFERENCE
+
+### seniority_level
+- Title has "Senior" in it
+- 8+ years experience required
+- This matches the senior level (typically 5-8+ years)
+- Confidence: 0.9 (explicit title + years match)
+
+### job_family
+- Title is "Data Engineer"
+- Core responsibilities are data pipeline creation
+- This is clearly a data engineer role
+- Confidence: 0.95 (explicit title)
+
+### sub_specialty
+- Mentions "Data pipeline creation" 
+- Snowflake Database mentioned
+- No specific streaming or real-time mentions
+- This seems like general data engineering with warehouse focus
+- Could be "data_warehouse" or "general"
+- Given Snowflake is a data warehouse, I'll go with "data_warehouse"
+- Confidence: 0.7 (inferred from Snowflake mention)
+
+### leadership_expectation
+- No mentions of mentoring, leading teams, or direct reports
+- Senior IC role typically involves some technical leadership but not people management
+
+
+- No specific leadership requirements mentioned
+- Confidence: 0.6 (inferred - senior IC typically has some tech leadership)
+
+## STACK AND CLOUD INFERENCE
+
+### primary_cloud
+- Snowflake mentioned - this is cloud-agnostic but typically runs on AWS, Azure, or GCP
+- No specific cloud provider mentioned
+- Confidence: 0.3 (too low, should be "not_mentioned")
+
+### secondary_clouds
+- No clouds mentioned
+- Confidence: 0.9 (no mentions)
+
+### processing_paradigm
+- "Data pipeline creation" mentioned
+- No specific streaming or batch technologies mentioned
+- Could be either batch or streaming
+- Confidence: 0.4 (too low, should be "not_mentioned")
+
+### orchestrator_category
+- No orchestration tools mentioned
+- Confidence: 0.3 (too low, should be "not_mentioned")
+
+### storage_layer
+- Snowflake mentioned - this is a data warehouse
+- Confidence: 0.8 (explicit warehouse mention)
+
+## GEO AND WORK MODEL INFERENCE
+
+### remote_restriction
+- Location: Cupertino, CA
+- No work model mentioned
+- No remote restrictions mentioned
+- Confidence: 0.3 (too low, should be "not_mentioned")
+
+### timezone_focus
+- Cupertino, CA suggests Pacific Time Zone
+- No timezone requirements mentioned
+- Confidence: 0.4 (too low, should be "not_mentioned")
+
+### relocation_required
+- Location is Cupertino, CA
+- No relocation mentions
+- No remote work mentioned
+- Could be on-site requirement but not stated
+- Confidence: 0.4 (too low, should be "not_mentioned")
+
+## VISA AND AUTHORIZATION INFERENCE
+
+### h1b_friendly
+- No visa sponsorship mentioned
+- Confidence: 0.8 (no sponsorship mentioned = likely false)
+
+### opt_cpt_friendly
+- No student visa mentions
+- No specific work authorization requirements stated
+- Confidence: 0.5 (borderline, but no explicit mentions)
+
+### citizenship_required
+- No citizenship requirements mentioned
+- No work authorization requirements mentioned
+- Confidence: 0.3 (too low, should be "not_mentioned")
+
+## CONTRACT AND COMPENSATION INFERENCE
+
+### w2_vs_1099
+- This appears to be a full-time position
+- No contract type mentioned
+- TCS typically offers W2 positions
+- Confidence: 0.6 (inferred from company type and context)
+
+### benefits_level
+- No benefits mentioned in the posting
+- Confidence: 0.9 (no benefits discussed)
+
+## CAREER DEVELOPMENT INFERENCE
+
+### growth_path_clarity
+- No career growth or advancement mentioned
+- Confidence: 0.9 (not mentioned)
+
+### mentorship_signals
+- No mentorship program mentioned
+- No working with senior people mentioned
+- Confidence: 0.9 (not mentioned)
+
+### promotion_path_mentioned
+- No promotion or advancement mentioned
+- Confidence: 0.9 (not mentioned)
+
+### internal_mobility_mentioned
+- No internal mobility mentioned
+- Confidence: 0.9 (not mentioned)
+
+### career_tracks_available
+- No career tracks mentioned
+- Confidence: 0.9 (not mentioned)
+
+## REQUIREMENTS CLASSIFICATION INFERENCE
+
+### requirement_strictness
+- Has clear "must have" skills listed
+- No "nice to have" skills mentioned
+- Requirements seem fairly strict for the skills listed
+- Confidence: 0.7 (inferred from must-have structure)
+
+### scope_definition
+- Clear focus on data engineering
+- Single role, not multi-role
+- Well-defined responsibilities
+- Confidence: 0.8 (clear scope)
+
+### skill_inflation_detected
+- 8+ years for senior level is reasonable
+- Skills mentioned (SQL, Python, Snowflake) are appropriate for senior data engineer
+- No skill inflation detected
+- Confidence: 0.8 (reasonable requirements)
+
+Let me refine the confidence scores and ensure they meet the minimum thresholds.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.92,
+        "evidence": "Title explicitly states 'Senior Data Engineer' and requires 8+ years experience, which matches senior level expectations",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title is 'Data Engineer' with core focus on data pipeline creation and database management",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.75,
+        "evidence": "Snowflake Database mentioned as key requirement, indicating warehouse-focused data engineering",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.65,
+        "evidence": "No mentions of mentoring, team leadership, or direct reports; senior IC role without explicit people management requirements",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "Snowflake mentioned but no specific cloud provider (AWS, Azure, GCP) explicitly stated",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No cloud providers mentioned beyond Snowflake, which is cloud-agnostic",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "Data pipeline creation mentioned but no specific batch or streaming technologies or patterns described",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No orchestration tools (Airflow, Spark, etc.) mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.85,
+        "evidence": "Snowflake explicitly mentioned as database requirement, indicating data warehouse focus",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "Location specified as Cupertino, CA but no work model (remote, hybrid, on-site) or restrictions mentioned",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.75,
+        "evidence": "Cupertino, CA location suggests Pacific timezone but no specific timezone requirements stated",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "No relocation package or requirements mentioned, location appears to be existing requirement rather than relocation",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No visa sponsorship mentioned in job description, TCS typically handles this separately if available",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "No student visa or OPT/CPT mentions, and 8+ years experience requirement suggests experienced professionals only",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No citizenship or work authorization requirements explicitly stated in job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.70,
+        "evidence": "Tata Consultancy Services typically offers W2 full-time positions, salary range suggests employee rather than contractor role",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits, equity, PTO, or other compensation details mentioned in job description",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No career growth, advancement opportunities, or development paths mentioned",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mentorship programs, working with senior staff, or collaborative environment mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion, advancement, or career progression opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No internal transfers, role changes, or mobility opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career tracks, IC path, management path, or specialist tracks mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.75,
+        "evidence": "Clear must-have skills listed (SQL, Python, Snowflake, communication) with no nice-to-have alternatives, indicating strict requirements",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused job description with single clear role (Senior Data Engineer) and well-defined technical requirements",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "8+ years experience for senior level and skills (SQL, Python, Snowflake) are appropriate and realistic for the role level",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

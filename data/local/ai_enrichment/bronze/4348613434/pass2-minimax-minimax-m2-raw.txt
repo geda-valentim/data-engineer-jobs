@@ -1,0 +1,225 @@
+<reasoning>Let me analyze this job posting step by step to infer the job characteristics.
+
+First, let me understand what we have:
+
+**Original Job Posting:**
+- Title: Data Engineer-Data Modeling
+- Company: IBM
+- Location: Pune, Maharashtra, India
+- 12+ years experience required
+- Master's degree preferred
+- Focus on data modeling, data architecture, Erwin, IBM Infosphere Data Architect
+- Database design, data warehousing, data governance
+- SQL programming
+- Agile collaborative environment
+
+**Pass 1 Extraction:**
+- No salary disclosed
+- No visa sponsorship mentioned
+- No work model stated
+- No employment type stated
+- 12+ years experience required
+- Master's degree preferred
+- Must-have skills: Data modeling, data architecture, Erwin, IBM Infosphere Data Architect, database management systems, relational/dimensional/NoSQL databases, database design, data warehousing, data governance, SQL
+- Must-have soft skills: Analytical skills, problem solving, attention to detail, team collaboration, time management
+- No benefits mentioned
+- No certifications mentioned
+
+Now let me infer each field:
+
+**SENIORITY AND ROLE:**
+1. **seniority_level**: The job requires 12+ years of experience and has "Data Engineer" in the title. This suggests a senior level role. Looking at the IC hierarchy, 12+ years would typically be at senior level or above. Given the title doesn't include "Senior" but requires 12+ years, this is likely a senior role. Confidence: 0.8
+
+2. **job_family**: The title is "Data Engineer-Data Modeling" and the core responsibilities are around data modeling, data architecture, database design, and data warehousing. This is clearly a data engineer role. Confidence: 0.95
+
+3. **sub_specialty**: The role focuses heavily on data modeling, data architecture, database design, and data warehousing concepts. This suggests a focus on data modeling/architecture rather than streaming, ML ops, etc. This would be "general" or possibly "data_modeling" but since that's not in the allowed values, I'll use "general". 
+
+I'll explore the leadership expectations for this role. The position requires extensive experience and involves complex data architecture work. While not explicitly stating management duties, the 12+ years of experience and collaborative environment suggest potential technical leadership responsibilities. The role likely involves guiding less experienced team members and contributing to strategic data infrastructure decisions.
+
+The cloud infrastructure remains ambiguous, with no specific provider mentioned. The job description focuses on data modeling tools like Erwin and IBM Infosphere Data Architect, which are platform-agnostic. This suggests flexibility in cloud technology choices, with the role potentially adapting to different enterprise environments.
+
+The processing approach seems to center on traditional data warehousing and modeling techniques. While not explicitly stating batch or streaming, the emphasis on data architecture and modeling implies a structured, potentially batch-oriented data processing methodology.
+
+The absence of specific orchestration tools means I'll need to mark this as "not_mentioned" for now. The storage layer appears to be a hybrid approach, combining traditional data warehousing concepts with modern data lakehouse principles.
+
+Geographically, the role is based in Pune, India, with no explicit remote work options mentioned. This suggests a localized, on-site work arrangement with potential regional constraints.
+
+The visa and authorization details remain unclear, with no specific sponsorship or work authorization requirements explicitly stated. The employment type seems to lean towards a standard full-time position, though no definitive contract type is specified.
+
+Benefits appear minimal, with no comprehensive package details provided. The role seems to offer a basic employment structure without extensive additional perks.
+
+Career development opportunities seem limited, with no clear growth path or mentorship programs explicitly outlined. The requirements suggest a high level of technical expertise, with a focus on data modeling and architecture skills.
+
+The role demands significant experience, indicating a senior-level position with complex technical responsibilities. The scope appears well-defined, centered on data engineering and modeling, without unnecessary role inflation.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.85,
+        "evidence": "12+ years of experience required with senior-level responsibilities in data modeling and architecture",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title is Data Engineer-Data Modeling with core focus on data modeling, data architecture, and database design",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "general",
+        "confidence": 0.75,
+        "evidence": "Focus on data modeling, data architecture, database design, and data warehousing - broad data engineering scope",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.80,
+        "evidence": "No mention of team leadership, mentoring, or direct reports - pure IC role focused on technical implementation",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific cloud providers mentioned, focus is on data modeling tools like Erwin and IBM Infosphere Data Architect",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No cloud providers mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No specific mention of streaming, batch, or real-time processing - focus is on data modeling and architecture",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No orchestration tools mentioned like Airflow, Spark, or others",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.70,
+        "evidence": "Mentions both data warehousing concepts and NoSQL databases, suggesting hybrid storage approach",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.75,
+        "evidence": "Located in Pune, Maharashtra, India with no remote work options mentioned - implies on-site work in Pune region",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.80,
+        "evidence": "Based in Pune, India with no timezone flexibility mentioned - India timezone focus",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Must be located in Pune, Maharashtra, India - implies relocation to Pune if not already there",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No visa sponsorship mentioned, role is based in India which suggests local hiring only",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No mention of student visa support, role appears to be for local Indian candidates",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.70,
+        "evidence": "No citizenship requirements mentioned, likely requires work authorization for India",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No employment type or contract structure mentioned in job posting",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits, equity, PTO, or other compensation details mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No career progression, growth opportunities, or advancement paths mentioned",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No mentorship programs, working with senior staff, or learning opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion, advancement, or career progression mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No internal transfers, role changes, or mobility opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No career tracks, paths, or advancement opportunities mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "12+ years experience required, specific tools (Erwin, IBM Infosphere), and multiple technical requirements with no 'nice to have' flexibility",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused role on data modeling and data architecture with well-defined responsibilities and technical requirements",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "12+ years for senior data engineer role with data modeling focus is reasonable and appropriate",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

@@ -1,0 +1,229 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "Mentions modern tools like Informatica PowerCenter, Cloud, and Power BI, but lacks details on CI/CD, data governance, or advanced practices.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Matches score of 3.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.70,
+        "evidence": "Mentions Cloud, Power BI, and Informatica PowerCenter.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.20,
+        "confidence": 0.85,
+        "evidence": "Role is clearly defined as a Data Engineer with focus on data integration.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "ASAP start date suggests some urgency, but no explicit signals of long hours.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Job description focuses on data engineering tasks and responsibilities.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.30,
+        "confidence": 0.75,
+        "evidence": "Low risk - well-defined role with moderate urgency.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific manager or reporting structure mentioned.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "manager",
+        "confidence": 0.65,
+        "evidence": "Head of Data Engineering suggests a manager-level reporting structure.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.70,
+        "evidence": "Mentions expanding team, but no specific growth numbers.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.60,
+        "evidence": "No specific team size or composition details provided.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific reporting structure mentioned.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Focus on data engineering tasks suggests a centralized data team.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.55,
+        "confidence": 0.75,
+        "evidence": "No explicit work-life balance signals, but no red flags either.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.60,
+        "confidence": 0.70,
+        "evidence": "No specific growth opportunities mentioned.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.65,
+        "confidence": 0.75,
+        "evidence": "Modern tools mentioned, but no details on engineering practices.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No signals of strong technical culture mentioned.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No specific development practices mentioned.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.80,
+        "evidence": "No mention of innovation or experimentation.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt or refactoring.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No mention of AI or ML.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.85,
+        "evidence": "Mentions 'ASAP' start date.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Location in India suggests moderate competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.80,
+        "evidence": "IBM is a well-established technology company.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "Mentions expanding team, but no rapid growth signals.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.60,
+        "evidence": "No specific team size mentioned, but likely medium-sized.",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "profitable",
+        "confidence": 0.90,
+        "evidence": "IBM is a profitable company.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.70,
+        "evidence": "Mentions expanding team.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["well_defined_role", "modern_tech_stack", "established_company"],
+    "strength_details": [
+      "Clear Data Engineer role focused on data integration.",
+      "Utilizes modern tools like Informatica PowerCenter and Cloud technologies.",
+      "Opportunity to work for a well-established and reputable company (IBM)."
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship"],
+    "concern_details": [
+      "ASAP start date suggests potential for time pressure.",
+      "No visa sponsorship mentioned, requiring US work authorization."
+    ],
+    "best_fit_categories": ["mid_level_engineers", "data_generalists"],
+    "best_fit_details": [
+      "Mid-level data engineers with experience in ETL and data integration.",
+      "Engineers comfortable working with established technologies and processes."
+    ],
+    "probe_categories": ["reporting_structure", "team_size_composition", "work_hour_expectations"],
+    "probe_details": [
+      "Clarify the reporting structure and manager expectations.",
+      "Understand the team size and composition.",
+      "Inquire about typical work hours and potential for overtime."
+    ],
+    "leverage_categories": [],
+    "leverage_details": [],
+    "overall_assessment": "Solid opportunity for a mid-level Data Engineer at a well-established company. The role is clearly defined and utilizes modern tools. The main trade-offs are the potential for time pressure and the lack of visa sponsorship.",
+    "recommendation_score": 0.70,
+    "recommendation_confidence": 0.80
+  }
+}
+```

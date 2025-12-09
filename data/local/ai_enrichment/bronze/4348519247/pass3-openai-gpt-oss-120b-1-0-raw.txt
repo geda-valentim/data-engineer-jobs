@@ -1,0 +1,251 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.78,
+        "evidence": "Job posting mentions generic data engineering tasks (batch/real‑time processing, data gathering, storage) but does not reference modern data stack components, orchestration tools, CI/CD, or governance practices.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.78,
+        "evidence": "Score of 2 maps to the \"developing\" maturity level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "No mention of modern stack adoption, CI/CD, data quality testing, monitoring, or governance tools.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.45,
+        "confidence": 0.85,
+        "evidence": "Title \"Data Scientist‑Advanced Analytics\" but description focuses on data engineering plus AI/GenAI tasks, indicating a blend of responsibilities.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.20,
+        "confidence": 0.75,
+        "evidence": "No explicit language about fast‑paced delivery, on‑call, or overtime; IBM consulting roles can be client‑driven but not stated.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "vague",
+        "confidence": 0.80,
+        "evidence": "Mismatch between job title and described duties creates ambiguity about the primary focus.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.50,
+        "confidence": 0.78,
+        "evidence": "Combined moderate scope creep and vague role definition raise caution, but no strong overtime or benefit red flags.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "Posting does not specify a manager or reporting line.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No titles such as Head of Data, Director, or Manager are referenced.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No information about hiring pace or team expansion.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.60,
+        "evidence": "No details on team size, number of data engineers, or seniority mix.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No reporting hierarchy described.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.60,
+        "evidence": "Job description mentions collaboration with diverse teams but does not state embedded product‑team model.",
+        "source": "pass1_derived"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.40,
+        "confidence": 0.70,
+        "evidence": "No PTO policy, remote flexibility, or on‑call information is provided.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.30,
+        "confidence": 0.70,
+        "evidence": "No mention of learning budgets, mentorship, or clear career ladders.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.40,
+        "confidence": 0.75,
+        "evidence": "Absence of modern tooling, CI/CD, testing, or engineering practice details suggests a modest technical culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "No explicit signals such as open‑source contributions, conference support, or hackathons.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "Job posting does not reference code review, CI/CD, monitoring, or incident response practices.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.60,
+        "evidence": "Only generic statement about staying up‑to‑date with AI trends; no dedicated innovation time mentioned.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "No language about refactoring, reducing tech debt, or modernizing legacy pipelines.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "genai_focus",
+        "confidence": 0.75,
+        "evidence": "Explicit mention of Gen AI code assistant, foundation models, and large language models.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "No specific ML platforms or feature‑store tools are listed.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No language about immediate start or fast hiring.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No data on applicant volume or market competitiveness.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a globally recognized, publicly traded technology company.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No indication of aggressive or steady hiring cadence.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No team size numbers are provided.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "IBM is a public company; funding stage not applicable.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "Posting does not state whether this is a new headcount or backfill.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "clear_requirements",
+      "data_focused_role",
+      "established_company"
+    ],
+    "strength_details": [
+      "Well‑defined technical requirements covering data engineering, real‑time processing, and AI/GenAI capabilities.",
+      "Position within IBM provides stability and access to large‑scale consulting projects.",
+      "Focus on emerging AI technologies (LLMs, foundation models) offers exposure to cutting‑edge work."
+    ],
+    "concern_categories": [
+      "vague_responsibilities",
+      "unclear_reporting",
+      "salary_not_disclosed"
+    ],
+    "concern_details": [
+      "Job title (Data Scientist) does not match the primarily data‑engineering description, creating role ambiguity.",
+      "No information about who the role reports to or the team hierarchy.",
+      "Compensation details (salary, equity, benefits) are not disclosed."
+    ],
+    "best_fit_categories": [
+      "mid_level_engineers",
+      "data_generalists",
+      "enterprise_experienced"
+    ],
+    "best_fit_details": [
+      "Engineers with 3‑6 years of data‑engineering experience comfortable with batch and streaming pipelines.",
+      "Candidates who enjoy working across data ingestion, storage, and AI model support in a consulting environment.",
+      "Professionals seeking a stable, large‑enterprise setting rather than a startup."
+    ],
+    "probe_categories": [
+      "role_scope_boundaries",
+      "reporting_structure_details",
+      "career_growth_path",
+      "salary_range_details",
+      "work_hour_expectations"
+    ],
+    "probe_details": [
+      "Can you clarify whether the primary focus is data engineering, data science, or a hybrid role?",
+      "Who will be the direct manager and what is the broader team structure?",
+      "What career progression paths (technical ladder, management) are available for this position?",
+      "Is there a disclosed salary band or equity component for this role?",
+      "What are the typical working hours and is any on‑call or overtime expected?"
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "domain_expertise"
+    ],
+    "leverage_details": [
+      "Your hands‑on experience with real‑time data pipelines aligns directly with the job’s batch/streaming requirements.",
+      "Experience in AI/GenAI code‑assistant projects will differentiate you given the role’s emphasis on LLMs."
+    ],
+    "overall_assessment": "The role offers a clear technical focus within IBM's stable, enterprise environment and exposure to emerging GenAI technologies. However, the mismatch between title and duties, lack of reporting clarity, and undisclosed compensation introduce uncertainty. Candidates comfortable with a large‑company setting and who can navigate ambiguous role definitions may find it a good fit.",
+    "recommendation_score": 0.62,
+    "recommendation_confidence": 0.80
+  }
+}

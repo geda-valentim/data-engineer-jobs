@@ -1,0 +1,289 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 19:48:51",
+    "job_posting_id": "4348556911",
+    "job_title": "Data Engineer-Data Platforms-Azure",
+    "company_name": "IBM",
+    "job_location": "Kochi, Kerala, India",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 4,
+          "confidence": 0.85,
+          "evidence": "IBM is an established enterprise with a structured Client Innovation Center model, explicit mention of Azure cloud-native tools (Databricks, DevOps), and collaboration with diverse teams including scientists, engineers, and DBAs. These suggest mature, well-defined data practices and governance.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "managed",
+          "confidence": 0.85,
+          "evidence": "Matches the data_maturity_score of 4, with signals of strong cloud adoption, collaboration, and enterprise-grade tooling.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption",
+            "cicd_practices",
+            "data_governance"
+          ],
+          "confidence": 0.9,
+          "evidence": "Mandatory skills include Azure Databricks, PySpark, and Azure DevOps (CI/CD). Team collaboration and enterprise search tools (Elasticsearch, Splunk) imply governance and structured data practices.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.7,
+          "confidence": 0.8,
+          "evidence": "Role combines data engineering tasks (ETL, pipelines) with predictive modeling (ML techniques) and enterprise search applications (Elasticsearch, Splunk), indicating moderate scope creep.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.4,
+          "confidence": 0.7,
+          "evidence": "No explicit overtime or work-life balance signals, but the role is part of a consulting delivery center, which may imply client-driven deadlines and moderate overtime risk.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "multi_role",
+          "confidence": 0.8,
+          "evidence": "Responsibilities span data engineering, predictive modeling, and enterprise search applications, suggesting a hybrid role with multiple distinct functions.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.5,
+          "confidence": 0.75,
+          "evidence": "Moderate scope creep and potential overtime risk due to consulting environment, but mitigated by IBM's enterprise maturity and structured practices.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "vague",
+          "confidence": 0.7,
+          "evidence": "Job posting does not explicitly state the reporting structure, only mentions collaboration with diverse teams.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "No clear mention of reporting lines or manager titles in the job posting.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit signals about team growth velocity or hiring plans in the job posting.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.5,
+          "evidence": "Mentions collaboration with diverse teams but does not specify team size or composition within the Client Innovation Center.",
+          "source": "inferred"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit or inferred reporting structure details in the job posting.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.9,
+          "evidence": "Job posting explicitly mentions collaborating with diverse teams (scientists, engineers, consultants, DBAs) and working in an Agile environment, indicating cross-functional embedding.",
+          "source": "pass1_derived"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "No explicit work-life balance signals (e.g., PTO, hybrid flexibility), but the consulting environment may imply moderate risk of overtime or deadline pressure.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.7,
+          "confidence": 0.8,
+          "evidence": "Collaboration with diverse teams and exposure to enterprise-grade projects suggest strong learning opportunities, though no explicit learning budget or conference support is mentioned.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.6,
+          "confidence": 0.75,
+          "evidence": "Mentions Agile collaboration and modern Azure tools, but lacks explicit signals about innovation, open source, or engineering practices beyond mandatory skills.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No explicit signals about open source contributions, tech blogs, or innovation time in the job posting.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "ci_cd",
+            "monitoring"
+          ],
+          "confidence": 0.8,
+          "evidence": "Azure DevOps (CI/CD) and enterprise search tools (Elasticsearch, Splunk) imply monitoring and CI/CD practices, though no explicit mention of code review or other dev practices.",
+          "source": "inferred"
+        },
+        "innovation_signals": {
+          "value": "medium",
+          "confidence": 0.65,
+          "evidence": "Mentions 'leading edge tools' and predictive modeling, suggesting some innovation, but lacks explicit signals about experimentation or R&D time.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit or inferred mentions of tech debt management or refactoring in the job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "basic_ml",
+          "confidence": 0.75,
+          "evidence": "Responsibilities include implementing and validating predictive models and creating statistical models, but no advanced MLOps or GenAI tools are mentioned.",
+          "source": "inferred"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No explicit ML tools (e.g., SageMaker, MLflow) are mentioned beyond general ML techniques and predictive modeling.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit urgency signals (e.g., 'immediate start', 'ASAP') in the job posting.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "IBM is a well-known enterprise, but the role is location-specific (Kochi, India) and lacks remote flexibility, which may limit competition. No salary transparency or Easy Apply signals suggest moderate competition.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.95,
+          "evidence": "IBM is a globally established enterprise with a structured consulting delivery center model, indicating a mature company stage.",
+          "source": "explicit"
+        },
+        "hiring_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit signals about hiring velocity or team expansion plans in the job posting.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of team size or composition in the job posting.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "IBM is a public enterprise, but no specific funding stage signals are mentioned in the job posting.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit signals about whether this is a new headcount, backfill, or team expansion in the job posting.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "modern_tech_stack",
+        "established_company",
+        "collaborative_culture",
+        "learning_opportunities",
+        "data_focused_role"
+      ],
+      "strength_details": [
+        "Modern Azure-based data stack (Databricks, PySpark, DevOps) indicates exposure to cutting-edge tools and practices.",
+        "IBM is an established enterprise with structured processes, reducing ambiguity in workflows and expectations.",
+        "Strong emphasis on collaboration with cross-functional teams (scientists, engineers, consultants, DBAs) provides diverse learning opportunities.",
+        "Role involves working on hybrid processing paradigms (batch and real-time), broadening technical exposure.",
+        "Consulting environment offers experience with a wide range of clients and industries, enhancing professional growth."
+      ],
+      "concern_categories": [
+        "scope_creep_risk",
+        "overtime_likely",
+        "role_clarity",
+        "unclear_reporting"
+      ],
+      "concern_details": [
+        "Role combines data engineering, predictive modeling, and enterprise search applications, which may lead to divided focus and scope creep.",
+        "Consulting environments often involve client-driven deadlines, increasing the risk of overtime or extended hours.",
+        "Job title ('Associate Software Developer') and responsibilities do not clearly align, creating potential confusion about role expectations.",
+        "No explicit mention of reporting structure or manager level, which may indicate unclear leadership or accountability."
+      ],
+      "best_fit_categories": [
+        "mid_level_engineers",
+        "data_generalists",
+        "career_changers",
+        "cloud_specialists"
+      ],
+      "best_fit_details": [
+        "Mid-level data engineers with 4-5 years of relevant experience in Azure, ETL, and data pipelines will find this role a strong fit.",
+        "Candidates comfortable with hybrid responsibilities (batch and real-time processing) and cross-functional collaboration will thrive.",
+        "Engineers with a background in cloud platforms (Azure) and experience in consulting or client-facing roles will align well with the role's demands.",
+        "Those seeking exposure to enterprise-grade projects and a mix of data engineering and basic ML tasks will benefit from this opportunity."
+      ],
+      "probe_categories": [
+        "role_scope_boundaries",
+        "on_call_expectations",
+        "work_hour_expectations",
+        "career_growth_path",
+        "team_size_composition"
+      ],
+      "probe_details": [
+        "Ask for clarity on the role's scope: What percentage of time will be spent on data engineering vs. predictive modeling vs. enterprise search tasks?",
+        "Inquire about on-call expectations, especially given the consulting environment and potential client-driven deadlines.",
+        "Understand typical work hours and how deadlines are managed to assess overtime risk and work-life balance.",
+        "Request details about career growth paths within IBM Consulting and opportunities for mentorship or upskilling.",
+        "Clarify team composition: How many data engineers are in the Kochi delivery center, and what is the seniority mix?"
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "domain_expertise",
+        "quick_availability"
+      ],
+      "leverage_details": [
+        "Candidates with 4-5 years of hands-on experience in Azure Databricks, PySpark, and ETL tools will have strong leverage.",
+        "Experience in consulting or client-facing roles, particularly in Agile environments, is a differentiator.",
+        "Quick availability (no notice period or immediate start) may strengthen your candidacy in a consulting-driven role."
+      ],
+      "overall_assessment": "This role at IBM Consulting offers a unique opportunity for mid-level data engineers to work on a modern Azure stack while collaborating with diverse teams. However, the hybrid scope (data engineering + predictive modeling + enterprise search) and consulting environment may introduce challenges like divided focus and overtime risk. Candidates should seek clarity on role boundaries, work expectations, and career growth during interviews.",
+      "recommendation_score": 0.65,
+      "recommendation_confidence": 0.8
+    },
+    "tokens": 13215,
+    "input_tokens": 10175,
+    "output_tokens": 3040,
+    "cost": 0.016255000000000002
+  }
+}

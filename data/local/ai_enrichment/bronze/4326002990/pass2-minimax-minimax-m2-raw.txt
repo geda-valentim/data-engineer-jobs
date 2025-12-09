@@ -1,0 +1,322 @@
+<reasoning>Let me analyze this job posting step by step to infer the required characteristics.
+
+First, let me understand what I have:
+
+1. **Original Job Posting**: Data Engineer-Data Warehouse role at IBM in Kochi, Kerala, India
+2. **Pass 1 Extraction Results**: Various extracted fields including skills, work model, etc.
+
+Now I need to infer the characteristics based on the rules provided. Let me go through each section:
+
+## SENIORITY AND ROLE
+
+### seniority_level
+Looking at the job title "Data Engineer-Data Warehouse" - this doesn't explicitly say "Senior" or "Junior". The responsibilities mention implementing predictive models, designing enterprise search applications, working with big data, and collaborating with diverse teams. The required skills include DBT, Java, Python, Scala, ETL, Linux, SQL, Spark, Hadoop - these are advanced technical skills. The preferred experience mentions communication with clients and analytical solutions. 
+
+However, there's no mention of years of experience or explicit seniority indicators. The role seems to be at a mid to senior level based on the complexity of responsibilities and technical requirements, but without explicit "Senior" in the title or years mentioned, I should be conservative.
+
+**Inference**: "mid" level - confidence around 0.6-0.7 because while the technical requirements are advanced, there's no explicit seniority marker.
+
+### job_family
+The title is "Data Engineer-Data Warehouse" and the description focuses heavily on data pipelines, ETL, data gathering, storage, batch and real-time processing, database integration, and unstructured data. This is clearly a data engineering role.
+
+**Inference**: "data_engineer" - confidence 0.95
+
+### sub_specialty
+The role mentions both "batch and real-time processing", DBT (which is more batch-oriented), ETL tools, data integration, and federation tools. It also mentions Snowflake as preferred. The focus seems to be on data warehouse and ETL pipelines rather than ML infrastructure or streaming specifically.
+
+**Inference**: "batch_etl" - confidence 0.8
+
+
+### leadership_expectation
+The role emphasizes collaboration with diverse teams, working with scientists, engineers, consultants, and database administrators. There's no mention of direct reports, hiring, or people management responsibilities. The focus is on technical work and collaboration rather than leadership.
+
+**Inference**: "ic" - confidence 0.8
+
+## STACK AND CLOUD
+
+### primary_cloud
+The job posting doesn't mention any specific cloud providers like AWS, Azure, or GCP. It mentions tools like Linux, SQL, Python, Spark, Hadoop, but these can be used on-premise or on any cloud. No cloud-specific services are mentioned.
+
+**Inference**: "not_mentioned" - confidence 0.9
+
+### secondary_clouds
+Since no clouds are mentioned, this should be an empty array.
+
+**Inference**: [] - confidence 0.9
+
+### processing_paradigm
+The description explicitly mentions both "batch and real-time processing", which indicates a hybrid approach to data processing.
+
+**Inference**: "hybrid" - confidence 0.9
+
+### orchestrator_category
+The job mentions DBT as a required skill, which suggests dbt-core orchestration. No other orchestrators like Airflow are mentioned.
+
+**Inference**: "dbt_core" - confidence 0.9
+
+### storage_layer
+The role mentions Snowflake as preferred and focuses on data warehouse operations. The title specifically mentions "Data Warehouse", indicating a warehouse-centric approach.
+
+**Inference**: "warehouse" - confidence 0.85
+
+## GEO AND WORK MODEL
+
+### remote_restriction
+The job is explicitly located in "Kochi, Kerala, India" and the work model is stated as "onsite". This indicates a specific location requirement.
+
+**Inference**: "same_country" - confidence 0.9
+
+### timezone_focus
+The location is in India (Kochi, Kerala), which would be in the India timezone (IST). However, since this is an onsite role in a specific location, the timezone focus would naturally align with the local timezone.
+
+**Inference**: "specific_country" - confidence 0.9
+
+### relocation_required
+Since the role is specifically for Kochi, Kerala, India and is onsite, someone would need to be willing to relocate to that location if they're not already there.
+
+**Inference**: true - confidence 0.9
+
+## VISA AND AUTHORIZATION
+
+### h1b_friendly
+The visa sponsorship is stated as "not_mentioned" in the pass1 extraction. Since this is an Indian role, H1B (which is a US visa) wouldn't be relevant anyway.
+
+**Inference**: false - confidence 0.9
+
+### opt_cpt_friendly
+No mention of OPT/CPT support, and since this is an Indian role, these US student visa programs wouldn't apply.
+
+**Inference**: false - confidence 0.9
+
+### citizenship_required
+The role is in India and doesn't mention any specific citizenship requirements. It would likely require work authorization in India.
+
+**Inference**: "work_auth_only" - confidence 0.8
+
+## CONTRACT AND COMPENSATION
+
+### w2_vs_1099
+The employment type is "not_mentioned" in pass1, but this appears to be a standard full-time role at IBM. For an Indian role, this would likely be a standard employment contract rather than 1099 or C2C.
+
+**Inference**: "w2" - confidence 0.7
+
+### benefits_level
+No benefits are mentioned in the pass1 extraction. As a large corporation like IBM, they would likely offer standard benefits, but since nothing is specified, I should use "not_mentioned".
+
+**Inference**: "not_mentioned" - confidence 0.8
+
+## CAREER DEVELOPMENT
+
+### growth_path_clarity
+The job description doesn't mention any specific career paths, growth opportunities, or advancement tracks. It's focused on the current role responsibilities.
+
+**Inference**: "not_mentioned" - confidence 0.9
+
+### mentorship_signals
+The description mentions working in a collaborative environment with "other scientists, engineers, consultants and database administrators of all backgrounds and disciplines" but doesn't specifically mention mentorship programs or working with senior people for learning purposes.
+
+**Inference**: "not_mentioned" - confidence 0.8
+
+### promotion_path_mentioned
+No mention of promotion, advancement, or career growth opportunities.
+
+**Inference**: false - confidence 0.9
+
+### internal_mobility_mentioned
+No mention of internal transfers, lateral moves, or exploring different roles within the company.
+
+**Inference**: false - confidence 0.9
+
+### career_tracks_available
+Since no career tracks are mentioned, this should be an empty array.
+
+**Inference**: [] - confidence 0.9
+
+## REQUIREMENTS CLASSIFICATION
+
+### requirement_strictness
+The job has a clear distinction between "Required Technical And Professional Expertise" and "Preferred Technical And Professional Experience". The required section has specific technical skills listed, while the preferred section has more soft skills and additional qualifications. This suggests medium strictness.
+
+**Inference**: "medium" - confidence 0.8
+
+### scope_definition
+The job description is focused specifically on data engineering work, with clear responsibilities around data pipelines, ETL, and data warehouse operations. It's not trying to combine multiple roles.
+
+**Inference**: "clear" - confidence 0.9
+
+### skill_inflation_detected
+The skills required (DBT, Java, Python, Scala, ETL, Linux, SQL, Spark, Hadoop) are appropriate for a data engineer role. The preferred skills (DataStage, Snowflake) are also reasonable. No unrealistic combinations or excessive years of experience are mentioned.
+
+**Inference**: false - confidence 0.9
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.65,
+        "evidence": "Title doesn't specify seniority but responsibilities include implementing predictive models, designing enterprise applications, and working with big data - indicates mid-level complexity without explicit senior markers",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title is Data Engineer-Data Warehouse, core focus on data pipelines, ETL, data gathering, storage, and processing",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.82,
+        "evidence": "Mentions both batch and real-time processing but emphasizes DBT, ETL tools, data integration, and federation - primary focus on ETL pipelines",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "Collaborative environment mentioned but no direct reports, hiring, or people management responsibilities - pure individual contributor role",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific cloud providers mentioned (AWS, Azure, GCP), only general tools like Linux, SQL, Python, Spark, Hadoop that can be on-premise or multi-cloud",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No cloud providers mentioned at all",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.88,
+        "evidence": "Explicitly mentions 'both batch and real-time processing' in job description",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "dbt_core",
+        "confidence": 0.90,
+        "evidence": "DBT is listed as required skill with 'Good Hands-on experience in DBT is required'",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.85,
+        "evidence": "Title specifically mentions 'Data Warehouse' and Snowflake is listed as preferred technology",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.90,
+        "evidence": "Location specified as 'Kochi, Kerala, India' with onsite work model - requires being in India",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.90,
+        "evidence": "Specific location in Kochi, Kerala, India indicates India timezone focus",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.85,
+        "evidence": "Onsite role in specific location (Kochi, Kerala, India) would require relocation if not already resident there",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "H1B is US visa not applicable for Indian role, visa sponsorship stated as 'not_mentioned'",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "OPT/CPT are US student visa programs not applicable for Indian role",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.80,
+        "evidence": "Indian role would require work authorization in India, no specific citizenship requirements mentioned",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.70,
+        "evidence": "Standard IBM full-time position suggests employment contract rather than contractor arrangement",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No benefits mentioned in job description despite being IBM role",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mention of career paths, growth opportunities, or advancement tracks in job description",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "Collaborative environment mentioned but no specific mentorship programs or learning from senior staff",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of promotion, advancement, or career growth opportunities",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers, lateral moves, or exploring different roles",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career tracks mentioned in job description",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.80,
+        "evidence": "Clear distinction between 'Required Technical And Professional Expertise' and 'Preferred Technical And Professional Experience' with specific technical must-haves",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Focused specifically on data engineering responsibilities, not multi-role hybrid position",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Skills required (DBT, Java, Python, Scala, ETL, etc.) are appropriate for data engineer role without unrealistic combinations",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

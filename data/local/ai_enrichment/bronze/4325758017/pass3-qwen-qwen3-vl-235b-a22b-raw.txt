@@ -1,0 +1,231 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.65,
+        "evidence": "Mentions basic tools (Elasticsearch, Splunk) and Agile but no modern data stack (dbt, Airflow, Snowflake), no CI/CD, testing, or governance mentioned",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.65,
+        "evidence": "Matches score of 2 - basic pipelines and tools but no advanced practices",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.70,
+        "evidence": "No modern data stack, CI/CD, data quality, monitoring, or governance tools mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.75,
+        "confidence": 0.85,
+        "evidence": "Title is 'Data Scientist' but responsibilities include data engineering (cleansing, integration), modeling, and GenAI code translation - multiple distinct roles combined",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "IBM delivery center environment with 'Agile, collaborative' work; no explicit work-life balance signals but large company may have structure",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "multi_role",
+        "confidence": 0.85,
+        "evidence": "Role combines data engineering, data science, and GenAI code assistant responsibilities under 'Data Scientist' title",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.65,
+        "confidence": 0.75,
+        "evidence": "High scope creep (0.75) + vague role clarity + no compensation/benefits info = moderate risk",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Mentions 'collaborating with diverse teams' but no specific manager or reporting line mentioned",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No manager title or level mentioned in job description or Pass 1",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.60,
+        "evidence": "No information on team growth, expansion, or hiring velocity",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.65,
+        "evidence": "Mentions 'collaborating with diverse teams' but no team size or composition details",
+        "source": "inferred"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure specified in job description",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions 'partnering with other scientists, engineers, consultants and database administrators' - suggests cross-functional collaboration",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.55,
+        "confidence": 0.70,
+        "evidence": "No explicit work-life balance signals; IBM delivery center may imply client-driven hours; no PTO or flexibility mentioned",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.60,
+        "confidence": 0.65,
+        "evidence": "Mentions 'growth mindset' and collaboration with experienced colleagues but no explicit learning budget, conferences, or career paths",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.50,
+        "confidence": 0.65,
+        "evidence": "Basic tools (Elasticsearch, Splunk) and Agile mentioned but no modern stack, CI/CD, testing, or documentation practices",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No mention of open source, tech blogs, conferences, hackathons, or innovation time",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["agile"],
+        "confidence": 0.80,
+        "evidence": "Explicitly mentions 'Work in an Agile, collaborative environment'",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Mentions 'stay up to date with latest trends in AI, foundation models, LLMs' suggesting some innovation focus",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt, refactoring, or code quality improvement",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "genai_focus",
+        "confidence": 0.90,
+        "evidence": "Explicitly mentions GenAI code assistant, LLM capabilities, and foundation models",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": ["LLM capabilities", "GenAI code assistant"],
+        "confidence": 0.85,
+        "evidence": "Mentions 'Gen AI code assistant to refactor/rewrite and document code' and 'LLM capabilities'",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No urgency signals like 'ASAP', 'immediate start', or 'urgent need'",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "IBM brand attracts candidates; location in Bengaluru (tech hub) increases competition; no salary disclosure may reduce applications",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a well-known, established technology company",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "IBM likely has regular hiring; no signals of aggressive expansion or replacement",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No team size mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.95,
+        "evidence": "IBM is a publicly traded company",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information on whether this is a new headcount, backfill, or expansion",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["established_company", "genai_focus", "data_focused_role", "startup_energy"],
+    "strength_details": [
+      "IBM brand provides stability and recognition",
+      "Strong focus on GenAI and LLM capabilities - cutting-edge area",
+      "Role centered on data engineering and analytics tasks"
+    ],
+    "concern_categories": ["vague_requirements", "unclear_responsibilities", "scope_creep_risk", "limited_growth"],
+    "concern_details": [
+      "Title 'Data Scientist' but responsibilities include data engineering and GenAI code translation - unclear scope",
+      "No salary, benefits, or career growth path mentioned",
+      "High scope creep risk combining multiple distinct roles"
+    ],
+    "best_fit_categories": ["mid_level_engineers", "cloud_specialists", "data_generalists", "startup_enthusiasts"],
+    "best_fit_details": [
+      "Mid-level engineers comfortable with hybrid data science/engineering roles",
+      "Candidates with GenAI/LLM experience or interest in emerging tech"
+    ],
+    "probe_categories": ["role_scope_boundaries", "career_growth_path", "tech_stack_details", "work_hour_expectations"],
+    "probe_details": [
+      "Clarify if this is primarily a data engineering or data science role",
+      "Ask about career progression opportunities and mentorship",
+      "Inquire about actual tech stack beyond Elasticsearch and Splunk"
+    ],
+    "leverage_categories": ["rare_skill_match", "domain_expertise"],
+    "leverage_details": [
+      "Experience with GenAI code assistants and LLMs is a differentiator",
+      "COBOL/Java experience mentioned as preferred - may be valuable for legacy systems"
+    ],
+    "overall_assessment": "Opportunity at established IBM with focus on GenAI and data engineering, but role definition is unclear with significant scope creep risk. Suitable for mid-level candidates interested in emerging AI technologies, but lacks transparency on compensation, growth, and team structure. Main trade-offs are role ambiguity and limited career path clarity.",
+    "recommendation_score": 0.55,
+    "recommendation_confidence": 0.70
+  }
+}

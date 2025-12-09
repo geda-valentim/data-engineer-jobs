@@ -1,0 +1,394 @@
+<reasoning>Let me analyze this job posting step by step to infer the job characteristics according to the rules provided.
+
+First, let me understand what we have:
+
+**Original Job Posting:**
+- Title: Data Engineer-Business Intelligence
+- Company: IBM
+- Location: Pune, Maharashtra, India
+- This is for IBM Consulting Client Innovation Centers
+- Focus on BI/DW projects, reporting, visualization using Cognos
+- 3+ years experience required
+- Education: MCA/M.Tech/B.Tech/B.E.
+- Must have: Cognos, UNIX, BI/DW, reporting, visualization
+- Nice to have: AWS, Google Cloud, Azure, IBM InfoSphere DataStage, Azure Data Factory, Informatica PowerCenter
+- Soft skills: Communication, time management, multi-tasking, English proficiency, writing
+- Nice to have soft skills: Agile mindset, critical thinking, ownership
+
+**Pass 1 Extraction Results:**
+- Work model: onsite
+- Location: Pune, Maharashtra, India
+- No visa sponsorship mentioned
+- No security clearance mentioned
+- No benefits mentioned
+- No equity mentioned
+- No learning budget mentioned
+- No conference budget mentioned
+- No PTO policy mentioned
+- 3 years minimum experience
+- Education: Bachelor's level required
+- Must have skills: Cognos, UNIX, BI/DW, reporting, visualization
+- Nice to have skills: AWS, Google Cloud Platform, Azure, IBM InfoSphere DataStage, Azure Data Factory, Informatica PowerCenter
+
+Now let me infer each field:
+
+## SENIORITY AND ROLE
+
+### seniority_level
+- Title: "Data Engineer-Business Intelligence" (no "Senior" in title)
+- Experience: 3 years minimum
+- This suggests mid-level rather than senior
+- 3 years is typically mid-level for data engineering
+- Confidence: 0.7 (title doesn't specify seniority, but 3 years suggests mid-level)
+- Value: "mid"
+
+### job_family
+- Title explicitly says "Data Engineer-Business Intelligence"
+
+
+- Role focuses on BI/DW projects, reporting, and visualization
+- This aligns perfectly with data engineering and analytics engineering
+- Confidence: 0.9 (clear from title and description)
+- Value: "data_engineer"
+
+### sub_specialty
+- Focus on BI/DW, reporting, visualization
+- No mention of streaming, ML, or real-time processing
+- Emphasis on traditional data warehousing and business intelligence
+- Confidence: 0.8 (clear BI focus)
+- Value: "data_warehouse"
+
+### leadership_expectation
+- No mention of team leadership, mentoring, or direct reports
+- Role appears to be individual contributor focused
+- No technical leadership responsibilities indicated
+- Confidence: 0.9 (pure IC role)
+- Value: "ic"
+
+## STACK AND CLOUD
+
+### primary_cloud
+- Multiple cloud platforms mentioned as nice to have: AWS, Google Cloud, Azure
+- No single cloud platform is emphasized as primary
+- This suggests a multi-cloud approach or no clear primary
+- Confidence: 0.8 (multiple clouds mentioned)
+- Value: "multi"
+
+### secondary_clouds
+- Since primary is "multi", secondary would be empty
+- All three major clouds are mentioned equally
+- Confidence: 0.9
+- Value: []
+
+### processing_paradigm
+- No mention of streaming, real-time, or event-driven processing
+- Focus on reporting and visualization suggests batch processing
+- Traditional BI/DW projects typically use batch processing
+- Confidence: 0.8 (batch focus)
+- Value: "batch"
+
+### orchestrator_category
+- No specific orchestrator mentioned
+- No mention of Airflow, Spark, dbt, etc.
+- Traditional BI tools like Cognos might have their own scheduling
+- Confidence: 0.6 (not mentioned, but BI context suggests some orchestration)
+- Value: "not_mentioned"
+
+### storage_layer
+- Focus on BI/DW and reporting
+- Traditional data warehousing approach
+- No mention of data lakes or lakehouse architectures
+- Confidence: 0.8 (warehouse focus)
+- Value: "warehouse"
+
+## GEO AND WORK MODEL
+
+### remote_restriction
+- Location: Pune, Maharashtra, India
+- Work model: onsite
+- Specific location requirement
+- Confidence: 0.9 (specific location, onsite)
+- Value: "same_country"
+
+### timezone_focus
+- Location: India (Pune)
+- No specific timezone requirements mentioned
+- Since it's India-based, would be IST
+- Confidence: 0.8 (India location implies IST)
+- Value: "specific_country"
+
+### relocation_required
+- Already requires being in Pune, Maharashtra, India
+- Onsite role
+- If you're not already in Pune, relocation would be required
+- Confidence: 0.8 (onsite + specific location)
+- Value: true
+
+## VISA AND AUTHORIZATION
+
+### h1b_friendly
+- No visa sponsorship mentioned
+- Role is in India, so H1B (US visa) wouldn't apply
+- This is an India-based position
+- Confidence: 0.9 (India location, no sponsorship mentioned)
+- Value: false
+
+### opt_cpt_friendly
+- No mention of student visas or work authorization requirements
+- Since this is India-based, US student visas (OPT/CPT) wouldn't apply
+- Confidence: 0.9 (India location)
+- Value: false
+
+### citizenship_required
+- No citizenship requirements mentioned
+- No work authorization restrictions mentioned
+- Since it's India-based, likely open to Indian citizens and work authorized individuals
+- Confidence: 0.7 (not explicitly mentioned)
+- Value: "any"
+
+## CONTRACT AND COMPENSATION
+
+### w2_vs_1099
+- No contract type mentioned
+- This appears to be a full-time employee position at IBM
+- IBM typically employs people as W2 employees
+- Confidence: 0.8 (IBM full-time role)
+- Value: "w2"
+
+### benefits_level
+- No benefits mentioned in the job posting
+- No equity, PTO, learning budget, etc. mentioned
+- This could mean benefits are standard but not highlighted, or minimal
+- Since it's IBM, likely has standard benefits but not mentioned
+- Confidence: 0.6 (not mentioned, but IBM likely has standard benefits)
+- Value: "not_mentioned"
+
+## CAREER DEVELOPMENT
+
+### growth_path_clarity
+- No mention of career paths, growth opportunities, or advancement
+- No discussion of career development
+- Very focused on technical requirements only
+- Confidence: 0.9 (no career development mentioned)
+- Value: "not_mentioned"
+
+### mentorship_signals
+- No mention of mentorship, working with senior people, or learning opportunities
+- No collaborative environment mentioned
+- Focus is purely on technical skills and experience
+- Confidence: 0.9 (no mentorship signals)
+- Value: "not_mentioned"
+
+### promotion_path_mentioned
+- No mention of promotion, advancement, or career growth
+- No discussion of moving to senior roles or management
+- Confidence: 0.9 (no promotion mentions)
+- Value: false
+
+### internal_mobility_mentioned
+- No mention of internal transfers, role changes, or exploring different positions
+- Very focused on this specific role
+- Confidence: 0.9 (no mobility mentions)
+- Value: false
+
+### career_tracks_available
+- No mention of different career paths (IC track, management track, etc.)
+- No discussion of career progression
+- Confidence: 0.9 (no career tracks mentioned)
+- Value: []
+
+## REQUIREMENTS CLASSIFICATION
+
+### requirement_strictness
+- Clear distinction between "Required" and "Preferred" technical skills
+- Mix of must-have and nice-to-have requirements
+- Not overly strict - reasonable requirements for the role
+- Confidence: 0.8 (clear must-have vs nice-to-have)
+- Value: "medium"
+
+### scope_definition
+- Very focused role: Data Engineer-Business Intelligence
+- Clear responsibilities around BI/DW, reporting, visualization
+- Not a multi-role hybrid position
+- Well-defined scope
+- Confidence: 0.9 (clear, focused role)
+- Value: "clear"
+
+### skill_inflation_detected
+- 3 years experience for BI/Data Engineer role is reasonable
+- Skills listed are appropriate for the role level
+- No unrealistic requirements or skill inflation
+- Confidence: 0.9 (reasonable requirements)
+- Value: false
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.75,
+        "evidence": "Title is 'Data Engineer-Business Intelligence' without 'Senior' designation, but requires 3+ years experience which typically indicates mid-level position",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Data Engineer-Business Intelligence' and role focuses on BI/DW projects, reporting, and visualization",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.85,
+        "evidence": "Role specifically focuses on BI/DW projects, reporting, and visualization using Cognos, indicating traditional data warehousing and business intelligence focus",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.90,
+        "evidence": "No mention of team leadership, mentoring responsibilities, or direct reports - purely individual contributor role focused on technical execution",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.80,
+        "evidence": "Multiple cloud platforms mentioned equally as nice-to-have: AWS, Google Cloud Platform, and Azure with no single platform emphasized as primary",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "Since primary cloud is 'multi' with all three major platforms mentioned equally, no secondary clouds to list",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.80,
+        "evidence": "Focus on reporting, visualization, and traditional BI/DW projects suggests batch processing rather than streaming or real-time",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No specific orchestration tools mentioned (Airflow, Spark, dbt, etc.) - traditional BI tools like Cognos may have built-in scheduling but not explicitly discussed",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.85,
+        "evidence": "Emphasis on BI/DW, reporting, and visualization with Cognos indicates traditional data warehousing approach rather than data lakes or lakehouse architectures",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.90,
+        "evidence": "Work model stated as 'onsite' with specific location requirement 'Pune, Maharashtra, India' indicating must be in India",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.85,
+        "evidence": "Location specified as Pune, Maharashtra, India, indicating Indian timezone (IST) focus with no other timezone requirements mentioned",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.85,
+        "evidence": "Onsite role in specific location (Pune) requires candidates to already be in or relocate to Pune, Maharashtra, India",
+        "source": "combined"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned and role is based in India, so H1B (US work visa) sponsorship would not apply to this India-based position",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "India-based position with no mention of student visa support, and US student visas (OPT/CPT) would not apply to India-based employment",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "any",
+        "confidence": 0.75,
+        "evidence": "No citizenship or work authorization restrictions mentioned for this India-based position, suggesting openness to all eligible candidates",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.85,
+        "evidence": "IBM Consulting position with full-time employee structure and benefits package typically indicates W2 employment rather than contractor roles",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No benefits, equity, PTO, learning budget, or other compensation details mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No discussion of career paths, growth opportunities, advancement potential, or career development mentioned in the posting",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mention of mentorship programs, working with senior staff, learning opportunities, or collaborative environment",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of promotion, advancement, career growth, or progression to senior roles",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers, role changes, exploring different positions, or lateral moves within the organization",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No discussion of different career paths (IC track, management track, specialist track, architect track) or career progression options",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.80,
+        "evidence": "Clear distinction between 'Required Technical And Professional Expertise' and 'Preferred Technical And Professional Experience' with balanced must-have vs nice-to-have requirements",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Well-defined role focused specifically on Data Engineer-Business Intelligence with clear responsibilities around BI/DW, reporting, and visualization - not a multi-role hybrid position",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "3+ years experience requirement is reasonable for mid-level BI/Data Engineer role with appropriate technical skills listed for the position level",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

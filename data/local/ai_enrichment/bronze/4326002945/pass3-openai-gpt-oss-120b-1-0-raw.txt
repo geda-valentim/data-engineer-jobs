@@ -1,0 +1,251 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 1,
+        "confidence": 0.82,
+        "evidence": "Job posting only mentions Tableau, SQL, Oracle, Hive with no reference to pipelines, orchestration, CI/CD, data quality or governance tools.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "ad_hoc",
+        "confidence": 0.82,
+        "evidence": "Score of 1 maps to ad_hoc maturity level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No modern data stack components, no CI/CD, no data quality testing, no catalog or lineage mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.12,
+        "confidence": 0.9,
+        "evidence": "Responsibilities are limited to feature development, debugging, and Tableau dashboard creation; no mention of data science, dev‑ops, or product ownership.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.34,
+        "confidence": 0.71,
+        "evidence": "No explicit overtime or on‑call language, but consulting roles at large firms can involve client‑driven peaks.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.9,
+        "evidence": "Job description focuses specifically on Data Engineer‑Business Intelligence tasks.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.22,
+        "confidence": 0.78,
+        "evidence": "Low scope creep, moderate overtime risk, clear role but missing reporting and growth details.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "Posting does not specify to whom the role reports.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No manager title or hierarchy is described.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.7,
+        "evidence": "No information about hiring pace or team expansion.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.6,
+        "evidence": "No details on team size, DE count, or seniority mix.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No reporting line is provided in the description.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.6,
+        "evidence": "Description does not mention working embedded in product or cross‑functional squads.",
+        "source": "pass1_derived"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.42,
+        "confidence": 0.73,
+        "evidence": "No PTO, remote, or on‑call policies are mentioned; typical consulting roles have variable hours.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.35,
+        "confidence": 0.71,
+        "evidence": "No learning budget, mentorship, or career ladder is referenced.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.38,
+        "confidence": 0.78,
+        "evidence": "Tech stack limited to Tableau, SQL, Oracle, Hive; no mention of modern engineering practices.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No signals for open‑source, conference speaking, or innovation programs.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "Job posting does not list code review, CI/CD, testing, or monitoring practices.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No mention of experimentation, hackathons, or R&D time.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No language about refactoring, tech‑debt reduction, or modernization.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.92,
+        "evidence": "No AI/ML tools, pipelines, or model serving are referenced.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No ML‑related tools are listed.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No start‑date or urgency language appears.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No data on applicant volume or market competitiveness.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.96,
+        "evidence": "IBM is a global, publicly‑traded technology enterprise with established consulting divisions.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No indication of aggressive or steady hiring cadence.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "Job posting does not disclose size of the data engineering team.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "IBM is a publicly‑listed company; funding stage terminology is not applicable.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No statement about whether the role is a new headcount or backfill.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "data_focused_role",
+      "established_company",
+      "clear_requirements"
+    ],
+    "strength_details": [
+      "Role centers on BI data engineering with Tableau, SQL, Oracle and Hive.",
+      "Position is with IBM, a globally recognized enterprise offering extensive resources.",
+      "Responsibilities are clearly defined around feature development and debugging."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "unclear_reporting",
+      "limited_growth"
+    ],
+    "concern_details": [
+      "Compensation range and benefits are not disclosed in the posting.",
+      "Reporting line and team structure are not specified.",
+      "No mention of career progression, mentorship, or learning budget."
+    ],
+    "best_fit_categories": [
+      "mid_level_engineers",
+      "analytics_engineers",
+      "data_generalists"
+    ],
+    "best_fit_details": [
+      "Engineers with 2‑4 years of experience in SQL, Tableau, and data‑warehouse technologies.",
+      "Candidates comfortable working in a large consulting environment and delivering client‑focused BI solutions.",
+      "Professionals seeking a focused data‑engineering role without heavy ML or dev‑ops responsibilities."
+    ],
+    "probe_categories": [
+      "salary_range_details",
+      "reporting_structure",
+      "career_growth_path",
+      "team_size_composition",
+      "work_hour_expectations"
+    ],
+    "probe_details": [
+      "Ask for the expected salary band, bonus structure, and any equity or benefits.",
+      "Clarify who the role reports to and how the data engineering team is organized.",
+      "Inquire about promotion pathways, mentorship programs, and learning budgets.",
+      "Request information on the size of the data engineering team and seniority mix.",
+      "Understand typical work hours, on‑call duties, and expectations for overtime."
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "domain_expertise"
+    ],
+    "leverage_details": [
+      "Your extensive Tableau and SQL experience directly aligns with the core technical requirements.",
+      "Experience with Oracle and Hive matches the data‑warehouse stack the team uses."
+    ],
+    "overall_assessment": "The position offers a clear, focused BI data‑engineering role at a reputable enterprise (IBM). While compensation details are missing and reporting lines are vague, the job aligns well with candidates experienced in SQL and Tableau who want stability and a well‑defined scope. Consider the limited growth signals before proceeding.",
+    "recommendation_score": 0.62,
+    "recommendation_confidence": 0.81
+  }
+}

@@ -1,0 +1,269 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 4,
+        "confidence": 0.90,
+        "evidence": "Visa is a global leader in payments with a massive transaction volume, indicating mature data practices. The job posting mentions CI/CD pipelines, data quality thresholds, and hybrid processing (batch + streaming), which are hallmarks of managed maturity.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "managed",
+        "confidence": 0.90,
+        "evidence": "Matches the data_maturity_score of 4 with explicit mentions of governance, scalability, and best practices.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [
+          "modern_data_stack_adoption",
+          "cicd_practices",
+          "data_quality_testing",
+          "data_governance",
+          "cloud_native"
+        ],
+        "confidence": 0.95,
+        "evidence": "Explicit mentions of CI/CD, data pipeline tools (Airflow), cloud platforms (AWS/Azure), and data quality thresholds. Inferred governance from 'data strategies', 'metadata', and 'dependency management'.",
+        "source": "combined"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.20,
+        "confidence": 0.95,
+        "evidence": "Role is clearly defined as a Staff Data Engineer with no conflation of unrelated responsibilities (e.g., backend, frontend, or DevOps). Focus is on data pipelines, modeling, and integration.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.30,
+        "confidence": 0.85,
+        "evidence": "Hybrid work model and lack of aggressive 'startup pace' language reduce overtime risk. However, 'leading large-scale projects' and 'stakeholder management' may imply moderate time pressure.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.98,
+        "evidence": "Job description and responsibilities are well-defined and align with the Staff Data Engineer title. No ambiguity in role scope.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.25,
+        "confidence": 0.90,
+        "evidence": "Low scope creep and moderate overtime risk, but high requirement strictness (aligned with staff-level expectations) and lack of disclosed benefits/salary are minor concerns.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "mentioned",
+        "confidence": 0.85,
+        "evidence": "Job posting states the role involves 'Stakeholder Management' and 'coordinating with other teams', but does not explicitly name the manager (e.g., 'Head of Data Engineering' is implied but not confirmed).",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "director_plus",
+        "confidence": 0.75,
+        "evidence": "Given Visa's scale and the Staff-level role, it is likely the manager is at a director or higher level, though not explicitly stated.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.80,
+        "evidence": "Mentions 'leading a team of junior engineers' and 'proven experience working in a team of senior data engineers', suggesting a growing team but no explicit rapid expansion signals.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "5+ data engineers",
+          "seniority_mix": "mix of senior and junior engineers"
+        },
+        "confidence": 0.85,
+        "evidence": "Explicit mention of 'proven experience working in a team of senior data engineers and leading a team of junior engineers' in Pass 1. Team size is not disclosed but inferred to be larger due to company scale.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "reports_to_director_data",
+        "confidence": 0.75,
+        "evidence": "Implied reporting to a 'Head of Data Engineering' (director_plus level) given the role's seniority and responsibilities.",
+        "source": "inferred"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.90,
+        "evidence": "Explicit mentions of collaborating with 'Business team', 'development teams', 'data analyst teams', and 'stakeholders across the organization' indicate cross-functional embedding.",
+        "source": "explicit"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.70,
+        "confidence": 0.90,
+        "evidence": "Hybrid work model is a strong positive signal for flexibility. No mentions of on-call, overtime, or weekend work, but lack of explicit PTO policy is a minor negative. Overall, balance appears healthy but not fully confirmed.",
+        "source": "combined"
+      },
+      "growth_opportunities_score": {
+        "value": 0.85,
+        "confidence": 0.92,
+        "evidence": "Staff-level role with leadership expectations (tech lead, strategy, roadmap) and exposure to GenAI tools suggest strong growth opportunities. Mentorship of junior engineers and collaboration with seniors further support this.",
+        "source": "combined"
+      },
+      "tech_culture_score": {
+        "value": 0.88,
+        "confidence": 0.90,
+        "evidence": "Modern data stack (Spark, PySpark, Airflow, Kafka, cloud platforms) and explicit CI/CD practices indicate a strong technical culture. Role emphasizes innovation, scalability, and best practices.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["conference_speaking", "innovation_time"],
+        "confidence": 0.60,
+        "evidence": "While Visa is a global leader and likely supports conference participation, it is not explicitly mentioned. Similarly, 'innovation' is implied but not confirmed as dedicated time.",
+        "source": "inferred"
+      },
+      "dev_practices_mentioned": {
+        "value": ["ci_cd", "monitoring", "code_review"],
+        "confidence": 0.90,
+        "evidence": "Explicit mention of CI/CD pipelines and testing. 'Code review' is implied by 'data engineering principles and best practices' and collaboration with other engineers.",
+        "source": "explicit"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.80,
+        "evidence": "Mentions 'improving key delivery metrics through innovation and optimization' and 'GenAI tools for efficiency', suggesting a focus on innovation but not at the level of dedicated experimentation time.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions 'improving key delivery metrics' and 'modernizing data pipelines', which imply awareness of technical debt and scalability challenges.",
+        "source": "inferred"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "genai_focus",
+        "confidence": 0.85,
+        "evidence": "Explicit mention of 'leveraging GenAI tools and platforms for enabling efficiency' indicates a focus on generative AI, though not deeply technical (e.g., model training or MLOps).",
+        "source": "explicit"
+      },
+      "ml_tools_expected": {
+        "value": ["GenAI tools"],
+        "confidence": 0.90,
+        "evidence": "Pass 1 explicitly mentions 'GenAI tools and platforms' as nice-to-have skills, suggesting these are part of the role's tooling expectations.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "normal",
+        "confidence": 0.70,
+        "evidence": "No immediate or ASAP start date mentioned, but the hybrid nature and lack of explicit PTO may imply some urgency. Overall, timeline appears standard.",
+        "source": "inferred"
+      },
+      "competition_level": {
+        "value": "high",
+        "confidence": 0.85,
+        "evidence": "Visa is a highly reputable company with a global brand, attracting many applicants. Bengaluru is a competitive tech hub, and the Staff-level role with hybrid processing and GenAI exposure will draw senior candidates.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.98,
+        "evidence": "Visa is a well-established global leader with over 259 billion transactions annually and operations in 200+ countries, clearly indicating an enterprise-stage company.",
+        "source": "explicit"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.80,
+        "evidence": "Role mentions collaboration with a growing team and leadership of junior engineers, suggesting steady hiring rather than aggressive expansion or backfill.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit team size mentioned beyond the role's interaction with senior and junior data engineers.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.98,
+        "evidence": "Visa is a public company, but no explicit funding stage signals are present in the job posting.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.85,
+        "evidence": "Mentions 'leading a team of junior engineers' and collaboration with senior engineers, indicating the role is part of a team expansion rather than a backfill or new function.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "modern_tech_stack",
+      "career_growth_clear",
+      "data_focused_role",
+      "established_company",
+      "collaborative_culture"
+    ],
+    "strength_details": [
+      "Enterprise-scale role with exposure to a mature, modern data stack (Spark, PySpark, Airflow, Kafka, Databricks, AWS/Azure).",
+      "Staff-level position with clear technical leadership expectations (e.g., driving strategy, mentoring junior engineers) and alignment with long-term career growth.",
+      "Focused on data engineering with no unrelated responsibilities, allowing deep technical specialization.",
+      "Visa is a globally recognized leader in payments technology, offering stability, prestige, and impactful work."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "hybrid_work",
+      "high_requirement_strictness"
+    ],
+    "concern_details": [
+      "Compensation details (salary, equity, benefits) are not disclosed, which may complicate negotiations.",
+      "Hybrid work model office-day expectations are vague ('confirmed by hiring manager'), potentially limiting flexibility.",
+      "High requirement strictness (7+ years for bachelor's, 5+ for advanced degree) may narrow candidate pool but aligns with staff-level expectations."
+    ],
+    "best_fit_categories": [
+      "senior_data_engineers",
+      "cloud_specialists",
+      "leadership_track",
+      "data_generalists"
+    ],
+    "best_fit_details": [
+      "Senior data engineers with 5-7+ years of experience in hybrid processing (batch + streaming) and cloud platforms (AWS/Azure).",
+      "Candidates seeking a technical leadership path (e.g., Staff/Principal IC roles) with mentorship opportunities and strategic impact.",
+      "Data generalists comfortable working across domains and collaborating with cross-functional stakeholders (business, development, analytics)."
+    ],
+    "probe_categories": [
+      "remote_policy_details",
+      "salary_range_details",
+      "career_growth_path",
+      "tech_debt_situation",
+      "team_size_composition"
+    ],
+    "probe_details": [
+      "Ask for clarity on hybrid work expectations (e.g., number of office days per week, flexibility in scheduling).",
+      "Request specific details on compensation, including salary range, equity, bonuses, and benefits (e.g., PTO, learning budget).",
+      "Inquire about career growth paths for Staff Data Engineers, including opportunities for promotion or internal mobility.",
+      "Understand the team's approach to technical debt management and how innovation is balanced with maintenance tasks.",
+      "Clarify the size and composition of the data engineering team, including seniority mix and domain focus areas."
+    ],
+    "leverage_categories": [
+      "domain_expertise",
+      "leadership_experience",
+      "exact_experience_match"
+    ],
+    "leverage_details": [
+      "Experience in the financial services/payments industry is a strong differentiator for this role.",
+      "Proven leadership of junior engineers and large-scale data projects aligns well with Staff-level expectations, providing negotiation leverage.",
+      "Exact match of required skills (e.g., Spark, PySpark, Kafka, Airflow) and experience level (5-7+ years) can strengthen candidacy."
+    ],
+    "overall_assessment": "This is a high-quality Staff Data Engineer role at an enterprise-scale company with a mature data stack and strong technical leadership expectations. Visa's global reputation and focus on payments/financial services make it an attractive opportunity for senior data engineers seeking career growth and domain expertise. The hybrid work model and undisclosed compensation are minor concerns, but the role's clarity, innovation potential, and collaborative culture outweigh these risks. Ideal for candidates with 5-7+ years of experience and a passion for scalable data solutions.",
+    "recommendation_score": 0.85,
+    "recommendation_confidence": 0.92
+  }
+}
+```

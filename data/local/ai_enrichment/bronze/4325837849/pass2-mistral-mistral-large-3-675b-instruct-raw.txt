@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.8,
+        "evidence": "Title mentions 'Application Developer-Process Management (BPM)' but responsibilities describe 'Data Engineer' with 3 years minimum experience and preferred 5-7 years in BPM.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.9,
+        "evidence": "The role explicitly describes responsibilities as a 'Data Engineer' in the job description, including data gathering, storage, and processing.",
+        "source": "inferred"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.7,
+        "evidence": "Mentions 'batch and real-time processing' but emphasizes BPM tools, workflows, and database integration more heavily, suggesting batch/ETL focus.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.7,
+        "evidence": "Collaboration with teams mentioned, but no explicit signals of technical leadership or people management.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No cloud providers or services explicitly mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No secondary clouds mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.6,
+        "evidence": "Mentions both 'batch and real-time processing' but no specific tools like Kafka or Flink.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No orchestration tools explicitly mentioned beyond generic 'BPM tools'.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No storage layer technologies explicitly mentioned beyond generic database concepts.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Location is specified as Bengaluru, but work model is not discussed.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No timezone requirements or team distribution mentioned.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "Job is located in Bengaluru, India, and no relocation signals are present.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No visa sponsorship mentioned, and job is located in India where H1B is not applicable.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "Job is located in India, and no signals about OPT/CPT or student visas are mentioned.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No citizenship or work authorization requirements discussed for India-based role.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.8,
+        "evidence": "Full-time employment type stated, and benefits are typically associated with W2 in India context.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.9,
+        "evidence": "No benefits explicitly mentioned in Pass 1 extraction.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.7,
+        "evidence": "Mentions 'career in IBM Consulting is rooted by long-term relationships' and 'accelerate impact', suggesting growth opportunities.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.6,
+        "evidence": "Mentions 'collaborate with business analysts, IT teams, and stakeholders', which may include senior team members.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit promotion or advancement paths mentioned.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of internal mobility or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No explicit career tracks mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.7,
+        "evidence": "All listed skills are under 'must_have_hard_skills' with no 'nice_to_have' distinctions.",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "multi_role",
+        "confidence": 0.8,
+        "evidence": "Job description combines responsibilities of 'Data Engineer' and 'BPM Application Developer' with overlapping but distinct duties.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": true,
+        "confidence": 0.6,
+        "evidence": "Preferred experience of 5-7 years in BPM for a role titled 'Application Developer' with 3 years minimum experience may indicate skill inflation.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

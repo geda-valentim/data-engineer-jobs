@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 15:43:09",
+    "job_posting_id": "4325749223",
+    "job_title": "Data Engineer-Data Platforms-Azure",
+    "company_name": "IBM",
+    "job_location": "Mumbai Metropolitan Region",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.75,
+          "evidence": "Title is 'Data Engineer' without senior/staff designation, no years experience specified, but requires hands-on Databricks and cloud experience suggesting mid-level",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Job title explicitly states 'Data Engineer', responsibilities focus on ETL/ELT pipelines, data modeling, and cloud data platforms",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "data_lakehouse",
+          "confidence": 0.85,
+          "evidence": "Heavy emphasis on Delta Lakehouse architectures, Delta Live Tables, and Unity Catalog - core lakehouse technologies",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.8,
+          "evidence": "No mention of people management, team leadership, or architectural oversight beyond individual pipelines; collaboration with data scientists is peer-level",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "azure",
+          "confidence": 0.95,
+          "evidence": "Job title specifies 'Azure', and responsibilities mention Azure services (ADF, Synapse, ADLS) alongside AWS as secondary option",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [
+            "aws"
+          ],
+          "confidence": 0.9,
+          "evidence": "AWS mentioned as alternative platform ('Azure or AWS') and AWS services (Glue, S3, Redshift) listed as part of required experience",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.75,
+          "evidence": "Mentions both real-time/batch ingestion (Auto Loader) and batch pipelines; streaming is 'nice to have' but not primary focus",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "spark_native",
+          "confidence": 0.95,
+          "evidence": "Primary orchestration through Databricks (Delta Live Tables, Auto Loader, cluster/job management) which is Spark-native",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "lakehouse",
+          "confidence": 0.9,
+          "evidence": "Explicit focus on Delta Lakehouse architectures, Unity Catalog for governance, and cloud storage (ADLS/S3) as foundational layer",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.85,
+          "evidence": "Location specified as 'Mumbai Metropolitan Region' with no mention of remote flexibility, implying regional requirement",
+          "source": "inferred"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.9,
+          "evidence": "Location restricted to Mumbai, India, indicating country-specific timezone focus",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.85,
+          "evidence": "Location specified as Mumbai Metropolitan Region with no remote option mentioned, implying relocation may be required",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No visa sponsorship mentioned, and location is Mumbai (India), suggesting local hiring only",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Location in India and no mention of student visa support implies not OPT/CPT friendly",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.8,
+          "evidence": "No citizenship requirement stated, but location in India implies authorization to work in India is required",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.85,
+          "evidence": "IBM Consulting is a large enterprise with standard employment practices; no contract types mentioned suggests full-time W2 employee",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "standard",
+          "confidence": 0.7,
+          "evidence": "Company description mentions 'long-term career growth' and 'development opportunities' but no specific premium benefits like equity or unlimited PTO",
+          "source": "inferred"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Company description mentions 'long-term career growth and development opportunities' but no specific tracks or promotion paths",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Mentions 'collaboration with clients' and 'work with visionaries' but no formal mentorship program; working with senior staff is implied",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of promotions, advancement, or career progression paths in the job description",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal transfers, lateral moves, or exploring other roles within IBM",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.6,
+          "evidence": "No specific career tracks (IC, management, architect) mentioned in the job description or company description",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear distinction between mandatory skills (Databricks, PySpark, Delta Lake) and nice-to-haves (Kafka, REST APIs), suggesting balanced requirements",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused on data engineering with specific technologies (Databricks, Azure/AWS) and responsibilities (pipelines, modeling, dashboards)",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Skills required (Databricks, PySpark, SQL, cloud services) are reasonable for a mid-level data engineer role; no unrealistic combinations",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7759,
+    "input_tokens": 6062,
+    "output_tokens": 1697,
+    "cost": 0.009456
+  }
+}

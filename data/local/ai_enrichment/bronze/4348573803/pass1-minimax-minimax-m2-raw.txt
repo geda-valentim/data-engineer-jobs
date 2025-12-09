@@ -1,0 +1,152 @@
+<reasoning>Let me carefully analyze this job posting to extract the required information. I need to follow the rules exactly and only extract what is explicitly stated.
+
+Looking at the job posting:
+
+**Title**: Data Engineer-Data Platforms
+**Company**: IBM
+**Location**: Mumbai Metropolitan Region
+
+Let me go through each section:
+
+1. **Compensation**: No salary information is mentioned at all. So salary_disclosed = false, all salary fields = null.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. So visa_sponsorship_stated = "not_mentioned", work_auth_text = null, citizenship_text = null, security_clearance_stated = "not_mentioned".
+
+3. **Work Model**: 
+   - Location is "Mumbai Metropolitan Region" - this suggests onsite work
+   - No mention of remote or hybrid work
+   - This appears to be a full-time position based on the context
+   - work_model_stated = "onsite" (since location is specified as Mumbai Metropolitan Region)
+   - location_restriction_text = "Mumbai Metropolitan Region"
+   - employment_type_stated = "full_time" (based on context)
+
+4. **Contract Details**: 
+   - This appears to be a permanent position (no mention of contract terms)
+   - contract_type = "permanent"
+   - All other contract fields = null
+
+5. **Contractor Rates**: Not applicable since this is not a contractor position. All fields = null.
+
+6. **Skills Classified**:
+   - Must-have hard skills: Looking at the requirements, I need to identify skills with strong qualifiers
+     - "Strong Hands on experience in Python and Spark" - this has "Strong" qualifier
+     - "Strong technical abilities to understand, design, write and debug to develop applications on Python and Pyspark" - this has "Strong" qualifier
+   - Nice-to-have hard skills:
+     - "Hands on Experience on cloud technology AWS/GCP/Azure" - this is in "Good to Have" section
+   - Soft skills: No specific soft skills mentioned
+   - Certifications: None mentioned
+   - Experience: "Overall, more than 6 years of experience with more than 4+ years of Strong Hands on experience in Python and Spark"
+     - years_experience_min = 6
+     - years_experience_max = null (since it says "more than 6 years")
+     - years_experience_text = "Overall, more than 6 years of experience with more than 4+ years of Strong Hands on experience in Python and Spark"
+   - Education: "Master's Degree Required"
+     - education_level = "MASTERS"
+     - education_area = null (no specific field mentioned)
+     - education_requirement = "required"
+     - education_text_raw = "Master's Degree Required"
+   - LLM/GenAI: Not mentioned
+   - Feature Store: Not mentioned
+
+7. **Geographic Restrictions**: 
+   - Location is Mumbai Metropolitan Region, which is in India
+   - geo_restriction_type = "specific_countries"
+   - allowed_countries = ["IN"] (India)
+   - All other geographic fields = null
+
+8. **Benefits Structured**: No benefits mentioned at all. All fields = null.
+
+9. **Context**:
+   - team_info_text: "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+   - company_description_text: "The success of IBM is in your hands as you transform vital business needs into code and drive innovation. Your work will power IBM and its clients globally, collaborating and integrating code into enterprise systems. You will have access to the latest education, tools and technology, and a limitless career path with the world's technology leader. Come to IBM and make a global impact."
+
+I'll focus on the key insights about the role's context and requirements. The position is based in Mumbai, requiring a Master's degree and 6+ years of experience. The role involves working in IBM's consulting innovation center, delivering technical expertise to global clients. The job emphasizes hands-on experience with Python and Spark, with cloud technology skills as a bonus. IBM highlights the opportunity for global impact, continuous learning, and career growth within the world's technology leader.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Mumbai Metropolitan Region",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": ["Python", "Spark", "PySpark"],
+      "nice_to_have_hard_skills": ["AWS", "GCP", "Azure"],
+      "must_have_soft_skills": [],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 6,
+      "years_experience_max": null,
+      "years_experience_text": "Overall, more than 6 years of experience with more than 4+ years of Strong Hands on experience in Python and Spark",
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "Master's Degree Required",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "specific_countries",
+      "allowed_countries": ["IN"],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology.",
+      "company_description_text": "The success of IBM is in your hands as you transform vital business needs into code and drive innovation. Your work will power IBM and its clients globally, collaborating and integrating code into enterprise systems. You will have access to the latest education, tools and technology, and a limitless career path with the world's technology leader. Come to IBM and make a global impact."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 25
+  }
+}
+```

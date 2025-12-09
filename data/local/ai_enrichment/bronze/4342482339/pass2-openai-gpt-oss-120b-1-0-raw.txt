@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.66,
+        "evidence": "Job title does not specify seniority and no years of experience are listed; required skills (PySpark, Airflow, AWS) suggest a professional level beyond entry but not explicitly senior.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is \"Data Engineer\" and responsibilities focus on pipeline development, ETL/ELT, and data platform work.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.92,
+        "evidence": "Must‑have skills include ETL/ELT, Apache Airflow orchestration, and PySpark batch processing; no streaming technologies are mentioned.",
+        "source": "pass1_derived"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "Job description does not mention people‑management responsibilities, team leadership, or direct reports; focus is on individual contribution to pipelines.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "aws",
+        "confidence": 0.99,
+        "evidence": "The posting repeatedly references AWS services (S3, general AWS infrastructure).",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No other cloud providers are mentioned in the posting or extraction results.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.88,
+        "evidence": "Use of Apache Airflow for scheduled workflows and batch‑oriented ETL/ELT pipelines; no streaming frameworks are cited.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.99,
+        "evidence": "Apache Airflow is explicitly listed as a required skill for orchestration.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "lake",
+        "confidence": 0.81,
+        "evidence": "Primary storage mentioned is Amazon S3, a data lake storage service; no data warehouse products are referenced.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.92,
+        "evidence": "Work model is stated as \"onsite\" and location is \"Liege Metropolitan Area\"; candidate must be in Belgium.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "europe",
+        "confidence": 0.90,
+        "evidence": "Job is based in Liège, Belgium, which lies in the Central European Time zone.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.73,
+        "evidence": "The posting does not mention a relocation package or requirement; it simply states the position is onsite in Liège.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Visa sponsorship is marked as \"not_mentioned\" in the extraction results.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of OPT/CPT eligibility; work authorization is not discussed.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "The posting does not specify any citizenship or work‑authorization requirements beyond being able to work in Belgium.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.93,
+        "evidence": "Employment type and contract type are both listed as \"not_mentioned\" in the extraction results.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.94,
+        "evidence": "No benefits (equity, PTO, learning budget, etc.) are listed in the extraction results.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.93,
+        "evidence": "The job description does not discuss career progression, promotion tracks, or growth opportunities.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.93,
+        "evidence": "No reference to mentorship programs, mentors, or learning from senior staff is present.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.92,
+        "evidence": "The posting contains no language about promotions or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.92,
+        "evidence": "No mention of internal transfers, lateral moves, or mobility within the company.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "The posting does not reference any specific career tracks such as IC, management, specialist, or architect paths.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.78,
+        "evidence": "A clear list of must‑have hard skills is provided with no nice‑to‑have items, indicating a balanced but firm set of requirements.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.86,
+        "evidence": "The description focuses specifically on data‑engineering pipeline work; responsibilities are well defined and not blended with other roles.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.81,
+        "evidence": "Required skill set (PySpark, Airflow, AWS, Python, SQL) aligns with typical expectations for a mid‑level data engineer; no unrealistic senior‑level demands are present.",
+        "source": "inferred"
+      }
+    }
+  }
+}

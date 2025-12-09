@@ -1,0 +1,256 @@
+<reasoning>I need to analyze the job posting and Pass 1 extraction results to infer job characteristics. Let me go through each section systematically.
+
+First, let me understand what we have:
+
+**Original Job Posting Summary:**
+- Title: Data Engineer-Data Platforms-AWS
+- Company: IBM
+- Location: Pune, Maharashtra, India
+- Role: Data Engineer developing big data solutions using Spark Framework with Python/Scala on Hadoop and AWS Cloud Data Platform
+- Experience: 5-8+ years total, 5+ years in Big Data, 3+ years on AWS
+- Education: Master's Degree preferred
+- Skills: Spark, Python, Scala, AWS services (EMR, Glue, DataBricks, RedShift, DynamoDB), Hadoop ecosystem, Kafka, etc.
+
+**Pass 1 Extraction Key Points:**
+- Work model: onsite
+- Location: Pune, Maharashtra, India
+- Employment: full-time, permanent
+- Experience: 5-8 years
+- Education: Master's preferred
+- Must-have skills: extensive list of Big Data/AWS technologies
+- Nice-to-have: AWS, DataBricks, Cloudera certifications
+- No salary, benefits, visa info mentioned
+- No career development mentions
+
+Now let me infer each field:
+
+**SENIORITY AND ROLE:**
+1. **seniority_level**: The posting says "5-8+ years of experience" and mentions "extensive data engineering experience" which suggests senior level. The title doesn't have "Senior" but the experience requirements are high. I'd say "senior" with confidence around 0.75-0.8.
+
+2. **job_family**: Clearly "data_engineer" - title is Data Engineer and responsibilities are all about data pipelines, ETL, big data processing.
+
+3. **sub_specialty**: Looking at the technologies mentioned - Spark, Hadoop, AWS services, Kafka for streaming, but also mentions batch processing. 
+
+The role involves both streaming and batch processing, indicating a hybrid approach to data engineering. The extensive use of Kafka and Spark suggests a focus on real-time and scalable data processing solutions.
+
+4. **leadership_expectation**: The role appears to be an individual contributor position without direct management responsibilities. The job description emphasizes technical implementation and development rather than team leadership or strategic oversight.
+
+**STACK AND CLOUD:**
+1. **primary_cloud**: AWS is explicitly mentioned multiple times - AWS EMR, AWS Glue, DataBricks, AWS RedShift, DynamoDB. This is clearly AWS-focused.
+
+2. **secondary_clouds**: No other clouds mentioned, so empty array.
+
+3. **processing_paradigm**: The posting mentions both "streaming pipelines" and batch processing with Spark. This suggests a hybrid approach.
+
+4. **orchestrator_category**: No specific orchestrator mentioned. The technologies mentioned are more about processing frameworks (Spark) rather than orchestration tools.
+
+5. **storage_layer**: The role involves multiple storage technologies - RedShift (data warehouse), DynamoDB (NoSQL), and HDFS/Hadoop ecosystem. This indicates a mixed storage approach.
+
+**GEO AND WORK MODEL:**
+1. **remote_restriction**: The job is explicitly onsite in Pune, Maharashtra, India. This suggests a same_country restriction.
+
+2. **timezone_focus**: The location is India, so this would be "specific_country" - India.
+
+3. **relocation_required**: The job is already located in Pune, so no relocation needed. This would be false.
+
+**VISA AND AUTHORIZATION:**
+1. **h1b_friendly**: No visa sponsorship mentioned, and this is an India-based role, so H1B (US visa) wouldn't apply. 
+
+2. **opt_cpt_friendly**: No mention of student visa support, and given the India location, this isn't relevant.
+
+3. **citizenship_required**: The role is in India, so work authorization would be for India, not the US.
+
+**CONTRACT AND COMPENSATION:**
+1. **w2_vs_1099**: The role is full-time and permanent, suggesting a traditional employment structure.
+
+2. **benefits_level**: No specific benefits mentioned in the job posting.
+
+**CAREER DEVELOPMENT:**
+1. **growth_path_clarity**: No career progression details provided.
+
+2. **mentorship_signals**: No explicit mentorship program mentioned.
+
+3. **promotion_path_mentioned**: No promotion opportunities discussed.
+
+4. **internal_mobility_mentioned**: No internal mobility options indicated.
+
+5. **career_tracks_available**: No specific career track information available.
+
+**REQUIREMENTS CLASSIFICATION:**
+1. **requirement_strictness**: The job posting includes a comprehensive list of technical skills, suggesting a high level of specificity in requirements.
+
+2. **scope_definition**: The role is clearly defined as a data engineering position with specific technical focus.
+
+3. **skill_inflation_detected**: The skill requirements appear appropriate for the senior-level position, with no obvious overstatement of expectations.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.78,
+        "evidence": "5-8+ years experience requirement with 'extensive data engineering experience' mentioned, senior-level responsibilities in big data solutions",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is 'Data Engineer' and core responsibilities focus on data pipelines, ETL, and big data processing",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "hybrid",
+        "confidence": 0.82,
+        "evidence": "Mentions both 'streaming pipelines' and batch processing with Spark, indicating hybrid processing paradigm",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "Focus on individual technical work developing solutions, no mention of team leadership or direct reports",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "aws",
+        "confidence": 0.95,
+        "evidence": "AWS mentioned explicitly throughout - AWS EMR, AWS Glue, DataBricks, AWS RedShift, DynamoDB, AWS Cloud Data Platform",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud providers mentioned beyond AWS",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.88,
+        "evidence": "Mentions both 'streaming pipelines' and batch processing capabilities with Spark Framework",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific orchestration tools mentioned, focus is on Spark Framework and processing technologies",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.80,
+        "evidence": "Mentions both warehouse (AWS RedShift) and NoSQL (DynamoDB) and HDFS storage systems",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.92,
+        "evidence": "Specifically requires 'Pune, Maharashtra, India' location with onsite work model",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.95,
+        "evidence": "Location restricted to Pune, Maharashtra, India - single country focus",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.88,
+        "evidence": "Must already be in Pune, Maharashtra, India - no relocation mentioned, just local presence required",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "India-based role with no visa sponsorship mentioned, H1B not applicable for Indian domestic position",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No student visa support mentioned, role requires existing work authorization in India",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.88,
+        "evidence": "Must be authorized to work in India, no specific citizenship requirement mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time permanent employee position suggests W2 employment structure",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits, compensation, or perks mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No career progression, growth opportunities, or advancement paths mentioned",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mentorship programs, senior collaboration, or learning opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion, advancement, or career progression opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No internal transfers, role changes, or mobility opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career tracks, paths, or advancement opportunities mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.82,
+        "evidence": "Extensive list of must-have technical skills with specific experience requirements (5+ years Big Data, 3+ years AWS)",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.88,
+        "evidence": "Well-defined data engineering role with specific technical focus on AWS and Spark ecosystem",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Skill requirements align well with senior-level position and 5-8 years experience expectation",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

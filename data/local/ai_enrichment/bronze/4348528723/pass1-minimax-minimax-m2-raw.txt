@@ -1,0 +1,174 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules. Let me go through each section systematically.
+
+First, let me identify what information is explicitly stated in the job posting:
+
+1. **Title**: Data Engineer
+2. **Company**: Accenture in India
+3. **Location**: Bengaluru, Karnataka, India
+
+Now let me go through each field in the JSON structure:
+
+**COMPENSATION**:
+- No salary information is mentioned → salary_disclosed: false, all other fields null
+
+**WORK AUTHORIZATION**:
+- No mention of visa sponsorship or work authorization → visa_sponsorship_stated: "not_mentioned", work_auth_text: null, citizenship_text: null
+- No mention of security clearance → security_clearance_stated: "not_mentioned"
+
+**WORK MODEL**:
+- Location is specified as "Bengaluru, Karnataka, India" → work_model_stated: "onsite" (since it's a specific office location)
+- No mention of employment type → employment_type_stated: "not_mentioned"
+- location_restriction_text: null
+
+**CONTRACT DETAILS**:
+- No mention of contract type, duration, etc. → contract_type: "not_mentioned", all other fields null
+
+**CONTRACTOR RATES**:
+- No mention of contractor rates → pay_type: "not_mentioned", all other fields null
+
+**SKILLS CLASSIFIED**:
+Let me analyze the skills section carefully:
+
+From "Must have skills": Databricks Unified Data Analytics Platform
+From "Good to have skills": NA
+
+From "Technical Skills" section:
+- Experience with AWS, Azure, or GCP for data engineering workflows
+- Strong proficiency in Py Spark, Spark, or similar frameworks for building scalable data pipelines
+- Understanding of Big Data architectures, data storage, and data processing concepts
+- Familiarity with cloud-native data storage solutions such as S3, Blob Storage, Big Query, or Redshift
+- Experience with data orchestration tools like Apache Airflow or similar
+- Knowledge of data formats like Parquet, Avro, or JSON
+
+
+- Strong coding skills in Python for building data pipelines
+- Good understanding of SQL and database technologies
+- Excellent troubleshooting, debugging, and performance optimization skills
+
+I'll focus on the soft skills and additional technical requirements. The role demands strong problem-solving abilities, with an emphasis on Python programming and database expertise. The position requires a minimum of 6 years of experience in Databricks, indicating a need for advanced data engineering capabilities. The educational requirement is 15 years of full-time education, which suggests a master's degree or equivalent professional experience.
+
+The skills classification reveals a comprehensive technical skill set. The must-have hard skills include Databricks, PySpark, Spark, AWS, Azure, GCP, and Python. Nice-to-have skills encompass cloud storage solutions, data orchestration tools, and various data formats. Notably, no specific soft skills are explicitly mentioned, and the role does not involve LLM or GenAI technologies.
+
+The geographic context is clear: the position is based in India, with no specific restrictions beyond the primary location. Benefits are not detailed in the provided information.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Databricks Unified Data Analytics Platform",
+        "PySpark",
+        "Spark",
+        "AWS",
+        "Azure",
+        "GCP",
+        "Python",
+        "SQL",
+        "Big Data architectures",
+        "data storage",
+        "data processing"
+      ],
+      "nice_to_have_hard_skills": [
+        "S3",
+        "Blob Storage",
+        "BigQuery",
+        "Redshift",
+        "Apache Airflow",
+        "Parquet",
+        "Avro",
+        "JSON",
+        "troubleshooting",
+        "debugging",
+        "performance optimization",
+        "real-time data processing",
+        "Kafka",
+        "CI/CD pipelines",
+        "DevOps",
+        "DBT",
+        "Informatica",
+        "Talend",
+        "Matillion"
+      ],
+      "must_have_soft_skills": [],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 6,
+      "years_experience_max": null,
+      "years_experience_text": "minimum of 6 years of experience in Databricks Unified Data Analytics Platform",
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "15 years full time education is required",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "specific_countries",
+      "allowed_countries": ["IN"],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Work as part of the data engineering team to build, maintain, and optimize scalable data pipelines for large-scale data processing. Collaborate with data scientists, analysts, and other engineers to ensure data accuracy and availability.",
+      "company_description_text": null
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 37
+  }
+}
+```

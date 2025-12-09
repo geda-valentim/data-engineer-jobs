@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.65,
+        "evidence": "Title is 'Data Engineer-Data Integration' without explicit seniority indicators, and responsibilities mention collaboration with diverse teams but do not specify leadership or architectural duties. The role focuses on implementation and maintenance rather than high-level design or strategy.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title explicitly states 'Data Engineer', and core responsibilities include data gathering, storage, batch and real-time processing, and ETL tool expertise.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_integration",
+        "confidence": 0.90,
+        "evidence": "Title and responsibilities emphasize 'Data Integration' and 'ETL tool Informatica PowerCenter', along with database integration tasks.",
+        "source": "combined"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.75,
+        "evidence": "Responsibilities focus on technical implementation and collaboration with teams, but no explicit mention of leadership, mentoring, or people management.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.70,
+        "evidence": "'MS-Azure Cloud' is mentioned as a preferred skill, and 'Data migration on cloud' is a required expertise, but no explicit primary cloud provider is stated. Azure is inferred due to its mention in the context of cloud migration and as a preferred skill.",
+        "source": "inferred"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud providers beyond Azure are mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.80,
+        "evidence": "Job posting mentions both 'batch and real-time processing', indicating a hybrid paradigm.",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit mention of orchestration tools like Airflow, Step Functions, or Databricks workflows.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.70,
+        "evidence": "Required expertise includes 'Data warehousing' and 'Big Data', along with 'Informatica PowerCenter' and 'HDFC Bank EDW/SOR', suggesting a mix of warehouse and lake patterns.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Location is specified as 'Kochi, Kerala, India', but no explicit remote work model or restrictions are discussed.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.85,
+        "evidence": "Location is restricted to 'Kochi, Kerala, India', implying a focus on the Indian timezone (APAC).",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Location is specified as 'Kochi, Kerala, India', but no mention of relocation packages or requirements.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship is mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of OPT, CPT, or student visa eligibility in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No discussion of citizenship or work authorization requirements in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Employment type is 'full_time', but no explicit contract type (W2, C2C, 1099) is mentioned.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits are discussed in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.65,
+        "evidence": "Job posting mentions 'IBM Consulting Client Innovation Centers' delivering 'deep technical and industry expertise', implying growth opportunities but no explicit career tracks.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Job posting states collaboration with 'diverse teams' and 'deep technical and industry expertise', suggesting mentorship opportunities from senior team members.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotions or advancement paths in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No discussion of internal mobility or role changes in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.60,
+        "evidence": "Job posting implies technical growth through expertise in data engineering but does not mention management or specialist tracks explicitly.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.75,
+        "evidence": "Pass 1 extraction shows a long list of 'must_have_hard_skills' with no 'nice_to_have_soft_skills' or flexible language in the job posting.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Job posting focuses on data integration and engineering tasks with well-defined responsibilities such as ETL implementation and database integration.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": true,
+        "confidence": 0.70,
+        "evidence": "Required expertise includes a broad range of skills (e.g., 'Data warehousing', 'Big Data', 'Elasticsearch', 'Splunk') typically associated with more senior roles, yet the title and responsibilities suggest a mid-level position.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

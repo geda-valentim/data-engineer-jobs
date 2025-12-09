@@ -1,0 +1,202 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules. Let me go through each section systematically.
+
+First, let me identify what information is explicitly stated in the job posting:
+
+**Title**: Data Consultant-Data Governance
+**Company**: IBM
+**Location**: Pune, Maharashtra, India
+
+**Description sections**:
+- Introduction about IBM Consulting Client Innovation Centers
+- Role and Responsibilities as Data Engineer
+- Preferred Education: Master's Degree Required
+- Technical And Professional Expertise section
+- Preferred Technical And Professional Experience section
+
+Now let me extract each field according to the rules:
+
+**Compensation**: No salary information is mentioned, so all compensation fields should be null.
+
+**Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. No security clearance mentioned. So visa_sponsorship_stated should be "not_mentioned".
+
+**Work Model**: 
+- Location is explicitly stated as "Pune, Maharashtra, India" - this suggests onsite work
+- Employment type is not explicitly mentioned, but given it's a full-time role at IBM, I should check if "full_time" is mentioned
+- Looking at the text, I don't see explicit "full-time" mentioned, so employment_type_stated should be "not_mentioned"
+- work_model_stated should be "onsite" since location is specified
+
+**Contract Details**: No mention of contract type, duration, etc. So contract_type should be "not_mentioned".
+
+**Contractor Rates**: Not applicable since this appears to be a permanent role.
+
+**Skills Classification**:
+Let me analyze the skills mentioned:
+
+From "Required Technical And Professional Expertise":
+- Experience in integration efforts between Alation and Manta
+- Collaborate with cross-functional teams
+- Develop and maintain data governance processes and standards within Alation
+- Analyze data lineage and metadata
+
+From "Preferred Technical And Professional Experience":
+- Lead evaluation and implementation of new features and updates for both Alation and Manta platforms
+- Drive continuous improvement initiatives
+
+From the main role description:
+- Data gathering, storage, and both batch and real-time processing
+- Database integration
+- Unstructured data sets
+- Implementing and validating predictive models
+- Creating and maintain statistical models with focus on big data
+- Statistical and machine learning techniques
+
+
+- Designing and implementing enterprise search applications (Elasticsearch and Splunk)
+- Agile, collaborative environment
+- Building teams or writing programs to cleanse and integrate data
+- Developing predictive or prescriptive models
+- Evaluating modelling results
+
+I'll focus on identifying the core technical and soft skills required for this role. The position demands expertise in data engineering, with strong technical skills in data processing, machine learning, and enterprise search technologies. Collaboration and continuous improvement are key soft skills emphasized throughout the job description.
+
+The role requires deep technical competencies in data integration, governance, and advanced analytics, while highlighting the importance of cross-functional teamwork and innovative problem-solving approaches.
+
+I'll categorize the skills systematically, distinguishing between must-have and nice-to-have qualifications. The position demands strong technical expertise in data engineering, machine learning, and enterprise search technologies, with an emphasis on collaborative and analytical capabilities.
+
+Key technical skills include data processing, statistical modeling, and platform-specific knowledge like Alation and Manta. Soft skills focus on teamwork, communication, and continuous improvement mindset.
+
+The role requires a Master's degree, indicating advanced educational qualifications. While specific technical certifications aren't mentioned, the position suggests deep expertise in data governance and analytics.
+
+The job description doesn't explicitly reference large language models or generative AI, focusing instead on traditional data engineering and machine learning approaches.
+
+Geographic restrictions are clearly defined, with the role specifically located in Pune, Maharashtra, India, suggesting a targeted regional recruitment strategy.
+
+Benefits are not comprehensively detailed in the provided text, leaving some aspects of compensation and perks unclear.
+
+The company description highlights IBM's global consulting presence, emphasizing their Client Innovation Centers and technical expertise across diverse sectors.
+
+I'll focus on extracting key contextual details about the role and organizational structure, noting the collaborative nature of the Data Engineer position within IBM's consulting framework.
+
+The metadata suggests a comprehensive extraction process, with 2 fields identified and 25 fields remaining null, indicating a thorough but not exhaustive information gathering approach.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Pune, Maharashtra, India",
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Alation",
+        "Manta",
+        "data governance",
+        "data lineage",
+        "metadata analysis",
+        "data quality",
+        "compliance",
+        "cross-functional collaboration",
+        "data integration",
+        "predictive models",
+        "statistical models",
+        "big data",
+        "machine learning",
+        "database integration",
+        "unstructured data",
+        "Elasticsearch",
+        "Splunk",
+        "data cleansing",
+        "data processing",
+        "batch processing",
+        "real-time processing"
+      ],
+      "nice_to_have_hard_skills": [
+        "feature implementation",
+        "platform updates",
+        "continuous improvement",
+        "enterprise search applications"
+      ],
+      "must_have_soft_skills": [
+        "Team Collaboration",
+        "Problem Solving",
+        "Communication",
+        "Analytical Skills"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "Master's Degree Required",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "specific_countries",
+      "allowed_countries": ["IN"],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "must_be_resident"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Work in an Agile, collaborative environment, partnering with other scientists, engineers, consultants and database administrators of all backgrounds and disciplines",
+      "company_description_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 2,
+    "fields_null": 25
+  }
+}
+```

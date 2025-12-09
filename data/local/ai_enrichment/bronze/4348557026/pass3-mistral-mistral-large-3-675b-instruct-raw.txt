@@ -1,0 +1,236 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "Mentions hybrid processing (batch and stream), relational SQL, Big Data, and Informatica PowerCenter, which are part of a modern data stack but lacks explicit signals for CI/CD, testing, or governance tools beyond basic data quality and pipeline support.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Score of 3 aligns with 'defined' maturity level, indicating documented processes and some governance but not fully managed or optimized.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["data_governance", "data_quality_testing"],
+        "confidence": 0.70,
+        "evidence": "Mentions 'identifying data quality issues' and 'data management systems', implying some governance and quality practices. However, no explicit modern tools like Great Expectations or Monte Carlo are mentioned.",
+        "source": "inferred"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.5,
+        "confidence": 0.80,
+        "evidence": "Role includes responsibilities like 'implementing and validating predictive models' and 'creating statistical models', which are typically data science tasks, alongside data engineering tasks. This suggests moderate scope creep.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.70,
+        "evidence": "Mentions 'Agile, collaborative environment' and 'client requirements', which may imply tight deadlines. However, no explicit signals like 'fast-paced' or 'immediate start' are present, and IBM is an established company with likely structured work hours.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "multi_role",
+        "confidence": 0.80,
+        "evidence": "Job description combines data engineering and data science responsibilities, indicating the role may blend multiple disciplines.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.45,
+        "confidence": 0.75,
+        "evidence": "Moderate scope creep and some overtime risk due to client-driven Agile work, but no severe red flags like unclear reporting or severe understaffing.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit or implied reporting structure mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No mention of reporting lines or manager titles in the job posting.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.95,
+        "evidence": "No explicit signals about team growth velocity or hiring plans beyond the current role.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.95,
+        "evidence": "No explicit team composition details provided beyond collaboration with diverse teams.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure details mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.85,
+        "evidence": "Job posting explicitly mentions collaborating with 'other scientists, engineers, consultants and database administrators' and 'partnering with diverse teams', indicating cross-functional embedding.",
+        "source": "pass1_derived"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.6,
+        "confidence": 0.70,
+        "evidence": "Agile environment and client-driven work may imply some time pressure, but no explicit negative signals like on-call or weekend work mentioned. IBM is known for structured work policies, which may balance this.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.5,
+        "confidence": 0.65,
+        "evidence": "Mentions collaboration with diverse teams and Agile environment, suggesting some learning opportunities, but no explicit signals like mentorship programs or learning budgets.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.5,
+        "confidence": 0.70,
+        "evidence": "Mentions hybrid processing and modern tools like Elasticsearch/Splunk, but lacks explicit signals for CI/CD, testing, or innovation practices.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No explicit signals for open source, tech blogs, or innovation time mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No explicit development practices like code review, CI/CD, or monitoring mentioned beyond generic Agile collaboration.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.65,
+        "evidence": "Focus on client-driven delivery and established tools like Informatica PowerCenter suggests limited innovation time or exploration of new technologies.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No explicit or implied mentions of tech debt management or refactoring in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.70,
+        "evidence": "Mentions 'implementing and validating predictive models' and 'assisting data scientists', indicating basic ML integration but no advanced MLOps or GenAI focus.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No explicit ML tools mentioned beyond generic ML and statistical model references.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit hiring urgency signals like 'immediate start' or 'ASAP' mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.60,
+        "evidence": "IBM is a well-known company, but the role is location-specific (Pune) and lacks salary transparency, which may reduce competition slightly. However, the blend of DE and ML responsibilities could attract a broader candidate pool.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.98,
+        "evidence": "IBM is a large, established enterprise with global operations and a well-known brand.",
+        "source": "pass1_derived"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit hiring velocity signals mentioned beyond the role being part of client delivery centers.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit team size signals mentioned beyond collaboration with diverse teams.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No funding stage signals mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit signals about whether this is a new role, backfill, or team expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "collaborative_culture", "established_company", "data_focused_role"],
+    "strength_details": [
+      "Role leverages established tools like Informatica PowerCenter and hybrid processing (batch/stream), which are valuable for candidates with expertise in these areas.",
+      "Collaboration with diverse teams (data scientists, consultants, DBAs) provides exposure to cross-functional work and broadens professional experience.",
+      "IBM is a globally recognized enterprise with deep industry expertise, offering stability and a strong brand for career growth."
+    ],
+    "concern_categories": ["scope_creep_risk", "vague_requirements", "unclear_reporting"],
+    "concern_details": [
+      "Moderate scope creep risk due to blending data engineering and data science responsibilities, which may lead to unclear expectations.",
+      "Requirements are strict but lack clarity on specific tools or frameworks, making it harder to assess exact fit.",
+      "No explicit reporting structure mentioned, which could lead to ambiguity in leadership and role accountability."
+    ],
+    "best_fit_categories": ["mid_level_engineers", "data_generalists", "career_changers"],
+    "best_fit_details": [
+      "Mid-level data engineers with 3-5 years of experience in hybrid processing and ETL tools like Informatica PowerCenter.",
+      "Data generalists who are comfortable working across data engineering and basic ML tasks in a client-driven environment.",
+      "Career changers with transferable skills in SQL, scripting, and data integration looking to enter a stable enterprise like IBM."
+    ],
+    "probe_categories": ["role_scope_boundaries", "career_growth_path", "work_hour_expectations", "team_size_composition", "tech_stack_details"],
+    "probe_details": [
+      "Ask for clarity on the boundaries between data engineering and data science responsibilities in this role.",
+      "Probe about career growth paths and mentorship opportunities within IBM Consulting.",
+      "Understand typical work hours, sprint cadence, and deadline pressures, especially in client-driven projects.",
+      "Inquire about the size and composition of the team you’ll be embedded with, including seniority mix and collaboration dynamics.",
+      "Ask for details on the tech stack, including specific tools for orchestration, monitoring, and cloud data migration."
+    ],
+    "leverage_categories": ["exact_experience_match", "domain_expertise"],
+    "leverage_details": [
+      "Candidates with exact experience in Informatica PowerCenter and hybrid data pipelines can leverage this as a strong match.",
+      "Domain expertise in data warehousing, SQL, or client-facing data integration roles is highly relevant and valuable."
+    ],
+    "overall_assessment": "This role at IBM Consulting is a solid opportunity for mid-level data engineers or generalists with hybrid processing and Informatica PowerCenter experience. The enterprise context provides stability and exposure to diverse teams, but the blend of data engineering and data science tasks introduces scope ambiguity. Candidates should seek clarity on role boundaries, career growth, and work expectations during interviews.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.80
+  }
+}
+```

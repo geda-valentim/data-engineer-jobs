@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.92,
+        "evidence": "Title 'Senior Data Engineer II' and 5+ years of experience align with senior level.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "The job title is 'Senior Data Engineer' and the description focuses on data pipeline development and maintenance.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.75,
+        "evidence": "Focus on data pipelines, ETL tools like Fivetran and DBT, and data modeling suggests a batch ETL focus.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.78,
+        "evidence": "Mentoring junior engineers and participating in code reviews indicate technical leadership without direct reports.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "aws",
+        "confidence": 0.95,
+        "evidence": "SageMaker is explicitly mentioned as a tool for production ML workflows.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud providers are mentioned in the job description.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.75,
+        "evidence": "Mentions both real-time and batch data integrations, suggesting a hybrid approach.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.95,
+        "evidence": "The job description mentions Airflow.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.82,
+        "evidence": "Redshift (warehouse) and S3 (lake) are both mentioned, indicating a mixed storage layer.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.88,
+        "evidence": "The job description states that the company is registered to support remote work in specific US states.",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.92,
+        "evidence": "The job description mentions teams across all US time zones.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "The job description states it is a remote position.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "The job description explicitly states that ActBlue is unable to sponsor work visas.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "The statement 'work authorization required' implies no support for student visas.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.88,
+        "evidence": "The job description requires work authorization, but does not specify US citizenship.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "The job description states it is a full-time employee position.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.85,
+        "evidence": "The job description lists a wide range of benefits, including health insurance, 401k, PTO, and more.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions 'room to grow' and 'advancement potential' without specific details.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.80,
+        "evidence": "Mentions mentoring junior engineers and fostering a high-trust engineering culture.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": true,
+        "confidence": 0.90,
+        "evidence": "The job description explicitly mentions a 'path to Staff Engineer'.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "There is no mention of internal transfers or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.70,
+        "evidence": "The 'path to Staff Engineer' indicates an individual contributor track.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.73,
+        "evidence": "A mix of 'must-have' and 'nice-to-have' skills are listed.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.82,
+        "evidence": "The job description is focused on data engineering tasks and responsibilities.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "The required skills are reasonable for a senior data engineer role.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

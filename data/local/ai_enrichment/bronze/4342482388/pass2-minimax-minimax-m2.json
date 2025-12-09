@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 14:24:11",
+    "job_posting_id": "4342482388",
+    "job_title": "Data Engineer",
+    "company_name": "iFlow Inc.",
+    "job_location": "Toronto, Ontario, Canada",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.65,
+          "evidence": "Title is 'Data Engineer' without seniority modifier, but requires specific technical skills (Cloud Databricks, SQL, bank data background, audit knowledge) suggesting mid-level experience needed",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Data Engineer'",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.7,
+          "evidence": "Cloud Databricks mentioned with bank data background and audit knowledge, suggesting batch processing pipelines for financial data",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.85,
+          "evidence": "No mention of leadership responsibilities, mentoring, or team management - appears to be pure individual contributor role",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "Cloud Databricks mentioned but no specific cloud provider (AWS, Azure, GCP) specified",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No cloud providers mentioned beyond Databricks",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.75,
+          "evidence": "Databricks commonly used for batch processing, bank data and audit knowledge suggests scheduled data pipelines",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No workflow orchestration tools mentioned",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No specific data storage systems mentioned beyond Databricks platform",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.85,
+          "evidence": "Located in Toronto, Ontario, Canada with hybrid model requiring 2 days/week in office",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "americas",
+          "confidence": 0.9,
+          "evidence": "Toronto location indicates Eastern Time Zone focus in North America",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Position based in Toronto, no relocation mentioned",
+          "source": "pass1_derived"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Position is in Canada, H1B is US-specific visa category not applicable",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Position is in Canada, OPT/CPT are US student visa categories not applicable",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No citizenship or work authorization requirements mentioned for Canadian position",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "Fixed-term contract mentioned but employment type (W2 vs 1099) not specified",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No benefits mentioned in job posting",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No career growth or advancement opportunities mentioned",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No mentorship or learning from senior staff mentioned",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No promotion or advancement path mentioned",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No internal transfers or role changes mentioned",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No career tracks or advancement paths mentioned",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.75,
+          "evidence": "Multiple specific technical requirements listed as 'required' with domain expertise needed (banking, audit)",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.8,
+          "evidence": "Focused data engineering role with specific technical requirements and domain expertise clearly defined",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Requirements are reasonable for mid-level data engineer role with domain specialization",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7551,
+    "input_tokens": 5416,
+    "output_tokens": 2135,
+    "cost": 0.009686
+  }
+}

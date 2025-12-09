@@ -1,0 +1,233 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Basic ETL/ELT processes mentioned with relational databases (SQL Server, Oracle, MySQL) but no modern data stack tools (dbt, Airflow, Snowflake), no CI/CD, testing, or governance mentioned",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2 - basic pipelines with some automation (unit tests mentioned) but inconsistent practices and no modern tooling",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["data_quality_testing"],
+        "confidence": 0.70,
+        "evidence": "Mentions building automated unit tests and participating in integration testing, but no other maturity signals like CI/CD, monitoring, or governance",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.25,
+        "confidence": 0.80,
+        "evidence": "Focused data engineering role with clear responsibilities (ETL/ELT, data transformation, unit testing) without conflation with data science, analytics, or DevOps",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.65,
+        "evidence": "No explicit overtime or on-call mentions, but 'fast-paced' implied by startup context and 'immediate start' not mentioned; no PTO or work-life balance signals",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Well-defined responsibilities focused on building and maintaining data pipelines, ETL/ELT processes, and data transformation systems",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.70,
+        "evidence": "Moderate risk due to lack of compensation/benefits details and potential startup pace, but role is well-defined with no scope creep",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Mentions working with analytics team and architecture/engineering leads but no specific reporting manager or structure",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No manager title or level mentioned in job description or Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.60,
+        "evidence": "No information about team growth, expansion, or hiring velocity in job description",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.55,
+        "evidence": "No team size or composition details provided in job posting",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit reporting structure mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Mentions collaborating with analytics team and architecture/engineering leads, suggesting centralized data team rather than embedded in product teams",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.50,
+        "confidence": 0.65,
+        "evidence": "No PTO, remote, or work-life balance signals mentioned; no on-call or overtime mentioned but startup context implies potential pressure",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.45,
+        "confidence": 0.60,
+        "evidence": "Mentions 'passion for data and deep desire to learn' but no specific learning budget, conferences, mentorship, or career paths",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.55,
+        "confidence": 0.70,
+        "evidence": "Basic engineering practices (unit testing) mentioned but no modern stack, CI/CD, code review, or documentation practices",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No mentions of open source, tech blogs, conference speaking, hackathons, or innovation time",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["unit_tests", "integration_testing"],
+        "confidence": 0.85,
+        "evidence": "Explicitly mentions building automated unit tests and participating in integration testing",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.70,
+        "evidence": "Focus on maintaining and operating existing systems rather than innovation; no mention of new tech exploration or R&D",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of tech debt management, refactoring, or code quality improvement initiatives",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No ML/AI mentioned in job description or Pass 1 extraction; no LLM, GenAI, or ML tools referenced",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools (SageMaker, MLflow, etc.) mentioned in job description",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No urgency signals like 'ASAP', 'immediate start', or 'urgent need' in job description",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Location in New Jersey (moderate competition), no salary disclosed, likely moderate applicant pool",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "startup_series_a_b",
+        "confidence": 0.70,
+        "evidence": "Small company based in Central NJ specializing in software development and BI; likely early-stage with 20-100 employees",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.65,
+        "evidence": "No explicit hiring velocity signals, but likely regular hiring for growing startup",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "small_2_5",
+        "confidence": 0.60,
+        "evidence": "No explicit team size, but company specialization in software/BI suggests small data team (2-5 members)",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No funding stage mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "new_headcount",
+        "confidence": 0.70,
+        "evidence": "No backfill or replacement mentioned; likely new role created for growth given company specialization in BI",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["well_defined_role", "data_focused_role", "modern_tech_stack"],
+    "strength_details": [
+      "Clear responsibilities focused on ETL/ELT and data transformation",
+      "Strong emphasis on data quality with unit and integration testing",
+      "Good foundation for data engineering with relational databases and Python"
+    ],
+    "concern_categories": ["vague_requirements", "salary_not_disclosed", "no_visa_sponsorship", "limited_growth"],
+    "concern_details": [
+      "No salary or benefits disclosed - potential below-market compensation",
+      "Master's degree required with no experience range specified",
+      "No visa sponsorship mentioned - US work authorization likely required",
+      "Limited growth opportunities with no career path or learning budget"
+    ],
+    "best_fit_categories": ["junior_engineers", "mid_level_engineers", "data_generalists"],
+    "best_fit_details": [
+      "Junior to mid-level engineers with Python and SQL skills",
+      "Candidates seeking foundational data engineering experience",
+      "Generalists comfortable with relational databases and ETL processes"
+    ],
+    "probe_categories": ["salary_range_details", "career_growth_path", "team_size_composition", "tech_stack_details"],
+    "probe_details": [
+      "Ask about actual compensation range and benefits package",
+      "Inquire about team structure and reporting manager",
+      "Understand the specific tech stack and tools used beyond SQL and Python"
+    ],
+    "leverage_categories": ["rare_skill_match", "exact_experience_match"],
+    "leverage_details": [
+      "Strong Python and relational database experience is valuable",
+      "Experience with ETL/ELT processes and unit testing is directly relevant"
+    ],
+    "overall_assessment": "Entry-level to mid-level data engineering role with clear responsibilities but limited growth opportunities and no compensation transparency. Good for candidates seeking foundational experience in ETL/ELT with relational databases. Main concerns are lack of salary details, no visa sponsorship, and limited career progression.",
+    "recommendation_score": 0.55,
+    "recommendation_confidence": 0.70
+  }
+}

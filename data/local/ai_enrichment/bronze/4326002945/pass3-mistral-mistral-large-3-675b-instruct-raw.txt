@@ -1,0 +1,265 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "IBM is an established enterprise with likely structured data practices, but the job posting lacks explicit mention of modern data stack tools (e.g., Snowflake, dbt, Airflow) or governance practices. Oracle and Hive are mentioned, which are traditional but not necessarily indicative of a fully modern stack.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Matches the data_maturity_score of 3. The role is part of IBM Consulting's delivery centers, which suggests some level of defined processes and expertise, but the lack of modern tooling details limits confidence.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["data_governance", "collaborative_skills"],
+        "confidence": 0.60,
+        "evidence": "IBM Consulting's focus on delivering expertise to public/private sector clients suggests governance and collaboration are valued, but no explicit tools or practices are mentioned. Oracle and Hive are traditional databases, which may imply legacy systems.",
+        "source": "inferred"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.5,
+        "confidence": 0.80,
+        "evidence": "Role title and responsibilities suggest a mix of Data Engineering and Business Intelligence tasks, but the conflation with 'Application Developer' and vague mentions of 'customized systems' introduce moderate scope creep risk.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.70,
+        "evidence": "Mentions 'agile environment' and 'resolve challenges faced in implementing features' within tight timeframes, but no explicit signals of overtime or burnout risk. IBM's enterprise nature may mitigate this, but consulting pace can vary.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "multi_role",
+        "confidence": 0.80,
+        "evidence": "Role combines responsibilities of 'Application Developer' and 'Data Engineer-Business Intelligence', with tasks spanning feature development, debugging, and Tableau dashboard performance optimization.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.45,
+        "confidence": 0.75,
+        "evidence": "Moderate scope creep and potential overtime risk due to consulting environment, but IBM's established processes and lack of severe red flags (e.g., no visa restrictions, no aggressive startup language) reduce overall risk.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit mention of reporting structure or manager in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No manager title or reporting line specified in the job posting.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.60,
+        "evidence": "IBM Consulting's delivery centers are expanding to support client needs, suggesting steady growth rather than rapid or stable.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.90,
+        "evidence": "No explicit team size or composition details provided in the job posting.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No reporting structure details available in the job posting.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.70,
+        "evidence": "Role is part of IBM Consulting's Client Innovation Centers, which deliver expertise to clients globally, implying cross-functional collaboration with client teams.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.70,
+        "evidence": "No explicit mention of work-life balance policies, but IBM's enterprise consulting roles often have structured workloads. The lack of overtime signals is neutral, but consulting deadlines can introduce variability.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.7,
+        "confidence": 0.75,
+        "evidence": "Mentions 'limitless career path' and 'access to the latest education, tools and technology', suggesting growth opportunities, but no formal mentorship or career tracks are explicitly stated.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.6,
+        "confidence": 0.70,
+        "evidence": "IBM Consulting emphasizes technical expertise and innovation, but the job posting lacks explicit details about modern development practices (e.g., CI/CD, testing) or a focus on cutting-edge tooling.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.90,
+        "evidence": "No explicit signals of open source contributions, tech blogs, conference speaking, or hackathons in the job posting.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["code_review", "ci_cd"],
+        "confidence": 0.55,
+        "evidence": "Mentions 'agile environment' and collaborative skills, which may imply code review and CI/CD practices, but no explicit confirmation.",
+        "source": "inferred"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Mentions 'drive innovation and adoption of new technology' for clients, but no explicit signals of internal innovation or experimentation culture.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of technical debt management or refactoring in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.90,
+        "evidence": "No mention of AI/ML tools, frameworks, or responsibilities in the job posting.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No AI/ML tools or frameworks mentioned in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "normal",
+        "confidence": 0.70,
+        "evidence": "No immediate or ASAP start date mentioned, but consulting roles often have standard urgency for filling positions.",
+        "source": "inferred"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Location is Pune, India (not a highly competitive tech hub like SF/NYC), and no salary disclosure may reduce application volume. However, IBM's global brand could attract a moderate number of applicants.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.95,
+        "evidence": "IBM is a well-known, established enterprise with a global presence and consulting delivery centers.",
+        "source": "explicit"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.70,
+        "evidence": "IBM Consulting's Client Innovation Centers are expanding to support client needs, suggesting steady hiring velocity.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit signals about team size in the job posting.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No funding stage signals mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.70,
+        "evidence": "Role is part of IBM Consulting's expansion in delivery centers to support client innovation, suggesting team expansion.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "modern_tech_stack",
+      "learning_opportunities",
+      "career_growth_clear",
+      "established_company",
+      "collaborative_culture"
+    ],
+    "strength_details": [
+      "Role is part of IBM Consulting, offering access to enterprise-level resources and global client impact.",
+      "Mentions 'limitless career path' and 'access to the latest education, tools and technology', indicating strong learning and growth opportunities.",
+      "Focus on Tableau-driven dashboards and analytics provides a clear specialty in data visualization, a high-demand skill.",
+      "IBM's established processes and governance may offer stability compared to smaller or less structured companies."
+    ],
+    "concern_categories": [
+      "scope_creep_risk",
+      "overtime_likely",
+      "role_clarity",
+      "tech_debt_heavy"
+    ],
+    "concern_details": [
+      "Role conflates 'Application Developer' and 'Data Engineer-Business Intelligence', which may introduce scope creep and unclear expectations.",
+      "Consulting environment often involves tight deadlines and client-driven workloads, increasing overtime risk despite no explicit mention.",
+      "No explicit discussion of technical debt management, which could imply legacy systems or maintenance-heavy tasks.",
+      "Lack of clarity on team size, composition, and reporting structure may make it difficult to assess collaboration dynamics."
+    ],
+    "best_fit_categories": [
+      "senior_data_engineers",
+      "analytics_engineers",
+      "data_generalists",
+      "career_changers"
+    ],
+    "best_fit_details": [
+      "Senior Data Engineers with 5+ years of experience in Tableau, SQL, and Oracle/Hive, looking to transition into a consulting role with global exposure.",
+      "Analytics Engineers who specialize in data visualization and dashboard performance optimization.",
+      "Data Generalists with a mix of development and BI skills who can adapt to a multi-role environment.",
+      "Career changers with strong SQL and Tableau experience seeking to leverage these skills in a data engineering context at a large enterprise."
+    ],
+    "probe_categories": [
+      "role_scope_boundaries",
+      "work_hour_expectations",
+      "career_growth_path",
+      "tech_stack_details",
+      "team_size_composition"
+    ],
+    "probe_details": [
+      "Ask for clarification on the boundaries between 'Application Developer' and 'Data Engineer-BI' responsibilities to avoid scope creep.",
+      "Inquire about typical work hours, sprint cadence, and how client deadlines impact workload and overtime expectations.",
+      "Request specific examples of career growth paths for Data Engineers within IBM Consulting and how 'limitless career path' translates into actionable opportunities.",
+      "Ask about the tech stack used for data engineering tasks beyond Tableau, Oracle, and Hive (e.g., ETL tools, cloud platforms).",
+      "Probe for details on team size, composition, and whether the role is embedded within cross-functional client teams."
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "domain_expertise"
+    ],
+    "leverage_details": [
+      "Candidates with proven Tableau dashboard development and performance optimization experience have strong leverage.",
+      "Experience with Oracle and Hive is valuable, especially for enterprise consulting roles.",
+      "Project management and collaborative skills are highly transferable and align well with IBM Consulting's needs."
+    ],
+    "overall_assessment": "This role at IBM Consulting offers a unique opportunity for Data Engineers with a strong BI and Tableau background to work on global client projects. While the enterprise context provides stability and growth potential, the multi-role nature and consulting environment may introduce scope creep and workload variability. Candidates should clarify role boundaries and expectations during interviews.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.80
+  }
+}
+```

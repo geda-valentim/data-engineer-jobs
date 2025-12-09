@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "principal",
+        "confidence": 0.9,
+        "evidence": "12+ years of experience in data modelling and architecture, combined with the title 'Data Engineer-Data Modeling' and high-level responsibilities like designing enterprise search applications and statistical models.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title explicitly mentions 'Data Engineer' and responsibilities focus on data modelling, architecture, and governance.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_modeling",
+        "confidence": 0.95,
+        "evidence": "Title includes 'Data Modeling' and responsibilities emphasize data modelling tools (Erwin, IBM Infosphere Data Architect) and techniques (relational, dimensional, NoSQL).",
+        "source": "combined"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.8,
+        "evidence": "Role involves designing enterprise search applications, implementing predictive models, and collaborating with senior scientists and engineers, suggesting technical leadership without direct people management.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No explicit cloud providers or services mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 1.0,
+        "evidence": "No secondary clouds mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No mention of streaming (Kafka, Flink) or batch (Airflow, scheduled jobs) processing paradigms.",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No orchestration tools like Airflow, Luigi, or cloud-native orchestrators mentioned.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.7,
+        "evidence": "Mentions relational, dimensional, and NoSQL databases, indicating a mixed storage approach, though not explicitly tied to warehouse or lake patterns.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.8,
+        "evidence": "Location specified as 'Pune, Maharashtra, India', implying a regional restriction unless stated otherwise.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.9,
+        "evidence": "Location is explicitly restricted to Pune, India, with no mention of timezone flexibility.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No relocation package or requirement mentioned; role is tied to a specific location (Pune).",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "Job is located in India, and no H1B sponsorship is relevant or mentioned.",
+        "source": "inferred"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "No signals about OPT/CPT or student visa eligibility; location is India, which does not use OPT/CPT.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No discussion of work authorization or citizenship requirements in the context of India.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No contract type or employment classification mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 1.0,
+        "evidence": "No benefits discussed in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No explicit or implied career growth paths or tracks mentioned.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.7,
+        "evidence": "Mentions partnering with other scientists, engineers, and consultants, suggesting collaboration with experienced team members.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit mention of promotion or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No discussion of internal mobility or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.6,
+        "evidence": "Role emphasizes deep technical expertise and data modelling, suggesting an IC track, but no explicit mention of other tracks.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.8,
+        "evidence": "12+ years of experience is a strict requirement, along with proficiency in specific tools and strong technical expertise.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.8,
+        "evidence": "Job description is focused on data modelling, architecture, and governance with well-defined responsibilities.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": true,
+        "confidence": 0.7,
+        "evidence": "12+ years of experience for a role titled 'Data Engineer-Data Modeling' suggests potential skill inflation, as this is typically associated with higher seniority levels like Staff or Principal.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

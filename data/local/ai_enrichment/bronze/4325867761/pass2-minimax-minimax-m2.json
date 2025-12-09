@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 13:52:38",
+    "job_posting_id": "4325867761",
+    "job_title": "Data Engineer-Data Platforms-AWS",
+    "company_name": "IBM",
+    "job_location": "Bengaluru East, Karnataka, India",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.75,
+          "evidence": "Title is 'Data Engineer' without 'Senior' prefix, but requires 4+ years experience which typically maps to mid-level in IC hierarchy",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Data Engineer' and core responsibilities focus on developing, maintaining, and testing big data solutions and pipelines",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "cloud_migration",
+          "confidence": 0.82,
+          "evidence": "Heavy emphasis on Azure Cloud Data Platform with specific services like DataBricks, Azure HDInsight, Azure Data Factory, Synapse - indicating cloud-focused data engineering",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.85,
+          "evidence": "No mention of team leadership, mentoring, or management responsibilities - purely individual contributor role focused on developing and maintaining data solutions",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "azure",
+          "confidence": 0.98,
+          "evidence": "Multiple Azure services explicitly mentioned: Azure Cloud Data Platform, DataBricks, Azure HDInsight, Azure Data Factory, Synapse - clear Azure focus",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No other cloud providers mentioned beyond Azure ecosystem",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.88,
+          "evidence": "Both streaming pipelines and batch processing mentioned - 'developing streaming pipelines' alongside traditional Spark batch processing",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "cloud_native",
+          "confidence": 0.9,
+          "evidence": "Azure Data Factory mentioned as primary orchestration tool, which is Azure's native workflow orchestration service",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.78,
+          "evidence": "Both warehouse (Synapse, SQL Server) and lake (HDFS, Hadoop ecosystem) storage patterns mentioned",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.82,
+          "evidence": "Specific location 'Bengaluru East, Karnataka, India' mentioned, suggesting local/regional requirement for IBM Consulting delivery center",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.88,
+          "evidence": "India location specified, indicating work within Indian timezone (Asia/Kolkata) for local delivery center operations",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.75,
+          "evidence": "Specific Bengaluru location mentioned for delivery center role, implying candidates need to be in or relocate to Bengaluru area",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Position is in India, so H1B sponsorship not applicable - this is a domestic Indian hiring role",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "India-based position, so US student visa categories (OPT/CPT) are not relevant for this role",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.8,
+          "evidence": "No citizenship requirements mentioned, only standard work authorization for India would be required",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.88,
+          "evidence": "IBM Consulting delivery center role implies full-time employment (W2) rather than contractor arrangement",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits, compensation, or perks mentioned in the job posting",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No career progression, growth opportunities, or advancement paths mentioned in the job description",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No mentorship programs, working with senior staff, or collaborative learning environment mentioned",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No promotion, advancement, or career progression opportunities mentioned",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.88,
+          "evidence": "No mention of internal transfers, lateral moves, or exploring different roles within IBM",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.85,
+          "evidence": "No specific career tracks (IC, management, specialist, architect) mentioned or implied",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.82,
+          "evidence": "Long list of specific technical requirements with 'Minimum 4+ years' and 'Minimum 3 years' experience requirements, plus specific technology stack requirements",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.88,
+          "evidence": "Well-defined data engineering role with specific responsibilities around big data solutions, Spark framework, and Azure platform - not multi-role hybrid",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.78,
+          "evidence": "Requirements are reasonable for mid-level data engineer role - 4+ years experience with specified technologies is appropriate skill level",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8998,
+    "input_tokens": 5902,
+    "output_tokens": 3096,
+    "cost": 0.012094
+  }
+}

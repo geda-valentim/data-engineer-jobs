@@ -1,0 +1,253 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Job mentions data governance tools (Alation, Manta) and batch/real‑time processing but no modern orchestration, CI/CD, or cloud data‑warehouse technologies.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Score of 2 maps to \"developing\" maturity level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [
+          "data_governance"
+        ],
+        "confidence": 0.80,
+        "evidence": "Explicit focus on Alation/Manta integration, lineage, and governance processes.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.12,
+        "confidence": 0.90,
+        "evidence": "Responsibilities are limited to data engineering and data‑governance; no mention of analytics, dev‑ops, or product ownership beyond that scope.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.22,
+        "confidence": 0.78,
+        "evidence": "No language about fast‑paced delivery, on‑call, or urgent timelines; IBM consulting roles typically follow standard project schedules.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.92,
+        "evidence": "Pass 2 explicitly marks scope_definition as \"clear\" and the job lists concrete tasks (integration, governance, modeling).",
+        "source": "pass2_inference"
+      },
+      "overall_red_flag_score": {
+        "value": 0.20,
+        "confidence": 0.85,
+        "evidence": "Low scope creep, low overtime risk, clear role, medium requirement strictness, no skill inflation.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "Job posting does not specify to whom the Data Consultant reports.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No manager title (e.g., Head of Data, Director) appears in the description.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No statements about hiring pace or team expansion.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.65,
+        "evidence": "No details on team size, number of data engineers, or seniority mix.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No reporting line is described.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "Collaboration with diverse teams is mentioned, but the role is not described as embedded within a product squad.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.55,
+        "confidence": 0.70,
+        "evidence": "No PTO, benefits, or on‑call information is provided; absence of negative language suggests average balance.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "No mention of mentorship, learning budget, or career ladders.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.50,
+        "confidence": 0.70,
+        "evidence": "Only specific tools listed are Alation, Manta, Elasticsearch, Splunk; no broader engineering practices described.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.70,
+        "evidence": "Job description does not reference open‑source contributions, conferences, or hackathons.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.70,
+        "evidence": "No explicit mention of code review, CI/CD, testing, or monitoring practices.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No statements about experimentation, R&D time, or new‑technology pilots.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "No language about refactoring, reducing technical debt, or modernizing legacy pipelines.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.70,
+        "evidence": "Job lists predictive modeling and machine‑learning techniques but no specific ML platforms or MLOps tools.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.70,
+        "evidence": "No ML tooling (e.g., SageMaker, MLflow) is mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No start‑date or urgency language appears in the posting.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No data on applicant volume, easy‑apply, or location scarcity.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "Employer is IBM, a global enterprise technology company.",
+        "source": "pass1_derived"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No indication of aggressive or steady hiring cadence.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "Team size is not disclosed in the description.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "IBM is a publicly traded company; funding stage is irrelevant.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No statement whether the role is a new headcount or backfill.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "clear_requirements",
+      "well_defined_role",
+      "data_focused_role"
+    ],
+    "strength_details": [
+      "Clear focus on data engineering and data‑governance tasks (Alation, Manta, lineage).",
+      "Well‑defined responsibilities covering batch & real‑time pipelines, predictive modeling, and catalog integration.",
+      "Requires a Master's degree, indicating a senior‑level technical expectation."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "no_visa_sponsorship",
+      "unclear_reporting"
+    ],
+    "concern_details": [
+      "Compensation range and benefits are not provided in the posting.",
+      "No information on visa sponsorship; candidates requiring sponsorship may be ineligible.",
+      "Reporting line and team structure are not described, leaving career visibility unclear."
+    ],
+    "best_fit_categories": [
+      "mid_level_engineers",
+      "data_generalists",
+      "analytics_engineers"
+    ],
+    "best_fit_details": [
+      "Mid‑level data engineers comfortable with both batch and streaming workloads.",
+      "Candidates with experience in data‑governance platforms such as Alation and Manta.",
+      "Professionals who enjoy consulting‑style collaboration across multiple client teams."
+    ],
+    "probe_categories": [
+      "salary_range_details",
+      "reporting_structure",
+      "team_size_composition",
+      "career_growth_path",
+      "visa_sponsorship_details"
+    ],
+    "probe_details": [
+      "Ask for the expected salary band, bonus structure, and benefits package.",
+      "Clarify who the role reports to and whether there is a dotted‑line to a consulting manager.",
+      "Inquire about the size of the data engineering team and the mix of seniority levels.",
+      "Understand the formal career ladder, promotion criteria, and mentorship opportunities.",
+      "Confirm whether IBM will sponsor work visas for non‑Indian candidates."
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "domain_expertise"
+    ],
+    "leverage_details": [
+      "Demonstrated experience integrating Alation and Manta aligns directly with the core responsibilities.",
+      "Background in building predictive models and handling unstructured data adds immediate value."
+    ],
+    "overall_assessment": "The role offers a clearly defined data‑engineering focus within IBM's consulting practice, emphasizing data governance and modeling. While the lack of disclosed compensation and reporting details are drawbacks, the position is well‑suited for mid‑level engineers with governance tool experience. Candidates should verify salary, benefits, and visa support before proceeding.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.80
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 19:41:24",
+    "job_posting_id": "4348538137",
+    "job_title": "Quality Engineer-Packages",
+    "company_name": "IBM",
+    "job_location": "Bengaluru East, Karnataka, India",
+    "pass_name": "pass2",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.85,
+          "evidence": "Title mentions 'Associate Software Developer' and 'Relevant-4-5 Yrs' of experience, aligning with mid-level expectations.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.95,
+          "evidence": "Role explicitly states 'As a Data Engineer' and focuses on data pipelines, ETL, and data integration.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "hybrid",
+          "confidence": 0.75,
+          "evidence": "Responsibilities include both batch ('ETL tools', 'scheduled jobs') and real-time ('real-time processing') data handling.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.7,
+          "evidence": "Role emphasizes collaboration and technical tasks but does not mention mentoring, code review, or leadership beyond IC responsibilities.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "azure",
+          "confidence": 0.98,
+          "evidence": "Mandatory skills include Azure-specific tools (Azure Databricks, Azure Blob, Azure Devops).",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No other cloud providers are mentioned beyond Azure.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.8,
+          "evidence": "Job posting mentions both 'batch' and 'real-time' processing explicitly.",
+          "source": "pass1_derived"
+        },
+        "orchestrator_category": {
+          "value": "cloud_native",
+          "confidence": 0.85,
+          "evidence": "Azure Devops is listed as a mandatory skill, suggesting cloud-native orchestration on Azure.",
+          "source": "inferred"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.7,
+          "evidence": "Azure Blob (data lake) and SQL-based tools (data warehouse) are mentioned, indicating mixed storage patterns.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "Location is specified as Bengaluru, but no remote work restrictions are discussed in the posting.",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No timezone requirements or team distribution details are provided.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Job is based in Bengaluru, India, and no relocation signals (e.g., 'relocation package') are present.",
+          "source": "pass1_derived"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Pass 1 extraction states 'not_mentioned' for visa sponsorship, and no explicit signals suggest H1B support.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of OPT/CPT or student visa support, and location in India suggests local work authorization is prioritized.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No citizenship or work authorization requirements are discussed in the posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Employment type is 'full_time' and contract type is 'permanent', implying W2 status.",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits are listed in the Pass 1 extraction results.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.6,
+          "evidence": "Generic mention of 'drive innovation and adoption of new technology' suggests growth but lacks specificity.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Collaboration with 'other scientists, engineers, consultants and database administrators' suggests mentorship opportunities.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit promotion or advancement paths are mentioned in the job posting.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No discussion of internal mobility or role changes in the posting.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track"
+          ],
+          "confidence": 0.6,
+          "evidence": "Role emphasizes technical contributions and collaboration but does not explicitly mention management or specialist tracks.",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.8,
+          "evidence": "All listed skills are under 'Mandatory Skills' with no 'nice-to-have' or flexible language, indicating strict requirements.",
+          "source": "pass1_derived"
+        },
+        "scope_definition": {
+          "value": "multi_role",
+          "confidence": 0.75,
+          "evidence": "Responsibilities blend data engineering ('ETL tools', 'data pipelines') with elements of data science ('predictive models', 'statistical models') and search applications ('Elasticsearch', 'Splunk').",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "Title and role description ('Associate Software Developer') suggest entry/mid-level, but mandatory skills include advanced tools (Azure Databricks, PySpark, Hadoop, Scala) typically associated with higher seniority.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7944,
+    "input_tokens": 6236,
+    "output_tokens": 1708,
+    "cost": 0.009652
+  }
+}

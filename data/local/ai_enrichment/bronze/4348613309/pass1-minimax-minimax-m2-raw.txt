@@ -1,0 +1,175 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+Looking at the job posting:
+
+**Title**: Data Engineer-Data Warehouse
+**Company**: IBM
+**Location**: Kochi, Kerala, India
+
+Let me extract information section by section:
+
+1. **Compensation**: No salary information is mentioned in the posting, so all compensation fields should be null.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. No security clearance mentioned either.
+
+3. **Work Model**: The location is specified as "Kochi, Kerala, India" but there's no explicit mention of remote/hybrid/onsite work model. The employment type isn't explicitly stated either.
+
+4. **Contract Details**: No contract type, duration, or other contract details mentioned.
+
+5. **Contractor Rates**: Not applicable as this appears to be a full-time position.
+
+6. **Skills Classification**: Let me analyze the skills mentioned:
+
+From the description:
+- "Minimum 3 years of experience in developing applications programs to implement the ETL workflow by creating the ETL jobs, data models in datamarts using Snowflake, DBT, Unix, SQL technologies"
+- "Redesign Control M Batch processing"
+- "Good understanding of working in Agile environment, Good understanding of JIRA, Sharepoint tools"
+- "Good written and verbal communication skills are a MUST"
+- "Responsible to develop triggers, functions, stored procedures"
+- "Assist with impact analysis of changing upstream processes to Data Warehouse and Reporting systems"
+- "Assist with design, testing, support, and debugging of new and existing ETL and reporting processes"
+- "Perform data profiling and analysis using a variety of tools"
+- "Troubleshoot and support production processes"
+
+Let me classify these skills:
+
+**Must-have hard skills** (strong qualifiers or core requirements):
+- Snowflake (mentioned as core technology)
+- DBT (mentioned as core technology)
+- Unix (mentioned as core technology)
+- SQL (mentioned as core technology)
+
+
+- ETL (core job function)
+- Data modeling (core job function)
+- Control M (mentioned as specific tool)
+- Agile (mentioned as required understanding)
+- JIRA (mentioned as required understanding)
+- SharePoint (mentioned as required understanding)
+
+I'll continue identifying the remaining hard skills, focusing on the technical requirements and tools that are explicitly mentioned as essential for this role. The key technologies include data warehouse tools, programming languages, and project management platforms that are critical to the job's core functions.
+
+The soft skills reveal a strong emphasis on interpersonal and communication abilities. The role demands exceptional written and verbal communication, with a particular focus on client interaction. Time management and adaptability are highlighted as crucial professional competencies, suggesting the need for a dynamic and responsive approach to work.
+
+The educational requirements indicate a preference for advanced academic credentials, specifically a Master's degree, which aligns with the complex technical nature of the data engineering position.
+
+The minimum experience threshold is set at 3 years, providing a clear benchmark for potential candidates. While the specific field of study isn't detailed, the role's technical requirements suggest a background in computer science or a related technical discipline would be most relevant.
+
+Notably, the position does not involve large language model or generative AI technologies, nor does it require feature store expertise. The geographic context is centered in India, with no explicit global restrictions mentioned.
+
+The benefits package remains unspecified, leaving room for potential negotiation or standard organizational offerings. The company description highlights IBM's global consulting presence, emphasizing their delivery centers' role in providing technical expertise to diverse clients worldwide.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Snowflake",
+        "DBT",
+        "Unix",
+        "SQL",
+        "ETL",
+        "Data modeling",
+        "Control M",
+        "Agile",
+        "JIRA",
+        "SharePoint",
+        "Triggers",
+        "Functions",
+        "Stored procedures",
+        "Data profiling",
+        "Data analysis",
+        "Production support",
+        "Testing",
+        "Debugging"
+      ],
+      "nice_to_have_hard_skills": [],
+      "must_have_soft_skills": [
+        "Communication",
+        "Time Management",
+        "Adaptability",
+        "Interpersonal Skills",
+        "Team Collaboration"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 3,
+      "years_experience_max": null,
+      "years_experience_text": "Minimum 3 years of experience",
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "preferred",
+      "education_text_raw": "Master's Degree",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "IBM Consulting Client Innovation Centers (Delivery Centers)",
+      "company_description_text": "IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 50
+  }
+}
+```

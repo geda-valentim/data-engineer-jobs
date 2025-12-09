@@ -1,0 +1,217 @@
+<reasoning>Let me analyze this job posting carefully to infer the job characteristics based on the Pass 1 extraction results and the original job posting.
+
+Looking at the job posting:
+- Title: "Application Developer-Process Management (BPM)" 
+- Company: IBM
+- Location: Mumbai Metropolitan Region
+- The description mentions "As an Data Engineer at IBM" but the actual title is Application Developer-Process Management (BPM)
+
+This seems to be a BPM (Business Process Management) role focused on Appian software development, not a traditional data engineering role. The title and responsibilities are clearly about BPM tools and process automation.
+
+Let me go through each inference category:
+
+## SENIORITY AND ROLE
+
+**seniority_level**: 
+- The posting mentions "Minimum of 3 years of recent experience with Appian software development"
+- Also mentions "5-7 years of experience in BPM" as preferred
+- This suggests mid to senior level (3-7 years experience)
+- No specific seniority in title, but the experience requirements suggest mid-senior level
+- Confidence: 0.7 (moderate inference from experience requirements)
+
+**job_family**: 
+- This is clearly NOT a data engineering role despite the confusing description
+- The title is "Application Developer-Process Management (BPM)"
+- Core responsibilities are about BPM tools (IBM BPM, Pega, Camunda), Appian development, business process automation
+- This should be classified as BPM/Process Management, not data engineering
+- But looking at the allowed values, I need to choose from: "data_engineer" | "analytics_engineer" | "ml_engineer" | "mlops_engineer" | "data_platform_engineer" | "data_architect" | "data_scientist" | "data_analyst" | "bi_engineer" | "research_engineer" | "not_mentioned"
+- This doesn't fit any of these categories well, so "not_mentioned" would be most appropriate
+- Confidence: 0.9 (clear this isn't a data role)
+ 
+I'll focus on the sub-specialty, which is clearly BPM-focused. The role involves designing and implementing business process workflows using specialized BPM tools. The primary tools mentioned are IBM BPM, Pega, and Camunda, indicating a deep specialization in business process management technologies. This suggests a highly technical role centered on process automation and workflow optimization.
+
+The leadership expectation appears to be an individual contributor position, with no explicit mention of team management or direct reports. The role emphasizes technical implementation and collaboration with business analysts and IT teams, pointing to a technical leadership role without formal management responsibilities.
+
+The cloud infrastructure remains unspecified, with no clear indication of a primary cloud provider. The processing approach seems to involve both batch and real-time processing, suggesting a hybrid methodology for handling business process workflows.
+
+The geographic and work model details indicate an onsite requirement in the Mumbai Metropolitan Region, with no remote work flexibility mentioned. This suggests a preference for in-person collaboration and direct team interaction.
+
+Visa and authorization requirements are not explicitly defined, leaving uncertainty about potential international candidate eligibility. The employment type appears to be full-time, with no specific contract details provided.
+
+Benefits are not comprehensively outlined, suggesting a standard employment package without extensive additional perks. The role seems to focus on technical expertise in business process management tools like Appian, IBM BPM, Pega, and Camunda.
+
+The career development potential appears limited, with no clear growth path or mentorship opportunities explicitly mentioned. The requirements suggest a medium-strictness approach, balancing technical skills with collaborative problem-solving abilities.
+
+The role's scope is clearly defined, focusing specifically on BPM application development without expanding into multiple technical domains. Skill requirements seem appropriate for the experience level, avoiding unrealistic expectations.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.70,
+        "evidence": "3-7 years experience required (3 years minimum, 5-7 preferred), no specific seniority in title but experience requirements suggest mid-level",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "This is a BPM/Process Management role focused on Appian development and business process automation, not a traditional data engineering role",
+        "source": "combined"
+      },
+      "sub_specialty": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "BPM/Process Management specialty not in the allowed sub_specialty values, focuses on business process workflows and automation",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.80,
+        "evidence": "No mention of team leadership, direct reports, or management responsibilities - pure individual contributor role focused on development and implementation",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No cloud providers mentioned in the job posting or Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No cloud providers mentioned at all",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No specific processing paradigms mentioned - focuses on BPM workflows rather than data processing",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No workflow orchestration tools mentioned (Airflow, Spark, etc.)",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "Only mentions databases (Oracle SQL, MySQL) but no specific data warehouse, lake, or lakehouse technologies",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.85,
+        "evidence": "Location specified as Mumbai Metropolitan Region with onsite work model, indicating regional restriction",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.80,
+        "evidence": "Mumbai Metropolitan Region location suggests India timezone focus",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Must be located in Mumbai Metropolitan Region for onsite role",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned in Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No mention of student visa support, location in India suggests local hiring focus",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No citizenship or work authorization requirements specified",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.85,
+        "evidence": "Full-time employment type with benefits package suggests W2 employment",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits mentioned in Pass 1 extraction",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No career growth or advancement opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mentorship programs or working with senior people mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion or advancement paths mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No internal transfers or role mobility mentioned",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career tracks or paths mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Clear distinction between minimum requirements (3 years Appian) and preferred experience (5-7 years BPM), balanced approach",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Well-defined BPM/Process Management role with specific tools and responsibilities clearly outlined",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Requirements are reasonable for the experience level - 3 years minimum for Appian development is appropriate",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

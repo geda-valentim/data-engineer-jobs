@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 15:03:18",
+    "job_posting_id": "4348566498",
+    "job_title": "Data Engineer-Business Intelligence",
+    "company_name": "IBM",
+    "job_location": "Pune, Maharashtra, India",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.75,
+          "evidence": "Title is 'Data Engineer-Business Intelligence' without senior/junior prefix, but requires 3+ years experience which typically indicates mid-level",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "bi_engineer",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Data Engineer-Business Intelligence' and role focuses on Cognos development, reporting, and visualization",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.8,
+          "evidence": "Focus on BI/reporting/visualization with ETL tools (DataStage, Azure Data Factory, Informatica PowerCenter) suggests batch processing and data warehouse integration",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.9,
+          "evidence": "No mention of team leadership, mentoring, direct reports, or management responsibilities - appears to be pure individual contributor role",
+          "source": "pass1_derived"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "multi",
+          "confidence": 0.8,
+          "evidence": "Multiple cloud platforms mentioned (AWS, Google Cloud Platform, Azure) with no clear primary cloud specified",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "Since primary cloud is 'multi', no additional secondary clouds to list",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.8,
+          "evidence": "ETL tools mentioned (DataStage, Azure Data Factory, Informatica PowerCenter) and focus on reporting/visualization suggests batch processing workflows",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.5,
+          "evidence": "No specific orchestration tools mentioned - ETL tools suggest data integration but no orchestrator specified",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.7,
+          "evidence": "Business Intelligence focus with Cognos development typically involves data warehouse environments for reporting and analytics",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No work model or remote work restrictions mentioned in the job posting",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.85,
+          "evidence": "Location specified as Pune, Maharashtra, India, suggesting India-based role with local timezone requirements",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Role is based in Pune, India - no mention of relocation requirements as candidates would already need to be in the location",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No visa sponsorship mentioned and role is based in India, suggesting no H1B sponsorship available",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "No mention of student visa support and role requires 3+ years experience, suggesting focus on experienced professionals",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.7,
+          "evidence": "Role based in India would require work authorization in India, but no specific citizenship requirements mentioned",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No employment type or contract structure mentioned in the job posting",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No benefits, compensation, or employment perks mentioned in the job posting",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No career growth, advancement opportunities, or career path discussions mentioned",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No mentorship programs, working with senior staff, or learning opportunities mentioned",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No promotion, advancement, or career progression mentions in the job posting",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No internal transfers, role changes, or mobility opportunities mentioned",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No career tracks, promotion paths, or advancement opportunities mentioned",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Clear distinction between required skills (Cognos, UNIX, communication) and preferred skills (cloud platforms, Agile), suggesting balanced requirements",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused role on Business Intelligence and Cognos development with well-defined responsibilities and requirements",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Requirements are reasonable for 3+ years experience level - Cognos, UNIX, and ETL tools are appropriate for mid-level BI engineer role",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8480,
+    "input_tokens": 5912,
+    "output_tokens": 2568,
+    "cost": 0.011047999999999999
+  }
+}

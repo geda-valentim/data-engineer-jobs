@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.85,
+        "evidence": "5-7 years of BPM experience (mentioned in posting) aligns with typical senior data engineer seniority.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title and description explicitly refer to the role as a Data Engineer.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.75,
+        "evidence": "Job description mentions batch processing alongside real‑time processing; batch ETL is the clearer focus.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.90,
+        "evidence": "No mention of people‑management responsibilities or direct reports; role is purely technical.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Job posting does not reference any cloud provider (AWS, Azure, GCP).",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No secondary cloud services are listed in the posting.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "Description explicitly mentions both batch and real‑time processing.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No orchestration tools (Airflow, Luigi, etc.) are referenced.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No data warehouse or data lake technologies are cited.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.90,
+        "evidence": "Location restriction text specifies Bengaluru, India; no remote‑work language is provided.",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "apac",
+        "confidence": 0.85,
+        "evidence": "Job is based in India, which falls in the APAC time zone region.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Posting does not mention relocation assistance or a requirement to move.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Visa sponsorship is not mentioned; role is India‑based.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No reference to OPT/CPT or student visa eligibility.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "The posting does not specify citizenship or work‑authorization restrictions beyond location.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Employment type (full‑time, contractor, etc.) is not stated.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "Benefits such as health, PTO, equity, etc., are not listed in the posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No discussion of career ladders, promotion tracks, or growth opportunities.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mention of mentorship programs or senior‑junior pairing.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "The posting does not reference promotion or advancement pathways.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No language about internal transfers or mobility within IBM.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career track options (IC, management, specialist, architect) are described.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.85,
+        "evidence": "Specific years of experience, required BPM tools, and mandatory Master's degree are listed as must‑haves.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Job description focuses on a single role (Data Engineer/BPM application developer) with well‑defined responsibilities.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Required skill set (Appian, BPM tools, databases) matches expectations for a senior‑level data engineer.",
+        "source": "inferred"
+      }
+    }
+  }
+}

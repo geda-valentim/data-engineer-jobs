@@ -91,6 +91,35 @@ if df_bronze.rdd.isEmpty():
     sys.exit(0)
 
 # -------------------------------------------------------------------
+# Validação: Detecta se arquivo contém erro de crawl (sem vagas)
+# -------------------------------------------------------------------
+# Quando não há vagas no LinkedIn, o crawl retorna uma estrutura de erro:
+# {"timestamp": "...", "input": {...}, "error": "...", "error_code": "crawl_failed"}
+# Isso é um cenário válido de negócio, NÃO uma falha do job
+bronze_columns = df_bronze.columns
+
+if "error_code" in bronze_columns or ("error" in bronze_columns and "job_posting_id" not in bronze_columns):
+    print("=" * 60)
+    print("[bronze_to_silver] CRAWL SEM RESULTADOS DETECTADO")
+    print("=" * 60)
+
+    # Mostra amostra dos registros de erro para auditoria
+    df_bronze.select("timestamp", "error", "error_code").show(truncate=False)
+
+    print(f"  Partição: year={YEAR}/month={MONTH.zfill(2)}/day={DAY.zfill(2)}/hour={HOUR.zfill(2)}")
+    print(f"  Status: Nenhuma vaga encontrada no período")
+    print(f"  Motivo: Crawl retornou estrutura de erro (provavelmente sem vagas disponíveis)")
+    print(f"  Ação: Job finalizado com SUCESSO - cenário esperado de negócio")
+    print(f"  Registros processados: 0")
+    print("=" * 60)
+
+    job.commit()
+    sys.exit(0)
+
+print(f"[bronze_to_silver] Valid job data detected. Proceeding with transformation...")
+print(f"[bronze_to_silver] Record count: {df_bronze.count()}")
+
+# -------------------------------------------------------------------
 # Limpeza / Normalização básica
 # -------------------------------------------------------------------
 html_tag_pattern = "<[^>]+>"

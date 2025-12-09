@@ -1,0 +1,146 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+First, let me identify what information is explicitly stated in the job posting:
+
+**Title**: Data Engineer-Business Intelligence
+**Company**: IBM
+**Location**: Pune, Maharashtra, India
+
+**Description sections**:
+1. Introduction - talks about IBM Consulting Client Innovation Centers
+2. Your Role And Responsibilities - lists various duties
+3. Preferred Education - Master's Degree
+4. Required Technical And Professional Expertise - Cognos Developer & Admin Required
+5. Education section - full time MCA/M. Tech/B. Tech/B.E. with relevant certifications
+6. Experience section - minimum 3 years experience in BI DW projects
+7. Preferred Technical And Professional Experience - cloud platforms, Agile mindset, ETL tools
+
+Now let me extract each field systematically:
+
+**Compensation**: No salary information is mentioned → all compensation fields should be null
+
+**Work Authorization**: No mention of visa sponsorship, work authorization, or citizenship requirements → visa_sponsorship_stated: "not_mentioned", work_auth_text: null, citizenship_text: null, security_clearance_stated: "not_mentioned"
+
+**Work Model**: 
+- Location is specified as "Pune, Maharashtra, India" but no explicit mention of remote/hybrid/onsite
+- Employment type not explicitly mentioned
+- work_model_stated: "not_mentioned"
+- location_restriction_text: null
+- employment_type_stated: "not_mentioned"
+
+**Contract Details**: No mention of contract type, duration, etc. → all should be null or "not_mentioned"
+
+**Contractor Rates**: No mention of contractor rates → all should be null or "not_mentioned"
+
+**Skills Classification**:
+Let me analyze the skills mentioned:
+
+Required Technical And Professional Expertise:
+- "Cognos Developer & Admin Required" → This is explicitly stated as required, so must_have_hard_skills: ["Cognos Developer", "Cognos Admin"]
+
+
+- "UNIX" → must_have_hard_skills: ["UNIX"]
+
+I'll continue analyzing the preferred technical skills, focusing on cloud platforms and ETL tools. The preferred skills include experience with various cloud and integration platforms like AWS, Google, and Azure. Additionally, an Agile mindset and experience with ETL/Data Integration tools are highlighted as valuable qualifications.
+
+The soft skills section reveals strong communication and time management capabilities. The role demands excellent writing, MIS, communication, and multi-tasking abilities, indicating a need for versatile professional competencies.
+
+The experience requirement specifies a minimum of 3 years in BI DW projects, with a focus on reporting and visualization using Cognos. This suggests a need for hands-on experience in business intelligence and data warehouse environments.
+
+The education requirement is flexible, accepting full-time MCA, M.Tech, B.Tech, or B.E. degrees, with a preference for relevant certifications. This indicates an open approach to educational backgrounds, prioritizing practical skills and experience.
+
+The role does not explicitly mention LLM/GenAI or feature store technologies, keeping the technical scope focused on traditional data engineering and business intelligence tools.
+
+Geographically, the position is based in Pune, Maharashtra, India, with no specific restrictions mentioned. The benefits section is limited, with no detailed information provided about additional perks or compensation beyond the core role requirements.
+
+The company description highlights IBM's Consulting Client Innovation Centers, emphasizing their global delivery of technical and industry expertise to diverse clients across public and private sectors.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": ["Cognos Developer", "Cognos Admin", "UNIX", "BI DW projects", "reporting", "visualization"],
+      "nice_to_have_hard_skills": ["AWS", "Google Cloud Platform", "Azure", "IBM InfoSphere DataStage", "Azure Data Factory", "Informatica PowerCenter"],
+      "must_have_soft_skills": ["Communication", "Time Management", "Multi-tasking", "English proficiency", "Writing skills"],
+      "nice_to_have_soft_skills": ["Agile mindset", "Critical thinking", "Ownership"],
+      "certifications_mentioned": ["relevant certifications"],
+      "years_experience_min": 3,
+      "years_experience_max": null,
+      "years_experience_text": "minimum of 3 years of experience",
+      "education_level": "BACHELORS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "full time MCA/M. Tech/B. Tech/B.E. and should preferably have relevant certifications",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology",
+      "company_description_text": "IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 25
+  }
+}
+```

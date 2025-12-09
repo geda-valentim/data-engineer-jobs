@@ -1,0 +1,253 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Only data governance tools (Alation, Manta) and search platforms (Elasticsearch, Splunk) are mentioned; no modern data stack (dbt, Airflow, Snowflake) or CI/CD practices are described.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Score of 2 maps to \"developing\" maturity level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [
+          "data_governance"
+        ],
+        "confidence": 0.78,
+        "evidence": "Explicit focus on data governance processes, lineage (Alation, Manta) and metadata analysis.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.45,
+        "confidence": 0.80,
+        "evidence": "Role blends data engineering, predictive modeling, enterprise search, and data governance – a broad but still data‑centric scope.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.40,
+        "confidence": 0.75,
+        "evidence": "No explicit mention of on‑call or overtime, but consulting projects at IBM often have client‑driven deadlines that can extend hours.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Pass 2 inference labels scope_definition as \"clear\" and the job description lists concrete responsibilities without mixing unrelated roles.",
+        "source": "pass2_inference"
+      },
+      "overall_red_flag_score": {
+        "value": 0.45,
+        "confidence": 0.80,
+        "evidence": "Moderate scope breadth and potential overtime risk, but clear responsibilities and no contradictory signals.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "Job posting does not specify a manager or reporting line.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "manager",
+        "confidence": 0.65,
+        "evidence": "Typical IBM consulting data roles report to a Data Manager or Lead; no senior director mentioned.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No information about hiring trends or team expansion.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.40,
+        "evidence": "No details on team size, DE headcount, or seniority mix.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No explicit reporting line is provided.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "Description mentions collaboration with cross‑functional teams but not embedding within a product squad.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.40,
+        "confidence": 0.60,
+        "evidence": "No PTO, benefits, or flexible‑hours language is provided; typical IBM consulting roles have standard hours but can be project‑driven.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.30,
+        "confidence": 0.60,
+        "evidence": "No mention of learning budgets, mentorship, or clear career ladders.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.35,
+        "confidence": 0.70,
+        "evidence": "Only legacy‑style tools (Elasticsearch, Splunk) and data‑governance platforms are listed; no CI/CD, testing, or modern stack references.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "None of the predefined tech‑culture signals (open_source, conference_speaking, etc.) appear in the posting.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No explicit mention of code review, CI/CD, testing, monitoring, or incident response.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No statements about experimentation, hackathons, or dedicated innovation time.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No language about refactoring, reducing tech debt, or modernizing legacy pipelines.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.90,
+        "evidence": "Job description does not reference any ML, AI, or MLOps tooling or workflows.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No ML tools are listed.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No start‑date or urgency language appears.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No data on applicant volume, easy‑apply, or location scarcity.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.95,
+        "evidence": "IBM is a publicly traded, global technology enterprise.",
+        "source": "pass1_derived"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No indication of aggressive or steady hiring cadence.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No team size numbers are provided.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.90,
+        "evidence": "IBM is a publicly listed company.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "Job does not state whether it is a new headcount or backfill.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "data_focused_role",
+      "established_company",
+      "clear_requirements"
+    ],
+    "strength_details": [
+      "Role is centered on data engineering and data governance, matching core data skillsets.",
+      "IBM is a large, stable enterprise offering long‑term job security.",
+      "Requirements are clearly listed with a concrete set of hard skills."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "no_visa_sponsorship",
+      "overtime_likely"
+    ],
+    "concern_details": [
+      "Compensation details (salary, equity, benefits) are not provided.",
+      "Visa sponsorship is not mentioned, implying it may not be offered.",
+      "Consulting environment may require extended hours to meet client deadlines."
+    ],
+    "best_fit_categories": [
+      "senior_data_engineers",
+      "data_generalists",
+      "analytics_engineers"
+    ],
+    "best_fit_details": [
+      "Senior data engineers with 5+ years experience comfortable with batch and real‑time pipelines.",
+      "Candidates who enjoy data governance, metadata, and lineage work.",
+      "Engineers looking to apply analytics and search platform experience (Elasticsearch, Splunk)."
+    ],
+    "probe_categories": [
+      "salary_range_details",
+      "visa_sponsorship_details",
+      "work_hour_expectations",
+      "team_size_composition",
+      "career_growth_path"
+    ],
+    "probe_details": [
+      "Ask for the full compensation package, including base, bonus, and benefits.",
+      "Confirm whether the role supports any work‑visa or sponsorship options.",
+      "Clarify typical weekly hours, on‑call duties, and weekend expectations.",
+      "Inquire about the size and seniority mix of the data team you’ll join.",
+      "Understand the defined career ladder or promotion criteria for this position."
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "domain_expertise"
+    ],
+    "leverage_details": [
+      "Your extensive experience with data governance tools (Alation, Manta) aligns directly with the core responsibilities.",
+      "Hands‑on work with enterprise search platforms (Elasticsearch, Splunk) is a niche skill the team needs."
+    ],
+    "overall_assessment": "The role offers a solid data‑engineering focus within a reputable enterprise, with clear technical expectations. Lack of disclosed compensation and potential overtime are the main drawbacks. Candidates with strong data‑governance and search‑platform experience will find a good fit.",
+    "recommendation_score": 0.62,
+    "recommendation_confidence": 0.78
+  }
+}

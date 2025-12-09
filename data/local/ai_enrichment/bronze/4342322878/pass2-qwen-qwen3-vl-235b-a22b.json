@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 16:29:13",
+    "job_posting_id": "4342322878",
+    "job_title": "Senior Data Engineer",
+    "company_name": "Haypp Group",
+    "job_location": "Stockholm, Stockholm County, Sweden",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.95,
+          "evidence": "Job title explicitly states 'Senior Data Engineer' and responsibilities include architecture and team collaboration, indicating senior-level expectations",
+          "source": "pass1_derived"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title is 'Senior Data Engineer' and core responsibilities focus on building/maintaining data pipelines, infrastructure, and working with analytics teams",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.85,
+          "evidence": "Primary tools mentioned are Airflow (orchestration), dbt (transformation), and AWS Redshift/S3 (storage), which are typically used for batch ETL pipelines in e-commerce contexts",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.8,
+          "evidence": "Responsibilities include driving data infrastructure and architecture forward, working with stakeholders, and ensuring data quality — indicating technical leadership without direct reports",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "aws",
+          "confidence": 0.95,
+          "evidence": "Explicitly states 'We work with the AWS technology stack - Redshift, S3, EC2, Lambda, SageMaker' and lists AWS as a must-have skill",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [
+            "gcp"
+          ],
+          "confidence": 0.75,
+          "evidence": "GCP is mentioned as a 'nice to have' skill, indicating it may be used in some capacity or considered for future use",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.7,
+          "evidence": "While no explicit streaming tools are mentioned, e-commerce data pipelines often require both batch (daily reports) and real-time (order tracking) processing; Airflow can handle both, and SageMaker implies ML pipelines that may be batch or streaming",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "airflow_like",
+          "confidence": 0.95,
+          "evidence": "Airflow is explicitly listed as a required tool and is a core part of the tech stack",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.8,
+          "evidence": "AWS Redshift (data warehouse) and S3 (data lake) are both mentioned, indicating a mixed storage architecture typical of modern data platforms",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.85,
+          "evidence": "Location is specified as Stockholm, Sweden, and no remote work is mentioned — implying the role is based in that region, though 'not exclusively based in Sweden' suggests some flexibility within the Nordics",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "europe",
+          "confidence": 0.9,
+          "evidence": "Headquarters in Stockholm, Sweden, and team primarily based in Sweden — strongly implies European timezone focus",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.8,
+          "evidence": "Location is specified as Stockholm, and no remote work is mentioned — implies relocation to Stockholm may be required, though 'not exclusively based in Sweden' suggests possible regional flexibility",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of visa sponsorship; location is in Sweden, not the US, so H1B is not applicable",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of student visas or OPT/CPT; location in Sweden makes US student visas irrelevant",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.85,
+          "evidence": "No citizenship requirement mentioned; company is in Sweden, so EU work authorization is likely required, but no specific citizenship is stated",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Employment type is 'full_time' and 'permanent', with comprehensive benefits listed — typical of W2 employment in Sweden",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "comprehensive",
+          "confidence": 0.85,
+          "evidence": "Benefits include premium pension, private healthcare, 30 days vacation, parental pay lift, wellness allowance, and social events — indicating a comprehensive package",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Mentions 'Learn, grow, be challenged' and 'drive the data infrastructure and its architecture forward' — implies growth opportunities but no specific career tracks are defined",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.8,
+          "evidence": "Mentions working closely with Analytics team and stakeholders, and being part of a tech team — suggests collaboration with senior colleagues, but no formal mentorship program is stated",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of promotions, advancement, or career ladder in the job description",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal transfers, lateral moves, or exploring other roles within the company",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track"
+          ],
+          "confidence": 0.7,
+          "evidence": "Responsibilities include driving architecture and infrastructure, suggesting an IC track (e.g., to Staff/Principal), but no management or specialist tracks are mentioned",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear distinction between must-have skills (SQL, Python, AWS, Terraform, dbt, Airflow) and nice-to-have (GCP, ecommerce), with some flexibility noted ('experience of any other cloud platform... also considered advantageous')",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Role is clearly defined as a Senior Data Engineer focused on building/maintaining data pipelines, infrastructure, and working with analytics — no hybrid or multi-role expectations",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Skills required (SQL, Python, AWS, Airflow, dbt, Terraform) are reasonable for a senior data engineer role; no unrealistic combinations or excessive years of experience demanded",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8831,
+    "input_tokens": 6966,
+    "output_tokens": 1865,
+    "cost": 0.010696
+  }
+}

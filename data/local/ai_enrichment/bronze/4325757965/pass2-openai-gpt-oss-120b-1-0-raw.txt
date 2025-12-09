@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.6,
+        "evidence": "Responsibilities include end‑to‑end feature development, debugging and project management, suggesting several years of experience but no explicit senior title.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Job title is \"Data Engineer‑Business Intelligence\" and core duties revolve around data pipelines and analytics.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.8,
+        "evidence": "Focus on Tableau dashboards, SQL/Oracle/Hive querying large data sets, typical of data‑warehouse/BI work.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.7,
+        "evidence": "Mentions managing end‑to‑end feature development and root‑cause analysis but no direct reports, indicating technical leadership.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No cloud platforms (AWS, Azure, GCP, etc.) are referenced in the posting.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No secondary cloud providers are mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "The description does not discuss streaming or batch processing frameworks.",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No orchestration tools (Airflow, dbt, etc.) are listed.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No storage technologies (warehouse, lake, lakehouse) are referenced.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.8,
+        "evidence": "Location is specified as Pune, Maharashtra, India with no remote work language, implying candidates must be in the same country.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No timezone or regional focus is described.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": null,
+        "confidence": 0.9,
+        "evidence": "The posting does not state whether relocation is required or offered.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": null,
+        "confidence": 0.9,
+        "evidence": "No statement about H‑1B sponsorship is provided.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": null,
+        "confidence": 0.9,
+        "evidence": "No mention of OPT/CPT eligibility.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No citizenship or work‑authorization restrictions are described.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Employment type (W2, C2C, 1099) is not specified.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.9,
+        "evidence": "The posting lists no benefits such as equity, PTO, or learning budget.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No discussion of career ladders or growth tracks.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No reference to mentorship programs or senior‑junior collaboration.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "The description does not mention promotion or advancement pathways.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of internal transfers or lateral moves.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No career tracks (IC, management, specialist, architect) are identified.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.7,
+        "evidence": "The posting lists clear must‑have hard and soft skills but provides no nice‑to‑have items, indicating a balanced requirement set.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.8,
+        "evidence": "The role is specifically described as a Data Engineer focused on Business Intelligence and Tableau dashboards.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "Required skills (SQL, Tableau, Oracle, Hive) align with a typical mid‑level data engineering position; no unrealistic senior‑level expectations are present.",
+        "source": "inferred"
+      }
+    }
+  }
+}

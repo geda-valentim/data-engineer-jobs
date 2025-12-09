@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.85,
+        "evidence": "Title is 'Data Engineer' with 4+ years of experience in Big Data technologies, which aligns with mid-level expectations for this role family.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_platform_engineer",
+        "confidence": 0.90,
+        "evidence": "Title mentions 'Data Engineer-Data Platforms', and responsibilities focus on building and maintaining data platforms using Spark, Hadoop, and Azure cloud technologies.",
+        "source": "combined"
+      },
+      "sub_specialty": {
+        "value": "hybrid",
+        "confidence": 0.80,
+        "evidence": "Responsibilities include both streaming pipelines (Kafka) and batch processing (Spark, Hive, scheduled jobs on Azure Cloud Data Platform).",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.75,
+        "evidence": "Role focuses on development, maintenance, and testing of data solutions without explicit mention of leadership or mentoring responsibilities.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.95,
+        "evidence": "Minimum 3 years of experience on Azure Cloud Data Platform explicitly stated, along with Azure-specific services like Azure Data Factory, Synapse, and Azure HDInsight.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": ["aws"],
+        "confidence": 0.70,
+        "evidence": "Title mentions AWS, but the job description and responsibilities focus primarily on Azure and Hadoop.",
+        "source": "combined"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.80,
+        "evidence": "Mentions both streaming (Kafka) and batch (Spark, Hive) processing paradigms in responsibilities.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.70,
+        "evidence": "Azure Data Factory and Synapse mentioned, which are cloud-native orchestrators for Azure.",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.85,
+        "evidence": "Mentions Azure Cloud Data Platform (warehouse-like) and Hadoop/HDFS (data lake patterns), along with NoSQL databases.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.90,
+        "evidence": "Location is explicitly stated as Pune, Maharashtra, India, implying a regional restriction.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.95,
+        "evidence": "Location is restricted to India (Pune), suggesting a focus on the country's timezone.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of relocation packages or requirements; role is location-specific to Pune.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "Visa sponsorship is not mentioned, and location is restricted to India, implying no H1B sponsorship.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No signals indicating support for OPT/CPT or student visas; location is restricted to India.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No discussion of work authorization, citizenship, or visa requirements in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "Employment type and contract details are not mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits are discussed in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit or implied discussion of career growth paths or tracks in the job posting.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.65,
+        "evidence": "Role is part of IBM Consulting Client Innovation Centers, which mention delivering deep technical expertise with senior staff, suggesting potential mentorship opportunities.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of promotions or advancement paths in the job posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No discussion of internal mobility or role changes in the job posting.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No explicit or implied career tracks mentioned in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "Job posting lists strict minimum experience requirements (4+ years in Big Data, 3+ years in Azure) and certifications as 'preferred', indicating high strictness.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Job description is focused on data engineering responsibilities with a clear emphasis on Spark, Hadoop, and Azure Cloud Data Platform.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "Requirements align reasonably with mid-level seniority (4+ years of experience) and role expectations.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

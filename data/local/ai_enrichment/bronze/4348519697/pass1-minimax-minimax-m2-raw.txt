@@ -1,0 +1,190 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+First, let me identify what information is explicitly stated in the job posting:
+
+**Title**: Data Engineer
+**Company**: Accenture in India
+**Location**: Bengaluru, Karnataka, India
+
+**Description sections**:
+- Project Role: Data Engineer
+- Must have skills: Databricks Unified Data Analytics Platform
+- Good to have skills: NA
+- Minimum 5 Year(s) Of Experience Is Required
+- Educational Qualification: 15 years full time education
+
+**Summary**: Mentions Data Platform Engineer role
+
+**Roles and Responsibilities**: Multiple technical responsibilities listed
+
+**Technical Skills**: Various technical skills mentioned
+
+**Additional Information**: More requirements and skills
+
+**Educational Qualification**: 15 years full time education is required
+
+Now let me extract according to the JSON structure:
+
+**compensation**: No salary information is mentioned, so all compensation fields should be null/false.
+
+**work_authorization**: No mention of visa sponsorship, work authorization, citizenship, or security clearance. So:
+- visa_sponsorship_stated: "not_mentioned"
+- work_auth_text: null
+- citizenship_text: null
+- security_clearance_stated: "not_mentioned"
+
+**work_model**: 
+- Location is explicitly stated as "Bengaluru, Karnataka, India"
+- No mention of remote/hybrid/onsite work model
+- No mention of employment type (full-time, contract, etc.)
+- So:
+  - work_model_stated: "not_mentioned"
+  - location_restriction_text: null
+  - employment_type_stated: "not_mentioned"
+
+**contract_details**: No mention of contract type, duration, etc. So all null/"not_mentioned".
+
+**contractor_rates**: No mention of contractor rates, so all null/"not_mentioned".
+
+**skills_classified**: This is complex. Let me analyze the skills mentioned:
+
+Must have skills explicitly stated: "Databricks Unified Data Analytics Platform"
+
+
+I'll continue analyzing the technical skills, focusing on the explicit requirements and preferred qualifications. The role demands extensive experience with cloud platforms and data engineering technologies. Key requirements include deep expertise in PySpark, Spark, and major cloud providers like AWS, Azure, and GCP. The position requires a minimum of 5-6 years of experience, with specific emphasis on Databricks and real-time data processing capabilities.
+
+The educational requirement is straightforward: 15 years of full-time education, which typically translates to a bachelor's degree. No specific field of study is mandated, and the requirement is clearly stated as mandatory.
+
+Regarding emerging technologies, there's no explicit mention of LLMs or feature stores, so these fields will be marked as false.
+
+Geographically, the role is based in India, with no specific restrictions beyond the location in Bengaluru, Karnataka.
+
+Benefits are not detailed in the provided text, leaving those fields null or unmentioned.
+
+The company context is minimal, with Accenture simply listed as the employer in India.
+
+I'll need to carefully count the fields to ensure accurate metadata tracking, focusing on the explicit information provided in the job posting.
+
+The compensation section requires careful handling, with all fields set to null or false since no specific salary details are mentioned. The work authorization section follows a similar pattern, defaulting to "not_mentioned" across all relevant fields.
+
+For work model details, the location is specified as Bengaluru, Karnataka, India, but no specific work model or employment type is indicated. Contract and contractor rate sections are similarly sparse, with no explicit information provided.
+
+The skills classification section reveals more substantive details, highlighting must-have hard skills like Databricks, PySpark, and cloud platforms, with a minimum of 5 years of experience required. Educational requirements specify 15 years of full-time education, though no specific field is mentioned.
+
+Geographic restrictions are minimal, with the role based in India and no additional constraints specified. Benefits and contextual information remain largely undefined in the provided text.
+
+I'll carefully count the fields to ensure accurate metadata tracking, focusing on the explicit details available in the job posting.
+
+The compensation section contains 10 fields, with all currently null. Work authorization has 4 fields, also all null. Work model details span 3 fields, similarly empty. Contract details include 7 fields, all unset. Contractor rates have 6 fields, none populated.
+
+Skills classification shows more complexity, with 15 total fields. Some key details emerge: 8 must-have hard skills identified, 6 nice-to-have hard skills, and minimum 5 years of experience required. Educational requirements specify 15 years of full-time education, though no specific field mentioned.
+
+Geographic restrictions are limited, with only 2 fields present. Benefits information remains sparse, with 6 fields but minimal concrete details. Context section contains 2 fields, both currently null.
+
+The total field count reaches 60, with 52 currently null and 8 containing actual information. This suggests a largely incomplete data extraction, with significant gaps in the available job posting details.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Databricks Unified Data Analytics Platform",
+        "PySpark",
+        "Spark",
+        "AWS",
+        "Azure",
+        "GCP",
+        "Python",
+        "SQL"
+      ],
+      "nice_to_have_hard_skills": [
+        "Apache Airflow",
+        "Parquet",
+        "Avro",
+        "JSON",
+        "Kafka",
+        "CI/CD pipelines"
+      ],
+      "must_have_soft_skills": [],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 5,
+      "years_experience_max": null,
+      "years_experience_text": "Minimum 5 Year(s) Of Experience Is Required",
+      "education_level": "BACHELORS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "15 years full time education is required",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": null,
+      "company_description_text": null
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 8,
+    "fields_null": 52
+  }
+}
+```

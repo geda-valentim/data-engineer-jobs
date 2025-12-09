@@ -1,0 +1,164 @@
+<reasoning>I need to carefully extract information from this job posting for a Senior Data Engineer position at Haypp Group. Let me go through each section systematically.
+
+First, let me identify the key information:
+
+**Title**: Senior Data Engineer
+**Company**: Haypp Group
+**Location**: Stockholm, Stockholm County, Sweden
+
+Now let me extract the information according to the specified format:
+
+1. **Compensation**: I need to check if salary is mentioned. Looking through the text, I don't see any specific salary figures mentioned. So salary_disclosed would be false, and all salary fields would be null.
+
+2. **Work Authorization**: I need to look for visa sponsorship or work authorization requirements. The text mentions "Haypp Group is committed to equality and diversity, and we welcome applications from all qualified individuals regardless of ethnicity, religion, age, gender, sexual orientation, disability, and marital status." This suggests they welcome all qualified individuals, but doesn't explicitly mention visa sponsorship. I should classify this as "not_mentioned" since there's no clear statement about visa sponsorship.
+
+3. **Work Model**: The location is Stockholm, Sweden, but I don't see any mention of remote/hybrid/onsite work model. The text doesn't specify, so this would be "not_mentioned". For employment type, it seems like a full-time position based on the context, but let me check... The text doesn't explicitly say "full-time" but given it's a senior role at a company, it's likely full-time. However, I should be conservative and say "not_mentioned" if it's not explicitly stated.
+
+4. **Contract Details**: This appears to be a permanent position since it's a senior role at a company, but I don't see explicit mention of contract type. Let me be conservative and say "not_mentioned" unless explicitly stated.
+
+5. **Contractor Rates**: This doesn't apply as this appears to be an employee position, not contractor.
+
+6. **Skills Classified**: This is a complex section. Let me analyze the requirements:
+
+**Must-have hard skills** (based on strong qualifiers):
+- SQL (mentioned as "Fluency in using SQL and Python is a must")
+- Python (mentioned as "Fluency in using SQL and Python is a must")
+- Data Engineering (mentioned as "Previous experience in Data Engineering roles")
+ 
+I'll continue analyzing the technical requirements, focusing on the nuanced details of the role's skill set. The position demands a comprehensive technical background with specific expertise in data infrastructure and cloud technologies. Key areas include deep knowledge of data governance, security protocols, and observability practices. The role requires hands-on experience with AWS services, infrastructure as code tools like Terraform, and modern data transformation frameworks such as dbt and Airflow.
+
+The soft skills requirements emphasize collaborative and adaptive communication abilities. The ideal candidate must demonstrate strong interpersonal capabilities, technical acumen, and commercial awareness. Fluency in English is essential, with Swedish language skills considered an additional advantage. The role prioritizes team-oriented individuals who can effectively interact across technical and non-technical domains.
+
+The educational background suggests flexibility, with previous data engineering experience being the primary qualification. While no specific degree is mandated, the role implies a technical or related field of study. The position appears to be a permanent, full-time opportunity with no explicit geographic restrictions beyond the Stockholm location.
+
+The benefits package reflects a comprehensive approach to employee well-being, including robust pension savings, healthcare insurance, generous vacation time, and additional wellness support. The company culture emphasizes collaboration, innovation, and individual growth.
+
+The role centers on data engineering within an e-commerce context, leveraging AWS technologies like Redshift, S3, EC2, Lambda, and SageMaker. Key responsibilities involve building scalable data pipelines, ensuring data quality, and supporting advanced machine learning initiatives through tools like dbt, Airflow, and Terraform.
+
+The position requires deep technical expertise in data infrastructure, with a focus on connecting multiple data sources and transforming complex e-commerce data into actionable business insights. The ideal candidate will have strong technical skills and the ability to collaborate across different organizational teams.
+
+Key qualifications include fluency in SQL and Python, a solid understanding of data governance, and experience with cloud platforms like AWS. The role emphasizes both technical proficiency and commercial thinking, with a preference for candidates who can bridge technical and business perspectives.
+
+The position offers a comprehensive benefits package, including a premium pension plan, extensive insurance coverage, generous vacation time, and wellness allowances. The company values collaboration, innovation, and individual growth, creating an environment that encourages professional development and meaningful contributions.
+
+The role requires strong interpersonal skills, adaptability, and excellent communication abilities. Candidates should be ambitious, eager to learn, and capable of working effectively within a dynamic team structure. Fluency in English is essential, with Swedish language skills considered a valuable additional asset.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "SQL",
+        "Python",
+        "Data Engineering",
+        "AWS",
+        "Terraform",
+        "dbt",
+        "Airflow",
+        "data governance",
+        "data security",
+        "data maintainability",
+        "data observability"
+      ],
+      "nice_to_have_hard_skills": [
+        "GCP",
+        "e-commerce"
+      ],
+      "must_have_soft_skills": [
+        "Team Collaboration",
+        "Communication",
+        "Adaptability",
+        "Technical Mindset",
+        "Commercial Thinking"
+      ],
+      "nice_to_have_soft_skills": [
+        "Swedish language"
+      ],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [
+        "Premium ITP1 occupational pension savings plan",
+        "Insurance plan including private healthcare",
+        "30 days of paid vacation",
+        "Parental pay lift",
+        "Wellness allowance of 5,000 SEK per year",
+        "Social happenings"
+      ],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "generous"
+    },
+    "context": {
+      "team_info_text": "300 team members mainly but not exclusively based in Sweden",
+      "company_description_text": "Haypp Group is one of the Nordics' leading e-commerce groups with eleven store brands, present in seven countries where we serve more than 1 million active consumers. Through brands such as Snusbolaget.se, Northerner.com, Nicokick.com etc., we sell nicotine pouches, Swedish style snus online as well as disposable vapes. With our headquarters located on Östgötagatan in Stockholm we are 300 team members mainly but not exclusively based in Sweden. Also, we are an innovative and fast-moving company that is growing rapidly, driving sustainable business and are changing the world in the process."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 25
+  }
+}
+```

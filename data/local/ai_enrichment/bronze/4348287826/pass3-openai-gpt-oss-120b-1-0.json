@@ -1,0 +1,276 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 12:54:00",
+    "job_posting_id": "4348287826",
+    "job_title": "Data Engineer",
+    "company_name": "BeaconFire Inc.",
+    "job_location": "New Jersey, United States",
+    "pass_name": "pass3",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 2,
+          "confidence": 0.75,
+          "evidence": "Only relational databases and basic ETL are mentioned; no modern stack, orchestration, data catalog, or governance tools are referenced.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "developing",
+          "confidence": 0.75,
+          "evidence": "The limited tooling and lack of explicit data governance indicate a developing maturity level.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "data_quality_testing"
+          ],
+          "confidence": 0.8,
+          "evidence": "Job description explicitly mentions building automated unit tests and participating in integration testing.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.1,
+          "confidence": 0.9,
+          "evidence": "Responsibilities focus solely on data engineering tasks (ETL/ELT, testing, performance troubleshooting) with no mention of dev‑ops, analytics, or product ownership.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.4,
+          "confidence": 0.75,
+          "evidence": "No explicit work‑hour, on‑call, or PTO details are provided; typical startup environments may imply occasional overtime.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "The posting lists specific data‑engineer duties and required skills without blending other functional roles.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.25,
+          "confidence": 0.8,
+          "evidence": "Low scope creep combined with moderate overtime risk results in an overall low red‑flag rating.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "The posting does not state who the Data Engineer reports to.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No manager or director title is provided in the description.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.7,
+          "evidence": "No information about hiring pace, team expansion, or recent growth is included.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": null,
+          "confidence": 0.5,
+          "evidence": "The job posting does not disclose team size, number of engineers, or seniority mix.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No reporting line or hierarchy is described.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.7,
+          "evidence": "Collaboration with the analytics team is mentioned, but there is no indication of being embedded in product squads.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.3,
+          "confidence": 0.7,
+          "evidence": "No PTO, benefits, or remote‑work policy are disclosed, suggesting limited work‑life‑balance signals.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.3,
+          "confidence": 0.7,
+          "evidence": "The posting lacks references to mentorship, learning budgets, or clear career progression paths.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.4,
+          "confidence": 0.75,
+          "evidence": "Some engineering practice (unit testing) is mentioned, but overall modern tooling and cultural programs are absent.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [],
+          "confidence": 0.8,
+          "evidence": "No mention of open‑source contributions, conference support, or innovation programs.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.8,
+          "evidence": "Only automated unit testing is referenced; CI/CD, code review, monitoring, or incident response are not described.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "The description does not discuss experimentation, R&D time, or adoption of emerging technologies.",
+          "source": "pass1_derived"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "No language about refactoring, reducing technical debt, or modernizing legacy pipelines appears.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.9,
+          "evidence": "The posting contains no references to machine‑learning models, feature stores, or MLOps tooling.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No ML‑related tools are listed in the requirements or responsibilities.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "There is no start‑date, ASAP language, or urgency phrasing in the posting.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "not_mentioned",
+          "confidence": 0.7,
+          "evidence": "No data on applicant volume, location competitiveness, or salary benchmarks is provided.",
+          "source": "pass1_derived"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "The job description does not disclose company size, funding round, or growth stage.",
+          "source": "pass1_derived"
+        },
+        "hiring_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "No indication of aggressive or steady hiring cadence is present.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "Team size or composition is not mentioned.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "No funding stage (seed, Series A, etc.) is referenced.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "It is unclear whether this is a new headcount, backfill, or expansion role.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "clear_requirements",
+        "well_defined_role",
+        "startup_energy",
+        "collaborative_culture"
+      ],
+      "strength_details": [
+        "A precise list of required technical (Python, SQL, ETL) and soft skills provides clear expectations.",
+        "The role is narrowly focused on data‑engineering tasks without unrelated responsibilities.",
+        "Opportunity to join a growing software and business‑intelligence company with a hands‑on data function.",
+        "Collaboration with the analytics team suggests a cooperative environment."
+      ],
+      "concern_categories": [
+        "salary_not_disclosed",
+        "no_visa_sponsorship",
+        "limited_growth",
+        "work_life_balance"
+      ],
+      "concern_details": [
+        "Compensation range and equity details are not provided in the posting.",
+        "No mention of visa sponsorship or support for non‑US work authorization.",
+        "Career progression, mentorship, and internal mobility are not described.",
+        "Benefits, PTO, and remote‑work policies are omitted, making work‑life balance unclear."
+      ],
+      "best_fit_categories": [
+        "mid_level_engineers",
+        "data_generalists",
+        "startup_enthusiasts"
+      ],
+      "best_fit_details": [
+        "Mid‑level data engineers comfortable with Python, relational databases, and batch ETL pipelines.",
+        "Candidates who enjoy building and maintaining data transformation systems in a small, fast‑moving team.",
+        "Professionals attracted to the energy of a growing software/BI startup and willing to wear a focused DE hat."
+      ],
+      "probe_categories": [
+        "salary_range_details",
+        "career_growth_path",
+        "team_size_composition",
+        "remote_policy_details",
+        "work_hour_expectations"
+      ],
+      "probe_details": [
+        "Ask for the specific compensation range, bonus structure, and any equity components.",
+        "Inquire about formal promotion tracks, mentorship programs, and opportunities for skill development.",
+        "Clarify the size of the data engineering team and how responsibilities are divided.",
+        "Determine whether remote work is allowed, and if any location or onsite requirements exist.",
+        "Find out expected weekly hours, on‑call duties, and how overtime is handled."
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "quick_availability",
+        "domain_expertise"
+      ],
+      "leverage_details": [
+        "Your hands‑on experience with Python, SQL, and building ETL pipelines aligns directly with the core responsibilities.",
+        "If you can start immediately, you meet the implied fast‑track hiring timeline.",
+        "Background in business intelligence and data transformation adds domain value for the company's core products."
+      ],
+      "overall_assessment": "The role offers a clear, focused data‑engineering position within a growing software/BI company, using a familiar tech stack (Python, relational databases). Compensation details are missing and there is no visa support, but the limited scope and opportunity to shape a small team make it attractive for mid‑level engineers seeking a hands‑on role. Consider the lack of benefits and potential overtime when evaluating fit.",
+      "recommendation_score": 0.6,
+      "recommendation_confidence": 0.8
+    },
+    "tokens": 15138,
+    "input_tokens": 9534,
+    "output_tokens": 5604,
+    "cost": 0.0031113
+  }
+}

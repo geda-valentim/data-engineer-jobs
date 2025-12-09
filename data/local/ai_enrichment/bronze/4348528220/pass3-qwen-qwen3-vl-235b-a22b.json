@@ -1,0 +1,276 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 16:45:23",
+    "job_posting_id": "4348528220",
+    "job_title": "Data Engineer-Data Integration",
+    "company_name": "IBM",
+    "job_location": "Hyderabad, Telangana, India",
+    "pass_name": "pass3",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.75,
+          "evidence": "Uses Snowflake (modern warehouse) and Talend (ETL tool) with focus on schema design, performance tuning, and data governance. No mention of CI/CD, testing frameworks, or data observability tools.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.75,
+          "evidence": "Matches score of 3 - documented processes around warehouse design and ETL, but lacks advanced governance or monitoring signals.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption",
+            "data_governance"
+          ],
+          "confidence": 0.7,
+          "evidence": "Snowflake and Talend indicate modern stack adoption; mentions data validation, cleansing, and governance frameworks.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.45,
+          "confidence": 0.8,
+          "evidence": "Role includes implementing predictive models and statistical modeling (typically DS/ML roles) alongside core DE responsibilities (pipelines, warehouse).",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.3,
+          "confidence": 0.65,
+          "evidence": "No explicit overtime or on-call mentions, but IBM delivery center context implies client-driven deadlines. No PTO or work-life balance signals.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "multi_role",
+          "confidence": 0.85,
+          "evidence": "Combines core data engineering (pipelines, warehouse) with data science tasks (predictive models, statistical modeling).",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.4,
+          "confidence": 0.75,
+          "evidence": "Moderate risk due to scope creep (DE + DS tasks) and unclear work-life balance, offset by IBM's established structure.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "vague",
+          "confidence": 0.7,
+          "evidence": "Mentions 'IBM Consulting Client Innovation Centers' but no specific manager or reporting line stated.",
+          "source": "inferred"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No managerial title or reporting structure mentioned in job posting or Pass 1/2.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "unknown",
+          "confidence": 0.6,
+          "evidence": "No information on team expansion or hiring velocity provided.",
+          "source": "not_mentioned"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.5,
+          "evidence": "No team size or composition details provided beyond 'Client Innovation Centers'.",
+          "source": "not_mentioned"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No reporting structure details provided in job posting.",
+          "source": "not_mentioned"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.75,
+          "evidence": "Mentions 'collaborating closely with diverse teams' but context suggests centralized delivery center, not embedded in product teams.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.5,
+          "confidence": 0.65,
+          "evidence": "No PTO, flexible hours, or work-life balance mentions. Onsite requirement in Hyderabad may imply standard corporate hours.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.6,
+          "confidence": 0.7,
+          "evidence": "IBM brand suggests growth paths, but no explicit learning budget, mentorship, or career tracks mentioned.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.65,
+          "confidence": 0.75,
+          "evidence": "Modern tools (Snowflake, Talend) but no mention of engineering practices (CI/CD, testing, code review) or innovation culture.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.95,
+          "evidence": "No mention of open source, tech blogs, conferences, hackathons, or innovation time.",
+          "source": "not_mentioned"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.95,
+          "evidence": "No explicit mention of code review, CI/CD, testing, monitoring, or design docs.",
+          "source": "not_mentioned"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.7,
+          "evidence": "Focus on implementation and validation of existing models, no mention of experimentation or new tech exploration.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of tech debt, refactoring, or code quality improvement initiatives.",
+          "source": "not_mentioned"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "basic_ml",
+          "confidence": 0.8,
+          "evidence": "Mentions implementing predictive models and statistical modeling, but no MLOps, feature stores, or GenAI tools mentioned.",
+          "source": "inferred"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No specific ML tools (SageMaker, MLflow, etc.) mentioned in job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No urgency signals like 'ASAP' or 'immediate start' mentioned.",
+          "source": "not_mentioned"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "IBM brand attracts candidates; location in Hyderabad (India) suggests moderate competition compared to global tech hubs.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "established_tech",
+          "confidence": 0.95,
+          "evidence": "IBM is a well-known, established technology company with global delivery centers.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.75,
+          "evidence": "IBM likely hires regularly, but no specific expansion or aggressive hiring signals in posting.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No team size details provided beyond 'Client Innovation Centers'.",
+          "source": "not_mentioned"
+        },
+        "funding_stage_signals": {
+          "value": "public",
+          "confidence": 0.95,
+          "evidence": "IBM is a publicly traded company.",
+          "source": "inferred"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No indication if this is a new headcount, backfill, or expansion role.",
+          "source": "not_mentioned"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "modern_tech_stack",
+        "established_company",
+        "data_focused_role"
+      ],
+      "strength_details": [
+        "Uses modern data warehouse (Snowflake) and ETL tool (Talend)",
+        "IBM is a globally recognized, established technology company",
+        "Core focus on data engineering tasks (pipelines, modeling, warehouse)"
+      ],
+      "concern_categories": [
+        "scope_creep_risk",
+        "vague_requirements",
+        "limited_growth",
+        "unclear_reporting"
+      ],
+      "concern_details": [
+        "Role combines data engineering with data science tasks (predictive models), creating scope creep",
+        "No clear career growth path, mentorship, or learning opportunities mentioned",
+        "Reporting structure and team composition are not specified"
+      ],
+      "best_fit_categories": [
+        "mid_level_engineers",
+        "pipeline_developers",
+        "cloud_specialists"
+      ],
+      "best_fit_details": [
+        "Mid-level data engineers with 3-5 years experience in ETL and data warehousing",
+        "Candidates experienced with Talend and Snowflake for batch processing pipelines",
+        "Engineers comfortable with onsite work in Hyderabad and client-facing delivery centers"
+      ],
+      "probe_categories": [
+        "role_scope_boundaries",
+        "career_growth_path",
+        "tech_stack_details",
+        "work_hour_expectations"
+      ],
+      "probe_details": [
+        "Clarify if predictive modeling is a core responsibility or occasional task",
+        "Ask about career progression opportunities within IBM's data engineering teams",
+        "Inquire about specific cloud platforms used and team's engineering practices",
+        "Understand expected work hours and client deadline pressures"
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "domain_expertise"
+      ],
+      "leverage_details": [
+        "Strong experience with Talend and Snowflake is a key differentiator for this role",
+        "Experience with enterprise data warehousing and client delivery environments is valuable"
+      ],
+      "overall_assessment": "Solid opportunity for mid-level data engineers seeking to work with modern tools (Snowflake, Talend) at an established company (IBM). Role has some scope creep risk by including data science tasks, and lacks clarity on growth paths and team structure. Best suited for candidates prioritizing stable employment and technical execution over innovation or leadership development.",
+      "recommendation_score": 0.65,
+      "recommendation_confidence": 0.75
+    },
+    "tokens": 11959,
+    "input_tokens": 9526,
+    "output_tokens": 2433,
+    "cost": 0.014391999999999999
+  }
+}

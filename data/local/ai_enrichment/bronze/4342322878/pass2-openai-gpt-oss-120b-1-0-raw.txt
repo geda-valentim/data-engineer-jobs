@@ -1,0 +1,154 @@
+{
+  "seniority_level": {
+    "value": "senior",
+    "confidence": 0.95,
+    "evidence": "Job title explicitly states \"Senior Data Engineer\".",
+    "source": "pass1_derived"
+  },
+  "job_family": {
+    "value": "data_engineer",
+    "confidence": 0.98,
+    "evidence": "Title and core responsibilities focus on building and maintaining data pipelines.",
+    "source": "pass1_derived"
+  },
+  "sub_specialty": {
+    "value": "batch_etl",
+    "confidence": 0.85,
+    "evidence": "Mentions Airflow, scheduled pipelines, and Redshift data warehouse; no streaming technologies are listed.",
+    "source": "inferred"
+  },
+  "leadership_expectation": {
+    "value": "tech_lead_ic",
+    "confidence": 0.75,
+    "evidence": "Responsibilities include driving data infrastructure and architecture forward, but no people‑management duties are mentioned.",
+    "source": "inferred"
+  },
+  "primary_cloud": {
+    "value": "aws",
+    "confidence": 0.98,
+    "evidence": "AWS services (Redshift, S3, EC2, Lambda, SageMaker) are explicitly listed.",
+    "source": "pass1_derived"
+  },
+  "secondary_clouds": {
+    "value": [
+      "gcp"
+    ],
+    "confidence": 0.85,
+    "evidence": "GCP is mentioned as a nice‑to‑have cloud platform.",
+    "source": "pass1_derived"
+  },
+  "processing_paradigm": {
+    "value": "batch",
+    "confidence": 0.90,
+    "evidence": "Airflow is highlighted for orchestrating pipelines; no streaming tools (e.g., Kafka, Kinesis) are referenced.",
+    "source": "inferred"
+  },
+  "orchestrator_category": {
+    "value": "airflow_like",
+    "confidence": 0.95,
+    "evidence": "Airflow is explicitly mentioned as a core tool.",
+    "source": "pass1_derived"
+  },
+  "storage_layer": {
+    "value": "mixed",
+    "confidence": 0.85,
+    "evidence": "Redshift (data warehouse) and S3 (data lake) are both used for storage.",
+    "source": "inferred"
+  },
+  "remote_restriction": {
+    "value": "same_country",
+    "confidence": 0.90,
+    "evidence": "Location restriction is \"Stockholm, Stockholm County, Sweden\" with no remote‑work statement.",
+    "source": "pass1_derived"
+  },
+  "timezone_focus": {
+    "value": "europe",
+    "confidence": 0.90,
+    "evidence": "Job is based in Sweden, which is in the European time zone.",
+    "source": "pass1_derived"
+  },
+  "relocation_required": {
+    "value": false,
+    "confidence": 0.85,
+    "evidence": "No relocation package or requirement is mentioned; the role is tied to a specific Swedish location.",
+    "source": "inferred"
+  },
+  "h1b_friendly": {
+    "value": false,
+    "confidence": 0.90,
+    "evidence": "Position is in Sweden; H‑1B sponsorship is not applicable and not mentioned.",
+    "source": "pass1_derived"
+  },
+  "opt_cpt_friendly": {
+    "value": false,
+    "confidence": 0.90,
+    "evidence": "No reference to OPT/CPT or student visa support; the role is outside the US.",
+    "source": "pass1_derived"
+  },
+  "citizenship_required": {
+    "value": "work_auth_only",
+    "confidence": 0.85,
+    "evidence": "Only a country restriction (Sweden) is given; no citizenship clause is stated.",
+    "source": "pass1_derived"
+  },
+  "w2_vs_1099": {
+    "value": "not_mentioned",
+    "confidence": 0.90,
+    "evidence": "Employment type and contract type are listed as \"not_mentioned\" in the extraction.",
+    "source": "pass1_derived"
+  },
+  "benefits_level": {
+    "value": "standard",
+    "confidence": 0.85,
+    "evidence": "Benefits include pension, private health insurance, 30 days vacation, parental pay, wellness allowance, and social events (multiple standard perks).",
+    "source": "pass1_derived"
+  },
+  "growth_path_clarity": {
+    "value": "vague",
+    "confidence": 0.70,
+    "evidence": "The posting mentions \"Learn, grow, be challenged\" but provides no specific career ladder or promotion tracks.",
+    "source": "inferred"
+  },
+  "mentorship_signals": {
+    "value": "implied",
+    "confidence": 0.70,
+    "evidence": "Collaboration with Analytics team and stakeholders is highlighted, suggesting informal mentorship, but no formal program is described.",
+    "source": "inferred"
+  },
+  "promotion_path_mentioned": {
+    "value": false,
+    "confidence": 0.90,
+    "evidence": "No language about promotions, ladders, or moving to higher titles appears in the posting.",
+    "source": "pass1_derived"
+  },
+  "internal_mobility_mentioned": {
+    "value": false,
+    "confidence": 0.90,
+    "evidence": "The posting does not reference internal transfers or lateral moves.",
+    "source": "pass1_derived"
+  },
+  "career_tracks_available": {
+    "value": [],
+    "confidence": 0.90,
+    "evidence": "No career track (IC, management, specialist, architect) is mentioned in the job description.",
+    "source": "pass1_derived"
+  },
+  "requirement_strictness": {
+    "value": "medium",
+    "confidence": 0.80,
+    "evidence": "A clear set of must‑have hard and soft skills is listed alongside a short nice‑to‑have list, indicating balanced strictness.",
+    "source": "inferred"
+  },
+  "scope_definition": {
+    "value": "clear",
+    "confidence": 0.90,
+    "evidence": "The responsibilities focus specifically on data engineering tasks without mixing other roles.",
+    "source": "inferred"
+  },
+  "skill_inflation_detected": {
+    "value": false,
+    "confidence": 0.85,
+    "evidence": "The skill set (SQL, Python, AWS, dbt, Airflow, Terraform) aligns with typical senior data engineer expectations.",
+    "source": "inferred"
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 19:47:10",
+    "job_posting_id": "4348547771",
+    "job_title": "Application Developer-Process Management (BPM)",
+    "company_name": "IBM",
+    "job_location": "Bengaluru East, Karnataka, India",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.75,
+          "evidence": "IBM is a large, established company with a global consulting practice, suggesting documented processes and modern tools. However, the job posting does not explicitly mention governance or advanced patterns like data mesh.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.75,
+          "evidence": "Matches the data_maturity_score of 3, inferred from IBM's global consulting practice and mention of robust technology platforms.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No explicit signals about modern data stack, governance, or CI/CD practices in the job posting or Pass 1 results. The focus is on BPM tools and enterprise integrations (ERP, CRM), which are not directly indicative of data maturity.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.7,
+          "confidence": 0.85,
+          "evidence": "Role combines responsibilities of BPM development (Appian, IBM BPM, Pega, Camunda) with data engineering tasks (data gathering, storage, batch/real-time processing). This suggests moderate scope creep, as the primary focus is on BPM with secondary data engineering duties.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "Job posting mentions 'fast-paced' consulting environment and 'close collaboration with clients', which may imply tight deadlines. However, no explicit signals about overtime or work-life balance are provided.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "multi_role",
+          "confidence": 0.85,
+          "evidence": "Job description conflates BPM development and data engineering responsibilities, indicating a hybrid role.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.5,
+          "confidence": 0.8,
+          "evidence": "Moderate scope creep and potential overtime risk due to consulting pace, but role is at a large, established company with likely structured processes.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of reporting structure in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No specific manager or leadership titles mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No signals about team growth velocity in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.9,
+          "evidence": "No explicit or inferred team composition details in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No reporting structure details provided in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.8,
+          "evidence": "Job posting mentions collaborating closely with diverse teams and clients, implying cross-functional work.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "Consulting environment may imply tight deadlines, but no explicit negative signals about work-life balance. No protective factors like PTO or flexibility are mentioned either.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.6,
+          "confidence": 0.75,
+          "evidence": "IBM Consulting emphasizes long-term client relationships and global collaboration, suggesting potential growth opportunities. However, no explicit learning budget, mentorship, or career paths are mentioned.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "Mentions working with robust technology platforms and enterprise systems, but no explicit signals about modern engineering practices or tooling beyond BPM/Appian.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No explicit or inferred signals about open source contributions, tech blogs, or innovation time in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.85,
+          "evidence": "No explicit mention of code review, pair programming, TDD, CI/CD, or other development practices in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit or inferred signals about innovation or experimentation culture in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit or inferred signals about tech debt management or refactoring in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.9,
+          "evidence": "No mention of ML/AI tools or responsibilities in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No ML/AI tools mentioned or inferred from the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit signals about hiring urgency in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "high",
+          "confidence": 0.7,
+          "evidence": "Location is Bengaluru, India, a competitive tech hub. The role is at IBM, a well-known company, which may attract many applicants. However, the hybrid BPM/Data Engineering focus could limit the applicant pool to those with overlapping skills.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.95,
+          "evidence": "IBM is a large, established enterprise with global operations and consulting services.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit signals about hiring velocity in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit or inferred signals about team size in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "IBM is a public company, but no explicit mention of funding stage in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit signals about whether this is a new role, backfill, or team expansion.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "established_company",
+        "collaborative_culture",
+        "data_focused_role"
+      ],
+      "strength_details": [
+        "IBM is a globally recognized enterprise with long-term client relationships and a robust technology portfolio, offering stability and prestige.",
+        "Role emphasizes close collaboration with diverse teams and clients, which can provide exposure to varied business domains and technical challenges.",
+        "Opportunity to work on data gathering, storage, and batch/real-time processing, aligning with core data engineering responsibilities."
+      ],
+      "concern_categories": [
+        "scope_creep_risk",
+        "unclear_reporting",
+        "limited_growth"
+      ],
+      "concern_details": [
+        "Role combines BPM development (Appian, IBM BPM, Pega, Camunda) with data engineering tasks, which may lead to divided focus and scope creep.",
+        "No clear reporting structure or manager mentioned, which could create ambiguity in leadership and career guidance.",
+        "While growth opportunities are implied through consulting, no explicit career paths, mentorship, or learning support are mentioned, suggesting potential limitations."
+      ],
+      "best_fit_categories": [
+        "senior_data_engineers",
+        "pipeline_developers",
+        "career_changers"
+      ],
+      "best_fit_details": [
+        "Senior data engineers with 5+ years of experience who also have BPM/Appian development skills and are comfortable with enterprise integrations (ERP, CRM).",
+        "Mid-level engineers with 3-5 years of experience in BPM tools (especially Appian) who are looking to transition into a hybrid role with some data engineering responsibilities.",
+        "Career changers with prior BPM development experience and foundational database knowledge who want to pivot into data engineering within a consulting framework."
+      ],
+      "probe_categories": [
+        "role_scope_boundaries",
+        "reporting_structure",
+        "career_growth_path",
+        "work_hour_expectations",
+        "tech_stack_details"
+      ],
+      "probe_details": [
+        "Ask for clarity on the split between BPM development and data engineering responsibilities in day-to-day work.",
+        "Probe the reporting structure: Who will be the direct manager, and what is their background (BPM vs. data engineering)?",
+        "Understand the career growth path: Are there separate tracks for BPM developers and data engineers, or is advancement tied to hybrid performance?",
+        "Inquire about typical work hours, deadlines, and whether overtime or weekend work is expected due to consulting engagements.",
+        "Ask about the tech stack beyond BPM/Appian: What tools are used for data processing, storage, and orchestration?"
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "domain_expertise"
+      ],
+      "leverage_details": [
+        "Candidates with 3+ years of Appian development and database experience (Oracle SQL/MySQL) have exact expertise for this role.",
+        "Experience integrating BPM solutions with ERP/CRM systems via APIs is a strong differentiator and can be leveraged for compensation or role clarity."
+      ],
+      "overall_assessment": "This role at IBM Consulting is a hybrid opportunity blending BPM development and data engineering, ideal for candidates with overlapping skills in Appian and databases. While the enterprise context provides stability and global exposure, the hybrid nature of the role may lead to scope ambiguity and unclear career progression. Candidates should prioritize probing role boundaries, reporting structure, and growth paths during interviews.",
+      "recommendation_score": 0.6,
+      "recommendation_confidence": 0.8
+    },
+    "tokens": 12951,
+    "input_tokens": 10046,
+    "output_tokens": 2905,
+    "cost": 0.015856
+  }
+}

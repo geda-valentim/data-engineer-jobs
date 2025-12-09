@@ -1,0 +1,276 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 20:23:00",
+    "job_posting_id": "4348613434",
+    "job_title": "Data Engineer-Data Modeling",
+    "company_name": "IBM",
+    "job_location": "Pune, Maharashtra, India",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.75,
+          "evidence": "Mentions data governance practices and enterprise-level data modeling tools (Erwin, IBM Infosphere Data Architect), but lacks explicit signals about automation, CI/CD, or advanced monitoring.",
+          "source": "combined"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.75,
+          "evidence": "Score of 3 aligns with 'defined' maturity level, indicating documented processes and some governance but inconsistent advanced practices.",
+          "source": "combined"
+        },
+        "maturity_signals": {
+          "value": [
+            "data_governance"
+          ],
+          "confidence": 0.8,
+          "evidence": "Explicit mention of 'data governance practices' and 'data warehousing concepts' suggests structured data management. No clear evidence of modern MDS adoption or CI/CD/testing.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.4,
+          "confidence": 0.85,
+          "evidence": "Role combines data engineering with data modeling, architecture, and some ML responsibilities (e.g., predictive models, statistical techniques). However, it remains primarily data-focused.",
+          "source": "combined"
+        },
+        "overtime_risk_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "Agile environment and 'managing multiple projects simultaneously' suggest moderate time pressure. No explicit work-life balance signals or PTO mentions to mitigate this risk.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "multi_role",
+          "confidence": 0.85,
+          "evidence": "Responsibilities span data modeling, architecture, predictive modeling, and enterprise search applications, indicating a multi-role expectation within a data-focused scope.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.45,
+          "confidence": 0.8,
+          "evidence": "Moderate scope creep and overtime risk due to multi-project environment, but role remains data-centric and well-defined in core areas.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 1.0,
+          "evidence": "No explicit or inferred reporting structure mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "No clear evidence of reporting line or manager level in the job posting.",
+          "source": "inferred"
+        },
+        "team_growth_velocity": {
+          "value": "unknown",
+          "confidence": 0.55,
+          "evidence": "Team composition is mentioned but lacks explicit signals about growth velocity or hiring plans.",
+          "source": "inferred"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.5,
+          "evidence": "Job posting mentions partnering with scientists, engineers, and consultants but does not specify team size or composition.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 1.0,
+          "evidence": "No explicit or inferred reporting structure mentioned in the job posting.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.85,
+          "evidence": "Explicit mention of working in an 'Agile, collaborative environment, partnering with other scientists, engineers, consultants and database administrators' suggests cross-functional embedding.",
+          "source": "pass1_derived"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "Agile and collaborative environment implies some pace, but no explicit negative signals (e.g., on-call, overtime). No protective factors like PTO or flexibility mentioned.",
+          "source": "combined"
+        },
+        "growth_opportunities_score": {
+          "value": 0.7,
+          "confidence": 0.75,
+          "evidence": "Role involves mentorship signals (partnering with other engineers) and potential for leadership, but no explicit learning budget, career paths, or internal mobility mentioned.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.6,
+          "confidence": 0.7,
+          "evidence": "Mentions data governance and enterprise search tools, but lacks explicit signals about modern development practices (e.g., CI/CD, testing, observability).",
+          "source": "combined"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [],
+          "confidence": 0.6,
+          "evidence": "No explicit mentions of open source contributions, tech blogs, or conference speaking. Some signals about collaboration and analytical rigor.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [],
+          "confidence": 0.8,
+          "evidence": "No explicit development practices (e.g., code review, pair programming, TDD) mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.65,
+          "evidence": "Focus on data modeling and governance with no explicit mention of innovation time, hackathons, or new tech exploration.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.7,
+          "evidence": "No explicit or inferred mentions of tech debt management or refactoring in the job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "basic_ml",
+          "confidence": 0.8,
+          "evidence": "Responsibilities include implementing and validating predictive models and statistical techniques, but no advanced MLOps tools or GenAI focus mentioned.",
+          "source": "inferred"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No explicit ML tools mentioned beyond general statistical and machine learning techniques. Elasticsearch and Splunk are more enterprise search-focused.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 1.0,
+          "evidence": "No explicit hiring urgency signals in the job posting.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.6,
+          "evidence": "Location is Pune (a major tech hub in India), and the role is at IBM, a well-known company. No salary disclosure or remote flexibility to reduce competition.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.95,
+          "evidence": "IBM is a large, established company with a global presence and enterprise-level clients. The role is part of IBM Consulting, which operates at scale.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No explicit hiring velocity signals beyond the role being part of a client delivery center.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.7,
+          "evidence": "Team size is not explicitly mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "IBM is a publicly traded company, but no specific funding stage signals are relevant for this role.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No explicit mention of whether this is a new headcount, backfill, or team expansion.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "modern_tech_stack",
+        "data_focused_role",
+        "collaborative_culture",
+        "established_company"
+      ],
+      "strength_details": [
+        "Role is data-focused, offering exposure to enterprise-level data modeling and architecture.",
+        "Collaborative Agile environment with cross-functional teams (scientists, engineers, consultants).",
+        "IBM is an established company with deep industry expertise and global clients, providing stability.",
+        "Mentions familiarity with relational, dimensional, and NoSQL databases, indicating a broad but relevant tech stack."
+      ],
+      "concern_categories": [
+        "scope_creep_risk",
+        "overtime_likely",
+        "salary_not_disclosed",
+        "unclear_reporting"
+      ],
+      "concern_details": [
+        "Role combines data engineering, modeling, and ML responsibilities, which may lead to scope creep if not managed well.",
+        "Agile environment and multi-project management suggest moderate overtime risk without explicit work-life balance protections.",
+        "No salary range disclosed, making it difficult to assess compensation competitiveness.",
+        "Unclear reporting structure - candidates should verify who they report to and team composition."
+      ],
+      "best_fit_categories": [
+        "senior_data_engineers",
+        "data_generalists",
+        "career_changers"
+      ],
+      "best_fit_details": [
+        "Senior data engineers with 12+ years of experience in data modeling and architecture, comfortable with enterprise tools like Erwin and IBM Infosphere Data Architect.",
+        "Data generalists who have worked across relational, dimensional, and NoSQL databases and can adapt to cross-functional collaboration.",
+        "Career changers with strong analytical backgrounds (e.g., statisticians, data scientists) transitioning into data engineering leadership."
+      ],
+      "probe_categories": [
+        "role_scope_boundaries",
+        "work_hour_expectations",
+        "reporting_structure",
+        "career_growth_path",
+        "salary_range_details"
+      ],
+      "probe_details": [
+        "Ask for clarity on role boundaries: How much of this role is pure data engineering vs. ML or enterprise search implementation?",
+        "Inquire about typical work hours and whether overtime is expected or compensated.",
+        "Verify the reporting structure: Who will be the direct manager, and what is their level (director, manager, tech lead)?",
+        "Understand career growth opportunities: Are there defined paths for advancement within IBM Consulting or the broader IBM organization?",
+        "Request details on the salary range and whether it aligns with market standards for the Pune location."
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "domain_expertise"
+      ],
+      "leverage_details": [
+        "12+ years of experience in data modeling and architecture is an exact match for the role's requirements, providing strong negotiation leverage.",
+        "Experience with enterprise tools like Erwin and IBM Infosphere Data Architect is highly valued and may be rare among candidates."
+      ],
+      "overall_assessment": "This role at IBM Consulting is a strong opportunity for highly experienced data engineers with a background in enterprise data modeling and architecture. It offers stability, cross-functional collaboration, and exposure to global clients. However, candidates should be cautious about potential scope creep, unclear work-life balance, and lack of salary transparency. The role is best suited for senior data engineers or data generalists comfortable with leadership responsibilities in a consulting environment.",
+      "recommendation_score": 0.65,
+      "recommendation_confidence": 0.8
+    },
+    "tokens": 12730,
+    "input_tokens": 9884,
+    "output_tokens": 2846,
+    "cost": 0.015576
+  }
+}

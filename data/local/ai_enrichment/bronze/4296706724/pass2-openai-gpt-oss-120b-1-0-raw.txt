@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.95,
+        "evidence": "Title includes \"Senior\" and posting requires 5+ years of experience, matching typical senior level.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is \"Senior Data Engineer II\" and responsibilities focus on data pipelines, modeling, and ML workflow productionization.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "reverse_etl",
+        "confidence": 0.72,
+        "evidence": "Job description explicitly mentions developing and optimizing reverse ETL workflows using Hightouch.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.81,
+        "evidence": "Responsibilities include mentoring junior engineers, code reviews, and driving technical standards, without direct reports.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.86,
+        "evidence": "Both AWS services (SageMaker, Redshift) and GCP service (Vertex AI) are referenced, indicating use of multiple clouds.",
+        "source": "inferred"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No additional cloud providers beyond AWS and GCP are mentioned.",
+        "source": "inferred"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "Job mentions both real‑time (streaming) and batch data integrations and pipelines.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "The posting does not reference any workflow orchestrator such as Airflow, Luigi, Dagster, etc.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.84,
+        "evidence": "Redshift and PostgreSQL are highlighted as primary analytical databases, which are data warehouses.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.92,
+        "evidence": "Remote work is allowed only in listed U.S. states; the restriction is limited to the United States.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.86,
+        "evidence": "The role works with distributed teams across all U.S. time zones, indicating an Americas focus.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "The position is fully remote within the U.S.; no relocation is required.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.96,
+        "evidence": "Explicit statement: \"ActBlue is unable to sponsor work visas at this time.\"",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No mention of OPT/CPT eligibility and the lack of visa sponsorship implies it is not supported.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.89,
+        "evidence": "Only work‑authorization is required; there is no citizenship‑only clause.",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.96,
+        "evidence": "Full‑time, salaried employee position with benefits indicates a W‑2 employment model.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.87,
+        "evidence": "Extensive benefits list: unlimited PTO, full health coverage, 401k match, home‑office allowance, snack deliveries, etc.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.71,
+        "evidence": "The posting mentions mentorship and a high‑trust culture but does not specify concrete career ladders or tracks.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.78,
+        "evidence": "Mentions mentoring junior engineers and code reviews, indicating informal mentorship but no formal program.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.92,
+        "evidence": "No language about promotion, career ladders, or advancement paths is present.",
+        "source": "inferred"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.93,
+        "evidence": "The description does not reference internal transfers or lateral moves.",
+        "source": "inferred"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.62,
+        "evidence": "No explicit mention of IC, management, specialist, or architect tracks.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.81,
+        "evidence": "Clear separation of required hard/soft skills and a list of nice‑to‑have items indicates a balanced (medium) strictness.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.86,
+        "evidence": "Job description is focused on data engineering responsibilities without mixing other roles.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.84,
+        "evidence": "Required skills and 5+ years of experience align with a senior data engineer role; no unrealistic expectations detected.",
+        "source": "inferred"
+      }
+    }
+  }
+}

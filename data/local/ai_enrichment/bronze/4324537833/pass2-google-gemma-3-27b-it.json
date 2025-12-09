@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 20:30:58",
+    "job_posting_id": "4324537833",
+    "job_title": "Staff Data Engineer",
+    "company_name": "Visa",
+    "job_location": "Bengaluru East, Karnataka, India",
+    "pass_name": "pass2",
+    "model_id": "google.gemma-3-27b-it"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "staff",
+          "confidence": 0.92,
+          "evidence": "Title is 'Staff Data Engineer' and 7+ years of experience is mentioned.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "The job title is 'Staff Data Engineer' and the description focuses on data pipeline development.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "streaming_realtime",
+          "confidence": 0.85,
+          "evidence": "Mentions Kafka, Spark-Streaming, and stream-processing systems, indicating a focus on real-time data processing.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.78,
+          "evidence": "The role involves leading a team of junior engineers and driving data engineering initiatives, suggesting technical leadership without direct reports.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "aws",
+          "confidence": 0.95,
+          "evidence": "AWS is explicitly mentioned as a cloud platform service.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [
+            "azure"
+          ],
+          "confidence": 0.9,
+          "evidence": "Azure is also mentioned as a cloud platform service alongside AWS.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.88,
+          "evidence": "Mentions both stream-processing systems (Kafka, Spark-Streaming) and data pipeline tools like Airflow, suggesting both real-time and batch processing.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "airflow_like",
+          "confidence": 0.95,
+          "evidence": "Airflow is explicitly mentioned as a data pipeline and workflow management tool.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "lakehouse",
+          "confidence": 0.82,
+          "evidence": "Mentions data lakes and data warehouses, suggesting a lakehouse architecture.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.88,
+          "evidence": "The location is Bengaluru, Karnataka, India, and the position is hybrid, implying a preference for candidates in the region.",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "apac",
+          "confidence": 0.92,
+          "evidence": "The location is Bengaluru, India, which falls within the Asia-Pacific timezone.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "The position is hybrid, suggesting that relocation is not required.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of H1B sponsorship.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of OPT/CPT or student visas.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.88,
+          "evidence": "No specific citizenship requirements are mentioned.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "The position is described as full-time employment.",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "No specific benefits are mentioned in the job description.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Mentions leading a team and driving initiatives, suggesting growth opportunities.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.8,
+          "evidence": "Mentions working with senior data engineers.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": true,
+          "confidence": 0.9,
+          "evidence": "Explicitly mentions 'path to Staff Engineer'.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal transfers or role changes.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track",
+            "management_track"
+          ],
+          "confidence": 0.7,
+          "evidence": "Mentions leading a team, suggesting a management track, and 'Staff Engineer' implies an IC track.",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.73,
+          "evidence": "A mix of 'must-have' and 'nice-to-have' skills are listed.",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.82,
+          "evidence": "The job description is focused on data engineering tasks.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.75,
+          "evidence": "The required skills are reasonable for a Staff Data Engineer role.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8522,
+    "input_tokens": 6852,
+    "output_tokens": 1670,
+    "cost": 0.010192
+  }
+}

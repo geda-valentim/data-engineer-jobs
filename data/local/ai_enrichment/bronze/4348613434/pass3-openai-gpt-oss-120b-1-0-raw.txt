@@ -1,0 +1,255 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.71,
+        "evidence": "Job mentions data modeling tools (Erwin, IBM Infosphere) and data governance knowledge but no pipelines, orchestration, CI/CD, or modern cloud data warehouse technologies.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.71,
+        "evidence": "Score of 2 maps to \"developing\" maturity level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No modern data stack, CI/CD, data quality testing, or monitoring tools are referenced in the posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.22,
+        "confidence": 0.88,
+        "evidence": "Role is narrowly defined around data modeling, predictive modeling, and enterprise search; no mention of unrelated responsibilities such as front‑end, DevOps, or product ownership.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.38,
+        "confidence": 0.72,
+        "evidence": "IBM consulting projects can be deadline‑driven, but the posting provides no explicit language about long hours, on‑call, or urgent delivery expectations.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.92,
+        "evidence": "Job description lists specific responsibilities (data modeling, predictive modeling, Elasticsearch/Splunk apps, data cleansing) and required skills without vague or catch‑all language.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.28,
+        "confidence": 0.80,
+        "evidence": "Low scope creep, moderate overtime risk, clear role definition, but lack of compensation and reporting details raise minor concerns.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Posting does not state who the role reports to or any hierarchy.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No manager title (e.g., Head of Data, Director) is referenced in the description.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No information about hiring trends or team expansion is provided.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.65,
+        "evidence": "The posting does not disclose team size, number of data engineers, or seniority mix.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No reporting line is described.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.78,
+        "evidence": "No mention of being embedded in product or client delivery squads; role appears to sit within a consulting data team.",
+        "source": "pass1_derived"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.42,
+        "confidence": 0.70,
+        "evidence": "No PTO, remote‑work, or on‑call policies are mentioned; typical consulting environments can be demanding.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.35,
+        "confidence": 0.78,
+        "evidence": "No learning budget, mentorship, or career‑path language appears in the posting.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.33,
+        "confidence": 0.80,
+        "evidence": "Absence of modern tooling (dbt, Airflow, cloud warehouses) and engineering practices suggests a modest technical culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No references to open‑source contributions, tech blogs, conferences, or hackathons.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.88,
+        "evidence": "The description does not call out code review, CI/CD, testing, or monitoring practices.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No language about experimentation, R&D time, or exploring new technologies.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of refactoring, modernizing legacy pipelines, or tech‑debt reduction initiatives.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.93,
+        "evidence": "Job lists predictive modeling and machine‑learning terminology but no specific ML platforms, feature stores, or MLOps tooling.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No ML tools (e.g., SageMaker, MLflow) are referenced.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "The posting does not state an immediate or accelerated start date.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No data on applicant volume, easy‑apply, or location scarcity is provided.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.96,
+        "evidence": "IBM is a globally recognized, publicly traded technology company with decades of market presence.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.84,
+        "evidence": "Large enterprises like IBM typically hire on an ongoing, steady basis rather than aggressive bursts for a single role.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.88,
+        "evidence": "No indication of the size of the data engineering team is given.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "IBM is a public company; funding stage terminology does not apply.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "The posting does not specify whether this is a new headcount, backfill, or expansion role.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "data_focused_role",
+      "established_company",
+      "clear_requirements",
+      "well_defined_role"
+    ],
+    "strength_details": [
+      "Role centers on data modeling, predictive analytics, and enterprise search (Elasticsearch, Splunk).",
+      "Requires 12+ years of experience and a Master's degree, indicating senior‑level expectations.",
+      "Position is within IBM Consulting, offering exposure to a wide variety of public and private sector clients.",
+      "Explicit list of must‑have technical skills provides clear candidate guidance."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "unclear_reporting",
+      "limited_growth"
+    ],
+    "concern_details": [
+      "Compensation range, benefits, and PTO are not mentioned in the posting.",
+      "No information about reporting hierarchy or manager title is provided.",
+      "Career progression, mentorship, and internal mobility are absent, making growth prospects unclear."
+    ],
+    "best_fit_categories": [
+      "senior_data_engineers",
+      "pipeline_developers",
+      "analytics_engineers"
+    ],
+    "best_fit_details": [
+      "Senior data engineers with 12+ years of experience in data modeling and enterprise search tools.",
+      "Candidates comfortable working in consulting environments and delivering client‑focused data solutions.",
+      "Engineers seeking a stable, enterprise‑scale role rather than a fast‑moving startup."
+    ],
+    "probe_categories": [
+      "team_size_composition",
+      "reporting_structure",
+      "tech_stack_details",
+      "career_growth_path",
+      "salary_range_details"
+    ],
+    "probe_details": [
+      "Ask about the size and makeup of the data engineering team (on‑prem vs cloud, seniority mix).",
+      "Clarify who the role reports to and what the management hierarchy looks like.",
+      "Inquire about the specific data stack (e.g., databases, ETL tools, cloud platforms) used for modeling.",
+      "Understand the promotion criteria, mentorship programs, and internal mobility options.",
+      "Request details on base salary, bonus structure, equity, and any benefits such as PTO or learning budget."
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "domain_expertise",
+      "leadership_experience"
+    ],
+    "leverage_details": [
+      "12+ years of data modeling aligns precisely with the senior‑level requirement.",
+      "Deep expertise with enterprise search platforms (Elasticsearch, Splunk) is relatively rare among data engineers.",
+      "Potential to lead data‑modeling standards and best practices across consulting engagements."
+    ],
+    "overall_assessment": "The role offers a senior‑level data engineering position within a globally recognized, stable company. It provides clear technical expectations and exposure to diverse client projects, but lacks disclosed compensation, reporting clarity, and explicit growth pathways. Candidates who value stability and deep data‑modeling work will find it attractive, while those seeking transparent pay and rapid career advancement may need to probe further.",
+    "recommendation_score": 0.66,
+    "recommendation_confidence": 0.81
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Focus on legacy enterprise content management (OpenText Exstream) with no mention of modern data stack, CI/CD, or data governance tools. Basic automation (unit testing) but no evidence of scalable pipelines or monitoring.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2 - basic automation and tooling but no modern data practices mentioned.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [],
+        "confidence": 0.65,
+        "evidence": "No signals of modern data stack, CI/CD, data quality testing, monitoring, or governance. Only basic unit testing mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.1,
+        "confidence": 0.85,
+        "evidence": "Highly specialized role focused on OpenText Exstream document design with no mention of broader DE/DS/DevOps responsibilities.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.7,
+        "evidence": "Onsite role in delivery center with no work-life balance signals; IBM delivery centers often have client-driven deadlines.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.9,
+        "evidence": "Very specific responsibilities around OpenText Exstream template design, testing, and document generation.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Low scope creep but moderate overtime risk and no growth/culture signals. Strict requirements for niche tooling.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure mentioned in job description or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No manager title or level mentioned in job description.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.8,
+        "evidence": "No information about team growth or hiring velocity in job description.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.6,
+        "evidence": "Only mentions 'IBM Consulting Client Innovation Centers' without team size or composition details.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure details provided in job description.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Role appears to be in delivery center focused on specific tooling (OpenText Exstream) rather than embedded with product teams.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.4,
+        "confidence": 0.75,
+        "evidence": "Onsite work model with no PTO or work-life balance mentions; IBM delivery centers often have client-driven schedules.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.3,
+        "confidence": 0.8,
+        "evidence": "No mention of learning budget, conferences, mentorship, or career paths. Role is highly specialized in legacy tooling.",
+        "source": "pass1_derived"
+      },
+      "tech_culture_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Focus on legacy enterprise content management tool (OpenText Exstream) with no modern engineering practices mentioned.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["unit_testing"],
+        "confidence": 0.85,
+        "evidence": "Only 'unit testing' mentioned as development practice; no code review, CI/CD, or monitoring.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.8,
+        "evidence": "Focus on maintaining and creating templates in legacy system (OpenText Exstream) with no innovation or modernization signals.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of tech debt management, refactoring, or modernization efforts in job description.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No ML/AI mentioned in job description or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools mentioned in job description or Pass 1 extraction.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No urgency signals like 'ASAP' or 'immediate start' in job description.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.7,
+        "evidence": "IBM brand attracts candidates, but niche OpenText Exstream role may limit applicant pool. Location in Bengaluru (high competition tech hub).",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a well-established enterprise technology company with global delivery centers.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.8,
+        "evidence": "IBM has ongoing hiring in delivery centers; no signals of aggressive expansion or replacement.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No team size mentioned in job description.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.95,
+        "evidence": "IBM is a publicly traded company with stable funding.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about whether this is a new headcount, backfill, or expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["well_defined_role", "established_company", "data_focused_role"],
+    "strength_details": [
+      "Very clear, specialized role focused on OpenText Exstream document design",
+      "Established company (IBM) with global delivery center infrastructure",
+      "Specific data engineering responsibilities in enterprise content management"
+    ],
+    "concern_categories": ["legacy_technology", "limited_growth", "no_visa_sponsorship", "on_call_expected"],
+    "concern_details": [
+      "Highly specialized in legacy enterprise content management (OpenText Exstream)",
+      "No growth opportunities or learning culture mentioned",
+      "Onsite role in Bengaluru with no visa sponsorship mentioned",
+      "IBM delivery centers often have client-driven deadlines and potential for overtime"
+    ],
+    "best_fit_categories": ["junior_engineers", "enterprise_experienced", "remote_workers"],
+    "best_fit_details": [
+      "Junior to mid-level engineers with OpenText Exstream experience",
+      "Candidates seeking stable enterprise roles rather than modern tech stack",
+      "Local candidates in Bengaluru who can work onsite"
+    ],
+    "probe_categories": ["work_hour_expectations", "career_growth_path", "tech_debt_situation"],
+    "probe_details": [
+      "Ask about typical work hours and client deadline pressures",
+      "Understand if there are opportunities to work with modern data tools",
+      "Inquire about any plans to modernize or replace OpenText Exstream systems"
+    ],
+    "leverage_categories": ["rare_skill_match", "domain_expertise"],
+    "leverage_details": [
+      "OpenText Exstream expertise is niche and valuable for this specific role",
+      "Experience with enterprise content management systems is a differentiator"
+    ],
+    "overall_assessment": "Specialized role for candidates with OpenText Exstream experience in IBM's enterprise delivery center. Clear responsibilities but limited growth opportunities and focused on legacy technology. Best for junior/mid-level engineers seeking stable enterprise roles in Bengaluru. Main trade-offs are lack of modern tech stack and potential for client-driven deadlines.",
+    "recommendation_score": 0.55,
+    "recommendation_confidence": 0.75
+  }
+}

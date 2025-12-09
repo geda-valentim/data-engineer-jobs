@@ -1,0 +1,190 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules. Let me go through each section systematically.
+
+Looking at the job posting:
+
+**Title**: Data Engineer-Data Platforms-AWS
+**Company**: IBM
+**Location**: Pune, Maharashtra, India
+
+**Description sections**:
+1. Introduction - talks about IBM Consulting Client Innovation Centers
+2. Role And Responsibilities - details about data engineer role
+3. Responsibilities - specific technical requirements
+4. Preferred Education - mentions Master's Degree
+5. Required Technical And Professional Expertise - experience requirements
+6. Preferred Technical And Professional Experience - certifications
+
+Let me extract each field systematically:
+
+**Compensation**: No salary information mentioned → all compensation fields should be null
+
+**Work Authorization**: No mention of visa sponsorship, work authorization, or citizenship requirements → visa_sponsorship_stated: "not_mentioned", work_auth_text: null, citizenship_text: null, security_clearance_stated: "not_mentioned"
+
+**Work Model**: 
+- Location: "Pune, Maharashtra, India" - this is a specific location, not remote/hybrid
+- No mention of work model (remote/hybrid/onsite) → work_model_stated: "not_mentioned"
+- No employment type mentioned → employment_type_stated: "not_mentioned"
+- location_restriction_text: null
+
+**Contract Details**: No contract information mentioned → contract_type: "not_mentioned", all other contract fields null
+
+**Contractor Rates**: No contractor information → pay_type: "not_mentioned", all other contractor fields null
+
+**Skills Classification**:
+Let me analyze the technical requirements:
+
+From "Responsibilities":
+- "building data pipelines to Ingest, process, and transform data from files, streams and databases" → must_have_hard_skills: ["data pipelines", "data ingestion", "data processing", "data transformation"]
+- "Process the data with Spark, Python, PySpark, Scala, and Hive, Hbase or other NoSQL databases on Cloud Data Platforms (AWS) or HDFS" → must_have_hard_skills: ["Spark", "Python", "PySpark", "Scala", "Hive", "HBase", "NoSQL databases", "AWS", "HDFS"]
+
+
+- "develop efficient software code for multiple use cases leveraging Spark Framework / using Python or Scala and Big Data technologies" → must_have_hard_skills: ["software development", "Spark Framework", "Python", "Scala", "Big Data technologies"]
+- "developing streaming pipelines" → must_have_hard_skills: ["streaming pipelines"]
+- "Hadoop / AWS eco system components to implement scalable solutions" → must_have_hard_skills: ["Hadoop", "AWS ecosystem", "scalable solutions"]
+- "Apache Spark, Kafka, any Cloud computing etc" → must_have_hard_skills: ["Apache Spark", "Kafka", "Cloud computing"]
+
+I'll continue analyzing the technical requirements, focusing on the specific technologies and skills needed for this data engineering role. The position requires expertise in multiple big data technologies, cloud platforms, and programming languages.
+
+The role demands comprehensive experience in data management, spanning data warehousing, data lakes, and modern data platform architectures. Candidates must demonstrate deep technical proficiency in big data technologies, particularly in Spark, Python, and Scala. Cloud platform experience on AWS is crucial, with specific knowledge of services like EMR, Glue, and DataBricks.
+
+Key technical competencies include advanced SQL skills and familiarity with AWS services like RedShift and DynamoDB. Certifications in AWS, DataBricks, or Cloudera Spark are highly valued, indicating a commitment to professional development and technical excellence.
+
+The preferred educational background is a Master's Degree, suggesting a preference for advanced academic preparation in a relevant technical field. While the specific area of study isn't detailed, the emphasis on advanced education highlights the complexity of the role.
+
+No explicit soft skills are mentioned in the job description, leaving that aspect open to interpretation. The experience requirement spans 5-8+ years, with a minimum of 5 years in big data technologies and at least 3 years specifically on AWS cloud data platforms.
+
+The educational requirement is marked as "preferred", indicating flexibility in academic credentials while valuing practical experience. No specific degree area is specified, and the raw text simply references a Master's Degree without additional context.
+
+Regarding emerging technologies, the role does not explicitly mention large language models or generative AI, nor does it reference feature store technologies. The geographic context is centered in India, with no apparent restrictions on location.
+
+The benefits package remains unspecified, with no details about equity, learning budgets, conference support, hardware options, or paid time off policies. The company description highlights IBM's Consulting Client Innovation Centers, which focus on delivering technical and industry expertise to diverse public and private sector clients globally.
+
+These centers provide locally-based skills and technical expertise to drive innovation and technology adoption, offering clients specialized technical capabilities in their regional markets.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "data pipelines",
+        "data ingestion",
+        "data processing",
+        "data transformation",
+        "Spark",
+        "Python",
+        "PySpark",
+        "Scala",
+        "Hive",
+        "HBase",
+        "NoSQL databases",
+        "AWS",
+        "HDFS",
+        "software development",
+        "Spark Framework",
+        "Big Data technologies",
+        "streaming pipelines",
+        "Hadoop",
+        "AWS ecosystem",
+        "scalable solutions",
+        "Apache Spark",
+        "Kafka",
+        "Cloud computing",
+        "AWS EMR",
+        "AWS Glue",
+        "DataBricks",
+        "AWS RedShift",
+        "DynamoDB",
+        "SQL"
+      ],
+      "nice_to_have_hard_skills": [
+        "AWS certification",
+        "Data Bricks certification",
+        "Cloudera Spark certification"
+      ],
+      "must_have_soft_skills": [],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [
+        "AWS certification",
+        "Data Bricks certification",
+        "Cloudera Spark certification"
+      ],
+      "years_experience_min": 5,
+      "years_experience_max": 8,
+      "years_experience_text": "Total 5-8+ years of experience in Data Management (DW, DL, Data Platform, Lakehouse) and Data Engineering skills; Minimum 5+ years of experience in Big Data technologies with extensive data engineering experience in Spark / Python or Scala; Minimum 3 years of experience on Cloud Data Platforms on AWS",
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "preferred",
+      "education_text_raw": "Master's Degree",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "IBM Consulting Client Innovation Centers (Delivery Centers)",
+      "company_description_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 29
+  }
+}
+```

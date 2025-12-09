@@ -1,0 +1,239 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 4,
+        "confidence": 0.85,
+        "evidence": "Mentions complex data pipelines, cloud-based data architectures across multiple platforms (AWS, Azure, GCP), and data governance practices. Tools like Apache Spark and Airflow are part of the modern data stack, and the role emphasizes best practices for security, compliance, and quality assurance.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "managed",
+        "confidence": 0.85,
+        "evidence": "Matches the data_maturity_score of 4, indicating strong practices, quality monitoring, and mature tooling.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption", "data_governance", "cicd_practices"],
+        "confidence": 0.90,
+        "evidence": "Explicit mentions of AWS Redshift, Azure Synapse, GCP BigQuery, Apache Spark, Apache Airflow, and data governance. CI/CD and Docker are listed as nice-to-have skills, indicating awareness and likely adoption.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.20,
+        "confidence": 0.90,
+        "evidence": "Role is focused on data engineering responsibilities (pipelines, cloud architectures, governance) with no conflation of backend, frontend, or DevOps tasks. Leadership and mentoring are expected but align with senior DE scope.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.40,
+        "confidence": 0.80,
+        "evidence": "Job posting mentions 'fast-paced environment' and 'ability to work in a fast-paced environment', which are moderate risk signals. However, comprehensive benefits (e.g., accrued leave, paid holidays) and no immediate start urgency mitigate this risk.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.95,
+        "evidence": "Responsibilities are well-defined, including pipeline development, cloud architecture, governance, and mentoring. No ambiguity in role scope.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.30,
+        "confidence": 0.85,
+        "evidence": "Low scope creep and clear role definition, but moderate overtime risk due to 'fast-paced' language and lack of explicit work-life balance protections beyond benefits.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.70,
+        "evidence": "Job posting does not explicitly mention reporting structure or manager title, only refers to 'providing technical leadership' and 'collaborating with stakeholders'.",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.60,
+        "evidence": "No clear mention of manager title or level in the job posting. 'Head of Data Engineering' is inferred but not explicitly stated as the reporting line.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.80,
+        "evidence": "Job posting mentions mentoring junior engineers and collaboration with data scientists, implying a growing team but no explicit signals of rapid expansion.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "15-person data org",
+          "de_count": "5 data engineers",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.80,
+        "evidence": "Job posting mentions 'collaborating with data scientists and business stakeholders' and 'team of 5 DEs', but seniority mix is not explicitly described.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.50,
+        "evidence": "No explicit mention of reporting structure or manager title in the job posting.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Job posting mentions collaboration with 'cross-functional teams' and 'data scientists and business stakeholders', indicating embedded cross-functional work.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.65,
+        "confidence": 0.80,
+        "evidence": "Comprehensive benefits (e.g., paid holidays, accrued leave) are positive signals, but 'fast-paced environment' and lack of remote flexibility are negative signals. No explicit mention of overtime or on-call protections.",
+        "source": "combined"
+      },
+      "growth_opportunities_score": {
+        "value": 0.85,
+        "confidence": 0.85,
+        "evidence": "Explicit mentions of mentorship, promotional opportunities, and career development support. Role is designed for senior engineers with leadership expectations.",
+        "source": "pass1_derived"
+      },
+      "tech_culture_score": {
+        "value": 0.80,
+        "confidence": 0.90,
+        "evidence": "Modern data stack (AWS Redshift, Azure Synapse, GCP BigQuery, Spark, Airflow) and emphasis on best practices (coding standards, documentation, governance) indicate a strong tech culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.50,
+        "evidence": "No explicit signals of open source contributions, tech blogs, conference speaking, or innovation time. However, the modern tooling suggests some alignment with industry trends.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["ci_cd", "monitoring"],
+        "confidence": 0.80,
+        "evidence": "CI/CD and Docker are listed as nice-to-have skills, and monitoring is implied through 'high availability and reliability' requirements.",
+        "source": "inferred"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Role emphasizes modern data stack and best practices but does not explicitly mention innovation time or experimentation culture. Focus is on scalability and governance rather than cutting-edge tech exploration.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Job posting mentions 'optimizing data storage and processing' and 'performance and cost efficiency', which suggest awareness of tech debt and system improvements.",
+        "source": "inferred"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of ML/AI tools, frameworks, or responsibilities in the job posting. Focus is purely on data engineering and governance.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML/AI tools or frameworks are mentioned in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "normal",
+        "confidence": 0.80,
+        "evidence": "Job posting does not mention immediate or ASAP start requirements, suggesting a standard hiring timeline.",
+        "source": "inferred"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Denver, CO is not a high-competition location like SF/NYC, but the role is onsite with no remote flexibility, which may limit the candidate pool. Salary range is disclosed but appears below market for senior roles in high-demand areas.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.85,
+        "evidence": "Bio-Techne is a well-established company in the life sciences and clinical diagnostics space, with a comprehensive benefits package typical of enterprise organizations. The multi-cloud requirement and focus on governance also suggest enterprise maturity.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.80,
+        "evidence": "Role mentions collaboration with a growing team but does not explicitly signal aggressive hiring. The focus is on steady expansion to support enterprise initiatives.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "large_16_50",
+        "confidence": 0.75,
+        "evidence": "Mentions 'team of 5 data engineers' within a broader '15-person data org', and the company is described as enterprise-scale, implying larger overall team sizes.",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.60,
+        "evidence": "No explicit funding stage signals in the job posting, but the enterprise context suggests stability or profitability.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.80,
+        "evidence": "Job posting mentions mentoring junior engineers and collaboration with a growing team, indicating this is part of a team expansion effort.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["comprehensive_benefits", "data_governance_focus", "mentorship_opportunities", "career_growth_clear", "enterprise_stability"],
+    "strength_details": [
+      "Comprehensive benefits package (medical, dental, vision, life, disability, 401k, ESPP, HSA/FSA, paid leave) starting on day one.",
+      "Strong focus on data governance, security, and compliance, which is critical for enterprise-scale organizations.",
+      "Explicit mentorship and leadership opportunities for junior engineers, indicating a supportive team environment.",
+      "Promotional opportunities and career development support suggest clear growth paths within the company."
+    ],
+    "concern_categories": ["onsite_requirement", "relocation_required", "no_visa_sponsorship", "below_market_pay"],
+    "concern_details": [
+      "Onsite role in Denver, CO with no remote work flexibility may be a concern for candidates seeking hybrid or fully remote positions.",
+      "Relocation may be required for non-residents, adding logistical challenges for some candidates.",
+      "No visa sponsorship is mentioned, limiting opportunities for international candidates or those requiring work authorization support.",
+      "Salary range ($100,800 - $165,600) appears below market for senior data engineers, especially in enterprise roles where compensation is typically higher."
+    ],
+    "best_fit_categories": ["senior_data_engineers", "enterprise_experienced", "cloud_specialists", "leadership_track"],
+    "best_fit_details": [
+      "Senior data engineers with 5+ years of experience in architecting and optimizing enterprise-scale data pipelines.",
+      "Candidates with experience in multi-cloud environments (AWS, Azure, GCP) and a focus on data governance and compliance.",
+      "Engineers seeking technical leadership roles with mentorship responsibilities but not direct people management."
+    ],
+    "probe_categories": ["work_hour_expectations", "role_scope_boundaries", "remote_policy_details", "career_growth_path", "salary_range_details"],
+    "probe_details": [
+      "Ask about the actual work hours and expectations in this 'fast-paced environment' to gauge overtime risk.",
+      "Clarify the boundaries of the role: Is this purely a data engineering position, or will there be overlap with DevOps, backend, or ML tasks?",
+      "Understand the company's remote work policy: Are there any exceptions to the onsite requirement, or is it strictly enforced?",
+      "Inquire about the career growth path: What are the next steps for someone in this role, and how are promotions or leadership opportunities structured?",
+      "Ask for details on the salary range: Is the disclosed range ($100,800 - $165,600) the full compensation band, or are there additional bonuses or equity components?"
+    ],
+    "leverage_categories": ["domain_expertise", "multi_cloud_experience", "enterprise_data_governance"],
+    "leverage_details": [
+      "Experience in life sciences or clinical diagnostics is a rare and valuable domain expertise that could strengthen your candidacy.",
+      "Multi-cloud experience (AWS, Azure, GCP) is a high-demand skill, especially in enterprise environments, and could be leveraged for better compensation.",
+      "Strong background in data governance, security, and compliance (e.g., SOX, PCI) is critical for this role and could differentiate you from other candidates."
+    ],
+    "overall_assessment": "This role at Bio-Techne is a strong opportunity for senior data engineers with enterprise experience and a focus on multi-cloud architectures and governance. The company offers a robust benefits package, mentorship, and career growth, but the onsite requirement and below-market salary range may be limiting factors. Ideal for candidates who value stability, domain expertise in life sciences, and technical leadership over remote flexibility or premium compensation.",
+    "recommendation_score": 0.70,
+    "recommendation_confidence": 0.85
+  }
+}
+```

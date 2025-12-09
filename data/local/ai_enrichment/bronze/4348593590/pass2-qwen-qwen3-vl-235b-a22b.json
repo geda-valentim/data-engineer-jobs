@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 17:19:05",
+    "job_posting_id": "4348593590",
+    "job_title": "Data Scientist-Advanced Analytics",
+    "company_name": "IBM",
+    "job_location": "Bengaluru East, Karnataka, India",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.65,
+          "evidence": "Title is 'Data Scientist-Advanced Analytics' but responsibilities align with mid-level data engineering tasks; no explicit seniority indicators or years of experience mentioned",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.95,
+          "evidence": "Job description explicitly states 'As an Data Engineer at IBM' and responsibilities focus on data pipelines, modeling, and infrastructure",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.75,
+          "evidence": "Mentions 'batch and real-time processing' but emphasizes statistical modeling and POC development, suggesting batch-oriented workflows dominate",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.85,
+          "evidence": "No mention of team leadership, mentoring, or people management; focus is on individual technical contributions and collaboration",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No cloud providers mentioned in job description or Pass 1 extraction",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No cloud platforms referenced at all",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.8,
+          "evidence": "Explicitly mentions 'both batch and real-time processing' in responsibilities",
+          "source": "pass1_derived"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No orchestration tools like Airflow, Dagster, or cloud-native schedulers mentioned",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No specific storage systems (warehouse, lake, lakehouse) referenced beyond Elasticsearch and Splunk for search",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.85,
+          "evidence": "Location specified as 'Bengaluru East, Karnataka, India' with no remote flexibility mentioned",
+          "source": "inferred"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.9,
+          "evidence": "Location restricted to India; no global or multi-timezone team references",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.85,
+          "evidence": "Specific location given without remote option; implies candidate must be local or willing to relocate to Bengaluru",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No visa sponsorship mentioned; location in India suggests local hiring only",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of student visas or OPT/CPT; location in India makes US student visa irrelevant",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.8,
+          "evidence": "Implied requirement to be authorized to work in India; no citizenship requirement stated",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.85,
+          "evidence": "IBM is a large corporation; typical employment model is full-time W2; no contract or 1099 language mentioned",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits, equity, PTO, or perks mentioned in job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.65,
+          "evidence": "Mentions 'growth mindset' and 'understand clients' business processes' but no specific career tracks or advancement paths",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Mentions 'collaborating closely with diverse teams' and 'work in delivery centers' suggesting peer learning, but no formal mentorship program",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of promotions, advancement, or career progression in job description or Pass 1",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No reference to internal transfers, role changes, or mobility opportunities",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No career tracks (IC, management, specialist, architect) mentioned or implied",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear distinction between must-have (predictive modeling, ML, Elasticsearch) and nice-to-have (COBOL, JAVA, LLM code translation) skills",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "multi_role",
+          "confidence": 0.8,
+          "evidence": "Title is 'Data Scientist' but responsibilities include data engineering, modeling, POC development, and solution architecture — blending multiple roles",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Skills listed are reasonable for a mid-level role; no unrealistic combinations or excessive years implied",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7478,
+    "input_tokens": 5855,
+    "output_tokens": 1623,
+    "cost": 0.009101000000000001
+  }
+}

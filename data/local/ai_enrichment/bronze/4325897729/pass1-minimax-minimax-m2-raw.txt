@@ -1,0 +1,177 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+First, let me identify what information is explicitly stated in the job posting:
+
+**Title**: Data Engineer-Data Platforms-Azure
+**Company**: IBM
+**Location**: Kochi, Kerala, India
+
+**Description sections**:
+- Introduction about IBM Consulting Client Innovation Centers
+- Role and Responsibilities as Associate Software Developer/Data Engineer
+- Required Technical And Professional Expertise
+- Preferred Technical And Professional Experience
+
+Let me extract information systematically:
+
+**Compensation**: 
+- No salary information is mentioned → salary_disclosed: false, all salary fields null
+
+**Work Authorization**:
+- No mention of visa sponsorship, work authorization requirements, or citizenship → visa_sponsorship_stated: "not_mentioned", work_auth_text: null, citizenship_text: null
+- No security clearance mentioned → security_clearance_stated: "not_mentioned"
+
+**Work Model**:
+- Location is specified as "Kochi, Kerala, India" but no explicit mention of remote/hybrid/onsite → work_model_stated: "not_mentioned"
+- No location restriction text mentioned → location_restriction_text: null
+- This appears to be a full-time position based on context → employment_type_stated: "full_time"
+
+**Contract Details**:
+- No contract type mentioned → contract_type: "not_mentioned"
+- No contract duration mentioned → contract_duration_months: null, contract_duration_text: null
+- No extension or conversion info → extension_possible: "not_mentioned", conversion_to_fte: "not_mentioned"
+- No start date mentioned → start_date: "not_mentioned", start_date_text: null
+- No probation period mentioned → probation_period_text: null
+
+**Contractor Rates**:
+- Not applicable for this full-time position → pay_type: "not_mentioned", all rate fields null
+
+**Skills Classification**:
+Let me analyze the skills mentioned:
+
+**Must-have hard skills** (from "Mandatory Skills" section):
+- Azure Databricks
+- Python/PySpark  
+- SQL
+- Github
+- Azure Devops
+- Azure Blob
+- Java, Python, Scala (for building pipelines)
+
+
+- ETL tools and data integration tools
+- Linux, SQL, Python, Spark, Hadoop, Java
+
+I'll continue identifying the hard skills, focusing on the technical requirements and preferred qualifications. The role demands expertise in multiple programming languages, data processing tools, and cloud platforms. Key technical competencies include data pipeline development, ETL processes, and proficiency in various programming languages and big data technologies.
+
+The soft skills emphasize strong communication abilities, both verbal and written. The role requires the capacity to interact effectively with internal and external stakeholders, translating complex technical concepts into clear, actionable insights for diverse audiences.
+
+The experience requirement specifies 6-7 years total, with 4-5 years of relevant professional background. No specific educational credentials are mandated, and the position does not involve large language model or generative AI technologies.
+
+Geographically, the role is based in India, with no explicit restrictions beyond the Kochi, Kerala location. Benefits remain unspecified, with no additional details provided about compensation, leave policies, or professional development opportunities.
+
+The team context highlights a collaborative Agile environment, working alongside scientists, engineers, consultants, and database administrators to tackle complex analytical challenges through statistical methods and predictive modeling.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Azure Databricks",
+        "Python",
+        "PySpark",
+        "SQL",
+        "Github",
+        "Azure Devops",
+        "Azure Blob",
+        "Java",
+        "Scala",
+        "ETL",
+        "data integration",
+        "Linux",
+        "Spark",
+        "Hadoop"
+      ],
+      "nice_to_have_hard_skills": [
+        "Elasticsearch",
+        "Splunk",
+        "statistical modeling",
+        "machine learning",
+        "big data"
+      ],
+      "must_have_soft_skills": [
+        "Communication",
+        "Team Collaboration"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 6,
+      "years_experience_max": 7,
+      "years_experience_text": "Total Exp-6-7 Yrs (Relevant-4-5 Yrs)",
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Work in an Agile, collaborative environment, partnering with other scientists, engineers, consultants and database administrators of all backgrounds and disciplines",
+      "company_description_text": "IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 47
+  }
+}
+```

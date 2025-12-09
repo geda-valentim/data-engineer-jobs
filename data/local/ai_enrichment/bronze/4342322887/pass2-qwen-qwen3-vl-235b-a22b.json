@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 16:30:47",
+    "job_posting_id": "4342322887",
+    "job_title": "DATA ENGINEER (ECONOMIC RESEARCH)",
+    "company_name": "El Paso Electric Company",
+    "job_location": "El Paso, TX",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.75,
+          "evidence": "0-3 years experience required, bachelor's degree, and responsibilities include assisting in data warehousing and automation - typical mid-level expectations",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Job title is explicitly 'DATA ENGINEER' and core responsibilities involve data pipelines, warehousing, and analytics",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.85,
+          "evidence": "Focus on data warehousing, reporting automation, and dashboarding with PowerBI and SQL suggests batch ETL work rather than streaming",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.8,
+          "evidence": "Reports to Manager, no mention of managing people or leading teams, responsibilities are individual contributor focused",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "on_prem",
+          "confidence": 0.85,
+          "evidence": "No cloud providers mentioned, focus on internal systems, Microsoft applications, and on-premise data warehousing",
+          "source": "inferred"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No cloud platforms mentioned in the job posting",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.88,
+          "evidence": "Emphasis on reporting, dashboards, data warehousing, and automation of scheduled tasks suggests batch processing",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No orchestration tools like Airflow, Dagster, or cloud-native schedulers mentioned",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.82,
+          "evidence": "Explicit mention of data warehousing, RDBMS, and PowerBI dashboards suggests warehouse-focused storage",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.9,
+          "evidence": "Location specified as El Paso, TX with onsite work model, suggesting regional restriction",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.95,
+          "evidence": "US-only restriction with TX state requirement indicates specific country focus",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.85,
+          "evidence": "Onsite work model in El Paso, TX implies relocation may be required for non-local candidates",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of visa sponsorship, and onsite location in TX suggests local hiring preference",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of student visa support, and onsite requirement suggests work authorization needed",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.88,
+          "evidence": "No explicit citizenship requirement, but onsite work implies authorization to work in US is required",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Full-time permanent position with salary structure suggests W2 employment",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits listed in the job posting or extracted data",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.65,
+          "evidence": "Mentions 'growth opportunities' but no specific career tracks or promotion paths defined",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Reports to Manager and works with cross-functional teams suggests potential for mentorship, but no formal program mentioned",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of promotions or advancement opportunities",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal transfers or role changes",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.6,
+          "evidence": "No specific career tracks (IC, management, etc.) mentioned in the job posting",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.73,
+          "evidence": "Clear distinction between must-have (SQL, PowerBI, R, Python) and nice-to-have skills, with 0-3 years experience range",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.82,
+          "evidence": "Focused role description centered on data engineering, analytics, and reporting with specific tools and responsibilities",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Skills required (SQL, PowerBI, Python, R) are reasonable for 0-3 years experience level",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8667,
+    "input_tokens": 7105,
+    "output_tokens": 1562,
+    "cost": 0.010229
+  }
+}

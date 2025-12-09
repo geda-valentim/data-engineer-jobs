@@ -478,6 +478,10 @@ def build_pass2_prompt(
     # Format Pass 1 results as JSON string
     pass1_json = json.dumps(pass1_extraction, indent=2)
 
+    # Handle None/empty description
+    if not job_description_text:
+        job_description_text = "No description available"
+
     # Truncate if too long
     max_description_length = 10000
     if len(job_description_text) > max_description_length:

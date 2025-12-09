@@ -1,0 +1,257 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Job mentions big‑data tools (Spark, Hadoop, AWS EMR/Glue) but no CI/CD, data‑quality testing, catalog or governance frameworks.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Score of 2 maps to the \"developing\" maturity level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [
+          "cloud_native"
+        ],
+        "confidence": 0.78,
+        "evidence": "Explicit focus on AWS cloud services (EMR, Glue, Redshift, DynamoDB).",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.12,
+        "confidence": 0.9,
+        "evidence": "Responsibilities are limited to data‑engineering (pipeline building, Spark, Hadoop, AWS) with no mention of dev‑ops, analytics, or product ownership.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.25,
+        "confidence": 0.78,
+        "evidence": "IBM consulting projects can be deadline‑driven, but posting contains no language about on‑call, 24/7 support, or aggressive timelines.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.95,
+        "evidence": "Job title and bullet points describe a single, well‑defined data‑engineer role.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.18,
+        "confidence": 0.85,
+        "evidence": "Low scope creep, modest overtime risk, and clear responsibilities offset by lack of benefit details and visa info.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "Posting does not state who the role reports to.",
+        "source": "not_mentioned"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.7,
+        "evidence": "No manager or lead title is referenced.",
+        "source": "not_mentioned"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.7,
+        "evidence": "No indication of hiring surge or team expansion.",
+        "source": "not_mentioned"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.6,
+        "evidence": "No details on team size, DE headcount, or seniority mix.",
+        "source": "not_mentioned"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No reporting line described.",
+        "source": "not_mentioned"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.6,
+        "evidence": "Job description focuses on platform work, not on product‑team embedding.",
+        "source": "not_mentioned"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.4,
+        "confidence": 0.7,
+        "evidence": "No PTO, remote‑work, or on‑call policies are mentioned; IBM typically offers standard benefits but not disclosed here.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.35,
+        "confidence": 0.7,
+        "evidence": "No learning budget, mentorship, or career‑path language appears in the posting.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.3,
+        "confidence": 0.75,
+        "evidence": "Only technology stack listed; no mention of CI/CD, testing, code review, or open‑source culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.8,
+        "evidence": "No explicit signals such as open‑source contributions, conference support, or hackathons.",
+        "source": "not_mentioned"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "Posting does not reference code review, CI/CD, testing, or monitoring practices.",
+        "source": "not_mentioned"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No language about experimentation, R&D time, or new‑technology pilots.",
+        "source": "not_mentioned"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of refactoring, tech‑debt reduction, or modernization initiatives.",
+        "source": "not_mentioned"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.9,
+        "evidence": "Job description contains no reference to ML, AI, or related tooling.",
+        "source": "not_mentioned"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No ML‑related tools are listed.",
+        "source": "not_mentioned"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No start‑date or urgency language appears.",
+        "source": "not_mentioned"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.7,
+        "evidence": "No data on applicant volume, location premium, or salary disclosure.",
+        "source": "not_mentioned"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a publicly traded, decades‑old technology company.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No indication of aggressive or steady hiring cadence.",
+        "source": "not_mentioned"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No team‑size numbers are provided.",
+        "source": "not_mentioned"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "IBM is a public company; funding stage not applicable.",
+        "source": "not_mentioned"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "Posting does not state whether this is a new headcount or backfill.",
+        "source": "not_mentioned"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "modern_tech_stack",
+      "cloud_native",
+      "data_focused_role",
+      "established_company"
+    ],
+    "strength_details": [
+      "Strong big‑data stack (Spark, Hadoop, Kafka) on AWS.",
+      "Focus on cloud‑native services (EMR, Glue, Redshift, DynamoDB).",
+      "Clear senior‑level data‑engineering responsibilities.",
+      "IBM brand provides stability and global scale."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "no_visa_sponsorship",
+      "unclear_reporting",
+      "limited_growth"
+    ],
+    "concern_details": [
+      "Compensation range and benefits are not mentioned.",
+      "Visa sponsorship is not indicated, which may limit international candidates.",
+      "Reporting line and manager level are unspecified.",
+      "No explicit career‑path, mentorship, or learning budget is described."
+    ],
+    "best_fit_categories": [
+      "senior_data_engineers",
+      "pipeline_developers",
+      "enterprise_experienced"
+    ],
+    "best_fit_details": [
+      "Senior DEs with 5‑8+ years of Spark/Hadoop experience seeking a stable, large‑enterprise environment.",
+      "Engineers comfortable building batch and streaming pipelines on AWS.",
+      "Candidates who prefer a well‑defined technical role over a broad product‑ownership position."
+    ],
+    "probe_categories": [
+      "team_size_composition",
+      "reporting_structure",
+      "tech_stack_details",
+      "career_growth_path",
+      "salary_range_details"
+    ],
+    "probe_details": [
+      "Ask about the size of the data‑engineering team and the mix of senior vs. junior members.",
+      "Clarify who the role reports to and what the management hierarchy looks like.",
+      "Confirm whether tools like Airflow, dbt, or CI/CD pipelines are used alongside the listed stack.",
+      "Inquire about formal career ladders, promotion criteria, and mentorship programs.",
+      "Request details on base salary, bonus, equity, and PTO policies."
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "high_market_demand"
+    ],
+    "leverage_details": [
+      "Demonstrated 5+ years of Spark, Hadoop, and AWS pipeline development aligns directly with required skills.",
+      "Expertise in streaming (Kafka) and cloud data platforms is in high demand for enterprise data teams."
+    ],
+    "overall_assessment": "The role offers a senior‑level data‑engineering position within IBM's established ecosystem, featuring a modern big‑data stack on AWS and clear technical responsibilities. However, the lack of disclosed compensation, benefits, and career‑development details introduces uncertainty. Candidates should verify reporting lines, growth opportunities, and total rewards before proceeding.",
+    "recommendation_score": 0.62,
+    "recommendation_confidence": 0.81
+  }
+}

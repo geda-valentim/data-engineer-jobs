@@ -1,0 +1,279 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 13:30:22",
+    "job_posting_id": "4325749256",
+    "job_title": "Data Engineer-Data Platforms-Azure",
+    "company_name": "IBM",
+    "job_location": "Kochi, Kerala, India",
+    "pass_name": "pass3",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.75,
+          "evidence": "Modern Azure stack (Databricks, DevOps, PySpark) with established tools (Hadoop, Spark). Mentions Agile environment and collaborative work, but lacks advanced governance, monitoring, or quality testing tools",
+          "source": "combined"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.75,
+          "evidence": "Matches score of 3 - documented processes with modern Azure tools, but missing advanced data governance and quality monitoring",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption",
+            "cloud_native"
+          ],
+          "confidence": 0.85,
+          "evidence": "Azure Databricks, PySpark, Azure DevOps, and Azure Blob storage indicate modern cloud-native data stack adoption",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.25,
+          "confidence": 0.82,
+          "evidence": "Focused data engineering role with clear responsibilities. Some ML model work mentioned but integrated with DE responsibilities, no backend/frontend/DevOps scope creep",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.35,
+          "confidence": 0.7,
+          "evidence": "IBM is stable enterprise company with no aggressive timeline mentions, but no work-life balance signals either. Moderate risk due to lack of protective factors",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.88,
+          "evidence": "Well-defined data engineering role with specific Azure/PySpark focus, clear technical requirements, and detailed responsibility descriptions",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.3,
+          "confidence": 0.78,
+          "evidence": "Low overall risk - clear role definition at stable IBM, moderate overtime risk balanced by enterprise stability, minimal scope creep",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No specific reporting structure, manager level, or team hierarchy mentioned in job description",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No manager level indicators found - no mention of reporting to directors, managers, or tech leads",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No team growth, expansion, or hiring velocity signals mentioned in job posting",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "collaborative environment with scientists, engineers, consultants and database administrators"
+          },
+          "confidence": 0.75,
+          "evidence": "Mentions working with diverse team of scientists, engineers, consultants and DBAs but no specific team size or composition details",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No reporting structure information provided in job description",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.75,
+          "evidence": "Mentions partnering with scientists, engineers, consultants and database administrators of all backgrounds and disciplines in collaborative environment",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.6,
+          "confidence": 0.65,
+          "evidence": "IBM is generally known for good work-life balance as established enterprise, but no specific work-life balance policies mentioned in posting",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.25,
+          "confidence": 0.8,
+          "evidence": "No learning budget, conference budget, career progression, mentorship, or growth opportunities mentioned in job description",
+          "source": "pass1_derived"
+        },
+        "tech_culture_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "Modern Azure stack and Agile environment mentioned, but no specific engineering practices, code review, testing, or innovation culture signals",
+          "source": "combined"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No tech culture signals like open source, tech blogs, conferences, hackathons, or innovation time mentioned",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No specific development practices like code review, CI/CD, testing, monitoring, or incident response mentioned",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No innovation culture, R&D time, experimentation, or staying current with trends mentioned",
+          "source": "pass1_derived"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of tech debt management, refactoring, improving code quality, or modernization efforts",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "basic_ml",
+          "confidence": 0.75,
+          "evidence": "Mentions 'Implementing and validating predictive models' and 'statistical models with machine learning techniques' - working with ML models but not building ML infrastructure",
+          "source": "inferred"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.85,
+          "evidence": "No specific ML tools like MLflow, SageMaker, or feature stores mentioned - role appears to work with models built by others",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "normal",
+          "confidence": 0.85,
+          "evidence": "No urgency indicators like 'immediate start', 'ASAP', or tight deadlines mentioned - standard enterprise hiring timeline",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.6,
+          "evidence": "IBM brand attracts good candidates, but India location (Kochi) may have moderate competition. No application count or easy apply mentioned",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "established_tech",
+          "confidence": 0.95,
+          "evidence": "IBM is clearly a large, established technology company with global presence and mature business operations",
+          "source": "pass1_derived"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.7,
+          "evidence": "IBM typically has steady hiring patterns for established roles, no aggressive expansion signals but ongoing business needs",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No specific team size, data team size, or engineering team composition mentioned in job posting",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "public",
+          "confidence": 0.95,
+          "evidence": "IBM is a publicly traded company (NYSE: IBM) with established financial structure",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No indication whether this is new headcount, backfill, team expansion, or replacement role",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "established_company",
+        "modern_tech_stack",
+        "cloud_native",
+        "data_focused_role"
+      ],
+      "strength_details": [
+        "IBM is a stable, established technology company with global presence",
+        "Modern Azure data stack including Databricks, PySpark, and DevOps",
+        "Cloud-native architecture with Azure Blob storage and services",
+        "Focused data engineering role with clear technical requirements"
+      ],
+      "concern_categories": [
+        "salary_not_disclosed",
+        "no_visa_sponsorship",
+        "limited_growth",
+        "onsite_only"
+      ],
+      "concern_details": [
+        "No salary, benefits, or compensation information disclosed",
+        "India-based role with no visa sponsorship for international candidates",
+        "No career growth, learning opportunities, or advancement paths mentioned",
+        "Onsite requirement in Kochi limits remote work flexibility"
+      ],
+      "best_fit_categories": [
+        "mid_level_engineers",
+        "cloud_specialists",
+        "pipeline_developers"
+      ],
+      "best_fit_details": [
+        "Mid-level data engineers with 6-7 years experience seeking Azure/PySpark expertise",
+        "Cloud specialists wanting to work with Microsoft Azure data platform",
+        "Pipeline developers focused on ETL and data integration at enterprise scale"
+      ],
+      "probe_categories": [
+        "salary_range_details",
+        "team_size_composition",
+        "career_growth_path",
+        "work_hour_expectations"
+      ],
+      "probe_details": [
+        "Ask about salary range, benefits, and total compensation package",
+        "Understand team structure, size, and reporting relationships",
+        "Clarify career progression opportunities and growth paths within IBM",
+        "Confirm work hours, overtime expectations, and work-life balance policies"
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "local_candidate"
+      ],
+      "leverage_details": [
+        "Strong match for 6-7 years experience with Azure/PySpark skills",
+        "Local Kochi candidate advantage for onsite requirement"
+      ],
+      "overall_assessment": "Solid data engineering opportunity at established IBM with modern Azure stack. Good for mid-level engineers seeking Azure/PySpark experience at enterprise scale. Main limitations are lack of disclosed compensation, growth opportunities, and onsite location requirement in Kochi, India.",
+      "recommendation_score": 0.65,
+      "recommendation_confidence": 0.75
+    },
+    "tokens": 13261,
+    "input_tokens": 9573,
+    "output_tokens": 3688,
+    "cost": 0.016949
+  }
+}

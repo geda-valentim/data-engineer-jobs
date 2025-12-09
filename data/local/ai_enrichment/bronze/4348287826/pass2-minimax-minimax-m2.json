@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 14:27:50",
+    "job_posting_id": "4348287826",
+    "job_title": "Data Engineer",
+    "company_name": "BeaconFire Inc.",
+    "job_location": "New Jersey, United States",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.65,
+          "evidence": "Title is 'Data Engineer' without senior qualifier, intermediate Python requirement, Master's degree required but no specific years experience mentioned, suggesting mid-level role",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Data Engineer' and core responsibilities focus on building ETL/ELT pipelines, data transformation, and database operations",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.8,
+          "evidence": "Primary focus on ETL/ELT processes, data extraction/manipulation/transformation, and database operations. No streaming or real-time processing mentioned",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.75,
+          "evidence": "Role involves collaboration and team work but no mention of mentoring, leading teams, or direct reports. Pure individual contributor focus",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No cloud providers mentioned. Databases listed (SQL Server, Oracle, MySQL) are traditional relational databases that could be on-premise or cloud-agnostic",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No cloud providers mentioned at all, so no secondary clouds to list",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.85,
+          "evidence": "Focus on ETL/ELT processes, data extraction/manipulation/production from database tables, and scheduled pipeline operations suggests batch processing",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No specific orchestration tools mentioned (no Airflow, Spark, dbt, etc.). Focus is on ETL/ELT processes without specifying orchestration framework",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.7,
+          "evidence": "Emphasis on relational databases (SQL Server, Oracle, MySQL) and data extraction/manipulation suggests traditional data warehouse approach",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.85,
+          "evidence": "Work model is onsite in New Jersey, suggesting candidates need to be in the same geographic region (NJ/NY area)",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "americas",
+          "confidence": 0.8,
+          "evidence": "Location in New Jersey, United States suggests Eastern Time Zone focus within Americas region",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.75,
+          "evidence": "Onsite requirement in New Jersey implies candidates would need to relocate to the area if not already local",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No visa sponsorship mentioned in job posting, and work authorization not explicitly discussed",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.7,
+          "evidence": "No mention of student visa support, and Master's degree requirement suggests established professionals rather than students",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.75,
+          "evidence": "No citizenship requirements mentioned, suggesting standard work authorization in US is sufficient",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.8,
+          "evidence": "Full-time position description and traditional employee role suggests W2 employment rather than contractor arrangement",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits, equity, PTO, or other compensation details mentioned in job posting",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No career progression, advancement opportunities, or growth paths mentioned in job description",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No mentorship programs, working with senior staff, or learning opportunities explicitly mentioned",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No promotion, advancement, or career progression opportunities mentioned",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal transfers, role changes, or mobility opportunities",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.85,
+          "evidence": "No career tracks, paths to senior roles, or advancement opportunities mentioned",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Clear distinction between must-have skills (Python, databases, ETL) and nice-to-have (data processing, Numpy, Pandas). Master's degree required but flexible in related fields",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused job description with clear data engineering responsibilities, ETL/ELT focus, and well-defined technical requirements",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Requirements are reasonable for mid-level data engineer role - intermediate Python, database experience, and Master's degree are appropriate expectations",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8209,
+    "input_tokens": 5818,
+    "output_tokens": 2391,
+    "cost": 0.010599999999999998
+  }
+}

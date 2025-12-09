@@ -1,0 +1,232 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Basic modern stack (Cloud Databricks, SQL) mentioned but no governance, testing, or CI/CD practices referenced; banking/audit context suggests some structure but limited tooling signals",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2 - basic pipelines with Databricks but no advanced practices mentioned",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.80,
+        "evidence": "Cloud Databricks and SQL are modern tools; no mention of testing, monitoring, or governance tools",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.15,
+        "confidence": 0.85,
+        "evidence": "Focused on batch ETL with Databricks/SQL; no conflation with ML, analytics, or DevOps responsibilities",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "6-month contract with banking/audit context suggests deadline pressure; no work-life balance signals mentioned",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Specific must-have skills (Databricks, SQL, bank data, audit) define focused scope",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to contract nature and banking context; otherwise clear role with defined requirements",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure mentioned in job posting or Pass 1/2",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No manager title or level referenced in any extraction",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.80,
+        "evidence": "No team size or growth signals mentioned; contract role suggests possible backfill or project-based need",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.65,
+        "evidence": "No team composition details provided in job posting",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure specified in job description",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of working with product teams or cross-functional collaboration; banking/audit context suggests centralized team",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.50,
+        "confidence": 0.70,
+        "evidence": "Hybrid model (2 days/week) is positive, but 6-month contract and banking context suggest potential for deadline pressure; no PTO or balance signals mentioned",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.30,
+        "confidence": 0.75,
+        "evidence": "No career growth, mentorship, or learning opportunities mentioned; 6-month contract limits development potential",
+        "source": "pass1_derived"
+      },
+      "tech_culture_score": {
+        "value": 0.60,
+        "confidence": 0.75,
+        "evidence": "Modern stack (Databricks) but no engineering practices (CI/CD, testing, code review) mentioned; banking context may limit innovation",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No signals of open source, tech blogs, conferences, or innovation time mentioned",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No development practices (code review, CI/CD, monitoring) referenced in job posting",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.75,
+        "evidence": "Banking/audit context suggests focus on compliance and reliability over innovation; no experimentation or R&D mentioned",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of tech debt, refactoring, or modernization efforts in job description",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No ML/AI tools or responsibilities mentioned; focus is on batch ETL and audit",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools referenced in job posting or requirements",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "normal",
+        "confidence": 0.85,
+        "evidence": "6-month contract duration suggests project-based need; no 'ASAP' or 'immediate start' mentioned",
+        "source": "inferred"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Hybrid role in Toronto with specific banking/audit requirements; likely moderate competition due to niche skills",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.75,
+        "evidence": "Banking/audit context and preference for TD experience suggest established financial services environment rather than startup",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "replacement",
+        "confidence": 0.70,
+        "evidence": "6-month contract suggests temporary need or backfill rather than aggressive expansion",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No team size information provided in job posting",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No funding stage or financial information referenced",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "backfill",
+        "confidence": 0.75,
+        "evidence": "6-month contract with specific banking/audit requirements suggests filling an existing role or project need",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["well_defined_role", "modern_tech_stack", "data_focused_role"],
+    "strength_details": [
+      "Clear requirements: Cloud Databricks, SQL, bank data, and audit knowledge",
+      "Modern stack with Databricks for batch ETL in financial context",
+      "Focused data engineering role without scope creep into ML or analytics"
+    ],
+    "concern_categories": ["contract_short_term", "limited_growth", "no_visa_sponsorship", "overtime_likely"],
+    "concern_details": [
+      "6-month contract limits long-term career growth and stability",
+      "No visa sponsorship mentioned; Canadian work authorization likely required",
+      "Banking/audit context and contract nature suggest potential for deadline pressure and overtime"
+    ],
+    "best_fit_categories": ["mid_level_engineers", "batch_etl_specialists", "banking_data_engineers", "contract_workers"],
+    "best_fit_details": [
+      "Mid-level DEs with 3-5 years experience in financial data and audit compliance",
+      "Contract workers seeking short-term, well-defined projects with modern tools",
+      "Candidates with TD or banking background who can hit the ground running"
+    ],
+    "probe_categories": ["work_hour_expectations", "contract_extension", "team_structure", "project_timeline"],
+    "probe_details": [
+      "Ask about expected work hours and any overtime requirements for the 6-month contract",
+      "Inquire about possibility of contract extension or conversion to permanent role",
+      "Understand the team structure and reporting lines for this contract position"
+    ],
+    "leverage_categories": ["domain_expertise", "rare_skill_match"],
+    "leverage_details": [
+      "Banking/audit experience is a key differentiator for this role",
+      "TD experience (if applicable) is a strong negotiating point given it's a preferred qualification"
+    ],
+    "overall_assessment": "Solid contract opportunity for mid-level data engineers with banking/audit experience seeking short-term work with modern tools (Databricks). Clear role definition and focused requirements are strengths, but the 6-month duration, lack of growth opportunities, and potential for deadline pressure are significant trade-offs. Best suited for candidates who can leverage their financial data expertise for immediate impact.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.75
+  }
+}

@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.8,
+        "evidence": "Minimum 4+ years of experience in Big Data technologies, no explicit senior title or staff-level responsibilities mentioned",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is Data Engineer, core responsibilities focus on data pipelines and big data solutions",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "Mentions both streaming (Kafka) and batch (Spark, Hive, scheduled pipelines) processing paradigms, as well as cloud (Azure) and on-prem (Hadoop/HDFS) technologies",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.7,
+        "evidence": "Role focuses on development, maintenance, evaluation, and testing of big data solutions without explicit leadership or mentoring responsibilities",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.95,
+        "evidence": "Azure Cloud Data Platform mentioned explicitly with required experience in Azure services (Data Factory, Synapse, HDInsight)",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": ["aws"],
+        "confidence": 0.7,
+        "evidence": "Title mentions AWS, but job description focuses on Azure and Hadoop with no explicit AWS responsibilities",
+        "source": "combined"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.8,
+        "evidence": "Mentions both streaming (Kafka) and batch (Spark, Hive, scheduled pipelines) processing",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.7,
+        "evidence": "Azure Data Factory mentioned, which is a cloud-native orchestrator, though Spark and Hadoop ecosystem components are also present",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.8,
+        "evidence": "Mentions both warehouse (Synapse, SQL Server DB) and lake (Azure Cloud Data Platform, HDFS) patterns",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Location is specified as Kochi, Kerala, India, but no remote work model or restrictions are discussed",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No timezone requirements or team distribution details provided",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No relocation package or requirement mentioned; location is fixed as Kochi, Kerala, India",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit mention of H1B sponsorship or visa support",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No discussion of OPT, CPT, or student visa eligibility",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No work authorization or citizenship requirements stated",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.8,
+        "evidence": "Employment type stated as full_time, typical for W2 roles at IBM",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No benefits or compensation details mentioned in the job posting or Pass 1 extraction",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.6,
+        "evidence": "Mentions 'drive innovation and adoption of new technology' which may imply growth opportunities, but no specific career tracks or ladders discussed",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.7,
+        "evidence": "Role involves working in IBM Consulting Client Innovation Centers with senior expertise, suggesting potential mentorship from experienced team members",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit mention of promotion or advancement paths",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No discussion of internal mobility, lateral moves, or role changes",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No explicit or implied career tracks (IC, management, specialist, architect) mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.8,
+        "evidence": "Long list of must-have hard skills with strict qualifiers like 'Minimum 4+ years' and 'extensive experience'",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.8,
+        "evidence": "Well-defined responsibilities focused on data engineering tasks and technologies",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": true,
+        "confidence": 0.7,
+        "evidence": "Mid-level role (4+ years) with extensive requirements including multiple certifications and broad expertise in Spark, Python, Scala, and Azure",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

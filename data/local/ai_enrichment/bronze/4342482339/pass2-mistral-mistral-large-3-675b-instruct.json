@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 19:25:38",
+    "job_posting_id": "4342482339",
+    "job_title": "Data Engineer - H/F - Liège",
+    "company_name": "MP DATA",
+    "job_location": "Liege Metropolitan Area",
+    "pass_name": "pass2",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.65,
+          "evidence": "Title is 'Data Engineer' without senior/staff/principal qualifiers, and the role emphasizes contributing to migration and optimization but does not specify years of experience explicitly.",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title explicitly states 'Data Engineer', and responsibilities focus on ETL/ELT pipelines, orchestration, and cloud data services.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "data_mesh",
+          "confidence": 0.85,
+          "evidence": "Data Mesh is explicitly mentioned as a core architectural focus in the job description.",
+          "source": "pass1_derived"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.7,
+          "evidence": "Role involves contributing to architecture (Data Mesh) and ensuring code reliability, but no direct mention of people management or direct reports.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "aws",
+          "confidence": 0.95,
+          "evidence": "AWS is explicitly mentioned multiple times, including specific services like S3.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No other cloud providers are mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.8,
+          "evidence": "Apache Airflow is explicitly mentioned for workflow orchestration, which is typically associated with batch processing. No streaming-specific tools or paradigms are mentioned.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "airflow_like",
+          "confidence": 0.95,
+          "evidence": "Apache Airflow is explicitly mentioned as a core tool for orchestration.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "lake",
+          "confidence": 0.75,
+          "evidence": "AWS S3 is explicitly mentioned for storage, and no warehouse or lakehouse-specific tools are referenced.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.7,
+          "evidence": "Location is specified as 'Liege Metropolitan Area', which implies a regional restriction in Belgium.",
+          "source": "inferred"
+        },
+        "timezone_focus": {
+          "value": "not_mentioned",
+          "confidence": 0.5,
+          "evidence": "No timezone or team distribution details are provided beyond the regional location.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Location is specified as 'Liege Metropolitan Area' without mention of relocation support or requirements.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of visa sponsorship in Pass 1 results or job posting.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of OPT/CPT or student visa eligibility, and the job posting does not imply flexibility for student visas.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No discussion of citizenship or work authorization requirements beyond the location being in Belgium.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Employment type is stated as 'full_time' and contract type as 'permanent', which strongly implies W2 employment in Belgium (equivalent to full-time employee status).",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.9,
+          "evidence": "No benefits are mentioned in the Pass 1 results or job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit or implied career growth paths or tracks are mentioned in the job posting.",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.65,
+          "evidence": "The team is described as 'passionnée d’experts en données', which suggests collaboration with senior experts but no formal mentorship program is mentioned.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of promotion, advancement, or career progression in the job posting.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No discussion of internal mobility, lateral moves, or role changes in the job posting.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No career tracks are mentioned or implied in the job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.75,
+          "evidence": "Job posting uses terms like 'Indispensables' and 'Capacité prouvée' for technical skills, indicating strict requirements. No 'nice to have' skills are listed in Pass 1 results.",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.8,
+          "evidence": "Responsibilities are well-defined and focused on data engineering tasks such as pipeline engineering, orchestration, and AWS cloud management.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.7,
+          "evidence": "The role emphasizes advanced skills like PySpark and Airflow but does not specify unrealistic years of experience or skill combinations for the inferred mid-level seniority.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8473,
+    "input_tokens": 6757,
+    "output_tokens": 1716,
+    "cost": 0.010189
+  }
+}

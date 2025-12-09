@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.92,
+        "evidence": "Title explicitly states 'Data Engineer' with 5-8+ years experience requirement, aligning with senior level in data engineering hierarchy",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Job title is 'Data Engineer' and responsibilities focus on building data pipelines, Spark, and cloud data platforms",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "streaming_realtime",
+        "confidence": 0.85,
+        "evidence": "Explicitly mentions 'Experience in developing streaming pipelines' and lists Kafka as part of AWS ecosystem",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.78,
+        "evidence": "No mention of people management, team leadership, or mentoring responsibilities; focus is on technical implementation",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "aws",
+        "confidence": 0.95,
+        "evidence": "Job title includes 'AWS', and responsibilities mention AWS Cloud Data Platform, AWS EMR, AWS Glue, AWS RedShift, and DynamoDB",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud platforms (Azure, GCP) mentioned in requirements or responsibilities",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.88,
+        "evidence": "Mentions both 'streaming pipelines' and batch processing via Spark on Hadoop/AWS, indicating hybrid processing needs",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.95,
+        "evidence": "AWS Glue and EMR are cloud-native orchestration tools; no mention of Airflow, Dagster, or dbt",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.82,
+        "evidence": "Mentions HDFS (lake), AWS S3 (lake), and AWS RedShift (warehouse), indicating mixed storage architecture",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.88,
+        "evidence": "Location specified as Pune, Maharashtra, India with onsite work model, implying regional restriction",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.92,
+        "evidence": "Location restricted to India (Pune) with onsite requirement, indicating country-specific timezone focus",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.85,
+        "evidence": "Onsite work model in Pune, India implies candidate must relocate or already be based there",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of visa sponsorship; location is India, not US, making H1B irrelevant",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Location in India and no mention of student visa support; OPT/CPT are US-specific",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.88,
+        "evidence": "Location in India implies local work authorization required; no citizenship restrictions mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time permanent position at IBM, implying W2 employment status",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.85,
+        "evidence": "No benefits listed in job posting or extracted data",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.75,
+        "evidence": "No explicit career tracks mentioned; only general reference to 'delivering innovation' without growth paths",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.80,
+        "evidence": "Working in IBM Consulting Client Innovation Centers implies collaboration with experienced teams, though no formal mentorship program mentioned",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of promotions, advancement, or career progression in job description",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers, role changes, or mobility opportunities",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.70,
+        "evidence": "No specific career tracks (IC, management, architect) mentioned in job posting",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.73,
+        "evidence": "All skills listed as must-haves with no nice-to-haves; strict experience requirements (5-8+ years)",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.82,
+        "evidence": "Focused on data engineering with specific technologies (Spark, AWS, streaming) and clear responsibilities",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Skills required (Spark, AWS, streaming) are reasonable for senior data engineer with 5-8 years experience",
+        "source": "inferred"
+      }
+    }
+  }
+}

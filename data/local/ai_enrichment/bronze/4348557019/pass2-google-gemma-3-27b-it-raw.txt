@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.75,
+        "evidence": "3+ years of experience and core data engineering responsibilities suggest mid-level.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is Data Engineer, core responsibilities revolve around data pipelines and reporting.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.85,
+        "evidence": "Focus on Cognos reporting and visualization, ETL tools, and data integration points towards data warehousing.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.80,
+        "evidence": "Responsibilities focus on individual tasks (analysis, design, development) with no mention of team leadership.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.75,
+        "evidence": "Mentions AWS, Google, and Azure, indicating a multi-cloud environment.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": ["aws", "azure", "gcp"],
+        "confidence": 0.90,
+        "evidence": "AWS, Azure, and Google Cloud are all listed as preferred experience.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.80,
+        "evidence": "Focus on reporting, ETL, and data integration suggests batch processing.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.70,
+        "evidence": "IBM InfoSphere DataStage is an ETL tool with orchestration capabilities similar to Airflow.",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.70,
+        "evidence": "Cognos is used for reporting on data, implying a data warehouse.  Cloud platforms suggest potential data lake usage.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.90,
+        "evidence": "Location is Pune, Maharashtra, India, and the job is based there.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "apac",
+        "confidence": 0.85,
+        "evidence": "Location in India suggests an APAC timezone focus.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "The job is located in Pune, India, implying no relocation is needed.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of H1B sponsorship.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of OPT/CPT.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.80,
+        "evidence": "No specific citizenship requirements mentioned, only the need for work authorization.",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "The job is described as full-time employment, suggesting a W2 contract.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits are explicitly mentioned in the job description.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit discussion of career paths or growth opportunities.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mention of mentorship programs or working with senior mentors.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of promotions or advancement opportunities.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No specific career tracks (IC, management, etc.) are mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "A mix of required skills (Cognos, UNIX) and preferred skills (cloud platforms).",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "The job description focuses on data engineering tasks related to reporting and visualization.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "The required skills are reasonable for a mid-level data engineer with 3+ years of experience.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

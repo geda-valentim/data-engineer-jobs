@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 14:07:51",
+    "job_posting_id": "4325984433",
+    "job_title": "Data Engineer-Data Warehouse",
+    "company_name": "IBM",
+    "job_location": "Kochi, Kerala, India",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.65,
+          "evidence": "Title is 'Data Engineer-Data Warehouse' without seniority indicator, standard data engineering skills required, no years of experience specified",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Data Engineer', role focuses on data pipelines, ETL, data warehouse work, and data processing",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.75,
+          "evidence": "Mentions both batch and real-time processing, DBT for batch pipelines, Hadoop/Spark for batch processing, data warehouse focus",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.85,
+          "evidence": "No mention of leadership responsibilities, mentoring, or team management - focused on individual contributor technical work",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No specific cloud provider mentioned, tools mentioned (Spark, Hadoop, DBT, Snowflake) are cloud-agnostic",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No cloud providers mentioned at all",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.9,
+          "evidence": "Job explicitly mentions 'both batch and real-time processing'",
+          "source": "pass1_derived"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No specific orchestration tool mentioned, DBT mentioned but no orchestrator like Airflow or Step Functions",
+          "source": "inferred"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.75,
+          "evidence": "Title mentions 'Data Warehouse', Snowflake preferred (warehouse), Hadoop mentioned (lake), suggests both patterns",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.9,
+          "evidence": "Pass 1 shows specific_countries restriction with only 'IN' allowed, onsite work model",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.9,
+          "evidence": "Location is Kochi, Kerala, India with country restriction to India only",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "Onsite role in Kochi, India with India-only restriction implies relocation needed for non-India residents",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "India-based role, no visa sponsorship mentioned, H1B not applicable for Indian positions",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "India-based role, OPT/CPT are US student visa programs not applicable to Indian positions",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.7,
+          "evidence": "No citizenship requirement specified, India location suggests work authorization in India is required",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "not_mentioned",
+          "confidence": 0.75,
+          "evidence": "No contract type specified, appears to be full-time IBM position but employment type not explicitly stated",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "Pass 1 shows no benefits mentioned in job posting",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No mention of career paths, growth opportunities, or advancement potential",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.65,
+          "evidence": "Mentions collaborative environment with scientists, engineers, consultants - suggests working with experienced professionals",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of promotion, advancement, or career growth opportunities",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal transfers, role changes, or mobility opportunities",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No mention of different career tracks (IC, management, specialist, architect paths)",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear distinction between required skills (DBT, Python, SQL, etc.) and preferred skills (DataStage, Snowflake, etc.)",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused role as 'Data Engineer-Data Warehouse' with specific responsibilities around data pipelines and processing",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Skills required (DBT, Python, SQL, Spark, etc.) are appropriate and realistic for data engineer role, no excessive requirements",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 9131,
+    "input_tokens": 5926,
+    "output_tokens": 3205,
+    "cost": 0.012336
+  }
+}

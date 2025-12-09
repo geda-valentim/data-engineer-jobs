@@ -1,0 +1,384 @@
+<reasoning>Let me analyze the job posting and Pass 1 extraction results to infer the job characteristics according to the rules provided.
+
+First, let me understand what we have:
+
+**Original Job Posting Analysis:**
+- Title: "Data Engineer-Data Platforms" at IBM
+- Location: Mumbai Metropolitan Region (India)
+- Role: Application Developer with focus on Python, Spark, PySpark
+- Experience: 6+ years overall, 4+ years with Python/Spark
+- Education: Master's degree required
+- Cloud: AWS/GCP/Azure mentioned as "good to have"
+- Work model: Onsite (from Pass 1)
+- Employment: Full-time permanent
+
+**Pass 1 Extraction Key Points:**
+- Work model: onsite
+- Location: Mumbai Metropolitan Region
+- Employment: full_time, permanent
+- Must-have skills: Python, Spark, PySpark
+- Nice-to-have: AWS, GCP, Azure
+- Experience: 6+ years
+- Education: Master's required
+- No visa sponsorship mentioned
+- No benefits mentioned
+- No security clearance mentioned
+
+Now let me infer each field:
+
+**SENIORITY AND ROLE:**
+1. **seniority_level**: 
+   - 6+ years experience + "Data Engineer" title
+   - This suggests senior level (typically 5-8 years for senior)
+   - Confidence: 0.85 (strong inference from experience + title)
+   - Source: combined
+
+2. **job_family**: 
+   - Title is "Data Engineer-Data Platforms"
+   - Core skills: Python, Spark, PySpark
+   - This is clearly data_engineer
+   - Confidence: 0.95
+   - Source: pass1_derived
+
+3. **sub_specialty**: 
+   - Focus on Spark/PySpark suggests batch processing
+   - No streaming technologies mentioned
+   - This points to batch_etl
+   - Confidence: 0.75
+   - Source: inferred
+
+4. **leadership_expectation**: 
+   - No mention of team leadership, mentoring, or direct reports
+   - Role seems to be individual contributor focused
+   - This suggests pure IC role
+   - Confidence: 0.80
+   - Source: inferred
+
+**STACK AND CLOUD:**
+1. **primary_cloud**: 
+   - AWS, GCP, Azure all mentioned as "good to have"
+   - No clear primary cloud preference
+   - This suggests multi-cloud approach
+   - Confidence: 0.80
+   - Source: pass1_derived
+
+2. **secondary_clouds**: 
+   - Since all three are mentioned equally, no clear secondary
+   - Empty array
+   - Confidence: 0.90
+   - Source: pass1_derived
+
+3. **processing_paradigm**: 
+   - Spark/PySpark mentioned as core skills
+   - Spark can do both batch and streaming, but emphasis seems on batch ETL
+   - No streaming technologies mentioned (no Kafka, Flink, etc.)
+   - This suggests batch processing
+   - Confidence: 0.75
+   - Source: inferred
+
+4. **orchestrator_category**: 
+   - No specific orchestrator mentioned
+   - Spark can be scheduled natively or with external orchestrators
+   - No Airflow, dbt, etc. mentioned
+   - This suggests spark_native or not_mentioned
+   - Since Spark is primary, lean toward spark_native
+   - Confidence: 0.70
+   - Source: inferred
+
+5. **storage_layer**: 
+   - No specific data warehouse, lake, or lakehouse mentioned
+   - Just mentions Spark/PySpark which can work with various storage
+   - No Snowflake, Redshift, S3, etc. mentioned
+   - This suggests not_mentioned
+   - Confidence: 0.85
+   - Source: pass1_derived
+
+**GEO AND WORK MODEL:**
+1. **remote_restriction**: 
+   - Work model is "onsite"
+   - Location: Mumbai Metropolitan Region
+   - This suggests same_region restriction
+   - Confidence: 0.85
+   - Source: pass1_derived
+
+2. **timezone_focus**: 
+   - Location: Mumbai Metropolitan Region (India)
+   - This suggests specific_country (India)
+   - Confidence: 0.90
+   - Source: pass1_derived
+
+3. **relocation_required**: 
+   - Onsite role in Mumbai Metropolitan Region
+   - No mention of relocation package or requirement
+   - Since it's already location-specific, relocation not required
+   - Confidence: 0.80
+   - Source: inferred
+
+**VISA AND AUTHORIZATION:**
+1. **h1b_friendly**: 
+   - No visa sponsorship mentioned
+   - Role is in India, so H1B (US visa) not relevant
+   - This suggests false, but H1B is US-specific
+   - For India role, this would be false/not applicable
+   - Confidence: 0.90
+   - Source: pass1_derived
+
+2. **opt_cpt_friendly**: 
+   - No mention of student visa support
+   - Role in India, so US student visas not relevant
+   - This suggests false
+   - Confidence: 0.85
+   - Source: inferred
+
+3. **citizenship_required**: 
+   - No citizenship requirements mentioned
+   - Role in India, so likely work authorization for India
+   - This suggests work_auth_only
+   - Confidence: 0.80
+   - Source: inferred
+
+**CONTRACT AND COMPENSATION:**
+1. **w2_vs_1099**: 
+   - Employment type: full_time
+   - Contract type: permanent
+   - This suggests W2 employment
+   - Confidence: 0.90
+   - Source: pass1_derived
+
+2. **benefits_level**: 
+   - No benefits mentioned in the posting
+   - This suggests none_mentioned
+   - Confidence: 0.90
+   - Source: pass1_derived
+
+**CAREER DEVELOPMENT:**
+1. **growth_path_clarity**: 
+   - Mentions "limitless career path" in company description
+   - But no specific career tracks mentioned
+   - This suggests vague
+   - Confidence: 0.65
+   - Source: inferred
+
+2. **mentorship_signals**: 
+   - No specific mentorship program mentioned
+   - No mention of working with senior people
+   - This suggests not_mentioned
+   - Confidence: 0.90
+   - Source: pass1_derived
+
+3. **promotion_path_mentioned**: 
+   - Mentions "limitless career path" but no specific promotion mentions
+   - No explicit promotion or advancement mentioned
+   - This suggests false
+   - Confidence: 0.80
+   - Source: inferred
+
+4. **internal_mobility_mentioned**: 
+   - No mention of internal transfers or role changes
+   - This suggests false
+   - Confidence: 0.90
+   - Source: pass1_derived
+
+5. **career_tracks_available**: 
+   - No specific career tracks mentioned
+   - Just generic "career path" mention
+   - This suggests not_mentioned
+   - Confidence: 0.85
+   - Source: pass1_derived
+
+**REQUIREMENTS CLASSIFICATION:**
+1. **requirement_strictness**: 
+   - Clear must-haves (Python, Spark, PySpark) vs nice-to-haves (AWS/GCP/Azure)
+   - Balanced requirements
+   - This suggests medium
+   - Confidence: 0.75
+   - Source: inferred
+
+2. **scope_definition**: 
+   - Focused job description for Data Engineer role
+   - Clear responsibilities and requirements
+   - This suggests clear
+   - Confidence: 0.85
+   - Source: inferred
+
+3. **skill_inflation_detected**: 
+   - 6+ years for senior level is reasonable
+   - Skills mentioned (Python, Spark, cloud) are appropriate for data engineer
+   - No unrealistic skill combinations
+   - This suggests false
+   - Confidence: 0.80
+   - Source: inferred
+
+Let me compile this into the required JSON format.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.85,
+        "evidence": "6+ years overall experience with 4+ years in Python/Spark, combined with Data Engineer title indicates senior level",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Data Engineer-Data Platforms' with core focus on Python, Spark, and PySpark for data processing",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.75,
+        "evidence": "Primary focus on Spark/PySpark for data processing without streaming technologies mentioned, indicating batch ETL focus",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.80,
+        "evidence": "No mention of team leadership, mentoring responsibilities, or direct reports - pure individual contributor role",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.80,
+        "evidence": "AWS, GCP, and Azure all mentioned equally as 'good to have' with no clear primary preference indicated",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "All three cloud providers mentioned equally without clear primary/secondary distinction",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.75,
+        "evidence": "Spark/PySpark mentioned as core skills with no streaming technologies (Kafka, Flink) mentioned, indicating batch processing focus",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "spark_native",
+        "confidence": 0.70,
+        "evidence": "Spark/PySpark mentioned as primary technology with no external orchestrators (Airflow, dbt) mentioned",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No specific data warehouse, lake, or lakehouse technologies mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.85,
+        "evidence": "Onsite work model with specific location requirement for Mumbai Metropolitan Region",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.90,
+        "evidence": "Location specified as Mumbai Metropolitan Region, indicating India-specific role",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Role requires presence in Mumbai Metropolitan Region but no relocation package or requirement mentioned",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned and role is based in India, making H1B sponsorship not applicable",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of student visa support and role is located in India, not US",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.80,
+        "evidence": "No citizenship requirements mentioned, suggesting work authorization for India is the only requirement",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time permanent employment type indicates W2 employment structure",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits, equity, PTO, or other compensation details mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Mentions 'limitless career path' in company description but no specific career tracks or advancement paths detailed",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mentorship program, working with senior staff, or collaborative learning environment mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Generic 'career path' mention without specific promotion or advancement opportunities detailed",
+        "source": "inferred"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers, role changes, or mobility opportunities within the company",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No specific career tracks (IC, management, specialist, architect) mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Clear distinction between must-haves (Python, Spark, PySpark) and nice-to-haves (cloud technologies) with balanced requirements",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused job description specifically for Data Engineer role with well-defined responsibilities and technical requirements",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "6+ years experience requirement for senior level is reasonable, and skills mentioned (Python, Spark, cloud) are appropriate for data engineer role",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

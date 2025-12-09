@@ -1,0 +1,277 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 17:42:15",
+    "job_posting_id": "4348622056",
+    "job_title": "Data Engineer-Data Platforms-Google",
+    "company_name": "IBM",
+    "job_location": "Hyderabad, Telangana, India",
+    "pass_name": "pass3",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 2,
+          "confidence": 0.75,
+          "evidence": "Mentions Hadoop to GCP migration, CDC, and basic tools like Elasticsearch/Splunk, but no modern data stack (dbt, Airflow) or data quality/testing practices. Focus on migration and replication suggests developing practices.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "developing",
+          "confidence": 0.75,
+          "evidence": "Matches score of 2 - basic pipelines and migration focus without advanced governance or quality tooling.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "cloud_native"
+          ],
+          "confidence": 0.8,
+          "evidence": "Explicit mention of GCP migration and cloud-native architecture. No signals of CI/CD, data quality, or governance tools.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.65,
+          "confidence": 0.85,
+          "evidence": "Role combines data engineering (migration, replication) with data science (predictive modeling, statistical models) and consulting (client workshops, discovery). This is a multi-role expectation.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.55,
+          "confidence": 0.7,
+          "evidence": "Onsite work in Hyderabad, client-facing consulting role with 'modernization roadmap' and 'discovery workshops' suggests potential for long hours. No PTO or work-life balance signals mentioned.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "multi_role",
+          "confidence": 0.9,
+          "evidence": "Job title is 'Associate Software Developer' but responsibilities span data engineering, data science, and client consulting. No clear boundaries between roles.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.55,
+          "confidence": 0.75,
+          "evidence": "Moderate risk due to scope creep (DE + DS + consulting), onsite requirement, and lack of benefits/PTO information. Role is entry-level but expects broad skills.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "vague",
+          "confidence": 0.75,
+          "evidence": "Mentions 'collaborating with diverse teams' but no specific manager or reporting line. No mention of who the role reports to.",
+          "source": "inferred"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No managerial title or reporting structure mentioned in job description or Pass 1/2.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "unknown",
+          "confidence": 0.65,
+          "evidence": "No information about team size changes or hiring velocity. Mentions 'collaborating with diverse teams' but no growth signals.",
+          "source": "inferred"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.6,
+          "evidence": "Only mentions 'diverse teams' without specifying size or composition. Role is 'Associate' suggesting junior level, but no team structure details.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred reporting structure in job description or Pass 1/2.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.8,
+          "evidence": "Mentions 'collaborating with diverse teams including scientists, engineers, consultants and database administrators' and 'client requirements' suggesting embedded cross-functional work.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.45,
+          "confidence": 0.7,
+          "evidence": "Onsite work model, no PTO or work-life balance mentions, client-facing consulting role with 'modernization roadmap' suggests potential for long hours.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.6,
+          "confidence": 0.65,
+          "evidence": "Mentions 'modernization roadmap' and collaboration with experienced teams, but no explicit learning budget, mentorship, or career paths. Role is entry-level ('Associate').",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.55,
+          "confidence": 0.75,
+          "evidence": "Uses GCP and modern tools (Elasticsearch, Splunk) but no mention of engineering practices (CI/CD, testing, code review). Focus on migration suggests maintenance over innovation.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.95,
+          "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred mention of code review, CI/CD, testing, monitoring, or design docs.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.75,
+          "evidence": "Focus on 'modernization roadmap' and 'migration' suggests maintenance and legacy system work rather than innovation. No R&D or experimentation mentioned.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "Mentions 'modernization roadmap journey' and 'analyze discovery and analysis outcomes' which implies awareness of existing tech debt and need for improvement.",
+          "source": "inferred"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "basic_ml",
+          "confidence": 0.8,
+          "evidence": "Mentions 'implementing and validating predictive models' and 'statistical models with big data' but no MLOps, feature stores, or GenAI. Working with data scientists implied.",
+          "source": "inferred"
+        },
+        "ml_tools_expected": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.95,
+          "evidence": "No specific ML tools (SageMaker, MLflow, etc.) mentioned. Only general 'machine learning techniques' referenced.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No 'ASAP', 'immediate start', or urgency signals in job description or Pass 1/2.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.65,
+          "evidence": "IBM is a well-known company, but location is Hyderabad (India) which may have moderate competition. No application count or Easy Apply mentioned.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "established_tech",
+          "confidence": 0.95,
+          "evidence": "IBM is a well-established tech company with global delivery centers. No startup signals.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.75,
+          "evidence": "IBM likely hires regularly, but no specific signals of aggressive expansion or replacement. Role is 'Associate' suggesting standard hiring.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No team size mentioned. Only 'diverse teams' referenced without numbers.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "public",
+          "confidence": 0.95,
+          "evidence": "IBM is a publicly traded company with stable funding.",
+          "source": "inferred"
+        },
+        "role_creation_type": {
+          "value": "new_headcount",
+          "confidence": 0.7,
+          "evidence": "Role is 'Associate Software Developer' at IBM, likely a standard entry-level hire rather than backfill or expansion. No explicit signals.",
+          "source": "inferred"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "cloud_native",
+        "data_focused_role",
+        "established_company",
+        "remote_friendly"
+      ],
+      "strength_details": [
+        "Cloud-native focus with GCP migration projects",
+        "Established company (IBM) with global delivery centers",
+        "Role centered on data engineering and modernization"
+      ],
+      "concern_categories": [
+        "scope_creep_risk",
+        "vague_requirements",
+        "overtime_likely",
+        "limited_growth"
+      ],
+      "concern_details": [
+        "Role combines data engineering, data science, and consulting - unclear boundaries",
+        "Onsite work in Hyderabad with no PTO or work-life balance signals",
+        "Entry-level title ('Associate') with broad responsibilities suggests limited growth path"
+      ],
+      "best_fit_categories": [
+        "junior_engineers",
+        "cloud_specialists",
+        "data_generalists",
+        "startup_enthusiasts"
+      ],
+      "best_fit_details": [
+        "Junior engineers seeking entry into data engineering with cloud (GCP) exposure",
+        "Candidates comfortable with broad responsibilities and client-facing work"
+      ],
+      "probe_categories": [
+        "role_scope_boundaries",
+        "work_hour_expectations",
+        "career_growth_path",
+        "tech_debt_situation"
+      ],
+      "probe_details": [
+        "Clarify boundaries between data engineering, data science, and consulting responsibilities",
+        "Ask about typical work hours and on-call expectations for client projects",
+        "Understand career progression from 'Associate' to next level"
+      ],
+      "leverage_categories": [
+        "rare_skill_match",
+        "exact_experience_match"
+      ],
+      "leverage_details": [
+        "Experience with Hadoop to GCP migration is valuable for this role",
+        "Familiarity with CDC and data replication tools is a key differentiator"
+      ],
+      "overall_assessment": "Entry-level data engineering role at IBM with cloud (GCP) focus and client-facing responsibilities. Strengths include established company and modernization projects. Concerns include scope creep (DE + DS + consulting), vague role boundaries, and lack of work-life balance signals. Best for junior engineers seeking cloud exposure.",
+      "recommendation_score": 0.55,
+      "recommendation_confidence": 0.75
+    },
+    "tokens": 12243,
+    "input_tokens": 9642,
+    "output_tokens": 2601,
+    "cost": 0.014844
+  }
+}

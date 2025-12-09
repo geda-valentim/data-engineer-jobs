@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.75,
+        "evidence": "Title mentions 'Application Developer-Process Management (BPM)' and requires 'Minimum of 3 years of recent experience with Appian software development'. Preferred experience of 5-7 years in BPM suggests a mid-level role rather than senior.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.60,
+        "evidence": "The job posting describes responsibilities related to data gathering, storage, and processing, which align with data engineering. However, the title and focus on BPM tools suggest a stronger emphasis on business process automation.",
+        "source": "inferred"
+      },
+      "sub_specialty": {
+        "value": "general",
+        "confidence": 0.65,
+        "evidence": "Mentions both batch and real-time processing but does not emphasize any specific sub-specialty like streaming, MLOps, or governance.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.70,
+        "evidence": "Responsibilities focus on development, design, and integration without explicit mention of leadership or mentoring duties.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No explicit cloud providers or services mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 1.0,
+        "evidence": "No secondary cloud providers mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.60,
+        "evidence": "Mentions both 'batch and real-time processing' in the job description, but no specific tools like Kafka or Flink are highlighted.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No orchestration tools like Airflow, Luigi, or cloud-native orchestrators explicitly mentioned.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No explicit mention of storage layers like data warehouse, lake, or lakehouse.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "Location is mentioned as Mumbai Metropolitan Region, but no remote work model or restrictions are discussed.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No timezone requirements or team distribution mentioned.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Job is located in Mumbai Metropolitan Region, but no relocation package or requirement is stated.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned in Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No signals regarding OPT/CPT or student visa support.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No citizenship or work authorization requirements mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.70,
+        "evidence": "Job posting mentions 'full_time' employment type, which typically aligns with W2 in a consulting role at IBM.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 1.0,
+        "evidence": "No benefits are mentioned in Pass 1 extraction.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.65,
+        "evidence": "Mentions 'long-term relationships' and 'career in IBM Consulting', suggesting growth opportunities but no explicit career tracks.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.60,
+        "evidence": "Mentions collaboration with clients and teams, which may include working with senior professionals, but no formal mentorship program is stated.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No discussion of internal mobility or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No explicit career tracks mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.70,
+        "evidence": "Job posting lists multiple 'must have' hard skills with no 'nice to have' skills mentioned, indicating high strictness.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.65,
+        "evidence": "Responsibilities are focused on BPM and Appian development with clear tasks like integration, troubleshooting, and documentation.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": true,
+        "confidence": 0.60,
+        "evidence": "Requires 3+ years of Appian experience for the role but lists preferred experience of 5-7 years in BPM, which may be inflated for a mid-level position.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

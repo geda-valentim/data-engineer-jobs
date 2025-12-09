@@ -1,0 +1,152 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+Looking at the job posting:
+
+**Title**: Data Engineer-Data Modeling
+**Company**: IBM
+**Location**: Pune, Maharashtra, India
+
+Let me extract information section by section:
+
+1. **Compensation**: No salary information is mentioned in the posting, so all compensation fields should be null.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. Should be "not_mentioned".
+
+3. **Work Model**: 
+   - Location is specified as "Pune, Maharashtra, India" but no explicit mention of remote/hybrid/onsite
+   - Employment type not explicitly mentioned
+   - This should be "not_mentioned" for work_model_stated
+
+4. **Contract Details**: No mention of contract type, duration, etc. Should be "not_mentioned" for contract_type.
+
+5. **Contractor Rates**: No mention of contractor rates, so all should be null.
+
+6. **Skills Classification**:
+   - Must have hard skills: Looking at "Required Technical And Professional Expertise" section:
+     - "12+ years of experience in data modelling, data architecture" (experience requirement)
+     - "Proficiency in data modelling tools Erwin, IBM Infosphere Data Architect and database management systems" (strong qualifier "Proficiency")
+     - "Familiarity with different data models like relational, dimensional and NoSQL databases" (weak qualifier "Familiarity")
+     - "Understanding of business processes and how data supports business decision making" (moderate qualifier "Understanding")
+     - "Strong understanding of database design principles, data warehousing concepts, and data governance practices" (strong qualifier "Strong understanding")
+     - "Knowledge of programming languages such as SQL" (moderate qualifier "Knowledge")
+   
+   I'll analyze the soft skills and experience requirements. The preferred qualifications emphasize analytical and problem-solving abilities, with a focus on attention to detail and collaborative teamwork. The role demands significant experience, requiring at least 12 years in data modeling and architecture. The educational requirement is a Master's Degree, indicating a preference for advanced academic credentials in the field.
+
+7. **Geographic Restrictions**: Location is specified as Pune, Maharashtra, India, but no explicit geographic restrictions mentioned. Should be "not_mentioned".
+
+8. **Benefits Structured**: No benefits mentioned in the posting. All should be null.
+
+9. **Context**: 
+   - Company description: "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology"
+   - Team info: "Work in an Agile, collaborative environment, partnering with other scientists, engineers, consultants and database administrators of all backgrounds and disciplines to bring analytical rigor and statistical methods to the challenges of predicting behaviours. Build teams or writing programs to cleanse and integrate data in an efficient and reusable manner, developing predictive or prescriptive models, and evaluating modelling results"
+
+I'll proceed with extracting the key details systematically.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "data modelling tools Erwin",
+        "IBM Infosphere Data Architect",
+        "database management systems",
+        "database design principles",
+        "data warehousing concepts",
+        "data governance practices",
+        "SQL"
+      ],
+      "nice_to_have_hard_skills": [
+        "relational databases",
+        "dimensional databases",
+        "NoSQL databases",
+        "business processes",
+        "data supports business decision making"
+      ],
+      "must_have_soft_skills": [
+        "Analytical Skills",
+        "Problem Solving",
+        "Attention to Detail",
+        "Team Collaboration"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 12,
+      "years_experience_max": null,
+      "years_experience_text": "12+ years",
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "preferred",
+      "education_text_raw": "Master's Degree",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Work in an Agile, collaborative environment, partnering with other scientists, engineers, consultants and database administrators of all backgrounds and disciplines to bring analytical rigor and statistical methods to the challenges of predicting behaviours. Build teams or writing programs to cleanse and integrate data in an efficient and reusable manner, developing predictive or prescriptive models, and evaluating modelling results",
+      "company_description_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 37
+  }
+}
+```

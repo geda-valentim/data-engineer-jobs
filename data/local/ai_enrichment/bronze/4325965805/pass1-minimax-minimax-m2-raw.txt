@@ -1,0 +1,161 @@
+<reasoning>I need to carefully extract information from this IBM Data Engineer job posting. Let me go through each section systematically.
+
+Looking at the job posting:
+
+**Title**: Data Engineer-Data Integration
+**Company**: IBM
+**Location**: Navi Mumbai, Maharashtra, India
+
+**Description sections**:
+1. Introduction - talks about IBM Consulting Client Innovation Centers
+2. Your Role And Responsibilities - describes the Data Engineer role
+3. Required Technical And Professional Expertise - lists required skills
+4. Preferred Technical And Professional Experience - lists preferred skills
+
+Let me extract information systematically:
+
+**Compensation**: No salary information mentioned → salary_disclosed: false, all salary fields null
+
+**Work Authorization**: No mention of visa sponsorship, work authorization, or citizenship requirements → visa_sponsorship_stated: "not_mentioned", work_auth_text: null, citizenship_text: null, security_clearance_stated: "not_mentioned"
+
+**Work Model**: 
+- Location is specified as "Navi Mumbai, Maharashtra, India" but no mention of remote/hybrid/onsite → work_model_stated: "not_mentioned"
+- No employment type mentioned → employment_type_stated: "not_mentioned"
+- location_restriction_text: null
+
+**Contract Details**: No contract information mentioned → contract_type: "not_mentioned", all other contract fields null
+
+**Contractor Rates**: No contractor information → pay_type: "not_mentioned", all other contractor fields null
+
+**Skills Classification**:
+
+Looking at "Required Technical And Professional Expertise":
+- "Expertise in Data warehousing/ information Management/ Data Integration/Business Intelligence using ETL tool Informatica PowerCenter" - this is required, so must_have_hard_skills
+- "Knowledge of Cloud, Power BI, Data migration on cloud skills" - required, so must_have_hard_skills  
+- "Experience in Unix shell scripting and python" - required, so must_have_hard_skills
+- "Experience with relational SQL, Big Data etc" - required, so must_have_hard_skills
+ 
+I'll analyze the preferred technical skills, focusing on Azure Cloud and Informatica PowerCenter expertise. These skills are marked as preferred, indicating they're valuable but not mandatory. The preferred skills suggest additional cloud and data integration capabilities that could enhance the candidate's profile.
+
+The soft skills section reveals a collaborative approach, emphasizing cross-functional teamwork and data-driven problem-solving. The role requires strong communication and analytical abilities to effectively work with diverse teams and extract meaningful insights from complex data sets.
+
+No specific certifications are mentioned, and the experience requirements are somewhat ambiguous. The job description lacks clear educational prerequisites, with no explicit degree or certification requirements specified.
+
+The role appears to be a data engineering position focused on data integration, requiring technical expertise in data warehousing, cloud technologies, and programming languages like Python and SQL.
+
+The location is specifically in India, with no global or regional restrictions mentioned. Benefits are not detailed in the provided text, leaving compensation and additional perks unclear.
+
+The company description highlights IBM's consulting innovation centers, emphasizing their global reach and technical expertise across various sectors.
+
+I'll focus on extracting key technical skills and experience requirements for this data engineering role. The position demands strong technical competencies in data warehousing, cloud technologies, and programming languages like Python and SQL. Specific tools like Informatica PowerCenter and Azure Cloud are highlighted as preferred qualifications.
+
+The role requires expertise in data integration, business intelligence, and cloud-based data migration strategies. Candidates should demonstrate proficiency in Unix shell scripting and have experience with relational databases and big data technologies.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Data warehousing",
+        "Information Management",
+        "Data Integration",
+        "Business Intelligence",
+        "ETL tool Informatica PowerCenter",
+        "Cloud",
+        "Power BI",
+        "Data migration on cloud",
+        "Unix shell scripting",
+        "Python",
+        "relational SQL",
+        "Big Data"
+      ],
+      "nice_to_have_hard_skills": [
+        "MS-Azure Cloud",
+        "Informatica PowerCenter"
+      ],
+      "must_have_soft_skills": [
+        "Team Collaboration",
+        "Problem Solving"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Collaborating closely with diverse teams, you'll play an important role in deciding the most suitable data management systems and identifying the crucial data required for insightful analysis.",
+      "company_description_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 47
+  }
+}
+```

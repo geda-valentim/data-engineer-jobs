@@ -1,0 +1,282 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 17:59:44",
+    "job_posting_id": "4325757965",
+    "job_title": "Data Engineer-Business Intelligence",
+    "company_name": "IBM",
+    "job_location": "Pune, Maharashtra, India",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.7,
+          "evidence": "IBM is a large, established enterprise with likely structured data practices, but the job posting lacks explicit details about modern data stack tools (e.g., Snowflake, dbt, Airflow) or governance practices. Mentions of 'Oracle' and 'Hive' suggest some legacy components, while 'Tableau' and 'agile environment' imply defined processes.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.7,
+          "evidence": "Matches the data_maturity_score of 3. The role focuses on BI and feature development within a structured environment, but lacks signals for advanced governance or optimization patterns.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No explicit signals about modern data stack adoption, CI/CD, governance, or mesh patterns. The tools mentioned (Tableau, Oracle, Hive) are standard but not indicative of cutting-edge maturity.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.4,
+          "confidence": 0.8,
+          "evidence": "The role title and responsibilities suggest a primary focus on BI/Tableau development, but the description also mentions 'Application Developer' and 'Project Management' as must-have skills, which could imply broader responsibilities than a typical Data Engineer.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.5,
+          "confidence": 0.6,
+          "evidence": "Mentions 'agile environment' and 'resolve challenges faced in implementing the same,' which could indicate time pressure. However, no explicit signals about overtime, on-call, or work-life balance are provided, making it unclear.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "multi_role",
+          "confidence": 0.8,
+          "evidence": "The job posting combines responsibilities of a Data Engineer (Tableau, SQL, Hive) with those of an Application Developer and Project Management, suggesting a multi-role position.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.45,
+          "confidence": 0.75,
+          "evidence": "Moderate scope creep and potential overtime risk due to agile delivery pressures, but no severe red flags like unrealistic deadlines or extreme multi-tasking demands.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of reporting structure or manager title in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No manager title or reporting line is explicitly stated or inferable from the job posting.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "unknown",
+          "confidence": 0.9,
+          "evidence": "No explicit signals about team growth velocity or hiring plans beyond the role being part of a 'Client Innovation Center' with global delivery focus.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.9,
+          "evidence": "No explicit team composition details provided in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No reporting structure details are explicitly mentioned or inferable from the job posting.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "The role is part of IBM Consulting's Client Innovation Centers, which typically involve cross-functional collaboration with global clients and teams.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.5,
+          "confidence": 0.6,
+          "evidence": "No explicit work-life balance signals (e.g., PTO, work hours) are mentioned, but the lack of on-call or aggressive deadlines suggests moderate risk.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.7,
+          "confidence": 0.7,
+          "evidence": "Mentions 'limitless career path' and 'access to latest education, tools and technology,' which are positive signals for growth, though vague.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.6,
+          "confidence": 0.7,
+          "evidence": "IBM is known for strong technical culture, but the job posting lacks explicit signals about modern development practices, innovation, or collaboration beyond generic mentions.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No explicit mention of open source contributions, tech blogs, conference speaking, or innovation time in the job posting.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No explicit development practices (e.g., code review, CI/CD, monitoring) are mentioned in the job posting or Pass 1 extraction beyond generic 'agile environment' and debugging.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.6,
+          "evidence": "Mentions 'implementing new technologies' but lacks specifics about innovation culture or experimentation time.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "No explicit mention of tech debt management, refactoring, or code quality improvement beyond debugging and root cause analysis.",
+          "source": "inferred"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.9,
+          "evidence": "No mention of AI/ML tools, frameworks, or responsibilities in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No AI/ML tools or frameworks are mentioned or inferred from the job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit hiring urgency signals (e.g., 'immediate start,' 'ASAP') in the job posting.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "high",
+          "confidence": 0.6,
+          "evidence": "IBM is a well-known company with a global talent pool, and the role is based in Pune, a major tech hub in India with high competition for BI/Data Engineering roles.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.9,
+          "evidence": "IBM is a large, established enterprise with a global presence and mature consulting services.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit signals about hiring velocity or team expansion plans beyond the role being part of a consulting delivery center.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit team size signals provided in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No funding stage signals (e.g., bootstrapped, seed, series_a) mentioned in the job posting.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of whether this is a new headcount, backfill, or team expansion role.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "established_company",
+        "learning_opportunities",
+        "data_focused_role",
+        "collaborative_culture"
+      ],
+      "strength_details": [
+        "IBM is a globally recognized enterprise with stability and resources for career growth.",
+        "Role emphasizes access to 'latest education, tools and technology,' suggesting strong learning opportunities.",
+        "Focus on Business Intelligence (Tableau, SQL, Oracle, Hive) provides clarity for candidates specializing in BI/data visualization.",
+        "Cross-functional collaboration with global clients and teams could offer diverse and impactful work experiences."
+      ],
+      "concern_categories": [
+        "scope_creep_risk",
+        "vague_requirements",
+        "overtime_likely",
+        "role_clarity"
+      ],
+      "concern_details": [
+        "Role combines Data Engineering, Application Development, and Project Management responsibilities, which may lead to scope creep.",
+        "No explicit mention of seniority level, years of experience, or specific role expectations, making it difficult to gauge fit.",
+        "Agile environment and client-driven deadlines could imply overtime or time pressure, despite no direct signals.",
+        "Unclear whether this is a pure BI/Data Engineering role or requires broader application development skills."
+      ],
+      "best_fit_categories": [
+        "senior_data_engineers",
+        "analytics_engineers",
+        "data_generalists",
+        "career_changers"
+      ],
+      "best_fit_details": [
+        "Senior Data Engineers with 5+ years of experience in BI tools (Tableau) and data warehouse technologies (SQL, Oracle, Hive).",
+        "Analytics Engineers who are comfortable with BI development and agile practices.",
+        "Data Generalists with a mix of application development and BI experience, especially those familiar with consulting environments.",
+        "Career changers with strong SQL and Tableau skills transitioning into a more technical role."
+      ],
+      "probe_categories": [
+        "role_scope_boundaries",
+        "work_hour_expectations",
+        "career_growth_path",
+        "tech_stack_details",
+        "team_size_composition"
+      ],
+      "probe_details": [
+        "Ask for clarity on the balance between Data Engineering, Application Development, and Project Management responsibilities.",
+        "Inquire about typical work hours, sprint cadence, and how client deadlines impact overtime expectations.",
+        "Request details on career growth paths within IBM Consulting for this role (e.g., IC vs. management tracks).",
+        "Clarify the tech stack beyond Tableau, SQL, Oracle, and Hive (e.g., cloud providers, orchestration tools, or data pipeline frameworks).",
+        "Ask about team size, composition, and whether this is a new or existing role within the Client Innovation Center."
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "domain_expertise"
+      ],
+      "leverage_details": [
+        "Candidates with proven experience in Tableau-driven dashboards and large dataset performance optimization can leverage this as a strong match.",
+        "Experience with Oracle or Hive in a consulting or client-facing environment is a differentiator."
+      ],
+      "overall_assessment": "This role at IBM Consulting offers stability and learning opportunities within a global enterprise, but the scope is broader than a typical Data Engineer, blending BI, application development, and project management. The lack of clarity on seniority, work hours, and tech stack details suggests candidates should probe these areas during interviews to ensure alignment with their career goals.",
+      "recommendation_score": 0.6,
+      "recommendation_confidence": 0.8
+    },
+    "tokens": 12826,
+    "input_tokens": 9881,
+    "output_tokens": 2945,
+    "cost": 0.015771
+  }
+}

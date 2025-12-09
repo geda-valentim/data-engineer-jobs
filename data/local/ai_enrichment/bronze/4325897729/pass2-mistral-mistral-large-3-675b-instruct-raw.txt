@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.85,
+        "evidence": "Title mentions 'Associate Software Developer' and requires 6-7 years of total experience with 4-5 years of relevant experience. Responsibilities align more with mid-level than senior.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is 'Data Engineer-Data Platforms-Azure' and core responsibilities focus on data pipelines, ETL, and data management systems.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "hybrid",
+        "confidence": 0.80,
+        "evidence": "Both batch and real-time processing mentioned explicitly in the job description.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.75,
+        "evidence": "Role emphasizes individual contributions like data gathering, storage, and processing. No direct leadership or management responsibilities mentioned.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.95,
+        "evidence": "Azure Databricks, Azure DevOps, and Azure Blob explicitly mentioned as mandatory skills.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud providers mentioned beyond Azure.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.80,
+        "evidence": "Job description mentions both batch ('scheduled jobs', 'ETL') and real-time ('real-time processing') paradigms.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.70,
+        "evidence": "Azure DevOps mentioned as a mandatory skill, which is a cloud-native orchestration tool for Azure.",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.75,
+        "evidence": "Azure Blob (data lake pattern) and SQL (data warehouse pattern) mentioned as mandatory skills.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Location is specified as Kochi, Kerala, India, but no remote work model or restrictions are discussed.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.85,
+        "evidence": "Location is explicitly stated as Kochi, Kerala, India, suggesting focus on candidates within India.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No mention of relocation support or requirements, only location is specified.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Visa sponsorship is not mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No signals about OPT/CPT or student visa support, and location is specified as India.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No discussion about work authorization, citizenship, or green card requirements.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Employment type and contract details are not mentioned.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits are discussed in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Mentions contributing to 'innovation and adoption of new technology' and 'teamwork', but no specific career paths or ladders.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Job posting mentions collaborating with 'diverse teams' and 'partnering with other scientists, engineers, consultants and database administrators', suggesting mentorship opportunities.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No discussion about internal mobility or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.60,
+        "evidence": "Role emphasizes technical contributions and mentions 'Associate Software Developer', suggesting IC track is available but no other tracks are mentioned.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "All skills listed are mandatory with no 'nice-to-have' or preferred skills distinction, indicating high strictness.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Job description is focused on data engineering tasks with well-defined responsibilities like ETL, data pipelines, and collaboration with specific roles.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": true,
+        "confidence": 0.70,
+        "evidence": "Title is 'Associate Software Developer' but requires 6-7 years of experience, which is typically aligned with mid or senior roles. Core responsibilities also include advanced tasks like predictive modeling and enterprise search applications.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

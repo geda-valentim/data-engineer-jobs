@@ -1,0 +1,160 @@
+<reasoning>Let me carefully analyze this job posting to extract the required information according to the rules. I need to go through each section systematically and extract only explicitly stated information.
+
+Looking at the job posting:
+
+**Title**: Data Engineer-Business Intelligence
+**Company**: IBM
+**Location**: Pune, Maharashtra, India
+
+Let me go through each field:
+
+1. **Compensation**: No salary information is mentioned at all. So salary_disclosed = false, all salary fields = null.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship. So visa_sponsorship_stated = "not_mentioned", work_auth_text = null, citizenship_text = null, security_clearance_stated = "not_mentioned".
+
+3. **Work Model**: 
+   - Location is specified as "Pune, Maharashtra, India" - this suggests onsite work
+   - No mention of remote or hybrid work
+   - No mention of employment type (full-time, contract, etc.)
+   - So work_model_stated = "onsite" (since location is specified), location_restriction_text = null, employment_type_stated = "not_mentioned"
+
+4. **Contract Details**: No mention of contract type, duration, etc. So contract_type = "not_mentioned", all other contract fields = null.
+
+5. **Contractor Rates**: No mention of contractor rates. So pay_type = "not_mentioned", all other contractor fields = null.
+
+6. **Skills Classified**: Let me analyze the skills mentioned:
+
+   From "Required Technical And Professional Expertise":
+   - "Tableau Desktop & Server" - this is mentioned as required, so must_have_hard_skills
+   - "SQL, Oracle & Hive" - mentioned as required, so must_have_hard_skills
+   - "Communication Skills" - mentioned as required, so must_have_soft_skills
+   - "Project Management" - mentioned as required, so must_have_soft_skills
+   - "Multitasking, Collaborative Skills" - mentioned as required, so must_have_soft_skills
+
+   From "Preferred Technical And Professional Experience":
+   - "Proven experience in developing and working Tableau driven dashboards, analytics" - this has "proven" which is a strong qualifier, so must_have_hard_skills
+   - "Ability to query and display large data sets while maximizing the performance of workbook" - this is a required ability, so must_have_hard_skills
+   - "Ability to interpret technical or dashboard structure and translate complex business requirements to technical" - this is a required ability, so must_have_hard_skills
+
+   No certifications mentioned.
+   No specific years of experience mentioned.
+   Education: "Master's Degree" is mentioned as "Preferred Education", so education_level = "MASTERS", education_area = null (no specific field mentioned), education_requirement = "preferred", education_text_raw = "Master's Degree"
+
+   No mention of LLM/GenAI or feature store.
+
+7. **Geographic Restrictions**: Location is specified as India, but no explicit geographic restrictions mentioned. So geo_restriction_type = "not_mentioned", all other geo fields = null.
+
+8. **Benefits Structured**: No benefits mentioned. So all benefits fields = null.
+
+9. **Context**: 
+   - Team info: "you will lead IBM into the future by translating system requirements into the design and development of customized systems in an agile environment" - this gives some context about the role
+   - Company description: "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology"
+
+I'll focus on the key insights about the role's context and team dynamics. The position involves working in IBM's Client Innovation Centers, which serve as hubs for delivering technical expertise to diverse clients globally. The role emphasizes agile development, translating complex system requirements into innovative solutions. Team collaboration and technical leadership are central to the position, with a strong emphasis on driving technological advancement across various sectors.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Tableau Desktop",
+        "Tableau Server",
+        "SQL",
+        "Oracle",
+        "Hive",
+        "Tableau dashboards",
+        "analytics",
+        "querying large data sets",
+        "workbook performance optimization",
+        "technical dashboard structure interpretation",
+        "business requirements translation"
+      ],
+      "nice_to_have_hard_skills": [],
+      "must_have_soft_skills": [
+        "Communication",
+        "Project Management",
+        "Multitasking",
+        "Collaborative Skills"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "preferred",
+      "education_text_raw": "Master's Degree",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "You will lead IBM into the future by translating system requirements into the design and development of customized systems in an agile environment. Your work will power IBM and its clients globally, collaborating and integrating code into enterprise systems.",
+      "company_description_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 52
+  }
+}
+```

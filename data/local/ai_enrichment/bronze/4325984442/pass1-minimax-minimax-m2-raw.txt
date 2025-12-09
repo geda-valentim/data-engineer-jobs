@@ -1,0 +1,168 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules. Let me go through each section systematically.
+
+First, let me identify what information is explicitly stated in the job posting:
+
+**Title**: Application Developer-Process Management (BPM)
+**Company**: IBM
+**Location**: Bengaluru East, Karnataka, India
+
+**Description sections**:
+- Introduction about IBM Consulting
+- Role description as Data Engineer
+- Responsibilities including BPM application work
+- Preferred Education: Master's Degree
+- Required Technical And Professional Expertise
+- Preferred Technical And Professional Experience
+
+Let me extract each field systematically:
+
+**Compensation**: No salary information is mentioned, so salary_disclosed = false, all salary fields = null
+
+**Work Authorization**: No mention of visa sponsorship, work authorization, or citizenship requirements. So visa_sponsorship_stated = "not_mentioned", work_auth_text = null, citizenship_text = null, security_clearance_stated = "not_mentioned"
+
+**Work Model**: 
+- Location is specified as "Bengaluru East, Karnataka, India" but no explicit work model (remote/hybrid/onsite) is mentioned
+- employment_type_stated: Not explicitly mentioned, so "not_mentioned"
+- work_model_stated: "not_mentioned" (no remote/hybrid/onsite specified)
+- location_restriction_text: null
+
+**Contract Details**: No contract information mentioned, so all fields = null except contract_type = "not_mentioned"
+
+**Contractor Rates**: No contractor information, so all fields = null except pay_type = "not_mentioned"
+
+**Skills Classification**:
+Let me analyze the technical requirements:
+
+From "Required Technical And Professional Expertise":
+- "Minimum of 5+ years of recent experience with Appian software development and designing" → years_experience_min: 5, years_experience_max: null, years_experience_text: "5+ years"
+- "Good understanding of database concepts and strong working knowledge on any one of the major databases such as Oracle SQL, Server MySQL" → This has "strong working knowledge" which is a strong qualifier, so must_have_hard_skills: ["database concepts", "Oracle SQL", "MySQL"]
+
+
+- "Design, develop, and implement business process workflows using BPM tools (e.g., IBM BPM, Pega, Camunda)" → This is in responsibilities, so must_have_hard_skills: ["BPM tools", "IBM BPM", "Pega", "Camunda"]
+- "Automate business processes to improve efficiency and reduce manual effort" → must_have_hard_skills: ["business process automation"]
+- "Integrate BPM solutions with enterprise systems (ERP, CRM, etc.) via APIs and web services" → must_have_hard_skills: ["API integration", "web services", "ERP integration", "CRM integration"]
+
+I'll continue analyzing the technical requirements, focusing on the specific skills and qualifications needed for this role. The position requires expertise in BPM tools, database management, and system integration, with a strong emphasis on automation and workflow design.
+
+The preferred experience section highlights additional qualifications that would strengthen a candidate's profile. These include specific BPM experience, Appian proficiency, and the ability to communicate technical concepts effectively to diverse audiences.
+
+The soft skills requirements emphasize clear communication across technical and non-technical domains, which is crucial for successful project implementation and stakeholder engagement.
+
+The educational background specifies a Master's Degree as preferred, indicating a preference for advanced academic qualifications in the field.
+
+No specific certifications are mentioned, and there are no references to LLM/GenAI or feature store technologies in the current context.
+
+Geographic considerations reveal no explicit restrictions, with the location being Bengaluru East, Karnataka, India. The benefits section is similarly limited, with no detailed information provided about potential compensation or additional perks.
+
+The company description offers insight into IBM Consulting's approach, highlighting long-term client relationships and a focus on hybrid cloud and AI solutions across multiple industries.
+
+The metadata suggests a comprehensive extraction process, with 2 fields identified and 25 fields remaining null, indicating a thorough but not exhaustive information gathering approach.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Appian software development",
+        "database concepts",
+        "Oracle SQL",
+        "MySQL",
+        "BPM tools",
+        "IBM BPM",
+        "Pega",
+        "Camunda",
+        "business process automation",
+        "API integration",
+        "web services",
+        "ERP integration",
+        "CRM integration"
+      ],
+      "nice_to_have_hard_skills": [
+        "BPM experience",
+        "Appian"
+      ],
+      "must_have_soft_skills": [
+        "Communication"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 5,
+      "years_experience_max": null,
+      "years_experience_text": "5+ years",
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "preferred",
+      "education_text_raw": "Master's Degree",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": null,
+      "company_description_text": "A career in IBM Consulting is rooted by long-term relationships and close collaboration with clients across the globe. You'll work with visionaries across multiple industries to improve the hybrid cloud and AI journey for the most innovative and valuable companies in the world. Your ability to accelerate impact and make meaningful change for your clients is enabled by our strategic partner ecosystem and our robust technology platforms across the IBM portfolio"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 2,
+    "fields_null": 25
+  }
+}
+```

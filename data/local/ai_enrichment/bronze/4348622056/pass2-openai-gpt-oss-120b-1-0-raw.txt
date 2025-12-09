@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.78,
+        "evidence": "Job description includes leading workshops, leading the team to adopt tools, and responsibility for migration projects, indicating senior‑level responsibilities despite no explicit years required.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title contains \"Data Engineer\" and core responsibilities focus on data pipelines, storage, and processing.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "cloud_migration",
+        "confidence": 0.75,
+        "evidence": "Responsibilities emphasize converting Hadoop workloads to GCP and implementing data replication mechanisms, which are typical of cloud migration work.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.80,
+        "evidence": "Mentions \"Leads the team\" and leading discovery workshops but does not specify direct reports, indicating technical leadership without people‑management duties.",
+        "source": "combined"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "gcp",
+        "confidence": 0.95,
+        "evidence": "Hard skills list includes \"GCP\" and the role involves converting Hadoop to GCP.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud providers (AWS, Azure) are mentioned in the posting or extracted skills.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "Both \"Batch processing\" and \"Real-time processing\" are listed as required skills.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "The posting does not reference Airflow, Luigi, Databricks workflows, dbt, or any other orchestration tool.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "lake",
+        "confidence": 0.70,
+        "evidence": "Mentions Hadoop (a data lake technology) and does not explicitly reference a data warehouse solution.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.80,
+        "evidence": "Location is specified as Hyderabad, India with no remote‑work language, implying candidates must be based in the same country.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.70,
+        "evidence": "Only the Indian location is provided; no broader timezone or regional requirement is stated.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "The posting does not mention any relocation assistance or requirement.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Visa sponsorship is listed as \"not_mentioned\" in the extraction, indicating it is not offered.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No mention of OPT/CPT or student visa support; work authorization is implied for local candidates.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.85,
+        "evidence": "No citizenship restriction is stated; only work authorization for the location is implied.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.85,
+        "evidence": "The role is presented as a full‑time employee position with no contract‑type language, typical of a W‑2 employment model.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.92,
+        "evidence": "The extraction shows an empty benefits list and no benefit details in the posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.60,
+        "evidence": "The posting mentions leadership activities but does not outline explicit career ladders or promotion tracks.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.65,
+        "evidence": "Collaboration with diverse teams and senior engineers is described, suggesting informal mentorship opportunities.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No language about promotions, ladders, or advancement paths appears in the posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "The posting does not reference internal transfers or mobility programs.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "No specific IC, management, specialist, or architect tracks are mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "A long list of mandatory hard skills is provided with no \"nice‑to‑have\" items, indicating a stringent requirement set.",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "The description focuses specifically on data engineering tasks without blending other roles.",
+        "source": "pass1_derived"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "The required skill set aligns with a senior data engineering role; no unrealistic junior‑level expectations are present.",
+        "source": "inferred"
+      }
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.95,
+        "evidence": "Job posting lists Total Exp-6-7 Yrs (Relevant-4-5 Yrs) which aligns with senior‑level experience (5‑8 years). Title is Data Engineer/Associate Software Developer.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.99,
+        "evidence": "Title explicitly says Data Engineer and responsibilities focus on pipelines, ETL, and data platforms.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "streaming_realtime",
+        "confidence": 0.75,
+        "evidence": "Description mentions both batch and real‑time processing; emphasis on real‑time data handling and Azure Databricks streaming capabilities.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "No mention of people‑management duties, direct reports, or hiring responsibilities; role is focused on technical delivery.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.99,
+        "evidence": "Mandatory skills list includes Azure Databricks, Azure DevOps, Azure Blob; job title includes \"Azure\".",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No other cloud providers (AWS, GCP, etc.) are mentioned in the posting.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "The role explicitly calls for both batch and real‑time processing of data.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No orchestration tools such as Airflow, Luigi, Dagster, Prefect, or cloud‑native schedulers are referenced.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "lakehouse",
+        "confidence": 0.70,
+        "evidence": "Azure Databricks (Delta Lake) and Azure Blob storage imply a lakehouse architecture; no explicit data‑warehouse product is listed.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.90,
+        "evidence": "Location is specified as Kochi, Kerala, India with no remote‑work language; implies candidates must be based in India.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "apac",
+        "confidence": 0.90,
+        "evidence": "Job location in India places the work within the APAC region.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Posting does not mention any relocation assistance or requirement; expects candidates to already be in the specified location.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.50,
+        "evidence": "No statement about H‑1B sponsorship is provided.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.50,
+        "evidence": "No mention of OPT/CPT eligibility; work authorization is implied for local candidates.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "The posting does not specify any citizenship or work‑authorization restrictions.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Employment type (full‑time, contractor, etc.) is not stated.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits such as health, PTO, equity, or learning budget are listed.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "The description does not discuss career ladders, promotion tracks, or growth opportunities.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions collaboration with diverse teams and senior engineers, suggesting informal mentorship.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No language about promotions, titles, or advancement paths appears in the posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No reference to internal transfers or mobility programs.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No explicit mention of IC, management, specialist, or architect tracks.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.85,
+        "evidence": "A long list of mandatory hard and soft skills with no nice‑to‑have items; phrasing uses \"must have\" language.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Job description is focused specifically on data engineering tasks without mixing other roles.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Required skill set (Azure Databricks, Spark, Python, ETL, etc.) aligns with a senior‑level data engineer with 6‑7 years experience.",
+        "source": "inferred"
+      }
+    }
+  }
+}

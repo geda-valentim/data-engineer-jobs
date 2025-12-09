@@ -1,0 +1,259 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.78,
+        "evidence": "Uses traditional ETL tools (DataStage, Informatica) and BI platform (Cognos) without mention of modern orchestration, CI/CD, or data governance, indicating a developing data practice.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.78,
+        "evidence": "Same reasoning as data_maturity_score; practices align with a developing maturity level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [
+          "cloud_native"
+        ],
+        "confidence": 0.75,
+        "evidence": "Job lists experience with AWS, Google Cloud, and Azure, showing a cloud‑first approach.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.1,
+        "confidence": 0.9,
+        "evidence": "Responsibilities focus on BI reporting and ETL; no mention of devops, ML, or product ownership.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.7,
+        "evidence": "Consulting delivery centers often have client‑driven deadlines; no explicit work‑hour or PTO information provided.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.95,
+        "evidence": "Pass2 scope_definition marked clear; responsibilities are specific to BI data engineering.",
+        "source": "pass2_inference"
+      },
+      "overall_red_flag_score": {
+        "value": 0.3,
+        "confidence": 0.8,
+        "evidence": "Low scope creep, moderate overtime risk, but unclear reporting line and limited growth signals raise some concerns.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "Job posting does not state who the role reports to.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No manager title or reporting hierarchy is referenced.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No information about hiring pace or team expansion is provided.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.6,
+        "evidence": "No team size or composition details are disclosed in the posting.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No reporting line described.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Role sits in IBM Consulting Delivery Center, implying a centralized data team rather than an embedded product squad.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.4,
+        "confidence": 0.7,
+        "evidence": "No PTO, benefits, or on‑call details; typical consulting hours may be variable.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.35,
+        "confidence": 0.7,
+        "evidence": "No mention of learning budget, mentorship, or promotion path.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Stack consists of legacy BI tools; no CI/CD, testing, or open‑source culture noted.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No signals such as open source contributions, conference speaking, or dedicated innovation time are mentioned.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No explicit mention of code review, CI/CD, monitoring, or incident response.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No innovation initiatives described.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No reference to refactoring, modernization, or tech‑debt reduction.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "Job description contains no AI/ML related responsibilities or tools.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools are listed in the posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No start‑date or urgency language appears in the posting.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No data on applicant volume, easy‑apply, or location scarcity is provided.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.98,
+        "evidence": "IBM is a global, publicly‑traded enterprise technology company.",
+        "source": "pass1_derived"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.8,
+        "evidence": "No explicit hiring rush; large enterprises typically hire at a steady pace.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "Team size or composition is not disclosed.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Funding stage is irrelevant for an established public company like IBM.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "Posting does not state whether this is a new headcount, backfill, or expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "cloud_native",
+      "well_defined_role",
+      "data_focused_role",
+      "established_company",
+      "clear_requirements"
+    ],
+    "strength_details": [
+      "Role requires expertise in modern cloud platforms (AWS, GCP, Azure) – a clear cloud‑native focus.",
+      "Well‑defined responsibilities around BI reporting, Cognos administration, and ETL development.",
+      "Strong data focus: BI/DW projects, reporting, and data integration tools are central.",
+      "IBM’s reputation as an established enterprise provides stability and resources.",
+      "Clear mandatory skill list (Cognos, DataStage, Informatica, cloud platforms) with minimal nice‑to‑have items."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "no_visa_sponsorship",
+      "limited_growth",
+      "overtime_likely"
+    ],
+    "concern_details": [
+      "Compensation range is not disclosed, making salary negotiation uncertain.",
+      "Visa sponsorship is not mentioned, limiting eligibility to candidates with existing work authorization in India.",
+      "No information on career progression, mentorship, or internal mobility.",
+      "Consulting delivery environment may require variable hours to meet client deadlines."
+    ],
+    "best_fit_categories": [
+      "mid_level_engineers",
+      "analytics_engineers",
+      "data_generalists"
+    ],
+    "best_fit_details": [
+      "Mid‑level data engineers (3‑5 years) with solid ETL and BI reporting experience.",
+      "Candidates comfortable with multiple cloud platforms and traditional BI tools like Cognos.",
+      "Engineers looking for a stable enterprise environment rather than a fast‑moving startup."
+    ],
+    "probe_categories": [
+      "salary_range_details",
+      "career_growth_path",
+      "team_size_composition",
+      "work_hour_expectations",
+      "remote_policy_details"
+    ],
+    "probe_details": [
+      "What is the expected salary band and are there performance bonuses?",
+      "Can you describe the typical career progression for a data engineer in this team?",
+      "How many data engineers and other roles are currently on the BI team?",
+      "What are the standard work hours and is on‑call or weekend work expected?",
+      "Is any remote or hybrid work allowed, or is the role strictly onsite in Pune?"
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "domain_expertise"
+    ],
+    "leverage_details": [
+      "Three‑plus years of hands‑on Cognos and DataStage experience directly matches the core requirements.",
+      "Experience with multiple cloud platforms (AWS, GCP, Azure) is a differentiator given the multi‑cloud expectation."
+    ],
+    "overall_assessment": "The role offers a clear, data‑focused scope within a large, stable enterprise and requires a solid BI/ETL skill set. Compensation details are opaque and there is limited visibility into growth or work‑life balance, so candidates should verify salary, career path, and hour expectations before proceeding.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.78
+  }
+}

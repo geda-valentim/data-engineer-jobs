@@ -1,0 +1,259 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.71,
+        "evidence": "Job posting mentions big data and ML but provides no details on modern stack, CI/CD, governance or cloud tools, indicating only basic pipeline capability.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.71,
+        "evidence": "Score of 2 maps to the \"developing\" maturity level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [],
+        "confidence": 0.84,
+        "evidence": "No explicit mention of modern data stack, CI/CD, data quality testing, monitoring, governance, data mesh, MLOps, or cloud‑native architecture.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.42,
+        "confidence": 0.81,
+        "evidence": "Role blends data engineering, ML model development and analytics, expanding beyond a pure pipeline focus but still stays within data domain.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.22,
+        "confidence": 0.76,
+        "evidence": "No language about on‑call, urgent delivery or long hours; benefits and stable corporate environment suggest moderate work‑life balance.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.88,
+        "evidence": "Job description lists specific responsibilities (data pipelines, predictive modeling, ML assessment) without vague or unrelated duties.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.31,
+        "confidence": 0.79,
+        "evidence": "Combined low scope creep, low overtime risk and clear role definition outweigh the lack of reporting detail.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.84,
+        "evidence": "Posting does not specify a manager, team lead, or reporting line.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.84,
+        "evidence": "No titles (e.g., Head of Data, Director) are referenced in the description.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.71,
+        "evidence": "No indication of hiring surge, team expansion or contraction.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.62,
+        "evidence": "No details on team size, number of data engineers, or seniority mix are provided.",
+        "source": "not_mentioned"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.84,
+        "evidence": "The posting lacks any explicit reporting hierarchy.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.71,
+        "evidence": "Mentions collaboration with product team and partners, indicating cross‑functional work.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.62,
+        "confidence": 0.77,
+        "evidence": "Benefits are listed but no PTO policy or on‑call duties; typical for a large bank suggests moderate balance.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.58,
+        "confidence": 0.73,
+        "evidence": "Mentions training, coaching and manager support but no explicit career ladder or learning budget.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.45,
+        "confidence": 0.71,
+        "evidence": "Absence of modern tooling, CI/CD, or engineering practice mentions points to a modest technical culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.84,
+        "evidence": "No references to open‑source contributions, conference speaking, hackathons, or dedicated innovation time.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.84,
+        "evidence": "Job posting does not cite code review, pair programming, TDD, CI/CD, monitoring, or incident response.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.84,
+        "evidence": "No language about experimentation, R&D time, or exploring new technologies.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.73,
+        "evidence": "No mention of refactoring, modernizing legacy pipelines, or tech‑debt reduction initiatives.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.77,
+        "evidence": "Describes use of machine learning, deep learning, predictive models, but no MLOps platforms or model‑serving infrastructure.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No specific ML tooling (e.g., SageMaker, MLflow) is referenced.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.84,
+        "evidence": "Posting does not state an immediate start date or accelerated timeline.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.84,
+        "evidence": "No data on applicant volume, location scarcity, or salary competitiveness beyond the disclosed range.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.92,
+        "evidence": "BMO is a major, publicly‑traded financial institution with >2,700 professionals and $1 trillion in assets.",
+        "source": "pass1_derived"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.78,
+        "evidence": "Large enterprise typically hires on an ongoing basis; no language indicating rapid expansion or replacement.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.78,
+        "evidence": "Job posting does not disclose the size of the data engineering team.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "BMO is a publicly‑listed corporation; funding stage terminology is not applicable.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.78,
+        "evidence": "No indication whether the role is a new headcount, backfill, or part of team expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "transparent_salary",
+      "strong_benefits",
+      "well_defined_role",
+      "data_focused_role",
+      "established_company"
+    ],
+    "strength_details": [
+      "Salary range is clearly disclosed ($90,000‑$120,000 CAD).",
+      "Comprehensive benefits package including health, tuition reimbursement, accident/life insurance, and retirement plans.",
+      "Role has a focused set of responsibilities around data engineering, ML modeling, and analytics.",
+      "Position is within a large, stable financial institution offering long‑term security.",
+      "Clear emphasis on data‑driven decision making and advanced analytics."
+    ],
+    "concern_categories": [
+      "no_visa_sponsorship",
+      "unclear_reporting",
+      "vague_requirements"
+    ],
+    "concern_details": [
+      "Visa sponsorship is not mentioned, limiting candidates without Canadian work authorization.",
+      "Reporting line and manager title are absent, creating uncertainty about team hierarchy.",
+      "Broad list of duties (data pipelines, predictive modeling, AI assessment) may lead to ambiguous prioritization."
+    ],
+    "best_fit_categories": [
+      "mid_level_engineers",
+      "data_generalists",
+      "analytics_engineers"
+    ],
+    "best_fit_details": [
+      "Engineers with 4‑6 years of experience comfortable building data pipelines and collaborating on ML models.",
+      "Candidates who enjoy working in a regulated, data‑intensive financial environment.",
+      "Professionals seeking a well‑defined individual contributor role with exposure to both engineering and analytics."
+    ],
+    "probe_categories": [
+      "team_size_composition",
+      "reporting_structure",
+      "tech_stack_details",
+      "work_hour_expectations",
+      "career_growth_path"
+    ],
+    "probe_details": [
+      "Can you describe the size and composition of the data engineering team?",
+      "Who will I report to and what is the management hierarchy?",
+      "What specific technologies and platforms are used for data pipelines and ML workflows?",
+      "What are the typical work hours and is any on‑call or overtime expected?",
+      "What career progression paths are defined for data engineers within BMO?"
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "domain_expertise"
+    ],
+    "leverage_details": [
+      "Your 4‑6 years of experience aligns directly with the stated requirement range.",
+      "Experience in financial services data and compliance (e.g., SOX/PCI) adds strong domain relevance."
+    ],
+    "overall_assessment": "The role offers a clear, data‑focused scope at a well‑established financial institution with transparent compensation and solid benefits. It is a good fit for mid‑level engineers who want stability and exposure to both engineering and analytics, though candidates should verify reporting lines, visa support, and exact technology stack.",
+    "recommendation_score": {
+      "value": 0.71,
+      "confidence": 0.78,
+      "evidence": "Strengths (salary transparency, benefits, clear role) outweigh moderate concerns (visa, reporting ambiguity).",
+      "source": "combined"
+    }
+  }
+}

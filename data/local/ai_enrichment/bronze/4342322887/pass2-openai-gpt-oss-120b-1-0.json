@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 12:49:27",
+    "job_posting_id": "4342322887",
+    "job_title": "DATA ENGINEER (ECONOMIC RESEARCH)",
+    "company_name": "El Paso Electric Company",
+    "job_location": "El Paso, TX",
+    "pass_name": "pass2",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "entry",
+          "confidence": 0.82,
+          "evidence": "Experience requirement is \"0-3 or more years\" and title does not contain seniority keywords.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.99,
+          "evidence": "Title is \"DATA ENGINEER\" and core responsibilities revolve around data pipelines, warehousing, and dashboards.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.86,
+          "evidence": "Job description emphasizes data warehousing, ETL, dashboards, and batch-oriented tools (SQL, PowerBI, R, Python) with no streaming technologies mentioned.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.74,
+          "evidence": "Responsibilities include coordinating and supervising analysis across teams, but no direct reports or people‑management duties are listed.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.93,
+          "evidence": "No cloud provider (AWS, Azure, GCP) is referenced in the posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "Only cloud‑agnostic technologies are mentioned; no secondary cloud services appear.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.86,
+          "evidence": "Focus on data warehousing, scheduled reporting, and dashboard generation; no streaming or real‑time processing tools are cited.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.94,
+          "evidence": "The posting does not name any workflow/orchestration platform (e.g., Airflow, Dagster, etc.).",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.84,
+          "evidence": "Mentions relational databases, data modeling, data warehousing, and building data‑warehouse solutions.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.86,
+          "evidence": "Work model is listed as \"onsite\" with location \"El Paso, TX\"; no remote option is provided.",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "americas",
+          "confidence": 0.81,
+          "evidence": "Job is based in Texas, USA, implying a focus on North American time zones.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.82,
+          "evidence": "No relocation language appears; the role is onsite at a specific city.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.91,
+          "evidence": "Pass 1 extraction marks visa sponsorship as \"not_mentioned\".",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "No mention of OPT/CPT eligibility; work authorization is implied for standard employees.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.92,
+          "evidence": "Neither citizenship nor specific work‑authorization requirements are stated in the posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.96,
+          "evidence": "Employment type is \"full_time\" and contract type is \"permanent\", indicating a standard employee arrangement.",
+          "source": "combined"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.93,
+          "evidence": "Pass 1 extraction lists no benefits; the posting does not describe health, PTO, equity, or other perks.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "The description does not discuss promotion ladders, career tracks, or advancement pathways.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.71,
+          "evidence": "Mentions collaboration with cross‑functional teams and working with senior staff, but no formal mentorship program is described.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.92,
+          "evidence": "No language about promotions, titles, or advancement is present.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.94,
+          "evidence": "The posting does not reference internal transfers or mobility opportunities.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.88,
+          "evidence": "No explicit or implied career tracks (IC, management, specialist, architect) are mentioned.",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.81,
+          "evidence": "A clear set of must‑have hard and soft skills is listed alongside a few nice‑to‑have items.",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "The role is specifically defined as a Data Engineer with detailed responsibilities; no unrelated duties are mixed in.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.77,
+          "evidence": "Required skills (SQL, PowerBI, R, Python, data modeling) align with a 0‑3 year experience level; responsibilities are ambitious but not unrealistic.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 9613,
+    "input_tokens": 6920,
+    "output_tokens": 2693,
+    "cost": 0.0018458999999999997
+  }
+}

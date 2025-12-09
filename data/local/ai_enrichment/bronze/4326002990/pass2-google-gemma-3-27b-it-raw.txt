@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.70,
+        "evidence": "Responsibilities align with mid-level data engineering tasks, no explicit senior requirements.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is Data Engineer, core focus on data pipelines and warehousing.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.85,
+        "evidence": "Focus on data warehousing (Snowflake) and ETL processes.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "No mention of team management or leadership responsibilities.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "aws",
+        "confidence": 0.75,
+        "evidence": "Mentions S3, suggesting AWS usage.",
+        "source": "inferred"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other clouds explicitly mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.75,
+        "evidence": "Mentions both batch ETL and real-time processing.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.90,
+        "evidence": "DBT is mentioned, which often integrates with Airflow.",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "lakehouse",
+        "confidence": 0.70,
+        "evidence": "Snowflake and S3 suggest a lakehouse architecture.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.90,
+        "evidence": "Location is Kochi, Kerala, India, implying a restriction to India.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "apac",
+        "confidence": 0.85,
+        "evidence": "Location in India suggests an APAC timezone focus.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Location specified, no relocation package mentioned.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit mention of H1B sponsorship.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No mention of OPT/CPT.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific citizenship requirements stated.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.85,
+        "evidence": "Full-time employment suggests a W2 contract.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits details provided in the job description.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.65,
+        "evidence": "Mentions 'growth opportunities' but lacks specifics.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Collaborating with diverse teams suggests learning opportunities.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotions or advancement.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.60,
+        "evidence": "Focus on technical skills suggests an IC track.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Mix of 'required' (DBT) and 'preferred' skills.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Job description focuses on data engineering tasks.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Skills align with a mid-level data engineer role.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

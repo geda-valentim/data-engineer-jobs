@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 14:17:40",
+    "job_posting_id": "4342322878",
+    "job_title": "Senior Data Engineer",
+    "company_name": "Haypp Group",
+    "job_location": "Stockholm, Stockholm County, Sweden",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Senior Data Engineer' and role involves leading data infrastructure development and mentoring team members",
+          "source": "pass1_derived"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title is 'Data Engineer' and core responsibilities focus on building data pipelines, infrastructure, and working with analytics teams",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.82,
+          "evidence": "Primary focus on data pipelines using Airflow for scheduled jobs, e-commerce data transformation, and batch processing patterns",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.78,
+          "evidence": "Mentions driving data infrastructure forward, liaising with stakeholders, and working closely with analytics team, but no direct reports mentioned",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "aws",
+          "confidence": 0.95,
+          "evidence": "AWS explicitly mentioned multiple times with specific services: Redshift, S3, EC2, Lambda, SageMaker",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "Only AWS mentioned as cloud platform, GCP mentioned as nice-to-have but not used",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.85,
+          "evidence": "Airflow mentioned for pipeline orchestration suggests batch processing, no real-time streaming technologies mentioned",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "airflow_like",
+          "confidence": 0.95,
+          "evidence": "Airflow explicitly mentioned as primary orchestration tool",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.88,
+          "evidence": "Redshift mentioned as primary data warehouse, S3 mentioned but appears to be for raw data feeding into warehouse",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.75,
+          "evidence": "Based in Stockholm with 300 team members mainly in Sweden, suggesting local/onsite preference but not explicitly stated",
+          "source": "inferred"
+        },
+        "timezone_focus": {
+          "value": "europe",
+          "confidence": 0.85,
+          "evidence": "Headquarters in Stockholm, Sweden, serving Nordic/European markets suggests CET/CEST timezone alignment",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "Position based in Stockholm with team mainly in Sweden, suggesting relocation to Stockholm area would be expected",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No visa sponsorship mentioned, and being a Swedish company with local team focus suggests limited visa sponsorship",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "No mention of student visa support, and senior role requirements suggest work authorization required",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.75,
+          "evidence": "No citizenship requirements mentioned, but EU work authorization likely required for Stockholm-based position",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.85,
+          "evidence": "Full-time employee position with comprehensive benefits package suggests W2 employment structure",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "comprehensive",
+          "confidence": 0.88,
+          "evidence": "Multiple premium benefits: ITP1 pension, private healthcare, 30 days vacation, parental pay lift, wellness allowance, social events",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.72,
+          "evidence": "Mentions 'Learn, grow, be challenged' and 'will to learn and develop' but no specific career tracks mentioned",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.68,
+          "evidence": "Team collaboration emphasized and working with tech team to drive infrastructure forward suggests mentorship opportunities",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit promotion or advancement path mentioned in the job description",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal transfers, lateral moves, or exploring different roles within the company",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track"
+          ],
+          "confidence": 0.65,
+          "evidence": "Senior IC role mentioned but no management track or other career paths explicitly discussed",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.78,
+          "evidence": "Clear distinction between must-haves (SQL, Python, AWS experience) and nice-to-haves (GCP, e-commerce), balanced requirements",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.88,
+          "evidence": "Well-defined data engineering role with specific responsibilities, technologies, and clear focus on data infrastructure",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.82,
+          "evidence": "Requirements are appropriate for senior level: SQL/Python, AWS, data engineering experience, with reasonable nice-to-haves",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 9332,
+    "input_tokens": 6860,
+    "output_tokens": 2472,
+    "cost": 0.011804000000000002
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 21:27:05",
+    "job_posting_id": "4342322878",
+    "job_title": "Senior Data Engineer",
+    "company_name": "Haypp Group",
+    "job_location": "Stockholm, Stockholm County, Sweden",
+    "pass_name": "pass2",
+    "model_id": "google.gemma-3-27b-it"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.92,
+          "evidence": "The job title is 'Senior Data Engineer'.",
+          "source": "pass1_derived"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "The job title is 'Senior Data Engineer' and the description focuses on data pipeline development and maintenance.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "general",
+          "confidence": 0.65,
+          "evidence": "The description mentions a broad range of data engineering tasks without a strong focus on a specific sub-specialty.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.75,
+          "evidence": "The description focuses on individual contributions and technical skills, with no mention of managing a team.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "aws",
+          "confidence": 0.95,
+          "evidence": "The job description explicitly mentions AWS services like Redshift, S3, EC2, Lambda, and SageMaker.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No other cloud providers are mentioned in the job description.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.75,
+          "evidence": "The description mentions data pipelines connecting to multiple data sources, suggesting batch processing.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "airflow_like",
+          "confidence": 0.95,
+          "evidence": "Airflow is explicitly mentioned as a tool used in the role.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "lake",
+          "confidence": 0.78,
+          "evidence": "S3 is mentioned, which is commonly used for data lakes.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "The location is specified as Stockholm, Sweden, but there is no mention of remote work restrictions.",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "europe",
+          "confidence": 0.92,
+          "evidence": "The location is Stockholm, Sweden, which is in Europe.",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "The job description does not mention any relocation assistance or requirements.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "The job description does not mention H1B sponsorship.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "The job description does not mention OPT or CPT.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.88,
+          "evidence": "The job description does not specify any citizenship requirements.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "The job description mentions a full-time position, which typically implies a W2 employment arrangement.",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "standard",
+          "confidence": 0.75,
+          "evidence": "The job description mentions several benefits, including pension, healthcare, vacation, and wellness allowance.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "The description mentions 'learn, grow, be challenged', suggesting growth opportunities but without specific details.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "The description mentions working closely with colleagues and the tech team, implying potential mentorship opportunities.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "The job description does not explicitly mention promotion opportunities.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "The job description does not mention internal mobility or transfers.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track"
+          ],
+          "confidence": 0.65,
+          "evidence": "The role focuses on technical skills and individual contributions, suggesting an IC track.",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.73,
+          "evidence": "The description includes both 'must-have' skills (SQL, Python, AWS) and 'advantageous' skills (GCP).",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.82,
+          "evidence": "The job description focuses specifically on data engineering tasks and responsibilities.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.75,
+          "evidence": "The required skills are reasonable for a senior data engineer role.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 9135,
+    "input_tokens": 7462,
+    "output_tokens": 1673,
+    "cost": 0.010808
+  }
+}

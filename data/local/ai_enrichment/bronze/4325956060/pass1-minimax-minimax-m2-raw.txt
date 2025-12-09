@@ -1,0 +1,173 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+Looking at the job posting:
+
+**Title**: Data Engineer-Data Platforms
+**Company**: IBM
+**Location**: Bengaluru East, Karnataka, India
+
+Let me extract information section by section:
+
+1. **Compensation**: No salary information is mentioned in the job posting, so all compensation fields should be null.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. Should be "not_mentioned".
+
+3. **Work Model**: 
+   - Location is specified as "Bengaluru East, Karnataka, India" - this suggests onsite work
+   - No mention of remote or hybrid work options
+   - Employment type is not explicitly mentioned, but this appears to be a full-time position based on the context
+   - work_model_stated should be "onsite"
+   - employment_type_stated should be "full_time"
+
+4. **Contract Details**: No mention of contract type, duration, or other contract details. Should be "not_mentioned" for contract_type.
+
+5. **Contractor Rates**: Not applicable as this appears to be a full-time position, not contractor work.
+
+6. **Skills Classification**: Let me analyze the technical requirements:
+
+**Required Technical And Professional Expertise:**
+- Experience with Apache Spark (PySpark): "In-depth knowledge of Spark's architecture, core APIs, and PySpark" - This is a strong qualifier, so should be in must_have_hard_skills
+- Big Data Technologies: "Familiarity with Hadoop, HDFS, Kafka, and other big data tools" - "Familiarity" is a weak qualifier, so should be in nice_to_have_hard_skills
+- Data Engineering Skills: "Strong understanding of ETL pipelines, data modeling, and data warehousing concepts" - "Strong understanding" is a strong qualifier, so should be in must_have_hard_skills
+
+
+- Python proficiency emerges as a critical technical requirement with strong emphasis on data processing capabilities
+- Data processing libraries like Pandas and NumPy are highlighted as essential technical competencies
+- SQL skills are crucial, with focus on large-scale data analysis and transformation
+- Cloud platform experience across AWS, Azure, and GCP is a key technical requirement
+
+**Preferred Technical And Professional Experience:**
+- Architecture strategy and standards for end-to-end monitoring represent advanced technical competencies
+- Collaboration with technology teams suggests strong interpersonal and technical communication skills
+- Detection and prevention tools indicate specialized security and platform expertise
+
+**Soft Skills Analysis:**
+- Leadership in design and construction demonstrates strategic thinking
+- Continuous improvement mindset through testing and agile frameworks
+- Technology trend discovery and creative solution development
+- Business value and user requirement alignment
+
+**Experience and Education:**
+- No explicit years of experience specified
+- No formal education requirements mentioned
+- No certifications referenced
+- No specific LLM or GenAI technologies identified
+- No feature store technologies mentioned
+
+**Geographic and Benefits Context:**
+- Location specified as Bengaluru East, Karnataka, India
+- No specific geographic restrictions indicated
+- Benefits information not detailed in provided context
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Bengaluru East, Karnataka, India",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Apache Spark",
+        "PySpark",
+        "ETL pipelines",
+        "data modeling",
+        "data warehousing",
+        "Python",
+        "Pandas",
+        "NumPy",
+        "SQL",
+        "AWS",
+        "Azure",
+        "GCP"
+      ],
+      "nice_to_have_hard_skills": [
+        "Hadoop",
+        "HDFS",
+        "Kafka",
+        "monitoring",
+        "detection and prevention tools"
+      ],
+      "must_have_soft_skills": [
+        "Leadership",
+        "Continuous Learning",
+        "Problem Solving"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "IBM Consulting Client Innovation Centers (Delivery Centers)",
+      "company_description_text": "IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 32
+  }
+}
+```

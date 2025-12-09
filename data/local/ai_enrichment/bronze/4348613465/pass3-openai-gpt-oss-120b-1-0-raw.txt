@@ -1,0 +1,251 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "The role mentions batch and real‑time processing but only legacy BPM tools (Appian, IBM BPM, Pega, Camunda) and relational databases; no modern data‑stack components, CI/CD, or data‑quality frameworks are referenced.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Score of 2 maps to the \"developing\" maturity level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No explicit signals for modern data‑stack adoption, CI/CD, data‑quality testing, monitoring, or governance were found in the posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.15,
+        "confidence": 0.88,
+        "evidence": "Responsibilities are limited to BPM‑focused data engineering (design, develop, troubleshoot BPM apps, integrate with ERP/CRM). No mention of unrelated domains such as full‑stack development, ML engineering, or DevOps.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.40,
+        "confidence": 0.70,
+        "evidence": "Consulting roles often involve client‑driven deadlines, but the posting provides no explicit on‑call or overtime expectations.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Pass 2 inference labeled scope_definition as \"clear\" and the job description lists concrete BPM‑related duties.",
+        "source": "combined"
+      },
+      "overall_red_flag_score": {
+        "value": 0.30,
+        "confidence": 0.78,
+        "evidence": "Low scope creep combined with moderate overtime risk and clear responsibilities yields a modest overall red‑flag rating.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "The posting does not specify a manager or reporting line.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No titles (e.g., Head of Data, Director) are referenced.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No information about hiring pace or team expansion is provided.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.50,
+        "evidence": "The job posting does not disclose team size, number of data engineers, or seniority mix.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No reporting hierarchy is described.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.60,
+        "evidence": "Collaboration with business analysts, IT, and stakeholders is mentioned, but there is no indication of being embedded in a product team.",
+        "source": "pass2_inference"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.40,
+        "confidence": 0.70,
+        "evidence": "No PTO, remote‑work, or on‑call policies are described; consulting environments can be deadline‑driven.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "The posting does not mention mentorship, learning budgets, or clear promotion paths.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.50,
+        "confidence": 0.70,
+        "evidence": "Use of BPM platforms and relational databases suggests a functional engineering culture, but no modern data‑engineering practices are highlighted.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No references to open‑source contributions, tech blogs, conferences, or hackathons.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "The description does not mention code review, CI/CD, testing, or monitoring practices.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No language about experimentation, R&D time, or exploring new technologies.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No mention of refactoring, modernizing legacy pipelines, or managing technical debt.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "The posting contains no references to machine learning, AI, or related tooling.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML/AI tools are listed among required or nice‑to‑have skills.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No language about immediate start or urgent hiring.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No data on applicant volume or market competitiveness is provided.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a large, publicly‑traded technology company with a long history.",
+        "source": "pass1_derived"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No indication of aggressive or steady hiring cadence.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "Team size is not disclosed in the posting.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.90,
+        "evidence": "IBM is a publicly listed corporation.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "The posting does not state whether the role is a new headcount, backfill, or expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "established_company",
+      "data_focused_role",
+      "clear_requirements"
+    ],
+    "strength_details": [
+      "Role is centered on BPM data engineering with clearly defined responsibilities.",
+      "Requires 5+ years of experience with Appian and other BPM platforms (IBM BPM, Pega, Camunda).",
+      "Position is with IBM Consulting, offering the stability of a large, established tech firm."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "overtime_likely",
+      "unclear_reporting"
+    ],
+    "concern_details": [
+      "Compensation range, benefits, and PTO are not disclosed in the posting.",
+      "Consulting projects can entail deadline‑driven work, potentially leading to overtime.",
+      "No information is provided about the reporting manager or team hierarchy."
+    ],
+    "best_fit_categories": [
+      "mid_level_engineers",
+      "data_generalists",
+      "enterprise_experienced"
+    ],
+    "best_fit_details": [
+      "Engineers with 5‑7 years of experience in BPM tools and relational databases.",
+      "Candidates comfortable working in a large‑enterprise consulting environment.",
+      "Professionals who enjoy integrating data pipelines with ERP/CRM systems."
+    ],
+    "probe_categories": [
+      "salary_range_details",
+      "benefits_details",
+      "work_hour_expectations",
+      "career_growth_path",
+      "team_size_composition"
+    ],
+    "probe_details": [
+      "Ask for the specific salary band, bonus structure, and equity components.",
+      "Inquire about PTO, health benefits, and any learning or conference budgets.",
+      "Clarify typical weekly work hours, on‑call duties, and weekend expectations.",
+      "Request information on promotion criteria, mentorship programs, and internal mobility.",
+      "Find out the size of the data engineering team and the seniority mix."
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "domain_expertise"
+    ],
+    "leverage_details": [
+      "Your 5+ years of Appian and BPM platform experience directly matches the core requirements.",
+      "Experience integrating data with ERP/CRM systems is a valuable domain expertise for this role."
+    ],
+    "overall_assessment": "The position offers a well‑defined BPM data engineering focus within IBM Consulting, providing stability and clear technical expectations. However, lack of disclosed compensation, benefits, and reporting details, plus potential overtime in a consulting setting, are notable drawbacks.",
+    "recommendation_score": 0.62,
+    "recommendation_confidence": 0.80
+  }
+}

@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.75,
+        "evidence": "5-8 years of experience aligns with mid-level expectations. Title 'Data Engineer' without 'Senior' suggests mid-level.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.99,
+        "evidence": "Job title is 'Data Engineer' and responsibilities center around data pipelines and engineering tasks.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.70,
+        "evidence": "Focus on processing data with Spark, Python, and Hive suggests batch ETL pipelines.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "Responsibilities focus on development and maintenance, with no mention of team leadership or management.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "aws",
+        "confidence": 0.95,
+        "evidence": "Multiple AWS services are explicitly mentioned (EMR, Glue, DataBricks, RedShift, DynamoDB).",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.98,
+        "evidence": "Only AWS is mentioned; no other cloud providers are present.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.80,
+        "evidence": "Emphasis on processing data with Spark and Hive suggests batch processing.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.75,
+        "evidence": "AWS Glue and EMR are mentioned, indicating a cloud-native orchestration approach.",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "lakehouse",
+        "confidence": 0.65,
+        "evidence": "AWS Redshift and DynamoDB suggest a lakehouse architecture.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.85,
+        "evidence": "Location is Pune, Maharashtra, India, implying a restriction to India.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "apac",
+        "confidence": 0.90,
+        "evidence": "Location in India strongly suggests an APAC timezone focus.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "The job posting does not mention any relocation requirements.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of H1B sponsorship.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of OPT/CPT.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.80,
+        "evidence": "No specific citizenship requirements are stated.",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "The position is described as full-time employment, suggesting a W2 contract.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits are explicitly mentioned in the job description.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.65,
+        "evidence": "Mentions 'growth opportunities' but lacks specific details.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Working with senior engineers suggests potential mentorship.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotions or advancement.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.70,
+        "evidence": "Focus on technical skills and development suggests an IC track.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "A mix of 'required' and 'preferred' skills is present.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "The job description focuses on data engineering tasks.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Skills align with a mid-level data engineer role.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

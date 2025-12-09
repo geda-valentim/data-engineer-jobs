@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.85,
+        "evidence": "Job requires 5-7 years of BPM experience; senior level typically 5-8 years.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title and description explicitly refer to the role as a Data Engineer.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "api_development",
+        "confidence": 0.70,
+        "evidence": "Responsibilities include integrating BPM solutions with ERP/CRM via APIs and web services.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.92,
+        "evidence": "No mention of people‑management responsibilities or direct reports; role focuses on technical delivery.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "Job posting does not reference any specific cloud provider (AWS, Azure, GCP).",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No secondary cloud services are listed in the description.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "Description mentions both batch and real‑time processing of data.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No orchestration tools (Airflow, Luigi, etc.) are referenced.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No data warehouse, lake, or lakehouse technologies are cited.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.95,
+        "evidence": "Location limited to Mumbai Metropolitan Region; geo restriction type is specific_countries (IN).",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "apac",
+        "confidence": 0.90,
+        "evidence": "Job is based in India, which falls in the APAC timezone region.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No relocation requirement is mentioned; role is tied to a specific Indian location.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": "No statement about H‑1B sponsorship is provided.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": "No mention of OPT/CPT eligibility.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.60,
+        "evidence": "The posting does not specify any citizenship or work‑authorization requirement.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Employment type (W2, C2C, 1099) is not described in the posting.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits (health, PTO, equity, etc.) are listed.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "The description does not discuss career ladders or growth tracks.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mentorship program or senior‑mentor references are provided.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No language about promotions or advancement paths appears in the posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "The posting does not reference internal transfers or mobility.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No explicit IC, management, specialist, or architect tracks are mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.85,
+        "evidence": "Multiple mandatory hard skills, 5‑7 years BPM experience, and a required Master's degree.",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Job description focuses specifically on BPM and data‑engineering responsibilities.",
+        "source": "combined"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Required skills and experience levels align with a senior‑mid role; no unrealistic expectations observed.",
+        "source": "combined"
+      }
+    }
+  }
+}

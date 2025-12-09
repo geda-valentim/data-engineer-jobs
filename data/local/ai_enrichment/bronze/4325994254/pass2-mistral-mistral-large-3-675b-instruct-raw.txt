@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "associate",
+        "confidence": 0.95,
+        "evidence": "Title explicitly mentions 'Associate Software Developer' and years of experience (4-5 relevant, 6-7 total) align with associate-level roles at IBM.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is 'Data Engineer-Data Platforms-Azure' and core responsibilities focus on data pipelines, ETL, and data management systems.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "hybrid",
+        "confidence": 0.80,
+        "evidence": "Responsibilities mention both batch and real-time processing, and tools like Azure Databricks, PySpark, and Hadoop support hybrid paradigms.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "Role is described as contributing to data tasks without explicit mention of leadership or direct reports; aligns with individual contributor expectations.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.95,
+        "evidence": "Azure Databricks, Azure DevOps, and Azure Blob are explicitly mentioned as mandatory skills.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud providers are mentioned beyond Azure.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.75,
+        "evidence": "Both batch ('Extract, Transform, and Load (ETL) tools') and real-time ('real-time processing') paradigms are mentioned in responsibilities.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.70,
+        "evidence": "Azure DevOps is mentioned as a mandatory skill, which is a cloud-native orchestration tool for Azure.",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.70,
+        "evidence": "Azure Blob (data lake patterns) and SQL (data warehouse patterns) are mentioned, suggesting a mixed storage approach.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Location is specified as Kochi, Kerala, India, but no remote restrictions are discussed.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.80,
+        "evidence": "Role is based in India (Kochi), and no timezone requirements or global team mentions are present.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Location is explicitly stated as Kochi, India, and no relocation signals (e.g., 'relocation package') are mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship is mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No explicit mention of OPT/CPT or student visa support; role is based in India and requires work authorization.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No discussion of citizenship or work authorization requirements in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Employment type is stated as 'full_time' in Pass 1 extraction, which aligns with W2 employment in India.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits are mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit or implied career growth paths are discussed in the job posting.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions collaborating with diverse teams including senior engineers and consultants, suggesting potential mentorship.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotions or advancement paths in the job posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No discussion of internal mobility or role changes in the job posting.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career tracks (IC, management, specialist, architect) are mentioned or implied.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "All skills are listed under 'must_have_hard_skills' with no 'nice_to_have' skills mentioned, indicating strict requirements.",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Job description focuses on a single role (Data Engineer) with well-defined responsibilities and mandatory skills.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": true,
+        "confidence": 0.70,
+        "evidence": "Title and responsibilities suggest an associate-level role, but the required experience (4-5 relevant years) and skills (e.g., Azure Databricks, PySpark, Hadoop) are typically expected for mid or senior roles.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

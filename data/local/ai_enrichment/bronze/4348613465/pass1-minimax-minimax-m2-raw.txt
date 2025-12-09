@@ -1,0 +1,160 @@
+<reasoning>Let me carefully analyze this job posting to extract the required information according to the rules.
+
+First, let me identify what information is explicitly stated in the job posting:
+
+**Job Title**: Application Developer-Process Management (BPM)
+**Company**: IBM
+**Location**: Bengaluru East, Karnataka, India
+
+**Description Analysis**:
+- This is for a Data Engineer role at IBM
+- Responsibilities include troubleshooting, testing, optimizing BPM applications
+- Document process designs, configurations, technical specifications
+- Collaborate with business analysts, IT teams, stakeholders
+- Provide ongoing support and maintenance for deployed BPM applications
+
+**Education**: "Master's Degree Required"
+
+**Technical Requirements**:
+- "Minimum of 5+ years of recent experience with Appian software development and designing"
+- "Good understanding of database concepts and strong working knowledge on any one of the major databases such as Oracle SQL, Server MySQL"
+- "Design, develop, and implement business process workflows using BPM tools (e.g., IBM BPM, Pega, Camunda)"
+- "Automate business processes to improve efficiency and reduce manual effort"
+- "Integrate BPM solutions with enterprise systems (ERP, CRM, etc.) via APIs and web services"
+
+**Preferred Experience**:
+- "5-7 years of experience in BPM"
+- "5+ years of experience with Appian"
+- "Ability to communicate results to technical and non-technical audiences"
+
+Now let me extract the information according to the JSON structure:
+
+**Compensation**: No salary information mentioned → all compensation fields null
+
+**Work Authorization**: No mention of visa sponsorship or work authorization → "not_mentioned"
+
+**Work Model**: 
+- Location is "Bengaluru East, Karnataka, India" → this is onsite
+- No mention of remote or hybrid work → "onsite"
+- Employment type not explicitly mentioned, but this appears to be a full-time position → "full_time"
+
+**Contract Details**: No mention of contract type, duration, etc. → "not_mentioned" for all contract fields
+ 
+I'll focus on the technical skills and experience requirements for this role. The position demands significant expertise in BPM tools, with a strong emphasis on Appian software development. Candidates need a minimum of 5-7 years of hands-on experience in business process management, demonstrating deep technical proficiency in workflow design and implementation.
+
+The role requires a Master's degree, indicating a preference for advanced educational qualifications. Key technical competencies include database management, workflow automation, and integration with enterprise systems. Communication skills are crucial, as professionals must effectively convey technical information to diverse audiences.
+
+The skills classification reveals a comprehensive technical skill set spanning multiple domains. Hard skills encompass database technologies, workflow tools, and integration platforms. Soft skills emphasize communication and collaboration, highlighting the interdisciplinary nature of the role.
+
+The educational requirement is clearly defined, with a Master's degree as the standard. While the specific field of study isn't detailed, the advanced degree suggests a rigorous academic background in a relevant technical discipline.
+
+Geographic and benefits details remain unspecified, indicating a need for further clarification about location-specific considerations and compensation packages.
+
+The role appears to be a full-time position with a focus on data engineering and process management, requiring specialized technical expertise and advanced educational qualifications.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Bengaluru East, Karnataka, India",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Appian software development",
+        "database concepts",
+        "Oracle SQL",
+        "MySQL",
+        "BPM tools",
+        "IBM BPM",
+        "Pega",
+        "Camunda",
+        "business process workflows",
+        "business process automation",
+        "API integration",
+        "web services",
+        "ERP integration",
+        "CRM integration"
+      ],
+      "nice_to_have_hard_skills": [],
+      "must_have_soft_skills": [
+        "Communication"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 5,
+      "years_experience_max": 7,
+      "years_experience_text": "Minimum of 5+ years of recent experience with Appian software development and designing. 5-7 years of experience in BPM. 5+ years of experience with Appian",
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "Master's Degree Required",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Collaborate with business analysts, IT teams, and stakeholders to ensure solutions meet business needs",
+      "company_description_text": "A career in IBM Consulting is rooted by long-term relationships and close collaboration with clients across the globe. You'll work with visionaries across multiple industries to improve the hybrid cloud and AI journey for the most innovative and valuable companies in the world. Your ability to accelerate impact and make meaningful change for your clients is enabled by our strategic partner ecosystem and our robust technology platforms across the IBM portfolio"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 47
+  }
+}
+```

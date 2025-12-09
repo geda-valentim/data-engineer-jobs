@@ -1,0 +1,263 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.82,
+        "evidence": "Job mentions modern stack components (Databricks, Airflow, DBT, CI/CD) but does not detail governance, monitoring, or data quality frameworks, indicating a defined level of maturity.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.82,
+        "evidence": "Score of 3 maps to the 'defined' maturity level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [
+          "modern_data_stack_adoption",
+          "cicd_practices",
+          "data_quality_testing"
+        ],
+        "confidence": 0.85,
+        "evidence": "Explicit mention of Databricks, Airflow, DBT and CI/CD pipelines; DBT provides built‑in testing capabilities.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.15,
+        "confidence": 0.90,
+        "evidence": "Responsibilities are limited to data engineering (pipeline building, ETL/ELT, streaming) with no mention of dev‑ops, analytics, or product ownership beyond data work.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.40,
+        "confidence": 0.70,
+        "evidence": "No explicit on‑call or overtime language, but Accenture projects can be deadline‑driven; lack of benefit details adds uncertainty.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.95,
+        "evidence": "Job description focuses solely on data engineering tasks and lists clear mandatory skills.",
+        "source": "combined"
+      },
+      "overall_red_flag_score": {
+        "value": 0.25,
+        "confidence": 0.78,
+        "evidence": "Low scope creep, moderate overtime risk, and clear responsibilities result in a low overall red‑flag rating.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.88,
+        "evidence": "Posting does not specify to whom the Data Engineer reports.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No manager title (e.g., Head of Data, Director) is referenced in the description.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.70,
+        "evidence": "No information about hiring trends or team expansion is provided.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.55,
+        "evidence": "The posting does not disclose team size, number of engineers, or seniority mix.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.88,
+        "evidence": "No reporting line is described.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.55,
+        "evidence": "Collaboration with architects is mentioned, but no explicit embedding within product squads.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.55,
+        "confidence": 0.60,
+        "evidence": "Benefits such as PTO or flexible hours are not listed; Accenture typically offers standard corporate benefits, but this is not confirmed in the posting.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.45,
+        "confidence": 0.60,
+        "evidence": "No mention of learning budgets, mentorship programs, or clear promotion paths.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.65,
+        "confidence": 0.70,
+        "evidence": "Use of modern tools (Databricks, Airflow, DBT, multi‑cloud) suggests a progressive engineering culture, though cultural practices are not detailed.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [
+          "not_mentioned"
+        ],
+        "confidence": 0.90,
+        "evidence": "No references to open‑source contributions, tech blogs, conferences, hackathons, or dedicated innovation time.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [
+          "ci_cd"
+        ],
+        "confidence": 0.80,
+        "evidence": "Job lists exposure to CI/CD pipelines and DevOps practices in cloud environments.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No explicit mention of experimentation, R&D time, or innovation programs.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "The posting does not discuss refactoring, modernization, or tech‑debt reduction initiatives.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.92,
+        "evidence": "No machine‑learning or generative‑AI tools, pipelines, or frameworks are referenced.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML‑related tools (e.g., SageMaker, MLflow) appear in the skill list.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "The posting does not state an immediate or accelerated start date.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No data on applicant volume, salary competitiveness, or location scarcity is provided.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "Accenture is a global consulting firm with >500,000 employees and mature operations.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.85,
+        "evidence": "No language indicating aggressive expansion or rapid hiring; typical corporate hiring cadence.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.88,
+        "evidence": "The job description does not disclose the size of the data engineering team.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Accenture is a publicly traded company; funding stage is not applicable.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No indication whether this is a new headcount, backfill, or team expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "modern_tech_stack",
+      "cloud_native",
+      "data_focused_role",
+      "established_company"
+    ],
+    "strength_details": [
+      "Modern data stack includes Databricks, Airflow, DBT, and multi‑cloud (AWS, Azure, GCP).",
+      "Role is centered on data engineering tasks (ETL/ELT, streaming, pipeline optimization).",
+      "Accenture provides a stable, well‑established corporate environment."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "unclear_reporting",
+      "limited_growth",
+      "benefits_not_mentioned"
+    ],
+    "concern_details": [
+      "Compensation range and equity are not provided in the posting.",
+      "No reporting line or manager title is specified, making hierarchy unclear.",
+      "Career progression, mentorship, and promotion paths are not described.",
+      "Benefits such as PTO, health plans, or learning budgets are omitted."
+    ],
+    "best_fit_categories": [
+      "senior_data_engineers",
+      "pipeline_developers",
+      "cloud_specialists",
+      "data_generalists"
+    ],
+    "best_fit_details": [
+      "Senior DEs with 5+ years experience, especially with Databricks, Spark, and Kafka.",
+      "Engineers comfortable working across AWS, Azure, and GCP environments.",
+      "Candidates who enjoy building both batch and real‑time pipelines."
+    ],
+    "probe_categories": [
+      "salary_range_details",
+      "reporting_structure",
+      "career_growth_path",
+      "tech_stack_details",
+      "work_hour_expectations"
+    ],
+    "probe_details": [
+      "What is the total compensation package (base, bonus, equity) for this role?",
+      "To whom does the Data Engineer report, and what is the team’s hierarchy?",
+      "Are there defined promotion tracks or mentorship programs for data engineers?",
+      "Can you detail the CI/CD, monitoring, and testing frameworks used in production pipelines?",
+      "What are the typical on‑call or overtime expectations for this position?"
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "rare_skill_match"
+    ],
+    "leverage_details": [
+      "Extensive experience with Databricks and multi‑cloud pipelines aligns directly with the core tech stack.",
+      "Specialized streaming expertise (Kafka) and DBT proficiency are high‑value, less‑common skills."
+    ],
+    "overall_assessment": "The role offers a solid opportunity for senior data engineers seeking to work with a modern, multi‑cloud stack within a stable, established organization. Compensation details and career progression are unclear, so candidates should probe those areas. Overall, it is a good fit for experienced engineers comfortable with both batch and streaming workloads.",
+    "recommendation_score": 0.71,
+    "recommendation_confidence": 0.85
+  }
+}

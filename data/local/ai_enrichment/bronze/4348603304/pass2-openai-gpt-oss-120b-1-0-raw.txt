@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.85,
+        "evidence": "Minimum 3 years of experience required and no senior title in the posting.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is Data Engineer and responsibilities focus on ETL, reporting and BI.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.90,
+        "evidence": "Job mentions ETL/Data Integration tools (DataStage, Azure Data Factory, Informatica) and BI reporting, no streaming technologies.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.92,
+        "evidence": "No mention of people management or technical lead responsibilities; role is focused on individual contribution.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.86,
+        "evidence": "Posting lists experience with AWS, Google Cloud, and Azure without indicating a primary provider.",
+        "source": "inferred"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "All three clouds are mentioned equally; no single secondary provider can be identified.",
+        "source": "inferred"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.93,
+        "evidence": "Focus on ETL tools and BI reporting suggests batch processing pipelines.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No orchestration tool (Airflow, Luigi, etc.) is referenced in the posting.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.88,
+        "evidence": "Role is centered on BI/DW projects and reporting, implying a data warehouse storage layer.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.94,
+        "evidence": "Location is specified as Pune, Maharashtra, India and work model is onsite.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "apac",
+        "confidence": 0.92,
+        "evidence": "Job is based in India, which falls in the APAC time zone region.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No relocation language is present; the role is onsite in Pune, implying candidates should already be located there.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "Visa sponsorship is marked as not_mentioned in the extraction.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of OPT/CPT eligibility; work authorization is implied for local candidates.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.88,
+        "evidence": "No citizenship restriction is stated; only work authorization for the location is implied.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.96,
+        "evidence": "Employment type is full_time permanent, indicating a standard employee (W2) arrangement.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.94,
+        "evidence": "Extraction shows no benefits listed in the posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "The posting does not discuss career progression or growth tracks.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No mentorship or coaching programs are referenced.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.96,
+        "evidence": "No language about promotions or advancement paths appears in the posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.96,
+        "evidence": "The posting does not mention internal transfers or mobility options.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": null,
+        "confidence": 0.0,
+        "evidence": "No career tracks (IC, management, specialist, architect) are described.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.88,
+        "evidence": "A clear set of must‑have technical and soft skills is listed, with only one nice‑to‑have skill (UNIX).",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.93,
+        "evidence": "The description focuses specifically on BI data engineering responsibilities without mixing other roles.",
+        "source": "combined"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Required skill set (Cognos, multiple cloud platforms, several ETL tools) aligns with a realistic expectation for a 3‑year experienced data engineer.",
+        "source": "inferred"
+      }
+    }
+  }
+}

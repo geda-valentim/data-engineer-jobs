@@ -1,0 +1,236 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "Mentions Spark, Hadoop, Kafka, cloud platforms, and agile framework - indicates defined processes and modern tools but lacks explicit governance, monitoring, or CI/CD mentions",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Matches score of 3 - documented processes with modern tools but no advanced governance or optimization signals",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption", "cloud_native"],
+        "confidence": 0.80,
+        "evidence": "Explicit mention of Spark, Kafka, Hadoop, and cloud platforms (AWS/Azure/GCP) indicates modern stack and cloud adoption",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.25,
+        "confidence": 0.85,
+        "evidence": "Focused on data engineering (ETL, Spark, cloud) without conflating with data science, analytics, or DevOps roles",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "IBM delivery center context suggests client-facing deadlines; no explicit work-life balance signals; 'agile framework' implies iterative pressure",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.88,
+        "evidence": "Well-defined responsibilities around data engineering, ETL, Spark, and cloud platforms",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to IBM delivery center pressure and lack of benefits/work-life signals, but role is focused and not overloaded",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No mention of reporting manager or team structure in job description",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No managerial titles or reporting structure mentioned",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.65,
+        "evidence": "No explicit signals about team expansion or contraction; IBM delivery center context suggests stable team size",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.55,
+        "evidence": "No specific team size or composition mentioned; only reference to 'project teams' and 'delivery centers'",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit reporting structure mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "IBM Consulting Client Innovation Centers suggest centralized delivery model rather than embedded cross-functional teams",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.55,
+        "confidence": 0.70,
+        "evidence": "No explicit work-life balance signals; IBM delivery center context may imply client deadlines; no PTO or flexibility mentioned",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.65,
+        "confidence": 0.75,
+        "evidence": "Mentions 'continuous improvements' and 'latest technologies' but no formal learning budget, mentorship, or career paths",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.70,
+        "confidence": 0.80,
+        "evidence": "Modern stack (Spark, Kafka, cloud) and agile framework indicate decent technical culture, but no explicit engineering practices mentioned",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No mention of open source, tech blogs, conferences, hackathons, or innovation time",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["ci_cd", "monitoring"],
+        "confidence": 0.75,
+        "evidence": "Mentions 'agile framework' (implies CI/CD) and 'end-to-end monitoring' as preferred experience",
+        "source": "inferred"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Mentions 'implement latest technologies trends' and 'creative solutions' - suggests some innovation focus",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.70,
+        "evidence": "Mentions 'continuous improvements' and 'modernize solutions' - implies awareness of tech debt",
+        "source": "inferred"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.75,
+        "evidence": "No explicit ML/AI tools mentioned; 'partner with technology teams' suggests collaboration with ML engineers but no direct ML responsibilities",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML-specific tools mentioned in requirements or description",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "normal",
+        "confidence": 0.85,
+        "evidence": "No urgency signals like 'ASAP' or 'immediate start'; IBM typically has standard hiring timelines",
+        "source": "inferred"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "IBM brand attracts candidates; location in Bengaluru (tech hub) increases competition; no salary disclosed may reduce some applicants",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a well-established enterprise technology company with global delivery centers",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.85,
+        "evidence": "IBM typically hires steadily; no signals of aggressive expansion or replacement",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "large_16_50",
+        "confidence": 0.80,
+        "evidence": "IBM Consulting Client Innovation Centers typically have large teams; 'project teams' implies multiple engineers",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.95,
+        "evidence": "IBM is a publicly traded company with stable funding",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "new_headcount",
+        "confidence": 0.75,
+        "evidence": "No backfill or replacement signals; IBM likely creating new roles for client projects",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "cloud_native", "data_focused_role", "established_company"],
+    "strength_details": [
+      "Strong modern data stack (Spark, Kafka, Hadoop, cloud platforms)",
+      "Cloud-native environment with AWS/Azure/GCP exposure",
+      "Well-defined data engineering role without scope creep",
+      "Stable established company (IBM) with global delivery centers"
+    ],
+    "concern_categories": ["vague_requirements", "salary_not_disclosed", "limited_growth", "unclear_reporting"],
+    "concern_details": [
+      "No salary or benefits disclosed - common in IBM postings but reduces transparency",
+      "Vague experience requirements (no years specified) may indicate flexibility but also uncertainty",
+      "Limited growth signals - no career paths, mentorship, or learning budget mentioned",
+      "Unclear reporting structure and team composition - hard to assess management quality"
+    ],
+    "best_fit_categories": ["mid_level_engineers", "cloud_specialists", "pipeline_developers", "enterprise_experienced"],
+    "best_fit_details": [
+      "Mid-level data engineers with 3-5 years experience in Spark, ETL, and cloud platforms",
+      "Candidates seeking enterprise environment with stable company backing",
+      "Engineers comfortable with client-facing delivery center model and agile frameworks"
+    ],
+    "probe_categories": ["team_size_composition", "career_growth_path", "salary_range_details", "work_hour_expectations"],
+    "probe_details": [
+      "Ask about actual team size and seniority mix in the delivery center",
+      "Inquire about career progression opportunities and promotion criteria",
+      "Clarify expected work hours and any on-call requirements",
+      "Request salary range and benefits package details"
+    ],
+    "leverage_categories": ["rare_skill_match", "exact_experience_match", "domain_expertise"],
+    "leverage_details": [
+      "Strong Spark/PySpark expertise is high-value for IBM delivery centers",
+      "Cloud platform experience (AWS/Azure/GCP) is differentiator in multi-cloud environment",
+      "Hadoop/Kafka experience aligns with IBM's big data client needs"
+    ],
+    "overall_assessment": "Solid opportunity for mid-level data engineers seeking enterprise experience with modern stack at IBM. Strong technical foundation with Spark, Kafka, and cloud platforms. Main concerns are lack of salary transparency, unclear career growth, and vague team structure. Suitable for candidates prioritizing stability over rapid innovation.",
+    "recommendation_score": 0.68,
+    "recommendation_confidence": 0.75
+  }
+}

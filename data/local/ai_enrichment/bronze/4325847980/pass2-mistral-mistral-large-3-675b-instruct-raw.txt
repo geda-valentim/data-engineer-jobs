@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.65,
+        "evidence": "Title is 'Data Engineer-Data Integration' without explicit seniority indicators, and responsibilities suggest a role that is not purely entry-level but也没有 explicit seniority requirements like years of experience or leadership expectations.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title explicitly states 'Data Engineer', and core responsibilities focus on data pipelines, ETL/ELT, and data integration.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "hybrid",
+        "confidence": 0.80,
+        "evidence": "Responsibilities mention both 'batch and real-time processing' and 'Informatica PowerCenter' (batch ETL) alongside 'stream processing'.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.75,
+        "evidence": "Responsibilities focus on technical tasks like developing pipelines and collaborating with teams, with no explicit mention of leadership or management duties.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.70,
+        "evidence": "MS-Azure Cloud is listed as a preferred skill, and Informatica Cloud ETL tools are mentioned, suggesting a focus on Azure.",
+        "source": "inferred"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud providers are explicitly mentioned beyond Azure.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "Job posting explicitly mentions both 'batch and real-time processing' and 'data pipelines for batch & stream processing'.",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit mention of orchestrators like Airflow, Luigi, or cloud-native orchestration tools.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.85,
+        "evidence": "Core expertise required in 'Data warehousing' and 'Informatica PowerCenter', which is a traditional ETL tool for data warehouses.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.80,
+        "evidence": "Location is specified as 'Hyderabad, Telangana, India', implying a regional restriction.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.85,
+        "evidence": "Location explicitly states 'Hyderabad, Telangana, India', indicating a focus on India.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of relocation packages or requirements, and location is specified as Hyderabad, India.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No explicit mention of OPT/CPT or student visa support, and location is restricted to India.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No discussion of citizenship or work authorization requirements in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Employment type is stated as 'full_time' in Pass 1 extraction, and no contract terms are mentioned, implying W2 employment.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits are mentioned in the Pass 1 extraction results.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.60,
+        "evidence": "Generic mention of 'IBM Consulting Client Innovation Centers' delivering growth but no specific career tracks or ladders.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions collaborating with 'other scientists, engineers, consultants and database administrators of all backgrounds', suggesting potential mentorship opportunities.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotions or advancement paths in the job posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No discussion of internal mobility or role changes in the job posting.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.65,
+        "evidence": "Responsibilities focus on technical tasks and collaboration with other engineers, implying an IC track, but no explicit mention of other tracks.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.73,
+        "evidence": "Job posting lists several 'must have' hard skills and a few 'nice to have' skills, indicating a balanced but structured approach.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Job description is focused on data engineering tasks like pipelines, ETL/ELT, and data warehousing, with well-defined responsibilities.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Responsibilities and required skills align reasonably with a mid-level data engineering role, no unrealistic expectations detected.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

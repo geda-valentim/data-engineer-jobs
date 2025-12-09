@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.82,
+        "evidence": "Total experience 6-7 years (relevant 4-5 years) aligns with senior level expectations.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title explicitly states Data Engineer and responsibilities focus on data pipelines and integration.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "general",
+        "confidence": 0.71,
+        "evidence": "Job description mentions both batch and real‑time processing, predictive modeling, and search applications without a single narrow focus.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.75,
+        "evidence": "No direct reports or people‑management duties are described; role is centered on technical delivery.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.95,
+        "evidence": "Mandatory skills list Azure Databricks, Azure DevOps, Azure Blob; title includes \"Azure\".",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud platforms are mentioned in the posting or extraction.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "Description explicitly references both batch and real‑time processing.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "No orchestration tools (Airflow, Luigi, etc.) are referenced.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "lakehouse",
+        "confidence": 0.62,
+        "evidence": "Azure Databricks is commonly used with Delta Lake (lakehouse) architecture; no explicit data‑warehouse product is listed.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.90,
+        "evidence": "Location restriction is \"Kochi, Kerala, India\" and geo restriction type is specific_countries (IN).",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.80,
+        "evidence": "Job is limited to India, implying Indian Standard Time zone.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.92,
+        "evidence": "No relocation language is present; location is fixed to Kochi.",
+        "source": "not_mentioned"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Visa sponsorship is not mentioned and the role is India‑based.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No reference to OPT/CPT eligibility; typical for non‑US locations.",
+        "source": "not_mentioned"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.93,
+        "evidence": "No citizenship or work‑authorization requirements are stated.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.94,
+        "evidence": "Employment type and contract type are both listed as not_mentioned.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.93,
+        "evidence": "Benefits array is empty and no benefit language appears in the posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "The posting does not discuss career progression or growth tracks.",
+        "source": "not_mentioned"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mentorship program or senior‑mentor language is present.",
+        "source": "not_mentioned"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.94,
+        "evidence": "No promotion or advancement language appears in the description.",
+        "source": "not_mentioned"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers or lateral moves.",
+        "source": "not_mentioned"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No explicit reference to IC, management, specialist, or architect tracks.",
+        "source": "not_mentioned"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.86,
+        "evidence": "A long list of mandatory hard and soft skills with no nice‑to‑have items indicates a strict requirement set.",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.91,
+        "evidence": "Job description focuses specifically on data engineering tasks without blending other roles.",
+        "source": "combined"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.84,
+        "evidence": "Required skill set aligns with a senior‑level data engineer having 6‑7 years of experience.",
+        "source": "inferred"
+      }
+    }
+  }
+}

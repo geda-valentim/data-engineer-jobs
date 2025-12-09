@@ -1,0 +1,257 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Job mentions Python, Spark, and multi‑cloud (AWS/GCP/Azure) but no orchestration, CI/CD, data quality or governance tools.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Score 2 maps to the \"developing\" maturity level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [
+          "cloud_native"
+        ],
+        "confidence": 0.80,
+        "evidence": "Explicit requirement for experience on three major cloud platforms indicates a cloud‑native approach.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.15,
+        "confidence": 0.85,
+        "evidence": "Responsibilities focus on feature development, debugging, and cloud implementation – no mention of data‑science, DevOps, or product ownership.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.40,
+        "confidence": 0.70,
+        "evidence": "IBM Consulting roles can be client‑facing and deadline‑driven, but no explicit on‑call or overtime language is provided.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Job title and bullet points clearly define a Data Engineer role with end‑to‑end feature development and debugging responsibilities.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.25,
+        "confidence": 0.80,
+        "evidence": "Low scope creep, moderate overtime risk, and clear role definition combine to a low overall red‑flag rating.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "Posting does not specify to whom the Data Engineer reports.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No manager title (e.g., Head of Data, Director) appears in the description.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.70,
+        "evidence": "No information about hiring trends or team expansion is provided.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.55,
+        "evidence": "The posting does not disclose team size, number of engineers, or seniority mix.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No reporting line is described in the job text.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.60,
+        "evidence": "Role is described as part of a consulting delivery center rather than embedded in product squads.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.40,
+        "confidence": 0.60,
+        "evidence": "No PTO, remote‑work, or on‑call policies are mentioned; consulting environments often have variable hours.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.55,
+        "confidence": 0.60,
+        "evidence": "The description touts a \"limitless career path\" but provides no concrete learning budgets, mentorship, or promotion details.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.45,
+        "confidence": 0.60,
+        "evidence": "Modern languages (Python, Spark) are listed, but no mention of CI/CD, testing, or observability practices.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "No explicit signals such as open‑source contributions, conference support, or hackathons appear.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "The posting does not reference code review, pair programming, CI/CD pipelines, or monitoring tools.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No language about experimentation, R&D time, or exploring new technologies is present.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "There is no mention of refactoring, tech‑debt reduction, or modernization initiatives.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.90,
+        "evidence": "No ML, AI, or MLOps tools or workflows are referenced.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML‑related tools (e.g., SageMaker, MLflow) are mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "The posting does not state an immediate or accelerated start date.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No data on applicant volume, easy‑apply, or location scarcity is provided.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a globally recognized, long‑standing technology corporation.",
+        "source": "pass1_derived"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.60,
+        "evidence": "No explicit language about aggressive hiring or rapid expansion; typical enterprise hiring cadence implied.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "The job description does not disclose the size of the data engineering team.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "IBM is a publicly traded company; funding stage terminology is not applicable.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "new_headcount",
+        "confidence": 0.70,
+        "evidence": "The posting is for a new Data Engineer position; no indication it is a backfill.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "cloud_native",
+      "data_focused_role",
+      "established_company",
+      "clear_requirements"
+    ],
+    "strength_details": [
+      "Works with Python, Spark, and multi‑cloud (AWS, GCP, Azure) technologies.",
+      "Role is clearly defined as a Data Engineer responsible for end‑to‑end feature development and debugging.",
+      "IBM provides the stability and resources of a large, established tech organization.",
+      "Requires 6+ years of experience, indicating senior‑level expectations."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "no_visa_sponsorship",
+      "overtime_likely"
+    ],
+    "concern_details": [
+      "Compensation range and benefits are not disclosed in the posting.",
+      "No information about visa sponsorship; may limit candidates outside India.",
+      "Consulting delivery centers can involve variable hours and occasional overtime."
+    ],
+    "best_fit_categories": [
+      "senior_data_engineers",
+      "cloud_specialists",
+      "enterprise_experienced"
+    ],
+    "best_fit_details": [
+      "Senior engineers (6+ years) with strong Python and Spark expertise.",
+      "Candidates comfortable operating across AWS, GCP, and Azure environments.",
+      "Professionals seeking a stable, enterprise‑scale data engineering role."
+    ],
+    "probe_categories": [
+      "salary_range_details",
+      "work_hour_expectations",
+      "visa_sponsorship_details",
+      "team_size_composition",
+      "career_growth_path"
+    ],
+    "probe_details": [
+      "What is the expected salary range and bonus structure for this role?",
+      "Can you describe typical weekly work hours and any on‑call or overtime expectations?",
+      "Is the company able to sponsor work visas for candidates who are not Indian citizens?",
+      "How large is the current data engineering team and what is the seniority mix?",
+      "What formal career progression or promotion tracks are available for data engineers?"
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "high_market_demand",
+      "quick_availability"
+    ],
+    "leverage_details": [
+      "Candidate meets the exact 6+ years Python/Spark requirement, which is a core need.",
+      "Strong multi‑cloud expertise is in high demand for consulting projects.",
+      "If the candidate can start promptly, it aligns with any unspoken hiring timelines."
+    ],
+    "overall_assessment": "The role offers a clear, senior‑level data engineering position within IBM's established consulting delivery center, leveraging modern cloud and Spark skills. Compensation details are opaque and there is no visa sponsorship information, which may be a barrier for non‑local talent. Overall, it is a solid opportunity for experienced engineers seeking enterprise stability.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.80
+  }
+}

@@ -1,0 +1,174 @@
+<reasoning>I need to extract information from this IBM job posting for a Data Engineer-Data Modeling position in Pune, Maharashtra, India. Let me go through the job posting systematically and extract the required information according to the rules.
+
+Looking at the job posting:
+
+**Title**: Data Engineer-Data Modeling
+**Company**: IBM
+**Location**: Pune, Maharashtra, India
+
+Let me extract each section:
+
+1. **Compensation**: No salary information is mentioned in the job posting, so all compensation fields should be null.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. So this should be "not_mentioned".
+
+3. **Work Model**: The location is specified as "Pune, Maharashtra, India" which suggests onsite work, but there's no explicit mention of work model (remote/hybrid/onsite). Since it's a specific location, I should classify this as "not_mentioned" for work_model_stated. The employment type is not explicitly mentioned, so "not_mentioned".
+
+4. **Contract Details**: No mention of contract type, duration, etc. So "not_mentioned" for contract_type and all other contract fields.
+
+5. **Contractor Rates**: No mention of contractor rates, so "not_mentioned" for pay_type and all rate fields.
+
+6. **Skills Classification**: Let me analyze the skills mentioned:
+
+**Required Technical And Professional Expertise**:
+- 12+ years of experience in data modelling, data architecture
+- Proficiency in data modelling tools Erwin, IBM Infosphere Data Architect and database management systems
+- Familiarity with different data models like relational, dimensional and NoSQL databases
+- Understanding of business processes and how data supports business decision making
+- Strong understanding of database design principles, data warehousing concepts, and data governance practices
+- Knowledge of programming languages such as SQL
+
+**Preferred Technical And Professional Experience**:
+- Excellent analytical and problem-solving skills with a keen attention to detail
+- Ability to work collaboratively in a team environment and manage multiple projects simultaneously
+
+Let me classify these skills:
+
+**Must-have hard skills** (from "Required" section and skills with strong qualifiers):
+- Data modeling (12+ years experience mentioned)
+- Data architecture (12+ years experience mentioned)
+
+
+- Erwin (data modelling tool)
+- IBM Infosphere Data Architect (data modelling tool)
+- Database management systems
+- Relational databases
+- Dimensional databases
+- NoSQL databases
+- Database design principles
+- Data warehousing concepts
+- Data governance practices
+- SQL (programming language)
+
+I'll continue identifying the hard skills, focusing on the technical requirements and tools specified in the job posting. The role demands extensive experience in data modeling and architecture, with proficiency in multiple database technologies and design principles.
+
+The preferred skills highlight soft skills like analytical thinking, problem-solving, and collaborative abilities. These complement the technical expertise required for the position, emphasizing a holistic approach to data engineering.
+
+The educational requirement specifies a Master's Degree, which aligns with the senior-level position's complexity. The role involves advanced data modeling, requiring deep technical knowledge and strategic thinking.
+
+The job description suggests a comprehensive data engineering role that combines technical proficiency with interpersonal skills, targeting experienced professionals in the field.
+
+No explicit mention of generative AI or feature store technologies, indicating a traditional data engineering approach focused on established database and modeling techniques.
+
+The geographic context reveals an India-based position, with no specific regional restrictions beyond the Pune location. The role appears to be part of IBM's consulting division, emphasizing client-focused innovation and technical expertise.
+
+The benefits section lacks detailed information, leaving compensation and additional perks unspecified. The metadata suggests a thorough extraction process, capturing key professional requirements and contextual details.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Data modeling",
+        "Data architecture",
+        "Erwin",
+        "IBM Infosphere Data Architect",
+        "Database management systems",
+        "Relational databases",
+        "Dimensional databases",
+        "NoSQL databases",
+        "Database design principles",
+        "Data warehousing concepts",
+        "Data governance practices",
+        "SQL"
+      ],
+      "nice_to_have_hard_skills": [],
+      "must_have_soft_skills": [
+        "Analytical Skills",
+        "Problem Solving",
+        "Attention to Detail",
+        "Team Collaboration",
+        "Time Management"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 12,
+      "years_experience_max": null,
+      "years_experience_text": "12+ years of experience in data modelling, data architecture",
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "preferred",
+      "education_text_raw": "Master's Degree",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Work in an Agile, collaborative environment, partnering with other scientists, engineers, consultants and database administrators of all backgrounds and disciplines",
+      "company_description_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 37
+  }
+}
+```

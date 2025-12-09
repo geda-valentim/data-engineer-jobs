@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.65,
+        "evidence": "3+ years of experience and responsibilities suggest mid-level. Title is Data Scientist, but responsibilities lean towards engineering.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_scientist",
+        "confidence": 0.95,
+        "evidence": "Job title is Data Scientist.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "general",
+        "confidence": 0.70,
+        "evidence": "Broad range of data science tasks mentioned, no specific focus.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.75,
+        "evidence": "Responsibilities focus on individual contribution and building/supporting models, no direct reports mentioned.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.60,
+        "evidence": "No specific cloud provider mentioned.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No cloud providers mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.70,
+        "evidence": "Focus on data pipelines and model training suggests batch processing.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.95,
+        "evidence": "Airflow explicitly mentioned.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.55,
+        "evidence": "No specific storage layer mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.85,
+        "evidence": "Job is located in Brazil and lists specific countries (Argentina, Brazil, Colombia, Chile, Mexico, Dominican Republic).",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.90,
+        "evidence": "Job is located in South America and lists countries within the Americas.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Job posting does not mention relocation.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship stated explicitly.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of student visas or OPT/CPT.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No specific citizenship requirements mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "c2c",
+        "confidence": 0.90,
+        "evidence": "The job is a contract position.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "basic",
+        "confidence": 0.65,
+        "evidence": "Limited benefits mentioned (language classes, parental leave, computer reimbursement).",
+        "source": "inferred"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific career paths or growth opportunities mentioned.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Team info section mentions experienced colleagues.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of promotion or advancement.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal mobility.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "No specific career tracks mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Mix of 'must have' and 'nice to have' skills.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Job description focuses on data science tasks.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Skills align with a mid-level data scientist role.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

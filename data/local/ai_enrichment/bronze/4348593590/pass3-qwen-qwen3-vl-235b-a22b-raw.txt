@@ -1,0 +1,231 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.65,
+        "evidence": "Mentions batch/real-time processing and tools like Elasticsearch/Splunk but lacks modern data stack (dbt, Airflow, cloud warehouses) or governance practices. Focus on POCs and client delivery suggests developing maturity.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.65,
+        "evidence": "Matches score of 2 - basic pipelines and tools mentioned but no evidence of mature practices like CI/CD, testing, or data governance.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.60,
+        "evidence": "Mentions Elasticsearch and Splunk for enterprise search, which are modern tools, but no evidence of data quality, monitoring, or governance practices.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.75,
+        "confidence": 0.85,
+        "evidence": "Title is 'Data Scientist' but responsibilities include data engineering, predictive modeling, POC development, solution architecture, and LLM code translation - blending 3+ distinct roles.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.60,
+        "confidence": 0.70,
+        "evidence": "IBM delivery center context implies client-facing deadlines; no work-life balance signals mentioned. Location restriction to Bengaluru suggests on-site expectations.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "multi_role",
+        "confidence": 0.85,
+        "evidence": "Explicitly combines data engineering, data science, and AI solution architecture responsibilities under one title with no clear boundaries.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.65,
+        "confidence": 0.75,
+        "evidence": "High scope creep (0.75) + moderate overtime risk (0.60) + multi-role definition + no compensation/benefits transparency = significant red flags.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting line, manager title, or team structure mentioned in job description or Pass 1/2.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No managerial titles or reporting structure referenced.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.65,
+        "evidence": "No team size, growth metrics, or hiring velocity mentioned. Only reference is to 'delivery centers' without specifics.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.55,
+        "evidence": "No explicit team size or composition details. Only mentions 'diverse teams' and 'delivery centers' without quantification.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure details provided in job posting.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Mentions 'collaborating closely with diverse teams' but context is IBM delivery centers serving clients, suggesting centralized team rather than embedded product teams.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.40,
+        "confidence": 0.70,
+        "evidence": "No PTO, remote flexibility, or work-life balance signals mentioned. IBM delivery center context implies client deadlines and potential overtime.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.50,
+        "confidence": 0.65,
+        "evidence": "Mentions 'growth mindset' and 'understand clients' business processes' but no learning budget, mentorship, or career paths. IBM context suggests some opportunities but not explicitly stated.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.55,
+        "confidence": 0.70,
+        "evidence": "Mentions modern tools (Elasticsearch, Splunk) and AI trends but no engineering practices (CI/CD, testing, code review) or innovation culture signals.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No mention of open source, tech blogs, conferences, hackathons, or innovation time.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No explicit mention of code review, CI/CD, testing, monitoring, or design docs.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.70,
+        "evidence": "Focus on client delivery and POCs rather than internal innovation. No mention of R&D time or experimentation culture.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of tech debt, refactoring, or code quality improvement initiatives.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "genai_focus",
+        "confidence": 0.90,
+        "evidence": "Explicitly mentions Gen AI code assistant, LLM capabilities, foundation models, and code translation - strong GenAI focus.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": ["Elasticsearch", "Splunk"],
+        "confidence": 0.85,
+        "evidence": "Explicitly mentioned as required for enterprise search applications. No other ML tools referenced.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No urgency signals like 'ASAP', 'immediate start', or 'urgent need' mentioned.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "IBM brand attracts candidates; location in Bengaluru (tech hub) increases competition. No application count or Easy Apply mentioned.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a well-known, established technology company with global delivery centers.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.70,
+        "evidence": "IBM likely has regular hiring but no specific expansion signals. Mention of 'delivery centers' suggests ongoing staffing needs.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No team size or engineering headcount mentioned in job posting.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.95,
+        "evidence": "IBM is a publicly traded company with established funding.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No indication whether this is a new headcount, backfill, or expansion role.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["genai_focus", "established_company", "data_focused_role"],
+    "strength_details": [
+      "Strong focus on GenAI and LLM capabilities - cutting-edge area",
+      "IBM brand provides stability and global exposure",
+      "Role combines data engineering with AI/ML - good for skill diversification"
+    ],
+    "concern_categories": ["scope_creep_risk", "vague_requirements", "salary_not_disclosed", "limited_growth"],
+    "concern_details": [
+      "Role combines Data Scientist, Data Engineer, and AI Architect responsibilities - high scope creep risk",
+      "No salary, benefits, or career path information disclosed",
+      "Limited growth signals - no mentorship, learning budget, or promotion paths mentioned"
+    ],
+    "best_fit_categories": ["mid_level_engineers", "ai_engineers", "data_generalists", "startup_enthusiasts"],
+    "best_fit_details": [
+      "Mid-level engineers comfortable with ambiguous roles and client delivery environments",
+      "Candidates with GenAI/LLM experience seeking to build portfolio in enterprise settings"
+    ],
+    "probe_categories": ["role_scope_boundaries", "career_growth_path", "salary_range_details", "tech_stack_details"],
+    "probe_details": [
+      "Clarify exact boundaries between data engineering, data science, and AI solution architecture responsibilities",
+      "Ask about career progression paths and performance metrics for this role",
+      "Inquire about compensation range and benefits package details"
+    ],
+    "leverage_categories": ["rare_skill_match", "domain_expertise"],
+    "leverage_details": [
+      "Experience with GenAI code assistants and LLM code translation is a differentiator",
+      "COBOL/Java experience (if applicable) could be valuable for legacy system integration"
+    ],
+    "overall_assessment": "Opportunity for mid-level engineers interested in GenAI within established IBM delivery centers. Role has significant scope creep risk with unclear boundaries between data engineering, data science, and AI architecture. Lack of compensation transparency and growth signals are major concerns. Best suited for candidates seeking GenAI exposure in enterprise settings who can navigate ambiguous roles.",
+    "recommendation_score": 0.55,
+    "recommendation_confidence": 0.70
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.82,
+        "evidence": "Uses Hadoop, Spark, Airflow, Databricks, CI/CD pipelines and testing, but no explicit data governance or catalog tools.",
+        "source": "combined"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.82,
+        "evidence": "Matches score 3 – documented processes and modern tooling without full governance.",
+        "source": "combined"
+      },
+      "maturity_signals": {
+        "value": [
+          "modern_data_stack_adoption",
+          "cicd_practices",
+          "data_quality_testing"
+        ],
+        "confidence": 0.85,
+        "evidence": "Job lists Hadoop, Spark, Airflow, Databricks (modern stack) and mentions CI/CD pipelines and testing of data loads.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.20,
+        "confidence": 0.85,
+        "evidence": "Role is focused on data engineering, pipeline ownership and leading junior engineers; no mention of data science, devops, or product engineering responsibilities.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.15,
+        "confidence": 0.80,
+        "evidence": "No on‑call, weekend or overtime language; Visa is a large enterprise with typical work‑hour expectations.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Responsibilities (pipeline design, CI/CD, stakeholder management) are explicitly listed.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.20,
+        "confidence": 0.78,
+        "evidence": "Low scope creep and overtime risk, but salary is undisclosed and reporting line is unclear.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "Job posting does not specify a manager or reporting hierarchy.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No manager title (e.g., Head of Data, Director) is referenced.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No statements about hiring pace or team expansion.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.60,
+        "evidence": "No information on team size, DE count, or seniority mix.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No explicit reporting line is provided.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "Description does not mention embedding within product or cross‑functional squads.",
+        "source": "pass1_derived"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.60,
+        "confidence": 0.75,
+        "evidence": "Hybrid work model, no PTO or on‑call details; typical for large enterprises.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.50,
+        "confidence": 0.70,
+        "evidence": "No learning budget, conference support, or explicit career ladder mentioned.",
+        "source": "pass1_derived"
+      },
+      "tech_culture_score": {
+        "value": 0.60,
+        "confidence": 0.75,
+        "evidence": "Modern big‑data stack and CI/CD practices present, but cultural signals (open source, hackathons) are absent.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.70,
+        "evidence": "Job posting does not reference open‑source contributions, conference speaking, hackathons, or innovation time.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [
+          "ci_cd"
+        ],
+        "confidence": 0.85,
+        "evidence": "Explicit mention of implementing and maintaining CI/CD pipelines for data solutions.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No description of R&D time, experimentation, or innovation programs.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No language about refactoring, reducing tech debt, or modernizing legacy pipelines.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "genai_focus",
+        "confidence": 0.70,
+        "evidence": "GenAI tools and platforms are listed as nice‑to‑have skills for efficiency.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "No specific ML or MLOps tools are mentioned in the posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No start‑date or urgency language appears.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No data on applicant volume or market competition provided.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.95,
+        "evidence": "Visa is a global payments leader, publicly traded, with >200 countries coverage.",
+        "source": "pass1_derived"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "Posting does not discuss hiring speed or pipeline.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No explicit team size is disclosed.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Visa is an established public company; funding stage not applicable.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No indication whether the role is a new headcount or a backfill.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "modern_tech_stack",
+      "cloud_native",
+      "data_focused_role",
+      "established_company"
+    ],
+    "strength_details": [
+      "Modern big‑data stack (Hadoop, Spark, Airflow, Databricks) with cloud support (AWS/Azure).",
+      "Role centered on data engineering: pipeline design, CI/CD, and stakeholder collaboration.",
+      "Large, stable enterprise (Visa) offering long‑term job security.",
+      "Hybrid work model provides flexibility while maintaining on‑site collaboration."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "no_visa_sponsorship",
+      "unclear_reporting"
+    ],
+    "concern_details": [
+      "Compensation range is not provided in the posting.",
+      "Visa sponsorship is not mentioned; likely limited to candidates already authorized to work in India.",
+      "Reporting line and manager title are not specified, making career progression unclear."
+    ],
+    "best_fit_categories": [
+      "senior_data_engineers",
+      "pipeline_developers",
+      "data_generalists"
+    ],
+    "best_fit_details": [
+      "Senior DEs with 5+ years of experience in Hadoop/Spark and Airflow.",
+      "Engineers comfortable leading junior team members and owning end‑to‑end pipelines.",
+      "Candidates who enjoy working on large‑scale, enterprise‑grade data platforms."
+    ],
+    "probe_categories": [
+      "salary_range_details",
+      "reporting_structure",
+      "career_growth_path",
+      "work_hour_expectations",
+      "visa_sponsorship_details"
+    ],
+    "probe_details": [
+      "What is the compensation band (base, bonus, equity) for this role?",
+      "To whom will the Staff Data Engineer report, and what is the manager’s title?",
+      "What are the typical promotion criteria and career ladders for data engineers at Visa?",
+      "What are the expected weekly work hours and is on‑call rotation required?",
+      "Is there any possibility of visa sponsorship for candidates who need it?"
+    ],
+    "leverage_categories": [
+      "rare_skill_match",
+      "domain_expertise",
+      "leadership_experience"
+    ],
+    "leverage_details": [
+      "Deep experience with GenAI tooling is a differentiator.",
+      "Payments industry knowledge (PCI, SOX compliance) is highly valued.",
+      "Proven track record of leading junior engineers and delivering large‑scale pipelines."
+    ],
+    "overall_assessment": "Visa offers a solid opportunity for senior data engineers seeking to work on a modern enterprise data platform with cloud-native tools. The role is well‑defined and provides leadership responsibilities, but compensation details are opaque and reporting lines are unclear. Candidates should verify salary, growth path, and visa support before proceeding.",
+    "recommendation_score": 0.75,
+    "recommendation_confidence": 0.85
+  }
+}

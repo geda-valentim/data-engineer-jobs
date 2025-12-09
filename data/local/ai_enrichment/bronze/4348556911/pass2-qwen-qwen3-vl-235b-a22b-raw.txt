@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.85,
+        "evidence": "6-7 years total experience with 4-5 years relevant experience, which aligns with senior level in data engineering roles",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Job title explicitly states 'Data Engineer' and responsibilities focus on data pipelines, ETL, and data processing",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.82,
+        "evidence": "Mandatory skills include ETL tools, Azure Databricks, and responsibilities mention batch processing alongside real-time, but ETL is emphasized",
+        "source": "combined"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.90,
+        "evidence": "No mention of people management, team leadership, or architectural oversight; role focuses on implementation and collaboration",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.95,
+        "evidence": "Job title specifies 'Azure', and mandatory skills include Azure Databricks, Azure DevOps, and Azure Blob",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud platforms mentioned in skills or responsibilities",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "Responsibilities explicitly mention both batch and real-time processing",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.88,
+        "evidence": "Azure DevOps is listed as mandatory, which is a cloud-native orchestration tool for Azure environments",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": "0.80",
+        "evidence": "Azure Blob (data lake) and Azure Databricks (lakehouse/warehouse) are both mentioned, indicating mixed storage patterns",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.90,
+        "evidence": "Location restricted to Kochi, Kerala, India, indicating regional requirement",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.95,
+        "evidence": "Only India (IN) is allowed per geo restrictions, indicating country-specific focus",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.90,
+        "evidence": "Onsite work model with specific location (Kochi, Kerala, India) implies relocation may be required if not already based there",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned, and location is in India, suggesting no H1B sponsorship",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Work authorization likely required for India location, and no mention of student visa support",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.88,
+        "evidence": "Location in India implies local work authorization required, but no citizenship requirement stated",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time permanent employment type suggests W2 employment",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits listed in extraction results",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Mentions 'growth opportunities' implicitly through collaboration and innovation, but no specific career tracks or progression paths",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Mentions working with diverse teams including scientists, engineers, and consultants, suggesting collaborative learning environment",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotions or advancement paths",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers or role changes",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.55,
+        "evidence": "No specific career tracks (IC, management, etc.) mentioned in job description",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.85,
+        "evidence": "All skills listed are 'must have' with no 'nice to have' skills, and specific experience and education requirements",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.88,
+        "evidence": "Focused on data engineering with specific tools and responsibilities outlined",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Skills required (Azure Databricks, PySpark, SQL, etc.) are reasonable for a senior data engineer with 6-7 years experience",
+        "source": "combined"
+      }
+    }
+  }
+}

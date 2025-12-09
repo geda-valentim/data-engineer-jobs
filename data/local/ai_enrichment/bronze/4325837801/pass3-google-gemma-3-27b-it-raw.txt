@@ -1,0 +1,229 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Mentions BPM tools, database concepts, and integration, but lacks details on modern data stack or governance.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [],
+        "confidence": 0.60,
+        "evidence": "Limited evidence of modern data stack adoption or advanced practices.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.3,
+        "confidence": 0.85,
+        "evidence": "Role focuses on BPM application development, but also includes troubleshooting, testing, and documentation.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.70,
+        "evidence": "Immediate start date suggests potential for time pressure, but no explicit mention of long hours.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Responsibilities are well-defined around BPM application development and maintenance.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Moderate risk - clear role, but potential for time pressure and limited modern data stack.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific manager or reporting structure mentioned.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "manager",
+        "confidence": 0.65,
+        "evidence": "Responsibilities suggest a managerial role, but not confirmed.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "stable",
+        "confidence": 0.70,
+        "evidence": "No explicit mention of team expansion, suggesting a stable team size.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.60,
+        "evidence": "No information about team size or composition.",
+        "source": "explicit"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No reporting structure mentioned in the job description.",
+        "source": "explicit"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Focus on BPM application development suggests a centralized team.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.70,
+        "evidence": "No explicit work-life balance signals, but no red flags either.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.6,
+        "confidence": 0.75,
+        "evidence": "Opportunities for learning and collaboration, but no specific growth paths mentioned.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.65,
+        "confidence": 0.78,
+        "evidence": "Focus on BPM tools and database concepts, but limited evidence of modern engineering practices.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No signals of strong technical culture.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["code_review"],
+        "confidence": 0.70,
+        "evidence": "Mentions troubleshooting and testing, implying some code review.",
+        "source": "inferred"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.80,
+        "evidence": "Focus on maintaining existing BPM applications, little mention of innovation.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt or refactoring.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of AI or ML.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.85,
+        "evidence": "ASAP start date mentioned.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Location in India suggests moderate competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.80,
+        "evidence": "IBM is a well-established technology company.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "No explicit mention of rapid expansion.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No information about team size.",
+        "source": "explicit"
+      },
+      "funding_stage_signals": {
+        "value": "profitable",
+        "confidence": 0.85,
+        "evidence": "IBM is a profitable company.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No information about role creation type.",
+        "source": "explicit"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["well_defined_role", "established_company"],
+    "strength_details": [
+      "Clear responsibilities focused on BPM application development.",
+      "Opportunity to work for a well-established technology company (IBM)."
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship", "limited_growth"],
+    "concern_details": [
+      "Immediate start date suggests potential for time pressure.",
+      "No visa sponsorship mentioned.",
+      "Limited evidence of growth opportunities or modern tech stack."
+    ],
+    "best_fit_categories": ["mid_level_engineers", "data_generalists"],
+    "best_fit_details": [
+      "Mid-level engineers with 5+ years of experience.",
+      "Engineers comfortable with BPM tools and database concepts."
+    ],
+    "probe_categories": ["reporting_structure", "team_size_composition", "tech_stack_details"],
+    "probe_details": [
+      "Clarify the reporting structure and manager level.",
+      "Understand the team size and composition.",
+      "Inquire about the specific BPM tools and database technologies used."
+    ],
+    "leverage_categories": [],
+    "leverage_details": [],
+    "overall_assessment": "This is a stable role at a large company focused on BPM application development. It's best suited for mid-level engineers with experience in BPM tools and databases. Concerns include potential time pressure and limited growth opportunities.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.80
+  }
+}
+```

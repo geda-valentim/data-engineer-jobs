@@ -1,0 +1,147 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+Looking at the job posting:
+
+**Title**: Application Developer-Process Management (BPM)
+**Company**: IBM
+**Location**: Bengaluru East, Karnataka, India
+
+Let me extract information section by section:
+
+1. **Compensation**: No salary information is mentioned in the job posting, so all compensation fields should be null.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. So this should be "not_mentioned".
+
+3. **Work Model**: 
+   - Location is specified as "Bengaluru East, Karnataka, India" - this suggests onsite work
+   - Employment type is not explicitly mentioned, but this appears to be a full-time position based on the context
+   - Work model should be "onsite" since a specific location is provided
+
+4. **Contract Details**: No mention of contract type, duration, etc. This appears to be a permanent position.
+
+5. **Contractor Rates**: Not applicable as this doesn't appear to be a contractor position.
+
+6. **Skills Classification**:
+   - Must have hard skills: Looking at the requirements section, I need to identify skills with strong qualifiers
+   - "Minimum of 3 years of recent experience with Appian software development and designing" - this is a requirement
+   - "Good understanding of database concepts and strong working knowledge on any one of the major databases such as Oracle SQL, Server MySQL" - this is required
+   - "Design, develop, and implement business process workflows using BPM tools (e.g., IBM BPM, Pega, Camunda)" - this is required
+   - "Automate business processes to improve efficiency and reduce manual effort" - this is required
+   - "Integrate BPM solutions with enterprise systems (ERP, CRM, etc.) via APIs and web services" - this is required
+   
+I'll analyze the preferred qualifications, focusing on skills that enhance the candidate's profile but aren't mandatory. The preferred experience includes 5-7 years in BPM and 2+ years with Appian. Communication skills are highlighted as important for presenting to both technical and non-technical audiences. 
+
+The experience requirement is clearly defined as a minimum of 3 years, with a maximum of 7 years preferred. No specific educational background is mentioned, so I'll mark that as not specified. The role doesn't involve LLM or GenAI technologies, nor does it require a feature store.
+
+Geographic restrictions are limited to India, with no specific country exclusions mentioned. The benefits section is not detailed in the provided context.
+
+The company description emphasizes IBM Consulting's collaborative approach with global clients, focusing on hybrid cloud and AI solutions across various industries. The role involves leveraging data to uncover insights through gathering, storage, and processing, working with diverse teams to select optimal data management systems.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Bengaluru East, Karnataka, India",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Appian software development",
+        "database concepts",
+        "Oracle SQL",
+        "MySQL",
+        "BPM tools",
+        "IBM BPM",
+        "Pega",
+        "Camunda",
+        "business process automation",
+        "API integration",
+        "web services",
+        "ERP integration",
+        "CRM integration"
+      ],
+      "nice_to_have_hard_skills": [
+        "BPM experience (5-7 years)",
+        "Appian experience (2+ years)"
+      ],
+      "must_have_soft_skills": [
+        "Communication"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 3,
+      "years_experience_max": 7,
+      "years_experience_text": "Minimum of 3 years of recent experience with Appian software development and designing; 5-7 years of experience in BPM preferred; 2+ years of experience with Appian preferred",
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "specific_countries",
+      "allowed_countries": ["IN"],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "must_be_resident"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Collaborating closely with diverse teams",
+      "company_description_text": "A career in IBM Consulting is rooted by long-term relationships and close collaboration with clients across the globe. You'll work with visionaries across multiple industries to improve the hybrid cloud and AI journey for the most innovative and valuable companies in the world. Your ability to accelerate impact and make meaningful change for your clients is enabled by our strategic partner ecosystem and our robust technology platforms across the IBM portfolio"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 37
+  }
+}
+```

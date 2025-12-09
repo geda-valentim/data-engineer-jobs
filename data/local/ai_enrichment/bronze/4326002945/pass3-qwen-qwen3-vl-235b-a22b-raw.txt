@@ -1,0 +1,234 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Basic BI stack (Tableau, SQL, Oracle, Hive) with no mention of modern data engineering practices, orchestration, or data quality tools. Focus on dashboard development rather than scalable pipelines.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2 - basic tools and processes, no advanced governance or automation mentioned.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [],
+        "confidence": 0.65,
+        "evidence": "No signals of modern data stack, CI/CD, data quality testing, monitoring, or governance. Relies on traditional BI tools and on-prem databases.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.25,
+        "confidence": 0.80,
+        "evidence": "Role is focused on BI/dashboard development with Tableau, SQL, Oracle, Hive - no conflation with ML, DevOps, or backend engineering.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "No explicit overtime or on-call mentions, but 'fast-paced' delivery center environment and 'manage end to end feature development' suggest moderate pressure. No PTO or work-life balance signals.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Well-defined BI/data visualization role with specific tools (Tableau, SQL, Oracle, Hive) and responsibilities around dashboard development and backend debugging.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to lack of modern practices and potential delivery pressure, but role is clearly defined and not overly broad.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "No specific manager or reporting line mentioned; only reference to 'IBM Consulting Client Innovation Centers'.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No managerial titles or reporting structure specified in job description.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.60,
+        "evidence": "No information about team expansion, hiring velocity, or growth plans.",
+        "source": "not_mentioned"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.55,
+        "evidence": "No details about team size, composition, or seniority levels provided.",
+        "source": "not_mentioned"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No reporting structure specified in job description.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Role is within IBM Consulting Client Innovation Centers (delivery centers), suggesting centralized team rather than embedded in product teams.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.50,
+        "confidence": 0.70,
+        "evidence": "No PTO, flexible hours, or work-life balance signals mentioned. Onsite work model in Pune may imply standard 9-5 but no explicit protections.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.60,
+        "confidence": 0.65,
+        "evidence": "Mentions 'limitless career path' and 'access to latest education', but no specific learning budget, mentorship, or promotion criteria.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.55,
+        "confidence": 0.70,
+        "evidence": "Traditional BI stack (Tableau, Oracle, Hive) with no mention of modern engineering practices, code reviews, CI/CD, or innovation culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.90,
+        "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.90,
+        "evidence": "No explicit mention of code review, CI/CD, testing, monitoring, or design docs.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.70,
+        "evidence": "Focus on maintaining and developing features for existing Content Management system, no mention of experimentation or new tech exploration.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of tech debt, refactoring, or modernization efforts. Role focuses on feature development and debugging existing systems.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of ML, AI, or GenAI in job description or required skills.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools mentioned or implied in job description.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No urgency signals like 'ASAP', 'immediate start', or 'urgent need' mentioned.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Location restricted to Pune, India - moderate competition due to local talent pool and IBM brand recognition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a well-known, established technology company with global delivery centers.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.70,
+        "evidence": "No signals of aggressive hiring or rapid expansion; likely regular hiring for delivery centers.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No information about team size provided in job description.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.95,
+        "evidence": "IBM is a publicly traded company with stable funding.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No indication whether this is a new headcount, backfill, or expansion role.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["established_company", "data_focused_role", "well_defined_role"],
+    "strength_details": [
+      "Established tech company (IBM) with global reputation and stability",
+      "Clear BI/data visualization role focused on Tableau, SQL, Oracle, Hive",
+      "Well-defined responsibilities around dashboard development and backend debugging"
+    ],
+    "concern_categories": ["vague_requirements", "no_visa_sponsorship", "legacy_technology", "limited_growth"],
+    "concern_details": [
+      "Vague growth path - 'limitless career path' is generic with no specifics",
+      "No visa sponsorship - restricted to India (Pune) with onsite work model",
+      "Legacy technology stack - Oracle, Hive, Tableau without modern data engineering tools",
+      "Limited innovation signals - no mention of modern practices, tech debt, or experimentation"
+    ],
+    "best_fit_categories": ["mid_level_engineers", "analytics_engineers", "data_generalists", "enterprise_experienced"],
+    "best_fit_details": [
+      "Mid-level engineers with 2-5 years experience in BI and data visualization",
+      "Candidates seeking stable enterprise environment with established processes",
+      "Those comfortable with traditional data warehouse and reporting tools (Oracle, Hive, Tableau)"
+    ],
+    "probe_categories": ["career_growth_path", "tech_stack_details", "work_hour_expectations", "team_size_composition"],
+    "probe_details": [
+      "Ask about specific career progression paths and promotion criteria",
+      "Clarify if there are plans to modernize the tech stack or adopt new tools",
+      "Understand expected work hours and any overtime requirements",
+      "Inquire about team size and structure within the delivery center"
+    ],
+    "leverage_categories": ["exact_experience_match", "domain_expertise"],
+    "leverage_details": [
+      "Strong Tableau and Oracle experience is directly aligned with requirements",
+      "Experience in enterprise delivery centers or consulting environments is valuable"
+    ],
+    "overall_assessment": "Stable opportunity at IBM for mid-level data professionals focused on BI and dashboard development. Clear role definition and established company provide security, but limited innovation, legacy tech stack, and vague growth path are drawbacks. Best for candidates seeking enterprise stability over cutting-edge tech.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.75
+  }
+}

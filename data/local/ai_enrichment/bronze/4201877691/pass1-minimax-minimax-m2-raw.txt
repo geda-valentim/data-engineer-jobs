@@ -1,0 +1,210 @@
+<reasoning>I need to carefully extract information from this job posting for a BI Data Engineer position at UNFCU. Let me go through each section systematically.
+
+First, let me identify the key information:
+
+**Title/Company/Location:**
+- Title: BI Data Engineer
+- Company: UNFCU
+- Location: Queens, NY
+
+**Compensation:**
+- Salary Range: $105,000 - $140,000 annually
+- This is explicitly stated, so salary_disclosed = true
+- salary_min = 105000, salary_max = 140000
+- salary_currency = "USD" (since it's $)
+- salary_period = "yearly"
+- salary_text_raw = "NYC Salary Range - $105,000 - $140,000 annually"
+
+**Work Authorization:**
+- I need to look for any mentions of visa sponsorship, work authorization, citizenship requirements
+- Looking through the text... I don't see any explicit mentions of visa sponsorship or work authorization requirements
+- There's a mention of "UNFCU prohibits discrimination and harassment of any type. All applicants will be considered for employment without regard to race, color, religion, age, sex, national origin, disability status, genetics, protected veteran status, sexual orientation, gender identity or expression, or any other characteristic protected by country, federal, state or local laws."
+- But this doesn't specifically address work authorization/visa sponsorship
+- So visa_sponsorship_stated = "not_mentioned"
+- work_auth_text = null
+- citizenship_text = null
+- security_clearance_stated = "not_mentioned"
+
+**Work Model:**
+- "This position is expected to be hybrid" - explicitly stated
+- work_model_stated = "hybrid"
+- location_restriction_text = null (no specific restrictions mentioned)
+- employment_type_stated = "full_time" (implied by salary range being annual)
+
+**Contract Details:**
+- No mention of contract type, duration, etc.
+- contract_type = "not_mentioned"
+- All other contract fields = null
+
+**Contractor Rates:**
+- This is a full-time position with salary, not contractor rates
+- pay_type = "not_mentioned"
+- All other contractor rate fields = null
+ 
+I'll analyze the technical skills and experience requirements for this BI Data Engineer role. The position demands extensive technical expertise across multiple data platforms and tools. Key technical competencies include deep experience with Microsoft SQL Server, ETL processes using SSIS, and business intelligence platforms like SSRS, Power BI, and Tableau. The role requires significant hands-on experience in data migration, warehousing, and developing complex data solutions.
+
+The soft skills emphasize strong analytical abilities, problem-solving capabilities, and excellent communication skills. Candidates must demonstrate the ability to work independently and collaboratively, manage multiple projects, and interact effectively with cross-functional teams.
+
+Educationally, the role requires a Bachelor's degree in Engineering or Computer Science, with a preference for candidates who have 6+ years of relevant professional experience in data engineering and business intelligence domains.
+
+The position involves designing, developing, and maintaining data solutions across multiple environments, with a focus on performance optimization, data accuracy, and implementing robust database management practices.
+
+Key technical skills include advanced database technologies like T-SQL, PL-SQL, and experience with data warehousing, migration, and dimensional modeling. The role demands expertise in troubleshooting complex data issues, optimizing database performance, and developing comprehensive business intelligence solutions.
+
+Preferred qualifications highlight additional competencies in Oracle PL/SQL, shell scripting, and familiarity with financial industry data environments, emphasizing adaptability and continuous learning in data engineering practices.
+
+The position requires strong analytical and interpersonal skills, with an ability to work independently and collaboratively across multiple technical domains. Communication and problem-solving capabilities are essential for success in this dynamic role.
+
+The role emphasizes flexibility and continuous learning, with opportunities for professional development through training, conferences, and seminars. The position offers a competitive salary range of $105,000 to $140,000 annually, reflecting the specialized nature of the data engineering work.
+
+The company culture prioritizes service excellence, diversity, and creating an inclusive environment for all employees. UNFCU is committed to providing meaningful work experiences that support both personal and professional growth.
+
+The position requires a Bachelor's degree in Engineering or Computer Science, with significant experience in Microsoft SQL Server and ETL tools. Candidates should have a strong background in software development, particularly in Business Intelligence platforms like SSRS, Power BI, and Tableau.
+
+Key qualifications include hands-on experience with data migration, warehousing, and developing complex data solutions. The role demands expertise in dimensional modeling, database management, and strong analytical problem-solving skills.
+
+The position emphasizes the ability to work independently and collaboratively, with excellent communication and interpersonal capabilities. Multitasking and taking on multiple initiatives simultaneously are crucial for success in this role.
+
+Preferred qualifications include knowledge of the financial or banking industry and experience working in complex network environments with multiple firewall layers. The company is a global not-for-profit financial institution serving the UN community, committed to service excellence and creating an inclusive workplace.
+
+The organization celebrates diversity and prohibits discrimination, ensuring equal opportunity for all applicants regardless of background. They are dedicated to providing a supportive and inclusive environment for their employees.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": true,
+      "salary_min": 105000,
+      "salary_max": 140000,
+      "salary_currency": "USD",
+      "salary_period": "yearly",
+      "salary_text_raw": "NYC Salary Range - $105,000 - $140,000 annually",
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "hybrid",
+      "location_restriction_text": null,
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Microsoft SQL Server",
+        "ETL tools",
+        "Microsoft SSIS",
+        "BI Platform",
+        "SSRS",
+        "Power BI",
+        "Tableau",
+        "TSQL",
+        "PLSQL",
+        "Oracle Database",
+        "stored procedures",
+        "relational databases",
+        "Data Warehouse",
+        "Data Lakes",
+        "Data Lake House",
+        "indexes",
+        "transaction isolation levels",
+        "query plans",
+        "dead locks",
+        "table hints",
+        "OBIEE",
+        "Data migration",
+        "Data warehousing",
+        "dimensional models",
+        "SSAS cube",
+        "tabular model",
+        "shell scripting"
+      ],
+      "nice_to_have_hard_skills": [
+        "Oracle PL/SQL",
+        "TFS",
+        "DBA activities",
+        "database backup and restore",
+        "financial/banking industry",
+        "firewall layers"
+      ],
+      "must_have_soft_skills": [
+        "Communication",
+        "Problem Solving",
+        "Team Collaboration",
+        "Analytical Skills",
+        "Time Management",
+        "Interpersonal Skills",
+        "Verbal Communication",
+        "Written Communication",
+        "Multitasking"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 6,
+      "years_experience_max": null,
+      "years_experience_text": "6+ years of experience in Microsoft SQL Server, 6+ years of experience in ETL tools like Microsoft SSIS, 3 years software development experience on BI Platform",
+      "education_level": "BACHELORS",
+      "education_area": "Engineering",
+      "education_requirement": "required",
+      "education_text_raw": "Bachelor's degree in Engineering or Computer Science",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [
+        "training",
+        "conferences",
+        "seminars",
+        "Credit Union training and development programs"
+      ],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": true,
+      "conference_budget_mentioned": true,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Communicate well and work closely with team members including Analysts, Product Managers, and business users",
+      "company_description_text": "UNFCU is a global not-for-profit financial institution that serves the UN community. We are committed to providing peace of mind to our members and colleagues and strive to achieve service excellence in all that we do. The best part of UNFCU is the people. Those that choose to work with us often find personal fulfillment, professional growth and a purposeful culture. UNFCU is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. UNFCU prohibits discrimination and harassment of any type. All applicants will be considered for employment without regard to race, color, religion, age, sex, national origin, disability status, genetics, protected veteran status, sexual orientation, gender identity or expression, or any other characteristic protected by country, federal, state or local laws."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 25
+  }
+}
+```

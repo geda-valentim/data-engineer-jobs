@@ -1,0 +1,276 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 18:16:29",
+    "job_posting_id": "4325839660",
+    "job_title": "Data Engineer",
+    "company_name": "Quest Global",
+    "job_location": "Bengaluru, Karnataka, India",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.75,
+          "evidence": "Mentions data pipelines, ETL workflows, and Databricks as a preferred tool, but lacks explicit signals for CI/CD, monitoring, or governance practices beyond basic documentation and compliance.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.75,
+          "evidence": "Score of 3 aligns with 'defined' maturity level, indicating documented processes and some governance but inconsistent automation or quality monitoring.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "data_governance"
+          ],
+          "confidence": 0.7,
+          "evidence": "Explicit mention of 'data governance and security compliance' suggests awareness of governance, but no other modern maturity signals (e.g., CI/CD, catalogs) are present.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.8,
+          "confidence": 0.95,
+          "evidence": "Role combines data engineering (ETL, pipelines), SharePoint customization (PowerApps, Power Automate), and web application development (front-end/back-end), which are distinct skill sets with overlapping responsibilities.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.6,
+          "confidence": 0.8,
+          "evidence": "Mentions 'strict delivery timelines' and 'ability to adhere to fast-paced environments,' which are common risk factors for overtime. No protective signals like PTO or work-life balance are explicitly stated.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "multi_role",
+          "confidence": 0.95,
+          "evidence": "Job description explicitly states hybrid responsibilities across data engineering, SharePoint, and web application development.",
+          "source": "pass1_derived"
+        },
+        "overall_red_flag_score": {
+          "value": 0.7,
+          "confidence": 0.85,
+          "evidence": "High scope creep score (0.8) and overtime risk score (0.6) due to hybrid role demands and strict timelines. Role strictness and skill inflation (from Pass 2) further contribute to red flags.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.99,
+          "evidence": "No explicit or inferred reporting structure mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.99,
+          "evidence": "No signals to infer manager level; job posting does not mention leadership titles or reporting lines.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred signals about team growth velocity in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "21000_plus",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.6,
+          "evidence": "Pass 1 mentions 'over 21,000 difference-makers in our workplace,' but this refers to the entire company, not the data engineering team. No specific team composition details are provided.",
+          "source": "inferred"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.99,
+          "evidence": "No explicit or inferred reporting structure mentioned in the job posting.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.8,
+          "evidence": "Job posting mentions bridging 'data management and digital collaboration tools,' implying cross-functional work with non-technical teams like product or business stakeholders.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.4,
+          "confidence": 0.75,
+          "evidence": "Strict delivery timelines and fast-paced environment are negative signals, but no explicit mentions of overtime or weekend work. No PTO or work-life balance policies are stated.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.6,
+          "confidence": 0.7,
+          "evidence": "Company culture emphasizes diversity of thought and contributions, but no explicit mentions of learning budgets, mentorship, or career paths. Pass 2 suggests implied growth opportunities.",
+          "source": "combined"
+        },
+        "tech_culture_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "Mentions 'modernizing data pipelines' and 'data governance,' but lacks explicit signals for CI/CD, testing, or observability. No details on development practices like code review or pair programming.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred signals about open source contributions, tech blogs, conference speaking, or innovation time in the job posting.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No explicit mentions of development practices like code review, CI/CD, or monitoring in the job posting beyond generic references to 'best practices.'",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.65,
+          "evidence": "Focus on maintaining and optimizing existing pipelines, SharePoint customization, and enterprise integrations suggests limited innovation time or exploration of new technologies.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "Mentions 'maintain documentation' and 'ensure data governance and security compliance,' which imply awareness of technical debt in these areas.",
+          "source": "inferred"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred mentions of AI/ML tools, frameworks, or responsibilities in the job posting.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.99,
+          "evidence": "No ML/AI tools are mentioned or inferred in the job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.99,
+          "evidence": "No explicit or inferred signals about hiring urgency in the job posting.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "high",
+          "confidence": 0.7,
+          "evidence": "Bengaluru is a competitive location for tech roles, and the hybrid skill set may attract a large candidate pool. No salary disclosure or competitive compensation signals could increase competition.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.85,
+          "evidence": "Company has over 21,000 employees and 25 years of history as an engineering services provider, indicating an enterprise-stage organization.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred signals about hiring velocity in the job posting.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "very_large_50_plus",
+          "confidence": 0.8,
+          "evidence": "Company has over 21,000 employees, suggesting the data engineering team is likely large (50+), though exact size is not mentioned.",
+          "source": "inferred"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.99,
+          "evidence": "No explicit or inferred signals about funding stage in the job posting.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or inferred signals about whether this is a new headcount, backfill, or team expansion.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "diverse_team",
+        "established_company"
+      ],
+      "strength_details": [
+        "Company emphasizes diversity of thought and inclusion, which can foster a collaborative and innovative work environment.",
+        "Quest Global is an established engineering services provider with 25 years of experience, offering stability and a broad range of projects.",
+        "Role involves working with large-scale data and enterprise systems, providing exposure to complex and impactful challenges."
+      ],
+      "concern_categories": [
+        "scope_creep_risk",
+        "overtime_likely",
+        "skill_inflation_detected",
+        "unclear_reporting"
+      ],
+      "concern_details": [
+        "Hybrid role combining data engineering, SharePoint customization, and web application development may lead to scope creep and lack of focus.",
+        "Strict delivery timelines and fast-paced environment suggest a higher risk of overtime and deadline pressure.",
+        "Broad skill requirements for 3-6 years of experience (e.g., front-end, back-end, SharePoint, and data pipelines) may indicate skill inflation or unrealistic expectations.",
+        "No clarity on reporting structure or team composition, which could impact role alignment and career growth."
+      ],
+      "best_fit_categories": [
+        "data_generalists",
+        "startup_enthusiasts",
+        "enterprise_experienced"
+      ],
+      "best_fit_details": [
+        "Candidates with a broad skill set in data engineering, SharePoint, and web development who enjoy hybrid roles and fast-paced environments.",
+        "Mid-level engineers with 3-6 years of experience who are comfortable working in large, established organizations and can adapt to enterprise workflows."
+      ],
+      "probe_categories": [
+        "role_scope_boundaries",
+        "work_hour_expectations",
+        "career_growth_path",
+        "tech_stack_details",
+        "team_composition"
+      ],
+      "probe_details": [
+        "Ask for clarity on the boundaries between data engineering, SharePoint, and web application responsibilities. How is time allocated across these areas?",
+        "Inquire about typical work hours, sprint cadence, and how strict timelines are managed to gauge overtime expectations.",
+        "Probe about career growth opportunities within the data engineering function and whether there are separate tracks for technical leadership or specialization.",
+        "Ask about the primary cloud provider and tools used for orchestration, monitoring, and data governance to understand the tech stack maturity.",
+        "Request details on team size, composition, and collaboration models to assess whether the role is truly embedded in cross-functional teams."
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "domain_expertise"
+      ],
+      "leverage_details": [
+        "Candidates with 3-6 years of experience in Python, MySQL, SharePoint, and web development are an exact match for the role's requirements.",
+        "Experience in enterprise system integration or compliance (e.g., data governance) could provide additional leverage in negotiations."
+      ],
+      "overall_assessment": "This role at Quest Global is a hybrid position requiring a mix of data engineering, SharePoint customization, and web application development skills. While it offers stability and exposure to enterprise-scale projects, the broad scope and strict timelines pose risks of scope creep and overtime. The lack of clarity on reporting structure and career growth paths may also be a concern for candidates seeking specialization or leadership opportunities.",
+      "recommendation_score": 0.5,
+      "recommendation_confidence": 0.8
+    },
+    "tokens": 13456,
+    "input_tokens": 10521,
+    "output_tokens": 2935,
+    "cost": 0.016391000000000003
+  }
+}

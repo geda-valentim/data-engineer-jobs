@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.75,
+        "evidence": "5-8 years of experience is typical for mid-level data engineers. Title doesn't explicitly state senior.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is Data Engineer, core responsibilities revolve around data pipelines and data engineering tasks.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.70,
+        "evidence": "Focus on processing data with Spark, Python, Hive, and Hbase suggests a batch ETL focus, though streaming is also mentioned.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "The description focuses on individual responsibilities and doesn't mention any team leadership or management duties.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "aws",
+        "confidence": 0.95,
+        "evidence": "AWS services (EMR, Glue, DataBricks, RedShift, DynamoDB) are explicitly mentioned multiple times.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No other cloud providers are mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.75,
+        "evidence": "Mentions experience in developing streaming pipelines *and* processing data with Spark, suggesting both batch and streaming workloads.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.70,
+        "evidence": "AWS Glue and EMR are mentioned, indicating a cloud-native orchestration approach.",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.70,
+        "evidence": "AWS RedShift (warehouse) and potential use of S3 (lake) with data pipelines.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Location is specified (Pune, India), but no remote work restrictions are explicitly stated.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.65,
+        "evidence": "IBM Consulting Client Innovation Centers often serve global clients, but the location in India suggests a focus on Americas timezones for collaboration.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "The job posting does not mention any relocation assistance or requirements.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of H1B sponsorship.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of OPT/CPT or student visas.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.85,
+        "evidence": "No specific citizenship requirements are mentioned, implying work authorization is sufficient.",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "The position is described as full-time employment, suggesting a W2 employment type.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific benefits are mentioned in the job description.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions 'Your Role And Responsibilities' suggesting potential for growth within the role.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Working within a Client Innovation Center suggests collaboration with experienced professionals.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion paths or advancement opportunities.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers or exploring different roles.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.70,
+        "evidence": "Focus on individual contributions and technical skills suggests an IC track.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "A mix of required skills (Spark, Python) and preferred skills (AWS certifications).",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "The job description is focused on data engineering tasks and responsibilities.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "The required skills are reasonable for a mid-level data engineer with 5-8 years of experience.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

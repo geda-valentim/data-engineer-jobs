@@ -1,0 +1,188 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+First, let me identify what information is explicitly stated in the job posting:
+
+**Title**: Data Engineer-Data Platforms-Azure
+**Company**: IBM  
+**Location**: Mumbai Metropolitan Region
+
+Now let me go through each field in the JSON structure:
+
+**Compensation**: 
+- No salary information is mentioned → salary_disclosed: false, all salary fields null
+
+**Work Authorization**:
+- No mention of visa sponsorship, work authorization requirements, or citizenship → visa_sponsorship_stated: "not_mentioned", work_auth_text: null, citizenship_text: null
+- No security clearance mentioned → security_clearance_stated: "not_mentioned"
+
+**Work Model**:
+- Location is "Mumbai Metropolitan Region" but no explicit mention of remote/hybrid/onsite → work_model_stated: "not_mentioned"
+- No location restriction text mentioned → location_restriction_text: null
+- No employment type explicitly mentioned → employment_type_stated: "not_mentioned"
+
+**Contract Details**:
+- No contract type mentioned → contract_type: "not_mentioned"
+- No contract duration mentioned → contract_duration_months: null, contract_duration_text: null
+- No extension or conversion info → extension_possible: "not_mentioned", conversion_to_fte: "not_mentioned"
+- No start date mentioned → start_date: "not_mentioned", start_date_text: null
+- No probation period mentioned → probation_period_text: null
+
+**Contractor Rates**:
+- No contractor rates mentioned → pay_type: "not_mentioned", all rate fields null
+- No rate negotiation info → rate_negotiable: "not_mentioned"
+- No overtime info → overtime_paid: "not_mentioned"
+
+**Skills Classified**:
+Let me analyze the skills section carefully:
+
+From "Required technical and professional expertise":
+- "Strong Databricks expertise: PySpark, Spark SQL, Delta Lake (ACID, schema evolution, time travel)" → These are must-have (strong qualifier)
+
+
+- "Exposure to Delta Live Tables, Auto Loader, Unity Catalog, MLflow" → These are must-have (strong qualifier)
+- "Hands-on with Azure or AWS data services" → Must-have (strong qualifier)
+- "Strong SQL and Python programming for data pipelines" → Must-have (strong qualifier)
+- "Knowledge of data modeling (star/snowflake, lakehouse)" → Must-have (strong qualifier)
+
+I'll continue analyzing the preferred technical skills, noting the nuanced language around "good to have" and "familiarity" which suggests these are less critical but still valuable qualifications.
+
+The streaming data experience and Databricks REST API familiarity fall into the nice-to-have category, indicating they're beneficial but not essential. Certifications are also marked as preferred, suggesting they're additional credentials that could strengthen an application.
+
+The job posting lacks specific experience duration details, with no clear minimum or maximum years of experience specified. Education requirements are similarly vague, mentioning only a bachelor's degree without specifying a particular field of study.
+
+Geographic restrictions are not explicitly defined, leaving the location requirements open to interpretation. Benefits are minimally described, with no concrete details about compensation, leave policies, or additional perks.
+
+The company description provides some context about IBM Consulting's approach, emphasizing long-term client relationships and a collaborative work environment focused on innovation and career growth.
+
+I'll carefully map out the skills and requirements, ensuring I capture the nuanced details about technical expertise and preferred qualifications. The role demands strong Databricks and cloud platform skills, with specific technical competencies in data engineering and analytics.
+
+The must-have hard skills include core Databricks technologies like PySpark, Spark SQL, and Delta Lake, along with cloud platform expertise in Azure or AWS. These represent the fundamental technical requirements for the position.
+
+Nice-to-have skills introduce additional complexity, such as streaming data technologies, API familiarity, and professional certifications. These represent advanced or supplementary capabilities that could enhance a candidate's profile.
+
+The soft skills section remains minimal, with no explicit behavioral requirements listed in the provided text. This suggests the role is primarily technical, focusing on hard skills and platform-specific expertise.
+
+The education requirements are straightforward: a bachelor's degree is mandatory, with no specific field of study specified. This indicates a flexible educational background that prioritizes technical competency over formal academic specialization.
+
+Emerging technologies like LLMs and feature stores are not mentioned, suggesting the role is grounded in established data engineering practices rather than cutting-edge AI or machine learning infrastructure.
+
+The geographic context reveals an India-based position, with no specific regional restrictions beyond the Mumbai Metropolitan Region location. This implies a local hiring approach focused on regional talent.
+
+Benefits remain unspecified, with no additional compensation details or perks mentioned in the job description. The role appears to be a standard data engineering position with a strong technical focus on Databricks and cloud platforms.
+
+The metadata suggests a comprehensive extraction process, with 15 identified fields and 13 null values, indicating a thorough but concise job posting analysis.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "PySpark",
+        "Spark SQL",
+        "Delta Lake",
+        "Delta Live Tables",
+        "Auto Loader",
+        "Unity Catalog",
+        "MLflow",
+        "Azure data services",
+        "AWS data services",
+        "SQL",
+        "Python",
+        "data modeling"
+      ],
+      "nice_to_have_hard_skills": [
+        "Kafka",
+        "Event Hub",
+        "Kinesis",
+        "Databricks REST APIs",
+        "Databricks Data Engineer Associate certification",
+        "Azure DP-203 certification",
+        "AWS Analytics Specialty certification"
+      ],
+      "must_have_soft_skills": [],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [
+        "Databricks Data Engineer Associate",
+        "Azure DP-203",
+        "AWS Analytics Specialty"
+      ],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": "BACHELORS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "Bachelor's Degree",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": null,
+      "company_description_text": "A career in IBM Consulting is rooted by long-term relationships and close collaboration with clients across the globe.You'll work with visionaries across multiple industries to improve the hybrid cloud and AI journey for the most innovative and valuable companies in the world. Your ability to accelerate impact and make meaningful change for your clients is enabled by our strategic partner ecosystem and our robust technology platforms across the IBM portfolio; including Software and Red Hat.Curiosity and a constant quest for knowledge serve as the foundation to success in IBM Consulting. In your role, you'll be encouraged to challenge the norm, investigate ideas outside of your role, and come up with creative solutions resulting in ground breaking impact for a wide network of clients. Our culture of evolution and empathy centers on long-term career growth and development opportunities in an environment that embraces your unique skills and experience."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 13
+  }
+}
+```

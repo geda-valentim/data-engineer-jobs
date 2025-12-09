@@ -1,0 +1,141 @@
+<reasoning>Let me analyze this job posting carefully and extract only the explicitly stated information.
+
+Looking at the job posting:
+- Title: Data Engineer
+- Company: iFlow Inc.
+- Location: Toronto, Ontario, Canada
+- Description mentions: "Cloud Databricks, SQL Skills, Bank data background, Audit knowledge is required, and worked in TD is preferred"
+
+Let me go through each section systematically:
+
+**Compensation**: No salary, hourly rate, or compensation information mentioned → all null
+
+**Work Authorization**: No mention of visa sponsorship, work authorization requirements, or security clearance → "not_mentioned" for visa_sponsorship_stated, null for work_auth_text and citizenship_text, "not_mentioned" for security_clearance_stated
+
+**Work Model**: 
+- Location: Toronto, Ontario, Canada → this is onsite
+- "Hybrid 2 days/week" → work_model_stated: "hybrid"
+- No specific employment type mentioned → "not_mentioned"
+
+**Contract Details**:
+- "Duration: 6 Months" → contract_type: "fixed_term", contract_duration_months: 6, contract_duration_text: "6 Months"
+- No other contract details mentioned → other fields null
+
+**Contractor Rates**: No contractor rates mentioned → all null
+
+**Skills Classified**:
+- "Cloud Databricks" → must_have_hard_skills (required)
+- "SQL Skills" → must_have_hard_skills (required)
+- "Bank data background" → must_have_hard_skills (required)
+- "Audit knowledge is required" → must_have_hard_skills (required)
+- "worked in TD is preferred" → nice_to_have_hard_skills (preferred)
+- No soft skills mentioned → null arrays
+- No certifications mentioned → null array
+- No experience years mentioned → null
+- No education mentioned → null
+- No LLM/GenAI mentioned → false
+- No feature store mentioned → false
+
+**Geographic Restrictions**: 
+- Location is Toronto, Ontario, Canada → specific location but no explicit restrictions mentioned → "not_mentioned"
+
+
+- No specific countries mentioned → null arrays
+
+**Benefits Structured**: No benefits mentioned → all null
+
+**Context**: No team info or company description → null
+
+I'll continue tracking the metadata, noting the number of fields found and null values. The job posting provides specific technical requirements and a clear contract duration, with minimal additional context provided.
+
+The key details include a hybrid work model, fixed-term contract, and specific technical skills like Cloud Databricks and SQL. The location is Toronto, Canada, with no explicit geographic restrictions beyond the job posting's location.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "hybrid",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "fixed_term",
+      "contract_duration_months": 6,
+      "contract_duration_text": "6 Months",
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": ["Cloud Databricks", "SQL Skills", "Bank data background", "Audit knowledge"],
+      "nice_to_have_hard_skills": ["worked in TD"],
+      "must_have_soft_skills": [],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": null,
+      "company_description_text": null
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 41
+  }
+}
+```

@@ -1,0 +1,172 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.78,
+        "evidence": "Minimum 3 years of experience required and no senior title indicated; aligns with typical mid‑level data engineer expectations.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.97,
+        "evidence": "Job title is \"Data Engineer-Business Intelligence\" and responsibilities focus on data pipelines, reporting and ETL.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.86,
+        "evidence": "Role emphasizes BI/DW projects, reporting with Cognos, and ETL tools, which are core to data‑warehouse work.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.92,
+        "evidence": "No mention of people‑management, team lead, or direct reports; responsibilities are individual contributor focused.",
+        "source": "pass1_derived"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.88,
+        "evidence": "Must‑have hard skills list includes AWS, Google Cloud, and Azure, indicating experience across multiple cloud platforms.",
+        "source": "combined"
+      },
+      "secondary_clouds": {
+        "value": [
+          "aws",
+          "azure",
+          "gcp"
+        ],
+        "confidence": 0.85,
+        "evidence": "All three cloud providers appear in the required skill set.",
+        "source": "combined"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.81,
+        "evidence": "Focus on ETL/Data Integration tools (DataStage, Azure Data Factory, Informatica) and BI reporting, typical of batch processing pipelines.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No orchestration tool (Airflow, Luigi, etc.) is referenced in the posting.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.84,
+        "evidence": "Role centers on BI/DW reporting and Cognos, which commonly consume data from data warehouses.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.92,
+        "evidence": "Location is explicitly stated as Pune, Maharashtra, India with no remote work language.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.86,
+        "evidence": "Job is tied to an Indian office; therefore the primary timezone is India Standard Time.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No relocation requirement or package is mentioned; candidates are expected to be based in Pune.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.55,
+        "evidence": "Visa sponsorship is not mentioned; posting is for an Indian location, implying no H‑1B sponsorship.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.55,
+        "evidence": "No reference to OPT/CPT eligibility; role is based in India, making student‑visa support unlikely.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "any",
+        "confidence": 0.60,
+        "evidence": "No citizenship or work‑authorization restrictions are stated.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.60,
+        "evidence": "Employment type is not specified; typical IBM roles are full‑time employee but not explicitly stated.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.93,
+        "evidence": "The benefits array is empty and no perks are described in the posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "The posting does not discuss career progression, ladders, or growth opportunities.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No mentorship programs or senior‑to‑junior learning references are included.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.94,
+        "evidence": "No language about promotions, ladders, or advancement is present.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.94,
+        "evidence": "The job description does not reference internal transfers or mobility.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No explicit career tracks (IC, management, specialist, architect) are mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.82,
+        "evidence": "Clear must‑have hard and soft skills plus a minimum of 3 years; only one nice‑to‑have skill (UNIX) listed.",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.91,
+        "evidence": "Job description is focused specifically on BI data engineering tasks without mixing other roles.",
+        "source": "combined"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.84,
+        "evidence": "Required skill set (Cognos, multiple cloud platforms, ETL tools) aligns reasonably with a 3‑year experienced mid‑level data engineer.",
+        "source": "inferred"
+      }
+    }
+  }
+}

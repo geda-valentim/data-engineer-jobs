@@ -1,0 +1,253 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Job mentions only Tableau, SQL, Oracle, Hive with no orchestration, CI/CD, or data quality tooling, indicating basic pipelines but limited automation.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Score of 2 maps to the \"developing\" maturity level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No modern data stack components (dbt, Airflow, Snowflake), CI/CD, data quality testing, monitoring, governance, or cloud‑native references were found.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.15,
+        "confidence": 0.88,
+        "evidence": "Role is narrowly defined as Data Engineer‑BI focusing on Tableau dashboards and SQL/Hive development; no mention of data science, dev‑ops, or product ownership.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.30,
+        "confidence": 0.70,
+        "evidence": "No explicit overtime or on‑call language, but IBM large‑enterprise environments can have occasional peak periods; lack of work‑life balance signals raises moderate risk.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Pass2 inference classifies scope_definition as \"clear\" and the job title directly states the function.",
+        "source": "pass2_inference"
+      },
+      "overall_red_flag_score": {
+        "value": 0.25,
+        "confidence": 0.78,
+        "evidence": "Low scope creep, moderate overtime risk, clear role definition, but missing compensation and reporting details increase overall caution.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "Job posting does not specify a manager or reporting line.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No titles such as Head of Data, Director, or Manager are referenced.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No statements about hiring pace or team expansion.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.60,
+        "evidence": "No information on team size, number of data engineers, or seniority mix.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No explicit reporting hierarchy is provided.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "Description mentions collaboration with enterprise systems but not embedded product‑team model.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.50,
+        "confidence": 0.70,
+        "evidence": "No PTO, remote, or on‑call details are shared; IBM typically offers standard benefits but not disclosed here.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.40,
+        "confidence": 0.70,
+        "evidence": "No mention of mentorship, learning budget, or clear promotion path.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.45,
+        "confidence": 0.75,
+        "evidence": "Stack limited to Tableau, SQL, Oracle, Hive; no modern engineering practices (CI/CD, testing, monitoring) are described.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "None of the listed signals (open_source, conference_speaking, hackathons, etc.) appear in the posting.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "No references to code review, CI/CD, testing, monitoring, or incident response.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No statements about experimentation, R&D time, or adoption of new technologies.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No mention of refactoring, tech‑debt reduction, or modernization initiatives.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.90,
+        "evidence": "Job description contains no references to machine learning, AI, or related tooling.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No ML/AI tools are listed.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No language about immediate start or fast hiring.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No data on applicant volume, location desirability, or salary disclosure.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.95,
+        "evidence": "IBM is a globally recognized, publicly traded enterprise technology company.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.70,
+        "evidence": "No explicit hiring rush or expansion signals; typical enterprise hiring cadence.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No indication of data team size or overall engineering headcount.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "IBM is a public company; funding stage not applicable.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "Posting does not state whether this is a new headcount, backfill, or expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "data_focused_role",
+      "established_company",
+      "clear_requirements",
+      "well_defined_role"
+    ],
+    "strength_details": [
+      "Role centers on Tableau BI dashboards and SQL/Hive data querying, providing a clear technical focus.",
+      "IBM offers a stable, enterprise environment with global reach and resources.",
+      "Required skills are explicitly listed (Tableau, SQL, Oracle, Hive), reducing ambiguity for candidates.",
+      "Job description is concise and defines responsibilities without mixing unrelated functions."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "unclear_reporting",
+      "limited_growth"
+    ],
+    "concern_details": [
+      "Compensation range and benefits are not disclosed in the posting.",
+      "No information about the reporting line or manager hierarchy is provided.",
+      "Career progression, mentorship, and learning opportunities are not mentioned."
+    ],
+    "best_fit_categories": [
+      "mid_level_engineers",
+      "analytics_engineers",
+      "data_generalists"
+    ],
+    "best_fit_details": [
+      "Engineers with 2‑5 years of experience in SQL, Oracle/Hive, and Tableau dashboard development.",
+      "Candidates comfortable working in a large, structured enterprise data environment.",
+      "Professionals seeking a focused BI data‑engineering role without extensive ML or dev‑ops responsibilities."
+    ],
+    "probe_categories": [
+      "salary_range_details",
+      "reporting_structure",
+      "career_growth_path",
+      "team_size_composition",
+      "work_hour_expectations"
+    ],
+    "probe_details": [
+      "What is the compensation range and what benefits (PTO, health, bonuses) are offered?",
+      "Who will I report to and how is the data engineering team organized?",
+      "What are the typical career progression paths for data engineers at IBM?",
+      "Can you describe the size and composition of the data team I would join?",
+      "What are the expected work hours, and are there any on‑call or overtime expectations?"
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "domain_expertise"
+    ],
+    "leverage_details": [
+      "My extensive experience with Tableau, SQL, Oracle, and Hive aligns directly with the required skill set.",
+      "Having built enterprise‑scale BI dashboards in large organizations positions me well for IBM's environment."
+    ],
+    "overall_assessment": "The role offers a clear, BI‑focused data engineering position at a reputable enterprise (IBM) with well‑defined responsibilities. Compensation and career progression details are missing, and there is limited information on team structure and work‑life balance. Candidates with solid Tableau and SQL/Hive experience will find a good technical fit, but should probe for salary, reporting line, and growth opportunities.",
+    "recommendation_score": 0.70,
+    "recommendation_confidence": 0.78
+  }
+}

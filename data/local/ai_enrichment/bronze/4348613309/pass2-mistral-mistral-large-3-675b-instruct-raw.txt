@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.8,
+        "evidence": "Title is 'Data Engineer' without senior/staff/principal qualifiers, and minimum 3 years of experience is stated",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is 'Data Engineer' and core responsibilities focus on ETL workflows, data models, and data warehouse technologies",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.9,
+        "evidence": "Core focus on Snowflake, datamarts, and data warehouse efficiency improvements",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.7,
+        "evidence": "Responsibilities emphasize development, testing, and support tasks without explicit leadership or mentoring expectations",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.6,
+        "evidence": "Snowflake is mentioned (which is cloud-agnostic), but no explicit cloud providers or services are stated",
+        "source": "inferred"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No cloud providers mentioned beyond Snowflake's cloud-agnostic platform",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.85,
+        "evidence": "Mentions 'Control M Batch processing' and 'ETL workflow' with no streaming/real-time tools or paradigms",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.6,
+        "evidence": "Control M is mentioned for batch processing, but no clear orchestrator category is identifiable (Airflow, Spark Native, etc.)",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.9,
+        "evidence": "Snowflake and datamarts are explicitly mentioned, indicating a data warehouse storage layer",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Location is specified as 'Kochi, Kerala, India' but no work model or remote restrictions are discussed",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No timezone requirements or team distribution details are provided",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "Location is specified but no relocation package or requirements are mentioned",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "Visa sponsorship is not mentioned, and location is in India (H1B is irrelevant here)",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "No signals regarding student visa (OPT/CPT) support are present",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No citizenship or work authorization requirements are stated in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.9,
+        "evidence": "Employment type is stated as 'full_time' with no contract details, implying W2",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.9,
+        "evidence": "No benefits are mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.6,
+        "evidence": "Mentions 'developing new systems to improve efficiency' but no explicit career tracks or growth paths",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.7,
+        "evidence": "Team collaboration and working in delivery centers with senior expertise may imply mentorship opportunities",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit mention of promotion or advancement paths",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of internal mobility or role changes",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No explicit career tracks (IC, management, specialist, architect) are mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.8,
+        "evidence": "All listed skills are under 'must_have_hard_skills' with no 'nice_to_have' skills mentioned",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.8,
+        "evidence": "Job description is focused on data engineering tasks with a clear emphasis on ETL and data warehouse",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.7,
+        "evidence": "Minimum 3 years of experience aligns well with mid-level data engineering expectations",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

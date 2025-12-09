@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 13:00:01",
+    "job_posting_id": "4348538137",
+    "job_title": "Quality Engineer-Packages",
+    "company_name": "IBM",
+    "job_location": "Bengaluru East, Karnataka, India",
+    "pass_name": "pass2",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.92,
+          "evidence": "Job posting states Total Experience 6-7 years (Relevant 4-5 years), which aligns with senior‑level expectations.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title and responsibilities focus on data gathering, storage, batch and real‑time processing, ETL pipelines, and Azure Databricks.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.78,
+          "evidence": "The description emphasizes building pipelines, ETL tools, and both batch and real‑time processing, with strong mention of Azure Databricks and Spark for batch workloads.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.85,
+          "evidence": "No mention of people‑management responsibilities or direct reports; role is focused on technical delivery.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "azure",
+          "confidence": 0.96,
+          "evidence": "Must‑have skills list includes Azure Databricks, Azure DevOps, Azure Blob; all are Azure services.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No other cloud providers are referenced in the posting or extracted skills.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.8,
+          "evidence": "The role mentions both batch and real‑time processing of data.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No orchestration tools such as Airflow, Luigi, Dagster, Prefect, or cloud‑native schedulers are cited.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "lakehouse",
+          "confidence": 0.7,
+          "evidence": "Azure Databricks (Delta Lake) and Azure Blob storage imply a lakehouse architecture.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.95,
+          "evidence": "Location restriction is Bengaluru East, Karnataka, India and work model is onsite.",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "apac",
+          "confidence": 0.9,
+          "evidence": "Job is based in India, which falls in the APAC region.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Posting does not mention any relocation requirement; it expects candidates to be based in Bengaluru.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Visa sponsorship is listed as not_mentioned and the role is India‑based.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "No reference to OPT/CPT or student visa support.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No citizenship or work‑authorization restrictions are stated.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.7,
+          "evidence": "The role is described as a full‑time position at IBM with no contract type specified, implying a standard employee (W2) arrangement.",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "Pass 1 extraction shows no benefits listed.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "The posting does not discuss career ladders, promotion tracks, or growth pathways.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No explicit or implied mentorship programs are referenced.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No language about promotions or advancement is present.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "The posting does not mention internal transfers or mobility options.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No career track options (IC, management, specialist, architect) are described.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.85,
+          "evidence": "Must‑have list includes many specific Azure and programming skills plus 6‑7 years of experience.",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "Job description is focused on data engineering responsibilities without mixing other roles.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Required skill set aligns with a senior data engineer role given the 6‑7 years of experience.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8759,
+    "input_tokens": 6006,
+    "output_tokens": 2753,
+    "cost": 0.0017268
+  }
+}

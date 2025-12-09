@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 12:37:19",
+    "job_posting_id": "4325867761",
+    "job_title": "Data Engineer-Data Platforms-AWS",
+    "company_name": "IBM",
+    "job_location": "Bengaluru East, Karnataka, India",
+    "pass_name": "pass2",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.78,
+          "evidence": "Job requires minimum 4+ years of Big Data experience and 3 years on Azure, which aligns with a mid‑level data engineer.",
+          "source": "pass1_derived"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 1.0,
+          "evidence": "Title is \"Data Engineer\" and responsibilities focus on building and maintaining data pipelines.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "streaming_realtime",
+          "confidence": 0.71,
+          "evidence": "Mentions building streaming pipelines, Kafka, and real‑time processing alongside batch ingestion.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.85,
+          "evidence": "No mention of people‑management responsibilities or direct reports; role is purely technical.",
+          "source": "not_mentioned"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "azure",
+          "confidence": 0.86,
+          "evidence": "Responsibilities list Azure services (DataBricks, HDInsight, Data Factory, Synapse, SQL Server) and Azure Cloud Data Platform repeatedly.",
+          "source": "inferred"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No other cloud providers are explicitly mentioned in the posting.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.75,
+          "evidence": "Job describes pipelines for files, streams, and databases, indicating both batch and streaming workloads.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 1.0,
+          "evidence": "No orchestration tools (Airflow, Luigi, Dagster, etc.) are referenced.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "lake",
+          "confidence": 0.81,
+          "evidence": "References to HDFS, NoSQL databases, Hive, and Azure Data Lake storage imply a data‑lake focus.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.88,
+          "evidence": "Location is Bengaluru, India and geo restriction type is \"specific_countries\" with allowed country IN.",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.85,
+          "evidence": "Job is tied to an Indian location; no broader timezone requirement is stated.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Posting does not mention relocation assistance or a requirement to move.",
+          "source": "not_mentioned"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Visa sponsorship is listed as \"not_mentioned\" in the extraction.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "No reference to OPT/CPT eligibility; work authorization is implied for local candidates.",
+          "source": "not_mentioned"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.82,
+          "evidence": "No citizenship clause; only location restriction suggests any candidate authorized to work in India is acceptable.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.62,
+          "evidence": "Typical IBM full‑time roles are employee (W2) positions; no contract or C2C language appears.",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 1.0,
+          "evidence": "Extraction shows no benefits listed.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 1.0,
+          "evidence": "Posting does not discuss career ladders, promotion tracks, or growth opportunities.",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 1.0,
+          "evidence": "No mentorship or coaching programs are referenced.",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No language about promotions or advancement paths appears in the posting.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal transfers or lateral moves.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 1.0,
+          "evidence": "No career track options (IC, management, specialist, architect) are described.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.81,
+          "evidence": "A clear set of must‑have technical skills is listed with only one nice‑to‑have skill (Kafka).",
+          "source": "combined"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.92,
+          "evidence": "Job description is focused specifically on data‑engineering responsibilities without mixing other roles.",
+          "source": "combined"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Required skill set aligns with a mid‑level data engineer having 4+ years experience; no unrealistic senior‑level expectations.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8673,
+    "input_tokens": 5892,
+    "output_tokens": 2781,
+    "cost": 0.0017181
+  }
+}

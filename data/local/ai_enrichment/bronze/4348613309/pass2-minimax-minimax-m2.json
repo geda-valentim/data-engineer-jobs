@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 15:29:09",
+    "job_posting_id": "4348613309",
+    "job_title": "Data Engineer-Data Warehouse",
+    "company_name": "IBM",
+    "job_location": "Kochi, Kerala, India",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.75,
+          "evidence": "Title is 'Data Engineer' without senior prefix, but requires 3+ years experience and involves complex responsibilities like ETL development, data modeling, and production support",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Data Engineer', core responsibilities focus on ETL workflows, data warehouse development, and data modeling using Snowflake and DBT",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.88,
+          "evidence": "Mentions Control M batch processing, ETL job development, and data warehouse focus - all indicating batch processing paradigm rather than streaming",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.82,
+          "evidence": "Role focuses on individual contributor tasks like ETL development, testing, debugging, and production support with no mention of team leadership or direct reports",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No specific cloud provider mentioned - only Snowflake (which is cloud-agnostic) and on-premise technologies like Unix are referenced",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No cloud providers mentioned at all in the job posting",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.85,
+          "evidence": "Explicitly mentions 'Control M Batch processing' and ETL job builds for production, indicating batch processing focus",
+          "source": "pass1_derived"
+        },
+        "orchestrator_category": {
+          "value": "airflow_like",
+          "confidence": 0.75,
+          "evidence": "Control M is mentioned as batch processing orchestrator, which falls under traditional workflow orchestration category similar to Airflow",
+          "source": "inferred"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.9,
+          "evidence": "Snowflake is explicitly mentioned as the data warehouse solution, and role is titled 'Data Engineer-Data Warehouse'",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.8,
+          "evidence": "Specific location requirement for Kochi, Kerala, India indicates regional restriction rather than fully remote",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.85,
+          "evidence": "Location specified as Kochi, Kerala, India indicates focus on India timezone (IST)",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.75,
+          "evidence": "Role requires being in Kochi, Kerala, India - candidates not already in this location would need to relocate",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No visa sponsorship mentioned and role is based in India, suggesting no H1B sponsorship for US positions",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.7,
+          "evidence": "No mention of student visa support and role requires work authorization without specific student visa accommodation",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.8,
+          "evidence": "No citizenship requirements mentioned, only standard work authorization implied for the location",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.85,
+          "evidence": "IBM Consulting role with full-time responsibilities and benefits structure suggests W2 employment rather than contractor arrangement",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No benefits, equity, PTO, or other compensation details mentioned in the job posting",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No career progression, growth opportunities, or advancement paths mentioned in the job description",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No mentorship programs, senior staff collaboration, or learning from experienced team members mentioned",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No promotion, advancement, or career growth opportunities mentioned",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No internal transfers, role changes, or mobility opportunities mentioned",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.85,
+          "evidence": "No career tracks, paths to senior roles, or advancement opportunities mentioned",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear must-have technical skills listed but Master's degree is preferred rather than required, indicating balanced requirements",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Well-defined data engineering role focused on data warehouse ETL development with specific technologies and responsibilities outlined",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Skills required (3+ years, Snowflake, DBT, SQL, ETL) are appropriate for mid-level data engineer position without unrealistic expectations",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 9018,
+    "input_tokens": 5859,
+    "output_tokens": 3159,
+    "cost": 0.012177
+  }
+}

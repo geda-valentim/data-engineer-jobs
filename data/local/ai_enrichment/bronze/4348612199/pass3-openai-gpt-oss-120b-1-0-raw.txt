@@ -1,0 +1,259 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.70,
+        "evidence": "Only mentions Hadoop, GCP, CDC, Elasticsearch, Splunk and basic Agile practices. No orchestration (Airflow, Dagster), CI/CD, data catalog, or testing frameworks are referenced.",
+        "source": "pass1_derived"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.70,
+        "evidence": "The tooling and practices described align with a developing data maturity where pipelines exist but governance and automation are limited.",
+        "source": "pass1_derived"
+      },
+      "maturity_signals": {
+        "value": [
+          "cloud_native",
+          "data_governance",
+          "modernization_roadmap"
+        ],
+        "confidence": 0.75,
+        "evidence": "Explicit mention of GCP as the target cloud, security/HA/RTO/RPO requirements, and a modernization roadmap for database migration.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.25,
+        "confidence": 0.85,
+        "evidence": "Primary focus is data engineering (pipeline, migration, CDC) but also includes leading workshops, effort estimation, and tool adoption, adding modest leadership responsibilities.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.40,
+        "confidence": 0.70,
+        "evidence": "No explicit on‑call or overtime language, yet the role is within an IBM consulting delivery center where project deadlines can be tight.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Responsibilities are listed as data gathering, storage, batch/real‑time processing, migration, and workshop leadership – all within the data engineering domain.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.80,
+        "evidence": "Combination of moderate scope creep and overtime risk, but role definition is clear and no extreme red‑flags are present.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "The posting does not specify a manager, lead, or reporting line.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "manager",
+        "confidence": 0.70,
+        "evidence": "Title \"Associate Software Developer\" typically reports to a manager in large enterprises like IBM.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No information about hiring trends or team expansion is provided.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.60,
+        "evidence": "The job description does not disclose team size, number of data engineers, or seniority mix.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No explicit reporting hierarchy is described.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "Collaboration with diverse teams is mentioned, but there is no indication of being embedded within a product squad.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.50,
+        "confidence": 0.70,
+        "evidence": "No PTO, remote, or on‑call policies are described; IBM generally offers standard benefits but they are not called out.",
+        "source": "pass1_derived"
+      },
+      "growth_opportunities_score": {
+        "value": 0.50,
+        "confidence": 0.70,
+        "evidence": "Mentorship is implied through collaboration, but there are no explicit learning budgets, conferences, or career‑path statements.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.40,
+        "confidence": 0.75,
+        "evidence": "The stack is limited to Hadoop, GCP, Elasticsearch, Splunk; no mention of CI/CD, code review, testing, or observability practices.",
+        "source": "pass1_derived"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.60,
+        "evidence": "No references to open‑source contributions, tech blogs, conferences, or hackathons.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.60,
+        "evidence": "The posting does not list code review, CI/CD, testing, or monitoring practices.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No language about experimentation, R&D time, or exploring new technologies.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "No mention of refactoring, tech‑debt reduction, or modernization beyond migration.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.60,
+        "evidence": "Predictive models, statistical models, and machine‑learning techniques are listed, but no specific ML platforms or MLOps tools are referenced.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.70,
+        "evidence": "No ML tooling (e.g., SageMaker, MLflow, Feast) appears in the description.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "The posting does not state a start‑date or urgency language.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No data on applicant volume, location scarcity, or salary competitiveness is provided.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a globally recognized, publicly traded technology company with decades of history.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.70,
+        "evidence": "No aggressive hiring language; the role appears as a standard addition to the consulting delivery team.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "The posting does not disclose the size of the data engineering or broader team.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "IBM is a public company; funding stages are not applicable.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No indication whether the role is a new headcount, backfill, or expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "cloud_native",
+      "data_focused_role",
+      "clear_requirements",
+      "well_defined_role"
+    ],
+    "strength_details": [
+      "Role is centered on data engineering tasks (pipeline, migration, CDC) with a clear focus.",
+      "Work will be performed on Google Cloud Platform, providing cloud‑native experience.",
+      "Requirements are explicitly listed, reducing ambiguity for candidates.",
+      "The job description outlines specific responsibilities, indicating a well‑defined role."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "no_visa_sponsorship",
+      "limited_growth",
+      "unclear_reporting"
+    ],
+    "concern_details": [
+      "Compensation details (salary, equity, benefits) are not provided.",
+      "Visa sponsorship is not mentioned; the role is based in India and likely requires local work authorization.",
+      "No explicit career‑path, mentorship program, or learning budget is described.",
+      "Reporting line and manager level are not specified, making hierarchy unclear."
+    ],
+    "best_fit_categories": [
+      "mid_level_engineers",
+      "data_generalists",
+      "enterprise_experienced"
+    ],
+    "best_fit_details": [
+      "Engineers with 3‑6 years of data engineering experience comfortable with Hadoop, GCP, and CDC pipelines.",
+      "Candidates who enjoy working across batch and real‑time data processing and can handle migration projects.",
+      "Professionals accustomed to large‑enterprise environments and consulting delivery models."
+    ],
+    "probe_categories": [
+      "salary_range_details",
+      "benefits_details",
+      "reporting_structure",
+      "career_growth_path",
+      "work_hour_expectations"
+    ],
+    "probe_details": [
+      "Ask for the expected salary band, bonus structure, and equity components.",
+      "Inquire about health, PTO, remote‑work policy, and any learning or conference budgets.",
+      "Clarify who the role reports to (manager, lead, or director) and the team hierarchy.",
+      "Request information on promotion criteria, mentorship programs, and internal mobility options.",
+      "Confirm typical work hours, on‑call duties, and any expectations for overtime during project peaks."
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "quick_availability"
+    ],
+    "leverage_details": [
+      "Your hands‑on experience with Hadoop‑to‑GCP migrations aligns directly with the core responsibilities.",
+      "If you can start within the next few weeks, you can position yourself as a ready‑to‑contribute candidate."
+    ],
+    "overall_assessment": "The position offers a solid data‑engineering focus on GCP with clear responsibilities, making it a good fit for mid‑level engineers seeking enterprise consulting experience. However, lack of disclosed compensation, growth roadmap, and reporting details are notable gaps. Candidates should probe these areas before proceeding.",
+    "recommendation_score": 0.60,
+    "recommendation_confidence": 0.80
+  }
+}

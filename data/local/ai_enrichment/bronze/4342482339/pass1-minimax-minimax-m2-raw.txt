@@ -1,0 +1,150 @@
+<reasoning>I need to extract information from this French job posting for a Data Engineer position at MP Data in Liège. Let me go through the job posting systematically and extract the required information according to the rules.
+
+Looking at the job posting:
+
+**Title**: Data Engineer - H/F - Liège
+**Company**: MP DATA
+**Location**: Liege Metropolitan Area
+
+**Description Analysis**:
+
+1. **Compensation**: No salary information is mentioned in the job posting. So salary_disclosed = false, all salary fields = null.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. So visa_sponsorship_stated = "not_mentioned", work_auth_text = null, citizenship_text = null, security_clearance_stated = "not_mentioned".
+
+3. **Work Model**: The location is specified as "Liege Metropolitan Area" but no mention of remote/hybrid/onsite work model. So work_model_stated = "not_mentioned", location_restriction_text = null. Employment type is not explicitly mentioned, so employment_type_stated = "not_mentioned".
+
+4. **Contract Details**: No mention of contract type, duration, etc. So contract_type = "not_mentioned", all other contract fields = null.
+
+5. **Contractor Rates**: No mention of contractor rates or pay structure. So pay_type = "not_mentioned", all other contractor rate fields = null.
+
+6. **Skills Classification**: Let me analyze the technical requirements:
+
+**Must-have hard skills** (based on "Compétences Techniques Indispensables" - Essential Technical Skills):
+- PySpark: "Maîtrise de PySpark : Capacité prouvée à écrire du code Spark optimisé pour le traitement de gros volumes de données."
+- Apache Airflow: "Expertise en Orchestration : Expérience significative avec Apache Airflow."
+- AWS: "Expérience Cloud : Bonne connaissance des services de base d'Amazon Web Services (AWS), en particulier S3."
+- Python: "Fondations Solides : Excellente maîtrise de Python et de SQL."
+- SQL: "Fondations Solides : Excellente maîtrise de Python et de SQL."
+
+
+- Data Mesh: "Vous comprenez et adhérez aux principes de l'architecture Data Mesh"
+- Unit Testing: "Vous êtes rigoureux et le concept de Tests Unitaires est une seconde nature pour vous"
+
+I'll continue analyzing the soft skills and additional requirements. The role demands strong problem-solving abilities, self-motivation, and a proactive approach to data engineering challenges. The position requires a deep understanding of data architecture, with an emphasis on mesh principles and rigorous testing methodologies.
+
+The soft skills highlight the importance of autonomy, proactivity, and comfort working with internal data platforms. These qualities suggest a need for self-directed learning and adaptability in a dynamic technical environment.
+
+The interview process involves multiple stages: an initial phone screening, a business engineer interview, a technical test, a technical interview, and a final site visit. This comprehensive approach indicates a thorough evaluation of both technical and interpersonal competencies.
+
+The company culture emphasizes passion for data, technical expertise, and commitment to client projects. Their values of Excellence, Sharing, and Engagement suggest a collaborative and growth-oriented work environment.
+
+The role focuses on pipeline engineering, involving designing and optimizing data pipelines using Python and PySpark. Key responsibilities include orchestrating workflows with Apache Airflow, contributing to Data Mesh architecture migration, managing AWS infrastructure, and ensuring code quality through rigorous testing.
+
+The ideal candidate will have proven PySpark optimization skills, significant Apache Airflow experience, and a strong foundation in Python and SQL. They should understand Data Mesh principles, be meticulous about unit testing, and demonstrate autonomy and proactivity in working with custom internal data platforms.
+
+The interview process involves multiple stages: initial phone screening, business engineer discussion, technical assessment, technical interview, and potential site visit. This comprehensive approach ensures thorough evaluation of candidates' technical and interpersonal capabilities.
+
+The role emphasizes data engineering excellence, requiring strong technical skills in Python, PySpark, and AWS, with a focus on pipeline optimization and robust workflow management.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "PySpark",
+        "Apache Airflow",
+        "AWS",
+        "Python",
+        "SQL",
+        "Data Mesh",
+        "Unit Testing"
+      ],
+      "nice_to_have_hard_skills": [],
+      "must_have_soft_skills": [
+        "Autonomy",
+        "Proactivity",
+        "Rigorousness"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Chez MP Data, nous sommes une équipe passionnée d'experts en données, spécialisée dans l'acquisition, le traitement et la valorisation des données pour nos clients industriels. Depuis 2015, nous mettons notre savoir-faire technique et notre engagement au service de missions et de projets pour les grands groupes. Notre approche repose sur les valeurs d'Excellence, de Partage et d'Engagement.",
+      "company_description_text": "Chez MP Data, nous sommes une équipe passionnée d'experts en données, spécialisée dans l'acquisition, le traitement et la valorisation des données pour nos clients industriels. Depuis 2015, nous mettons notre savoir-faire technique et notre engagement au service de missions et de projets pour les grands groupes. Notre approche repose sur les valeurs d'Excellence, de Partage et d'Engagement."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 41
+  }
+}
+```

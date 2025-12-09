@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.93,
+        "evidence": "Job requires minimum 5 years (and 6 years on Databricks) of experience, which aligns with senior-level expectations.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.99,
+        "evidence": "Title is Data Engineer and responsibilities focus on building and maintaining data pipelines.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "streaming_realtime",
+        "confidence": 0.86,
+        "evidence": "Mentions real-time streaming pipelines, Kafka, and event-driven processing alongside batch ETL.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.88,
+        "evidence": "No mention of people‑management duties or direct reports; role is purely technical.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.95,
+        "evidence": "Explicitly lists AWS, Azure, and GCP as platforms for data engineering workflows.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "All three clouds are treated equally; no single secondary provider identified.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.89,
+        "evidence": "Job description includes both real‑time streaming (Kafka) and batch processing (ETL/ELT).",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.96,
+        "evidence": "Apache Airflow is explicitly mentioned as a data orchestration tool.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.84,
+        "evidence": "References to S3/Blob Storage (data lake) and Redshift/BigQuery (data warehouse).",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "Location is given as Bengaluru, India, but no remote or on‑site restriction is stated.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No timezone or regional focus is described in the posting.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.55,
+        "evidence": "Posting does not mention any relocation requirement.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.55,
+        "evidence": "Visa sponsorship is not mentioned in the posting.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.55,
+        "evidence": "No reference to OPT/CPT eligibility is provided.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No citizenship or work‑authorization restrictions are stated.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "Employment type (W2, C2C, 1099) is not specified.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.96,
+        "evidence": "The posting lists no benefits such as health, PTO, equity, or learning budget.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "No discussion of career ladders, promotion tracks, or growth pathways.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.68,
+        "evidence": "Role involves collaborating with Integration Architects and Data Architects, implying exposure to senior staff.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.94,
+        "evidence": "No explicit mention of promotion or advancement opportunities.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.94,
+        "evidence": "No reference to internal transfers or mobility programs.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.60,
+        "evidence": "No specific career tracks (IC, management, specialist, architect) are described.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.81,
+        "evidence": "Long list of mandatory hard skills with only a few nice‑to‑have items.",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.93,
+        "evidence": "Job description is focused specifically on data engineering responsibilities.",
+        "source": "combined"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.78,
+        "evidence": "Required skill set aligns with a senior data engineer having 5‑6 years of experience.",
+        "source": "combined"
+      }
+    }
+  }
+}

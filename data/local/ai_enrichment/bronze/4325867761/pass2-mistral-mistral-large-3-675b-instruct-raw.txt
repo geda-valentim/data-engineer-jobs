@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.9,
+        "evidence": "Title is 'Data Engineer' (no senior/staff/principal) and minimum 4+ years of experience in Big Data technologies is mentioned.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_platform_engineer",
+        "confidence": 0.9,
+        "evidence": "Title mentions 'Data Engineer-Data Platforms-AWS' and responsibilities include building data pipelines on Azure Cloud Data Platform or HDFS, with a focus on platform-level work.",
+        "source": "combined"
+      },
+      "sub_specialty": {
+        "value": "hybrid",
+        "confidence": 0.8,
+        "evidence": "Responsibilities mention both streaming pipelines (Kafka) and batch processing (Spark, PySpark, Hive, Hadoop).",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.8,
+        "evidence": "Role focuses on development, maintenance, and testing of big data solutions without explicit mention of leadership or mentoring responsibilities.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.9,
+        "evidence": "Azure Cloud Data Platform, Azure HDInsight, Azure Data Factory, and Synapse are explicitly mentioned as required experience.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": ["aws"],
+        "confidence": 0.8,
+        "evidence": "Title mentions AWS, but the job description focuses more on Azure with no explicit primary cloud stated for responsibilities.",
+        "source": "inferred"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.8,
+        "evidence": "Both streaming (Kafka) and batch (Spark, PySpark, Hive) processing paradigms are mentioned in responsibilities.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.7,
+        "evidence": "Azure Data Factory and Synapse are mentioned, which are cloud-native orchestrators for Azure.",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.7,
+        "evidence": "Mentions Azure Cloud Data Platform (cloud warehouse) and HDFS (data lake patterns), indicating a mixed storage layer.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Location is specified as Bengaluru, but no remote work model or restrictions are discussed.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.8,
+        "evidence": "Location is restricted to India (Bengaluru), suggesting timezone focus aligns with India.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "Location is specified as Bengaluru, but no mention of relocation packages or requirements.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit mention of visa sponsorship or H1B in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.6,
+        "evidence": "Minimum 4+ years of experience suggests targeting experienced professionals, not students on OPT/CPT.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "any",
+        "confidence": 0.7,
+        "evidence": "No citizenship or work authorization requirements are mentioned, and location is India, implying no restrictions.",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No contract type or employment model (W2, 1099, etc.) is mentioned in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.9,
+        "evidence": "No benefits are mentioned in Pass 1 results.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No discussion of career growth paths or advancement opportunities in the job posting.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.6,
+        "evidence": "Mentions working in delivery centers with deep technical and industry expertise, suggesting potential collaboration with senior team members.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit mention of promotions or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No discussion of internal mobility or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No career tracks explicitly or implicitly mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.8,
+        "evidence": "All skills listed under 'Required Technical And Professional Expertise' are classified as must-have hard skills in Pass 1 results, with no nice-to-haves mentioned.",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.8,
+        "evidence": "Job description focuses on a single role (Data Engineer) with well-defined responsibilities in big data and cloud platforms.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.7,
+        "evidence": "Minimum 4+ years of experience aligns reasonably with mid-level data engineering responsibilities and required skills.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

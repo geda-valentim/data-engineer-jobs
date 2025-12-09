@@ -1,0 +1,157 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+First, let me identify what information is explicitly stated in the job posting:
+
+**Job Details:**
+- Title: Data Engineer-Business Intelligence
+- Company: IBM
+- Location: Pune, Maharashtra, India
+
+**Compensation:**
+- No salary information mentioned → salary_disclosed: false, all salary fields null
+
+**Work Authorization:**
+- No mention of visa sponsorship or work authorization requirements → visa_sponsorship_stated: "not_mentioned"
+
+**Work Model:**
+- Location is specified as Pune, Maharashtra, India → work_model_stated: "onsite"
+- No mention of employment type → employment_type_stated: "not_mentioned"
+
+**Contract Details:**
+- No mention of contract type, duration, etc. → contract_type: "not_mentioned", all other contract fields null
+
+**Contractor Rates:**
+- No mention of contractor rates → pay_type: "not_mentioned", all rate fields null
+
+**Skills Classification:**
+Let me analyze the skills mentioned:
+
+Required Technical And Professional Expertise:
+- "Cognos Developer & Admin Required" → This is explicitly stated as required, so must_have_hard_skills: ["Cognos Developer", "Admin"]
+- "The resource should have a minimum of 3 years of experience" → years_experience_min: 3, years_experience_max: null, years_experience_text: "minimum of 3 years"
+- "working in the in BI DW projects in areas pertaining to reporting and visualization using cognos" → must_have_hard_skills: ["BI DW projects", "reporting", "visualization", "Cognos"]
+- "good understanding of UNIX" → must_have_hard_skills: ["UNIX"]
+- "excellent writing, MIS, communication, time management and multi-tasking skill" → must_have_soft_skills: ["Communication", "Time Management", "Multi-tasking"]
+ 
+I'll continue analyzing the preferred technical skills, focusing on cloud platforms and additional technical competencies. The preferred skills include cloud experience with AWS, Google, and Azure, along with an agile mindset and ETL tool proficiency. These skills represent additional qualifications that would enhance a candidate's profile, though they're not mandatory requirements.
+
+The education requirements specify a full-time Master's degree, with a preference for relevant certifications. The degree should be in a technical field like MCA, M.Tech, B.Tech, or B.E., indicating a strong educational background in engineering or technology.
+
+The role demands a minimum of 3 years of experience in Business Intelligence and Data Warehouse projects, specifically in reporting and visualization using Cognos. Candidates should have participated in at least two projects involving report development and visualization, with a solid understanding of UNIX systems.
+
+The preferred technical skills include cloud platform experience across AWS, Google, and Azure, an agile mindset, and proficiency with ETL tools like IBM InfoSphere DataStage, Azure Data Factory, or Informatica PowerCenter.
+
+The role emphasizes strong communication skills, including excellent writing, MIS, and time management abilities. The position is based in Pune, Maharashtra, India, with no specific geographic restrictions mentioned.
+
+The company description highlights IBM's global consulting approach, focusing on delivering technical expertise to diverse public and private sector clients through locally based innovation centers.
+
+No specific benefits are detailed in the job posting, and the role appears to be a permanent position without explicit contractor rate information.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Pune, Maharashtra, India",
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Cognos Developer",
+        "Admin",
+        "BI DW projects",
+        "reporting",
+        "visualization",
+        "Cognos",
+        "UNIX"
+      ],
+      "nice_to_have_hard_skills": [
+        "AWS",
+        "Google",
+        "Azure",
+        "IBM InfoSphere DataStage",
+        "Azure Data Factory",
+        "Informatica PowerCenter"
+      ],
+      "must_have_soft_skills": [
+        "Communication",
+        "Time Management",
+        "Multi-tasking"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 3,
+      "years_experience_max": null,
+      "years_experience_text": "minimum of 3 years",
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "preferred",
+      "education_text_raw": "Master's Degree",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology",
+      "company_description_text": "IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 47
+  }
+}
+```

@@ -1,0 +1,413 @@
+<reasoning>Let me analyze this job posting and Pass 1 extraction results to infer the job characteristics according to the rules provided.
+
+First, let me understand what we have:
+
+**Original Job Posting:**
+- Title: Data Engineer-Data Integration
+- Company: IBM
+- Location: Hyderabad, Telangana, India
+- Role involves data gathering, storage, batch and real-time processing
+- Key technologies: Snowflake, Talend, Elasticsearch, Splunk
+- Focus on data warehouse solutions, data ingestion/transformation pipelines
+- Cloud platform integration
+- Dimensional and relational data modeling
+
+**Pass 1 Extraction Results:**
+- Work model: onsite
+- Location restriction: Hyderabad, Telangana, India
+- Must-have skills: Snowflake, Talend, data warehouse solutions, data pipelines, cloud integration, SQL, Shell scripting
+- Nice-to-have skills: Snowflake optimization, data validation/cleansing/governance frameworks
+- No salary, benefits, or visa information mentioned
+- No years of experience specified
+- No education requirements mentioned
+
+Now let me go through each inference category:
+
+## SENIORITY AND ROLE
+
+### seniority_level
+The title is "Data Engineer-Data Integration" without any seniority indicator like "Senior", "Junior", etc. The responsibilities mention implementing predictive models, designing enterprise search applications, and working with complex data sets, which suggests mid to senior level. However, no years of experience are specified. The skills required are quite advanced (Snowflake, Talend, cloud integration, data modeling) which suggests this isn't an entry-level role. Given the lack of explicit seniority in title and no experience requirements, this is likely a mid-level position.
+
+**Value: "mid"**
+**Confidence: 0.6** (moderate inference from responsibilities and skills)
+**Evidence: "Data Engineer title without seniority indicator, but advanced technical requirements suggest mid-level rather than entry-level"**
+**Source: "inferred"**
+
+### job_family
+The title is clearly "Data Engineer" and the core responsibilities are around data gathering, storage, processing pipelines, data warehouse solutions, and data integration. This is clearly a data engineering role.
+
+
+**Value: "data_engineer"**
+**Confidence: 0.95** (very clear from title and responsibilities)
+**Evidence: "Title is Data Engineer with core focus on data pipelines, warehousing, and integration"**
+**Source: "pass1_derived"**
+
+### sub_specialty
+The role involves both batch and real-time processing, with mentions of data ingestion, transformation pipelines, and enterprise search applications. The focus seems to be on data integration and ETL pipelines rather than specific areas like ML infrastructure or data governance.
+
+**Value: "batch_etl"**
+**Confidence: 0.75** (strong focus on data pipelines and transformation)
+**Evidence: "Emphasis on data ingestion, transformation pipelines, and batch processing alongside real-time"**
+**Source: "inferred"**
+
+### leadership_expectation
+The role description doesn't mention any leadership responsibilities, mentoring, or direct reports. It's focused on technical implementation and collaboration with teams.
+
+**Value: "ic"**
+**Confidence: 0.85** (no leadership signals mentioned)
+**Evidence: "No mention of leadership, mentoring, or direct reports - pure IC role"**
+**Source: "inferred"**
+
+## STACK AND CLOUD
+
+### primary_cloud
+The job mentions "integrating data from cloud platforms into Snowflake" but doesn't specify which cloud provider. Snowflake is mentioned as the data warehouse solution, but no specific cloud provider is indicated.
+
+**Value: "not_mentioned"**
+**Confidence: 0.9** (no specific cloud provider mentioned)
+**Evidence: "Mentions 'cloud platforms' generically without specifying AWS, Azure, or GCP"**
+**Source: "pass1_derived"**
+
+### secondary_clouds
+Since no primary cloud is specified, there are no secondary clouds either.
+
+**Value: []**
+**Confidence: 0.9** (no clouds mentioned)
+**Evidence: "No cloud providers mentioned beyond generic 'cloud platforms'"**
+**Source: "pass1_derived"**
+
+### processing_paradigm
+The role explicitly mentions both "batch and real-time processing" in the description.
+
+**Value: "hybrid"**
+**Confidence: 0.9** (explicitly mentioned)
+**Evidence: "Description states 'both batch and real-time processing'"**
+**Source: "pass1_derived"**
+
+### orchestrator_category
+No specific orchestration tools are mentioned in the job posting.
+
+**Value: "not_mentioned"**
+**Confidence: 0.9** (no orchestrator tools mentioned)
+**Evidence: "No mention of Airflow, Spark, dbt, or other orchestration tools"**
+**Source: "pass1_derived"**
+
+### storage_layer
+Snowflake is mentioned as the data warehouse solution, and the role involves designing and implementing scalable data warehouse solutions.
+
+**Value: "warehouse"**
+**Confidence: 0.9** (Snowflake explicitly mentioned as data warehouse)
+**Evidence: "Snowflake mentioned as primary data warehouse solution"**
+**Source: "pass1_derived"**
+
+## GEO AND WORK MODEL
+
+### remote_restriction
+The job is explicitly onsite in Hyderabad, Telangana, India.
+
+**Value: "same_country"**
+**Confidence: 0.95** (explicitly stated onsite in specific location)
+**Evidence: "Work model stated as onsite in Hyderabad, India"**
+**Source: "pass1_derived"**
+
+### timezone_focus
+The location is Hyderabad, India, which would be in the Asia/Kolkata timezone.
+
+**Value: "specific_country"**
+**Confidence: 0.9** (specific location in India mentioned)
+**Evidence: "Location restricted to Hyderabad, India"**
+**Source: "pass1_derived"**
+
+### relocation_required
+Since the role is onsite in Hyderabad and no relocation is mentioned, this would be false - you need to already be in Hyderabad.
+
+**Value: false**
+**Confidence: 0.85** (onsite role implies already in location)
+**Evidence: "Onsite role in Hyderabad suggests candidates should already be local"**
+**Source: "inferred"**
+
+## VISA AND AUTHORIZATION
+
+### h1b_friendly
+No visa sponsorship is mentioned in the job posting.
+
+**Value: false**
+**Confidence: 0.8** (no sponsorship mentioned)
+**Evidence: "No mention of H1B or visa sponsorship"**
+**Source: "pass1_derived"**
+
+### opt_cpt_friendly
+No mention of student visas or work authorization requirements.
+
+**Value: false**
+**Confidence: 0.7** (inferred from lack of student visa mentions)
+**Evidence: "No mention of OPT/CPT or student visa support"**
+**Source: "inferred"**
+
+### citizenship_required
+No citizenship or work authorization requirements are mentioned.
+
+**Value: "not_mentioned"**
+**Confidence: 0.8** (no authorization requirements stated)
+**Evidence: "No work authorization or citizenship requirements mentioned"**
+**Source: "pass1_derived"**
+
+## CONTRACT AND COMPENSATION
+
+### w2_vs_1099
+No employment type or contract type is mentioned.
+
+**Value: "not_mentioned"**
+**Confidence: 0.8** (no contract type mentioned)
+**Evidence: "No employment type or contract structure mentioned"**
+**Source: "pass1_derived"**
+
+### benefits_level
+No benefits are mentioned in the job posting.
+
+**Value: "none_mentioned"**
+**Confidence: 0.9** (no benefits listed)
+**Evidence: "No benefits, compensation, or perks mentioned"**
+**Source: "pass1_derived"**
+
+## CAREER DEVELOPMENT
+
+### growth_path_clarity
+No career growth or advancement opportunities are mentioned.
+
+**Value: "not_mentioned"**
+**Confidence: 0.9** (no career development mentioned)
+**Evidence: "No mention of career growth, advancement, or development opportunities"**
+**Source: "pass1_derived"**
+
+### mentorship_signals
+No mentorship or working with senior people is mentioned.
+
+**Value: "not_mentioned"**
+**Confidence: 0.9** (no mentorship signals)
+**Evidence: "No mention of mentorship, senior staff collaboration, or learning opportunities"**
+**Source: "pass1_derived"**
+
+### promotion_path_mentioned
+No promotion or advancement paths are mentioned.
+
+**Value: false**
+**Confidence: 0.9** (no promotion mentions)
+**Evidence: "No mention of promotion, advancement, or career progression"**
+**Source: "pass1_derived"**
+
+### internal_mobility_mentioned
+No internal mobility or role changes are mentioned.
+
+**Value: false**
+**Confidence: 0.9** (no mobility mentions)
+**Evidence: "No mention of internal transfers, lateral moves, or role exploration"**
+**Source: "pass1_derived"**
+
+### career_tracks_available
+No career tracks are mentioned.
+
+**Value: []**
+**Confidence: 0.9** (no career tracks mentioned)
+**Evidence: "No mention of IC track, management track, or other career paths"**
+**Source: "pass1_derived"**
+
+## REQUIREMENTS CLASSIFICATION
+
+### requirement_strictness
+The job has a clear distinction between "Required Technical And Professional Expertise" (must-haves) and "Preferred Technical And Professional Experience" (nice-to-haves), suggesting medium strictness.
+
+**Value: "medium"**
+**Confidence: 0.8** (clear must-have vs nice-to-have distinction)
+**Evidence: "Clear separation between required expertise and preferred experience"**
+**Source: "inferred"**
+
+### scope_definition
+The job description is focused on data engineering with clear responsibilities around data integration, warehousing, and pipelines. It's not vague or multi-role.
+
+**Value: "clear"**
+**Confidence: 0.85** (focused data engineering role)
+**Evidence: "Clear focus on data engineering responsibilities, not vague or multi-role"**
+**Source: "inferred"**
+
+### skill_inflation_detected
+The skills required (Snowflake, Talend, data modeling, SQL, Shell scripting) seem reasonable for a data engineering role. No years of experience are specified, so we can't assess skill inflation based on experience mismatch.
+
+**Value: false**
+**Confidence: 0.7** (reasonable skills for data engineering role)
+**Evidence: "Skills mentioned are appropriate for data engineering role with no unrealistic experience requirements"**
+**Source: "inferred"**
+
+Now let me compile this into the required JSON format.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.6,
+        "evidence": "Data Engineer title without seniority indicator, but advanced technical requirements suggest mid-level rather than entry-level",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title is Data Engineer with core focus on data pipelines, warehousing, and integration",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.75,
+        "evidence": "Emphasis on data ingestion, transformation pipelines, and batch processing alongside real-time",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "No mention of leadership, mentoring, or direct reports - pure IC role",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Mentions 'cloud platforms' generically without specifying AWS, Azure, or GCP",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No cloud providers mentioned beyond generic 'cloud platforms'",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.9,
+        "evidence": "Description states 'both batch and real-time processing'",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No mention of Airflow, Spark, dbt, or other orchestration tools",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.9,
+        "evidence": "Snowflake mentioned as primary data warehouse solution",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.95,
+        "evidence": "Work model stated as onsite in Hyderabad, India",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.9,
+        "evidence": "Location restricted to Hyderabad, India",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Onsite role in Hyderabad suggests candidates should already be local",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "No mention of H1B or visa sponsorship",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.7,
+        "evidence": "No mention of OPT/CPT or student visa support",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No work authorization or citizenship requirements mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No employment type or contract structure mentioned",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.9,
+        "evidence": "No benefits, compensation, or perks mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No mention of career growth, advancement, or development opportunities",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No mention of mentorship, senior staff collaboration, or learning opportunities",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of promotion, advancement, or career progression",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of internal transfers, lateral moves, or role exploration",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No mention of IC track, management track, or other career paths",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.8,
+        "evidence": "Clear separation between required expertise and preferred experience",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Clear focus on data engineering responsibilities, not vague or multi-role",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.7,
+        "evidence": "Skills mentioned are appropriate for data engineering role with no unrealistic experience requirements",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

@@ -1,0 +1,348 @@
+<reasoning>Let me analyze this job posting carefully to infer the job characteristics. I need to go through each field systematically.
+
+First, let me understand what this job is about:
+- Title: Application Developer-Process Management (BPM)
+- Company: IBM
+- Location: Bengaluru East, Karnataka, India
+- This is a BPM (Business Process Management) role, not a traditional data engineering role
+
+Looking at the description, it mentions "As an Data Engineer at IBM" but the actual role is focused on BPM tools like Appian, IBM BPM, Pega, Camunda. This seems to be a BPM developer role, not a data engineering role.
+
+Let me go through each inference category:
+
+## SENIORITY AND ROLE
+
+### seniority_level
+- The job mentions "Minimum of 5+ years of recent experience with Appian software development"
+- Also mentions "5-7 years of experience in BPM"
+- This suggests 5-7 years of experience
+- The title is "Application Developer" which is typically mid-level
+- With 5-7 years experience, this would be "senior" level
+- Confidence: 0.8 (strong inference from experience requirements)
+
+### job_family
+- The role is clearly BPM-focused, not traditional data engineering
+- It's about "business process workflows using BPM tools"
+- The tools mentioned are Appian, IBM BPM, Pega, Camunda
+- This is more of a "process_engineer" or "bpm_developer" role
+- But looking at the allowed values, I need to choose from: "data_engineer" | "analytics_engineer" | "ml_engineer" | "mlops_engineer" | "data_platform_engineer" | "data_architect" | "data_scientist" | "data_analyst" | "bi_engineer" | "research_engineer" | "not_mentioned"
+- This doesn't fit well into any of these categories. 
+
+I'll classify this as "not_mentioned" since the role doesn't align with traditional data engineering categories. The BPM focus requires a specialized approach that doesn't match the standard job family classifications.
+
+### sub_specialty
+- The role involves BPM tools and business process automation
+- Mentions both batch and real-time processing
+- Focuses on workflow automation and integration
+- This would be "process_automation" but that's not in the allowed values
+- Looking at allowed values: "streaming_realtime" | "batch_etl" | "data_warehouse" | "data_lakehouse" | "ml_infra" | "mlops" | "data_governance" | "data_quality" | "data_modeling" | "cloud_migration" | "reverse_etl" | "api_development" | "observability" | "general" | "not_mentioned"
+- The closest would be "api_development" since it mentions API integration
+- Confidence: 0.6 (moderate inference)
+
+### leadership_expectation
+- The role mentions "Collaborate with business analysts, IT teams, and stakeholders"
+- No mention of direct reports or team leadership
+- No mention of mentoring or technical leadership
+- This appears to be a pure IC role
+- Confidence: 0.8 (clear from job description)
+
+## STACK AND CLOUD
+
+### primary_cloud
+- No specific cloud providers mentioned
+- Mentions "enterprise systems (ERP, CRM, etc.)"
+- No AWS, Azure, or GCP mentioned
+- This would be "not_mentioned"
+- Confidence: 0.9 (no cloud mentions)
+
+### secondary_clouds
+- Empty array since no clouds mentioned
+- Confidence: 0.9
+
+### processing_paradigm
+- Mentions "both batch and real-time processing"
+- This clearly indicates "hybrid"
+- Confidence: 0.9 (explicitly mentioned)
+
+### orchestrator_category
+- No specific orchestration tools mentioned
+- No Airflow, Spark, dbt, etc. mentioned
+- This would be "not_mentioned"
+- Confidence: 0.9
+
+### storage_layer
+- Mentions "database concepts" and "Oracle SQL, Server MySQL"
+- No specific data warehouse or lake mentioned
+- This would be "not_mentioned"
+- Confidence: 0.8
+
+## GEO AND WORK MODEL
+
+### remote_restriction
+- Location is "Bengaluru East, Karnataka, India"
+- Work model is "onsite"
+- This suggests "same_region" (specific city required)
+- Confidence: 0.8
+
+### timezone_focus
+- Location is India, so this would be "specific_country" (India)
+- Confidence: 0.9
+
+### relocation_required
+- Work model is "onsite" in specific location
+- This suggests relocation might be required if not already in Bengaluru
+- But the wording suggests they want someone already in that location
+- This is ambiguous, but likely "false" since it's a specific location requirement
+- Confidence: 0.6
+
+## VISA AND AUTHORIZATION
+
+### h1b_friendly
+- No visa sponsorship mentioned
+- This is in India, so H1B wouldn't apply anyway
+- This would be "false" (no sponsorship)
+- Confidence: 0.8
+
+### opt_cpt_friendly
+- This is an India-based role, so OPT/CPT wouldn't apply
+- This would be "false"
+- Confidence: 0.9
+
+### citizenship_required
+- No citizenship requirements mentioned
+- This would be "work_auth_only" (standard for most countries)
+- Confidence: 0.7
+
+## CONTRACT AND COMPENSATION
+
+### w2_vs_1099
+- Employment type is "full_time"
+- This suggests "w2" (employee)
+- Confidence: 0.8
+
+### benefits_level
+- No benefits mentioned in the job posting
+- This would be "none_mentioned"
+- Confidence: 0.9
+
+## CAREER DEVELOPMENT
+
+### growth_path_clarity
+- No career growth or advancement mentioned
+- This would be "not_mentioned"
+- Confidence: 0.9
+
+### mentorship_signals
+- No mentorship mentioned
+- This would be "not_mentioned"
+- Confidence: 0.9
+
+### promotion_path_mentioned
+- No promotion or advancement mentioned
+- This would be "false"
+- Confidence: 0.9
+
+### internal_mobility_mentioned
+- No internal mobility mentioned
+- This would be "false"
+- Confidence: 0.9
+
+### career_tracks_available
+- No career tracks mentioned
+- Empty array
+- Confidence: 0.9
+
+## REQUIREMENTS CLASSIFICATION
+
+### requirement_strictness
+- Has clear "Minimum of 5+ years" requirements
+- Lists specific technical skills as requirements
+- This suggests "high" strictness
+- Confidence: 0.8
+
+### scope_definition
+- The role is clearly defined as BPM developer
+- Focused responsibilities around BPM tools and workflows
+- This would be "clear"
+- Confidence: 0.8
+
+### skill_inflation_detected
+- 5-7 years experience for BPM role seems reasonable
+- Skills mentioned are appropriate for the role
+- No obvious inflation
+- This would be "false"
+- Confidence: 0.8
+
+Let me compile this into the JSON format.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.80,
+        "evidence": "5-7 years of BPM experience required, which aligns with senior level expectations",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "This is a BPM (Business Process Management) developer role, not a traditional data engineering role. The job focuses on process automation tools like Appian, IBM BPM, Pega, and Camunda rather than data engineering responsibilities.",
+        "source": "combined"
+      },
+      "sub_specialty": {
+        "value": "api_development",
+        "confidence": 0.60,
+        "evidence": "Role involves integrating BPM solutions with enterprise systems via APIs and web services, with ERP and CRM integration requirements",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.80,
+        "evidence": "Role focuses on collaboration with teams and stakeholders but no mention of direct reports, mentoring, or leadership responsibilities",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific cloud providers (AWS, Azure, GCP) mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No cloud providers mentioned at all",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.90,
+        "evidence": "Job description explicitly mentions 'both batch and real-time processing' capabilities",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific orchestration tools (Airflow, Spark, dbt, etc.) mentioned in requirements",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "Mentions database concepts and SQL databases (Oracle, MySQL) but no specific data warehouse or lake technologies",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.80,
+        "evidence": "Onsite work model required in Bengaluru East, Karnataka, India - specific regional restriction",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.90,
+        "evidence": "Location specified as Bengaluru East, Karnataka, India - single country requirement",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.60,
+        "evidence": "Onsite requirement suggests need to already be in Bengaluru area rather than relocation package",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned and role is India-based where H1B doesn't apply",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "India-based role where OPT/CPT student visa programs don't apply",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.70,
+        "evidence": "No specific citizenship requirements mentioned, standard work authorization implied",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.80,
+        "evidence": "Full-time employment type stated, indicating employee (W2) rather than contractor arrangement",
+        "source": "combined"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits, compensation, or perks mentioned in job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No career growth, advancement opportunities, or development paths mentioned",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mentorship programs or working with senior staff mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion, advancement, or career progression mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No internal transfers, role changes, or mobility opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career tracks, paths, or advancement opportunities mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "Clear minimum experience requirements (5+ years), specific technical skills listed as must-haves, and Master's degree required",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Well-defined BPM developer role with specific tools (Appian, IBM BPM, Pega, Camunda) and clear responsibilities around process automation",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "5-7 years experience requirement for BPM role with relevant technical skills is reasonable and appropriate for seniority level",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

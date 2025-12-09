@@ -1,0 +1,161 @@
+<reasoning>Let me carefully analyze this job posting to extract the required information according to the rules.
+
+First, let me identify the key sections and information:
+
+1. **Title**: Data Engineer-Data Platforms-Azure
+2. **Company**: IBM
+3. **Location**: Kochi, Kerala, India
+
+Now let me go through each section systematically:
+
+**Compensation**: No salary information is mentioned in the job posting, so all compensation fields should be null.
+
+**Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. No security clearance mentioned. So this should be "not_mentioned" for visa_sponsorship_stated and "not_mentioned" for security_clearance_stated.
+
+**Work Model**: The location is "Kochi, Kerala, India" which suggests this is an onsite position. No mention of remote or hybrid work. Employment type is not explicitly stated, but given it's a full-time role at IBM, I should check if "full_time" is mentioned. Looking at the posting, it doesn't explicitly say "full-time" but this appears to be a standard employment role. However, the rules state I should only extract what's explicitly stated, so employment_type_stated should be "not_mentioned".
+
+**Contract Details**: No mention of contract type, duration, etc. This should be "not_mentioned" for contract_type.
+
+**Contractor Rates**: Not applicable as this doesn't appear to be a contractor role.
+
+**Skills Classification**: Let me analyze the skills mentioned:
+
+**Must-have hard skills** (from "Mandatory Skills" section):
+- Azure Databricks
+- Python/PySpark  
+- SQL
+- Github
+- Azure Devops
+- Azure Blob
+- Java
+- Python
+- Scala
+- ETL tools
+- data integration
+- federation tools
+- Linux
+- Spark
+- Hadoop
+
+**Nice-to-have hard skills**: None explicitly mentioned as nice-to-have. The "Preferred Technical And Professional Experience" section mentions soft skills but no additional hard skills.
+
+**Must-have soft skills**: From the preferred section:
+- "excellent verbal and written communication skills" (strong qualifier "excellent")
+- "Ability to communicate with internal and external clients" (strong qualifier "ability to")
+- "Ability to communicate results to technical and non-technical audiences" (strong qualifier "ability to")
+
+
+I'll focus on the soft skills and experience requirements. The role demands strong communication abilities, with an emphasis on explaining technical concepts to diverse audiences. The position requires 6-7 years of total experience, with 4-5 years specifically in a relevant field. No specific educational background is mandated, and there are no explicit mentions of advanced AI or machine learning technologies.
+
+The geographic context is centered in India, with no apparent restrictions on work location. While benefits aren't detailed, the role appears to be a standard full-time position at IBM, likely offering conventional employment packages.
+
+The team composition involves collaboration across multiple disciplines, including scientists, engineers, consultants, and database administrators, suggesting a cross-functional work environment.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Kochi, Kerala, India",
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Azure Databricks",
+        "Python",
+        "PySpark",
+        "SQL",
+        "Github",
+        "Azure Devops",
+        "Azure Blob",
+        "Java",
+        "Scala",
+        "ETL tools",
+        "data integration",
+        "federation tools",
+        "Linux",
+        "Spark",
+        "Hadoop"
+      ],
+      "nice_to_have_hard_skills": [],
+      "must_have_soft_skills": [
+        "Communication",
+        "Team Collaboration"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 6,
+      "years_experience_max": 7,
+      "years_experience_text": "Total Exp-6-7 Yrs (Relevant-4-5 Yrs)",
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Work in an Agile, collaborative environment, partnering with other scientists, engineers, consultants and database administrators of all backgrounds and disciplines",
+      "company_description_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 49
+  }
+}
+```

@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.85,
+        "evidence": "Minimum 3 years experience required, title is 'Data Engineer' without senior/staff designation, education requirement is bachelor's level",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title is 'Data Engineer', responsibilities include ETL, reporting, and data integration",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.80,
+        "evidence": "Focus on BI/DW projects, reporting, visualization, and ETL tools like DataStage and Informatica",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.90,
+        "evidence": "No mention of team leadership, mentoring, or people management responsibilities",
+        "source": "pass1_derived"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.85,
+        "evidence": "AWS, Google Cloud, and Azure all mentioned as preferred experience",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": ["aws", "azure", "gcp"],
+        "confidence": 0.85,
+        "evidence": "All three major clouds listed as preferred experience, no primary specified",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.80,
+        "evidence": "Focus on BI/DW projects, ETL tools, and reporting which are typically batch-oriented",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.75,
+        "evidence": "Azure Data Factory mentioned as preferred tool, which is cloud-native orchestration",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.70,
+        "evidence": "BI/DW focus suggests data warehouse environment, Cognos reporting tool typically connects to warehouses",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.90,
+        "evidence": "Location specified as Pune, Maharashtra, India with onsite work model",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.95,
+        "evidence": "Location restricted to India (Pune, Maharashtra)",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.85,
+        "evidence": "Onsite work model in Pune, India implies relocation may be required for non-residents",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned, location is India, not US",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of student visa support, location is India, not US",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.85,
+        "evidence": "Location in India implies authorization to work in India is required, no citizenship requirement stated",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time permanent position in India typically implies W2 equivalent employment",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "No explicit career path mentioned, only general 'continuous improvement' reference",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions working with business and technical team members, suggesting collaboration with experienced colleagues",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of promotions or advancement opportunities",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers or role changes",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.50,
+        "evidence": "No career tracks mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Clear must-have skills (Cognos, UNIX, BI/DW) and nice-to-have skills (cloud platforms, ETL tools)",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused on BI reporting, ETL, and data integration with specific tool requirements",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "3 years experience requirement is reasonable for mid-level BI/data engineering role",
+        "source": "inferred"
+      }
+    }
+  }
+}

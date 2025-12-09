@@ -1,0 +1,248 @@
+<reasoning>Let me analyze this job posting and Pass 1 extraction results to infer the job characteristics according to the rules provided.
+
+First, let me understand what we have:
+
+**Original Job Posting Analysis:**
+- Title: Data Engineer
+- Company: Wassching
+- Location: Amsterdam, North Holland, Netherlands
+- This is a Process Intelligence role focused on data engineering for process mining
+- 3-5+ years experience required
+- Must have: SQL, ETL/ELT, data modeling, Databricks, Snowflake, ERP systems, SAP, Python, process mining platforms
+- Nice to have: PQL, Kafka, streaming technologies, ITSM systems, ServiceNow, legacy environments, APIs, event-driven connections
+- Hybrid/remote flexibility mentioned
+- Full-time permanent position
+- Bachelor's degree required
+- No visa sponsorship mentioned
+- Benefits: competitive compensation, development opportunities, ownership, modern workplace, hybrid/remote flexibility
+
+**Pass 1 Extraction Results:**
+- ext_work_model_stated: "hybrid"
+- ext_employment_type_stated: "full_time"
+- ext_contract_type: "permanent"
+- ext_visa_sponsorship_stated: "not_mentioned"
+- ext_years_experience_min: 3.0
+- ext_years_experience_max: null
+- ext_years_experience_text: "3–5+ years"
+- ext_education_level: "BACHELORS"
+- ext_benefits_mentioned: ["Competitive compensation", "development opportunities", "ownership from day one", "modern workplace", "hybrid/remote flexibility", "office dog"]
+
+Now let me make inferences according to the rules:
+
+**SENIORITY INFERENCE:**
+- Title: "Data Engineer" (no "Senior" in title)
+- Experience: 3-5+ years
+- This suggests mid-level to senior level
+- Given 3-5+ years and the complexity of requirements (SAP, process mining, multiple platforms), this seems like a senior role
+- Confidence: 0.7-0.8 (title doesn't say "Senior" but experience and complexity suggest senior)
+
+
+- Job family clearly points to data engineering as the primary role
+- Sub-specialty centers on process mining and data transformation
+- Leadership expectations lean towards technical individual contributor role
+
+**STACK AND CLOUD ANALYSIS:**
+- Cloud infrastructure remains ambiguous
+- Processing approach appears hybrid, combining batch and streaming technologies
+- Orchestration strategy not explicitly defined
+- Storage solution suggests a mixed approach with warehouse and lakehouse elements
+
+**GEOGRAPHIC AND WORK MODEL INSIGHTS:**
+- Remote work flexibility suggests global talent accessibility
+- Timezone considerations appear open-ended
+- No immediate relocation constraints identified
+
+**VISA AND AUTHORIZATION CONSIDERATIONS:**
+- Visa sponsorship status remains unclear
+- Work authorization requirements need further clarification
+- Citizenship requirements not explicitly defined
+
+**CONTRACT AND COMPENSATION STRUCTURE:**
+- Employment type indicates full-time commitment
+- Benefits package appears comprehensive, including competitive compensation and development opportunities
+- Equity participation suggests potential long-term engagement
+
+**CAREER DEVELOPMENT TRAJECTORY:**
+- Growth opportunities implied but not precisely mapped
+- Mentorship potential exists through collaborative team environment
+- Promotion pathways not explicitly outlined
+- Internal mobility options remain undefined
+- Career progression tracks appear flexible, potentially including individual contributor and specialist paths
+
+**REQUIREMENTS ASSESSMENT:**
+- Requirements demonstrate balanced approach with clear must-haves and preferred qualifications
+- Role scope maintains focused data engineering perspective
+- Skill expectations align appropriately with seniority level
+- No significant skill inflation detected in current role description
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.75,
+        "evidence": "3-5+ years experience required with complex technical requirements including SAP, process mining platforms, and multiple data platforms suggests senior level despite no 'Senior' in title",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Data Engineer' and core responsibilities focus on data pipelines, ETL/ELT, and data modeling",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "process_mining",
+        "confidence": 0.85,
+        "evidence": "Role specifically focused on Process Intelligence with process mining platforms, PQL, and event log enrichment mentioned as core requirements",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.80,
+        "evidence": "No mention of direct reports, team leadership, or management responsibilities; focused on technical execution and platform ownership",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific cloud providers mentioned; only data platforms like Databricks and Snowflake which are cloud-agnostic",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No cloud providers mentioned at all",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.75,
+        "evidence": "Mentions both batch ETL/ELT work and streaming technologies (Kafka) as nice-to-have, suggesting both paradigms are relevant",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific orchestration tools mentioned in the job posting",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.80,
+        "evidence": "Databricks and Snowflake mentioned as major data platforms, both are primarily data warehouse technologies",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.75,
+        "evidence": "Hybrid model with Amsterdam HQ mentioned suggests preference for European timezone proximity, though flexibility is offered",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "europe",
+        "confidence": 0.85,
+        "evidence": "Amsterdam headquarters location and international team mentioned suggest European timezone focus",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Hybrid/remote flexibility mentioned and no relocation requirements stated",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "No visa sponsorship mentioned and location is Netherlands, suggesting local work authorization preferred",
+        "source": "inferred"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "No mention of student visa support and European location suggests work authorization requirements",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.75,
+        "evidence": "No citizenship requirements mentioned, suggesting work authorization in Netherlands/Europe is sufficient",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.85,
+        "evidence": "Full-time permanent position with benefits mentioned suggests W2 employment structure",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "standard",
+        "confidence": 0.75,
+        "evidence": "Competitive compensation, development opportunities, and ownership mentioned but no premium benefits like unlimited PTO or equity explicitly stated",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions 'development opportunities' and 'ownership from day one' but no specific career tracks or promotion paths detailed",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.65,
+        "evidence": "International team mentioned with opportunities to 'grow, innovate' suggests collaborative learning environment",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No explicit promotion or advancement paths mentioned in the job description",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of internal transfers, role changes, or mobility opportunities",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.60,
+        "evidence": "Focus on technical expertise and platform ownership suggests IC track, but no management or specialist tracks explicitly mentioned",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.80,
+        "evidence": "Clear distinction between must-haves (SQL, ETL, SAP, Python) and nice-to-haves (PQL, Kafka) with balanced language",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused data engineering role for process intelligence with well-defined responsibilities and technical requirements",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Skills required (3-5+ years, SQL, Python, SAP experience) are reasonable and appropriate for senior data engineer level",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

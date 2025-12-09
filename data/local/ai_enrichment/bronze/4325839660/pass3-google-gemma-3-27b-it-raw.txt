@@ -1,0 +1,229 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "Mentions modern tools (Python, MySQL, Tableau, Power Platform) and data governance, but lacks details on CI/CD or advanced monitoring.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Matches score of 3.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.70,
+        "evidence": "Mentions Python, MySQL, Tableau, Power Platform, indicating some modern tooling.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.4,
+        "confidence": 0.85,
+        "evidence": "Role requires a blend of data engineering, web development, and SharePoint customization, but these are related skills.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.6,
+        "confidence": 0.78,
+        "evidence": "Immediate start and 'ability to adhere to strict delivery timelines' suggest potential for pressure.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Responsibilities are well-defined, focusing on data pipelines, visualization, and SharePoint integration.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.45,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to potential for time pressure and broad skillset required.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Job description does not specify reporting structure.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No managerial title mentioned.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.70,
+        "evidence": "Mentions expanding team, but no specific growth numbers.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.50,
+        "evidence": "No specific team size or composition details provided.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No reporting structure mentioned.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Focus on SharePoint and data tasks suggests a centralized data team.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.65,
+        "confidence": 0.75,
+        "evidence": "Strict delivery timelines are a negative signal, but no explicit mention of long hours.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.70,
+        "confidence": 0.70,
+        "evidence": "No specific learning budget or mentorship programs mentioned.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.60,
+        "confidence": 0.70,
+        "evidence": "Modern tools are used, but no mention of code review or CI/CD.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "No signals of strong technical culture (open source, blogs, etc.).",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No specific development practices mentioned.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.75,
+        "evidence": "Focus on maintenance and delivery rather than innovation.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt or refactoring.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of AI or ML.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.85,
+        "evidence": "Mentions 'ability to adhere to strict delivery timelines' and 'immediate start'.",
+        "source": "inferred"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Location in Bengaluru suggests moderate competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "growth_stage",
+        "confidence": 0.70,
+        "evidence": "Over 25 years as an engineering services provider, expanding team.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "Expanding team, but no indication of rapid growth.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.60,
+        "evidence": "No specific team size mentioned, but company is established.",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No funding stage information provided.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.70,
+        "evidence": "Expanding team suggests a need for additional headcount.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["well_defined_role", "modern_tech_stack", "career_growth_clear"],
+    "strength_details": [
+      "Clear responsibilities focused on data pipelines and SharePoint.",
+      "Utilizes modern technologies like Python, MySQL, and Tableau.",
+      "Opportunity to contribute to a growing team."
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship"],
+    "concern_details": [
+      "Strict delivery timelines may lead to pressure and potential overtime.",
+      "No visa sponsorship mentioned, limiting eligibility."
+    ],
+    "best_fit_categories": ["mid_level_engineers", "data_generalists"],
+    "best_fit_details": [
+      "Mid-level data engineers with 3-6 years of experience.",
+      "Engineers comfortable with a broad range of technologies and responsibilities."
+    ],
+    "probe_categories": ["reporting_structure", "work_hour_expectations", "team_size_composition"],
+    "probe_details": [
+      "Clarify reporting structure and manager expectations.",
+      "Understand typical work hours and potential for overtime.",
+      "Inquire about team size and composition."
+    ],
+    "leverage_categories": [],
+    "leverage_details": [],
+    "overall_assessment": "This is a solid opportunity for a mid-level data engineer seeking a well-defined role with modern technologies. The main concerns are potential for time pressure and lack of visa sponsorship. The role requires a broad skillset and a willingness to work with both data and SharePoint.",
+    "recommendation_score": 0.68,
+    "recommendation_confidence": 0.80
+  }
+}
+```

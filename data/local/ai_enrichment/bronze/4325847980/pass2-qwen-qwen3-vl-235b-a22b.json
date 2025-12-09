@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 16:03:33",
+    "job_posting_id": "4325847980",
+    "job_title": "Data Engineer-Data Integration",
+    "company_name": "IBM",
+    "job_location": "Hyderabad, Telangana, India",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.75,
+          "evidence": "No explicit years mentioned, but Master's degree preferred and responsibilities suggest mid-level (designing pipelines, working with data scientists, not leading teams)",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title is 'Data Engineer', core responsibilities focus on data pipelines, ETL, and data integration",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.85,
+          "evidence": "Explicitly mentions 'batch & stream processing' but emphasizes Informatica PowerCenter (batch ETL tool) and data warehousing",
+          "source": "combined"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.9,
+          "evidence": "No mention of team leadership, mentoring, or people management; responsibilities focus on individual technical execution",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "azure",
+          "confidence": 0.9,
+          "evidence": "MS-Azure Cloud listed as preferred experience, and 'Cloud' is a must-have skill with Azure being the only specific cloud mentioned",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No other cloud platforms mentioned in must-have or nice-to-have skills",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.85,
+          "evidence": "Explicitly states 'batch & stream processing' as part of responsibilities",
+          "source": "pass1_derived"
+        },
+        "orchestrator_category": {
+          "value": "cloud_native",
+          "confidence": 0.8,
+          "evidence": "Informatica PowerCenter (cloud ETL/ELT tools) mentioned as primary tool, which falls under cloud-native orchestration",
+          "source": "inferred"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.85,
+          "evidence": "Emphasis on 'Data warehousing' as a must-have skill and 'Power BI' (typically warehouse-connected), no lake/lakehouse technologies mentioned",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.9,
+          "evidence": "Location restricted to Hyderabad, Telangana, India; onsite work model stated",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.95,
+          "evidence": "Only India (IN) allowed per geo restriction, no other timezones mentioned",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.85,
+          "evidence": "Onsite work model + specific location (Hyderabad) + must be resident implies relocation required if not already there",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No visa sponsorship mentioned; location is India, not US, so H1B irrelevant",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "Location is India; OPT/CPT are US-specific student visas, not applicable",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.85,
+          "evidence": "Must be resident in India (per geo restriction), implying local work authorization required, no citizenship requirement stated",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Full-time permanent employment stated; typical for W2 in India for corporate roles",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits listed in extraction; benefits_mentioned array is empty",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.65,
+          "evidence": "Mentions 'collaborating with diverse teams' and 'delivering innovation' but no specific career tracks or promotion paths",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Mentions working with 'scientists, engineers, consultants and database administrators' — implies learning from experienced peers",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of promotions, advancement, or career progression in text",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal transfers, role changes, or mobility options",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No career tracks (IC, management, etc.) mentioned in job description or requirements",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear must-have skills (12 items) vs. nice-to-have (1 item), suggesting moderate strictness",
+          "source": "pass1_derived"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused on data engineering, ETL, pipelines, and integration — no hybrid roles or ambiguous duties",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Skills required (Informatica, SQL, Python, cloud) are reasonable for a mid-level data engineer; no unrealistic combinations or senior-level demands",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7548,
+    "input_tokens": 5917,
+    "output_tokens": 1631,
+    "cost": 0.009179
+  }
+}

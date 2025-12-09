@@ -1,0 +1,215 @@
+<reasoning>I need to carefully extract information from this job posting for a Data Engineer position at Wassching in Amsterdam. Let me go through each section systematically.
+
+First, let me identify the key information:
+
+**Title**: Data Engineer
+**Company**: Wassching
+**Location**: Amsterdam, North Holland, Netherlands
+
+Now let me go through each section of the JSON structure:
+
+1. **Compensation**: 
+   - The posting mentions "Competitive compensation" but no specific salary figures are disclosed
+   - So salary_disclosed = false, all salary fields = null
+
+2. **Work Authorization**:
+   - No mention of visa sponsorship, work authorization requirements, or citizenship restrictions
+   - So visa_sponsorship_stated = "not_mentioned", work_auth_text = null, citizenship_text = null, security_clearance_stated = "not_mentioned"
+
+3. **Work Model**:
+   - Location: Amsterdam, North Holland, Netherlands
+   - Mentions "Hybrid/remote flexibility depending on the project"
+   - This is a full-time position (not explicitly stated as contract)
+   - So work_model_stated = "hybrid", location_restriction_text = null, employment_type_stated = "full_time"
+
+4. **Contract Details**:
+   - This appears to be a permanent full-time position
+   - No mention of contract duration, extension, conversion, start date, or probation
+   - So contract_type = "permanent", all other fields = null
+
+5. **Contractor Rates**:
+   - This is a full-time employee position, not contractor
+   - So pay_type = "not_mentioned", all rate fields = null
+
+6. **Skills Classified**:
+   Let me analyze the skills mentioned:
+
+   **Must-haves** (strong qualifiers):
+   - "3–5+ years in data engineering, data consulting, or BI engineering" → years_experience_min: 3, years_experience_max: null, years_experience_text: "3–5+ years"
+   - "Deep mastery of SQL" → must_have_hard_skills: ["SQL"]
+   - "Strong ETL/ELT and data modeling expertise" → must_have_hard_skills: ["ETL/ELT", "data modeling"]
+   - "Hands-on experience with major data platforms (e.g., Databricks, Snowflake)" → must_have_hard_skills: ["Databricks", "Snowflake"]
+   - "Experience extracting data from complex ERP systems (preferably SAP)" → must_have_hard_skills: ["ERP systems", "SAP"]
+   - "Solid Python skills for transformation and integration" → must_have_hard_skills: ["Python"]
+   - "Experience with process mining platforms" → must_have_hard_skills: ["process mining platforms"]
+   - "A relevant educational background such as a bachelor's degree in Computer Science, Data Engineering, Information Systems, or a related technical field" → education_level: "BACHELORS", education_area: "Computer Science", education_requirement: "required", education_text_raw: "bachelor's degree in Computer Science, Data Engineering, Information Systems, or a related technical field"
+
+   **Nice-to-haves** (weak qualifiers):
+   - "PQL (Process Query Language)" → nice_to_have_hard_skills: ["PQL"]
+   - "Kafka or other streaming technologies" → nice_to_have_hard_skills: ["Kafka", "streaming technologies"]
+   - "Knowledge of ITSM systems (e.g., ServiceNow) or legacy environments" → nice_to_have_hard_skills: ["ITSM systems", "ServiceNow", "legacy environments"]
+   - "Experience building integrations between systems or platforms (APIs, event-driven connections, etc)" → nice_to_have_hard_skills: ["APIs", "event-driven connections"]
+
+   **Soft Skills**:
+   - "A pragmatic engineer who thinks in business outcomes, not technical elegance" → must_have_soft_skills: ["Problem Solving"]
+   - "Curious, persistent, and energized by messy, undocumented systems" → must_have_soft_skills: ["Continuous Learning"]
+   - "A clear communicator who's comfortable with stakeholders" → must_have_soft_skills: ["Communication"]
+   - "Independent, proactive, and unafraid to challenge assumptions" → must_have_soft_skills: ["Initiative"]
+   - "Someone who builds solutions that last, not quick fixes" → must_have_soft_skills: ["Work Ethic"]
+
+   **Other fields**:
+   - certifications_mentioned: []
+   - llm_genai_mentioned: false (no mention of LLMs, GenAI, etc.)
+   - feature_store_mentioned: false (no mention of feature stores)
+
+7. **Geographic Restrictions**:
+   - Location is Amsterdam, Netherlands
+   - No specific geographic restrictions mentioned
+   - So geo_restriction_type = "not_mentioned", all other fields = null
+
+8. **Benefits Structured**:
+   - "Competitive compensation" → benefits_mentioned: ["Competitive compensation"]
+   - "plenty of development opportunities" → benefits_mentioned: ["development opportunities"]
+   - "ownership from day one" → benefits_mentioned: ["ownership"]
+   - "modern and cozy water-front workplace" → benefits_mentioned: ["modern workplace"]
+   - "Hybrid/remote flexibility" → benefits_mentioned: ["hybrid/remote flexibility"]
+   - "much love from our office dog James" → benefits_mentioned: ["office dog"]
+   - equity_mentioned: false (no mention of equity/stock options)
+   - learning_budget_mentioned: false (development opportunities mentioned but no specific budget)
+   - conference_budget_mentioned: false
+   - hardware_choice_mentioned: false
+   - pto_policy: "not_mentioned" (no PTO policy mentioned)
+
+9. **Context**:
+   - "A international, smart and ambitious team to work, grow, innovate, and have lots of fun with" → team_info_text: "A international, smart and ambitious team to work, grow, innovate, and have lots of fun with"
+   - Company description is embedded in the job description, but I should extract the main company description
+   - "At Wassching, we help clients uncover the true drivers of operational complexity—the 'invisible handbrake' quietly draining 20–30% of their revenue" → company_description_text: "At Wassching, we help clients uncover the true drivers of operational complexity—the 'invisible handbrake' quietly draining 20–30% of their revenue"
+
+Let me count the fields and check completeness:
+- Total fields in the schema: Let me count... compensation (10), work_authorization (4), work_model (3), contract_details (7), contractor_rates (6), skills_classified (15), geographic_restrictions (5), benefits_structured (6), context (2) = 58 fields
+- Fields found: Most are found, some are null
+- Fields null: salary fields, work auth fields, some contract details, contractor rates, some geographic restrictions, some benefits
+
+This looks comprehensive. Let me format the JSON properly.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "hybrid",
+      "location_restriction_text": null,
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "SQL",
+        "ETL/ELT",
+        "data modeling",
+        "Databricks",
+        "Snowflake",
+        "ERP systems",
+        "SAP",
+        "Python",
+        "process mining platforms"
+      ],
+      "nice_to_have_hard_skills": [
+        "PQL",
+        "Kafka",
+        "streaming technologies",
+        "ITSM systems",
+        "ServiceNow",
+        "legacy environments",
+        "APIs",
+        "event-driven connections"
+      ],
+      "must_have_soft_skills": [
+        "Problem Solving",
+        "Continuous Learning",
+        "Communication",
+        "Initiative",
+        "Work Ethic"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 3,
+      "years_experience_max": null,
+      "years_experience_text": "3–5+ years",
+      "education_level": "BACHELORS",
+      "education_area": "Computer Science",
+      "education_requirement": "required",
+      "education_text_raw": "bachelor's degree in Computer Science, Data Engineering, Information Systems, or a related technical field",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [
+        "Competitive compensation",
+        "development opportunities",
+        "ownership from day one",
+        "modern workplace",
+        "hybrid/remote flexibility",
+        "office dog"
+      ],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "A international, smart and ambitious team to work, grow, innovate, and have lots of fun with",
+      "company_description_text": "At Wassching, we help clients uncover the true drivers of operational complexity—the 'invisible handbrake' quietly draining 20–30% of their revenue"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 58,
+    "fields_null": 25
+  }
+}
+```

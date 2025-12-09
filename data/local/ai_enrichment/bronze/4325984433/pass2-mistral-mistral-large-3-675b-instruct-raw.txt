@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit seniority level mentioned in title or years of experience. Responsibilities suggest a role that could be mid to senior, but confidence is below threshold due to lack of clear signals.",
+        "source": "pass1_derived"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is 'Data Engineer-Data Warehouse' and core responsibilities focus on data pipelines, ETL, and data transformation.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.95,
+        "evidence": "Title explicitly mentions 'Data Warehouse' and required skills include DBT and Snowflake, which are warehouse-focused tools.",
+        "source": "combined"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.70,
+        "evidence": "Role involves collaborating with diverse teams to decide data management systems and identifying crucial data, suggesting technical leadership without direct people management.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit cloud providers or services mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No secondary clouds mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.80,
+        "evidence": "Job posting mentions both 'batch and real-time processing' and 'ETL tools' for scheduled data preparation.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit orchestrator tools mentioned beyond generic ETL references (DataStage is not clearly tied to orchestration).",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.85,
+        "evidence": "Snowflake (warehouse) and Hadoop (lake) are both mentioned as required or preferred tools.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.85,
+        "evidence": "Location is explicitly stated as 'Kochi, Kerala, India', implying a regional restriction.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No timezone requirements or team distribution details mentioned.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Job posting specifies a location but does not mention relocation requirements or packages.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit mention of H1B sponsorship or visa-related details.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No signals about OPT/CPT support, and location in India suggests work authorization is likely required without flexibility for student visas.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No citizenship or work authorization requirements explicitly stated.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Employment type is full-time but contract specifics (W2, C2C, 1099) are not mentioned.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits are mentioned in the Pass 1 extraction results.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.65,
+        "evidence": "Mentions contributing to innovation and adoption of new technology, which suggests growth opportunities but lacks specific career tracks.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Collaborating closely with diverse teams including senior engineers and consultants suggests mentorship opportunities.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal mobility or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.60,
+        "evidence": "Role emphasizes deep technical and industry expertise, suggesting an individual contributor track, but no explicit mention of other tracks.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.75,
+        "evidence": "Pass 1 extraction shows a clear distinction with multiple 'must have' hard skills and only a few 'preferred' skills.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Job description is focused on data engineering tasks with specific responsibilities and tools.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": "not_mentioned",
+        "confidence": 0.60,
+        "evidence": "Required skills include a mix of programming languages and tools typical for data engineering, but no explicit years of experience are stated to validate strict skill inflation.",
+        "source": "pass1_derived"
+      }
+    }
+  }
+}
+```

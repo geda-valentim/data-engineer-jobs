@@ -14,26 +14,87 @@ from typing import Optional, List, Dict, Any
 
 def get_job_id(job: Dict[str, Any]) -> str:
     """Get job ID for file naming, generating hash if needed."""
+    import pandas as pd
+    import numpy as np
+
     job_id = job.get('job_posting_id', '')
-    if not job_id:
+
+    # Handle pandas NaN/None values for job_id
+    if pd.isna(job_id) or not job_id:
         # If no ID, hash the job content
-        content = json.dumps(job, sort_keys=True)
+        # Convert pandas NaN/NaT to None for JSON serialization
+
+        def sanitize_value(v):
+            """Convert pandas NaN/NaT to None for JSON serialization."""
+            # Handle collections first (before checking pd.isna which fails on arrays)
+            if isinstance(v, dict):
+                return {k: sanitize_value(val) for k, val in v.items()}
+            elif isinstance(v, (list, tuple)):
+                return [sanitize_value(item) for item in v]
+            elif isinstance(v, np.ndarray):
+                return [sanitize_value(item) for item in v.tolist()]
+            # Handle scalar values
+            elif isinstance(v, (np.integer, np.floating)):
+                return v.item()
+            # Check for NaN/NaT (only works on scalars)
+            try:
+                if pd.isna(v):
+                    return None
+            except (ValueError, TypeError):
+                # pd.isna() failed, return as-is
+                pass
+            return v
+
+        sanitized_job = {k: sanitize_value(v) for k, v in job.items()}
+        content = json.dumps(sanitized_job, sort_keys=True, default=str)
         job_id = hashlib.md5(content.encode()).hexdigest()
     # Clean job_id to be filesystem-safe
-    return job_id.replace('/', '_').replace('\\', '_')
+    return str(job_id).replace('/', '_').replace('\\', '_')
 
 
-def get_cache_dir() -> Path:
-    """Get cache directory path, creating it if needed."""
-    cache_dir = Path(__file__).parent.parent.parent / "data" / "local"
+def get_cache_dir(layer: str = "bronze") -> Path:
+    """
+    Get cache directory path for AI enrichment following Medallion Architecture.
+
+    Args:
+        layer: Data layer (bronze/silver/gold). Default: bronze
+
+    Returns:
+        Path to cache directory for the specified layer
+
+    Structure:
+        data/local/ai_enrichment/
+        ├── bronze/           # JSON raw results from LLMs
+        │   └── {job_id}/
+        │       ├── pass1-{model}.json
+        │       ├── pass2-{model}.json
+        │       └── pass3-{model}.json
+        ├── silver/           # Parquet with Delta Lake (future)
+        │   └── delta/
+        │       └── enriched_jobs/
+        └── gold/             # Aggregated analysis (future)
+            └── delta/
+                └── model_comparisons/
+    """
+    base_dir = Path(__file__).parent.parent.parent / "data" / "local" / "ai_enrichment"
+
+    if layer == "bronze":
+        cache_dir = base_dir / "bronze"
+    elif layer == "silver":
+        cache_dir = base_dir / "silver"
+    elif layer == "gold":
+        cache_dir = base_dir / "gold"
+    else:
+        raise ValueError(f"Invalid layer: {layer}. Must be 'bronze', 'silver', or 'gold'")
+
     cache_dir.mkdir(parents=True, exist_ok=True)
     return cache_dir
 
 
 def load_from_cache(job: Dict[str, Any], model_id: str, pass_name: str = "pass1") -> Optional[Dict[str, Any]]:
     """
-    Load pass result from cache if available.
-    Cache path: data/local/{job_id}/{pass}-{model}.json
+    Load pass result from cache if available (Bronze layer - JSON).
+    Cache path: data/local/ai_enrichment/bronze/{job_id}/{pass}-{model}.json
 
     Args:
         job: Job dictionary
@@ -45,7 +106,7 @@ def load_from_cache(job: Dict[str, Any], model_id: str, pass_name: str = "pass1"
     """
     job_id = get_job_id(job)
     model_clean = model_id.replace(':', '-').replace('/', '-').replace('.', '-')
-    cache_file = get_cache_dir() / job_id / f"{pass_name}-{model_clean}.json"
+    cache_file = get_cache_dir(layer="bronze") / job_id / f"{pass_name}-{model_clean}.json"
 
     if cache_file.exists():
         try:
@@ -60,8 +121,8 @@ def load_from_cache(job: Dict[str, Any], model_id: str, pass_name: str = "pass1"
 
 def save_to_cache(job: Dict[str, Any], model_id: str, result: Dict[str, Any], pass_name: str = "pass1"):
     """
-    Save pass result to cache.
-    Cache path: data/local/{job_id}/{pass}-{model}.json
+    Save pass result to cache (Bronze layer - JSON).
+    Cache path: data/local/ai_enrichment/bronze/{job_id}/{pass}-{model}.json
 
     Args:
         job: Job dictionary
@@ -81,14 +142,15 @@ def save_pass_result(
     raw_response: Optional[str] = None,
 ) -> Optional[str]:
     """
-    Save a single pass result to ./{job_id}/{pass}-{model}.json
+    Save a single pass result to Bronze layer (JSON).
+    Path: data/local/ai_enrichment/bronze/{job_id}/{pass}-{model}.json
 
     Args:
         job: Job dictionary with job_posting_id
         pass_name: Pass name (pass1, pass2, pass3)
         model_id: Model ID used for this pass
         result: Result data to save
-        base_dir: Base directory for output (default: script's parent/data/local)
+        base_dir: Base directory for output (default: bronze)
         raw_response: Optional raw LLM response text to include
 
     Returns:
@@ -98,9 +160,9 @@ def save_pass_result(
         # Get job ID
         job_id = get_job_id(job)
 
-        # Create job directory
+        # Create job directory in Bronze layer
         if base_dir is None:
-            base_dir = Path(__file__).parent.parent.parent / "data" / "local"
+            base_dir = get_cache_dir(layer="bronze")
         job_dir = base_dir / job_id
         job_dir.mkdir(parents=True, exist_ok=True)
 
@@ -141,22 +203,14 @@ def save_pass_result(
         return None
 
 
-def save_raw_response(
-    job: Dict[str, Any],
-    pass_name: str,
-    model_id: str,
-    raw_response: str,
-    base_dir: Optional[Path] = None,
-) -> Optional[str]:
+def save_job_original(job: Dict[str, Any], base_dir: Optional[Path] = None) -> Optional[str]:
     """
-    Save raw LLM response to ./{job_id}/{pass}-{model}-raw.txt
+    Save original job data from S3 to Bronze layer.
+    Path: data/local/ai_enrichment/bronze/{job_id}/job-original.json
 
     Args:
-        job: Job dictionary with job_posting_id
-        pass_name: Pass name (pass1, pass2, pass3)
-        model_id: Model ID used for this pass
-        raw_response: Raw LLM response text
-        base_dir: Base directory for output
+        job: Job dictionary from S3
+        base_dir: Base directory for output (default: bronze)
 
     Returns:
         Path to saved file or None if failed
@@ -165,7 +219,50 @@ def save_raw_response(
         job_id = get_job_id(job)
 
         if base_dir is None:
-            base_dir = Path(__file__).parent.parent.parent / "data" / "local"
+            base_dir = get_cache_dir(layer="bronze")
+        job_dir = base_dir / job_id
+        job_dir.mkdir(parents=True, exist_ok=True)
+
+        filepath = job_dir / "job-original.json"
+
+        # Only save if doesn't exist (don't overwrite)
+        if not filepath.exists():
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(job, f, indent=2, ensure_ascii=False, default=str)
+
+        return str(filepath)
+
+    except Exception as e:
+        print(f"\n⚠ Warning: Could not save original job data: {e}")
+        return None
+
+
+def save_raw_response(
+    job: Dict[str, Any],
+    pass_name: str,
+    model_id: str,
+    raw_response: str,
+    base_dir: Optional[Path] = None,
+) -> Optional[str]:
+    """
+    Save raw LLM response to Bronze layer.
+    Path: data/local/ai_enrichment/bronze/{job_id}/{pass}-{model}-raw.txt
+
+    Args:
+        job: Job dictionary with job_posting_id
+        pass_name: Pass name (pass1, pass2, pass3)
+        model_id: Model ID used for this pass
+        raw_response: Raw LLM response text
+        base_dir: Base directory for output (default: bronze)
+
+    Returns:
+        Path to saved file or None if failed
+    """
+    try:
+        job_id = get_job_id(job)
+
+        if base_dir is None:
+            base_dir = get_cache_dir(layer="bronze")
         job_dir = base_dir / job_id
         job_dir.mkdir(parents=True, exist_ok=True)
 
@@ -181,6 +278,43 @@ def save_raw_response(
     except Exception as e:
         print(f"\n⚠ Warning: Could not save raw response: {e}")
         return None
+
+
+def sanitize_job_dict(job: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Sanitize job dictionary by converting pandas NaN/NaT to None.
+
+    Args:
+        job: Job dictionary potentially containing pandas NaN values
+
+    Returns:
+        Sanitized job dictionary with None instead of NaN
+    """
+    import pandas as pd
+    import numpy as np
+
+    def sanitize_value(v):
+        """Convert pandas NaN/NaT to None for JSON serialization."""
+        # Handle collections first (before checking pd.isna which fails on arrays)
+        if isinstance(v, dict):
+            return {k: sanitize_value(val) for k, val in v.items()}
+        elif isinstance(v, (list, tuple)):
+            return [sanitize_value(item) for item in v]
+        elif isinstance(v, np.ndarray):
+            return [sanitize_value(item) for item in v.tolist()]
+        # Handle scalar values
+        elif isinstance(v, (np.integer, np.floating)):
+            return v.item()
+        # Check for NaN/NaT (only works on scalars)
+        try:
+            if pd.isna(v):
+                return None
+        except (ValueError, TypeError):
+            # pd.isna() failed, return as-is
+            pass
+        return v
+
+    return {k: sanitize_value(v) for k, v in job.items()}
 
 
 def load_jobs_from_s3(date_str: Optional[str] = None, limit: int = 5) -> tuple[List[Dict[str, Any]], Dict[str, str]]:
@@ -247,9 +381,13 @@ def load_jobs_from_s3(date_str: Optional[str] = None, limit: int = 5) -> tuple[L
     first_partition = None
     partitions_used = 0
 
+    print(f"\n  Loading up to {limit} jobs from partition(s)...")
+
     for partition in partitions_to_load:
         if len(all_jobs) >= limit:
             break
+
+        partition_label = f"{partition['year']}-{partition['month']}-{partition['day']} Hour {partition['hour']}"
 
         df = read_partition(
             year=partition['year'],
@@ -259,6 +397,7 @@ def load_jobs_from_s3(date_str: Optional[str] = None, limit: int = 5) -> tuple[L
         )
 
         if df is None or df.empty:
+            print(f"    Partition {partition_label}: 0 jobs (empty)")
             continue
 
         # Track first partition for info
@@ -267,15 +406,40 @@ def load_jobs_from_s3(date_str: Optional[str] = None, limit: int = 5) -> tuple[L
 
         # How many more jobs do we need?
         remaining = limit - len(all_jobs)
-        partition_jobs = df.head(remaining).to_dict('records')
-        all_jobs.extend(partition_jobs)
+        total_available = len(df)
+        jobs_to_take = min(remaining, total_available)
+
+        # Convert DataFrame to list of dicts and sanitize pandas NaN values
+        partition_jobs = df.head(jobs_to_take).to_dict('records')
+        sanitized_jobs = [sanitize_job_dict(job) for job in partition_jobs]
+
+        # Filter out invalid jobs (missing critical fields)
+        valid_jobs = []
+        skipped = 0
+        for job in sanitized_jobs:
+            # Job must have at least job_title and company_name
+            if job.get('job_title') and job.get('company_name'):
+                valid_jobs.append(job)
+            else:
+                skipped += 1
+
+        all_jobs.extend(valid_jobs)
         partitions_used += 1
+
+        loaded_msg = f"    Partition {partition_label}: {len(valid_jobs)} jobs loaded"
+        if skipped > 0:
+            loaded_msg += f" ({skipped} skipped - invalid)"
+        loaded_msg += f" (from {total_available} available)"
+        print(loaded_msg)
 
     if not all_jobs:
         raise ValueError(f"No jobs found in any partition")
 
+    print(f"\n  {'=' * 80}")
+    print(f"  TOTAL LOADED: {len(all_jobs)} jobs from {partitions_used} partition(s)")
     if len(all_jobs) < limit:
-        print(f"  Note: Only found {len(all_jobs)} jobs across {partitions_used} partition(s)")
+        print(f"  WARNING: Requested {limit} jobs but only {len(all_jobs)} were available")
+    print(f"  {'=' * 80}")
 
     # Return jobs and partition info (from first partition)
     partition_info = {

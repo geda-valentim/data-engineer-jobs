@@ -1,0 +1,234 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.78,
+        "evidence": "Mentions modern tools like Azure Databricks, Python/PySpark, SQL, Github, Azure Devops, and Azure Blob.  However, lacks explicit mention of data governance or CI/CD beyond basic DevOps tools.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.78,
+        "evidence": "Matches score of 3 - documented processes and modern tools are present.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.85,
+        "evidence": "Azure Databricks, Python/PySpark, SQL, Github, Azure Devops, and Azure Blob are all modern data tools.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.20,
+        "confidence": 0.85,
+        "evidence": "Role focuses on data engineering tasks (data gathering, storage, processing, database integration) with no overlap into data science or analytics.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.65,
+        "confidence": 0.75,
+        "evidence": "Immediate start date and 'fast-paced' environment suggest potential for long hours. However, no explicit mention of on-call or weekend work.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.88,
+        "evidence": "Responsibilities are well-defined around data engineering tasks.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.45,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to potential for long hours, but overall a well-defined role with a modern stack.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Explicitly states reporting to the Head of Data Engineering.",
+        "source": "explicit"
+      },
+      "manager_level_inferred": {
+        "value": "director_plus",
+        "confidence": 0.92,
+        "evidence": "Reporting to the Head of Data Engineering suggests a director-level manager.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.75,
+        "evidence": "Team is expanding from 8 to 15, indicating growth, but not necessarily rapid expansion.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "8-15 engineers",
+          "de_count": "5 data engineers",
+          "seniority_mix": "mix of senior and mid-level"
+        },
+        "confidence": 0.80,
+        "evidence": "Mentions joining a team of 5 DEs within a broader 15-person data org.",
+        "source": "explicit"
+      },
+      "reporting_structure": {
+        "value": "reports_to_director_data",
+        "confidence": 0.90,
+        "evidence": "Job posting mentions 'reporting to Head of Data Engineering'",
+        "source": "explicit"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions working with diverse teams and partnering with scientists, engineers, consultants, and database administrators.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.65,
+        "confidence": 0.75,
+        "evidence": "No explicit mention of PTO or flexible work arrangements, but no strong negative signals either.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.70,
+        "confidence": 0.78,
+        "evidence": "Opportunity to work with cutting-edge technologies and collaborate with diverse teams.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.75,
+        "confidence": 0.80,
+        "evidence": "Modern tech stack, collaborative environment, and focus on innovation.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["conference_speaking"],
+        "confidence": 0.65,
+        "evidence": "Mentions working with diverse teams and staying up to date with new technologies.",
+        "source": "inferred"
+      },
+      "dev_practices_mentioned": {
+        "value": ["ci_cd"],
+        "confidence": 0.70,
+        "evidence": "Mentions Azure Devops, suggesting CI/CD practices.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Mentions working with cutting-edge technologies.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt or refactoring.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.70,
+        "evidence": "Mentions implementing and validating predictive models, suggesting basic ML integration.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": ["MLflow", "SageMaker"],
+        "confidence": 0.88,
+        "evidence": "MLflow and SageMaker are explicitly mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.85,
+        "evidence": "Mentions 'ASAP' start date.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Based on location (Bengaluru) and role type, competition is likely moderate.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "growth_stage",
+        "confidence": 0.70,
+        "evidence": "Expanding team size and focus on innovation suggest a growth-stage company.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "Expanding team, but not a massive hiring spree.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.88,
+        "evidence": "Team size is between 8 and 15 engineers.",
+        "source": "explicit"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mention of funding stage.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.85,
+        "evidence": "Expanding team to support new initiatives.",
+        "source": "explicit"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "well_defined_role", "learning_opportunities", "strong_benefits"],
+    "strength_details": [
+      "Modern Azure-based data stack (Databricks, Devops, Blob)",
+      "Clear data engineering focus with defined responsibilities",
+      "Opportunity to work with predictive modeling and ML",
+      "Part of a growing team with a director-level manager"
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship"],
+    "concern_details": [
+      "Immediate start date suggests potential for time pressure",
+      "US work authorization required - no visa sponsorship"
+    ],
+    "best_fit_categories": ["mid_level_engineers", "cloud_specialists", "pipeline_developers"],
+    "best_fit_details": [
+      "Mid-level data engineers with 4-5 years of relevant experience",
+      "Engineers with strong Azure cloud skills",
+      "Candidates experienced in building and maintaining data pipelines"
+    ],
+    "probe_categories": ["work_hour_expectations", "team_turnover_history", "tech_debt_situation"],
+    "probe_details": [
+      "Ask about typical work hours and expectations for overtime",
+      "Inquire about team turnover rate and reasons for departures",
+      "Understand the current state of tech debt and plans for addressing it"
+    ],
+    "leverage_categories": ["rare_skill_match", "domain_expertise"],
+    "leverage_details": [
+      "Strong Azure Databricks and Spark experience is highly valuable",
+      "Experience with predictive modeling and ML is a differentiator"
+    ],
+    "overall_assessment": "Solid opportunity for a mid-level data engineer with Azure skills. The role offers a modern tech stack, clear responsibilities, and growth potential. The main trade-offs are the potential for long hours and the lack of visa sponsorship.",
+    "recommendation_score": 0.78,
+    "recommendation_confidence": 0.80
+  }
+}
+```

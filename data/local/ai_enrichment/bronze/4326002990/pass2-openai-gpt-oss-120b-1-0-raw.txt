@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.62,
+        "evidence": "Title is Data Engineer with responsibilities spanning predictive modeling, enterprise search, and both batch and real-time pipelines; no explicit years of experience provided.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title explicitly states Data Engineer and core duties involve building data pipelines and ETL processes.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.75,
+        "evidence": "Snowflake (a data‑warehouse platform) is mentioned as a preferred technology; the role focuses on data warehouse workloads.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "Job description does not mention people‑management responsibilities or direct reports; it emphasizes individual contribution to pipelines and models.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "No cloud provider (AWS, Azure, GCP) is referenced in the posting; only Snowflake (cloud‑agnostic) is listed.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No additional cloud platforms are cited beyond the primary (which is not mentioned).",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "The role explicitly calls for both batch and real‑time processing of data.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.93,
+        "evidence": "No orchestration tools such as Airflow, Luigi, dbt, or cloud‑native schedulers are referenced.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.80,
+        "evidence": "Snowflake, a data‑warehouse solution, is highlighted as a preferred technology.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.92,
+        "evidence": "Location is specified as Kochi, Kerala, India and geo restriction type is \"specific_countries\" with allowed country IN.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "apac",
+        "confidence": 0.90,
+        "evidence": "Job is based in India, which falls in the APAC region.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Posting does not mention any relocation assistance or requirement; it expects candidates to be in India.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Visa sponsorship is not mentioned; the role is for a location in India where H‑1B is not applicable.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.88,
+        "evidence": "No reference to OPT/CPT or student visa eligibility is provided.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.80,
+        "evidence": "Only work‑authorization for the specified country (India) is implied; no citizenship restriction is stated.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.85,
+        "evidence": "The posting describes a full‑time employee role at IBM with no mention of contractor terms.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.92,
+        "evidence": "No benefits (e.g., health, PTO, equity) are listed in the posting or extracted data.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "The description does not discuss career ladders, promotion tracks, or growth opportunities.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "The role mentions collaborating closely with diverse teams and senior engineers, implying informal mentorship.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.92,
+        "evidence": "No language about promotions, advancement, or career ladders appears in the posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.93,
+        "evidence": "The posting does not reference internal transfers or mobility programs.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No explicit mention of IC, management, specialist, or architect tracks.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.80,
+        "evidence": "A clear set of must‑have hard and soft skills is listed alongside a short nice‑to‑have list, indicating balanced expectations.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.92,
+        "evidence": "The job description focuses specifically on data engineering tasks without blending other roles.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Required skill set (DBT, Java, Python, Spark, Hadoop, etc.) aligns with a typical mid‑level data engineer; no unrealistic senior‑level expectations are present.",
+        "source": "inferred"
+      }
+    }
+  }
+}

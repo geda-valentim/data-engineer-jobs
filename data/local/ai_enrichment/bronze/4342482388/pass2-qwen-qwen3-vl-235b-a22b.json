@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 16:34:53",
+    "job_posting_id": "4342482388",
+    "job_title": "Data Engineer",
+    "company_name": "iFlow Inc.",
+    "job_location": "Toronto, Ontario, Canada",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.65,
+          "evidence": "No explicit years mentioned, but 'Bank data background' and 'Audit knowledge' suggest mid-level experience needed; title is generic 'Data Engineer' without senior/staff prefix",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Job title is explicitly 'Data Engineer' and skills align with core data engineering responsibilities",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.75,
+          "evidence": "Cloud Databricks and SQL are core for batch ETL; no streaming tools mentioned; bank/audit context implies scheduled, reliable pipelines",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.9,
+          "evidence": "No mention of mentoring, team leadership, or architecture responsibilities; contract role with 6-month duration suggests individual contributor focus",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "azure",
+          "confidence": 0.85,
+          "evidence": "Cloud Databricks is mentioned; Databricks is commonly deployed on Azure in enterprise banking contexts, especially with TD (Toronto Dominion) preference; no other cloud specified",
+          "source": "inferred"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No other cloud platforms mentioned in requirements or description",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.8,
+          "evidence": "Banking and audit data typically involve scheduled, batch-oriented ETL; no real-time or streaming tools (Kafka, Flink, Kinesis) mentioned",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "spark_native",
+          "confidence": 0.85,
+          "evidence": "Cloud Databricks implies Spark-native orchestration; no mention of Airflow, dbt, or cloud-native orchestrators",
+          "source": "inferred"
+        },
+        "storage_layer": {
+          "value": "lakehouse",
+          "confidence": 0.75,
+          "evidence": "Databricks is a lakehouse platform; bank data often stored in structured/semi-structured formats in lakehouse architectures",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.9,
+          "evidence": "Location specified as Toronto, Ontario with hybrid model (2 days/week in office) implies must be local to the region",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.95,
+          "evidence": "Explicitly located in Toronto, Ontario, Canada; no mention of global or multi-timezone teams",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.85,
+          "evidence": "Hybrid model requiring 2 days/week in Toronto implies candidate must be able to relocate or already reside there",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No visa sponsorship mentioned; location in Canada (not US) makes H1B irrelevant; Canadian work authorization likely required",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Contract role in Canada; OPT/CPT are US-specific student visas; no indication of student visa support",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.8,
+          "evidence": "No citizenship requirement stated; hybrid role in Toronto implies need for Canadian work authorization",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "1099",
+          "confidence": 0.9,
+          "evidence": "Contract role with fixed 6-month duration; no mention of benefits or W2 employment; typical for 1099 contractors in Canada/US",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits listed in Pass 1 extraction; contract role typically excludes standard employee benefits",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No mention of career progression, promotion paths, or growth opportunities in job description or Pass 1",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No mention of mentorship, coaching, or working with senior staff",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of promotions, advancement, or career ladder",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal transfers, role changes, or mobility opportunities",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No career tracks (IC, management, etc.) mentioned in job posting or Pass 1",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear must-have skills (Cloud Databricks, SQL, Bank data, Audit) vs. one nice-to-have (worked in TD); balanced requirement structure",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused on data engineering with specific domain (banking/audit) and tooling (Databricks, SQL); not multi-role or vague",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Skills required (Databricks, SQL, banking/audit) are reasonable for a mid-level data engineer; no unrealistic combinations or senior-level expectations",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7077,
+    "input_tokens": 5380,
+    "output_tokens": 1697,
+    "cost": 0.008774
+  }
+}

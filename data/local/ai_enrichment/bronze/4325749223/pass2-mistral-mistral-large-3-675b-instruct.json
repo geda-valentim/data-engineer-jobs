@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 17:51:24",
+    "job_posting_id": "4325749223",
+    "job_title": "Data Engineer-Data Platforms-Azure",
+    "company_name": "IBM",
+    "job_location": "Mumbai Metropolitan Region",
+    "pass_name": "pass2",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.65,
+          "evidence": "Title is 'Data Engineer' without senior/staff/principal qualifiers, and responsibilities suggest hands-on development rather than high-level leadership",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_platform_engineer",
+          "confidence": 0.95,
+          "evidence": "Title includes 'Data Engineer-Data Platforms', core focus on Databricks, Delta Lakehouse, and cloud-native data integration services",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "lakehouse",
+          "confidence": 0.9,
+          "evidence": "Delta Lakehouse architecture mentioned explicitly as a key responsibility, along with Delta Lake, Unity Catalog, and data modeling",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.8,
+          "evidence": "Responsibilities focus on hands-on development and optimization, no mention of direct reports, hiring, or reviews",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "azure",
+          "confidence": 0.9,
+          "evidence": "Title explicitly mentions 'Azure', and Azure services (ADF, Synapse, ADLS) are listed before AWS services in responsibilities",
+          "source": "combined"
+        },
+        "secondary_clouds": {
+          "value": [
+            "aws"
+          ],
+          "confidence": 0.95,
+          "evidence": "AWS services (Glue, S3, Redshift) mentioned alongside Azure, indicating multi-cloud exposure",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.85,
+          "evidence": "Mentions both real-time/batch ingestion (Databricks Auto Loader) and ETL/ELT pipelines (batch processing), with streaming as nice-to-have",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "spark_native",
+          "confidence": 0.9,
+          "evidence": "Delta Live Tables mentioned for pipeline orchestration, which is Spark-native within Databricks ecosystem",
+          "source": "inferred"
+        },
+        "storage_layer": {
+          "value": "lakehouse",
+          "confidence": 0.95,
+          "evidence": "Delta Lake mentioned explicitly as a key responsibility, with lakehouse architecture and cloud-native services (ADLS, S3) for storage",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.75,
+          "evidence": "Location specified as 'Mumbai Metropolitan Region', no mention of remote work flexibility",
+          "source": "inferred"
+        },
+        "timezone_focus": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "Location is Mumbai, no timezone requirements or team distribution mentioned",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of relocation packages or requirements, location is specified as a region rather than a strict relocation ask",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Visa sponsorship not mentioned in Pass 1 extraction or job posting",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "No explicit mention of OPT/CPT or student visa support, location is Mumbai which may imply local work authorization",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No discussion of citizenship or work authorization requirements in job posting or Pass 1 results",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Employment type stated as 'full_time' in Pass 1, benefits like career growth and development opportunities suggest W2 employment",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "standard",
+          "confidence": 0.65,
+          "evidence": "Mentions 'long-term career growth' and 'development opportunities' as benefits, but no premium benefits like equity or learning budgets",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Mentions 'long-term career growth and development opportunities' and 'culture of evolution and empathy' but no explicit career tracks",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Encourages collaboration and mentions working with visionaries and senior staff, suggesting mentorship opportunities",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of promotion paths or advancement keywords like 'promotion', 'advancement', 'path to'",
+          "source": "inferred"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No discussion of internal mobility, lateral moves, or team changes in job posting or Pass 1 results",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track",
+            "specialist_track"
+          ],
+          "confidence": 0.6,
+          "evidence": "Mentions 'long-term career growth' and 'unique skills and experience', suggesting IC and specialist tracks may be available",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear distinction between 'Mandatory Skills' and 'Preferred Technical And Professional Experience', with a balanced mix of required and nice-to-have skills",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Well-defined responsibilities focusing on Databricks, Delta Lakehouse, and data pipeline development",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Skills listed are reasonable for a mid-level data platform engineer role, no unrealistic expectations detected",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8129,
+    "input_tokens": 6389,
+    "output_tokens": 1740,
+    "cost": 0.009869000000000001
+  }
+}

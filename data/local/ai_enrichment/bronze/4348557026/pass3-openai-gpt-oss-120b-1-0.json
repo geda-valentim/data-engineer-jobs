@@ -1,0 +1,277 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 13:04:08",
+    "job_posting_id": "4348557026",
+    "job_title": "Data Engineer-Data Integration",
+    "company_name": "IBM",
+    "job_location": "Pune, Maharashtra, India",
+    "pass_name": "pass3",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 2,
+          "confidence": 0.81,
+          "evidence": "Uses legacy ETL tool (Informatica PowerCenter) and basic cloud (Azure) without CI/CD, testing, or data cataloging; indicates a developing data practice.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "developing",
+          "confidence": 0.81,
+          "evidence": "Score of 2 maps to \"developing\" level.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "cloud_native"
+          ],
+          "confidence": 0.78,
+          "evidence": "Explicit mention of Microsoft Azure cloud experience; no other modern‑stack signals.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.35,
+          "confidence": 0.86,
+          "evidence": "Role stays within data engineering but adds predictive‑modeling and search‑engine implementation, slightly widening scope.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.3,
+          "confidence": 0.8,
+          "evidence": "IBM consulting roles can be deadline‑driven, but no explicit on‑call or overtime language is provided.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.92,
+          "evidence": "Job description lists specific DE responsibilities (ETL pipelines, batch/stream, Azure, Informatica) without mixing other disciplines.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.34,
+          "confidence": 0.81,
+          "evidence": "Moderate scope creep and overtime risk, but clear role definition and no extreme red‑flag language.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.88,
+          "evidence": "Posting does not state who the Data Engineer reports to.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No manager title (e.g., Head of Data, Director) appears in the description.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No indication of hiring surge or team expansion.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.78,
+          "evidence": "No details about team size or makeup are provided.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.88,
+          "evidence": "No reporting line is described.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.74,
+          "evidence": "Collaboration with scientists, consultants, and DBAs is mentioned, but the role is not embedded within a product team.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.4,
+          "confidence": 0.8,
+          "evidence": "No PTO, benefits, or work‑hour policies are listed; IBM typically offers standard benefits but they are not disclosed.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.3,
+          "confidence": 0.78,
+          "evidence": "No mention of mentorship, learning budget, or career ladders.",
+          "source": "pass1_derived"
+        },
+        "tech_culture_score": {
+          "value": 0.35,
+          "confidence": 0.8,
+          "evidence": "Reliance on legacy ETL (Informatica) and lack of CI/CD, testing, or data‑catalog tools suggests a modest technical culture.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [],
+          "confidence": 0.8,
+          "evidence": "No open‑source, conference, or innovation programs are referenced.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [],
+          "confidence": 0.8,
+          "evidence": "No explicit code‑review, CI/CD, or monitoring practices are described.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.71,
+          "evidence": "Job focuses on implementing existing tools rather than exploring new technologies.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.78,
+          "evidence": "No language about refactoring, modernizing pipelines, or reducing technical debt.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "basic_ml",
+          "confidence": 0.7,
+          "evidence": "Mentions implementing predictive models and using statistical/ML techniques, but no specific ML platforms or MLOps tools.",
+          "source": "inferred"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.85,
+          "evidence": "No ML tooling (e.g., SageMaker, MLflow) is listed in the posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No start‑date or urgency language appears.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No data on applicant volume or market competitiveness is provided.",
+          "source": "pass1_derived"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "established_tech",
+          "confidence": 0.96,
+          "evidence": "IBM is a global, publicly‑traded technology company with mature operations.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No indication of aggressive or steady hiring cadence.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "Team size is not disclosed in the posting.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "IBM is a publicly‑listed corporation; funding stage is irrelevant.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "Posting does not state whether this is a new headcount or a backfill.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "data_focused_role",
+        "established_company",
+        "well_defined_role",
+        "clear_requirements"
+      ],
+      "strength_details": [
+        "Role is tightly scoped to data engineering tasks (ETL, batch/stream, Azure).",
+        "IBM provides a stable, globally recognized employer brand.",
+        "Job description lists concrete responsibilities and required skill set.",
+        "Requirements are clearly stated without vague or optional qualifications."
+      ],
+      "concern_categories": [
+        "salary_not_disclosed",
+        "no_visa_sponsorship",
+        "unclear_reporting",
+        "limited_growth"
+      ],
+      "concern_details": [
+        "Compensation range and benefits are not mentioned in the posting.",
+        "Visa sponsorship is not offered; only candidates authorized to work in India can apply.",
+        "No reporting line or manager title is provided, making hierarchy unclear.",
+        "No information on career progression, mentorship, or internal mobility."
+      ],
+      "best_fit_categories": [
+        "mid_level_engineers",
+        "pipeline_developers",
+        "analytics_engineers",
+        "data_generalists"
+      ],
+      "best_fit_details": [
+        "Engineers with 3‑5 years of experience in ETL tools (Informatica) and Azure cloud.",
+        "Candidates comfortable building both batch and streaming pipelines.",
+        "Professionals who enjoy collaborating with data scientists and business analysts."
+      ],
+      "probe_categories": [
+        "salary_range_details",
+        "career_growth_path",
+        "reporting_structure",
+        "tech_stack_details",
+        "work_hour_expectations"
+      ],
+      "probe_details": [
+        "What is the total compensation package (base, bonus, equity, benefits)?",
+        "Are there defined career ladders or mentorship programs for data engineers?",
+        "Who will I report to day‑to‑day, and what is the broader team structure?",
+        "Will I be expected to work with additional tools beyond Informatica and Azure (e.g., modern orchestration platforms)?",
+        "What are the typical work hours and is on‑call or overtime expected?"
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "domain_expertise"
+      ],
+      "leverage_details": [
+        "Extensive experience with Informatica PowerCenter aligns directly with the core tech stack.",
+        "Strong background in Azure cloud data services and enterprise BI tools (Power BI) is highly relevant."
+      ],
+      "overall_assessment": "The role offers a clear, data‑engineering‑focused position at a reputable, established company. While compensation and growth pathways are opaque, the required skill set matches candidates with solid ETL and Azure experience. Candidates should verify reporting lines, benefits, and career development opportunities before proceeding.",
+      "recommendation_score": 0.55,
+      "recommendation_confidence": 0.85
+    },
+    "tokens": 13839,
+    "input_tokens": 9620,
+    "output_tokens": 4219,
+    "cost": 0.0027086999999999996
+  }
+}

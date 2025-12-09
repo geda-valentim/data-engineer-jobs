@@ -1,0 +1,153 @@
+<reasoning>Let me carefully analyze this job posting to extract the required information. I need to go through each section systematically and extract only what's explicitly stated.
+
+Looking at the job posting:
+
+**Title**: Data Scientist (Contract)
+**Company**: Counterpart
+**Location**: São Paulo, São Paulo, Brazil
+
+Let me go through each section:
+
+1. **Compensation**: 
+   - "Our estimated pay range for this role is USD $70,000 - $80,000 annually"
+   - This is salary information, so salary_disclosed = true
+   - salary_min = 70000, salary_max = 80000
+   - salary_currency = "USD"
+   - salary_period = "yearly"
+   - salary_text_raw = "USD $70,000 - $80,000 annually"
+
+2. **Work Authorization**:
+   - No explicit mention of visa sponsorship or work authorization requirements
+   - visa_sponsorship_stated = "not_mentioned"
+   - work_auth_text = null
+   - citizenship_text = null
+   - security_clearance_stated = "not_mentioned"
+
+3. **Work Model**:
+   - "Work from Anywhere - Counterpart is a fully distributed company, meaning there is no office"
+   - work_model_stated = "remote"
+   - location_restriction_text = "Work from Anywhere - Counterpart is a fully distributed company, meaning there is no office"
+   - employment_type_stated = "contract" (from the title "Data Scientist (Contract)")
+
+4. **Contract Details**:
+   - contract_type = "fixed_term" (it's a contract position)
+   - No specific duration mentioned, so contract_duration_months = null
+   - contract_duration_text = null
+   - extension_possible = "not_mentioned"
+   - conversion_to_fte = "not_mentioned"
+   - start_date = "not_mentioned"
+   - start_date_text = null
+   - probation_period_text = null
+
+5. **Contractor Rates**:
+   - The pay range is given as annual salary, not hourly/daily rates
+   - pay_type = "salary"
+   - daily_rate_min = null, daily_rate_max = null, daily_rate_currency = null, daily_rate_text_raw = null
+   - rate_negotiable = "not_mentioned"
+   - overtime_paid = "not_mentioned"
+
+I'll continue analyzing the skills and requirements section. The role demands a strong quantitative background with a Bachelor's or Master's degree in a relevant field. The position requires 3+ years of data science experience, with a focus on machine learning model deployment. Key technical skills include Python proficiency, data science libraries, and model performance tracking. The ideal candidate will have experience in experimental design and translating technical insights into business recommendations.
+
+The soft skills emphasize communication, collaboration, and a bias towards practical action. The role involves bridging technical and business domains, requiring strong interpersonal and analytical abilities. The candidate should demonstrate creativity in data-driven problem-solving and have experience scaling data infrastructure.
+
+The educational background spans multiple quantitative disciplines, with a preference for degrees in computer science, mathematics, statistics, economics, physics, or engineering. The role values interdisciplinary expertise and the ability to apply analytical skills across different domains.
+
+The company offers a fully distributed work environment with flexible language learning support, paid vacation, and a unique parental leave policy. They provide MacBook Pro reimbursement and emphasize an inclusive, entrepreneurial culture focused on continuous improvement and employee well-being.
+
+The compensation package includes an annual salary range of $70,000-$80,000, with additional benefits like language class sponsorship and professional development opportunities. The company prioritizes creating an environment that supports employee growth and work-life balance.
+
+The team comprises diverse professionals from different industries, including data science, engineering, and analytics backgrounds. They emphasize collaboration, continuous learning, and maintaining a supportive work culture that encourages innovation and personal development.
+
+The company's values focus on autonomy, honest communication, entrepreneurial thinking, and creating an environment of trust and continuous improvement. They prioritize employee wellness and provide flexible work arrangements, including remote work options and language learning support.
+
+The compensation package includes a competitive salary range of $70,000-$80,000 annually, with additional benefits like MacBook Pro reimbursement and language class sponsorship. The company emphasizes an inclusive workplace that values diversity and provides equal opportunities for all employees.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": true,
+      "salary_min": 70000,
+      "salary_max": 80000,
+      "salary_currency": "USD",
+      "salary_period": "yearly",
+      "salary_text_raw": "USD $70,000 - $80,000 annually",
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "remote",
+      "location_restriction_text": "Work from Anywhere - Counterpart is a fully distributed company, meaning there is no office",
+      "employment_type_stated": "contract"
+    },
+    "contract_details": {
+      "contract_type": "fixed_term",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "salary",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": ["Python", "pandas", "scikit-learn", "numpy", "scipy", "Jupyter", "machine learning", "data science", "web scraping", "APIs", "data infrastructure", "database systems"],
+      "nice_to_have_hard_skills": ["Airflow", "Spark"],
+      "must_have_soft_skills": ["Communication", "Team Collaboration", "Problem Solving"],
+      "nice_to_have_soft_skills": ["Mentoring"],
+      "certifications_mentioned": [],
+      "years_experience_min": 3,
+      "years_experience_max": null,
+      "years_experience_text": "3+ years of experience as a data scientist, data analyst or machine learning",
+      "education_level": "BACHELORS",
+      "education_area": "Computer Science",
+      "education_requirement": "required",
+      "education_text_raw": "Bachelor/Master in quantitative discipline (computer science, mathematics, statistics, economics, physics, engineering or related field)",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "specific_countries",
+      "allowed_countries": ["AR", "BR", "CO", "CL", "MX", "DO"],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "must_be_resident"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": ["Work from Anywhere", "Language Classes - up to $100 per calendar year", "Paid Vacation and Time Off", "Parental Leave - up to 8 weeks unpaid", "Computer - Macbook Pro reimbursement"],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": true,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": true,
+      "pto_policy": "generous"
+    },
+    "context": {
+      "team_info_text": "Elizabeth Barsalou, Manager Data Scientist: Before joining Counterpart, Elizabeth worked as a full stack data scientist in small business lending for Kabbage and BHG. She specialized in building data science models, infrastructure and strategies to extend credit to small businesses. She lives in New York and spends her free time singing opera and playing with her dog. Stanley Wang, Director, Pricing Analytics: Before joining Counterpart, Stanley worked as an actuary within the pricing solutions and methods team at USAA to combine actuarial pricing with data science models. Before that, he was a leading data scientist for Digital Partners, a Munich Re Company where he specialized in building data science models and insights for leading insurtech companies. He has had many other relevant roles such as capital modeling, risk management etc. He lives in New York with his growing family. Newton Troung, Lead Data Engineer : Newton has almost a decade of experience in platform and data engineering. In his last company Thrive Market, he had a hand in building out new microservices and architecting data pipelines with Airflow and Spark. He's vegetarian and loves trying new restaurants when traveling. Nowadays he's busy keeping up with his 2-year-old and doing outdoor activities with his family.",
+      "company_description_text": "Counterpart is a modern management & professional liability insurance platform for the 21st century workplace. platform for the 21st century workplace. We offer products and services to help companies align the risks and incentives of creating great organizations. Our platform is designed to measure risk more efficiently using the most advanced rating system in the industry, while also proactively mitigating the risks of our insureds. Ultimately, we provide businesses with the framework to be the best versions of themselves."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 16
+  }
+}
+```

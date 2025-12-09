@@ -1,0 +1,138 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+Looking at the job posting:
+
+**Title**: Data Engineer
+**Company**: BeaconFire Inc.
+**Location**: New Jersey, United States
+
+Let me extract information section by section:
+
+1. **Compensation**: No salary information is mentioned in the job posting. So salary_disclosed = false, all salary fields = null.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. So visa_sponsorship_stated = "not_mentioned", work_auth_text = null, citizenship_text = null, security_clearance_stated = "not_mentioned".
+
+3. **Work Model**: 
+   - Location is "New Jersey, United States" - this suggests onsite work
+   - No mention of remote or hybrid work
+   - No mention of employment type (full-time, contract, etc.)
+   - So work_model_stated = "onsite" (based on location being specified as New Jersey), location_restriction_text = null, employment_type_stated = "not_mentioned"
+
+4. **Contract Details**: No mention of contract type, duration, etc. So contract_type = "not_mentioned", all other contract fields = null.
+
+5. **Contractor Rates**: No mention of contractor rates. So pay_type = "not_mentioned", all other contractor fields = null.
+
+6. **Skills Classification**: Let me analyze the qualifications and responsibilities:
+
+**Qualifications section:**
+- "Master's Degree in Computer Science/Information Technology, Data Analytics/Data Science, or related discipline" - This gives us education_level = "MASTERS", education_area = "Computer Science" (first mentioned), education_requirement = "required", education_text_raw = the full text
+- "Intermediate Python. Experience in data processing is a plus" - Python is mentioned as intermediate level, data processing is a plus
+- "Experience with relational databases (SQL Server, Oracle, MySQL, etc.)" - This is required experience
+
+
+- "Strong written and verbal communication skills" - This is a must-have soft skill
+- "Ability to work both independently and as part of a team" - This is a must-have soft skill
+
+I'll focus on the soft skills and technical requirements. The communication abilities and teamwork skills are critical for this role. The technical skills show a need for database expertise and Python proficiency, with data processing as an additional advantage.
+
+The responsibilities reveal deeper technical competencies. ETL/ELT processes, data manipulation, and building data flow frameworks are core technical requirements. Automated testing and performance optimization demonstrate a need for robust, scalable data engineering practices.
+
+The role demands a blend of technical expertise and collaborative skills, emphasizing both independent problem-solving and team-based project execution.
+
+Key qualifications include a Master's degree in Computer Science or related field, intermediate Python skills, and experience with relational databases. Strong communication and teamwork abilities are essential, with a preference for candidates who can work independently and collaboratively.
+
+The position requires designing scalable data processes, performing complex data manipulations, and developing automated testing frameworks. Collaboration with analytics teams and resolving operational challenges are critical aspects of the role.
+
+No specific geographic restrictions or visa requirements are mentioned, indicating openness to diverse candidates. The company specializes in Software Development, Web Development, and Business Intelligence, suggesting a dynamic technical environment.
+
+Compensation details are not disclosed, and no specific benefits are outlined in the job posting. The role appears to be a full-time position with potential for growth in a technology-focused organization.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": ["Python", "relational databases", "SQL Server", "Oracle", "MySQL", "ETL processes", "ELT processes", "data extraction", "data manipulation", "data transformation", "unit testing", "integration testing"],
+      "nice_to_have_hard_skills": ["data processing", "Numpy", "Pandas"],
+      "must_have_soft_skills": ["Communication", "Team Collaboration", "Problem Solving"],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": "MASTERS",
+      "education_area": "Computer Science",
+      "education_requirement": "required",
+      "education_text_raw": "Master's Degree in Computer Science/Information Technology, Data Analytics/Data Science, or related discipline",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": null,
+      "company_description_text": "BeaconFire is based in Central NJ, specializing in Software Development, Web Development, and Business Intelligence; looking for candidates who are good communicators and self-motivated"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 49
+  }
+}
+```

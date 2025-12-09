@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Title is 'Data Engineer-Data Warehouse' but no years of experience mentioned in either the job posting or Pass 1 results. No explicit seniority indicators.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title explicitly states 'Data Engineer' and core responsibilities focus on data pipelines, ETL, and data management systems.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.9,
+        "evidence": "Title and required expertise emphasize 'Data Warehouse' and 'DBT' (a warehouse-focused tool).",
+        "source": "pass1_derived"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.7,
+        "evidence": "Role focuses on technical implementation and collaboration with teams, but no explicit mention of leadership (technical or people).",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit cloud providers mentioned in the job posting or Pass 1 results. Tools like Spark and Hadoop are cloud-agnostic.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No secondary clouds mentioned in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.8,
+        "evidence": "Job posting mentions both 'batch and real-time processing' as core responsibilities.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit orchestration tools mentioned beyond generic ETL tools like DataStage.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.85,
+        "evidence": "Job posting explicitly mentions 'Snowflake' (a data warehouse) as preferred, and DBT (warehouse-focused tool) as required.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Location is specified as 'Kochi, Kerala, India' but no remote work model or restrictions are discussed.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.7,
+        "evidence": "Location is explicitly 'Kochi, Kerala, India', suggesting a focus on candidates within the country.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "No relocation package or requirements mentioned; location is specified but no indication of relocation support.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "Visa sponsorship is not mentioned in Pass 1 results or the job posting.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "No signals regarding OPT/CPT or student visa eligibility; location in India may imply local work authorization focus.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No citizenship or work authorization requirements explicitly stated in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Employment type is 'full_time' but no contract type (W2, C2C, 1099) is specified.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits are mentioned in Pass 1 results or the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit or implied career growth paths discussed in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.7,
+        "evidence": "Job posting mentions collaborating with 'other scientists, engineers, consultants and database administrators of all backgrounds', suggesting potential mentorship opportunities.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit mention of promotions or advancement paths in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of internal mobility or role changes in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No explicit career tracks (IC, management, specialist, architect) mentioned in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.7,
+        "evidence": "Pass 1 results show a clear distinction between 'must_have_hard_skills' (8 skills) and 'nice_to_have_hard_skills' (2 skills), with strict language around required expertise.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.8,
+        "evidence": "Job posting focuses on data engineering with a clear emphasis on data warehouse and ETL responsibilities.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.6,
+        "evidence": "Required skills (DBT, Java, Python, Scala, Linux, SQL, Spark, Hadoop) are reasonable for a data engineering role, though seniority level is not explicitly stated.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

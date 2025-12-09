@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.65,
+        "evidence": "Master's degree required with no explicit years of experience mentioned; responsibilities suggest mid-level work (designing ETL/ELT, unit testing, collaborating with teams) without senior leadership expectations",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Job title is explicitly 'Data Engineer' and responsibilities focus on building and maintaining data pipelines, ETL/ELT processes, and data transformation systems",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.85,
+        "evidence": "Explicit mention of ETL/ELT processes, data extraction, and manipulation from relational databases; no streaming or real-time technologies mentioned",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.90,
+        "evidence": "No mention of managing teams, mentoring, or architectural leadership; responsibilities focus on individual execution and collaboration without people management",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No cloud platforms (AWS, Azure, GCP) or cloud services mentioned in job description or Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No cloud platforms mentioned at all",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.88,
+        "evidence": "Focus on ETL/ELT, data extraction, and transformation from relational databases suggests batch processing; no streaming or real-time systems mentioned",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No orchestration tools (Airflow, Dagster, dbt, etc.) mentioned in job description or Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.75,
+        "evidence": "Mention of relational databases (SQL Server, Oracle, MySQL) and ETL/ELT processes suggests data warehousing focus; no data lake or lakehouse technologies mentioned",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.80,
+        "evidence": "Company is based in Central NJ and location is listed as New Jersey, United States; no explicit remote policy but implies regional presence",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.85,
+        "evidence": "Location specified as New Jersey, United States; no mention of global or multi-timezone teams",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "No explicit relocation requirement mentioned; location is stated but no language about moving or relocation package",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Visa sponsorship not mentioned; no indication of support for H1B or other work visas",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of student visas or OPT/CPT; Master's degree required suggests formal education but no accommodation for students",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.80,
+        "evidence": "No explicit citizenship requirement; location in US implies need for work authorization but not necessarily citizenship",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Employment type and contract type not specified in job posting or Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits, equity, PTO, or compensation details mentioned in job posting or Pass 1 extraction",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Mentions 'passion for data and deep desire to learn' but no specific career tracks, promotion paths, or advancement opportunities described",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions working with analytics team and architecture/engineering leads, suggesting collaboration with senior staff but no formal mentorship program",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of promotions, advancement, or career progression in job description or Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers, lateral moves, or exploring other roles within the company",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.55,
+        "evidence": "No career tracks (IC, management, specialist, architect) explicitly mentioned; only general collaboration with leads noted",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Clear must-have skills (Python, SQL, ETL/ELT) vs. nice-to-have (Numpy, Pandas); balanced requirements with some flexibility",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused on data engineering responsibilities: building pipelines, ETL/ELT, data transformation, testing; no hybrid or multi-role expectations",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Requirements are reasonable for a mid-level data engineer: Master's degree, Python, SQL, ETL/ELT; no unrealistic skill combinations or excessive experience demands",
+        "source": "inferred"
+      }
+    }
+  }
+}

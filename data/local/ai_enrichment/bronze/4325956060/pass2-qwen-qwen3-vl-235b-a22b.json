@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 16:16:55",
+    "job_posting_id": "4325956060",
+    "job_title": "Data Engineer-Data Platforms",
+    "company_name": "IBM",
+    "job_location": "Bengaluru East, Karnataka, India",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.65,
+          "evidence": "Title is 'Data Engineer' without senior/staff designation; responsibilities suggest mid-level execution and design without leadership scope; no years specified but requirements align with mid-level expectations",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Job title explicitly states 'Data Engineer'; core responsibilities focus on ETL, data modeling, Spark, and cloud platforms — all core data engineering functions",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.8,
+          "evidence": "Strong emphasis on ETL pipelines, data warehousing, and Spark for distributed processing — all batch-oriented; Kafka mentioned but not emphasized as primary paradigm",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.75,
+          "evidence": "Responsibilities include 'provide regular support/guidance to project teams' but no mention of managing people, hiring, or architectural ownership; role is execution-focused under agile framework",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "multi",
+          "confidence": 0.85,
+          "evidence": "Pass 1 lists AWS, Azure, and GCP as 'nice to have' — no single cloud is required or emphasized; implies multi-cloud environment or flexibility",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [
+            "aws",
+            "azure",
+            "gcp"
+          ],
+          "confidence": 0.85,
+          "evidence": "All three major clouds are listed as preferred skills, indicating they are secondary or interchangeable options",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.75,
+          "evidence": "Kafka (streaming) and Spark/Hadoop/ETL (batch) both mentioned; no dominance of one paradigm; suggests hybrid data processing needs",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No orchestrator tools (Airflow, Dagster, etc.) mentioned in requirements or description",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.8,
+          "evidence": "HDFS (lake) and data warehousing concepts mentioned together; cloud storage systems (S3/ADLS/GCS) implied via cloud platforms — suggests mixed storage architecture",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.85,
+          "evidence": "Location specified as 'Bengaluru East, Karnataka, India' — implies regional presence required; no mention of remote flexibility or global hiring",
+          "source": "inferred"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.9,
+          "evidence": "Location restricted to India (Bengaluru); no mention of global or multi-timezone collaboration",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.85,
+          "evidence": "Specific location given without remote option; implies candidate must be able to work from Bengaluru East",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Pass 1 explicitly states 'not_mentioned' for visa sponsorship; location in India suggests local hiring only",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of student visas or OPT/CPT; location in India makes US student visa irrelevant",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.8,
+          "evidence": "No citizenship requirement stated; location in India implies local work authorization is sufficient",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.85,
+          "evidence": "IBM is a large enterprise; job title 'Data Engineer' implies full-time employee status; no contract or freelance language",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "Pass 1 shows empty benefits array; no mention of equity, PTO, learning budget, or other perks in job description",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.65,
+          "evidence": "Mentions 'continuous improvements' and 'latest technologies' but no specific career tracks, promotion ladder, or advancement paths",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Mentions 'provide regular support/guidance to project teams' — implies mentoring junior members; no formal mentorship program mentioned",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of promotions, advancement, or career progression in job description or Pass 1",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal transfers, role changes, or exploring other teams",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.55,
+          "evidence": "No explicit mention of IC, management, or specialist tracks; inferred from IBM's typical structure but not stated",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear distinction between 'Required' and 'Preferred' skills; 12 must-haves vs 4 nice-to-haves — balanced but not overly flexible",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused on data engineering responsibilities: design, build, support, testing under agile; no hybrid roles or ambiguous duties",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Skills listed (Spark, Python, SQL, ETL, Kafka) are standard for mid-level data engineers; no unrealistic combinations or senior-level expectations for junior role",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7581,
+    "input_tokens": 5825,
+    "output_tokens": 1756,
+    "cost": 0.009337
+  }
+}

@@ -89,6 +89,17 @@ def execute_pass2(client: BedrockClient, job: Dict[str, Any], pass1_result: Dict
         if not is_valid:
             print(f"\n  Warning: Validation errors in Pass 2 response: {validation_errors}")
 
+            # Try to fix flat responses (fields at root instead of under "inference")
+            if "Missing or invalid 'inference' key" in str(validation_errors):
+                # Check if response has Pass 2 fields at root level
+                known_pass2_fields = ['seniority_level', 'job_family', 'sub_specialty', 'primary_cloud']
+                has_pass2_fields = any(field in parsed for field in known_pass2_fields)
+
+                if has_pass2_fields:
+                    print(f"  → Attempting to fix flat response (wrapping in 'inference' key)")
+                    parsed = {'inference': parsed}
+                    is_valid = True  # Mark as valid after fix
+
         # Extract inference section
         inference_result = parsed.get('inference', {})
 

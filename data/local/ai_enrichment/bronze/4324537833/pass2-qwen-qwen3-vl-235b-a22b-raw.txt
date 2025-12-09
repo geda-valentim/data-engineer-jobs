@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.92,
+        "evidence": "Title is 'Staff Data Engineer' which typically corresponds to senior level, and requires 5+ years with advanced degree or 7+ with bachelor's, aligning with senior expectations",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Job title explicitly states 'Data Engineer' and responsibilities focus on data pipelines, modeling, and integration",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "streaming_realtime",
+        "confidence": 0.85,
+        "evidence": "Explicit mention of Kafka and Spark-Streaming, indicating focus on real-time/streaming data processing",
+        "source": "pass1_derived"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.78,
+        "evidence": "Requires leading development of complex pipelines and mentoring junior engineers, indicating technical leadership without direct reports",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.95,
+        "evidence": "Explicitly mentions both AWS and Azure as required cloud platforms",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": ["aws", "azure"],
+        "confidence": 0.90,
+        "evidence": "Both AWS and Azure are mentioned as required skills, indicating multi-cloud environment",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.88,
+        "evidence": "Mentions both batch (Airflow) and streaming (Kafka, Spark-Streaming) technologies",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.95,
+        "evidence": "Airflow explicitly mentioned as required workflow management tool",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.82,
+        "evidence": "Mentions data lakes (Hadoop, Hive) and data warehouse management, indicating both lake and warehouse patterns",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.88,
+        "evidence": "Location specified as Bengaluru East, Karnataka, India with hybrid work model, suggesting regional restriction",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.92,
+        "evidence": "Location restricted to India (IN) with no mention of global or multi-timezone teams",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.85,
+        "evidence": "Location specified as Bengaluru East, Karnataka, India with hybrid work model, implying relocation may be required for non-residents",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of visa sponsorship, and location is in India, suggesting no H1B sponsorship",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Location in India and no mention of student visa support suggests not OPT/CPT friendly",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.88,
+        "evidence": "Location in India implies authorization to work in India is required, but no citizenship requirement stated",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time permanent position suggests W2 employment type",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.85,
+        "evidence": "No specific benefits mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Mentions leading projects and mentoring, implying growth opportunities but no explicit career tracks",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.80,
+        "evidence": "Mentions working with senior data engineers and leading junior engineers, implying mentorship opportunities",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion paths or advancement opportunities",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal mobility or lateral moves",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.70,
+        "evidence": "Title 'Staff Data Engineer' implies IC track, but no explicit mention of management or other tracks",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.73,
+        "evidence": "Clear distinction between must-have and nice-to-have skills, with reasonable requirements for senior level",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.82,
+        "evidence": "Focused on data engineering responsibilities with clear technical requirements",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Skills required are reasonable for a senior/staff data engineer role with 5-7+ years experience",
+        "source": "inferred"
+      }
+    }
+  }
+}

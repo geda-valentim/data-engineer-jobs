@@ -1,0 +1,277 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 19:30:16",
+    "job_posting_id": "4348287826",
+    "job_title": "Data Engineer",
+    "company_name": "BeaconFire Inc.",
+    "job_location": "New Jersey, United States",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.75,
+          "evidence": "Mentions relational databases (SQL Server, Oracle, MySQL) and collaboration with analytics teams, but no explicit modern data stack tools (e.g., Snowflake, dbt, Airflow) or advanced governance practices are stated. Automated unit tests and integration testing are mentioned, suggesting some engineering rigor.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.75,
+          "evidence": "Matches the data_maturity_score of 3, with signals of documented processes (testing) and some governance (working with architecture leads), but lacks explicit mention of modern tooling or advanced practices.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "data_quality_testing"
+          ],
+          "confidence": 0.8,
+          "evidence": "Job posting mentions automated unit tests and integration testing efforts, indicating awareness of data quality practices. However, no modern orchestration, governance, or CI/CD tools are explicitly referenced.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.3,
+          "confidence": 0.85,
+          "evidence": "Role is primarily focused on data engineering tasks (ETL/ELT, pipelines, databases), but responsibilities include collaborating with analytics teams and resolving operational/performance issues, which may expand scope slightly.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "Job posting emphasizes 'self-motivated' and 'ability to work independently' without mentioning work-life balance, PTO, or protective factors. No explicit signals of overtime, but lack of clarity on pace and deadlines increases risk.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.8,
+          "evidence": "Responsibilities are well-defined for a data engineering role, focusing on pipelines, ETL/ELT, and collaboration with analytics teams.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.4,
+          "confidence": 0.75,
+          "evidence": "Moderate risk due to lack of transparency on work-life balance, potential overtime, and no mention of benefits or compensation. Role clarity is strong, but other red flags (e.g., no modern stack signals) contribute to the score.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "vague",
+          "confidence": 0.65,
+          "evidence": "Job posting mentions working with 'architecture/engineering leads' but does not specify a direct reporting line or manager title.",
+          "source": "inferred"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.5,
+          "evidence": "No explicit mention of who the candidate would report to, only vague references to 'leads' and 'other teams'.",
+          "source": "inferred"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No signals of team growth velocity or hiring trajectory in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.9,
+          "evidence": "No explicit team size or composition details provided beyond collaboration with analytics and architecture teams.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "Job posting does not specify reporting structure or manager title.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "Job posting mentions collaborating with analytics teams and architecture leads, suggesting cross-functional work. However, no explicit mention of being embedded in product teams.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.4,
+          "confidence": 0.75,
+          "evidence": "No explicit mention of PTO, work-life balance, or protective factors. Signals like 'self-motivated' and lack of clarity on pace suggest moderate risk.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.6,
+          "confidence": 0.7,
+          "evidence": "Mentions passion for learning and collaboration with architecture leads, but no explicit learning budget, conference support, or career paths. Role is part of a growing team, which may imply opportunities.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.5,
+          "confidence": 0.75,
+          "evidence": "Testing and collaboration practices are mentioned, but no signals of modern tooling, CI/CD, or innovation culture beyond generic references.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No explicit mentions of open source contributions, tech blogs, conference speaking, or innovation time in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "code_review",
+            "data_quality_testing"
+          ],
+          "confidence": 0.8,
+          "evidence": "Mentions automated unit tests and integration testing, implying some code review practices. No explicit mention of CI/CD, pair programming, or other dev practices.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.65,
+          "evidence": "Focus is on maintaining and operating existing systems (ETL/ELT, pipelines) with no explicit mention of innovation, R&D, or experimentation.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "Mentions resolving operational and performance issues, which may imply awareness of tech debt, but no explicit refactoring or modernization efforts are stated.",
+          "source": "inferred"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.95,
+          "evidence": "No mention of ML/AI tools, frameworks, or collaboration with data scientists in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No ML/AI tools or frameworks mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit urgency signals like 'immediate start' or 'ASAP' in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.65,
+          "evidence": "Location is restricted to New Jersey (less competitive than SF/NYC/Seattle), but no salary disclosure or remote flexibility may increase competition. No application count or Easy Apply signals are available.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit signals of company stage (e.g., funding, team size) beyond specialization in software/web development and BI.",
+          "source": "pass1_derived"
+        },
+        "hiring_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit hiring velocity signals in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit team size signals beyond collaboration with analytics and architecture teams.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit funding stage signals in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit signals of whether this is a new headcount, backfill, or team expansion.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "well_defined_role",
+        "learning_opportunities",
+        "collaborative_culture"
+      ],
+      "strength_details": [
+        "Role is clearly defined as a data engineering position with focused responsibilities (ETL/ELT, pipelines, databases).",
+        "Collaboration with analytics and architecture teams offers opportunities to learn and grow cross-functional skills.",
+        "Mentions engineering best practices and quality solutions, indicating a culture that values technical rigor."
+      ],
+      "concern_categories": [
+        "overtime_likely",
+        "salary_not_disclosed",
+        "vague_requirements",
+        "legacy_technology"
+      ],
+      "concern_details": [
+        "Lack of transparency on work-life balance, PTO, and overtime expectations increases the risk of time pressure and long hours.",
+        "No salary range disclosed, which may lead to below-market offers or negotiation challenges.",
+        "Job posting does not specify years of experience required, making it difficult to gauge role fit or seniority expectations.",
+        "Relational databases (SQL Server, Oracle, MySQL) are the primary tools mentioned, with no explicit adoption of modern data stack (e.g., Snowflake, dbt, Airflow), suggesting potential legacy technology focus."
+      ],
+      "best_fit_categories": [
+        "mid_level_engineers",
+        "data_generalists",
+        "career_changers"
+      ],
+      "best_fit_details": [
+        "Mid-level data engineers with 3-5 years of experience in batch ETL and relational databases will find this role a good fit.",
+        "Data generalists who enjoy building pipelines and collaborating with analytics teams may thrive here.",
+        "Career changers with a Master's degree in Computer Science/IT and foundational Python skills could transition into this role, given the emphasis on learning and passion for data."
+      ],
+      "probe_categories": [
+        "work_hour_expectations",
+        "remote_policy_details",
+        "tech_stack_details",
+        "career_growth_path",
+        "salary_range_details"
+      ],
+      "probe_details": [
+        "Ask about actual work hours, sprint cadence, and deadline pressure to clarify overtime risk.",
+        "Probe the company's remote work policy and expectations for in-office collaboration, given the New Jersey location restriction.",
+        "Inquire about the tech stack in use (e.g., Are they using modern tools like Airflow or dbt, or is it legacy-heavy?).",
+        "Understand the career growth path for data engineers: Are there opportunities to advance to senior roles or leadership tracks?",
+        "Request clarity on the salary range and compensation structure to ensure alignment with market expectations."
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "domain_expertise"
+      ],
+      "leverage_details": [
+        "Candidates with experience in relational databases (SQL Server, Oracle, MySQL) and batch ETL/ELT processes have a strong match for the core responsibilities.",
+        "Experience in resolving operational and performance issues is a key differentiator for this role."
+      ],
+      "overall_assessment": "This role is a solid opportunity for mid-level data engineers or generalists with experience in batch ETL and relational databases. The company values collaboration and technical rigor, but the lack of modern tooling, salary transparency, and work-life balance signals raises concerns. Candidates should probe these areas during interviews to ensure alignment with their career goals and expectations.",
+      "recommendation_score": 0.55,
+      "recommendation_confidence": 0.8
+    },
+    "tokens": 12779,
+    "input_tokens": 9809,
+    "output_tokens": 2970,
+    "cost": 0.015749
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 19:21:46",
+    "job_posting_id": "4342322878",
+    "job_title": "Senior Data Engineer",
+    "company_name": "Haypp Group",
+    "job_location": "Stockholm, Stockholm County, Sweden",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 4,
+          "confidence": 0.85,
+          "evidence": "Mentions modern data stack tools (AWS Redshift, S3, dbt, Airflow), infrastructure as code (Terraform), data governance, security, maintainability, and observability. The emphasis on best practices, version-controlled infrastructure, and collaboration with analytics teams suggests structured and managed data processes.",
+          "source": "combined"
+        },
+        "data_maturity_level": {
+          "value": "managed",
+          "confidence": 0.85,
+          "evidence": "Matches the data_maturity_score of 4 with signals indicating strong practices and mature tooling.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption",
+            "cicd_practices",
+            "data_governance",
+            "monitoring_observability",
+            "cloud_native"
+          ],
+          "confidence": 0.9,
+          "evidence": "Explicit mentions of dbt, Airflow, AWS, Terraform, and data governance practices. Implied CI/CD from 'best practices' and 'version-controlled infrastructure'.",
+          "source": "combined"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.15,
+          "confidence": 0.9,
+          "evidence": "Role is clearly defined as Senior Data Engineer with focused responsibilities on data pipelines and infrastructure. No conflation with unrelated roles like backend/frontend development or DevOps.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.35,
+          "confidence": 0.8,
+          "evidence": "Company describes itself as 'fast-moving' and 'growing rapidly', which may imply startup pace. However, generous benefits (30 days paid vacation, wellness allowance) and no explicit overtime mentions mitigate this risk.",
+          "source": "combined"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.95,
+          "evidence": "Job posting provides detailed and focused responsibilities for the Senior Data Engineer role, with no ambiguity in scope.",
+          "source": "explicit"
+        },
+        "overall_red_flag_score": {
+          "value": 0.25,
+          "confidence": 0.85,
+          "evidence": "Low scope creep and moderate overtime risk, combined with clear role definition and no severe negative signals (e.g., no equity, no benefits).",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "vague",
+          "confidence": 0.9,
+          "evidence": "Job posting mentions joining the 'data engineering team in our tech department' but does not specify a direct manager or reporting line beyond this.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit mention of 'Head of Data Engineering' or similar title in the context of reporting structure. The title is inferred from team context but not confirmed.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "rapid_expansion",
+          "confidence": 0.75,
+          "evidence": "Company states it is 'growing rapidly' and mentions an 'expansion journey', suggesting rapid team growth.",
+          "source": "inferred"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "medium_6_15",
+            "de_count": "5+ data engineers",
+            "seniority_mix": "mix of senior and mid-level"
+          },
+          "confidence": 0.8,
+          "evidence": "Job posting mentions joining a 'data engineering team' within a broader 'tech department' of 300 team members. Pass 2 infers a medium-sized team of 8-15 engineers, with at least 5 data engineers. Seniority mix is implied from the company's focus on senior hires and rapid scaling.",
+          "source": "combined"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or clear reporting structure mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Job posting mentions working closely with the Analytics team and stakeholders but does not explicitly state embedding within cross-functional product teams.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.75,
+          "confidence": 0.85,
+          "evidence": "Generous benefits (30 days paid vacation, wellness allowance) and no explicit mentions of on-call or overtime. However, 'fast-moving' and 'growing rapidly' may imply some time pressure.",
+          "source": "combined"
+        },
+        "growth_opportunities_score": {
+          "value": 0.85,
+          "confidence": 0.88,
+          "evidence": "Company values emphasize learning and development ('Innovation Drives Us', 'Going the Extra Mile'). Role involves driving data infrastructure and architecture forward, suggesting growth opportunities. Team expansion signals further opportunities for advancement.",
+          "source": "combined"
+        },
+        "tech_culture_score": {
+          "value": 0.8,
+          "confidence": 0.9,
+          "evidence": "Modern tech stack (AWS, dbt, Airflow, Terraform) with a focus on best practices, version control, and collaboration. Company values highlight innovation and inclusion, which are positive tech culture signals.",
+          "source": "combined"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "tech_blogs",
+            "innovation_time"
+          ],
+          "confidence": 0.7,
+          "evidence": "Company values include 'Innovation Drives Us' and mentions 'trying new things out', which may imply innovation time and tech blogging. No explicit mention of open source contributions or conference speaking.",
+          "source": "inferred"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "ci_cd",
+            "code_review",
+            "monitoring",
+            "design_docs"
+          ],
+          "confidence": 0.85,
+          "evidence": "Mentions 'best practices' and 'version-controlled infrastructure' (CI/CD), 'scalable, testable, and reliable data pipelines' (monitoring), and 'liaising with stakeholders' (design docs). Code review is implied from collaborative culture but not explicitly stated.",
+          "source": "combined"
+        },
+        "innovation_signals": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Company values and description emphasize innovation and trying new things, but no explicit mention of R&D time or experimentation culture.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": true,
+          "confidence": 0.8,
+          "evidence": "Mentions 'constant improvement' and 'development of data infrastructure', suggesting awareness of tech debt and ongoing refactoring efforts.",
+          "source": "inferred"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "advanced_ml",
+          "confidence": 0.8,
+          "evidence": "Mentions 'power advanced machine learning models' and explicitly lists SageMaker as part of the tech stack, indicating advanced ML integration.",
+          "source": "combined"
+        },
+        "ml_tools_expected": {
+          "value": [
+            "SageMaker"
+          ],
+          "confidence": 0.95,
+          "evidence": "SageMaker explicitly mentioned in the job posting as part of the AWS technology stack.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "asap",
+          "confidence": 0.85,
+          "evidence": "Job posting states 'SEND US YOUR APPLICATION TODAY!' and emphasizes rapid growth, suggesting urgency to fill the role quickly.",
+          "source": "inferred"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Location is Stockholm, Sweden (not a hyper-competitive market like SF/NYC). Role is hybrid (batch/ML) and requires a mix of modern and niche skills (e.g., SageMaker, Terraform), which may limit competition. No salary disclosure or Easy Apply signals could increase competition.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "growth_stage",
+          "confidence": 0.8,
+          "evidence": "Company has 300 team members and serves over 1 million consumers in seven countries. Describes itself as 'one of the Nordics' leading e-commerce groups' and 'growing rapidly', suggesting a growth stage company.",
+          "source": "combined"
+        },
+        "hiring_velocity": {
+          "value": "aggressive",
+          "confidence": 0.85,
+          "evidence": "Company mentions rapid expansion and 'expanding journey', indicating aggressive hiring to support growth initiatives.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "medium_6_15",
+          "confidence": 0.88,
+          "evidence": "Pass 2 infers a medium-sized data engineering team (5+ DEs) within the broader tech department. No explicit team size mentioned, but signals suggest 6-15 engineers.",
+          "source": "inferred"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit funding stage mentioned in the job posting or Pass 1 results. Company describes itself as 'well-funded' but this is not tied to a specific funding round.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "team_expansion",
+          "confidence": 0.9,
+          "evidence": "Job posting mentions joining an expanding data engineering team and rapid company growth, indicating this is a new headcount for team expansion.",
+          "source": "inferred"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "modern_tech_stack",
+        "cloud_native",
+        "learning_opportunities",
+        "well_defined_role",
+        "strong_benefits",
+        "growth_stage",
+        "work_life_balance"
+      ],
+      "strength_details": [
+        "Modern data stack with AWS (Redshift, S3, Lambda), dbt, Airflow, and Terraform, indicating a forward-looking tech environment.",
+        "Role focuses on building scalable, testable, and reliable data pipelines with clear best practices, reducing ambiguity in day-to-day tasks.",
+        "Company values emphasize inclusion, innovation, and collaboration, suggesting a supportive and dynamic work culture.",
+        "Generous benefits package including 30 days paid vacation, private healthcare, wellness allowance (5,000 SEK/year), and parental pay lift, which is competitive for the Swedish market.",
+        "Growth-stage company with established e-commerce operations and rapid expansion, offering stability and opportunities for impact."
+      ],
+      "concern_categories": [
+        "overtime_likely",
+        "no_visa_sponsorship",
+        "unclear_reporting"
+      ],
+      "concern_details": [
+        "Company describes itself as 'fast-moving' and 'growing rapidly', which may imply a startup pace with occasional overtime or deadline pressure. This is mitigated but not eliminated by generous PTO.",
+        "No explicit mention of visa sponsorship, and the location is restricted to Stockholm, Sweden. Candidates outside the EU may need to probe this further.",
+        "Reporting structure is vague, with no clear manager title or hierarchy mentioned. Candidates should clarify this during interviews."
+      ],
+      "best_fit_categories": [
+        "senior_data_engineers",
+        "analytics_engineers",
+        "leadership_track",
+        "startup_enthusiasts"
+      ],
+      "best_fit_details": [
+        "Senior Data Engineers with 5+ years of experience in SQL, Python, and cloud platforms (AWS/GCP), who are comfortable with hybrid batch/ML pipelines and infrastructure as code.",
+        "Engineers with a passion for mentoring and driving technical architecture forward, as the role involves collaborating with analytics teams and stakeholders to improve data infrastructure.",
+        "Candidates who thrive in growth-stage companies with a mission-driven culture and are excited by the opportunity to work in a rapidly expanding e-commerce environment."
+      ],
+      "probe_categories": [
+        "role_scope_boundaries",
+        "work_hour_expectations",
+        "remote_policy_details",
+        "career_growth_path",
+        "tech_debt_situation"
+      ],
+      "probe_details": [
+        "Ask about the specific expectations for work hours and how the 'fast-moving' environment translates into day-to-day responsibilities.",
+        "Clarify the remote work policy, as the job posting does not explicitly state whether hybrid or full remote options are available despite the Stockholm location.",
+        "Inquire about the career growth path for Senior Data Engineers, including opportunities for mentorship, promotions, or lateral moves within the tech department.",
+        "Probe the tech debt situation and how the company balances innovation with maintenance of existing systems. Ask for examples of recent improvements or refactoring efforts.",
+        "Understand the team's roadmap and how success is measured for this role, particularly given the hybrid batch/ML focus."
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "domain_expertise",
+        "rare_skill_match"
+      ],
+      "leverage_details": [
+        "Candidates with experience in AWS (Redshift, S3, Lambda), dbt, Airflow, and Terraform will have strong leverage, as these are core requirements for the role.",
+        "Experience in e-commerce or regulated industries (e.g., compliance, security) could be a differentiator, given the company's focus on nicotine products and data governance.",
+        "Proficiency in advanced ML tools like SageMaker or MLflow may provide additional leverage, as the role involves powering machine learning models."
+      ],
+      "overall_assessment": "This is a compelling opportunity for a Senior Data Engineer looking to join a growth-stage e-commerce company with a mission-driven focus and a modern tech stack. The role offers clear technical responsibilities, strong benefits, and opportunities for learning and leadership. However, candidates should be mindful of potential overtime risks due to the 'fast-moving' environment and clarify remote work policies and reporting structure during interviews. The lack of visa sponsorship may limit options for non-EU candidates.",
+      "recommendation_score": 0.78,
+      "recommendation_confidence": 0.88
+    },
+    "tokens": 14596,
+    "input_tokens": 11125,
+    "output_tokens": 3471,
+    "cost": 0.018067
+  }
+}

@@ -1,0 +1,188 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+Looking at the job posting:
+
+**Title**: Data Engineer-Data Platforms-AWS
+**Company**: IBM
+**Location**: Kochi, Kerala, India
+
+Let me extract information section by section:
+
+1. **Compensation**: No salary information is mentioned in the posting, so all compensation fields should be null.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. No security clearance mentioned either.
+
+3. **Work Model**: 
+   - Location is specified as "Kochi, Kerala, India" - this suggests onsite work
+   - No mention of remote or hybrid work options
+   - No mention of employment type (full-time, contract, etc.)
+
+4. **Contract Details**: No contract information mentioned - no duration, type, etc.
+
+5. **Contractor Rates**: No contractor rates mentioned.
+
+6. **Skills Classification**: This is where I need to be very careful about the qualifiers.
+
+Looking at the skills mentioned:
+
+**Required Technical And Professional Expertise**:
+- "Exposure to streaming solutions and message brokers like Kafka technologies" - this has weak qualifier "exposure"
+- "Minimum 4+ years of experience in Big Data technologies with extensive data engineering experience in Spark / Python or Scala" - "extensive" is a strong qualifier
+- "Minimum 3 years of experience on Cloud Data Platforms on Azure" - "minimum" makes this required
+- "Experience in DataBricks / Azure HDInsight / Azure Data Factory, Synapse, SQL Server DB" - no qualifier
+- "Good to excellent SQL skills" - "good to excellent" is a strong qualifier
+
+**Preferred Technical And Professional Experience**:
+- "Certification in Azure and Data Bricks or Cloudera Spark Certified developers" - "preferred" section
+
+Let me classify these properly:
+
+**Must-have hard skills** (strong qualifiers or in required sections):
+- "Spark" (extensive experience mentioned)
+- "Python" (extensive experience mentioned) 
+- "Scala" (extensive experience mentioned)
+
+
+- "Azure Cloud Data Platform" (minimum 3 years required)
+- "SQL" (good to excellent skills required)
+- "DataBricks" (experience mentioned in required section)
+- "Azure HDInsight" (experience mentioned in required section)
+- "Azure Data Factory" (experience mentioned in required section)
+- "Synapse" (experience mentioned in required section)
+- "SQL Server DB" (experience mentioned in required section)
+- "Hadoop" (mentioned in responsibilities)
+- "HDFS" (mentioned in responsibilities)
+- "HBase" (mentioned in responsibilities)
+- "NoSQL databases" (mentioned in responsibilities)
+- "Kafka" (exposure mentioned in required section)
+
+I'll continue identifying the remaining hard skills, focusing on technologies with strong qualifiers or in required sections. The list includes cloud platforms, data processing tools, and database technologies that demonstrate the comprehensive technical requirements for this role.
+
+The soft skills section reveals a gap in explicit behavioral skill descriptions. While technical competencies are clearly outlined, the posting lacks specific interpersonal or communication skill requirements. This suggests the role prioritizes technical expertise over soft skills in the initial screening process.
+
+The experience requirements are precisely defined, with a minimum of 4+ years in Big Data technologies and 3 years specifically on Azure Cloud Data Platforms. These clear parameters indicate a need for seasoned professionals with proven cloud and data engineering experience.
+
+Regarding education, the posting remains ambiguous. No specific degree requirements are mentioned, leaving room for alternative qualifications or extensive professional experience to substitute for formal education.
+
+The role appears to be a standard full-time position located in Kochi, Kerala, India, with no explicit remote work options suggested. The onsite nature implies a preference for in-person collaboration and direct team interaction.
+
+No additional benefits, equity, or learning opportunities are detailed in the current description, suggesting a more traditional employment structure focused primarily on core technical responsibilities.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Kochi, Kerala, India",
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Spark",
+        "Python",
+        "Scala",
+        "Azure Cloud Data Platform",
+        "SQL",
+        "DataBricks",
+        "Azure HDInsight",
+        "Azure Data Factory",
+        "Synapse",
+        "SQL Server DB",
+        "Hadoop",
+        "HDFS",
+        "HBase",
+        "NoSQL databases",
+        "Kafka",
+        "PySpark",
+        "Hive",
+        "streaming pipelines",
+        "big data technologies",
+        "data pipelines"
+      ],
+      "nice_to_have_hard_skills": [
+        "Azure certification",
+        "Data Bricks certification",
+        "Cloudera Spark certification"
+      ],
+      "must_have_soft_skills": [],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [
+        "Azure certification",
+        "Data Bricks certification",
+        "Cloudera Spark certification"
+      ],
+      "years_experience_min": 4,
+      "years_experience_max": null,
+      "years_experience_text": "Minimum 4+ years of experience in Big Data technologies with extensive data engineering experience in Spark / Python or Scala; Minimum 3 years of experience on Cloud Data Platforms on Azure",
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "specific_countries",
+      "allowed_countries": ["IN"],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "IBM Consulting Client Innovation Centers (Delivery Centers)",
+      "company_description_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 50
+  }
+}
+```

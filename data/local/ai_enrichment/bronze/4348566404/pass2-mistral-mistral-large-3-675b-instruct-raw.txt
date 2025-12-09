@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "not_mentioned",
+        "confidence": 0.6,
+        "evidence": "No explicit seniority level mentioned in title or years of experience. Responsibilities suggest a role that could be mid to senior, but confidence is below threshold due to lack of clear signals.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.9,
+        "evidence": "Title explicitly states 'Data Engineer' and responsibilities focus on template design and document development using OpenText Exstream, which is related to data engineering for content management.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "not_mentioned",
+        "confidence": 0.5,
+        "evidence": "Focus on OpenText Exstream and document template design, but no clear sub-specialty within data engineering (e.g., streaming, batch, governance) is evident.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.7,
+        "evidence": "Responsibilities are individual contributor tasks (designing templates, unit testing). No signals of technical or people leadership.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No cloud providers or services explicitly mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No secondary clouds mentioned as no primary cloud is identified.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No mention of batch, streaming, or hybrid processing paradigms or related tools.",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No orchestration tools or categories mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No storage layers or related technologies (warehouse, lake, lakehouse) mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.7,
+        "evidence": "Location specified as 'Bengaluru East, Karnataka, India', implying a regional restriction.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.8,
+        "evidence": "Job posting restricts location to India, suggesting focus on the country's timezone.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of relocation packages or requirements in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No visa sponsorship mentioned explicitly in Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "No explicit mention of OPT/CPT or student visa eligibility. Job posting is for India, which reduces likelihood of OPT/CPT support.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No work authorization or citizenship requirements discussed in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No contract type or employment model mentioned in Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.9,
+        "evidence": "No benefits discussed in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No discussion of career growth paths or advancement opportunities.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No signals of mentorship or coaching programs in the job posting.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of promotion or advancement paths in the job posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of internal mobility or role changes in the job posting.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No career tracks (IC, management, specialist, architect) mentioned or implied.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.8,
+        "evidence": "All listed skills are categorized as 'must have' with no 'nice to have' skills mentioned in Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.7,
+        "evidence": "Job responsibilities are well-defined and focused on OpenText Exstream and related tasks.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": "not_mentioned",
+        "confidence": 0.6,
+        "evidence": "No years of experience explicitly stated, making it difficult to assess skill inflation. However, the tools mentioned (OpenText Exstream) are niche and may imply a senior skill set without clear seniority signals.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

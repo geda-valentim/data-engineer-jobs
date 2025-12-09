@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 15:55:16",
+    "job_posting_id": "4325827765",
+    "job_title": "Data Consultant-Data Governance",
+    "company_name": "IBM",
+    "job_location": "Pune, Maharashtra, India",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.65,
+          "evidence": "Title is 'Data Consultant-Data Governance' with no explicit seniority indicator; responsibilities suggest mid-level work (data governance, lineage, integration) without leadership or architecture expectations; education requirement is 'preferred' Master's, not required, which often indicates mid-level roles.",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.95,
+          "evidence": "Job title explicitly includes 'Data Engineer' in description; core responsibilities involve data gathering, storage, processing, integration, and modeling — all core data engineering functions.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "data_governance",
+          "confidence": 0.92,
+          "evidence": "Role title is 'Data Consultant-Data Governance'; must-have skills include 'data governance', 'data lineage', 'metadata analysis', and tools like Alation and Manta — all governance-focused.",
+          "source": "pass1_derived"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.85,
+          "evidence": "No mention of managing teams, hiring, or people leadership; responsibilities focus on technical implementation, collaboration, and process design — consistent with individual contributor role.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No cloud providers (AWS, Azure, GCP) mentioned in job description or Pass 1 extraction; focus is on on-premise or vendor tools (Alation, Manta, Elasticsearch, Splunk).",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No cloud platforms mentioned at all in the job posting or extraction results.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.75,
+          "evidence": "Job description explicitly mentions 'both batch and real-time processing' — indicating hybrid paradigm.",
+          "source": "pass1_derived"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No orchestrators (Airflow, Dagster, Prefect, etc.) mentioned in skills or responsibilities.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No specific storage systems (warehouse, lake, lakehouse) mentioned; focus is on governance and lineage tools rather than storage architecture.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.9,
+          "evidence": "Location is explicitly 'Pune, Maharashtra, India'; work model is 'onsite' — indicating requirement to be physically present in that region.",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.95,
+          "evidence": "Location restricted to Pune, India; no mention of global or multi-timezone collaboration — implies India-specific timezone focus.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.9,
+          "evidence": "Onsite work model + specific location (Pune, India) implies relocation may be required if candidate is not already based there.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Location is Pune, India — not a US-based role; no mention of visa sponsorship; IBM India roles typically do not sponsor H1B.",
+          "source": "inferred"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Role is based in India; OPT/CPT are US-specific student visas — not applicable.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.85,
+          "evidence": "No citizenship requirement mentioned; location is India — implies authorization to work in India is required, but no specific citizenship mandate.",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Employment type is 'full_time' and 'permanent' — consistent with W2 employee status in India (equivalent to permanent employment).",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits listed in Pass 1 extraction or job description — no mention of health, PTO, equity, or learning budgets.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.65,
+          "evidence": "Mentions 'work in IBM Consulting Client Innovation Centers' and 'collaborate with diverse teams' but no explicit career tracks, promotion paths, or advancement levels.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Mentions 'collaborating with diverse teams including scientists, engineers, consultants and database administrators' — implies learning from experienced colleagues, but no formal mentorship program mentioned.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of promotions, advancement, or career progression in job description or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal transfers, lateral moves, or exploring other roles within IBM.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.8,
+          "evidence": "No mention of IC, management, specialist, or architect tracks; role is focused on governance implementation, not career pathing.",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.8,
+          "evidence": "All skills listed are under 'must_have_hard_skills' with no 'nice_to_have' — indicating strict requirements; specific tools (Alation, Manta) and domains (data governance, lineage) required.",
+          "source": "pass1_derived"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Role is narrowly focused on data governance, lineage, and integration using specific tools (Alation, Manta); responsibilities are well-defined around governance processes and metadata analysis.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.75,
+          "evidence": "Skills required (Alation, Manta, data governance, modeling) are specialized but reasonable for a mid-level data governance role; no unrealistic combinations or senior-level expectations for junior title.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7765,
+    "input_tokens": 5915,
+    "output_tokens": 1850,
+    "cost": 0.009615
+  }
+}

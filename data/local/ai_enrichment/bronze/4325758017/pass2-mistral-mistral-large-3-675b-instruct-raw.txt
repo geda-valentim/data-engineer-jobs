@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "not_mentioned",
+        "confidence": 0.5,
+        "evidence": "Title mentions 'Data Scientist' but job description refers to 'Data Engineer' role with no explicit seniority level or years of experience stated.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_scientist",
+        "confidence": 0.7,
+        "evidence": "Title is 'Data Scientist-Advanced Analytics' and responsibilities include implementing/validating predictive models, statistical modeling, and AI solutions.",
+        "source": "inferred"
+      },
+      "sub_specialty": {
+        "value": "general",
+        "confidence": 0.6,
+        "evidence": "Focus on AI, LLM, and predictive modeling, but no clear sub-specialty like streaming, batch, or governance emphasized.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.6,
+        "evidence": "Role emphasizes collaboration and technical tasks but no explicit leadership or mentoring responsibilities mentioned.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No cloud providers or services explicitly mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No secondary clouds mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.7,
+        "evidence": "Job description mentions both 'batch and real-time processing' in responsibilities.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No orchestration tools mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit storage layers (warehouse, lake, lakehouse) mentioned beyond generic 'data management systems'.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.8,
+        "evidence": "Location specified as 'Bengaluru East, Karnataka, India' implies regional restriction.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.7,
+        "evidence": "Location is explicitly tied to India (Bengaluru), suggesting focus on the country's timezone.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "No relocation package or requirement mentioned; job is tied to a specific location but does not state relocation is mandatory.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of visa sponsorship in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": "not_mentioned",
+        "confidence": 0.5,
+        "evidence": "No signals regarding OPT/CPT or student visa eligibility.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No citizenship or work authorization requirements explicitly stated.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No contract type or employment model explicitly stated.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.9,
+        "evidence": "No benefits discussed in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.6,
+        "evidence": "Mentions 'growth mindset' and 'clients' business processes and challenges' but no explicit or implied career tracks.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.7,
+        "evidence": "Collaborative environment with 'other scientists, engineers, consultants and database administrators' suggests learning from experienced team members.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit mention of promotion or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of internal mobility or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["not_mentioned"],
+        "confidence": 0.9,
+        "evidence": "No career tracks (IC, management, specialist, architect) explicitly or implicitly mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.7,
+        "evidence": "Mix of 'must have' and 'nice to have' skills with 'Preferred Education' explicitly stated as non-mandatory.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "multi_role",
+        "confidence": 0.8,
+        "evidence": "Job posting combines responsibilities of Data Scientist (predictive modeling, AI) and Data Engineer (data gathering, storage, processing).",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": true,
+        "confidence": 0.7,
+        "evidence": "Title and role description mismatch (Data Scientist vs Data Engineer) with advanced skills like LLM and AI for a role lacking clear seniority signals.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 19:28:16",
+    "job_posting_id": "4342532184",
+    "job_title": "Data Scientist (Contract)",
+    "company_name": "Counterpart",
+    "job_location": "São Paulo, São Paulo, Brazil",
+    "pass_name": "pass2",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.7,
+          "evidence": "Title is 'Data Scientist (Contract)' with 3+ years of experience mentioned, but no explicit senior title or higher years requirement",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_scientist",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Data Scientist', and responsibilities focus on data science techniques, model training, and performance tracking",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "general",
+          "confidence": 0.6,
+          "evidence": "Responsibilities include a mix of data science tasks (modeling, metrics, APIs) but no heavy emphasis on a specific sub-specialty like streaming or MLOps",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.75,
+          "evidence": "Mentions steering development of products/services, maintaining clean production environments, and building/supporting a team of data scientists/analysts, but no explicit people management duties",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of cloud providers or services in the job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No secondary clouds mentioned",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "Mentions 'pipelines' and 'data infrastructure' but no explicit tools or paradigms like batch/streaming",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of orchestration tools or categories",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of storage layers or technologies",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "anywhere",
+          "confidence": 0.9,
+          "evidence": "Job posting states 'Work from Anywhere' and 'fully distributed company'",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.7,
+          "evidence": "Prioritizes meetings in US time zones but allows work from anywhere, suggesting a focus on countries with timezone overlap (Americas)",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of relocation packages or requirements; 'Work from Anywhere' implies no relocation needed",
+          "source": "pass1_derived"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of H1B sponsorship; contract role in specific countries suggests work authorization is required but not stated",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Contract role with no mention of student visa support; 'work from anywhere' may imply existing work authorization is required",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "any",
+          "confidence": 0.75,
+          "evidence": "Equal Opportunity Employer statement and no restrictions on citizenship or work authorization mentioned",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "1099",
+          "confidence": 0.8,
+          "evidence": "Role is explicitly a contract position with no mention of W2 or full-time employment; benefits mentioned are typical for contractors (e.g., computer reimbursement)",
+          "source": "combined"
+        },
+        "benefits_level": {
+          "value": "basic",
+          "confidence": 0.65,
+          "evidence": "Benefits mentioned include 'Work from Anywhere', 'Language Classes', 'Paid Vacation and Time Off', 'Parental Leave', and 'Computer', but these are minimal and typical for contract roles",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.55,
+          "evidence": "Mentions 'we create an environment that stretches everyone to grow' but lacks specificity about career tracks or advancement",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Mentions collaboration with 'insurance domain experts and engineering team members' and 'building/supporting a team of data scientists and analysts'",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of promotions or advancement paths in the job posting",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal mobility or role changes",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track"
+          ],
+          "confidence": 0.6,
+          "evidence": "Role focuses on individual contributor tasks with no clear mention of management or other tracks",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Job posting lists '3+ years of experience' and specific skills as requirements but does not use strict qualifiers like 'must have' for all items",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.8,
+          "evidence": "Job description is focused on data science responsibilities with a clear scope, not combining multiple roles",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "Requires 3+ years for a mid-level role but also asks for 5+ years of Python and experience deploying ML models to production, which is typically senior-level",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 9319,
+    "input_tokens": 7580,
+    "output_tokens": 1739,
+    "cost": 0.011058
+  }
+}

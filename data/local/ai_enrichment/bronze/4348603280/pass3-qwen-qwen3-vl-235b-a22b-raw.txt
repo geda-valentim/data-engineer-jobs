@@ -1,0 +1,234 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Focus on traditional BI/DW with Cognos, DataStage, Informatica; mentions UNIX but no modern data stack (dbt, Airflow, Snowflake) or CI/CD/data quality practices",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Basic ETL pipelines with traditional tools, some cloud exposure mentioned as preferred but not required",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["legacy_tools", "batch_processing"],
+        "confidence": 0.80,
+        "evidence": "Heavy emphasis on Cognos, DataStage, Informatica - legacy BI/ETL tools; no modern data stack or governance tools mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.25,
+        "confidence": 0.85,
+        "evidence": "Focused on BI reporting, ETL, and data integration with specific tool requirements; no conflation with ML, DevOps, or frontend",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "Onsite work model in delivery center, 'relentless focus on quality' and 'evolutionary maintenance' suggest potential for extended hours; no PTO or work-life balance signals",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.88,
+        "evidence": "Well-defined responsibilities around BI reporting, ETL, and data integration with specific tool requirements (Cognos, DataStage, etc.)",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to onsite delivery center model and potential for overtime, but role is well-defined with reasonable requirements",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "No specific reporting manager mentioned; only references to 'business and technical members of the team'",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No managerial title or reporting structure specified in job posting",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.60,
+        "evidence": "No information about team expansion or hiring velocity; mentions 'Client Innovation Centers' but no growth metrics",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.55,
+        "evidence": "No specific team size or composition details provided; only mentions 'Client Innovation Centers'",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No information about reporting lines or organizational structure",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Mentions working with business and technical team members but no indication of embedded cross-functional product teams",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "Onsite work model, no mention of PTO, flexible hours, or work-life balance; 'relentless focus on quality' and 'evolutionary maintenance' suggest potential for extended hours",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.55,
+        "confidence": 0.65,
+        "evidence": "No explicit learning budget, conference support, or career path mentioned; 'continuous improvement' is vague",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.50,
+        "confidence": 0.75,
+        "evidence": "Legacy tech stack (Cognos, DataStage), no mention of modern engineering practices, code reviews, or innovation culture",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.90,
+        "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No explicit mention of code review, CI/CD, testing, monitoring, or design docs",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.70,
+        "evidence": "Focus on maintenance and evolutionary development rather than innovation; no mention of R&D or experimentation",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of tech debt management, refactoring, or modernization efforts",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.90,
+        "evidence": "No mention of ML, AI, or GenAI; focus is entirely on BI reporting and ETL",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools mentioned in job description or requirements",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No urgency signals like 'ASAP', 'immediate start', or 'urgent need'",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "IBM brand attracts candidates, location in Navi Mumbai (India) with onsite requirement may limit pool, no salary disclosed",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a well-established multinational technology company with global delivery centers",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.80,
+        "evidence": "IBM regularly hires for delivery centers; no indication of aggressive expansion or replacement hiring",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "large_16_50",
+        "confidence": 0.75,
+        "evidence": "IBM Client Innovation Centers typically have large teams; no specific size mentioned but implies scale",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.95,
+        "evidence": "IBM is a publicly traded company with stable funding",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "new_headcount",
+        "confidence": 0.70,
+        "evidence": "No indication of backfill; likely new role to support client projects in delivery center",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["well_defined_role", "established_company", "data_focused_role"],
+    "strength_details": [
+      "Clear responsibilities focused on BI reporting and ETL with specific tool requirements",
+      "Established company (IBM) with global delivery center infrastructure",
+      "Role is specifically data engineering focused without scope creep into other domains"
+    ],
+    "concern_categories": ["legacy_technology", "overtime_likely", "limited_growth", "no_visa_sponsorship"],
+    "concern_details": [
+      "Heavy reliance on legacy tools (Cognos, DataStage) with no modern data stack mentioned",
+      "Onsite work model and 'relentless focus on quality' suggest potential for overtime",
+      "No clear career growth path or learning opportunities mentioned",
+      "Location restricted to India with no visa sponsorship mentioned"
+    ],
+    "best_fit_categories": ["mid_level_engineers", "batch_etl_specialists", "enterprise_experienced"],
+    "best_fit_details": [
+      "Mid-level engineers with 3+ years experience in BI/DW projects using traditional tools",
+      "Candidates experienced with batch ETL and reporting tools (Cognos, DataStage, Informatica)",
+      "Engineers comfortable working in enterprise delivery center environments"
+    ],
+    "probe_categories": ["work_hour_expectations", "tech_stack_details", "career_growth_path", "team_size_composition"],
+    "probe_details": [
+      "Ask about typical work hours and expectations for overtime",
+      "Understand the specific tech stack and whether modern tools are being adopted",
+      "Inquire about career progression opportunities within the delivery center",
+      "Clarify team size and structure for this specific role"
+    ],
+    "leverage_categories": ["exact_experience_match", "domain_expertise"],
+    "leverage_details": [
+      "Strong Cognos and DataStage experience is a key differentiator for this role",
+      "Experience with enterprise BI/DW projects in delivery center environments is valuable"
+    ],
+    "overall_assessment": "Solid opportunity for mid-level data engineers with BI/DW experience seeking stable employment at an established company. Role is well-defined with clear responsibilities but uses legacy technology stack and offers limited growth opportunities. Main trade-offs are potential for overtime in onsite delivery center and lack of modern tech exposure.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.75
+  }
+}

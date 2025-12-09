@@ -1,0 +1,273 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+First, let me identify what information is explicitly stated in the job posting:
+
+**Job Title**: Data Engineer-Data Platforms-Google
+**Company**: IBM
+**Location**: Hyderabad, Telangana, India
+
+Now let me go through each field in the JSON structure:
+
+1. **compensation**: No salary information is mentioned in the job posting, so all compensation fields should be null/false.
+
+2. **work_authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. No security clearance mentioned. So this should be "not_mentioned" for visa_sponsorship_stated and "not_mentioned" for security_clearance_stated.
+
+3. **work_model**: 
+   - Location is explicitly stated as "Hyderabad, Telangana, India" - this suggests onsite work
+   - No mention of remote or hybrid work options
+   - This appears to be a full-time position based on the context
+   - work_model_stated should be "onsite"
+   - employment_type_stated should be "full_time"
+
+4. **contract_details**: 
+   - No mention of contract type, duration, etc.
+   - This appears to be a permanent position
+   - contract_type should be "permanent"
+   - All other contract fields should be null/not_mentioned
+
+5. **contractor_rates**: Not applicable as this is not a contractor position.
+
+6. **skills_classified**: Let me analyze the skills mentioned:
+
+**Hard Skills mentioned:**
+- Database work (Hadoop to GCP migration)
+- Data Replication mechanisms (CDC, file data transfer, bulk data transfer)
+- API development
+- Elasticsearch and Splunk
+- Statistical models and machine learning
+- Big data processing
+- Database integration
+- Data cleansing and integration
+- Predictive/prescriptive modeling
+
+**Soft Skills mentioned:**
+- Excellent verbal and written communication skills
+- Ability to communicate with internal and external clients
+- Teamwork
+- Analytical thinking
+
+**Education:**
+- "Master's Degree Required" - this is explicitly stated as required
+- No specific field of study mentioned, so education_area should be null
+- education_level: "MASTERS"
+- education_requirement: "required"
+- education_text_raw: "Master's Degree Required"
+
+**Experience:**
+- No specific years of experience mentioned
+- years_experience_min, years_experience_max, years_experience_text should all be null
+
+**LLM/GenAI:**
+- No mention of LLMs, GenAI, or related technologies
+- llm_genai_mentioned: false
+
+**Feature Store:**
+- No mention of feature stores
+- feature_store_mentioned: false
+
+7. **geographic_restrictions**:
+- Location is specified as Hyderabad, Telangana, India
+- This suggests specific location requirement
+- geo_restriction_type: "specific_countries"
+- allowed_countries: ["IN"] (India)
+- No excluded countries mentioned
+- No US state restrictions
+- residency_requirement: "must_be_resident" (since it's a specific location in India)
+
+8. **benefits_structured**:
+- No benefits mentioned in the job posting
+- All benefit fields should be null/false
+
+9. **context**:
+- Company description: "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology"
+- Team info: "Work in an Agile, collaborative environment, partnering with other scientists, engineers, consultants and database administrators of all backgrounds and disciplines"
+
+Let me now classify the skills according to the rules:
+
+**Must-have hard skills** (skills with strong qualifiers or in required sections):
+- Database work (Hadoop to GCP) - mentioned in "Required Technical And Professional Expertise"
+- Data Replication mechanisms - mentioned in "Required Technical And Professional Expertise"  
+- API development - mentioned in "Required Technical And Professional Expertise"
+- Elasticsearch and Splunk - mentioned in "Required Technical And Professional Expertise"
+- Statistical models and machine learning - mentioned in responsibilities
+- Big data processing - mentioned in responsibilities
+- Database integration - mentioned in responsibilities
+- Data cleansing and integration - mentioned in responsibilities
+- Predictive/prescriptive modeling - mentioned in responsibilities
+
+**Nice-to-have hard skills**: None explicitly mentioned with weak qualifiers
+
+**Must-have soft skills**:
+- Communication skills - "excellent verbal and written communication skills" (strong qualifier)
+- Teamwork - "You thrive on teamwork" (strong qualifier)
+- Analytical thinking - "providing analytical solutions" (strong qualifier)
+
+**Nice-to-have soft skills**: None explicitly mentioned with weak qualifiers
+
+**Certifications**: None mentioned
+
+Now let me count the fields:
+- Total fields in the JSON structure: Let me count them
+- compensation: 10 fields
+- work_authorization: 4 fields  
+- work_model: 3 fields
+- contract_details: 7 fields
+- contractor_rates: 6 fields
+- skills_classified: 15 fields
+- geographic_restrictions: 5 fields
+- benefits_structured: 6 fields
+- context: 2 fields
+- metadata: 3 fields
+
+Total: 61 fields
+
+Fields found (non-null): Let me count
+- work_model: work_model_stated, employment_type_stated (2)
+- contract_details: contract_type (1)
+- skills_classified: must_have_hard_skills (9 items), must_have_soft_skills (3 items), education_level, education_requirement, education_text_raw, llm_genai_mentioned, feature_store_mentioned (8)
+- geographic_restrictions: geo_restriction_type, allowed_countries, residency_requirement (3)
+- context: company_description_text, team_info_text (2)
+
+Total fields found: 16
+Fields null: 61 - 16 = 45
+
+Let me double-check my classification of skills:
+
+Looking at the "Required Technical And Professional Expertise" section:
+- "Develop/Convert the database (Hadoop to GCP)" - this is in a required section, so must-have
+- "Implementation of a specific Data Replication mechanism" - required section, must-have
+- "Expose data as API" - required section, must-have
+- "Participation in modernization roadmap journey" - required section, must-have
+- "Analyze discovery and analysis outcomes" - required section, must-have
+- "Lead discovery and analysis workshops/playbacks" - required section, must-have
+- "Identification of the applications dependencies" - required section, must-have
+- "Analyze the non-functional requirements" - required section, must-have
+- "Prepare the effort estimates, WBS, staffing plan, RACI, RAID etc." - required section, must-have
+- "Leads the team to adopt right tools" - required section, must-have
+
+Looking at the "Preferred Technical And Professional Experience" section:
+- "You thrive on teamwork and have excellent verbal and written communication skills" - strong qualifiers, so must-have
+- "Ability to communicate with internal and external clients" - strong qualifier, so must-have
+- "Ability to communicate results to technical and non-technical audiences" - strong qualifier, so must-have
+
+Looking at the responsibilities section:
+- "Implementing and validating predictive models" - core responsibility, must-have
+- "creating and maintain statistical models with a focus on big data" - core responsibility, must-have
+- "Designing and implementing various enterprise seach applications such as Elasticsearch and Splunk" - core responsibility, must-have
+- "Build teams or writing programs to cleanse and integrate data" - core responsibility, must-have
+- "developing predictive or prescriptive models" - core responsibility, must-have
+- "evaluating modeling results" - core responsibility, must-have
+
+So my classification looks correct.
+
+Now let me create the JSON response:
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": null,
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Database development and conversion",
+        "Data Replication mechanisms",
+        "API development",
+        "Elasticsearch",
+        "Splunk",
+        "Statistical models",
+        "Machine learning",
+        "Big data processing",
+        "Database integration",
+        "Data cleansing and integration",
+        "Predictive modeling",
+        "Prescriptive modeling",
+        "Model validation",
+        "Model evaluation",
+        "Enterprise search applications"
+      ],
+      "nice_to_have_hard_skills": [],
+      "must_have_soft_skills": [
+        "Communication",
+        "Team Collaboration",
+        "Analytical Thinking"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "Master's Degree Required",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "specific_countries",
+      "allowed_countries": ["IN"],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "must_be_resident"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Work in an Agile, collaborative environment, partnering with other scientists, engineers, consultants and database administrators of all backgrounds and disciplines to bring analytical rigor and statistical methods to the challenges of predicting behaviors.",
+      "company_description_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 18,
+    "fields_null": 43
+  }
+}
+```

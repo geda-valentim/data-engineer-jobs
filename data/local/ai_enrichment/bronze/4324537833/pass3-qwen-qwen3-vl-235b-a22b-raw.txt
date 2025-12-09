@@ -1,0 +1,232 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 4,
+        "confidence": 0.85,
+        "evidence": "Enterprise company with mature data practices including CI/CD, cloud platforms (AWS/Azure), streaming (Kafka), and data governance (data modeling, quality testing). Staff-level role suggests established data organization.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "managed",
+        "confidence": 0.85,
+        "evidence": "Matches score of 4 - strong practices, quality monitoring, mature tooling in enterprise setting",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption", "cicd_practices", "data_governance", "cloud_native"],
+        "confidence": 0.88,
+        "evidence": "Explicit mentions of AWS/Azure, Databricks, Airflow, CI/CD pipelines, data modeling, and data quality testing",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.25,
+        "confidence": 0.82,
+        "evidence": "Focused data engineering role with clear responsibilities (pipelines, modeling, integration). No conflation with data science, analytics, or DevOps roles.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Enterprise environment with hybrid work model, no explicit overtime mentions. However, 'Staff' level in payments industry may imply high expectations.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Well-defined responsibilities including pipeline development, data modeling, CI/CD, and stakeholder management. Clear seniority level (Staff) and technical requirements.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.20,
+        "confidence": 0.80,
+        "evidence": "Low risk - well-defined senior role at established enterprise with good technical practices. No major red flags detected.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "mentioned",
+        "confidence": 0.75,
+        "evidence": "No explicit reporting line mentioned, but implies reporting to data leadership given 'Staff' title and team context.",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "director_plus",
+        "confidence": 0.80,
+        "evidence": "Staff-level role in enterprise typically reports to Director or Head of Data Engineering.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "stable",
+        "confidence": 0.85,
+        "evidence": "Enterprise company with established data team. No mention of rapid expansion or hiring blitz.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "medium_6_15",
+          "de_count": "5-8 data engineers",
+          "seniority_mix": "mix of senior and mid-level"
+        },
+        "confidence": 0.75,
+        "evidence": "Staff-level role suggests established team with senior engineers. Mention of leading junior engineers implies team structure.",
+        "source": "inferred"
+      },
+      "reporting_structure": {
+        "value": "reports_to_director_data",
+        "confidence": 0.80,
+        "evidence": "Staff-level position in enterprise typically reports to Director or Head of Data Engineering.",
+        "source": "inferred"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.70,
+        "evidence": "Mentions collaborating with business teams, data analysts, and information systems teams, suggesting cross-functional work.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.70,
+        "confidence": 0.75,
+        "evidence": "Hybrid work model mentioned, no on-call or overtime expectations stated. Enterprise environment typically offers better work-life balance than startups.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.75,
+        "confidence": 0.80,
+        "evidence": "Staff-level role implies career progression. Mentoring junior engineers and leading projects suggest growth opportunities. No explicit learning budget mentioned.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.75,
+        "confidence": 0.85,
+        "evidence": "Modern stack (AWS/Azure, Databricks, Kafka, Airflow), CI/CD practices, and data governance indicate strong technical culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.90,
+        "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["ci_cd", "monitoring", "design_docs"],
+        "confidence": 0.85,
+        "evidence": "Explicit mentions of CI/CD pipelines, data quality testing (monitoring), and data modeling (design docs).",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Mentions GenAI tools and platforms for efficiency, suggesting some innovation focus. No explicit R&D time mentioned.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions improving key delivery metrics through innovation and optimization, suggesting awareness of tech debt and improvement focus.",
+        "source": "inferred"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.75,
+        "evidence": "Mentions GenAI tools for efficiency but no specific ML/AI infrastructure or MLOps mentioned. Likely working with data scientists rather than building ML systems.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": ["GenAI tools"],
+        "confidence": 0.80,
+        "evidence": "Explicit mention of 'Exposure in leveraging GenAI tools and platforms for enabling efficiency'.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "normal",
+        "confidence": 0.80,
+        "evidence": "No immediate start date or urgent hiring language mentioned. Enterprise hiring typically follows standard timelines.",
+        "source": "inferred"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Enterprise role in Bengaluru with hybrid work model. Likely moderate competition from local talent pool.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "Visa is a well-established global payments leader with 259 billion transactions annually.",
+        "source": "pass1_derived"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.85,
+        "evidence": "Enterprise company with established data team. No indication of aggressive hiring or expansion.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.80,
+        "evidence": "Staff-level role suggests established team size. Mention of leading junior engineers implies team of at least 5-8 data engineers.",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.95,
+        "evidence": "Visa is a publicly traded company (NYSE: V).",
+        "source": "external_knowledge"
+      },
+      "role_creation_type": {
+        "value": "new_headcount",
+        "confidence": 0.75,
+        "evidence": "Staff-level role suggests new headcount for growth rather than backfill. No replacement language mentioned.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "cloud_native", "data_focused_role", "established_company", "career_growth_clear"],
+    "strength_details": [
+      "Strong modern data stack (AWS/Azure, Databricks, Kafka, Airflow)",
+      "Enterprise environment with established data practices and governance",
+      "Staff-level role with leadership expectations and mentoring opportunities"
+    ],
+    "concern_categories": ["salary_not_disclosed", "no_visa_sponsorship", "relocation_required"],
+    "concern_details": [
+      "Salary not disclosed - candidate should negotiate based on market rates",
+      "Location restricted to Bengaluru, India - relocation may be required",
+      "No mention of visa sponsorship for international candidates"
+    ],
+    "best_fit_categories": ["senior_data_engineers", "cloud_specialists", "pipeline_developers", "leadership_track"],
+    "best_fit_details": [
+      "Senior DEs with 5-8 years experience in cloud data platforms",
+      "Engineers seeking technical leadership path with mentoring responsibilities"
+    ],
+    "probe_categories": ["salary_range_details", "career_growth_path", "remote_policy_details"],
+    "probe_details": [
+      "Ask about compensation range and equity/bonus structure",
+      "Understand promotion path from Staff to Principal/Architect level",
+      "Clarify hybrid work expectations (days in office)"
+    ],
+    "leverage_categories": ["rare_skill_match", "domain_expertise", "exceeds_requirements"],
+    "leverage_details": [
+      "Strong streaming expertise (Kafka/Spark-Streaming) is high-value in payments industry",
+      "Financial services experience is a differentiator for this role",
+      "Candidates with 7+ years experience exceed minimum requirements"
+    ],
+    "overall_assessment": "Strong opportunity for senior data engineers seeking enterprise environment with modern tech stack and leadership responsibilities. Visa offers stability, established data practices, and career growth potential. Main considerations are location requirement in Bengaluru and undisclosed compensation.",
+    "recommendation_score": 0.85,
+    "recommendation_confidence": 0.88
+  }
+}

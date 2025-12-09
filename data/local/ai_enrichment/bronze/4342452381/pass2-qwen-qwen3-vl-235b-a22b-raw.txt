@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.85,
+        "evidence": "Title is 'Associate, Data Engineer' with 4-6 years experience, which aligns with mid-level in financial services industry",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title explicitly states 'Data Engineer' and responsibilities focus on data pipelines, modeling, and ML infrastructure",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "ml_infra",
+        "confidence": 0.88,
+        "evidence": "Heavy emphasis on machine learning, deep learning, and AI/ML solutions development",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.90,
+        "evidence": "No mention of people management, mentoring, or technical leadership responsibilities; focuses on individual execution",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No cloud providers mentioned in job description or Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No cloud providers mentioned at all",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No specific mention of streaming, batch, or hybrid processing patterns",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No orchestration tools (Airflow, Dagster, etc.) mentioned",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific storage technologies (warehouse, lake, lakehouse) mentioned",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.90,
+        "evidence": "Location specified as Toronto, Ontario, Canada with no mention of remote options",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.95,
+        "evidence": "Explicitly located in Toronto, Canada with no global or multi-region mention",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.85,
+        "evidence": "Location specified as Toronto with no remote work mention, implying relocation may be required",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned; Canadian location suggests local work authorization required",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of student visa support; Canadian location implies local work authorization required",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.88,
+        "evidence": "No citizenship requirement stated; Canadian location implies authorized to work in Canada required",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time permanent position with benefits mentioned, typical of W2 employment",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "standard",
+        "confidence": 0.85,
+        "evidence": "Health insurance, tuition reimbursement, life insurance, retirement plans mentioned - standard corporate benefits",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Mentions 'ways to grow and make an impact' and 'broaden your skillset' but no specific career tracks",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.80,
+        "evidence": "Mentions 'in-depth training and coaching' and 'manager support' suggesting mentorship opportunities",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotions or advancement paths",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers or role changes",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.70,
+        "evidence": "No specific career tracks (IC, management, etc.) mentioned in the job posting",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Clear must-have skills listed with no nice-to-haves, suggesting moderate strictness",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.82,
+        "evidence": "Focused on data engineering with specific responsibilities around ML/AI solutions",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "4-6 years experience with foundational/intermediate proficiency levels is reasonable for mid-level role",
+        "source": "inferred"
+      }
+    }
+  }
+}

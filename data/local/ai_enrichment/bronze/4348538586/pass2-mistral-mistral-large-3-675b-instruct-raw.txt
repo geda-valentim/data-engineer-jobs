@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.85,
+        "evidence": "Minimum 5 years of experience required, with additional 6 years of experience in Databricks mentioned in the description",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is Data Engineer, core focus on data pipelines, ETL/ELT processes, and data platform design",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "hybrid",
+        "confidence": 0.75,
+        "evidence": "Mentions both real-time streaming data pipelines (Kafka) and batch data processing (PySpark, Spark, Airflow)",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.70,
+        "evidence": "Assist in designing data platform blueprint, collaborate with architects, performance tuning, and governance suggests technical leadership without direct people management",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.90,
+        "evidence": "AWS, Azure, and GCP all mentioned as possible cloud platforms without a clear primary focus",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No single primary cloud provider identified, all are treated equally",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.80,
+        "evidence": "Both real-time streaming (Kafka) and batch processing (Airflow, PySpark) mentioned in responsibilities",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.85,
+        "evidence": "Apache Airflow mentioned explicitly as a data orchestration tool",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.75,
+        "evidence": "Cloud-native storage solutions (S3, Blob Storage) and data warehouse tools (BigQuery, Redshift) mentioned",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.80,
+        "evidence": "Location specified as Bengaluru, Karnataka, India, implying regional restriction",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.0,
+        "evidence": "No timezone requirements or team distribution mentioned",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Location is Bengaluru, India, but no explicit mention of relocation required or provided",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit mention of H1B sponsorship or visa-related information",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.60,
+        "evidence": "Minimum 5 years of experience required, which is typically beyond OPT/CPT eligibility",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No discussion of work authorization or citizenship requirements",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Full-time employment type stated but no contract specifics (W2, C2C, 1099) mentioned",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits explicitly mentioned in Pass 1 extraction",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit or implied career growth paths discussed",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.65,
+        "evidence": "Collaborate with Integration Architects and Data Architects, and work with senior engineers mentioned",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of promotion or advancement paths",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No discussion of internal mobility or role changes",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.60,
+        "evidence": "No clear signals about specific career tracks, though collaboration with architects may imply technical leadership",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.75,
+        "evidence": "Must have skills clearly stated (Databricks, PySpark, Spark, Python), with no nice-to-have skills explicitly labeled beyond 'nice-to-have' section",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Well-defined responsibilities focusing on data engineering tasks, pipelines, and ETL processes",
+        "source": "pass1_derived"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "Requirements align reasonably with 5+ years of experience for a senior data engineering role",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

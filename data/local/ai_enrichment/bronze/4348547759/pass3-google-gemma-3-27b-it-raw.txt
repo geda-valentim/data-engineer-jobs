@@ -1,0 +1,233 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "Mentions modern tools like Spark, Python, Azure Data Factory, and a focus on data pipelines, but lacks explicit mention of data governance or a data mesh architecture.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Matches score of 3.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.80,
+        "evidence": "Mentions Spark, Python, Azure Data Factory, and other modern data technologies.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.20,
+        "confidence": 0.85,
+        "evidence": "The role is clearly focused on data engineering tasks, with no indication of overlapping responsibilities.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "The 'ASAP' start date suggests some urgency, but the lack of explicit mentions of long hours or on-call duty mitigates the risk.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "The job description provides a clear outline of the responsibilities and required skills for a data engineer.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.30,
+        "confidence": 0.75,
+        "evidence": "Low risk - well-defined role with moderate urgency.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "clear",
+        "confidence": 0.92,
+        "evidence": "The job description explicitly states that the role reports to the Head of Data Engineering.",
+        "source": "explicit"
+      },
+      "manager_level_inferred": {
+        "value": "director_plus",
+        "confidence": 0.95,
+        "evidence": "Reporting to the 'Head of Data Engineering' strongly suggests a director-level manager.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.75,
+        "evidence": "The team is expanding, but the growth rate doesn't appear to be exceptionally rapid.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "8-15 engineers",
+          "de_count": "5 data engineers",
+          "seniority_mix": "mix of senior and mid-level"
+        },
+        "confidence": 0.80,
+        "evidence": "Mentions joining a team of 5 DEs within a broader 15-person data org.",
+        "source": "explicit"
+      },
+      "reporting_structure": {
+        "value": "reports_to_director_data",
+        "confidence": 0.90,
+        "evidence": "Job posting mentions 'reporting to Head of Data Engineering'",
+        "source": "explicit"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.70,
+        "evidence": "Mentions working within Client Innovation Centers and collaborating with various teams.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.65,
+        "confidence": 0.75,
+        "evidence": "No explicit mention of work-life balance policies, but the lack of on-call expectations is positive.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.70,
+        "confidence": 0.78,
+        "evidence": "Opportunities to work with cutting-edge technologies and a growing team suggest potential for growth.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.75,
+        "confidence": 0.80,
+        "evidence": "Modern tech stack, focus on data engineering best practices, and a collaborative environment.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["conference_speaking"],
+        "confidence": 0.65,
+        "evidence": "Mentions certifications and keeping up with industry trends.",
+        "source": "inferred"
+      },
+      "dev_practices_mentioned": {
+        "value": ["ci_cd", "monitoring"],
+        "confidence": 0.75,
+        "evidence": "Mentions CI/CD pipelines and monitoring solutions.",
+        "source": "inferred"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Mentions keeping up with modern data stack evolution.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt or refactoring efforts.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.70,
+        "evidence": "Mentions working with data scientists, but no specific ML tools or infrastructure are mentioned.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No specific ML tools are mentioned in the job description.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.90,
+        "evidence": "The job description states that they are looking to fill the position 'ASAP'.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "The location (Pune, India) is a competitive market for data engineering roles.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "growth_stage",
+        "confidence": 0.70,
+        "evidence": "IBM is an established tech company with a large workforce.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "The job description mentions expanding the team, but doesn't indicate a rapid hiring spree.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.88,
+        "evidence": "Mentions joining a team of 5 DEs within a broader 15-person data org.",
+        "source": "explicit"
+      },
+      "funding_stage_signals": {
+        "value": "profitable",
+        "confidence": 0.90,
+        "evidence": "IBM is a publicly traded, profitable company.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.85,
+        "evidence": "Mentions expanding data team to support new initiatives.",
+        "source": "explicit"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "well_defined_role", "clear_requirements", "work_life_balance"],
+    "strength_details": [
+      "Modern tech stack (Spark, Python, Azure Data Factory)",
+      "Clear role definition with focused responsibilities",
+      "Reports to a director-level manager",
+      "Good work-life balance potential"
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship"],
+    "concern_details": [
+      "ASAP start date suggests some time pressure",
+      "No visa sponsorship available"
+    ],
+    "best_fit_categories": ["mid_level_engineers", "cloud_specialists", "pipeline_developers"],
+    "best_fit_details": [
+      "Mid-level data engineers with 4+ years of experience",
+      "Engineers with strong Azure cloud skills",
+      "Candidates experienced in building data pipelines"
+    ],
+    "probe_categories": ["work_hour_expectations", "team_turnover_history", "tech_debt_situation"],
+    "probe_details": [
+      "Ask about typical work hours and on-call expectations",
+      "Inquire about team turnover rates",
+      "Understand the current state of the codebase and any existing tech debt"
+    ],
+    "leverage_categories": ["domain_expertise"],
+    "leverage_details": [
+      "Experience with specific industries or data domains relevant to IBM's clients"
+    ],
+    "overall_assessment": "This is a solid opportunity for a mid-level data engineer seeking a well-defined role within a large, established tech company. The modern tech stack and clear reporting structure are positive signs. The main trade-offs are the potential for some time pressure and the lack of visa sponsorship.",
+    "recommendation_score": 0.78,
+    "recommendation_confidence": 0.80
+  }
+}
+```

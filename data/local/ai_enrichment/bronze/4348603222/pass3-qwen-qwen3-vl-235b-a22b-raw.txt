@@ -1,0 +1,234 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.82,
+        "evidence": "Azure-based data platform with ADLS, Databricks, and SQL DW suggests defined data practices, but no explicit mention of governance, testing, or monitoring tools",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.82,
+        "evidence": "Matches score of 3 - documented Azure stack with lakehouse architecture but no advanced governance or quality monitoring mentioned",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption", "cloud_native"],
+        "confidence": 0.85,
+        "evidence": "Azure Data Factory, ADLS, Databricks, and serverless architecture indicate modern cloud-native stack adoption",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.15,
+        "confidence": 0.88,
+        "evidence": "Focused Azure data engineering role with specific tools (ADF, Databricks, SQL DW) and no conflation with ML, analytics, or DevOps responsibilities",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.35,
+        "confidence": 0.72,
+        "evidence": "Onsite role in delivery center with 7+ years experience requirement suggests structured environment, but no explicit work-life balance signals",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Well-defined Azure data engineering role with specific technology requirements and no ambiguous responsibilities",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.25,
+        "confidence": 0.78,
+        "evidence": "Low risk - well-defined senior DE role at established company with clear technology focus, though limited benefits information",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.88,
+        "evidence": "No information about reporting structure or manager in job posting",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "No manager title or level mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.94,
+        "evidence": "No information about team growth trajectory or hiring velocity",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.80,
+        "evidence": "No specific information about team size or composition provided",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.88,
+        "evidence": "No information about reporting lines or organizational structure",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Mentions working in Client Innovation Centers (delivery centers) which suggests centralized team rather than embedded in product teams",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.55,
+        "confidence": 0.80,
+        "evidence": "Onsite work model with no PTO or work-life balance mentions; delivery center environment may imply client-facing pressure",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.65,
+        "confidence": 0.82,
+        "evidence": "Mentions 'up-to-date technical knowledge' through workshops but no explicit learning budget, career paths, or promotion opportunities",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.70,
+        "confidence": 0.85,
+        "evidence": "Modern Azure stack with cloud-native tools, but no mention of engineering practices like code review, CI/CD, or testing",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.85,
+        "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.90,
+        "evidence": "No explicit mention of code review, CI/CD, testing, monitoring, or other development practices",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No mention of innovation, R&D time, or experimentation culture",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No mention of tech debt management, refactoring, or code quality improvement initiatives",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "not_mentioned",
+        "confidence": 0.75,
+        "evidence": "No mention of ML/AI projects, working with data scientists, or ML-specific tools",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.88,
+        "evidence": "No ML tools mentioned in job description",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mention of immediate start, ASAP, or urgent hiring needs",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Bengaluru location with 7+ years experience requirement suggests moderate competition among experienced candidates",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.75,
+        "evidence": "IBM is a well-established technology company with global delivery centers",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.82,
+        "evidence": "No indication of aggressive hiring or rapid expansion; likely steady hiring for delivery center",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.88,
+        "evidence": "No information about data/engineering team size provided",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.70,
+        "evidence": "IBM is a publicly traded company with established financials",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No information about whether this is a new headcount, backfill, or team expansion",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "cloud_native", "well_defined_role", "established_company"],
+    "strength_details": [
+      "Strong Azure data engineering focus with modern tools (ADF, Databricks, ADLS)",
+      "Well-defined senior role requiring 7+ years experience with clear technical requirements",
+      "Established company (IBM) with global delivery center infrastructure"
+    ],
+    "concern_categories": ["vague_requirements", "salary_not_disclosed", "no_visa_sponsorship", "limited_growth"],
+    "concern_details": [
+      "Salary not disclosed - compensation package unknown",
+      "No visa sponsorship mentioned - limited to India residents only",
+      "Limited information about career growth paths or learning opportunities"
+    ],
+    "best_fit_categories": ["senior_data_engineers", "cloud_specialists", "platform_architects"],
+    "best_fit_details": [
+      "Senior data engineers with 7+ years experience in Azure ecosystem",
+      "Cloud specialists with expertise in Azure Data Factory, Databricks, and ADLS",
+      "Platform architects seeking to work with enterprise-scale data solutions"
+    ],
+    "probe_categories": ["salary_range_details", "career_growth_path", "team_size_composition", "work_hour_expectations"],
+    "probe_details": [
+      "Ask about compensation range and benefits package",
+      "Inquire about career progression opportunities and technical leadership paths",
+      "Understand team structure and size of data engineering group",
+      "Clarify expected work hours and any client-facing time commitments"
+    ],
+    "leverage_categories": ["rare_skill_match", "exact_experience_match", "exceeds_requirements"],
+    "leverage_details": [
+      "7+ years experience with Azure data services is a strong differentiator",
+      "Experience with both batch (ADF) and streaming (Stream Analytics) is valuable",
+      "Mastery of PySpark and Scala in Azure environment exceeds typical requirements"
+    ],
+    "overall_assessment": "Solid opportunity for senior Azure data engineers seeking to work with established technology at IBM. Strong focus on modern Azure data stack with clear role definition. Main concerns are lack of salary transparency, limited growth information, and India-only location requirement. Suitable for candidates with deep Azure expertise looking for enterprise-scale projects.",
+    "recommendation_score": 0.72,
+    "recommendation_confidence": 0.85
+  }
+}

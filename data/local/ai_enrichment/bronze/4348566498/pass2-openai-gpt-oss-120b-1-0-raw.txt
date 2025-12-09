@@ -1,0 +1,166 @@
+{
+  "seniority_and_role": {
+    "seniority_level": {
+      "value": "mid",
+      "confidence": 0.78,
+      "evidence": "Job posting requires a minimum of 3 years of experience and does not include a senior qualifier in the title.",
+      "source": "inferred"
+    },
+    "job_family": {
+      "value": "data_engineer",
+      "confidence": 0.95,
+      "evidence": "Title is \"Data Engineer-Business Intelligence\" and responsibilities focus on data pipelines, reporting and ETL.",
+      "source": "pass1_derived"
+    },
+    "sub_specialty": {
+      "value": "data_warehouse",
+      "confidence": 0.85,
+      "evidence": "Experience required in BI DW projects, reporting/visualization using Cognos and ETL tools indicates a data‑warehouse focus.",
+      "source": "inferred"
+    },
+    "leadership_expectation": {
+      "value": "ic",
+      "confidence": 0.90,
+      "evidence": "No mention of people‑management, team lead or direct reports; responsibilities are individual contributor‑oriented.",
+      "source": "inferred"
+    }
+  },
+  "stack_and_cloud": {
+    "primary_cloud": {
+      "value": "multi",
+      "confidence": 0.85,
+      "evidence": "Must‑have hard skills list includes AWS, Google Cloud, and Azure, indicating experience across multiple clouds.",
+      "source": "combined"
+    },
+    "secondary_clouds": {
+      "value": [],
+      "confidence": 0.90,
+      "evidence": "All three clouds are listed as required; no single cloud is singled out as primary.",
+      "source": "combined"
+    },
+    "processing_paradigm": {
+      "value": "batch",
+      "confidence": 0.85,
+      "evidence": "Role centers on BI reporting, ETL/DataStage, and Cognos which are traditionally batch‑oriented processes.",
+      "source": "inferred"
+    },
+    "orchestrator_category": {
+      "value": "not_mentioned",
+      "confidence": 0.95,
+      "evidence": "Job description does not reference Airflow, Luigi, dbt, or any orchestration tool.",
+      "source": "pass1_derived"
+    },
+    "storage_layer": {
+      "value": "warehouse",
+      "confidence": 0.80,
+      "evidence": "Focus on BI DW projects and Cognos reporting suggests a data‑warehouse storage layer.",
+      "source": "inferred"
+    }
+  },
+  "geo_and_work_model": {
+    "remote_restriction": {
+      "value": "same_country",
+      "confidence": 0.80,
+      "evidence": "Location is specified as Pune, Maharashtra, India with no remote‑work language, implying candidates must be in the same country.",
+      "source": "inferred"
+    },
+    "timezone_focus": {
+      "value": "specific_country",
+      "confidence": 0.80,
+      "evidence": "Job is tied to an Indian office (Pune); no broader timezone requirement is mentioned.",
+      "source": "inferred"
+    },
+    "relocation_required": {
+      "value": false,
+      "confidence": 0.85,
+      "evidence": "Posting does not mention relocation assistance or a need to move; it expects candidates already in Pune/India.",
+      "source": "inferred"
+    }
+  },
+  "visa_and_authorization": {
+    "h1b_friendly": {
+      "value": false,
+      "confidence": 0.90,
+      "evidence": "Visa sponsorship is listed as \"not_mentioned\" in the extraction results.",
+      "source": "pass1_derived"
+    },
+    "opt_cpt_friendly": {
+      "value": false,
+      "confidence": 0.85,
+      "evidence": "No reference to OPT/CPT eligibility; work‑authorization language is absent.",
+      "source": "inferred"
+    },
+    "citizenship_required": {
+      "value": "not_mentioned",
+      "confidence": 0.90,
+      "evidence": "Extraction shows no citizenship or work‑authorization requirement.",
+      "source": "pass1_derived"
+    }
+  },
+  "contract_and_compensation": {
+    "w2_vs_1099": {
+      "value": "w2",
+      "confidence": 0.90,
+      "evidence": "Employment type is stated as \"full_time\", which for IBM implies a regular employee (W‑2) arrangement.",
+      "source": "inferred"
+    },
+    "benefits_level": {
+      "value": "none_mentioned",
+      "confidence": 0.95,
+      "evidence": "Extraction lists no benefits, equity, learning budget, or PTO details.",
+      "source": "pass1_derived"
+    }
+  },
+  "career_development": {
+    "growth_path_clarity": {
+      "value": "not_mentioned",
+      "confidence": 0.90,
+      "evidence": "Job posting does not discuss career ladders, promotion tracks, or growth opportunities.",
+      "source": "inferred"
+    },
+    "mentorship_signals": {
+      "value": "not_mentioned",
+      "confidence": 0.90,
+      "evidence": "No reference to mentorship programs, mentors, or learning from senior staff.",
+      "source": "inferred"
+    },
+    "promotion_path_mentioned": {
+      "value": false,
+      "confidence": 0.90,
+      "evidence": "No language about promotions or advancement paths appears in the description.",
+      "source": "inferred"
+    },
+    "internal_mobility_mentioned": {
+      "value": false,
+      "confidence": 0.90,
+      "evidence": "The posting does not mention internal transfers or lateral moves within IBM.",
+      "source": "inferred"
+    },
+    "career_tracks_available": {
+      "value": [],
+      "confidence": 0.90,
+      "evidence": "No career track options (IC, management, specialist, architect) are described.",
+      "source": "inferred"
+    }
+  },
+  "requirements_classification": {
+    "requirement_strictness": {
+      "value": "high",
+      "confidence": 0.80,
+      "evidence": "Multiple must‑have hard skills (Cognos, AWS, Google, Azure, DataStage, Informatica) and soft skills are listed as required; only one nice‑to‑have skill.",
+      "source": "inferred"
+    },
+    "scope_definition": {
+      "value": "clear",
+      "confidence": 0.90,
+      "evidence": "Job description focuses specifically on BI data‑engineering tasks without mixing other roles.",
+      "source": "inferred"
+    },
+    "skill_inflation_detected": {
+      "value": false,
+      "confidence": 0.80,
+      "evidence": "The required skill set aligns with a mid‑level data engineer having 3+ years of experience; no unrealistic senior‑level expectations are present.",
+      "source": "inferred"
+    }
+  }
+}

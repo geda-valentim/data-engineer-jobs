@@ -1,0 +1,241 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.85,
+        "evidence": "Mentions relational databases, data warehouse, data lakes, and data lakehouse, but no explicit modern data stack tools like Snowflake, dbt, or Airflow. Uses Microsoft SQL Server, Oracle, and traditional BI tools (SSRS, OBIEE), indicating a mix of legacy and evolving practices.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.85,
+        "evidence": "Score of 3 aligns with 'defined' maturity level, characterized by documented processes and some governance but reliance on traditional tools.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["data_governance"],
+        "confidence": 0.75,
+        "evidence": "Mentions compliance with federal/state laws, data protection policies, and maintaining change control/testing processes for database modifications. No explicit signals for modern MDS, CI/CD, or observability tools.",
+        "source": "inferred"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.3,
+        "confidence": 0.9,
+        "evidence": "Role is primarily focused on BI data engineering but includes some DBA activities (e.g., backup/restore, performance tuning) and mentions 'additional responsibilities as assigned'. No conflation with unrelated roles like ML or DevOps.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.8,
+        "evidence": "Mentions 'timely manner' and 'multi-tasking', which are moderate signals for overtime risk. Hybrid work model and not-for-profit mission may balance this, but no explicit PTO or work-life signals are present.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.9,
+        "evidence": "Responsibilities are well-defined around BI data engineering, data warehouse, and data migration tasks. No ambiguity in core role expectations.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.85,
+        "evidence": "Moderate scope creep and overtime risk, but role clarity is strong and requirement strictness is reasonable for a senior position.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.7,
+        "evidence": "Job posting does not explicitly state who the BI Data Engineer will report to, only mentions working closely with team members and business users.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.6,
+        "evidence": "No clear mention of reporting structure or manager title in the job posting.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit signals about team growth velocity or hiring trajectory.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.9,
+        "evidence": "No explicit team size or composition details provided beyond working with analysts, product managers, and business users.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No clear reporting line mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.85,
+        "evidence": "Job posting mentions working closely with team members including Analysts, Product Managers, and business users, indicating cross-functional collaboration.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.75,
+        "evidence": "Hybrid work model is a positive signal, but lack of PTO details and moderate overtime risk factors (e.g., 'timely manner', 'multi-task') lower the score.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.7,
+        "confidence": 0.8,
+        "evidence": "Conference attendance is supported, and the company emphasizes 'professional growth' and 'purposeful culture'. However, no explicit mentorship or career tracks are mentioned.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.55,
+        "confidence": 0.75,
+        "evidence": "Mentions staying abreast of industry trends and compliance with data protection policies, but no modern engineering practices (e.g., CI/CD, code review) or innovation signals are explicitly stated.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["conference_speaking"],
+        "confidence": 0.8,
+        "evidence": "Conference attendance is explicitly mentioned as part of the role's responsibilities.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.9,
+        "evidence": "No explicit development practices like code review, pair programming, or CI/CD are mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.75,
+        "evidence": "Focus is on maintaining existing systems (e.g., SSRS, OBIEE) and compliance, with no mention of experimentation or innovation time.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.7,
+        "evidence": "Mentions troubleshooting data accuracy/performance issues, optimizing code, and resolving database performance problems, indicating awareness of tech debt.",
+        "source": "inferred"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of AI/ML tools, frameworks, or responsibilities in the job posting.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No AI/ML tools or frameworks are mentioned or inferred from the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit urgency signals like 'immediate start' or 'ASAP' in the job posting.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.8,
+        "evidence": "Hybrid role in Queens, NY (lower competition than NYC metro), salary range disclosed but not highly competitive for senior DEs. No 'easy apply' signals, but lack of visa sponsorship may limit candidate pool.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.85,
+        "evidence": "UNFCU is a 'global not-for-profit financial institution' serving the UN community, suggesting a large, established organization rather than a startup or growth-stage company.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit signals about hiring velocity or team expansion in the job posting.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.7,
+        "evidence": "Pass 1 mentions 'team of 5 DEs' and broader collaboration with analysts/PMs, suggesting a medium-sized team within a larger organization.",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit funding stage signals in the job posting beyond being a not-for-profit institution.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit mention of whether this is a new headcount, backfill, or team expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["data_focused_role", "established_company", "learning_opportunities", "work_life_balance"],
+    "strength_details": [
+      "Role is well-defined as a BI Data Engineer with a clear focus on data warehouse, migration, and reporting solutions.",
+      "UNFCU is an established not-for-profit financial institution with a mission-driven culture and emphasis on diversity/inclusion.",
+      "Conference attendance and staying updated with industry trends are supported, offering learning opportunities.",
+      "Hybrid work model provides flexibility and work-life balance potential."
+    ],
+    "concern_categories": ["scope_creep_risk", "overtime_likely", "legacy_technology", "salary_not_disclosed"],
+    "concern_details": [
+      "Role includes some DBA activities (e.g., backup/restore, performance tuning) alongside core DE responsibilities, indicating moderate scope creep risk.",
+      "Moderate overtime risk due to 'timely manner' and 'multi-tasking' expectations, though hybrid work may offset this.",
+      "Heavy reliance on legacy technologies (Microsoft SQL Server, Oracle, SSRS, OBIEE) with no mention of modern data stack tools like dbt or Airflow.",
+      "Salary range is disclosed but adjusted for geographic location, which may result in below-market pay outside NYC."
+    ],
+    "best_fit_categories": ["senior_data_engineers", "data_generalists", "career_changers"],
+    "best_fit_details": [
+      "Senior data engineers with 6+ years of experience in relational databases, TSQL/PLSQL, and BI tools (SSRS, OBIEE).",
+      "Data generalists comfortable with a mix of legacy and evolving data technologies, especially in financial/banking environments.",
+      "Career changers with prior financial industry experience looking to transition into a data-focused role."
+    ],
+    "probe_categories": ["role_scope_boundaries", "work_hour_expectations", "remote_policy_details", "career_growth_path", "tech_stack_details"],
+    "probe_details": [
+      "Clarify the boundaries of the role: What percentage of time will be spent on DBA vs. DE tasks?",
+      "Ask about actual work hours, sprint cadence, and how deadlines are managed to gauge overtime expectations.",
+      "Understand the hybrid work policy: How many days per week are required on-site, and what flexibility exists?",
+      "Inquire about the tech stack roadmap: Are there plans to adopt modern data tools like dbt or Airflow?",
+      "Explore career growth paths: Are there formal tracks for advancement or mentorship programs?"
+    ],
+    "leverage_categories": ["exact_experience_match", "domain_expertise"],
+    "leverage_details": [
+      "Candidates with 6+ years of Microsoft SQL Server, SSIS, and Oracle PL/SQL experience meet the strict requirements and can negotiate from a position of strength.",
+      "Financial/banking industry experience is highly valued and can be a key differentiator in negotiations."
+    ],
+    "overall_assessment": "This role at UNFCU is a solid opportunity for senior BI Data Engineers with strong relational database and legacy BI tool experience, particularly those with a background in the financial industry. The hybrid work model and mission-driven culture are attractive, but candidates should be prepared for a mix of legacy and evolving technologies, moderate scope creep, and potential overtime. Compensation may be below market outside NYC, and modern data stack adoption is unclear.",
+    "recommendation_score": {
+      "value": 0.65,
+      "confidence": 0.85,
+      "evidence": "Balanced strengths (established company, hybrid work, learning opportunities) with concerns (legacy tech, scope creep, salary ambiguity). Role is recommended for candidates with exact experience and domain expertise but not a top-tier opportunity for those seeking cutting-edge DE environments."
+    }
+  }
+}
+```

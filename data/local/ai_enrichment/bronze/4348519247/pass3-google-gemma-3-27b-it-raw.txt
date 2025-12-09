@@ -1,0 +1,232 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "Mentions modern tools (Elasticsearch, Splunk, LLMs) and POC development, but lacks details on CI/CD, data governance, or monitoring.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Matches score of 3.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.65,
+        "evidence": "Mentions Elasticsearch, Splunk, and LLMs, indicating some adoption of modern tools.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.3,
+        "confidence": 0.85,
+        "evidence": "Role primarily focused on data engineering tasks, but includes POC development and model validation, suggesting some scope expansion.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.70,
+        "evidence": "Immediate start date and 'ASAP' suggest potential for time pressure, but no explicit mention of long hours.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Job description focuses on data engineering tasks with clear responsibilities.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Moderate risk - well-defined role, but potential for time pressure and limited work-life balance.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.5,
+        "evidence": "No specific manager or reporting structure mentioned.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "manager",
+        "confidence": 0.65,
+        "evidence": "Working within a team suggests a manager-level reporting structure.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.7,
+        "evidence": "Mentions expanding team, but no specific growth rate.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.5,
+        "evidence": "No specific team size or composition details provided.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.5,
+        "evidence": "No reporting structure specified.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.7,
+        "evidence": "Mentions working with diverse teams and client innovation centers.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.65,
+        "evidence": "No explicit work-life balance signals, but no red flags either.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.7,
+        "confidence": 0.75,
+        "evidence": "Opportunity to work with cutting-edge AI technologies and POC development.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.7,
+        "confidence": 0.75,
+        "evidence": "Focus on AI, LLMs, and POC development suggests a tech-forward culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["innovation_time"],
+        "confidence": 0.6,
+        "evidence": "POC development suggests some time for experimentation.",
+        "source": "inferred"
+      },
+      "dev_practices_mentioned": {
+        "value": ["code_review"],
+        "confidence": 0.5,
+        "evidence": "No explicit mention of development practices.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.7,
+        "evidence": "Focus on AI and LLMs suggests some innovation, but not a dedicated R&D focus.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of tech debt or refactoring.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.85,
+        "evidence": "Focus on AI, LLMs, and POC development, but no mention of MLOps or model serving.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": ["LLM frameworks"],
+        "confidence": 0.7,
+        "evidence": "Mentions LLMs and code generation, suggesting use of LLM frameworks.",
+        "source": "inferred"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.8,
+        "evidence": "Mentions 'ASAP' start date.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.6,
+        "evidence": "No specific application count or easy apply, location is competitive.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.8,
+        "evidence": "IBM is a well-established technology company.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.7,
+        "evidence": "No indication of rapid expansion or urgent hiring.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.6,
+        "evidence": "No specific team size mentioned, but likely medium-sized within IBM.",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "profitable",
+        "confidence": 0.9,
+        "evidence": "IBM is a publicly traded, profitable company.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.7,
+        "evidence": "Mentions expanding team to support new initiatives.",
+        "source": "explicit"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "learning_opportunities", "well_defined_role", "established_company"],
+    "strength_details": [
+      "Focus on AI and LLMs with POC development.",
+      "Opportunity to work with cutting-edge technologies.",
+      "Clear data engineering role with defined responsibilities.",
+      "Stable and established company (IBM)."
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship"],
+    "concern_details": [
+      "ASAP start date suggests potential for time pressure.",
+      "No visa sponsorship mentioned."
+    ],
+    "best_fit_categories": ["mid_level_engineers", "data_generalists", "ai_integration"],
+    "best_fit_details": [
+      "Mid-level data engineers with experience in AI and LLMs.",
+      "Engineers interested in POC development and innovation."
+    ],
+    "probe_categories": ["reporting_structure", "team_size_composition", "work_hour_expectations"],
+    "probe_details": [
+      "Clarify reporting structure and manager expectations.",
+      "Understand team size and composition.",
+      "Ask about typical work hours and on-call expectations."
+    ],
+    "leverage_categories": ["domain_expertise"],
+    "leverage_details": [
+      "Experience with specific AI/ML frameworks or LLMs."
+    ],
+    "overall_assessment": "Good opportunity for mid-level data engineers interested in AI and LLMs within a stable, established company. Potential for time pressure due to ASAP start date. No visa sponsorship.",
+    "recommendation_score": 0.75,
+    "recommendation_confidence": 0.80
+  }
+}
+```

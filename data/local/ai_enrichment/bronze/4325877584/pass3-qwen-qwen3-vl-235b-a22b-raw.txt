@@ -1,0 +1,232 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Heavy reliance on legacy ETL tool (Informatica PowerCenter), warehouse-centric stack, no modern orchestration or data quality tools mentioned. Cloud migration is a requirement but not fully implemented.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2 - basic pipelines with some cloud adoption but inconsistent modern practices",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["cloud_native"],
+        "confidence": 0.70,
+        "evidence": "Cloud and data migration on cloud are mentioned as required skills, indicating some cloud adoption",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.65,
+        "confidence": 0.80,
+        "evidence": "Role combines data engineering (ETL, warehousing) with data science (implementing predictive models) and search engineering (Elasticsearch/Splunk) - multiple distinct roles combined",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "Onsite work model in delivery center with client-facing responsibilities suggests potential for long hours, but no explicit overtime mentions",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "multi_role",
+        "confidence": 0.85,
+        "evidence": "Combines data engineering, data science modeling, and search application development - three distinct roles",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.55,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to scope creep combining DE/DS/search roles, legacy tech stack, and onsite delivery center model",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "No specific reporting manager mentioned, only 'IBM Consulting Client Innovation Centers' as team context",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No manager title or level mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.60,
+        "evidence": "No information about team expansion or hiring velocity provided",
+        "source": "not_mentioned"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.50,
+        "evidence": "Only mentions 'IBM Consulting Client Innovation Centers' without team size details",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure details provided in job description",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Role is in delivery center serving clients, suggesting centralized team rather than embedded in product teams",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.55,
+        "confidence": 0.70,
+        "evidence": "Onsite work model in delivery center with client responsibilities suggests potential for long hours; no PTO or work-life balance mentions",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.60,
+        "confidence": 0.65,
+        "evidence": "IBM brand provides some growth opportunities, but no specific learning budget, mentorship, or career path mentioned",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.50,
+        "confidence": 0.75,
+        "evidence": "Legacy tech stack (Informatica PowerCenter) with some cloud adoption; no modern engineering practices mentioned",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No mentions of open source, tech blogs, conferences, hackathons, or innovation time",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No development practices (code review, CI/CD, testing, etc.) mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.70,
+        "evidence": "Focus on implementing existing tools (Informatica, Power BI) rather than innovation; no R&D or experimentation mentioned",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of tech debt management, refactoring, or modernization efforts",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.75,
+        "evidence": "Mentions implementing predictive models and statistical models, suggesting basic ML pipeline work with data scientists",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "No specific ML tools mentioned (MLflow, SageMaker, etc.) - only general 'statistical and machine learning techniques'",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No urgency indicators (ASAP, immediate start) mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "IBM brand attracts candidates, location in India (Kochi) may have moderate competition, no salary disclosed",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a well-established technology company with global delivery centers",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.70,
+        "evidence": "IBM regularly hires for delivery centers, but no specific expansion mentioned for this role",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No team size information provided in job description",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.95,
+        "evidence": "IBM is a publicly traded company",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about whether this is a new headcount, backfill, or expansion",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["established_company", "cloud_native", "data_focused_role"],
+    "strength_details": [
+      "IBM brand provides stability and global exposure",
+      "Cloud migration skills are in demand and transferable",
+      "Focus on core data engineering responsibilities (ETL, warehousing)"
+    ],
+    "concern_categories": ["scope_creep_risk", "legacy_technology", "vague_requirements", "on_call_expected"],
+    "concern_details": [
+      "Role combines data engineering, data science modeling, and search engineering - unrealistic scope",
+      "Heavy reliance on legacy ETL tool (Informatica PowerCenter) with limited modern stack",
+      "No clear reporting structure or team composition details provided"
+    ],
+    "best_fit_categories": ["mid_level_engineers", "cloud_specialists", "pipeline_developers"],
+    "best_fit_details": [
+      "Mid-level engineers with 3-5 years experience in ETL and data warehousing",
+      "Candidates with cloud migration experience (Azure) and Informatica PowerCenter skills",
+      "Engineers comfortable with legacy systems and client-facing delivery center environments"
+    ],
+    "probe_categories": ["role_scope_boundaries", "tech_stack_details", "work_hour_expectations"],
+    "probe_details": [
+      "Clarify boundaries between data engineering, data science, and search engineering responsibilities",
+      "Ask about current tech stack beyond Informatica and whether modern tools are being adopted",
+      "Inquire about typical work hours and client expectations in delivery center model"
+    ],
+    "leverage_categories": ["rare_skill_match", "domain_expertise"],
+    "leverage_details": [
+      "Experience with HDFC Bank EDW/ SOR is a differentiator for this specific client",
+      "Strong Informatica PowerCenter skills are valuable for legacy system maintenance"
+    ],
+    "overall_assessment": "Opportunity at established company (IBM) with focus on core data engineering but significant concerns about scope creep (combining DE/DS/search roles) and legacy technology stack. Suitable for mid-level engineers seeking stability and cloud migration experience, but limited growth potential due to vague career path and outdated tools. Main trade-offs are scope ambiguity and technology constraints.",
+    "recommendation_score": 0.55,
+    "recommendation_confidence": 0.70
+  }
+}

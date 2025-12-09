@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "associate",
+        "confidence": 0.85,
+        "evidence": "Title is 'Associate Software Developer' which maps to associate level; no years of experience specified but education requirement is Master's Degree which is common for entry/associate roles in consulting firms like IBM",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Job title explicitly states 'Data Engineer' and responsibilities focus on data pipelines, storage, and processing",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.80,
+        "evidence": "Mentions database migration (Hadoop to GCP), data replication (CDC, bulk transfer), and modernization roadmap — all batch/ETL-focused activities; no explicit streaming tools mentioned",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.90,
+        "evidence": "Role is 'Associate Software Developer' with no mention of managing teams, mentoring, or technical leadership responsibilities; focus is on implementation and collaboration",
+        "source": "pass1_derived"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "gcp",
+        "confidence": 0.95,
+        "evidence": "Explicitly mentions 'GCP' as target platform for database migration and is part of job title 'Data Engineer-Data Platforms-Google'",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud platforms mentioned in must-have skills or responsibilities",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.85,
+        "evidence": "Emphasis on database migration, CDC, bulk data transfer, and modernization — all batch-oriented; no real-time or streaming tools like Kafka or Flink mentioned",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No orchestration tools (Airflow, Dagster, etc.) mentioned in must-have or nice-to-have skills",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.75,
+        "evidence": "Mentions Hadoop (lake-like) and GCP (warehouse/lakehouse), plus data replication and API exposure — suggests hybrid storage patterns",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.88,
+        "evidence": "Location specified as 'Hyderabad, Telangana, India' and work model is 'onsite' — implies must be in that region",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.92,
+        "evidence": "Location restricted to India (Hyderabad) and no mention of global or multi-timezone collaboration",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.85,
+        "evidence": "Onsite work model in Hyderabad implies relocation may be required if not already based there",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Location is India, not US; no mention of visa sponsorship; IBM India typically hires locally",
+        "source": "inferred"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Location is India; OPT/CPT are US-specific visas; no mention of student visa support",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.88,
+        "evidence": "Location is India; implies must be authorized to work in India; no citizenship requirement stated",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Employment type is 'full_time' and 'permanent' — typical of W2 employment in India",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits listed in extraction; no mention of equity, PTO, learning budget, or other perks",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Mentions 'modernization roadmap journey' and 'collaborative environment' but no explicit career tracks or promotion paths",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Mentions 'collaborating with diverse teams including scientists, engineers, consultants and database administrators' — implies learning from experienced colleagues",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of promotions, advancement, or career progression in the job description",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers, lateral moves, or exploring other roles",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.55,
+        "evidence": "No explicit mention of IC, management, specialist, or architect tracks; inferred from IBM's general structure but not stated in posting",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "All skills listed are 'must-have' with no 'nice-to-have' skills; long list of technical requirements including database migration, replication, API, modeling, and project management artifacts (WBS, RACI, RAID)",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "multi_role",
+        "confidence": 0.85,
+        "evidence": "Role combines data engineering (migration, replication), data science (predictive/statistical modeling), and project management (WBS, staffing plan, RAID) — suggesting hybrid or multi-role expectations",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Associate-level role requiring Master's degree plus extensive skills in database migration, predictive modeling, API development, and project management — exceeds typical expectations for associate level",
+        "source": "inferred"
+      }
+    }
+  }
+}

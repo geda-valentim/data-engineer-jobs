@@ -1,0 +1,278 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 20:07:00",
+    "job_posting_id": "4348603268",
+    "job_title": "Data Engineer-Business Intelligence",
+    "company_name": "IBM",
+    "job_location": "Hyderabad, Telangana, India",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.75,
+          "evidence": "IBM is an established enterprise with likely structured data practices, but the job posting focuses on legacy BI tools (Cognos, IBM InfoSphere DataStage) and does not mention modern data engineering tools or governance practices explicitly.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.75,
+          "evidence": "Score of 3 aligns with 'defined' maturity level, indicating documented processes and some governance but likely not best-in-class or fully optimized.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No explicit signals of modern data stack adoption, CI/CD practices, or data governance tools mentioned in the job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.3,
+          "confidence": 0.8,
+          "evidence": "Role is primarily focused on BI/DW and reporting, but includes responsibilities like troubleshooting, debugging, and coordination with business/technical teams, which may expand scope slightly.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "Phrases like 'relentless focus on quality' and 'client environment' suggest potential time pressure, but no explicit signals of overtime or on-call responsibilities. No PTO policy mentioned is a neutral signal.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Responsibilities are well-defined around BI/DW projects, reporting, and Cognos development, with no conflation of unrelated roles.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.4,
+          "confidence": 0.75,
+          "evidence": "Moderate scope creep and overtime risk, but role clarity is strong. Requirement strictness is high, and skill inflation is not detected.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "vague",
+          "confidence": 0.6,
+          "evidence": "Job posting mentions working in a 'delivery center' and collaborating with business/technical teams but does not specify a clear reporting line or manager title.",
+          "source": "inferred"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit or inferable manager title mentioned in the job posting.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "unknown",
+          "confidence": 0.9,
+          "evidence": "No signals about team growth velocity or hiring trajectory in the job posting.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.9,
+          "evidence": "Job posting does not provide details about team size or composition beyond working in a delivery center for clients.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of reporting structure or manager title in the job posting.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "Role involves working with business and technical members of the team in client environments, suggesting cross-functional collaboration.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "No PTO policy mentioned, but phrases like 'relentless focus' may imply time pressure. No explicit signals of overtime or on-call, but client delivery environments can sometimes involve tight deadlines.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.6,
+          "confidence": 0.7,
+          "evidence": "Mentions 'continuous improvement' and 'growth opportunities' but lacks concrete details like learning budgets or mentorship programs. Preferred cloud experience suggests exposure to modern platforms.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.55,
+          "confidence": 0.7,
+          "evidence": "Focus on legacy BI tools (Cognos, DataStage) is balanced by preferred experience with modern cloud platforms (AWS, Azure, GCP). No explicit mention of engineering practices like CI/CD or testing.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No explicit signals of open source contributions, tech blogs, or conference speaking in the job posting.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.85,
+          "evidence": "No explicit mention of code review, pair programming, TDD, CI/CD, monitoring, or postmortems in the job posting.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.65,
+          "evidence": "Job posting emphasizes legacy tools and client delivery, with minimal mention of innovation or modern tech exploration.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.7,
+          "evidence": "No explicit mention of tech debt management or refactoring, though 'evolutionary maintenance' could imply some awareness.",
+          "source": "inferred"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.9,
+          "evidence": "No mention of ML/AI tools, frameworks, or responsibilities in the job posting.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No ML tools mentioned or inferred from the job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit signals about hiring urgency in the job posting.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Hyderabad is a competitive tech hub in India, but the role's focus on legacy IBM tools may limit the candidate pool. No salary disclosure or 'easy apply' signals suggest medium competition.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.95,
+          "evidence": "IBM is a well-known, large enterprise with multiple departments and global operations.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.7,
+          "evidence": "Role is part of IBM Consulting's delivery centers, which typically hire steadily to support client projects. No aggressive expansion signals detected.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of team size in the job posting beyond working in a delivery center.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No funding stage signals mentioned in the job posting for this specific role.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of whether this is a new headcount, backfill, or team expansion in the job posting.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "established_company",
+        "clear_requirements",
+        "data_focused_role"
+      ],
+      "strength_details": [
+        "IBM is a globally recognized enterprise with stability and resources, reducing job security concerns.",
+        "Role has clear requirements focused on BI/DW and reporting, with no conflation of unrelated responsibilities.",
+        "Experience with legacy IBM tools (Cognos, DataStage) is explicitly valued, which may be a niche skill in high demand for enterprise clients."
+      ],
+      "concern_categories": [
+        "legacy_technology",
+        "scope_creep_risk",
+        "vague_reporting_structure",
+        "limited_growth"
+      ],
+      "concern_details": [
+        "Heavy emphasis on legacy IBM tools (Cognos, DataStage) may limit exposure to modern data engineering practices.",
+        "Role includes coordination, troubleshooting, and debugging, which could expand scope beyond pure BI development.",
+        "Unclear reporting structure and manager level may lead to mismatched expectations about leadership and career guidance.",
+        "No explicit mention of career growth paths, learning opportunities, or mentorship programs, suggesting limited focus on development."
+      ],
+      "best_fit_categories": [
+        "mid_level_engineers",
+        "batch_etl_specialists",
+        "enterprise_experienced"
+      ],
+      "best_fit_details": [
+        "Mid-level engineers with 3+ years of experience in BI/DW projects and batch ETL tools (Cognos, DataStage, Informatica).",
+        "Candidates with prior experience in enterprise environments or consulting delivery centers, especially those familiar with IBM's legacy stack.",
+        "Engineers looking for stable roles with clear scope and less emphasis on innovation or modern tech trends."
+      ],
+      "probe_categories": [
+        "role_scope_boundaries",
+        "reporting_structure",
+        "work_hour_expectations",
+        "career_growth_path",
+        "tech_stack_details"
+      ],
+      "probe_details": [
+        "Ask for clarification on the reporting structure: Who will be your direct manager, and what is their level of seniority?",
+        "Understand the boundaries of the role: How much of the work involves pure BI development vs. coordination or troubleshooting?",
+        "Probe about work hours and client delivery expectations: Are there tight deadlines or on-call responsibilities for client projects?",
+        "Ask about career growth opportunities: Are there defined tracks for advancement (IC, management, specialist) within IBM Consulting?",
+        "Inquire about the tech stack: How much of the work involves legacy IBM tools vs. modern cloud platforms (AWS, Azure, GCP)?"
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "domain_expertise"
+      ],
+      "leverage_details": [
+        "Candidates with exact experience in Cognos development/administration and IBM InfoSphere DataStage have strong leverage.",
+        "Experience in enterprise BI/DW projects or consulting delivery centers can be a differentiator for this role."
+      ],
+      "overall_assessment": "This role is a solid opportunity for mid-level data engineers with expertise in legacy IBM BI tools (Cognos, DataStage) and batch ETL processes. It offers stability and clear scope within IBM's enterprise consulting environment but lacks visibility into modern data engineering practices, career growth paths, or reporting structure. Candidates should weigh the trade-offs of working with legacy technology against the benefits of IBM's global brand and client exposure.",
+      "recommendation_score": 0.55,
+      "recommendation_confidence": 0.8
+    },
+    "tokens": 12835,
+    "input_tokens": 9962,
+    "output_tokens": 2873,
+    "cost": 0.015708
+  }
+}

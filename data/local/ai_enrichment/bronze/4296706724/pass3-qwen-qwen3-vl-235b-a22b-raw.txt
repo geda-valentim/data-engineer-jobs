@@ -1,0 +1,233 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 4,
+        "confidence": 0.82,
+        "evidence": "Strong modern data stack (dbt, SageMaker, Redshift, Datadog), CI/CD practices implied through production deployment requirements, data quality testing mentioned (dbt tests, Pytest), and monitoring/observability (Datadog).",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "managed",
+        "confidence": 0.82,
+        "evidence": "Matches score of 4, indicating strong practices, quality monitoring, and mature tooling.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption", "cicd_practices", "data_quality_testing", "monitoring_observability"],
+        "confidence": 0.85,
+        "evidence": "Explicitly mentions dbt, SageMaker, Datadog, and testing frameworks (Pytest, dbt tests), indicating mature engineering practices.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.25,
+        "confidence": 0.88,
+        "evidence": "Focused on data engineering with ML pipeline deployment, no conflation with data science, analytics, or DevOps roles. Clear boundaries around data pipelines, ETL, and ML deployment.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.65,
+        "confidence": 0.72,
+        "evidence": "Explicitly mentions on-call rotation and nontraditional hours, indicating high overtime risk despite unlimited PTO. Startup environment with mission-driven urgency.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Well-defined responsibilities including building data pipelines, deploying ML workflows, mentoring, and collaborating with specific teams (Product, Engineering, Analytics).",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.45,
+        "confidence": 0.78,
+        "evidence": "Moderate risk due to on-call expectations and startup pace, but offset by strong benefits and clear role definition. No severe scope creep or unrealistic requirements.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "mentioned",
+        "confidence": 0.88,
+        "evidence": "Mentions being part of the Data Product Team and collaborating with Product, Engineering, and Analytics teams, but does not specify direct manager title.",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "manager",
+        "confidence": 0.75,
+        "evidence": "No explicit manager title mentioned, but role involves mentoring junior engineers and collaborating across teams, suggesting reporting to a manager or tech lead level.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.70,
+        "evidence": "No explicit growth metrics, but mentions being part of a team working across multiple departments, suggesting ongoing expansion rather than rapid scaling.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.55,
+        "evidence": "No specific team size or composition details provided in job posting.",
+        "source": "not_mentioned"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.65,
+        "evidence": "No explicit reporting line mentioned (e.g., reports to CTO, Director, Manager).",
+        "source": "not_mentioned"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Explicitly mentions influencing design decisions across Product, Engineering, and Analytics teams, indicating embedded cross-functional collaboration.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.65,
+        "confidence": 0.80,
+        "evidence": "Unlimited PTO and flexible schedules are positive, but on-call rotation and nontraditional hours introduce significant work-life balance risk.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.75,
+        "confidence": 0.82,
+        "evidence": "Mentoring junior engineers and technical leadership responsibilities suggest growth opportunities, but no explicit career paths or learning budget mentioned.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.80,
+        "confidence": 0.85,
+        "evidence": "Modern stack (Python, dbt, SageMaker), emphasis on testing, monitoring, and CI/CD practices indicate strong technical culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.55,
+        "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time.",
+        "source": "not_mentioned"
+      },
+      "dev_practices_mentioned": {
+        "value": ["code_review", "ci_cd", "monitoring", "incident_response"],
+        "confidence": 0.90,
+        "evidence": "Explicitly mentions code reviews, CI/CD automation, monitoring (Datadog), and on-call rotation (incident response).",
+        "source": "explicit"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Mentions evolving data products and integrating with user-facing applications, suggesting some innovation, but no explicit R&D or experimentation culture.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.80,
+        "evidence": "Mentions 'own and evolve' data integrations and 'productionize' workflows, implying awareness of maintaining and improving existing systems.",
+        "source": "inferred"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "mlops",
+        "confidence": 0.75,
+        "evidence": "Explicitly mentions deploying ML workflows using SageMaker/Vertex AI and collaborating with ML engineers, indicating MLOps infrastructure focus.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": ["SageMaker", "Vertex AI"],
+        "confidence": 0.88,
+        "evidence": "Both tools explicitly mentioned as required skills for productionizing ML workflows.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.85,
+        "evidence": "Mentions on-call rotation and nontraditional hours, suggesting immediate operational needs, though no explicit 'ASAP' text.",
+        "source": "inferred"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Remote role with US restrictions, competitive salary, and no easy apply mentioned, suggesting moderate competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.75,
+        "evidence": "Nonprofit with established platform (used by Democratic campaigns), mature benefits package, and structured data team, suggesting established rather than startup stage.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.82,
+        "evidence": "No mention of rapid expansion or multiple open roles; focused on filling a specific senior position.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.88,
+        "evidence": "Mentions being part of the Data Product Team and collaborating across multiple departments, suggesting a medium-sized team.",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "profitable",
+        "confidence": 0.70,
+        "evidence": "Nonprofit with established operations and comprehensive benefits, suggesting financial stability rather than venture funding.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "new_headcount",
+        "confidence": 0.85,
+        "evidence": "No mention of backfill or replacement; role appears to be a new addition to support evolving data products.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["transparent_salary", "modern_tech_stack", "well_defined_role", "strong_benefits"],
+    "strength_details": [
+      "Transparent salary range ($173k-$210k) with clear compensation philosophy",
+      "Strong modern stack (Python, dbt, SageMaker, Datadog) for data and ML pipelines",
+      "Well-defined responsibilities with clear ownership of data products and ML deployment",
+      "Comprehensive benefits including unlimited PTO, trans-inclusive health, 401K match, and home-office allowance"
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship", "on_call_expected"],
+    "concern_details": [
+      "On-call rotation and nontraditional hours indicate high overtime risk",
+      "No visa sponsorship available - US work authorization required",
+      "Mission-driven nonprofit environment may have high operational urgency"
+    ],
+    "best_fit_categories": ["senior_data_engineers", "ml_engineers", "technical_specialists"],
+    "best_fit_details": [
+      "Senior DEs with 5+ years experience in Python, ML pipelines, and cloud platforms",
+      "Engineers comfortable with on-call responsibilities and mission-driven work",
+      "Technical specialists with experience in SageMaker/Vertex AI and data quality testing"
+    ],
+    "probe_categories": ["on_call_expectations", "work_hour_expectations", "career_growth_path"],
+    "probe_details": [
+      "Ask about the frequency and duration of on-call rotations",
+      "Clarify expectations for nontraditional hours and work-life balance",
+      "Inquire about technical leadership opportunities and mentorship responsibilities"
+    ],
+    "leverage_categories": ["rare_skill_match", "exact_experience_match"],
+    "leverage_details": [
+      "Expertise in SageMaker/Vertex AI and ML pipeline deployment is high-value",
+      "5+ years of Python data engineering experience with production systems is a strong match"
+    ],
+    "overall_assessment": "Strong opportunity for senior data engineers seeking to work with modern ML infrastructure in a mission-driven nonprofit. Competitive compensation, excellent benefits, and clear technical responsibilities. Main trade-offs are on-call expectations and no visa sponsorship. Ideal for engineers who value social impact and technical leadership.",
+    "recommendation_score": 0.75,
+    "recommendation_confidence": 0.85
+  }
+}

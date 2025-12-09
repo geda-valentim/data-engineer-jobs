@@ -1,0 +1,155 @@
+<reasoning>Let me carefully analyze this job posting to extract the required information according to the rules.
+
+First, let me identify the key sections and information:
+
+1. **Title**: Associate, Data Engineer
+2. **Company**: BMO
+3. **Location**: Toronto, Ontario, Canada
+
+Now let me go through each section systematically:
+
+**COMPENSATION:**
+- "Base Salary: $90,000- $120,000 CAD (subject to negotiation and subject to the candidate meeting the specific skills, experience, education, and qualification requirements)"
+- "Salary: $61,600.00 - $113,900.00 Pay Type: Salaried"
+
+So salary is disclosed, min is 61600, max is 120000, currency is CAD, period is yearly.
+
+**WORK AUTHORIZATION:**
+- "BMO is committed to an inclusive, equitable and accessible workplace. By learning from each other's differences, we gain strength through our people and our perspectives. Accommodations are available on request for candidates taking part in all aspects of the selection process. To request accommodation, please contact your recruiter."
+- No explicit mention of visa sponsorship or work authorization requirements. This would be "not_mentioned".
+
+**WORK MODEL:**
+- Location is Toronto, Ontario, Canada - this suggests onsite work
+- No mention of remote or hybrid work options
+- Employment type: "Salaried" suggests full-time
+- This would be "onsite" for work_model_stated and "full_time" for employment_type_stated
+
+**CONTRACT DETAILS:**
+- This appears to be a permanent position (salaried employee)
+- No mention of contract duration, extension, conversion, etc.
+- Contract type would be "permanent"
+
+**CONTRACTOR RATES:**
+- Pay type is "salaried" so this doesn't apply to contractor rates
+- This would be "not_mentioned"
+
+**SKILLS CLASSIFIED:**
+Let me analyze the qualifications section:
+
+"Qualifications: Foundational level of proficiency: Deep learning. Machine learning. Trust, bias and ethics. Creative thinking. Critical thinking. Intermediate level of proficiency: Mathematics, statistics & operations research. Big data. Data visualization. Computational thinking and programming. Data wrangling. Data preprocessing. Complex problem solving. Analytical acumen. Creative reasoning. Verbal & written communication skills. Collaboration & team skills. Analytical and problem solving skills. 
+
+I notice the role requires advanced technical and soft skills across multiple domains. The position demands expertise in machine learning, data analysis, and interpersonal competencies. Key technical skills include deep learning, big data technologies, and programming, while soft skills emphasize communication, collaboration, and analytical problem-solving abilities.
+
+The role specifically calls for professionals with 4-6 years of experience and a post-secondary degree, indicating a mid-level position requiring substantial industry exposure and educational background. The comprehensive skill set suggests a multifaceted data engineering role that bridges technical expertise with strategic thinking.
+
+The job description highlights advanced analytical capabilities, including machine learning, deep learning, and AI technologies. These skills enable complex data analysis, predictive modeling, and innovative problem-solving approaches. The role demands proficiency in extracting insights from diverse data sources and developing sophisticated analytical solutions.
+
+The position requires a unique blend of technical expertise and soft skills, emphasizing creative thinking, critical analysis, and collaborative problem-solving. Professionals in this role will leverage advanced computational techniques to drive strategic business decisions and technological innovation.
+
+The role demands a comprehensive skill set spanning technical and interpersonal competencies. Foundational skills include deep learning, machine learning, and ethical reasoning, while intermediate skills encompass advanced mathematical modeling, data visualization, and complex problem-solving techniques. Communication and collaboration abilities are equally critical for success in this dynamic position.
+
+The role requires 4-6 years of relevant experience and a post-secondary degree, indicating a mid-level professional track. Technical proficiency is essential, gained through formal education or practical business experience. The position offers a competitive salary range of $61,600 to $113,900 CAD, reflecting the specialized nature of the work.
+
+The company provides a comprehensive benefits package, including health insurance, tuition reimbursement, and retirement savings plans. BMO emphasizes an inclusive workplace culture, offering accommodations for candidates and supporting professional development through various growth opportunities.
+
+The financial institution is committed to creating a supportive environment that values diversity and provides equal access to career advancement resources. Their approach focuses on empowering employees to make meaningful contributions while supporting individual professional journeys.
+
+The organization offers robust learning and development programs, including in-depth training, coaching, and networking opportunities. These initiatives help employees expand their skill sets and gain valuable professional experience across different business areas.
+
+The company maintains a clear recruitment policy, emphasizing direct candidate engagement and prohibiting unsolicited resume submissions. This approach ensures a structured and transparent hiring process that protects both the organization and potential candidates.
+
+Geographically, the role is centered in Toronto, Canada, with no explicit global restrictions mentioned. The position appears to have a domestic focus, specifically targeting the Canadian market.
+
+The benefits package includes comprehensive health insurance, tuition reimbursement, accident and life insurance, and retirement savings plans. While equity details are not explicitly mentioned, the total compensation structure suggests potential performance-based incentives and discretionary bonuses.
+
+The company emphasizes a supportive work environment with training, coaching, and network-building opportunities. They highlight their commitment to an inclusive workplace, offering accommodations for candidates during the selection process.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": true,
+      "salary_min": 61600,
+      "salary_max": 120000,
+      "salary_currency": "CAD",
+      "salary_period": "yearly",
+      "salary_text_raw": "Base Salary: $90,000- $120,000 CAD (subject to negotiation and subject to the candidate meeting the specific skills, experience, education, and qualification requirements) Salary: $61,600.00 - $113,900.00 Pay Type: Salaried",
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Toronto, Ontario, Canada",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": ["Deep learning", "Machine learning", "Mathematics", "statistics & operations research", "Big data", "Data visualization", "Computational thinking and programming", "Data wrangling", "Data preprocessing"],
+      "nice_to_have_hard_skills": [],
+      "must_have_soft_skills": ["Creative thinking", "Critical thinking", "Verbal & written communication skills", "Collaboration & team skills", "Analytical and problem solving skills", "Influence skills", "Data driven decision making"],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 4,
+      "years_experience_max": 6,
+      "years_experience_text": "Typically between 4 - 6 years of relevant experience",
+      "education_level": "BACHELORS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "post-secondary degree in related field of study or an equivalent combination of education and experience",
+      "llm_genai_mentioned": true,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": ["health insurance", "tuition reimbursement", "accident and life insurance", "retirement savings plans", "performance-based incentives", "discretionary bonuses", "perks and rewards"],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "BMO Capital Markets has over 2,700 professionals in 30+ locations around the world, including 20 offices in North America. Collaborates with other data and analytics professionals and teams to optimize, refine and scale analysis into mature analytics solutions. Collaborate together with the product team and partners to understand and provide data-driven decision making, business planning and future roadmap.",
+      "company_description_text": "BMO Capital Markets is a leading, full-service North American-based financial services provider offering equity and debt underwriting, corporate lending and project financing, merger and acquisitions advisory services, securitization, treasury management, market risk management, debt and equity research and institutional sales and trading. BMO Capital Markets is a member of BMO Financial Group (NYSE, TSX: BMO), one of the largest diversified financial services providers in North America with US$1.0 trillion total assets and approximately 54,000 employees as of January 31, 2025."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 16
+  }
+}
+```

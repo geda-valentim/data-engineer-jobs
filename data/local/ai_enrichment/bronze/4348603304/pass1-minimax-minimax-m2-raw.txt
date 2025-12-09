@@ -1,0 +1,208 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through the job posting systematically and extract only explicitly stated information.
+
+Looking at the job posting:
+
+**Title**: Data Engineer-Business Intelligence
+**Company**: IBM
+**Location**: Pune, Maharashtra, India
+
+Let me extract each section:
+
+1. **Compensation**: No salary information is mentioned, so all compensation fields should be null.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. No security clearance mentioned. So:
+   - visa_sponsorship_stated: "not_mentioned"
+   - work_auth_text: null
+   - citizenship_text: null
+   - security_clearance_stated: "not_mentioned"
+
+3. **Work Model**: 
+   - Location is specified as "Pune, Maharashtra, India" - this suggests onsite work
+   - No mention of remote or hybrid work
+   - This appears to be a full-time position based on the description
+   - work_model_stated: "onsite" (since specific location is given)
+   - location_restriction_text: "Pune, Maharashtra, India"
+   - employment_type_stated: "full_time" (implied by the nature of the role)
+
+4. **Contract Details**: No mention of contract type, duration, etc. This appears to be a permanent position.
+   - contract_type: "permanent" (default for full-time positions)
+   - All other contract fields: null
+
+5. **Contractor Rates**: Not applicable as this is not a contractor position.
+   - pay_type: "not_mentioned"
+   - All other contractor rate fields: null
+
+6. **Skills Classification**: Let me analyze the technical requirements:
+
+**Must-have hard skills** (from "Required Technical And Professional Expertise"):
+- Cognos Developer & Admin (explicitly stated as "Required")
+- UNIX (mentioned as "good understanding")
+- English (mentioned as "well conversant")
+- Writing, MIS, communication, time management, multi-tasking (mentioned as "excellent")
+
+
+- BI DW projects (3 years experience required)
+- Reporting and visualization using Cognos (minimum 2 projects)
+- Development and evolutionary maintenance of environment, performance, capability, and availability
+- Technical requirements definition and solution development
+- Content and source-code management, troubleshooting, and debugging
+
+**Nice-to-have hard skills** (from "Preferred Technical And Professional Experience"):
+- Cloud and integration platforms (AWS, Google, Azure)
+- ETL/Data Integration tools (IBM InfoSphere DataStage, Azure Data Factory, Informatica PowerCenter)
+
+**Must-have soft skills**:
+- Excellent writing, communication, time management, and multi-tasking abilities
+- Strong English proficiency
+- Good understanding of UNIX systems
+
+**Nice-to-have soft skills**:
+- Agile mindset
+- Ability to process changes of priorities and requests
+- Ownership and critical thinking capabilities
+
+**Certifications**: Relevant certifications are preferred but not specified.
+
+**Experience**: Minimum 3 years in BI DW projects, with at least 2 projects in reporting and visualization using Cognos.
+
+**Education**: Full-time MCA/M.Tech/B.Tech/B.E. required, with preference for relevant certifications.
+
+**Education Level**: Master's degree preferred, with specific technical degree requirements.
+
+**Education Area**: Computer Science or related technical field.
+
+**Education Requirement**: Explicitly required for the position.
+
+**LLM/GenAI**: No mention of large language models or generative AI technologies.
+
+**Feature Store**: No specific feature store technologies mentioned.
+
+**Geographic Restrictions**: Limited to Pune, Maharashtra, India location.
+
+**Benefits**: No specific benefits information provided in the job posting.
+
+**Context**: Role involves working in IBM Consulting Client Innovation Centers, delivering technical expertise to diverse clients globally. Focus on deep technical and industry knowledge across public and private sectors.
+
+**Metadata**: Comprehensive extraction completed, with minimal null fields identified.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Pune, Maharashtra, India",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Cognos Developer",
+        "Cognos Admin",
+        "UNIX",
+        "English",
+        "Writing",
+        "MIS",
+        "Communication",
+        "Time Management",
+        "Multi-tasking",
+        "BI DW projects",
+        "Reporting",
+        "Visualization",
+        "Troubleshooting",
+        "Debugging"
+      ],
+      "nice_to_have_hard_skills": [
+        "AWS",
+        "Google Cloud",
+        "Azure",
+        "IBM InfoSphere DataStage",
+        "Azure Data Factory",
+        "Informatica PowerCenter"
+      ],
+      "must_have_soft_skills": [
+        "Communication",
+        "Time Management",
+        "Multi-tasking"
+      ],
+      "nice_to_have_soft_skills": [
+        "Agile mindset",
+        "Ownership",
+        "Critical Thinking"
+      ],
+      "certifications_mentioned": [
+        "relevant certifications"
+      ],
+      "years_experience_min": 3,
+      "years_experience_max": null,
+      "years_experience_text": "minimum of 3 years of experience",
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "Master's Degree",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "specific_countries",
+      "allowed_countries": ["IN"],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "IBM Consulting Client Innovation Centers (Delivery Centers)",
+      "company_description_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 25
+  }
+}
+```

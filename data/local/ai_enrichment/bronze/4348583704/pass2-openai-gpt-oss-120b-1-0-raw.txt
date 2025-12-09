@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.86,
+        "evidence": "Job requires a minimum of 3 years experience and does not use senior titles.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is \"Data Engineer-Business Intelligence\" and responsibilities focus on ETL, reporting and data warehousing.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.85,
+        "evidence": "Role emphasizes BI/DW projects, reporting, and Cognos visualization, typical of data‑warehouse work.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.80,
+        "evidence": "No mention of people‑management or team‑lead responsibilities; only technical contribution is described.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.88,
+        "evidence": "Must‑have skills list includes AWS, Google Cloud, and Azure, indicating experience across multiple clouds.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "All three clouds are listed as required; no single cloud is singled out as secondary.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.80,
+        "evidence": "ETL/Data Integration tools (DataStage, Azure Data Factory, Informatica) are typically used for batch pipelines; no streaming technologies are mentioned.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "Job description does not reference Airflow, Luigi, dbt, or any orchestration platform.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.85,
+        "evidence": "Focus on BI/DW reporting and Cognos suggests a data‑warehouse storage layer.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.92,
+        "evidence": "Location is Pune, Maharashtra, India and work model is onsite; no remote option is described.",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "apac",
+        "confidence": 0.62,
+        "evidence": "Job is based in India, which falls in the APAC region; no explicit timezone requirement is stated.",
+        "source": "combined"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Position is onsite in Pune with no mention of relocation assistance or requirement.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.55,
+        "evidence": "Visa sponsorship is not mentioned for an India‑based role; default assumption is no sponsorship.",
+        "source": "not_mentioned"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.55,
+        "evidence": "No reference to OPT/CPT eligibility; role is for experienced professionals in India.",
+        "source": "not_mentioned"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.60,
+        "evidence": "The posting does not specify citizenship or work‑authorization requirements.",
+        "source": "not_mentioned"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.92,
+        "evidence": "Employment type is full‑time permanent, which corresponds to a regular employee (W2) arrangement.",
+        "source": "combined"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits such as health, PTO, equity, or learning budget are listed in the posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "The description does not discuss career ladders, promotion tracks, or growth opportunities.",
+        "source": "not_mentioned"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No reference to mentorship programs or working with senior mentors.",
+        "source": "not_mentioned"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.92,
+        "evidence": "The posting contains no language about promotions or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.92,
+        "evidence": "No mention of internal transfers or lateral moves within the company.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career track options (IC, management, specialist, architect) are described.",
+        "source": "not_mentioned"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.80,
+        "evidence": "Clear must‑have hard and soft skills plus a minimum of 3 years experience; nice‑to‑have list is short.",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.92,
+        "evidence": "Job description is focused on a single role: Data Engineer for BI/DW reporting.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Required skills and experience level align with a mid‑level data engineer; no unrealistic senior‑level expectations are present.",
+        "source": "inferred"
+      }
+    }
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 13:34:21",
+    "job_posting_id": "4325758017",
+    "job_title": "Data Scientist-Advanced Analytics",
+    "company_name": "IBM",
+    "job_location": "Bengaluru East, Karnataka, India",
+    "pass_name": "pass3",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.7,
+          "evidence": "IBM is an established enterprise company with structured consulting practices, but job description lacks modern data stack mentions (no dbt, Airflow, Snowflake, etc.). Enterprise consulting environment suggests defined processes but not cutting-edge tooling.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.7,
+          "evidence": "Matches score of 3 - IBM's consulting structure implies documented processes and governance, but absence of modern tooling suggests defined rather than managed maturity level.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "data_governance",
+            "enterprise_practices"
+          ],
+          "confidence": 0.65,
+          "evidence": "IBM consulting environment implies structured governance and enterprise practices, though specific modern data stack tools not mentioned.",
+          "source": "inferred"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.25,
+          "confidence": 0.75,
+          "evidence": "Role has clear data engineering focus with AI/ML components. Despite title mismatch (Data Scientist vs Data Engineer), responsibilities are coherent and focused.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.3,
+          "confidence": 0.7,
+          "evidence": "IBM is a stable enterprise company with no 'fast-paced' or overtime language. Consulting environment may have deadline pressure but generally better work-life balance than startups.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.8,
+          "evidence": "Despite misleading title, role description clearly outlines data engineering responsibilities with specific technical requirements and tools (Elasticsearch, Splunk, predictive models).",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.2,
+          "confidence": 0.75,
+          "evidence": "Low overall risk - stable IBM employer, clear role definition, no extreme requirements. Main concern is title-role mismatch and lack of modern tech stack details.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "vague",
+          "confidence": 0.85,
+          "evidence": "No specific reporting structure mentioned. Only mentions 'Agile, collaborative environment' and working with 'scientists, engineers, consultants and database administrators'.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No manager level or reporting structure information provided in job description.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "unknown",
+          "confidence": 0.9,
+          "evidence": "No information about team size, growth plans, or hiring velocity mentioned in job description.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "collaborative environment with diverse backgrounds"
+          },
+          "confidence": 0.6,
+          "evidence": "Mentions working with 'scientists, engineers, consultants and database administrators of all backgrounds and disciplines' but no specific team composition details.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No reporting structure information provided in job description.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.75,
+          "evidence": "Mentions 'partnering with other scientists, engineers, consultants and database administrators' and working in 'collaborative environment' suggesting cross-functional collaboration.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.6,
+          "confidence": 0.65,
+          "evidence": "IBM is a stable enterprise company with generally good work-life balance, but no specific work-life balance policies mentioned. Consulting environment may have project-based pressure.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.4,
+          "confidence": 0.7,
+          "evidence": "No learning budget, conference attendance, or career growth opportunities mentioned. IBM consulting may offer diverse project experience but limited technical growth signals.",
+          "source": "pass1_derived"
+        },
+        "tech_culture_score": {
+          "value": 0.45,
+          "confidence": 0.7,
+          "evidence": "Mentions Agile methodology and collaboration, but lacks modern data engineering stack mentions. Enterprise consulting culture may be more process-focused than innovation-focused.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No specific tech culture signals mentioned - no open source, tech blogs, conferences, hackathons, or innovation time mentioned.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "agile_methodology"
+          ],
+          "confidence": 0.8,
+          "evidence": "Explicitly mentions 'Work in an Agile, collaborative environment' - this is the only development practice mentioned.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Strong focus on GenAI, LLMs, and POC development suggests some innovation focus, particularly in AI/ML space.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No mention of tech debt management, modernization, or improving existing systems. Focus is on new POC development and implementation.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "genai_focus",
+          "confidence": 0.9,
+          "evidence": "Strong emphasis on GenAI throughout - 'Gen AI code assistant', 'LLM capabilities', 'large language models', 'foundation models', and code generation/translation using LLMs.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [
+            "LLM_frameworks",
+            "code_generation_tools"
+          ],
+          "confidence": 0.85,
+          "evidence": "Mentions 'Gen AI code assistant', 'LLM capabilities', and 'code generation, code matching & code translation leveraging LLM capabilities'.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "normal",
+          "confidence": 0.8,
+          "evidence": "No urgency indicators like 'immediate start', 'ASAP', or deadline pressure mentioned. Standard enterprise hiring timeline expected.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "high",
+          "confidence": 0.75,
+          "evidence": "IBM is a prestigious employer in Bengaluru's competitive tech market. Location in major Indian tech hub with onsite requirement increases competition from local talent.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.9,
+          "evidence": "IBM is a well-established enterprise company with global consulting operations and Client Innovation Centers.",
+          "source": "pass1_derived"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.7,
+          "evidence": "IBM consulting typically has steady hiring patterns to support client projects, but no specific growth indicators mentioned.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No team size information provided in job description.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "public",
+          "confidence": 0.95,
+          "evidence": "IBM is a publicly traded, established enterprise company - funding stage not applicable but indicates stability.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No indication of whether this is new headcount, backfill, or team expansion.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "established_company",
+        "genai_focus",
+        "clear_requirements",
+        "onsite_collaboration"
+      ],
+      "strength_details": [
+        "IBM is a stable, established enterprise company with global consulting presence",
+        "Strong focus on cutting-edge GenAI and LLM technologies with practical applications",
+        "Clear technical requirements and responsibilities despite title mismatch",
+        "Collaborative consulting environment working with diverse technical teams"
+      ],
+      "concern_categories": [
+        "vague_requirements",
+        "salary_not_disclosed",
+        "title_mismatch",
+        "limited_growth",
+        "onsite_required"
+      ],
+      "concern_details": [
+        "No salary, benefits, or compensation information disclosed",
+        "Job title 'Data Scientist' doesn't match actual data engineering responsibilities",
+        "No career growth, learning opportunities, or advancement path mentioned",
+        "Onsite requirement in Bengaluru limits remote work flexibility",
+        "Lack of modern data engineering stack details (cloud platforms, orchestration tools)"
+      ],
+      "best_fit_categories": [
+        "data_engineers",
+        "ml_engineers",
+        "ai_specialists",
+        "enterprise_experienced"
+      ],
+      "best_fit_details": [
+        "Data engineers with 3-7 years experience interested in AI/ML integration",
+        "ML engineers focused on GenAI and LLM applications in enterprise settings",
+        "Professionals seeking stable enterprise environment over startup volatility",
+        "Candidates with experience in enterprise search (Elasticsearch, Splunk) and statistical modeling"
+      ],
+      "probe_categories": [
+        "salary_range_details",
+        "tech_stack_details",
+        "reporting_structure",
+        "career_growth_path",
+        "work_hour_expectations"
+      ],
+      "probe_details": [
+        "Ask for detailed salary range, benefits, and total compensation package",
+        "Understand the actual tech stack, cloud platforms, and data infrastructure used",
+        "Clarify reporting structure and team hierarchy within IBM consulting",
+        "Inquire about career advancement opportunities and skill development programs",
+        "Discuss typical work hours, project timelines, and client delivery expectations"
+      ],
+      "leverage_categories": [
+        "genai_expertise",
+        "enterprise_experience",
+        "local_candidate"
+      ],
+      "leverage_details": [
+        "Strong GenAI and LLM experience is highly valuable given the role's focus",
+        "Previous enterprise consulting or large company experience aligns well with IBM culture",
+        "Being local to Bengaluru eliminates relocation concerns and demonstrates commitment",
+        "Experience with legacy systems (COBOL, JAVA) mentioned as preferred is a differentiator"
+      ],
+      "overall_assessment": "Solid enterprise opportunity at IBM for data engineers interested in AI/ML integration, particularly GenAI applications. Stable company with clear technical focus, but lacks modern data engineering stack details and growth opportunities. Main trade-offs are title-role mismatch, lack of compensation transparency, and onsite requirement in Bengaluru.",
+      "recommendation_score": 0.65,
+      "recommendation_confidence": 0.75
+    },
+    "tokens": 12855,
+    "input_tokens": 9582,
+    "output_tokens": 3273,
+    "cost": 0.016128
+  }
+}

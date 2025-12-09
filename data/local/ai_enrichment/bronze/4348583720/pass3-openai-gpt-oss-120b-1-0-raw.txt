@@ -1,0 +1,255 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Job mentions big‑data tools (Spark, Hadoop, Kafka) and AWS services but no CI/CD, data catalog, testing or governance practices.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches a score of 2 indicating basic pipelines and some automation without formal governance.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [
+          "cloud_native"
+        ],
+        "confidence": 0.8,
+        "evidence": "All pipeline components run on AWS (EMR, Glue, RedShift, DynamoDB).",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.12,
+        "confidence": 0.9,
+        "evidence": "Responsibilities are limited to data engineering (pipeline building, streaming, Hadoop/AWS); no mention of dev‑ops, analytics, or product ownership.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.25,
+        "confidence": 0.78,
+        "evidence": "IBM consulting projects can have deadline pressure, but no explicit on‑call or 24/7 expectations are listed.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.95,
+        "evidence": "Job description focuses solely on data‑engineer tasks and lists mandatory skills without vague language.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.22,
+        "confidence": 0.85,
+        "evidence": "Low scope creep, moderate overtime risk, and clear role definition lead to a low composite red‑flag rating.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "Posting does not specify a manager or reporting line.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.7,
+        "evidence": "No title (e.g., Head of Data, Director) is referenced in the description.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.7,
+        "evidence": "No indication of hiring surge or team expansion in the posting.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.5,
+        "evidence": "No details on team size, number of data engineers, or seniority mix are provided.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "The job ad does not state who the role reports to.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.6,
+        "evidence": "No language about being embedded in product or client delivery teams; role appears centralized within a consulting delivery center.",
+        "source": "pass1_derived"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.7,
+        "evidence": "IBM typically offers standard PTO and flexible hours, but the posting provides no explicit work‑life balance statements.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.4,
+        "confidence": 0.7,
+        "evidence": "No mention of mentorship programs, learning budgets, or clear promotion paths.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.55,
+        "confidence": 0.75,
+        "evidence": "Use of modern big‑data tools (Spark, Kafka, AWS) shows technical competence, but lack of CI/CD, testing, or data‑governance signals a modest culture maturity.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.8,
+        "evidence": "Posting does not reference open‑source contributions, conference speaking, hackathons, or dedicated innovation time.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.8,
+        "evidence": "No explicit mention of code review, CI/CD pipelines, testing, or monitoring frameworks.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.7,
+        "evidence": "No language about experimentation, R&D, or adopting emerging technologies beyond the listed stack.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.7,
+        "evidence": "The description does not discuss refactoring, modernization, or tech‑debt reduction initiatives.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.8,
+        "evidence": "No machine‑learning pipelines, model serving, or MLOps tools are referenced.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.8,
+        "evidence": "No ML‑specific tooling (e.g., SageMaker, MLflow) appears in the posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "The ad does not state an immediate or accelerated start date.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No data on applicant volume, location desirability, or salary competitiveness is provided.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.9,
+        "evidence": "IBM is a global, publicly‑traded technology and consulting firm.",
+        "source": "pass1_derived"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.7,
+        "evidence": "No language indicating aggressive hiring or rapid expansion; typical of a large, stable organization.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.7,
+        "evidence": "The posting does not disclose the size of the data‑engineering team.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "IBM is a publicly‑listed company; funding stage is not applicable.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.7,
+        "evidence": "No indication whether the role is a new headcount, backfill, or team expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "modern_tech_stack",
+      "cloud_native",
+      "established_company",
+      "data_focused_role"
+    ],
+    "strength_details": [
+      "Work with industry‑standard big‑data technologies (Spark, Hadoop, Kafka) on AWS.",
+      "Role is part of IBM Consulting, offering exposure to diverse client projects and data platforms.",
+      "Focus on building both batch and streaming pipelines within a lakehouse architecture.",
+      "Opportunity to deepen expertise in AWS services (EMR, Glue, RedShift, DynamoDB)."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "unclear_reporting",
+      "limited_growth"
+    ],
+    "concern_details": [
+      "Compensation details (salary, equity, bonuses) are not provided in the posting.",
+      "No information about the manager or reporting line, making career navigation unclear.",
+      "Absence of stated mentorship, learning budget, or promotion path limits visible growth opportunities."
+    ],
+    "best_fit_categories": [
+      "senior_data_engineers",
+      "pipeline_developers",
+      "analytics_engineers"
+    ],
+    "best_fit_details": [
+      "Senior data engineers with 5‑8+ years of Spark and Hadoop experience seeking to work on AWS‑based platforms.",
+      "Engineers who specialize in building and maintaining both batch and real‑time streaming pipelines.",
+      "Candidates interested in a data‑focused role within a large consulting organization."
+    ],
+    "probe_categories": [
+      "team_size_composition",
+      "reporting_structure",
+      "tech_stack_details",
+      "career_growth_path",
+      "salary_range_details"
+    ],
+    "probe_details": [
+      "What is the size of the data‑engineering team and how is seniority distributed?",
+      "Who will I report to day‑to‑day, and is there a clear career ladder within IBM Consulting?",
+      "Beyond Spark and AWS, are there plans to adopt orchestration tools (e.g., Airflow) or data‑catalog solutions?",
+      "What mentorship, training, or certification support does IBM provide for data engineers?",
+      "Can you share the expected salary band and any bonus or equity components for this role?"
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "rare_skill_match"
+    ],
+    "leverage_details": [
+      "5+ years of hands‑on Spark development on AWS aligns directly with the core responsibilities.",
+      "Deep expertise in streaming pipelines with Kafka is a scarce skill in the market."
+    ],
+    "overall_assessment": "The position offers a solid senior data‑engineering opportunity within IBM's established consulting ecosystem, featuring a modern big‑data stack on AWS. While compensation and career‑path details are opaque, the role is well‑defined and suited for candidates with strong Spark and streaming experience. The main trade‑offs are limited visibility into growth programs and lack of explicit work‑life balance signals.",
+    "recommendation_score": 0.75,
+    "recommendation_confidence": 0.85
+  }
+}

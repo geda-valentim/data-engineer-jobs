@@ -108,3 +108,24 @@ output "companies_fetcher_function_arn" {
   description = "ARN da Lambda companies fetcher"
   value       = aws_lambda_function.companies_fetcher.arn
 }
+
+# Companies Backfill Scanner
+output "companies_backfill_scanner_function_name" {
+  description = "Nome da Lambda companies backfill scanner"
+  value       = aws_lambda_function.companies_backfill_scanner.function_name
+}
+
+output "companies_backfill_scanner_function_arn" {
+  description = "ARN da Lambda companies backfill scanner"
+  value       = aws_lambda_function.companies_backfill_scanner.arn
+}
+
+output "backfill_processing_state_table_name" {
+  description = "Nome da tabela DynamoDB de estado de backfill"
+  value       = aws_dynamodb_table.backfill_processing_state.name
+}
+
+output "backfill_processing_state_table_arn" {
+  description = "ARN da tabela DynamoDB de estado de backfill"
+  value       = aws_dynamodb_table.backfill_processing_state.arn
+}

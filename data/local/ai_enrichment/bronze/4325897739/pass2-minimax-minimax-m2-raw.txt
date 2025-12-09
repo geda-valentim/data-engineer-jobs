@@ -1,0 +1,293 @@
+<reasoning>Let me analyze this job posting and Pass 1 extraction results to infer the job characteristics according to the rules provided.
+
+First, let me understand what we have:
+
+**Original Job Posting:**
+- Title: Data Engineer-Data Platforms-AWS
+- Company: IBM
+- Location: Kochi, Kerala, India
+- This is for an IBM Consulting Client Innovation Center
+- Focus on big data solutions using Spark Framework with Python or Scala on Hadoop and Azure Cloud Data Platform
+- 4+ years experience required in Big Data technologies
+- 3+ years experience on Azure Cloud Data Platforms
+- Skills: Spark, Python, Scala, Azure services, SQL, Kafka, etc.
+
+**Pass 1 Extraction Results:**
+- Onsite work model
+- Location restricted to Kochi, Kerala, India
+- No salary disclosed
+- No visa sponsorship mentioned
+- No benefits mentioned
+- Must-have skills: Spark, Python, Scala, Azure Cloud Data Platform, SQL, DataBricks, etc.
+- Nice-to-have: Azure certification, Data Bricks certification, Cloudera Spark certification
+- 4+ years experience required
+
+Now let me go through each inference category:
+
+## SENIORITY AND ROLE
+
+### seniority_level
+The job posting says "Data Engineer" with "Minimum 4+ years of experience in Big Data technologies". This suggests a senior level position. In data engineering, 4+ years typically maps to senior level. The title doesn't have "Senior" in it, but the experience requirement is substantial. Confidence: 0.75 (moderate inference from responsibilities and experience)
+
+### job_family
+This is clearly a "data_engineer" - the title is "Data Engineer" and the responsibilities are all about building data pipelines, processing data, etc. Confidence: 0.95 (very clear from title and responsibilities)
+
+### sub_specialty
+Looking at the skills and responsibilities:
+- "Experience in developing streaming pipelines"
+
+
+- "Exposure to streaming solutions and message brokers like Kafka technologies"
+- "Apache Spark, Kafka, any Cloud computing etc"
+
+The role emphasizes streaming and real-time data processing. With Kafka and streaming pipelines as core technologies, this points to a specialized focus on real-time data engineering. The cloud-native approach using Azure further reinforces the streaming and real-time data processing specialization. Confidence: 0.85 (strong inference from streaming technologies mentioned)
+
+### leadership_expectation
+The job description focuses on technical implementation without mentioning team management or direct reports. It emphasizes individual contributor responsibilities like developing and maintaining data solutions. The role appears to be a pure technical position without explicit leadership requirements. Confidence: 0.80 (clear from lack of management mentions)
+
+## STACK AND CLOUD
+
+### primary_cloud
+Multiple Azure-specific services are highlighted, including Azure Data Factory, Synapse, and HDInsight. The consistent mention of Azure technologies indicates a strong cloud platform preference. Confidence: 0.95 (explicit Azure focus)
+
+### secondary_clouds
+The job description concentrates solely on Azure, with no references to other cloud providers like AWS or GCP. This suggests a single-cloud strategy. Confidence: 0.90 (no other clouds mentioned)
+
+### processing_paradigm
+The role emphasizes streaming capabilities through Kafka and real-time pipeline development. This points to a streaming-oriented approach to data processing. Confidence: 0.85 (strong streaming emphasis)
+
+### orchestrator_category
+While specific orchestrators aren't explicitly named, the cloud-native services like Azure Data Factory suggest a preference for cloud-based workflow management. The absence of traditional tools like Airflow indicates a modern, cloud-centric approach. Confidence: 0.75 (inferred from cloud services)
+
+### storage_layer
+The job description references multiple storage technologies, including Hadoop, HDFS, and NoSQL databases like HBase. This indicates a mixed storage approach, combining traditional and modern data storage solutions. Confidence: 0.80 (diverse storage technologies mentioned)
+
+## GEO AND WORK MODEL
+
+### remote_restriction
+The position is explicitly limited to Kochi, Kerala, India, with an onsite work model. This represents a strict geographic constraint requiring local presence. Confidence: 0.95 (clear location restriction)
+
+### timezone_focus
+The India-specific location implies a focus on the Asia-Pacific (APAC) region, with local timezone considerations. Confidence: 0.90 (specific country mentioned)
+
+### relocation_required
+The onsite requirement in Kochi suggests potential relocation needs for candidates not already in the area. However, the specific language about relocation isn't explicitly stated. Confidence: 0.70 (inferred from onsite requirement)
+
+## VISA AND AUTHORIZATION
+
+### h1b_friendly
+No visa sponsorship information is provided, which typically indicates limited visa support for international candidates. Confidence: 0.85 (no sponsorship mentioned)
+
+### opt_cpt_friendly
+The lack of specific visa information suggests potential restrictions for students or temporary workers. The onsite requirement might further limit visa flexibility. Confidence: 0.75 (inferred from lack of visa details)
+
+### citizenship_required
+The job appears to require work authorization, but doesn't specify citizenship requirements. This suggests openness to various work authorization types. Confidence: 0.80 (work authorization implied)
+
+## CONTRACT AND COMPENSATION
+
+### w2_vs_1099
+The position seems to be a standard full-time employee role, likely with a W2 employment structure given the corporate consulting context. Confidence: 0.85 (standard employee position)
+
+### benefits_level
+No specific benefits are mentioned in the job description, leaving the compensation details unclear. Confidence: 0.60 (minimal information provided)
+
+## CAREER DEVELOPMENT
+
+### growth_path_clarity
+The job description lacks explicit career progression details, offering only a general technical role description. Confidence: 0.50 (vague growth potential)
+
+### mentorship_signals
+No specific mentorship or collaborative learning opportunities are highlighted in the role. Confidence: 0.60 (limited mentorship information)
+
+### promotion_path_mentioned
+No clear advancement or promotion pathway is outlined in the job posting. Confidence: 0.90 (no promotion details)
+
+### internal_mobility_mentioned
+The description doesn't provide insights into potential internal career movement or role transitions. Confidence: 0.90 (no mobility information)
+
+### career_tracks_available
+The role appears to be a standard individual contributor position without explicit track differentiation. Confidence: 0.60 (limited career track details)
+
+## REQUIREMENTS CLASSIFICATION
+
+### requirement_strictness
+The job posting presents a balanced mix of mandatory and preferred qualifications, suggesting a moderate level of requirement strictness. Confidence: 0.75 (clear must-have vs nice-to-have distinction)
+
+### scope_definition
+The role maintains a focused approach on data engineering responsibilities, avoiding multi-role complexity. Confidence: 0.85 (clear, single-role focus)
+
+### skill_inflation_detected
+The skill requirements align reasonably with the senior-level position, avoiding unrealistic expectations. Confidence: 0.80 (appropriate skill set for seniority)
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.75,
+        "evidence": "4+ years experience requirement in Big Data technologies with extensive data engineering experience, typical for senior level positions",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title is 'Data Engineer' and core responsibilities focus on developing, maintaining, and testing big data solutions and data pipelines",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "streaming_realtime",
+        "confidence": 0.85,
+        "evidence": "Strong emphasis on streaming solutions, Kafka technologies, and developing streaming pipelines with real-time data processing",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.80,
+        "evidence": "Focus on individual technical work developing and maintaining data solutions, no mention of team leadership or direct reports",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.95,
+        "evidence": "Multiple Azure services explicitly mentioned: Azure Cloud Data Platform, Azure HDInsight, Azure Data Factory, Synapse",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud providers mentioned beyond Azure ecosystem",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "streaming",
+        "confidence": 0.88,
+        "evidence": "Strong emphasis on streaming solutions, Kafka technologies, and developing streaming pipelines for real-time data processing",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.75,
+        "evidence": "Azure Data Factory mentioned as primary orchestration tool, which is cloud-native to Azure platform",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.80,
+        "evidence": "Mentions both data warehouse concepts (SQL Server DB, Synapse) and data lake concepts (HDFS, Hadoop ecosystem)",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.95,
+        "evidence": "Explicitly requires 'Kochi, Kerala, India' location with onsite work model stated",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.92,
+        "evidence": "Location restricted to India (Kochi, Kerala) indicating specific country focus",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.70,
+        "evidence": "Onsite requirement in specific location (Kochi) implies relocation needed for candidates not already in the area",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No visa sponsorship mentioned, and location restricted to India suggests limited visa support for international candidates",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "No mention of student visa support and onsite requirement in specific location suggests limited flexibility for international students",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.80,
+        "evidence": "No citizenship requirements mentioned, suggesting work authorization in India is the primary requirement",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.85,
+        "evidence": "IBM Consulting position typically indicates full-time employee status with W2 employment structure",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits, compensation, or perks mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No career progression, growth opportunities, or advancement paths mentioned in the job description",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No mentorship programs, collaborative learning, or working with senior staff mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion, advancement, or career progression opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers, role changes, or mobility opportunities",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No career tracks, paths, or advancement opportunities mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.73,
+        "evidence": "Clear distinction between required technical skills and preferred certifications, with balanced must-have vs nice-to-have language",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.82,
+        "evidence": "Focused job description specifically on data engineering role with well-defined technical responsibilities and requirements",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Skill requirements (4+ years experience, Spark/Python/Scala, Azure) are reasonable and appropriate for senior data engineer level",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

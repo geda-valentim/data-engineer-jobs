@@ -1,0 +1,292 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 12:25:32",
+    "job_posting_id": "4296706724",
+    "job_title": "Senior Data Engineer II",
+    "company_name": "ActBlue",
+    "job_location": "United States",
+    "pass_name": "pass3",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.82,
+          "evidence": "Job mentions modern data stack components (dbt, Fivetran, reverse ETL, CI/CD, monitoring with Datadog) but does not specify orchestration tool or formal governance, indicating a defined level of maturity.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.82,
+          "evidence": "Score of 3 maps to the \"defined\" maturity level.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "modern_data_stack_adoption",
+            "cicd_practices",
+            "data_quality_testing",
+            "monitoring_observability",
+            "cloud_native"
+          ],
+          "confidence": 0.85,
+          "evidence": "Posting lists dbt, Fivetran, CI/CD, pytest, Datadog monitoring, and multi‑cloud (AWS & GCP) usage.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.15,
+          "confidence": 0.88,
+          "evidence": "Responsibilities are limited to data engineering, ML workflow production, and reverse ETL; no backend, dev‑ops, or product design duties are mixed in.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.38,
+          "confidence": 0.72,
+          "evidence": "On‑call rotation is required, which adds non‑standard hours, but unlimited PTO and remote flexibility mitigate risk.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "Job description clearly outlines data‑engineer duties, mentorship expectations, and ML pipeline ownership without mentioning unrelated functions.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.26,
+          "confidence": 0.78,
+          "evidence": "Low scope creep, moderate overtime risk, clear role, and medium requirement strictness combine to a low overall red‑flag rating.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "mentioned",
+          "confidence": 0.7,
+          "evidence": "Posting states the role is part of the \"Data Product Team\" but does not name a specific manager or reporting line.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.65,
+          "evidence": "No title such as Head of Data, Director, or Engineering Manager is referenced in the posting.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "stable",
+          "confidence": 0.68,
+          "evidence": "No explicit statements about rapid hiring or expansion; the team appears to be an established data product group.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.55,
+          "evidence": "Job posting does not disclose the size or makeup of the data team.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.7,
+          "evidence": "No explicit reporting line (e.g., reports to CTO or Director of Data) is provided.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.78,
+          "evidence": "Role works across product, engineering, and analytics teams and mentions collaboration with product managers and engineers.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.62,
+          "confidence": 0.8,
+          "evidence": "Unlimited PTO and remote flexibility are positive, but mandatory on‑call rotation introduces potential after‑hours work.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.68,
+          "confidence": 0.78,
+          "evidence": "Mentorship, code‑review responsibilities, and exposure to ML pipelines suggest skill growth, though no formal learning budget is listed.",
+          "source": "combined"
+        },
+        "tech_culture_score": {
+          "value": 0.74,
+          "confidence": 0.85,
+          "evidence": "Use of modern tooling (Python, dbt, CI/CD, monitoring), emphasis on testing and code reviews indicates a healthy engineering culture.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [],
+          "confidence": 0.6,
+          "evidence": "Posting does not mention open‑source contributions, conference speaking, or dedicated innovation time.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "code_review",
+            "ci_cd",
+            "monitoring",
+            "tdd"
+          ],
+          "confidence": 0.9,
+          "evidence": "Explicit references to code reviews, CI/CD automation, Datadog monitoring, and testing frameworks (pytest, dbt tests).",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Job highlights keeping up with modern data‑stack tools but does not describe dedicated innovation programs.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "No language about refactoring legacy pipelines or managing technical debt appears in the description.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "mlops",
+          "confidence": 0.78,
+          "evidence": "Responsibilities include productionizing ML workflows with SageMaker, Vertex AI, and mention of MLOps tooling.",
+          "source": "inferred"
+        },
+        "ml_tools_expected": {
+          "value": [
+            "SageMaker",
+            "Vertex AI"
+          ],
+          "confidence": 0.88,
+          "evidence": "Both services are explicitly listed as part of the ML pipeline production responsibilities.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "normal",
+          "confidence": 0.78,
+          "evidence": "Posting does not specify an immediate start or “ASAP” language; typical hiring timeline implied.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.65,
+          "evidence": "Competitive salary range and remote‑US eligibility suggest moderate applicant volume, but no explicit numbers are provided.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "established_tech",
+          "confidence": 0.72,
+          "evidence": "ActBlue is a well‑known nonprofit platform with a mature product offering and a sizable data organization.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.7,
+          "evidence": "Job posting does not mention rapid expansion or multiple simultaneous hires; appears to be a regular addition.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No explicit statement about the size of the data engineering team.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No funding round or capital‑raising information appears in the posting.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "team_expansion",
+          "confidence": 0.75,
+          "evidence": "The description notes expanding data product capabilities, implying the role adds capacity rather than replaces someone.",
+          "source": "inferred"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "transparent_salary",
+        "modern_tech_stack",
+        "remote_friendly",
+        "work_life_balance",
+        "strong_benefits"
+      ],
+      "strength_details": [
+        "Transparent salary range ($173k‑$211k) with clear compensation bands.",
+        "Modern data stack includes dbt, Fivetran, reverse ETL, CI/CD, and multi‑cloud (AWS & GCP).",
+        "Fully remote within the United States, offering flexibility across time zones.",
+        "Unlimited PTO and flexible schedule support work‑life balance.",
+        "Comprehensive benefits package (health, 401k match, home‑office allowance, etc.)."
+      ],
+      "concern_categories": [
+        "overtime_likely",
+        "no_visa_sponsorship",
+        "on_call_expected"
+      ],
+      "concern_details": [
+        "On‑call rotation may require work outside regular business hours.",
+        "US work authorization required; the company does not sponsor visas.",
+        "Remote work limited to a specific list of U.S. states."
+      ],
+      "best_fit_categories": [
+        "senior_data_engineers",
+        "pipeline_developers",
+        "ml_engineers",
+        "leadership_track"
+      ],
+      "best_fit_details": [
+        "Senior data engineers with 5+ years of Python‑centric pipeline experience.",
+        "Candidates comfortable building both batch and real‑time data integrations.",
+        "Engineers interested in MLOps and productionizing ML models.",
+        "Professionals seeking mentorship roles and a path toward tech‑lead responsibilities."
+      ],
+      "probe_categories": [
+        "work_hour_expectations",
+        "on_call_expectations",
+        "career_growth_path",
+        "tech_stack_details",
+        "role_scope_boundaries"
+      ],
+      "probe_details": [
+        "What is the typical on‑call schedule and how often are incidents expected?",
+        "Can you describe the expected weekly work hours and any peak‑period crunch times?",
+        "What formal career ladders or promotion criteria exist for senior engineers?",
+        "Which orchestration tool (e.g., Airflow, Dagster) does the team plan to adopt, if any?",
+        "How are responsibilities divided between batch, streaming, and ML pipeline work?"
+      ],
+      "leverage_categories": [
+        "rare_skill_match",
+        "domain_expertise",
+        "leadership_experience"
+      ],
+      "leverage_details": [
+        "Deep experience with reverse‑ETL tools (Hightouch) is uncommon and valuable.",
+        "Background in political fundraising data adds domain relevance.",
+        "Proven mentorship and code‑review leadership can be leveraged for senior‑level negotiation."
+      ],
+      "overall_assessment": "The role offers a senior‑level data engineering position with a modern stack, solid compensation, and strong benefits. It provides opportunities to work on both batch and real‑time pipelines and to lead ML workflow production. The main trade‑offs are on‑call duties and the lack of visa sponsorship.",
+      "recommendation_score": 0.78,
+      "recommendation_confidence": 0.84
+    },
+    "tokens": 15165,
+    "input_tokens": 11027,
+    "output_tokens": 4138,
+    "cost": 0.00289545
+  }
+}

@@ -1,0 +1,253 @@
+<reasoning>Let me analyze this job posting carefully to infer the job characteristics according to the rules provided.
+
+First, let me understand what we have:
+
+**Original Job Posting:**
+- Title: Data Engineer-Business Intelligence
+- Company: IBM
+- Location: Pune, Maharashtra, India
+- This is for IBM Consulting Client Innovation Centers
+- Focus on BI/DW projects, reporting and visualization using Cognos
+- 3+ years experience required
+- Education: MCA/M.Tech/B.Tech/B.E.
+- Skills: Cognos Developer & Admin, UNIX, cloud platforms (AWS, Google, Azure), ETL tools
+
+**Pass 1 Extraction Results:**
+- No salary disclosed
+- No visa sponsorship mentioned
+- No work model specified
+- No location restrictions mentioned
+- No employment type specified
+- Must-have skills: Cognos Developer, Admin, UNIX
+- Nice-to-have skills: AWS, Google, Azure, IBM InfoSphere DataStage, Azure Data Factory, Informatica PowerCenter
+- Must-have soft skills: Communication, Time Management
+- 3 years minimum experience
+- Education: Bachelor's required
+- No benefits mentioned
+- No equity mentioned
+- No learning budget mentioned
+
+Now let me go through each inference category:
+
+## SENIORITY AND ROLE
+
+### seniority_level
+- Title: "Data Engineer-Business Intelligence" (no explicit senior/junior in title)
+- Experience: 3 years minimum
+- This suggests mid-level (not entry, not senior)
+- Confidence: 0.7-0.8 (title doesn't specify, but 3 years suggests mid-level)
+- Value: "mid"
+
+### job_family
+- Title explicitly says "Data Engineer-Business Intelligence"
+- Focus on BI/DW projects, reporting and visualization
+- This is clearly a BI Engineer role
+- Confidence: 0.9+ (explicit in title)
+- Value: "bi_engineer"
+
+### sub_specialty
+- Focus on reporting and visualization using Cognos
+
+
+- ETL/Data Integration tools mentioned
+- This is primarily BI/reporting focused
+- Confidence: 0.8 (clear BI focus)
+- Value: "bi_engineering" (but this isn't in the allowed values... let me check)
+- Looking at allowed values: "streaming_realtime" | "batch_etl" | "data_warehouse" | "data_lakehouse" | "ml_infra" | "mlops" | "data_governance" | "data_quality" | "data_modeling" | "cloud_migration" | "reverse_etl" | "api_development" | "observability" | "general" | "not_mentioned"
+- This would be "data_warehouse" or "general" - I'll go with "data_warehouse" since it's BI/DW focused
+
+### leadership_expectation
+- No mention of mentoring, leading teams, or direct reports
+- Focus on individual contributor work
+- Confidence: 0.8 (no leadership signals)
+- Value: "ic"
+
+I'll analyze the cloud and processing aspects, noting the multi-cloud approach and batch processing focus. The role emphasizes data warehousing and business intelligence, with a clear preference for experienced professionals in the mid-level range. The position requires strong technical skills in Cognos and UNIX, with additional expertise in cloud platforms and ETL tools being advantageous.
+
+The role appears to be a standard individual contributor position without explicit leadership expectations, targeting professionals with 3+ years of experience in data engineering and business intelligence domains.
+
+Cloud infrastructure shows flexibility across AWS, Google, and Azure, suggesting a multi-cloud strategy. The processing approach centers on batch ETL, with no real-time streaming requirements mentioned. Orchestration tools are not specified, indicating a potential need for further clarification about workflow management.
+
+Storage layer remains undefined, requiring additional investigation to understand the underlying data architecture and management approach.
+
+Geographic constraints reveal a specific location requirement in Pune, Maharashtra, India, with no explicit remote work options. Timezone focus appears to be India-specific, though precise details are not yet confirmed.
+
+Visa and work authorization requirements are currently unspecified, necessitating direct inquiry about potential sponsorship or work permit support.
+
+Contractual details suggest a standard employment arrangement, likely full-time, though specific terms remain unclear. Benefits appear minimal or not comprehensively outlined.
+
+Career development signals are limited, with no explicit growth opportunities, mentorship programs, or internal mobility pathways currently indicated. The role seems to have a narrowly defined scope focused on BI engineering, without significant skill inflation concerns.
+
+The position requires careful verification of work authorization, particularly for international candidates, as current details suggest potential restrictions.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.75,
+        "evidence": "3 years minimum experience required, no explicit senior/junior in title, typical mid-level requirement",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "bi_engineer",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Data Engineer-Business Intelligence' with focus on BI/DW projects, reporting and visualization",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.82,
+        "evidence": "Focus on BI/DW projects, reporting and visualization using Cognos, data warehouse patterns",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "No mention of mentoring, leading teams, or direct reports; focus on individual contributor work",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.80,
+        "evidence": "Multiple cloud platforms mentioned (AWS, Google, Azure) with no clear primary preference",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": ["aws", "azure", "gcp"],
+        "confidence": 0.85,
+        "evidence": "All three major cloud providers mentioned as nice-to-have skills",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.78,
+        "evidence": "ETL/Data Integration tools mentioned (DataStage, Azure Data Factory, Informatica) suggest batch processing patterns",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific orchestration tools mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No specific data storage systems mentioned (warehouse, lake, etc.)",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.75,
+        "evidence": "Specific location requirement (Pune, Maharashtra, India) suggests regional restriction",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.80,
+        "evidence": "Location specified as Pune, Maharashtra, India indicates India timezone focus",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Must be located in Pune, Maharashtra, India - implies relocation for non-local candidates",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "No visa sponsorship mentioned, location in India suggests local hiring focus",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "No mention of student visa support, location in India suggests local hiring",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.65,
+        "evidence": "No explicit citizenship requirement mentioned, but location suggests work authorization needed",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No employment type or contract structure mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits, equity, PTO, or other compensation details mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No career growth, advancement, or development opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No mentorship programs or working with senior people mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion, advancement, or career progression mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No internal transfers, role changes, or mobility opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No career tracks or advancement paths mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Clear distinction between must-have skills (Cognos, UNIX) and nice-to-have (cloud platforms), balanced requirements",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Focused role on BI engineering with specific tools (Cognos) and clear responsibilities",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Reasonable skill requirements for mid-level BI engineer role, 3 years experience matches expectations",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

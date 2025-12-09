@@ -1,0 +1,235 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Mentions data modeling tools (Erwin, IBM Infosphere), data warehousing concepts, and governance practices but lacks modern stack (dbt, Airflow, cloud-native) or CI/CD/testing signals",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2 - basic data modeling and warehousing practices without advanced automation or governance",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["data_governance"],
+        "confidence": 0.70,
+        "evidence": "Mentions data governance practices and data warehousing concepts",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.25,
+        "confidence": 0.85,
+        "evidence": "Focused on data modeling and architecture; no conflation with ML, DevOps, or frontend roles",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "Onsite work model in Pune, India with no PTO or work-life balance signals; 12+ years experience suggests high expectations",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Well-defined responsibilities focused on data modeling, architecture, and warehousing",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to onsite requirement and lack of work-life balance signals, but role is well-defined",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Mentions working with scientists, engineers, consultants, but no specific reporting manager or structure",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No manager title or level mentioned in job description or Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.65,
+        "evidence": "No signals about team expansion or hiring velocity; mentions collaborative environment but no growth metrics",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.60,
+        "evidence": "Mentions working with various professionals but no team size or composition details",
+        "source": "inferred"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure specified in job description",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Mentions partnering with other professionals but no indication of embedded cross-functional teams",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "Onsite work model in Pune, India; no PTO, flexible schedule, or work-life balance signals mentioned",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.55,
+        "confidence": 0.65,
+        "evidence": "Mentions collaborative environment and learning from peers, but no explicit career paths, learning budget, or promotion opportunities",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.50,
+        "confidence": 0.70,
+        "evidence": "Focus on traditional data modeling tools (Erwin, IBM Infosphere) without modern stack or engineering practices mentioned",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No mentions of open source, tech blogs, conference speaking, hackathons, or innovation time",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No code review, CI/CD, testing, monitoring, or other engineering practices mentioned",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.70,
+        "evidence": "Focus on traditional data modeling and warehousing without mention of innovation, experimentation, or new tech exploration",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt management, refactoring, or code quality improvement",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.75,
+        "evidence": "Mentions implementing predictive models and working with statistical techniques, but no MLOps or advanced ML infrastructure mentioned",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No specific ML tools (SageMaker, MLflow, etc.) mentioned in job description",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No urgency signals like 'ASAP', 'immediate start', or 'urgent need' mentioned",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Location restricted to Pune, India; 12+ years experience requirement limits applicant pool, but IBM brand may attract many applicants",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a well-known, established technology company with global delivery centers",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "No signals of aggressive hiring or rapid expansion; likely regular hiring for established team",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No team size mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.95,
+        "evidence": "IBM is a publicly traded company",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No indication if this is a new headcount, backfill, or expansion role",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["established_company", "data_focused_role", "well_defined_role", "senior_level"],
+    "strength_details": [
+      "Established tech company (IBM) with global delivery centers",
+      "Clear, focused role on data modeling and architecture",
+      "Senior-level position requiring 12+ years experience"
+    ],
+    "concern_categories": ["legacy_technology", "onsite_required", "no_visa_sponsorship", "limited_growth"],
+    "concern_details": [
+      "Focus on legacy tools (Erwin, IBM Infosphere) without modern stack",
+      "Onsite work required in Pune, India - relocation needed",
+      "No visa sponsorship mentioned - local candidates only",
+      "Limited growth signals - no career paths or learning opportunities mentioned"
+    ],
+    "best_fit_categories": ["senior_data_engineers", "data_modeling_specialists", "enterprise_experienced"],
+    "best_fit_details": [
+      "Senior DEs with 12+ years experience in data modeling and warehousing",
+      "Engineers experienced with IBM tools and enterprise environments",
+      "Candidates seeking stable, established company roles"
+    ],
+    "probe_categories": ["team_size_composition", "career_growth_path", "tech_stack_details", "work_hour_expectations"],
+    "probe_details": [
+      "Ask about actual team size and seniority mix",
+      "Understand career progression opportunities and paths",
+      "Clarify if any modern data stack tools are used beyond Erwin/IBM tools",
+      "Inquire about typical work hours and overtime expectations"
+    ],
+    "leverage_categories": ["rare_skill_match", "exact_experience_match", "leadership_experience"],
+    "leverage_details": [
+      "12+ years experience in data modeling is a strong differentiator",
+      "Expertise with IBM tools (Erwin, Infosphere) is valuable for this role",
+      "Experience in enterprise data governance and warehousing is highly relevant"
+    ],
+    "overall_assessment": "Stable opportunity for senior data engineers with extensive experience in data modeling and enterprise environments. Strong brand (IBM) and clear role focus, but limited modern tech stack and growth signals. Best for candidates seeking established company roles with onsite work in Pune, India.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.75
+  }
+}

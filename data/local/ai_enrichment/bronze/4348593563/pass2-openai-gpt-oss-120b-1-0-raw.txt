@@ -1,0 +1,172 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.82,
+        "evidence": "Minimum 3 years of experience required and no senior title in the posting.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.96,
+        "evidence": "Title is \"Data Engineer-Business Intelligence\" and responsibilities focus on ETL, reporting and data pipelines.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.86,
+        "evidence": "Focus on BI reporting (Cognos) and data integration tools suggests work on data warehouse environments.",
+        "source": "combined"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.78,
+        "evidence": "No mention of people management or direct reports; responsibilities are individual contributor focused.",
+        "source": "pass1_derived"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.88,
+        "evidence": "Must‑have skills list includes AWS, Google Cloud, and Azure, indicating experience across multiple clouds.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [
+          "aws",
+          "gcp",
+          "azure"
+        ],
+        "confidence": 0.88,
+        "evidence": "All three cloud providers appear in the required hard skills.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.85,
+        "evidence": "Required experience with ETL/Data Integration tools (DataStage, Azure Data Factory, Informatica) points to batch processing pipelines.",
+        "source": "combined"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No orchestration tool (Airflow, Luigi, etc.) is referenced in the posting.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "The posting does not specify a data warehouse, lake, or lakehouse technology.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.96,
+        "evidence": "Location restriction is Pune, Maharashtra, India and work model is onsite.",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "apac",
+        "confidence": 0.92,
+        "evidence": "Job is based in India, which falls in the APAC region.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.91,
+        "evidence": "No relocation language is present; the role is onsite in Pune.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.93,
+        "evidence": "Visa sponsorship is listed as \"not_mentioned\" and the role is India‑based.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.88,
+        "evidence": "No mention of OPT/CPT or student visa support; work authorization is implied for local candidates.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.87,
+        "evidence": "No citizenship clause; only location restriction implies need for legal work authorization in India.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.96,
+        "evidence": "Employment type is full‑time permanent, typical of a W‑2 employee arrangement.",
+        "source": "combined"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.94,
+        "evidence": "The posting does not list any benefits such as health, PTO, or equity.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.94,
+        "evidence": "The job description contains no language about career ladders, promotion tracks, or growth opportunities.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.93,
+        "evidence": "No reference to mentorship programs, mentors, or learning from senior staff.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.94,
+        "evidence": "No explicit mention of promotion or advancement pathways.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.94,
+        "evidence": "The posting does not discuss internal transfers or lateral moves.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career track information is provided in the posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.86,
+        "evidence": "A long list of must‑have hard skills (multiple clouds, Cognos, several ETL tools) and soft skills, with only one nice‑to‑have item.",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.91,
+        "evidence": "The description is focused specifically on BI reporting and data engineering tasks.",
+        "source": "combined"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.81,
+        "evidence": "Three years of experience aligns reasonably with the required skill set; no unrealistic expectations detected.",
+        "source": "combined"
+      }
+    }
+  }
+}

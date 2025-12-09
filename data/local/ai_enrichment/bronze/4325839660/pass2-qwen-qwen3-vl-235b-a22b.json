@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 16:00:48",
+    "job_posting_id": "4325839660",
+    "job_title": "Data Engineer",
+    "company_name": "Quest Global",
+    "job_location": "Bengaluru, Karnataka, India",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.85,
+          "evidence": "3-6 years experience required, which aligns with mid-level in data engineering roles. Title is 'Data Engineer' without senior/staff designation.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Job title is explicitly 'Data Engineer' and core responsibilities include ETL, data pipelines, and Tableau dashboards.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.8,
+          "evidence": "Primary responsibilities include ETL workflows and Tableau dashboards, indicating batch processing focus. No streaming technologies mentioned.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.9,
+          "evidence": "No mention of team leadership, mentoring, or people management. Responsibilities are individual contributor focused (develop, maintain, optimize).",
+          "source": "pass1_derived"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No cloud providers (AWS, Azure, GCP) mentioned in job description or Pass 1 extraction. SharePoint and on-prem tools dominate.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No cloud platforms mentioned at all, so no secondary clouds can be inferred.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.85,
+          "evidence": "ETL workflows and Tableau dashboards imply batch processing. No real-time or streaming technologies (Kafka, Flink, Kinesis) mentioned.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No orchestrators (Airflow, Dagster, Prefect, cloud-native) mentioned. ETL is referenced generically without tool specification.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No specific data storage systems (warehouse, lake, lakehouse) mentioned. MySQL is listed but not contextualized as primary storage layer.",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.9,
+          "evidence": "Location is specified as 'Bengaluru, Karnataka, India' and work model is 'onsite', implying physical presence required in that region.",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.95,
+          "evidence": "Location restricted to India (Bengaluru) and no mention of global or multi-timezone teams.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.85,
+          "evidence": "Onsite work model in Bengaluru implies relocation may be required for candidates not already based there.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Location is India, and no visa sponsorship mentioned. H1B is a US visa, so not applicable.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Location is India, and OPT/CPT are US student visa categories. Not applicable for this role.",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.85,
+          "evidence": "Location is India, so local work authorization is implied. No citizenship requirement stated, but must be authorized to work in India.",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Employment type is 'full_time' and 'permanent', which typically corresponds to W2 employment in India.",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits (health, PTO, equity, learning budget, etc.) mentioned in job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.65,
+          "evidence": "Company culture mentions 'aspiration' and 'making a difference', but no specific career tracks, promotion paths, or levels (Staff/Principal) are described.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Company culture emphasizes 'diverse individuals', 'all voices heard', and 'collaboration', suggesting a supportive environment, but no formal mentorship program or assigned mentors mentioned.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of promotions, advancement, or career progression in the job description or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal transfers, lateral moves, or exploring other roles within the company.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.55,
+          "evidence": "No specific career tracks (IC, management, specialist, architect) mentioned. Role is focused on execution without leadership or specialization paths outlined.",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear must-have skills (MySQL, Python, SharePoint, etc.) and one nice-to-have (Databricks). Balanced requirements without excessive 'must haves'.",
+          "source": "combined"
+        },
+        "scope_definition": {
+          "value": "multi_role",
+          "confidence": 0.85,
+          "evidence": "Role combines data engineering (ETL, Tableau) with SharePoint customization, Power Platform development, and web application development, indicating a hybrid multi-role position.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "3-6 years experience aligns with mid-level expectations. Skills required (Python, SQL, SharePoint, web dev) are reasonable for this seniority in a multi-role context.",
+          "source": "combined"
+        }
+      }
+    },
+    "tokens": 7848,
+    "input_tokens": 6078,
+    "output_tokens": 1770,
+    "cost": 0.009618
+  }
+}

@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.6,
+        "evidence": "Title is 'Data Engineer-Data Integration' without senior/staff/principal qualifiers, and responsibilities mention collaboration with diverse teams but no explicit senior-level duties",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title explicitly states 'Data Engineer' and core focus is on data gathering, storage, and processing",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_integration",
+        "confidence": 0.9,
+        "evidence": "Title and description emphasize 'Data Integration' and 'ETL tool Informatica PowerCenter'",
+        "source": "combined"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "Role focuses on technical contributions without explicit leadership or mentoring responsibilities",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.7,
+        "evidence": "MS-Azure Cloud is mentioned as a preferred skill, while no other cloud providers are explicitly stated",
+        "source": "inferred"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No other cloud providers are mentioned beyond Azure",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.7,
+        "evidence": "Description mentions both 'batch and real-time processing'",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "informatica",
+        "confidence": 0.9,
+        "evidence": "Informatica PowerCenter is explicitly mentioned as a required ETL tool",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.6,
+        "evidence": "Mentions 'Data warehousing' and 'Big Data' which could include both warehouse and lake patterns",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.7,
+        "evidence": "Location is specified as 'Navi Mumbai, Maharashtra, India' suggesting regional proximity",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.8,
+        "evidence": "Location is restricted to India, implying focus on Indian timezone",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No relocation signals mentioned; location is specified as Navi Mumbai",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No visa sponsorship mentioned in Pass 1 results",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "No explicit mention of OPT/CPT; location restricted to India suggests work authorization is required",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No citizenship or work authorization details provided in job posting or Pass 1",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.9,
+        "evidence": "Employment type stated as 'full_time' in Pass 1 results, and benefits are typically associated with W2 employment",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits are explicitly mentioned in Pass 1 results",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.6,
+        "evidence": "Mentions contributing to 'innovation and adoption of new technology' which suggests growth but is not specific",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.6,
+        "evidence": "Collaborating closely with diverse teams may include senior engineers",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit promotion or advancement paths mentioned in job posting or Pass 1",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of internal mobility or role changes in job posting or Pass 1",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["not_mentioned"],
+        "confidence": 0.9,
+        "evidence": "No explicit or implied career tracks mentioned in job posting or Pass 1",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.7,
+        "evidence": "Most skills are listed under 'must have' with no 'nice to have' soft skills or flexible language",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.8,
+        "evidence": "Job description focuses on data engineering with specific responsibilities and required skills",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.6,
+        "evidence": "Required skills align reasonably with mid-level data engineering role expectations",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

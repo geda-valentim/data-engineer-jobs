@@ -1,0 +1,272 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 12:53:04",
+    "job_posting_id": "4342532184",
+    "job_title": "Data Scientist (Contract)",
+    "company_name": "Counterpart",
+    "job_location": "São Paulo, São Paulo, Brazil",
+    "pass_name": "pass3",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 2,
+          "confidence": 0.71,
+          "evidence": "Job posting mentions Python, pandas, scikit-learn, Jupyter, web‑scraping and model deployment but no modern data‑engineering stack (e.g., dbt, Airflow, Snowflake) or CI/CD practices.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "developing",
+          "confidence": 0.71,
+          "evidence": "Score of 2 maps to the \"developing\" maturity level.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [],
+          "confidence": 0.92,
+          "evidence": "No explicit signals of modern data‑stack adoption, CI/CD, data quality testing, or governance were found in the posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.42,
+          "confidence": 0.81,
+          "evidence": "Role is titled Data Scientist but also includes building pipelines, supporting a team of data scientists/analysts, and influencing product development – a modest expansion beyond pure modeling.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.33,
+          "confidence": 0.76,
+          "evidence": "Remote contract role with no explicit on‑call or overtime language; however, it is a startup environment which can imply occasional high‑tempo periods.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.88,
+          "evidence": "Responsibilities focus on predictive modeling, pipeline creation, and team mentorship without mixing unrelated engineering domains.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.38,
+          "confidence": 0.8,
+          "evidence": "Combination of moderate scope expansion, low overtime risk, and clear responsibilities yields a low‑to‑moderate overall red‑flag rating.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "mentioned",
+          "confidence": 0.77,
+          "evidence": "The posting lists three senior contacts (Manager Data Scientist, Director Pricing Analytics, Lead Data Engineer) but does not state a direct reporting line.",
+          "source": "explicit"
+        },
+        "manager_level_inferred": {
+          "value": "manager",
+          "confidence": 0.81,
+          "evidence": "Primary contact is Elizabeth Barsalou, titled Manager Data Scientist, suggesting the candidate would report to a manager‑level leader.",
+          "source": "inferred"
+        },
+        "team_growth_velocity": {
+          "value": "steady_growth",
+          "confidence": 0.68,
+          "evidence": "No explicit statements about rapid expansion; the team appears established with a few senior members, implying steady hiring.",
+          "source": "inferred"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "3-5 members",
+            "de_count": "1 Lead Data Engineer",
+            "seniority_mix": "Manager, Director, Lead Engineer"
+          },
+          "confidence": 0.71,
+          "evidence": "Only three individuals are named in the \"Who you will work with\" section.",
+          "source": "explicit"
+        },
+        "reporting_structure": {
+          "value": "reports_to_manager",
+          "confidence": 0.77,
+          "evidence": "Given the presence of a Manager Data Scientist as the primary contact, the most likely reporting line is to that manager.",
+          "source": "inferred"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.62,
+          "evidence": "Collaboration with domain experts and engineers is mentioned, but there is no indication of being embedded within a product squad.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.71,
+          "confidence": 0.8,
+          "evidence": "Remote‑first policy, paid vacation, language‑class stipend, and no on‑call language suggest a reasonable balance.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.74,
+          "confidence": 0.82,
+          "evidence": "Learning budget is explicitly mentioned; the role also offers mentorship through senior colleagues.",
+          "source": "combined"
+        },
+        "tech_culture_score": {
+          "value": 0.58,
+          "confidence": 0.77,
+          "evidence": "Modern data‑science tooling (Python, Jupyter) is used, but no engineering practices (CI/CD, code review, monitoring) are described.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [],
+          "confidence": 0.88,
+          "evidence": "No mention of open‑source contributions, tech blogs, conferences, hackathons, or dedicated innovation time.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "The posting does not reference code review, CI/CD, testing, monitoring, or incident response processes.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.84,
+          "evidence": "No statements about experimentation, R&D time, or exploring new technologies are present.",
+          "source": "pass1_derived"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.81,
+          "evidence": "The description does not discuss legacy systems, refactoring, or tech‑debt reduction.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "basic_ml",
+          "confidence": 0.79,
+          "evidence": "Role focuses on building and deploying predictive models; no MLOps platforms or advanced ML tooling are referenced.",
+          "source": "inferred"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.85,
+          "evidence": "No specific ML lifecycle tools (e.g., MLflow, SageMaker) are mentioned in the posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "normal",
+          "confidence": 0.71,
+          "evidence": "The posting provides no language indicating an immediate or accelerated start requirement.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "not_mentioned",
+          "confidence": 0.88,
+          "evidence": "No data on applicant volume, location scarcity, or salary competitiveness is supplied.",
+          "source": "pass1_derived"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "startup_series_a_b",
+          "confidence": 0.73,
+          "evidence": "Counterpart is described as a modern insurance platform; typical of a Series A/B fintech/insurtech startup.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.7,
+          "evidence": "A single contract role is advertised without mention of a hiring spree, suggesting normal pace.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.88,
+          "evidence": "No explicit statement about the size of the data or engineering team.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No funding round or capital raise is referenced in the posting.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "new_headcount",
+          "confidence": 0.78,
+          "evidence": "The contract position appears to be a fresh addition rather than a backfill.",
+          "source": "inferred"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "transparent_salary",
+        "remote_friendly",
+        "learning_opportunities",
+        "data_focused_role"
+      ],
+      "strength_details": [
+        "Salary range is disclosed ($70k‑$80k USD) for a contract role.",
+        "Fully remote work from anywhere in Latin America.",
+        "Learning budget and language‑class stipend support professional development.",
+        "Role centers on data science and predictive modeling for insurance, a clear domain focus."
+      ],
+      "concern_categories": [
+        "no_visa_sponsorship",
+        "unclear_reporting",
+        "scope_creep_risk"
+      ],
+      "concern_details": [
+        "Visa sponsorship is not mentioned, limiting candidates who need work‑authorization support.",
+        "Reporting line is only implied (manager data scientist) and not explicitly defined.",
+        "Responsibilities include both modeling and team‑building, which may broaden the scope beyond pure data science."
+      ],
+      "best_fit_categories": [
+        "senior_data_engineers",
+        "ml_engineers",
+        "remote_workers"
+      ],
+      "best_fit_details": [
+        "Senior data scientists/engineers with 3+ years of ML modeling experience seeking remote contract work.",
+        "Candidates comfortable leading or mentoring a small team of analysts and data scientists.",
+        "Professionals who prefer a fully distributed environment across Latin America."
+      ],
+      "probe_categories": [
+        "role_scope_boundaries",
+        "reporting_structure",
+        "work_hour_expectations",
+        "career_growth_path",
+        "visa_sponsorship_details"
+      ],
+      "probe_details": [
+        "Can you clarify the direct reporting line and performance review process?",
+        "What are the expectations around team leadership versus individual contribution?",
+        "Are there any on‑call duties or overtime expectations for this contract?",
+        "What growth or conversion opportunities exist after the contract ends?",
+        "Is there any possibility of visa sponsorship for future full‑time roles?"
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "rare_skill_match"
+      ],
+      "leverage_details": [
+        "Candidate has 3+ years of end‑to‑end ML model development and deployment, matching the core requirement.",
+        "Experience with insurance‑domain data and regulatory considerations (e.g., SOX/PCI) is uncommon and valuable."
+      ],
+      "overall_assessment": "The role offers a transparent contract salary, remote flexibility, and a clear data‑science focus, making it attractive for senior engineers comfortable with a modest scope expansion. The main downsides are lack of visa sponsorship and an undefined reporting line.",
+      "recommendation_score": 0.71,
+      "recommendation_confidence": 0.84
+    },
+    "tokens": 14639,
+    "input_tokens": 10687,
+    "output_tokens": 3952,
+    "cost": 0.0027886499999999997
+  }
+}

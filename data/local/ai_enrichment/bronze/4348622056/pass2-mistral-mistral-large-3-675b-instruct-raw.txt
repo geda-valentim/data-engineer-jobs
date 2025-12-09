@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "associate",
+        "confidence": 0.95,
+        "evidence": "Title mentions 'Associate Software Developer' and role is described as contributing to tasks rather than leading them.",
+        "source": "pass1_derived"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title explicitly states 'Data Engineer' and responsibilities focus on data pipelines, storage, and processing.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "cloud_migration",
+        "confidence": 0.85,
+        "evidence": "Responsibilities include 'Develop/Convert the database (Hadoop to GCP)' and 'modernization roadmap journey'.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.75,
+        "evidence": "Role involves contributing to tasks and collaborating with teams but does not explicitly mention leadership or direct reports.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "gcp",
+        "confidence": 0.95,
+        "evidence": "GCP is explicitly mentioned in the job title ('Data Engineer-Data Platforms-Google') and required expertise.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "Only GCP is mentioned as a cloud provider.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.80,
+        "evidence": "Both 'batch' and 'real-time' processing are mentioned in responsibilities.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit mention of orchestration tools like Airflow, Luigi, or cloud-native orchestrators.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.75,
+        "evidence": "Mentions Hadoop (on-prem/lake) and GCP (cloud), with focus on database integration and modernization.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No remote work model or restrictions explicitly stated beyond location.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No timezone requirements or team distribution mentioned.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Job is location-specific (Hyderabad, India) but does not mention relocation explicitly.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No mention of H1B sponsorship or visa-related information.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No explicit mention of OPT/CPT, and job location is specific (Hyderabad, India) which may limit student visa eligibility.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No citizenship or work authorization requirements explicitly stated.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No contract type or employment terms mentioned.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits are explicitly mentioned in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Mentions 'Participation in modernization roadmap journey' which implies growth but is not specific.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Collaborating closely with diverse teams including senior engineers and consultants.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No explicit mention of promotion or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal mobility or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.60,
+        "evidence": "Role mentions collaboration with diverse teams but does not specify career tracks.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "All listed skills are under 'Required Technical And Professional Expertise' with no 'nice to have' skills mentioned.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "multi_role",
+        "confidence": 0.75,
+        "evidence": "Responsibilities include data engineering, statistical modeling, and enterprise search applications, indicating a multi-faceted role.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": true,
+        "confidence": 0.70,
+        "evidence": "Role titled 'Associate Software Developer' but includes advanced responsibilities like predictive modeling and leading workshops.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

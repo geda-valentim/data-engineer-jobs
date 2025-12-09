@@ -1,0 +1,228 @@
+<reasoning>Let me analyze this job posting carefully to infer the job characteristics according to the rules provided.
+
+First, let me understand what I'm working with:
+
+1. **Original Job Posting**: This is for an "Application Developer-Process Management (BPM)" role at IBM in Bengaluru, India. The title mentions BPM but the description talks about being a "Data Engineer" at IBM.
+
+2. **Pass 1 Extraction**: Contains structured data about the role including skills, experience requirements, etc.
+
+Let me go through each inference category systematically:
+
+## SENIORITY AND ROLE ANALYSIS
+
+**seniority_level**: 
+- The posting mentions "5+ years of recent experience" and "5-7 years of experience in BPM"
+- The title is "Application Developer-Process Management (BPM)" which doesn't explicitly say "Senior" but the 5+ years requirement suggests mid-to-senior level
+- Looking at the IC hierarchy: intern < entry < associate < junior < mid < senior < staff < principal < distinguished
+- With 5+ years, this would typically be "senior" level
+- Confidence: 0.75 (moderate inference from years + role complexity)
+
+**job_family**: 
+- The description explicitly says "As a Data Engineer at IBM you will harness the power of data..."
+- Core responsibilities include data gathering, storage, batch and real-time processing
+- This is clearly a data_engineer role
+- Confidence: 0.95 (explicitly stated)
+
+**sub_specialty**: 
+- The role focuses on BPM (Business Process Management) tools like IBM BPM, Pega, Camunda
+- Mentions "business process workflows", "automate business processes"
+- This is more about process automation and workflow management rather than traditional data engineering
+- The sub_specialty should reflect this BPM/process automation focus
+- Looking at the options: streaming_realtime, batch_etl, data_warehouse, data_lakehouse, ml_infra, mlops, data_governance, data_quality, data_modeling, cloud_migration, reverse_etl, api_development, observability, general, not_mentioned
+
+
+- None of these perfectly match BPM/process automation, but "api_development" is closest since BPM involves significant API integration
+- Confidence: 0.65 (moderate inference)
+
+**leadership_expectation**: 
+- No mention of direct reports, mentoring, or team leadership
+- Role focuses on individual technical work: "Troubleshoot, test, and optimize BPM applications"
+- Collaboration mentioned but not leadership
+- This is a pure IC role
+- Confidence: 0.85 (clear from role description)
+
+I'll focus on the leadership expectations, which clearly indicate an individual contributor position without management responsibilities. The role emphasizes technical problem-solving and application optimization, suggesting a hands-on, non-supervisory approach.
+
+The cloud infrastructure appears ambiguous, with no explicit provider mentioned. The processing approach seems hybrid, covering both batch and real-time data handling. Orchestration details remain unclear, lacking specific tool references. Storage requirements are similarly undefined, requiring further investigation into the technical specifications.
+
+The role's geographic constraints suggest a specific regional focus, with no clear remote work flexibility indicated. Timezone considerations appear limited, without comprehensive global collaboration requirements. Relocation seems unnecessary given the existing location specification.
+
+Visa and work authorization details present significant uncertainty. The absence of explicit sponsorship information creates ambiguity about potential international candidate eligibility. The role appears to require standard work authorization without specific citizenship restrictions.
+
+Compensation and employment structure remain undefined, with no clear indication of contract type or specific employment terms. Benefits are similarly unspecified, leaving potential candidates without comprehensive information about the role's full compensation package.
+
+Career development prospects seem limited, with minimal signals about growth opportunities or mentorship potential. The role's scope appears narrowly defined, focusing on BPM application development without broader strategic guidance.
+
+Skill requirements suggest a moderate level of technical expertise, with a clear distinction between essential and preferred qualifications. The role demands specific technical competencies while maintaining some flexibility in candidate selection.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.75,
+        "evidence": "5+ years experience requirement and complex BPM responsibilities suggest senior level",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Description explicitly states 'As a Data Engineer at IBM' with data gathering, storage, and processing responsibilities",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "api_development",
+        "confidence": 0.65,
+        "evidence": "Role focuses on BPM tools and significant API integration with enterprise systems (ERP, CRM)",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "No mention of direct reports, mentoring, or team leadership - focuses on individual technical work like troubleshooting and optimization",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific cloud providers mentioned in job description or Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No cloud providers mentioned at all",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.80,
+        "evidence": "Description mentions both 'batch and real-time processing' capabilities",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific orchestration tools mentioned (Airflow, Spark, etc.)",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No specific data storage systems mentioned (warehouse, lake, etc.)",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.75,
+        "evidence": "Specific location mentioned: Bengaluru East, Karnataka, India - suggests regional requirement",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.80,
+        "evidence": "India location specified, suggesting work within Indian timezone",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Location already specified as Bengaluru, no mention of relocation needed",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned in Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No mention of student visa support, role appears to require work authorization",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.85,
+        "evidence": "No citizenship requirements mentioned, standard work authorization implied",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No contract type or employment structure mentioned",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits mentioned in Pass 1 extraction benefits_mentioned array",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No career growth or advancement opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mentorship or senior collaboration mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion or advancement path mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No internal mobility or role transfer opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career tracks or paths mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Clear distinction between must-have skills (Appian, BPM tools, databases) and preferred experience (5-7 years BPM)",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Focused role on BPM development and data engineering, well-defined responsibilities",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Requirements (5+ years, BPM tools, databases) are reasonable for senior level position",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

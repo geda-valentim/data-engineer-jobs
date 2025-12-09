@@ -1,0 +1,272 @@
+<reasoning>Let me analyze this job posting carefully to infer the job characteristics. I need to go through each field systematically.
+
+First, let me understand what I'm working with:
+
+1. **Original Job Posting**: This is for a "Data Scientist-Advanced Analytics" role at IBM in Bengaluru, India. However, the description talks about being a "Data Engineer" which seems inconsistent with the title.
+
+2. **Pass 1 Extraction**: This gives me structured data about the role.
+
+Let me analyze each inference field:
+
+## SENIORITY AND ROLE
+
+### seniority_level
+Looking at the job posting, the title is "Data Scientist-Advanced Analytics" but the description says "As an Data Engineer at IBM..." This is confusing. The responsibilities mention implementing predictive models, statistical models, big data, machine learning techniques, enterprise search applications like Elasticsearch and Splunk. There's no mention of years of experience required. The skills mentioned (POC development, AI solutions, Gen AI, etc.) seem quite advanced. Given that this is at IBM and involves advanced analytics, AI, and enterprise systems, this seems like it could be a senior-level role. However, the lack of explicit experience requirements makes it hard to be certain. I'll go with "senior" based on the complexity and scope of responsibilities.
+
+### job_family
+The title says "Data Scientist" but the description repeatedly refers to "Data Engineer". The responsibilities include data gathering, storage, batch and real-time processing, database integration, unstructured data sets, implementing predictive models, statistical models, enterprise search applications. This is a mix of data scientist and data engineer responsibilities. However, the emphasis on data infrastructure, processing, and systems suggests this is primarily a data engineer role with some data science elements. I'll classify this as "data_engineer" since that's what the description emphasizes.
+
+### sub_specialty
+The role mentions both batch and real-time processing, enterprise search applications (Elasticsearch, Splunk), database integration, unstructured data. This suggests a focus on data processing and integration rather than a specific specialty like ML ops or data governance. 
+
+I'll categorize this as a general data engineering role with broad technical capabilities across different data processing domains.
+
+### leadership_expectation
+The description doesn't mention any direct reports, team management, or leadership responsibilities. It talks about collaborating with diverse teams but doesn't indicate any formal leadership role. This appears to be an individual contributor position focused on technical execution rather than people management.
+
+## STACK AND CLOUD
+
+### primary_cloud
+The job posting doesn't mention any specific cloud providers like AWS, Azure, or GCP. There's no mention of cloud services, cloud platforms, or cloud-specific technologies. This suggests either an on-premise environment or a cloud-agnostic approach. I'll classify this as "not_mentioned" since no cloud provider is specified.
+
+### secondary_clouds
+Since no primary cloud is mentioned, there are no secondary clouds either. Empty array.
+
+### processing_paradigm
+The description explicitly mentions "both batch and real-time processing". This clearly indicates a hybrid approach to data processing. The role involves handling different types of data processing workflows, suggesting flexibility in processing methods.
+
+### orchestrator_category
+No specific orchestration tools are mentioned. There's no reference to Airflow, Spark, dbt, or other workflow management systems. The description focuses on data processing and model implementation but doesn't specify how these processes are orchestrated or scheduled.
+
+### storage_layer
+The job posting doesn't mention specific storage systems like data warehouses, data lakes, or lakehouse architectures. There's no reference to Snowflake, Redshift, S3, or other storage technologies. This suggests the storage layer is not a primary focus or is not specified in the job description.
+
+## GEO AND WORK MODEL
+
+### remote_restriction
+The location is specified as "Bengaluru East, Karnataka, India" and the work model is "onsite". This indicates a specific geographic requirement with no remote work flexibility. The role requires physical presence in the designated location.
+
+### timezone_focus
+The job is located in India, specifically Bengaluru, which falls under the India Standard Time (IST) timezone. This suggests the role will primarily operate within the Asia-Pacific (APAC) timezone region.
+
+### relocation_required
+The onsite requirement implies that candidates must already be based in Bengaluru or be willing to relocate to this specific location. The job posting doesn't explicitly mention a relocation package, but the onsite mandate suggests relocation is necessary.
+
+## VISA AND AUTHORIZATION
+
+### h1b_friendly
+The job posting doesn't mention H1B visa sponsorship. Given that this is an Indian role at an Indian location, H1B sponsorship would not be relevant. The role is clearly targeted for candidates already authorized to work in India.
+
+### opt_cpt_friendly
+Similar to H1B, OPT/CPT would not apply to an Indian location. The job posting doesn't mention any specific visa or work authorization requirements for international students.
+
+### citizenship_required
+The job posting doesn't specify any citizenship requirements. It's likely open to any candidates authorized to work in India, without specific citizenship restrictions.
+
+## CONTRACT AND COMPENSATION
+
+### w2_vs_1099
+The job posting doesn't specify the employment type. As an IBM role in India, it's likely a full-time employment arrangement, but the exact contract type isn't explicitly mentioned.
+
+### benefits_level
+No specific benefits are mentioned in the job posting. This could range from standard corporate benefits to a more comprehensive package, but without explicit details, it's difficult to determine the exact level.
+
+## CAREER DEVELOPMENT
+
+### growth_path_clarity
+The job posting doesn't provide clear information about career progression or growth opportunities. There's no mention of specific career tracks, promotion paths, or professional development programs.
+
+### mentorship_signals
+No explicit mentorship programs or opportunities are mentioned in the job description. The role involves collaboration with diverse teams, but doesn't specifically highlight mentorship as a key component.
+
+### promotion_path_mentioned
+The job posting doesn't mention any specific promotion or advancement opportunities. There's no indication of how employees might progress within the organization or role.
+
+### internal_mobility_mentioned
+No information about internal mobility or opportunities to explore different roles within the company is provided in the job posting.
+
+### career_tracks_available
+The job posting doesn't specify available career tracks. Without clear information about potential career paths, it's challenging to determine what tracks might be accessible.
+
+## REQUIREMENTS CLASSIFICATION
+
+### requirement_strictness
+The job posting presents a mix of required and preferred qualifications. There are specific technical skills mentioned as necessary, while some experience with programming languages like COBOL and JAVA is listed as preferred. This suggests a moderate level of requirement strictness.
+
+### scope_definition
+The job description appears focused on data engineering and advanced analytics, with clear responsibilities related to data processing, model implementation, and technical solution development. The scope seems well-defined and specific to the role.
+
+### skill_inflation_detected
+The required skills align with the senior-level nature of the position. The combination of AI, machine learning, and data engineering competencies appears appropriate for an advanced analytics role, without indicating unrealistic or inflated skill expectations.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.75,
+        "evidence": "Advanced analytics role at IBM with complex responsibilities including AI solutions, predictive models, enterprise systems, and strategic decision-making about data management systems",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.85,
+        "evidence": "Description emphasizes data gathering, storage, batch/real-time processing, database integration, and data management systems - core data engineering responsibilities",
+        "source": "combined"
+      },
+      "sub_specialty": {
+        "value": "general",
+        "confidence": 0.70,
+        "evidence": "Broad focus on data processing (batch and real-time), database integration, enterprise search applications, and AI/ML implementation without specific domain specialization",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.80,
+        "evidence": "No mention of direct reports, team management, or leadership responsibilities - focuses on individual technical contributions and collaboration",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No cloud providers (AWS, Azure, GCP) mentioned in job description or Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No cloud providers mentioned at all",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.90,
+        "evidence": "Description explicitly mentions 'both batch and real-time processing'",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No orchestration tools (Airflow, Spark, dbt, etc.) mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No specific storage systems (warehouse, lake, lakehouse) mentioned in description",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.95,
+        "evidence": "Location specified as 'Bengaluru East, Karnataka, India' with onsite work model - requires being in India",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.90,
+        "evidence": "India-specific role in Bengaluru with no mention of other timezones or global teams",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.85,
+        "evidence": "Onsite requirement in specific location (Bengaluru) implies relocation needed if not already based there",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "India-based role - H1B sponsorship not applicable/mentioned for US work authorization",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "India-based role - OPT/CPT student visa programs not applicable",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "any",
+        "confidence": 0.75,
+        "evidence": "No citizenship or work authorization restrictions mentioned for India-based position",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No employment type or contract structure mentioned in job posting",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits, compensation, or perks mentioned in job description",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No career progression, growth opportunities, or advancement paths mentioned",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No mentorship programs, senior guidance, or learning opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion, advancement, or career progression mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No internal transfers, role changes, or mobility opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No career tracks, paths, or advancement opportunities mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Clear distinction between required technical skills (AI, ML, POC development) and preferred experience (COBOL, JAVA, code generation)",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Focused role on data engineering with advanced analytics, clear responsibilities around data processing and AI implementation",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "Skills mentioned (AI/ML, POC development, enterprise systems) are appropriate for senior-level advanced analytics role",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

@@ -1,0 +1,229 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "The job description mentions BPM tools and database concepts, indicating some data management practices, but lacks details on modern data stack components or governance.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches the data_maturity_score of 2.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [],
+        "confidence": 0.60,
+        "evidence": "No explicit mention of modern data stack tools, CI/CD, or data governance practices.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.3,
+        "confidence": 0.85,
+        "evidence": "The role combines application development with process management, suggesting some scope expansion beyond pure data engineering.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.70,
+        "evidence": "The 'immediate start' and focus on automation suggest a potentially fast-paced environment, but no explicit signals of long hours.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "vague",
+        "confidence": 0.75,
+        "evidence": "The description is somewhat generic and doesn't clearly define the data engineering aspects of the role.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.72,
+        "evidence": "Moderate risk due to role vagueness and potential for scope creep.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "The job description does not specify who the role reports to.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No managerial titles or reporting structure mentioned.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "stable",
+        "confidence": 0.80,
+        "evidence": "No mention of rapid expansion or multiple open roles.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.60,
+        "evidence": "No information about team size or composition provided.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No reporting structure details provided.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "The role focuses on BPM application development, suggesting a centralized function rather than embedding.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.70,
+        "evidence": "No explicit work-life balance signals, but also no red flags like on-call requirements.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.6,
+        "confidence": 0.75,
+        "evidence": "No specific learning or growth opportunities mentioned.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.65,
+        "confidence": 0.78,
+        "evidence": "Focus on BPM tools and database concepts, but no mention of modern engineering practices.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No signals of strong technical culture (open source, tech blogs, etc.).",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No mention of code review, CI/CD, or other development practices.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.75,
+        "evidence": "Focus on BPM application development and maintenance, suggesting limited innovation.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt or refactoring.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of AI or ML in the job description.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML/AI tools mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "immediate",
+        "confidence": 0.90,
+        "evidence": "The job description states 'ASAP' start date.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Location in Pune, India, suggests moderate competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.80,
+        "evidence": "IBM is a large, established technology company.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "No indication of rapid expansion or multiple open roles.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No information about team size provided.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "profitable",
+        "confidence": 0.85,
+        "evidence": "IBM is a publicly traded, profitable company.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "backfill",
+        "confidence": 0.70,
+        "evidence": "No indication of a new role or team expansion.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["established_company", "well_defined_role"],
+    "strength_details": [
+      "Working for a well-established and reputable company (IBM).",
+      "Clear focus on BPM application development and integration."
+    ],
+    "concern_categories": ["vague_requirements", "no_visa_sponsorship", "overtime_likely"],
+    "concern_details": [
+      "Job description lacks specific details about data engineering responsibilities.",
+      "No visa sponsorship mentioned.",
+      "Immediate start date suggests potential for time pressure."
+    ],
+    "best_fit_categories": ["mid_level_engineers", "data_generalists"],
+    "best_fit_details": [
+      "Mid-level engineers with experience in BPM and database concepts.",
+      "Data professionals comfortable with application development and process automation."
+    ],
+    "probe_categories": ["reporting_structure", "team_size_composition", "work_hour_expectations"],
+    "probe_details": [
+      "Clarify the reporting structure and team dynamics.",
+      "Understand the size and composition of the data engineering team.",
+      "Inquire about typical work hours and expectations for overtime."
+    ],
+    "leverage_categories": [],
+    "leverage_details": [],
+    "overall_assessment": "This role offers a stable opportunity at a large company, but lacks clarity regarding the data engineering aspects and may require a fast-paced work style. It's best suited for mid-level engineers with BPM experience.",
+    "recommendation_score": 0.60,
+    "recommendation_confidence": 0.80
+  }
+}
+```

@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.85,
+        "evidence": "Title is 'Application Developer-Process Management (BPM)' with 5+ years of experience mentioned, but responsibilities align more with mid-level than senior (e.g., troubleshooting, support, maintenance, and collaboration with teams).",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "Title and responsibilities focus on BPM (Appian) and process automation, not data engineering. The mention of 'Data Engineer' in the description is misleading and does not align with the core role.",
+        "source": "inferred"
+      },
+      "sub_specialty": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No clear sub-specialty in data engineering detected. Tools mentioned (Appian, BPM, APIs) are process management-focused.",
+        "source": "pass1_derived"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.75,
+        "evidence": "Responsibilities include collaboration and support but no explicit mention of technical leadership, architecture, or people management.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No cloud providers or services explicitly mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No secondary clouds mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Mentions 'batch and real-time processing' in the description, but no tools (Kafka, Flink, etc.) are listed to support this inference. Core role is BPM-focused.",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "BPM tools (Appian, IBM BPM, Pega, Camunda) are mentioned, but these are not data orchestration tools like Airflow or Spark.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No storage layers (warehouse, lake, lakehouse) or related tools (Snowflake, S3, Delta Lake) mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.85,
+        "evidence": "Location is specified as 'Bengaluru East, Karnataka, India', implying a regional restriction.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.90,
+        "evidence": "Location is restricted to India (Bengaluru), suggesting a focus on the country rather than timezone or global distribution.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Job is location-specific to Bengaluru, but no mention of relocation packages or requirements.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No visa sponsorship mentioned, and location is restricted to India.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No signals related to OPT/CPT or student visas. Location is restricted to India, and no work authorization flexibility is mentioned.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No citizenship or work authorization requirements mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "Employment type is full-time, but no contract type (W2, C2C, 1099) is specified.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits mentioned in Pass 1 extraction.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit or implied career growth paths mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.65,
+        "evidence": "Mentions working with 'visionaries across multiple industries' and 'diverse teams', which may include senior collaboration.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of promotions or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal mobility or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No career tracks (IC, management, specialist, architect) mentioned or implied.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.85,
+        "evidence": "Strict language used (e.g., 'Minimum of 5+ years', 'Required Technical And Professional Expertise') with no 'nice to have' skills listed.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "multi_role",
+        "confidence": 0.75,
+        "evidence": "Job description combines elements of BPM development, process automation, and data engineering, leading to ambiguity in primary focus.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "5+ years of experience for a mid-level role is reasonable for BPM/Appian development.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

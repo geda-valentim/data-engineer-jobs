@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 15:27:33",
+    "job_posting_id": "4348612199",
+    "job_title": "Data Engineer-Data Platforms-Google",
+    "company_name": "IBM",
+    "job_location": "Hyderabad, Telangana, India",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.65,
+          "evidence": "Title is 'Associate Software Developer' suggesting entry-mid level, but responsibilities include leading teams and complex technical work. No years of experience specified, making exact seniority unclear.",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Data Engineer' and core responsibilities focus on data gathering, storage, processing, database integration, and data management systems.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "general",
+          "confidence": 0.7,
+          "evidence": "Role covers both batch and real-time processing, database migration, API development, enterprise search applications - broad data engineering scope rather than specialized focus.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.75,
+          "evidence": "Mentions 'Leads the team to adopt right tools' and 'Lead discovery and analysis workshops' indicating technical leadership without direct reports mentioned.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "gcp",
+          "confidence": 0.9,
+          "evidence": "Explicitly mentions 'Develop/Convert the database (Hadoop to GCP)' and 'GCP' mentioned as target platform for migration.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.85,
+          "evidence": "Only GCP mentioned as cloud platform, no other cloud providers referenced.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.85,
+          "evidence": "Job description explicitly mentions 'both batch and real-time processing' and 'batch and real-time processing' responsibilities.",
+          "source": "pass1_derived"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No specific orchestration tools mentioned (Airflow, Spark, etc.) in job description.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.75,
+          "evidence": "Mentions both Hadoop (traditional data lake) and GCP (modern cloud warehouse/lakehouse) indicating mixed storage approach.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.9,
+          "evidence": "Pass1 shows geo_restriction_type as 'specific_countries' with only 'IN' allowed, and work_model_stated as 'onsite'.",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.85,
+          "evidence": "Role based in Hyderabad, India with onsite requirement, indicating India-specific timezone focus.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Must already be resident in India (ext_residency_requirement: 'must_be_resident') and work onsite in Hyderabad.",
+          "source": "pass1_derived"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Role is India-specific with residency requirement, H1B sponsorship not applicable for Indian domestic role.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "India-specific role with residency requirement, student visa programs not relevant for domestic Indian positions.",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.75,
+          "evidence": "Must be resident in India but no specific citizenship requirement mentioned, suggesting work authorization within India is sufficient.",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.85,
+          "evidence": "Pass1 shows employment_type_stated as 'full_time' and contract_type as 'permanent', typical for W2 employment in India.",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "Pass1 shows benefits_mentioned as empty array, no benefits discussed in job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.85,
+          "evidence": "No career progression, growth opportunities, or advancement paths mentioned in job description.",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No mentorship programs, working with senior staff, or learning opportunities mentioned.",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No promotion, advancement, or career progression mentions in job description.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No internal transfers, lateral moves, or role exploration opportunities mentioned.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.85,
+          "evidence": "No specific career tracks (IC, management, specialist, architect) mentioned in job description.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.75,
+          "evidence": "Master's degree required, extensive technical skills listed as must-haves, specific migration and modernization responsibilities outlined.",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.8,
+          "evidence": "Focused data engineering role with clear responsibilities around data processing, database migration, and enterprise applications.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.7,
+          "evidence": "Skills mentioned (database migration, API development, ML models) align with mid-level data engineer responsibilities, no unrealistic expectations detected.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8635,
+    "input_tokens": 6039,
+    "output_tokens": 2596,
+    "cost": 0.011231000000000001
+  }
+}

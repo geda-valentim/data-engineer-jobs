@@ -1,0 +1,255 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.78,
+        "evidence": "Job mentions traditional BI tools (Cognos, DataStage) and cloud platforms but no modern orchestration, CI/CD, or data catalog, indicating a developing data practice.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.78,
+        "evidence": "Based on the limited modern tooling and lack of governance practices, the maturity aligns with a developing level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [
+          "cloud_native"
+        ],
+        "confidence": 0.70,
+        "evidence": "Nice‑to‑have list includes AWS, Azure, and Google Cloud, showing exposure to multiple cloud platforms.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.12,
+        "confidence": 0.85,
+        "evidence": "Responsibilities are limited to BI reporting, ETL, and Cognos administration; no data‑science, dev‑ops, or product engineering duties are mentioned.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.75,
+        "evidence": "On‑site consulting role at a large enterprise may involve client‑driven deadlines; no explicit work‑hour or on‑call details are provided.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.93,
+        "evidence": "Pass2 scope_definition is marked clear; the posting lists specific BI‑focused duties.",
+        "source": "pass2_inference"
+      },
+      "overall_red_flag_score": {
+        "value": 0.32,
+        "confidence": 0.80,
+        "evidence": "Low scope creep and moderate overtime risk, but lack of salary disclosure, visa sponsorship, and growth information raise concerns.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "The posting does not specify to whom the role reports.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No manager or director title appears in the description.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No indication of hiring pace or team expansion is provided.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.20,
+        "evidence": "Team size, DE count, and seniority mix are not described.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No reporting hierarchy is described in the posting.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "The role appears within a centralized BI group; no mention of embedding in product teams.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.40,
+        "confidence": 0.78,
+        "evidence": "No PTO, flexible schedule, or remote options are mentioned; onsite consulting may require extended hours.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "The posting does not reference learning budgets, mentorship, or promotion pathways.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.45,
+        "confidence": 0.80,
+        "evidence": "Limited mention of engineering practices; focus is on tool usage rather than CI/CD, testing, or observability.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.60,
+        "evidence": "No signals such as open‑source contributions, conference support, or hackathons are described.",
+        "source": "not_mentioned"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.60,
+        "evidence": "The job description does not call out code review, CI/CD pipelines, or monitoring practices.",
+        "source": "not_mentioned"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No mention of experimentation, R&D time, or adoption of emerging technologies.",
+        "source": "not_mentioned"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "There is no reference to refactoring, tech‑debt reduction, or modernization initiatives.",
+        "source": "not_mentioned"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.90,
+        "evidence": "The posting contains no AI/ML related tools or responsibilities.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No ML or MLOps tools are listed.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No start‑date or urgency language appears in the description.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No data on applicant volume or market competition is provided.",
+        "source": "not_mentioned"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a globally recognized, publicly traded technology corporation.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "The posting does not discuss hiring pace or multiple open roles.",
+        "source": "not_mentioned"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No information about the size of the data or BI team is given.",
+        "source": "not_mentioned"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "IBM is a public company; traditional startup funding stages do not apply.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "The posting does not indicate whether the role is a new headcount or a backfill.",
+        "source": "not_mentioned"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "data_focused_role",
+      "clear_requirements",
+      "well_defined_role",
+      "established_company"
+    ],
+    "strength_details": [
+      "Focused BI reporting responsibilities using Cognos and traditional ETL tools.",
+      "Clear requirement of 3+ years experience with a concrete skill list.",
+      "Position at IBM provides brand stability and access to enterprise resources.",
+      "Well‑defined role with specific deliverables and expectations."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "no_visa_sponsorship",
+      "limited_growth"
+    ],
+    "concern_details": [
+      "Compensation range and benefits are not disclosed in the posting.",
+      "No mention of visa sponsorship; likely requires existing Indian work authorization.",
+      "Career progression, mentorship, and internal mobility are not described."
+    ],
+    "best_fit_categories": [
+      "mid_level_engineers",
+      "data_generalists",
+      "analytics_engineers"
+    ],
+    "best_fit_details": [
+      "Mid‑level engineers with 3‑5 years of experience in ETL and BI reporting.",
+      "Candidates comfortable with Cognos, DataStage, and multi‑cloud environments.",
+      "Professionals seeking a stable, enterprise‑scale data engineering role."
+    ],
+    "probe_categories": [
+      "salary_range_details",
+      "career_growth_path",
+      "team_size_composition",
+      "tech_stack_details",
+      "work_hour_expectations"
+    ],
+    "probe_details": [
+      "What is the compensation range and what benefits (PTO, health, etc.) are offered?",
+      "Can you outline typical career progression for data engineers within IBM?",
+      "How large is the BI team and what is the reporting hierarchy?",
+      "Which specific tools (Cognos, DataStage, cloud services) will I be using day‑to‑day?",
+      "What are the expected work hours and are there any on‑call or weekend responsibilities?"
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "domain_expertise"
+    ],
+    "leverage_details": [
+      "3+ years of Cognos and DataStage experience directly matches the must‑have skills.",
+      "Experience across AWS, Azure, and Google Cloud adds valuable cross‑cloud domain expertise."
+    ],
+    "overall_assessment": "The role offers a stable, IBM‑backed position with clear BI‑focused responsibilities and well‑defined skill requirements. However, compensation details are hidden, visa sponsorship is unlikely, and growth pathways are not articulated, which may limit long‑term appeal.",
+    "recommendation_score": 0.60,
+    "recommendation_confidence": 0.85
+  }
+}

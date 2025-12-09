@@ -12,7 +12,7 @@ from test_pass1 import test_multiple_jobs_comparison
 from test_pass2 import test_pass2_inference
 from test_pass3 import test_pass3_analysis
 from test_execution_helpers import AVAILABLE_MODELS
-from test_enrichment_helpers import load_jobs_from_s3
+from test_enrichment_helpers import load_jobs_from_s3, save_job_original
 
 
 def test_multiple_models(
@@ -68,15 +68,18 @@ def test_multiple_models(
         print("PRE-LOADING JOBS FROM S3 (once for all models)")
         print(f"{'=' * 120}")
         if date:
-            print(f"  Date: {date} (latest hour)")
+            print(f"  Date filter: {date}")
         else:
-            print(f"  Using most recent partition")
-        print(f"  Limit: {limit} jobs")
+            print(f"  Using most recent partition(s)")
+        print(f"  Requested limit: {limit} jobs")
 
         preloaded_jobs, preloaded_partition_info = load_jobs_from_s3(date_str=date, limit=limit)
-        print(f"  ✓ Loaded {len(preloaded_jobs)} jobs from partition")
-        if preloaded_partition_info:
-            print(f"  Partition: {preloaded_partition_info['year']}-{preloaded_partition_info['month']}-{preloaded_partition_info['day']} Hour {preloaded_partition_info['hour']}")
+
+        # Save original job data for all pre-loaded jobs
+        print(f"\nSaving original job data to bronze layer...")
+        for job in preloaded_jobs:
+            save_job_original(job)
+        print(f"  ✓ Saved {len(preloaded_jobs)} original job files")
 
     # Save original env vars
     original_pass1 = os.getenv("BEDROCK_MODEL_PASS1")

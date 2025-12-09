@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 19:49:37",
+    "job_posting_id": "4348557019",
+    "job_title": "Data Engineer-Business Intelligence",
+    "company_name": "IBM",
+    "job_location": "Pune, Maharashtra, India",
+    "pass_name": "pass2",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.85,
+          "evidence": "Title includes 'Data Engineer' without explicit seniority qualifiers, and the minimum years of experience mentioned is 3 years, which aligns with mid-level roles in the IC hierarchy.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "bi_engineer",
+          "confidence": 0.9,
+          "evidence": "Title explicitly mentions 'Business Intelligence', and the core responsibilities focus on reporting, visualization, and BI tools like Cognos.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.8,
+          "evidence": "Required expertise in ETL/Data Integration tools (IBM InfoSphere DataStage, Azure Data Factory, Informatica PowerCenter) and BI DW projects suggests a focus on batch ETL.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.75,
+          "evidence": "Responsibilities include development, testing, and troubleshooting but no explicit mention of technical leadership or people management.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "multi",
+          "confidence": 0.7,
+          "evidence": "Multiple cloud platforms (AWS, Google, Azure) are mentioned in preferred experience, but no single cloud is emphasized as primary.",
+          "source": "inferred"
+        },
+        "secondary_clouds": {
+          "value": [
+            "aws",
+            "azure",
+            "gcp"
+          ],
+          "confidence": 0.8,
+          "evidence": "AWS, Azure, and Google (assumed GCP) are listed as preferred or mentioned in ETL tools.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.8,
+          "evidence": "Focus on ETL/Data Integration tools and BI DW projects suggests batch processing, with no explicit mention of streaming or real-time paradigms.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No orchestrator tools (Airflow, Luigi, etc.) are explicitly mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.7,
+          "evidence": "Core focus on BI DW projects and Cognos suggests a data warehouse storage layer, though no explicit tools are mentioned.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.8,
+          "evidence": "Location is specified as 'Pune, Maharashtra, India', which implies a regional restriction unless otherwise stated.",
+          "source": "inferred"
+        },
+        "timezone_focus": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No timezone requirements or team distribution details are mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Location is specified as Pune, but no relocation package or requirement is mentioned, suggesting the candidate must already be based there.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No visa sponsorship is mentioned in Pass 1 results or the job posting.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Job posting specifies full-time education (MCA/M. Tech/B. Tech/B.E.), which may not align with OPT/CPT eligibility unless explicitly stated.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No citizenship or work authorization requirements are discussed in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.8,
+          "evidence": "Employment type is stated as 'full_time', and benefits are typically associated with W2 roles in India (though contract type is not explicitly mentioned).",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits are mentioned in Pass 1 results or the job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or implied career growth paths or tracks are mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.65,
+          "evidence": "Job posting mentions working in a team with 'business and technical members', which may include collaboration with senior team members.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of promotion or advancement paths in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal mobility or role changes in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No career tracks (IC, management, etc.) are mentioned in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.7,
+          "evidence": "Job posting specifies 'minimum of 3 years' and full-time education as 'required', with a long list of must-have hard skills.",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.8,
+          "evidence": "Job responsibilities are well-defined and focused on BI DW projects, reporting, and visualization using Cognos.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.7,
+          "evidence": "Requirements align with mid-level seniority (3 years of experience, no unrealistic skill combinations).",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7882,
+    "input_tokens": 6105,
+    "output_tokens": 1777,
+    "cost": 0.009659000000000001
+  }
+}

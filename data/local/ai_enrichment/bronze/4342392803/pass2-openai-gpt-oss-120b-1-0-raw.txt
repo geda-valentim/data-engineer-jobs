@@ -1,0 +1,170 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.95,
+        "evidence": "Title includes \"Sr\" and 5+ years of experience required, matching senior level expectations.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.99,
+        "evidence": "Job title is \"Sr Data Engineer\" and responsibilities focus on data pipelines, ETL, and data platforms.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.85,
+        "evidence": "Responsibilities emphasize ETL workflows, Apache Airflow, and batch‑oriented Spark processing; no streaming technologies are mentioned.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.85,
+        "evidence": "Mentoring junior engineers and leading design are required, but no direct‑report or people‑management duties are listed.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.92,
+        "evidence": "Job description lists AWS Redshift, Azure Synapse, and GCP BigQuery as target platforms, indicating a multi‑cloud environment.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "All three clouds are treated equally; no single primary cloud to list as secondary.",
+        "source": "inferred"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.90,
+        "evidence": "Use of Apache Airflow and Spark for scheduled batch processing; no streaming frameworks (e.g., Kafka, Kinesis) are mentioned.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.98,
+        "evidence": "Apache Airflow is explicitly listed among required hard skills.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.90,
+        "evidence": "Primary storage technologies are Redshift, Synapse, and BigQuery – all data‑warehouse services.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.90,
+        "evidence": "Posting states \"Onsite role - no remote work\" and specifies Denver, CO as the location.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.80,
+        "evidence": "Job is located in the United States with no broader timezone requirement, implying a focus on the US region.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No relocation assistance or requirement is mentioned; the role is onsite in Denver, suggesting candidates must already be local.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Pass 1 extraction shows visa sponsorship is \"not_mentioned\".",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No language indicating acceptance of OPT/CPT visas; work authorization is implied.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Neither citizenship nor specific work‑authorization requirements are stated in the posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.95,
+        "evidence": "Contract type is listed as \"permanent\" with a salary range, indicating a full‑time employee (W‑2) position.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.90,
+        "evidence": "Extensive benefits list includes medical, dental, vision, life, disability, pet insurance, 401k, ESPP, tuition reimbursement, parental leave, and many employee programs.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.80,
+        "evidence": "Posting mentions \"mentorship, promotional opportunities, training and development\" but does not detail specific career ladders.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.80,
+        "evidence": "Role includes mentoring junior engineers and providing career development support, indicating informal mentorship.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No explicit statement of a promotion track or titles such as \"Staff Engineer\" is present.",
+        "source": "inferred"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "The posting does not reference internal transfers or lateral moves.",
+        "source": "inferred"
+      },
+      "career_tracks_available": {
+        "value": [
+          "ic_track"
+        ],
+        "confidence": 0.60,
+        "evidence": "Only individual contributor responsibilities and mentorship are described; no management or specialist tracks are explicitly mentioned.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.85,
+        "evidence": "Clear list of required hard and soft skills with a short nice‑to‑have list indicates a balanced (medium) strictness.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Job description is focused specifically on data engineering responsibilities without mixing other roles.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Required skill set aligns with a senior data engineer role and 5+ years of experience; no unrealistic expectations are present.",
+        "source": "inferred"
+      }
+    }
+  }
+}

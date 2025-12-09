@@ -1,0 +1,177 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through the job posting systematically and extract only explicitly stated information.
+
+Looking at the job posting:
+
+**Title**: Data Scientist-Advanced Analytics
+**Company**: IBM
+**Location**: Bengaluru East, Karnataka, India
+
+Let me analyze each section:
+
+1. **Compensation**: No salary information is mentioned, so all compensation fields should be null.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. This should be "not_mentioned".
+
+3. **Work Model**: 
+   - Location is specified as "Bengaluru East, Karnataka, India" - this suggests onsite work
+   - No mention of remote or hybrid work
+   - This appears to be a full-time position based on the context
+   - work_model_stated should be "onsite"
+   - employment_type_stated should be "full_time"
+
+4. **Contract Details**: No mention of contract type, duration, etc. This should be "not_mentioned" for contract_type and null for other fields.
+
+5. **Contractor Rates**: Not applicable as this appears to be a full-time employee position.
+
+6. **Skills Classification**: Let me analyze the skills mentioned:
+
+   **Must-have hard skills** (based on strong qualifiers):
+   - "Implementing and validating predictive models" - mentioned as responsibility
+   - "creating and maintain statistical models" - mentioned as responsibility  
+   - "Designing and implementing various enterprise search applications such as Elasticsearch and Splunk" - mentioned as responsibility
+   - "Build teams or writing programs to cleanse and integrate data" - mentioned as responsibility
+   - "Develop POCs to validate and showcase the feasibility" - mentioned in preferred section but with "Develop" which is strong
+   - "Document solution architectures, design decisions, implementation details" - mentioned in preferred section but with "Document" which is strong
+   
+   **Nice-to-have hard skills** (based on weak qualifiers):
+   - "Experience and working knowledge in COBOL & JAVA would be preferred" - explicitly says "preferred"
+   - "Having experience in Code generation, code matching & code translation leveraging LLM capabilities would be a Big plus" - says "Big plus"
+   
+   **Soft skills**:
+   - "collaborative environment, partnering with other scientists, engineers, consultants" - suggests collaboration skills
+   - "Demonstrate a growth mindset" - mentioned as preferred but with "Demonstrate" which could be strong
+   - No explicit soft skills mentioned with strong qualifiers
+
+   **Experience**: No specific years of experience mentioned
+
+   **Education**:
+   - "Master's Degree Required" - this is explicitly stated as required
+   - No specific field of study mentioned
+   - education_level: "MASTERS"
+   - education_area: null (no specific field mentioned)
+   - education_requirement: "required"
+   - education_text_raw: "Master's Degree Required"
+
+   **LLM/GenAI**: Yes, explicitly mentioned - "large language models", "Gen AI code assistant", "LLM capabilities"
+
+   **Feature Store**: Not mentioned
+
+7. **Geographic Restrictions**: Location is specified as India, but no explicit geographic restrictions mentioned. This should be "not_mentioned".
+
+8. **Benefits**: No benefits mentioned.
+
+9. **Context**: 
+   - Company description: "IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world"
+   - Team info: "Agile, collaborative environment, partnering with other scientists, engineers, consultants and database administrators"
+
+Let me structure this according to the JSON format:
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": null,
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "predictive models",
+        "statistical models",
+        "Elasticsearch",
+        "Splunk",
+        "data cleansing",
+        "data integration",
+        "POC development",
+        "solution architecture documentation",
+        "design decisions documentation",
+        "implementation details documentation"
+      ],
+      "nice_to_have_hard_skills": [
+        "COBOL",
+        "JAVA",
+        "code generation",
+        "code matching",
+        "code translation",
+        "LLM capabilities"
+      ],
+      "must_have_soft_skills": [],
+      "nice_to_have_soft_skills": [
+        "growth mindset"
+      ],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "Master's Degree Required",
+      "llm_genai_mentioned": true,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Agile, collaborative environment, partnering with other scientists, engineers, consultants and database administrators of all backgrounds and disciplines",
+      "company_description_text": "IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 29
+  }
+}
+```

@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 13:09:05",
+    "job_posting_id": "4348593554",
+    "job_title": "Data Engineer-Data Platforms",
+    "company_name": "IBM",
+    "job_location": "Pune, Maharashtra, India",
+    "pass_name": "pass2",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.78,
+          "evidence": "Posting requires more than 6 years of overall experience (4+ years strong Python/Spark), which aligns with typical senior level (5-8 years). Title does not include senior, but experience dominates.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.99,
+          "evidence": "Title is \"Data Engineer-Data Platforms\" and responsibilities focus on building data pipelines and feature development.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.85,
+          "evidence": "Core technologies listed are Python, Spark, and Pyspark, which are commonly used for batch ETL workloads; no streaming technologies are mentioned.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.8,
+          "evidence": "No mention of people management, team lead responsibilities, or direct reports; role focuses on individual contribution to feature development.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "multi",
+          "confidence": 0.85,
+          "evidence": "AWS, GCP, and Azure are all listed as required hard skills, indicating familiarity with multiple cloud platforms without a single primary cloud.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "All three clouds are treated equally; no single primary cloud to differentiate secondary ones.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.88,
+          "evidence": "Job emphasizes Python and Spark/Pyspark for feature development and debugging; no streaming frameworks (e.g., Kafka, Flink) are mentioned.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "The posting does not reference any workflow/orchestration tools such as Airflow, Luigi, or Databricks workflows.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No data warehouse, data lake, or lakehouse technologies are cited in the description.",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.92,
+          "evidence": "Location is explicitly stated as Pune, Maharashtra, India with no remote or relocation language, implying candidates must be based in India.",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "apac",
+          "confidence": 0.85,
+          "evidence": "The job is located in India, which falls in the APAC region.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.88,
+          "evidence": "No relocation assistance or requirement is mentioned; the role is tied to a specific Indian city.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.6,
+          "evidence": "Visa sponsorship is not mentioned in the posting; absence of a statement does not confirm sponsorship.",
+          "source": "inferred"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.6,
+          "evidence": "No reference to OPT/CPT eligibility; default assumption is not friendly.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.92,
+          "evidence": "The posting does not specify any citizenship or work‑authorization requirements.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "Employment type and contract details are not provided in the posting.",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits (e.g., health, PTO, equity) are described.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.78,
+          "evidence": "The description mentions a \"limitless career path\" but provides no concrete tracks or titles.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit or implied mentorship program is referenced.",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.92,
+          "evidence": "The posting does not contain language about promotions or advancement ladders.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.92,
+          "evidence": "No mention of internal transfers, lateral moves, or mobility programs.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No specific career tracks (IC, management, specialist, architect) are described.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.85,
+          "evidence": "Must‑have list includes multiple technical skills (Python, Spark, Pyspark, three cloud platforms) and a minimum of 6 years experience; no nice‑to‑have items.",
+          "source": "combined"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.92,
+          "evidence": "The role is narrowly defined around data engineering feature development and debugging, without overlapping responsibilities.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "The skill set (Python, Spark, cloud) aligns with a senior‑level data engineer; requirements are realistic for the stated experience.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8893,
+    "input_tokens": 5829,
+    "output_tokens": 3064,
+    "cost": 0.0017935499999999997
+  }
+}

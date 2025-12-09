@@ -1,0 +1,243 @@
+<reasoning>Let me analyze the job posting and Pass 1 extraction results to infer the job characteristics according to the rules provided.
+
+First, let me understand what we have:
+
+**Original Job Posting:**
+- Title: Data Engineer-Business Intelligence
+- Company: IBM
+- Location: Pune, Maharashtra, India
+- This is for IBM Consulting Client Innovation Centers (Delivery Centers)
+- Focus on BI/DW projects, reporting and visualization using Cognos
+- 3+ years experience required
+- Master's degree preferred
+- Skills: Cognos Developer & Admin, UNIX, cloud platforms (AWS, Google, Azure), ETL tools (IBM InfoSphere DataStage, Azure Data Factory, Informatica PowerCenter)
+
+**Pass 1 Extraction Results:**
+- Work model: onsite
+- Location: Pune, Maharashtra, India
+- 3 years minimum experience
+- Education: Master's preferred
+- Must-have skills: Cognos, UNIX, AWS, GCP, Azure, IBM InfoSphere DataStage, Azure Data Factory, Informatica PowerCenter
+- Soft skills: Communication, Time Management, Multi-tasking, Problem Solving, Critical Thinking, Team Collaboration
+- No visa sponsorship mentioned
+- No benefits mentioned
+- No salary information
+
+Now let me go through each inference category:
+
+## SENIORITY AND ROLE
+
+### seniority_level
+- Title: "Data Engineer-Business Intelligence" (no "Senior" in title)
+- Experience: 3 years minimum
+- Looking at the IC hierarchy: intern < entry < associate < junior < mid < senior < staff < principal < distinguished
+- 3 years typically maps to "mid" level (mid-level is usually 3-5 years)
+- No "Senior" in title, but 3 years suggests mid-level
+- Confidence: 0.7-0.9 (title OR years match strongly) → 0.8
+
+### job_family
+- Title: "Data Engineer-Business Intelligence"
+
+
+- Responsibilities focus on BI/DW projects, reporting, and visualization
+- Core activities involve analysis, requirements gathering, design, and report development
+- This aligns perfectly with the data engineering role, specifically in business intelligence
+- Confidence: 0.9 (directly from title and responsibilities)
+
+### sub_specialty
+- Focus on BI/DW projects, reporting, and visualization
+- ETL tools mentioned: IBM InfoSphere DataStage, Azure Data Factory, Informatica PowerCenter
+- This suggests batch ETL and data warehouse focus
+- Not streaming/realtime mentioned
+- Confidence: 0.8 (batch ETL focus)
+
+### leadership_expectation
+- No mention of team leadership, mentoring, or direct reports
+- Focus on individual contributor work: analysis, requirements, design, development
+- No "lead" or "senior" in title
+- This suggests pure IC role
+- Confidence: 0.8 (no leadership signals)
+
+I'll analyze the cloud and processing characteristics, noting the multi-cloud approach and batch processing focus. The role emphasizes traditional data engineering methods with a strong emphasis on business intelligence and data warehousing.
+
+The work model reveals a specific onsite requirement in Pune, with no remote flexibility. This suggests a traditional, in-person work environment focused on local collaboration and direct client interaction.
+
+Visa and authorization details indicate a standard employment approach, with no special sponsorship or unique work authorization requirements. The role appears to target local talent with standard work eligibility.
+
+Contract and compensation details point to a traditional employment structure, likely full-time with standard benefits. The absence of specific contract information suggests a conventional employment arrangement.
+
+Career development signals are minimal, with no explicit growth paths or mentorship programs mentioned. The role seems to prioritize individual contribution over structured professional advancement.
+
+Requirements classification suggests a focused, well-defined role with clear technical expectations. The skill set appears balanced, avoiding unrealistic or inflated technical demands.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.80,
+        "evidence": "3 years minimum experience with no 'Senior' in title, typically maps to mid-level (3-5 years)",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "bi_engineer",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Data Engineer-Business Intelligence' with focus on BI/DW projects, reporting and visualization",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.85,
+        "evidence": "Focus on BI/DW projects, reporting and visualization with ETL tools (DataStage, Azure Data Factory, Informatica PowerCenter) - no streaming mentioned",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.80,
+        "evidence": "No mention of team leadership, mentoring, or direct reports; focus on individual contributor work like analysis, requirements, design, development",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.85,
+        "evidence": "Multiple cloud platforms mentioned (AWS, Google, Azure) with no clear primary - all listed as required skills",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": ["aws", "azure", "gcp"],
+        "confidence": 0.90,
+        "evidence": "All three major clouds (AWS, Google Cloud Platform, Azure) explicitly mentioned as required skills",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.80,
+        "evidence": "Focus on reporting, visualization, and ETL tools suggests batch processing; no streaming or real-time mentioned",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific orchestration tools mentioned (Airflow, Spark, dbt, etc.)",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific data storage systems mentioned (warehouse, lake, lakehouse)",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.85,
+        "evidence": "Must work onsite in Pune, Maharashtra, India - specific regional requirement",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.90,
+        "evidence": "Location specified as Pune, Maharashtra, India - single country focus",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.85,
+        "evidence": "Must be onsite in Pune, Maharashtra, India - implies relocation if not already in the area",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned in job posting",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of student visa support; standard work authorization requirements implied",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.85,
+        "evidence": "No citizenship requirement mentioned, only standard work authorization implied",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.85,
+        "evidence": "Full-time position at IBM Consulting suggests W2 employment with benefits",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits mentioned in job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No career growth or advancement opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mentorship programs or working with senior people mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion or advancement path mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No internal transfers or role changes mentioned",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career tracks mentioned (IC, management, specialist, architect)",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "Many 'required' qualifications: Cognos Developer & Admin, 3+ years experience, Master's degree preferred, multiple technical skills",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused job description on BI/DW role with clear responsibilities and requirements",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Reasonable skill set for mid-level BI engineer: Cognos, ETL tools, 3 years experience",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

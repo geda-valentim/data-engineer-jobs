@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.6,
+        "evidence": "Title is Data Engineer without senior qualifier; requires Master's degree and specialized tool expertise, suggesting a mid-level position.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.96,
+        "evidence": "Job title explicitly states \"Data Engineer\" and responsibilities revolve around data‑related document/template creation.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "general",
+        "confidence": 0.71,
+        "evidence": "Role focuses on template design, PDF generation and document workflow rather than specific data‑engineering domains like streaming or batch ETL.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.92,
+        "evidence": "No mention of people‑management, team lead, or architectural responsibilities; only individual contributor tasks are described.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "Job posting contains no reference to any cloud provider or cloud services.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 1.0,
+        "evidence": "No cloud providers are mentioned, therefore no secondary clouds exist.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No discussion of streaming, batch, or hybrid processing in the description.",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No orchestration tools (Airflow, dbt, etc.) are referenced.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "The posting does not mention data warehouses, data lakes, or lakehouses.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.62,
+        "evidence": "Location is specified as Bengaluru, India and there is no remote‑work language, implying work must be performed in the same country.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "apac",
+        "confidence": 0.6,
+        "evidence": "The job is based in India, which falls in the APAC timezone region.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.55,
+        "evidence": "No relocation requirement is stated; the role is tied to a specific Indian location.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.55,
+        "evidence": "No visa sponsorship information is provided; the role is for an Indian location, making H‑1B sponsorship unlikely.",
+        "source": "inferred"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.55,
+        "evidence": "No mention of OPT/CPT or student‑visa friendliness.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "The posting does not specify any citizenship or work‑authorization requirement.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "Employment type (W2, C2C, 1099) is not discussed in the posting.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.93,
+        "evidence": "No benefits (health, PTO, equity, etc.) are listed in the job description.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.94,
+        "evidence": "The description does not talk about career growth, promotion tracks, or development opportunities.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.94,
+        "evidence": "No mentorship programs or senior‑to‑junior learning references are present.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.94,
+        "evidence": "No language about promotions or advancement paths appears in the posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.94,
+        "evidence": "The posting does not mention internal transfers or mobility options.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No career track (IC, management, specialist, architect) is referenced.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.71,
+        "evidence": "The posting lists clear must‑have hard and soft skills and a short nice‑to‑have list, indicating a balanced requirement set.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.82,
+        "evidence": "Responsibilities are narrowly focused on template creation and document generation, providing a well‑defined scope.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.81,
+        "evidence": "The required skill set aligns with a specialized document‑template role and does not appear excessive for the inferred mid‑level seniority.",
+        "source": "inferred"
+      }
+    }
+  }
+}

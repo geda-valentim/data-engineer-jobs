@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit seniority level mentioned in title or years of experience. Responsibilities suggest a role that could be mid to senior, but no clear signals to infer with confidence >= 0.5.",
+        "source": "pass1_derived"
+      },
+      "job_family": {
+        "value": "bi_engineer",
+        "confidence": 0.90,
+        "evidence": "Title includes 'Business Intelligence' and responsibilities focus on Tableau-driven dashboards and analytics, which aligns with BI engineering.",
+        "source": "combined"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.60,
+        "evidence": "Mentions SQL, Oracle, and Hive, which are commonly associated with data warehouse environments.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.70,
+        "evidence": "Responsibilities focus on development and debugging without explicit mention of leadership or mentoring duties.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No cloud providers or services explicitly mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No secondary clouds mentioned as no cloud providers are referenced.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mention of streaming, batch, or hybrid processing tools or paradigms.",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No orchestration tools or categories mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Mentions SQL, Oracle, and Hive but no explicit storage layer patterns or tools (e.g., warehouse, lake, lakehouse).",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Location is specified as Pune, but no remote work model or restrictions are discussed.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No timezone requirements or team distribution mentioned beyond location in Pune, India.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Location is specified as Pune, but no relocation package or requirement is mentioned. Assumes candidate is already based in Pune.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned in Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No signals about OPT/CPT or student visa eligibility. Assumes no support due to lack of mention.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No work authorization or citizenship requirements explicitly stated.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Employment type and contract details are not mentioned in Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits are mentioned in Pass 1 extraction.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions 'limitless career path' and 'access to latest education, tools and technology' as growth opportunities, but no explicit career tracks.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.60,
+        "evidence": "Mentions 'lead IBM into the future' and 'collaborating with senior staff' suggests learning from experienced team members.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal mobility or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No explicit career tracks mentioned (e.g., IC, management, specialist, architect).",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "All listed skills are must-haves with no nice-to-have distinction, but the tone is not overly strict or lengthy.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Job description focuses on a single role with well-defined responsibilities around Tableau and BI development.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "Must-have skills align reasonably with the inferred BI engineering role and lack of seniority level suggests no unrealistic expectations.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

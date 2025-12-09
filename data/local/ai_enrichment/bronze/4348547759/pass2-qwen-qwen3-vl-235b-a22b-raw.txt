@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.85,
+        "evidence": "Minimum 4+ years experience required, title is 'Data Engineer' with focus on complex big data technologies (Spark, Kafka, Azure), which aligns with senior level expectations in enterprise environments",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Job title explicitly states 'Data Engineer', responsibilities focus on building data pipelines, processing data with Spark/Python/Scala, and working with big data technologies",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "streaming_realtime",
+        "confidence": 0.80,
+        "evidence": "Explicitly mentions 'Experience in developing streaming pipelines' and 'Exposure to streaming solutions and message brokers like Kafka technologies', indicating a focus on real-time data processing",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.90,
+        "evidence": "No mention of people management, team leadership, or architectural oversight beyond individual contribution; responsibilities focus on development, maintenance, and testing of data solutions",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.95,
+        "evidence": "Multiple explicit mentions of 'Azure Cloud Data Platform', 'Azure HDInsight', 'Azure Data Factory', 'Synapse', and 'Azure eco system components' — no mention of AWS or GCP as primary",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud platforms (AWS, GCP) are mentioned in the job description or requirements",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.75,
+        "evidence": "Mentions both 'streaming pipelines' (Kafka) and batch processing via Spark on Hadoop/Azure, indicating a hybrid approach to data processing",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.85,
+        "evidence": "Azure Data Factory and Synapse are explicitly mentioned as part of the Azure ecosystem, which are cloud-native orchestration tools",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.80,
+        "evidence": "Mentions HDFS (lake), Azure Data Platform (warehouse), and Synapse (lakehouse), indicating use of multiple storage paradigms",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.90,
+        "evidence": "Location specified as 'Pune, Maharashtra, India' with 'onsite' work model — implies must be located in that region",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.95,
+        "evidence": "Explicit location restriction to Pune, India, and no mention of global or multi-timezone collaboration",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.85,
+        "evidence": "Onsite work model + specific location (Pune, India) implies candidate must relocate or already be based there",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of visa sponsorship; location is Pune, India — implies local hiring only",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of student visas or OPT/CPT; onsite role in India suggests local work authorization required",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.88,
+        "evidence": "Location in India + onsite work model implies candidate must be authorized to work locally in India; no citizenship requirement stated",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Employment type stated as 'full_time' and 'permanent' — typical of W2 employment in corporate environments like IBM",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits listed in the job posting or extracted data — 'ext_benefits_mentioned' is empty",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "No explicit career tracks mentioned; only general reference to working in 'Client Innovation Centers' — no promotion ladder or advancement paths described",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions working in 'IBM Consulting Client Innovation Centers' — implies collaboration with experienced teams, but no formal mentorship program stated",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of promotions, advancement, or career progression in the job description",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers, lateral moves, or exploring other roles within IBM",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.55,
+        "evidence": "No career tracks (IC, management, specialist, architect) explicitly or implicitly mentioned",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Clear 'must have' skills (Spark, Python, Azure, Kafka, etc.) and 'nice to have' (streaming solutions, message brokers) — balanced but specific requirements",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused on data engineering with specific technologies (Spark, Azure, Kafka) and responsibilities (pipelines, ingestion, transformation) — not a hybrid or vague role",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "4+ years experience required for senior-level skills (Spark, Azure, Kafka) — reasonable for the role; no unrealistic combinations or junior role with senior requirements",
+        "source": "inferred"
+      }
+    }
+  }
+}

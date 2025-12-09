@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "not_mentioned",
+        "confidence": 0.6,
+        "evidence": "Title mentions 'Data Engineer' but no explicit seniority level or years of experience specified. Responsibilities include leading IBM into the future and managing feature development, but these are generic for IBM roles and do not strongly signal a specific seniority level.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "bi_engineer",
+        "confidence": 0.9,
+        "evidence": "Title includes 'Business Intelligence' and responsibilities focus on Tableau-driven dashboards, analytics, and performance optimization of workbooks.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_visualization",
+        "confidence": 0.8,
+        "evidence": "Core focus on Tableau, dashboard development, and performance optimization for large datasets.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.7,
+        "evidence": "Role is described as 'Application Developer' with responsibilities centered on feature development and debugging, no direct mentions of technical leadership or people management.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit cloud providers or services mentioned in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No secondary clouds mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No mention of batch, streaming, or hybrid processing paradigms or related tools.",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No orchestration tools or categories mentioned.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "Oracle and Hive mentioned as databases, but no clear storage layer paradigm (warehouse, lake, lakehouse) inferred.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.7,
+        "evidence": "Location specified as 'Pune, Maharashtra, India', suggesting a regional restriction.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.8,
+        "evidence": "Location is restricted to India, implying a focus on the timezone of the country.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of relocation packages or requirements, and location is specified as Pune, India.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No visa sponsorship stated explicitly in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": "not_mentioned",
+        "confidence": 0.5,
+        "evidence": "No explicit mention of OPT/CPT or student visa eligibility.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No discussion of work authorization, citizenship, or green card requirements.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.9,
+        "evidence": "Employment type stated as 'full_time' in Pass 1 results, and benefits are typically associated with W2 employment.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.9,
+        "evidence": "No benefits are mentioned in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.7,
+        "evidence": "Mentions 'limitless career path' and 'access to the latest education, tools and technology', indicating growth opportunities but not specific tracks.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.6,
+        "evidence": "Mentions delivering deep technical and industry expertise to clients, which may involve learning from senior team members, but no formal mentorship program stated.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit mention of promotion or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of internal mobility or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.6,
+        "evidence": "Mentions 'limitless career path' which may imply IC track, but no other tracks are clearly stated.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.7,
+        "evidence": "All listed skills under 'Required Technical And Professional Expertise' are classified as must-have hard or soft skills in Pass 1 results, with no nice-to-have skills mentioned.",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.7,
+        "evidence": "Job description focuses on Tableau-driven dashboards, analytics, and performance optimization, with a clear set of responsibilities.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.6,
+        "evidence": "No years of experience specified, but the role is likely mid to senior given the responsibilities and required skills.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

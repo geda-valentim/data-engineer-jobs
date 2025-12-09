@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.85,
+        "evidence": "Job posting requires 7+ years total data engineering experience (4+ years on Azure). This experience level aligns with senior‑level expectations despite the title lacking a senior qualifier.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is \"Data Engineer-Data Platforms-Azure\" and responsibilities focus on building data pipelines, warehouses, and platform services.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "data_warehouse",
+        "confidence": 0.78,
+        "evidence": "Mentions Azure SQL DW, Cosmos DB, ADLS, and Data Warehousing experience, indicating primary focus on data warehousing and platform engineering.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.90,
+        "evidence": "No mention of people‑management responsibilities, team lead duties, or direct reports; the role is described purely in technical terms.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.99,
+        "evidence": "All required technologies are Azure services (Azure Data Factory, ADLS, Databricks, Stream Analytics, SQL DW, Cosmos DB, etc.).",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No other cloud providers are referenced in the posting or extraction results.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "Azure Data Factory supports batch pipelines, while Stream Analytics indicates real‑time/streaming processing.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "cloud_native",
+        "confidence": 0.90,
+        "evidence": "Azure Data Factory is a cloud‑native orchestration service; no Airflow, Luigi, or similar tools are mentioned.",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.85,
+        "evidence": "References both data lake storage (ADLS) and data warehouse services (SQL DW, Cosmos DB), indicating a mixed storage strategy.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.95,
+        "evidence": "Location specified as Bengaluru, India and extraction shows geo restriction type \"specific_countries\" with allowed country \"IN\".",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "apac",
+        "confidence": 0.80,
+        "evidence": "Job is based in India (IST timezone), which falls under the APAC region.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No relocation language is present; the role is tied to a specific Indian location.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Visa sponsorship is not mentioned; posting is for an Indian location, implying no H‑1B sponsorship.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No reference to OPT/CPT or student visas; the role is for experienced professionals in India.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.85,
+        "evidence": "No citizenship restriction is stated; only work‑authorization for the location is implied.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Employment type and contract details are not disclosed in the posting or extraction results.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "Extraction shows no benefits listed; the posting does not discuss health, PTO, equity, or other perks.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "The posting does not reference career ladders, promotion tracks, or growth pathways.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mentorship programs or senior‑junior collaboration cues are described.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "The text contains no language about promotions or advancement opportunities.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers, lateral moves, or mobility within IBM.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "The posting does not specify any career tracks (IC, management, specialist, architect).",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.85,
+        "evidence": "A long list of mandatory hard skills is provided with no nice‑to‑have alternatives, indicating a stringent requirement set.",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "The description focuses specifically on data engineering responsibilities and Azure technologies, without ambiguity or multiple role blending.",
+        "source": "combined"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "The required 7+ years of experience aligns with the breadth of listed skills, showing realistic expectations for a senior data engineer.",
+        "source": "combined"
+      }
+    }
+  }
+}

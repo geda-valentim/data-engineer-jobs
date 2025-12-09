@@ -1,0 +1,249 @@
+<reasoning>Let me analyze this job posting step by step to infer the required characteristics.
+
+First, let me understand what we have:
+
+**Original Job Posting:**
+- Title: Data Engineer-Business Intelligence
+- Company: IBM
+- Location: Navi Mumbai, Maharashtra, India
+- This is for IBM Consulting Client Innovation Centers (Delivery Centers)
+- Focus on BI/DW projects, reporting and visualization using Cognos
+- 3+ years experience required
+- Education: MCA/M.Tech/B.Tech/B.E. required
+- Must have: Cognos Developer & Admin, UNIX
+- Nice to have: AWS, Google, Azure, IBM InfoSphere DataStage, Azure Data Factory, Informatica PowerCenter
+- Soft skills: Communication, Time Management, Multi-tasking, Critical Thinking
+- Onsite role in Navi Mumbai
+
+**Pass 1 Extraction Results:**
+- Onsite work model
+- Location: Navi Mumbai, Maharashtra, India
+- 3 years minimum experience
+- Education: Masters level required
+- Must have skills: Cognos Developer, Admin, UNIX
+- Nice to have: AWS, Google, Azure, IBM InfoSphere DataStage, Azure Data Factory, Informatica PowerCenter
+- No visa sponsorship mentioned
+- No benefits mentioned
+- No salary information
+
+Now let me make inferences for each category:
+
+## SENIORITY AND ROLE
+
+**seniority_level:**
+- Title: "Data Engineer-Business Intelligence" (no "Senior" in title)
+- Experience: 3 years minimum
+- This suggests mid-level rather than senior
+- For BI/Data Engineer roles, 3 years is typically mid-level
+- Confidence: 0.7 (title doesn't specify seniority but 3 years suggests mid-level)
+- Value: "mid"
+
+**job_family:**
+- Title explicitly says "Data Engineer-Business Intelligence"
+- Focus on BI/DW projects, reporting and visualization
+- This is clearly a BI-focused data engineer role
+- Confidence: 0.95 (explicit in title)
+
+
+- Value: "bi_engineer"
+
+**sub_specialty:**
+- Role focuses on BI/DW projects, reporting and visualization
+- Uses Cognos for reporting
+- ETL tools mentioned (DataStage, Azure Data Factory, Informatica)
+- This is clearly business intelligence and reporting focused
+- Confidence: 0.9
+- Value: "bi_engineering"
+
+**leadership_expectation:**
+- No mention of team leadership, mentoring, or direct reports
+- Role focuses on individual contributor work: analysis, requirements, design, development
+- No management responsibilities mentioned
+- Confidence: 0.85
+- Value: "ic"
+
+I'll continue analyzing the cloud and infrastructure aspects of this role. The position requires expertise across multiple cloud platforms, with a strong emphasis on business intelligence and data engineering. The role demands technical versatility, working with various ETL tools and cloud services while maintaining a focus on reporting and visualization.
+
+The processing approach appears hybrid, combining batch processing for scheduled reports with potential real-time data integration. The primary cloud strategy seems multi-cloud, given the explicit mention of AWS, Google, and Azure as preferred technical skills.
+
+The role's geographic constraints are specific - onsite in Navi Mumbai, with no remote work flexibility. This suggests a localized, in-person collaboration model for the IBM Consulting team.
+
+Regarding work authorization, the position requires standard work eligibility in India, with no special visa sponsorship mentioned. The employment structure indicates a full-time W2 arrangement, though specific compensation details remain unspecified.
+
+Career development opportunities seem limited, with no explicit growth paths, mentorship programs, or internal mobility signals. The requirements suggest a focused, execution-oriented role with clear technical expectations but minimal strategic career progression.
+
+The skill requirements appear balanced - not overly restrictive, with a clear distinction between mandatory and preferred qualifications. The role scope is precisely defined, targeting business intelligence and data engineering without unnecessary complexity.
+
+Notably, the skill set aligns appropriately with the mid-level position, avoiding unrealistic or inflated expectations.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.75,
+        "evidence": "Title is 'Data Engineer-Business Intelligence' without 'Senior' designation, but requires 3+ years experience which aligns with mid-level for BI roles",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "bi_engineer",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Data Engineer-Business Intelligence' and role focuses on BI/DW projects, reporting and visualization using Cognos",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "bi_engineering",
+        "confidence": 0.90,
+        "evidence": "Role specifically focuses on BI/DW projects, reporting and visualization using Cognos, with ETL tools for data integration",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "No mention of team leadership, mentoring, or direct reports. Role focuses on individual contributor work: analysis, requirements, design, development, and testing",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.80,
+        "evidence": "Multiple cloud platforms mentioned as preferred: AWS, Google, Azure with no clear primary preference indicated",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": ["aws", "azure", "gcp"],
+        "confidence": 0.90,
+        "evidence": "All three major cloud providers (AWS, Google, Azure) mentioned as nice-to-have skills",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.75,
+        "evidence": "Focus on reporting and visualization suggests batch processing for scheduled reports, though ETL tools could support both batch and streaming",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific orchestration tools mentioned (Airflow, Databricks workflows, etc.)",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific data storage systems mentioned (warehouse, lake, lakehouse)",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.85,
+        "evidence": "Onsite role specifically in Navi Mumbai, Maharashtra, India - requires local presence in this specific region",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.90,
+        "evidence": "Location specified as Navi Mumbai, Maharashtra, India - focused on India timezone",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": true,
+        "confidence": 0.80,
+        "evidence": "Onsite role in Navi Mumbai requires candidates to relocate to or already be in this specific location",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned, and role is in India which would require different visa types than H1B",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of student visa support, and role requires full-time onsite presence which may not align with student schedules",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.80,
+        "evidence": "Role in India would require work authorization in India, but no specific citizenship requirements mentioned",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.85,
+        "evidence": "Full-time position at IBM Consulting suggests W2 employment structure, though not explicitly stated",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No career progression, growth opportunities, or advancement paths mentioned",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mentorship programs, working with senior staff, or collaborative learning environment mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion, advancement, or career progression mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal transfers, lateral moves, or exploring different roles within IBM",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career tracks (IC, management, specialist, architect) mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Clear distinction between must-have skills (Cognos, UNIX) and nice-to-have skills (cloud platforms, ETL tools), balanced requirements",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Well-defined role focused specifically on BI/DW projects, reporting and visualization using Cognos - single clear focus",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Requirements are reasonable for mid-level BI engineer: 3+ years, Cognos expertise, UNIX knowledge, with nice-to-have cloud/ETL skills",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

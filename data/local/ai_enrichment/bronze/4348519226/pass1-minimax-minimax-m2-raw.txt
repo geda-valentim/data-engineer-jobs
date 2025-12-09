@@ -1,0 +1,198 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules. Let me go through each section systematically.
+
+Looking at the job posting:
+- Title: Data Engineer-Data Platforms-AWS
+- Company: IBM
+- Location: Pune, Maharashtra, India
+
+Let me extract information section by section:
+
+1. **Compensation**: No salary information is mentioned, so all compensation fields should be null/false.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. Should be "not_mentioned".
+
+3. **Work Model**: 
+   - Location is specified as "Pune, Maharashtra, India" - this suggests onsite work
+   - Employment type is not explicitly mentioned, but given it's a full-time role at IBM, it would likely be full-time
+   - Work model: Since location is specified as a specific city, this suggests "onsite"
+
+4. **Contract Details**: No mention of contract type, duration, etc. Should be "not_mentioned" for most fields.
+
+5. **Contractor Rates**: Not applicable since this appears to be a permanent position.
+
+6. **Skills Classification**: This is where I need to be most careful. Let me analyze the requirements:
+
+From the job posting:
+- "Total 5-8+ years of experience in Data Management (DW, DL, Data Platform, Lakehouse) and Data Engineering skills"
+- "Minimum 5+ years of experience in Big Data technologies with extensive data engineering experience in Spark / Python or Scala"
+- "Minimum 3 years of experience on Cloud Data Platforms on AWS"
+- "Experience in AWS EMR / AWS Glue / DataBricks, AWS RedShift, DynamoDB"
+- "Good to excellent SQL skills"
+- "Certification in AWS and Data Bricks or Cloudera Spark Certified developers"
+
+Let me classify the hard skills:
+
+**Must-have hard skills** (strong qualifiers or required):
+- Spark (mentioned multiple times with "experience in")
+- Python (mentioned with "experience in")
+- Scala (mentioned with "experience in")
+
+
+- AWS (mentioned with "experience on Cloud Data Platforms")
+- AWS EMR (explicitly mentioned)
+- AWS Glue (explicitly mentioned)
+- DataBricks (explicitly mentioned)
+- AWS RedShift (explicitly mentioned)
+- DynamoDB (explicitly mentioned)
+- SQL (mentioned as "good to excellent")
+- Hadoop (mentioned in responsibilities)
+- HDFS (mentioned)
+- Hive (mentioned)
+- HBase (mentioned)
+- NoSQL databases (mentioned)
+- Kafka (mentioned as Apache Kafka)
+
+I'll continue identifying the key technical skills and qualifications for this data engineering role. The position requires extensive experience with big data technologies, cloud platforms, and specific AWS services. Candidates need a strong background in Spark, Python, Scala, and various AWS data management tools.
+
+The role emphasizes deep technical expertise in data management, with a focus on cloud-based platforms and distributed computing technologies. Certifications in AWS and Data Bricks are preferred, indicating the importance of validated skills in these specific ecosystems.
+
+The position requires 5-8 years of experience in data management and engineering, with a minimum of 5 years in big data technologies. A Master's degree is preferred, suggesting advanced academic preparation in a relevant field.
+
+The job involves developing and maintaining big data solutions, with a strong emphasis on Spark Framework, Python, Scala, and cloud data platforms. Key responsibilities include building data pipelines, processing large-scale data, and working with various database technologies.
+
+The role demands expertise in AWS cloud technologies, including EMR, Glue, DataBricks, RedShift, and DynamoDB, indicating a comprehensive cloud-based data engineering approach.
+
+The position requires strong SQL skills and preferred certifications in AWS and Data Bricks or Cloudera Spark, highlighting the importance of technical validation and continuous learning in this dynamic field.
+
+The role emphasizes extensive experience in data management and engineering, with a focus on big data technologies and cloud platforms. Key qualifications include deep expertise in Spark, Python, or Scala, and a minimum of three years working with AWS cloud data platforms.
+
+The preferred educational background is a Master's degree, suggesting advanced academic preparation in a relevant technical field. The position demands proven technical proficiency and a commitment to staying current with evolving data engineering technologies.
+
+The role involves developing and maintaining big data solutions, with a strong emphasis on Spark Framework, Python, and Scala on Hadoop and AWS Cloud Data Platform. Responsibilities include building data pipelines, processing diverse data sources, and creating efficient software code for complex use cases.
+
+Key technical requirements include experience with streaming pipelines, Hadoop/AWS ecosystem components, and scalable solutions to handle increasing data volumes. The position demands expertise in Apache Spark, Kafka, and cloud computing technologies.
+
+The preferred educational background is a Master's Degree, with a total of 5-8+ years of experience in Data Management and Data Engineering. Minimum qualifications include 5+ years in Big Data technologies, specifically Spark, Python, or Scala, and 3 years on AWS Cloud Data Platforms.
+
+Technical expertise should encompass AWS EMR, AWS Glue, DataBricks, AWS RedShift, DynamoDB, and strong SQL skills. Certifications in AWS and Data Bricks or Cloudera Spark are preferred for developers.
+
+The role requires deep technical knowledge across multiple data engineering domains, with a focus on cloud-based big data solutions and advanced data management technologies.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Pune, Maharashtra, India",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Spark",
+        "Python",
+        "Scala",
+        "AWS",
+        "AWS EMR",
+        "AWS Glue",
+        "DataBricks",
+        "AWS RedShift",
+        "DynamoDB",
+        "SQL",
+        "Hadoop",
+        "HDFS",
+        "Hive",
+        "HBase",
+        "NoSQL databases",
+        "Kafka",
+        "Apache Spark",
+        "Big Data technologies",
+        "Data pipelines",
+        "Cloud Data Platforms"
+      ],
+      "nice_to_have_hard_skills": [
+        "AWS certification",
+        "Data Bricks certification",
+        "Cloudera Spark certification"
+      ],
+      "must_have_soft_skills": [],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [
+        "AWS certification",
+        "Data Bricks certification",
+        "Cloudera Spark certification"
+      ],
+      "years_experience_min": 5,
+      "years_experience_max": 8,
+      "years_experience_text": "Total 5-8+ years of experience in Data Management (DW, DL, Data Platform, Lakehouse) and Data Engineering skills. Minimum 5+ years of experience in Big Data technologies with extensive data engineering experience in Spark / Python or Scala; Minimum 3 years of experience on Cloud Data Platforms on AWS",
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "preferred",
+      "education_text_raw": "Master's Degree",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "specific_countries",
+      "allowed_countries": ["IN"],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "IBM Consulting Client Innovation Centers (Delivery Centers)",
+      "company_description_text": "IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 25
+  }
+}
+```

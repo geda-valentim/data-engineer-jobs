@@ -1,0 +1,239 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "Mentions 'data infrastructure' and 'database systems' as required skills, and references 'pipelines' and 'production environment' for models, suggesting structured data practices. However, no explicit mention of modern data stack tools (e.g., Snowflake, dbt, Airflow) beyond Python and notebooks, which limits confidence in higher maturity scores.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Matches the data_maturity_score of 3, as the role involves documented processes and some governance but lacks explicit signals for advanced maturity (e.g., data mesh, lineage, or quality monitoring tools).",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["data_quality_testing"],
+        "confidence": 0.70,
+        "evidence": "Mentions 'tracking model performance in production' and 'clean production environment', which are indicators of data quality practices. No explicit signals for other maturity indicators like CI/CD or governance.",
+        "source": "inferred"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.6,
+        "confidence": 0.80,
+        "evidence": "Role combines responsibilities of a Data Scientist, Machine Learning Engineer, and Data Analyst, with tasks spanning model training, data engineering, and business insights. This suggests moderate scope creep, as the role blends distinct disciplines (data science, engineering, and business analysis).",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.5,
+        "confidence": 0.70,
+        "evidence": "Contract role in a 'fully distributed' company with no explicit mention of overtime or work-life balance protections. However, the 'Work from Anywhere' policy and lack of aggressive timelines (e.g., 'fast-paced') reduce the risk slightly. The 'entrepreneurial' value may imply flexibility but also self-driven workloads.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "multi_role",
+        "confidence": 0.85,
+        "evidence": "Job title and description conflate data science, machine learning engineering, and data analysis responsibilities, making the role scope broader than a typical Data Scientist position.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.55,
+        "confidence": 0.75,
+        "evidence": "Composite score derived from moderate scope creep (0.6), medium overtime risk (0.5), and vague role clarity (multi_role). No strict requirements or skill inflation, but the blended responsibilities and contract nature raise concerns.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.60,
+        "evidence": "Team bios mention 'Manager Data Scientist', 'Director, Pricing Analytics', and 'Lead Data Engineer', but the job posting does not explicitly state who the Data Scientist will report to. This suggests unclear reporting lines.",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.50,
+        "evidence": "No explicit mention of reporting structure or manager title in the job posting. Team bios provide some context but are not definitive.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit signals about team growth velocity or hiring plans beyond the contract role itself.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "small_2_5",
+          "de_count": "1",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.65,
+        "evidence": "Team bios mention only one Lead Data Engineer (Newton Troung), suggesting a small or newly formed data team. No explicit mention of other data engineers or team size.",
+        "source": "inferred"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Job posting does not specify reporting lines, despite mentioning team members in bios.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.70,
+        "evidence": "Role emphasizes collaboration with 'insurance domain experts' and 'engineering team members', suggesting cross-functional work. No explicit mention of centralized vs. embedded team structure, but the focus on bridging gaps implies embedded.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.70,
+        "evidence": "Positive signals include 'Work from Anywhere' and lack of on-call mentions, but the contract nature and absence of explicit work-life balance protections (e.g., unlimited PTO) introduce uncertainty. The 'entrepreneurial' value may imply flexibility but also self-driven workloads.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.6,
+        "confidence": 0.70,
+        "evidence": "Mentions collaboration with domain experts and creativity in using data, which may provide learning opportunities. However, no explicit signals for mentorship, career paths, or team expansion beyond the contract role.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.6,
+        "confidence": 0.75,
+        "evidence": "Values like 'Hold Nothing As Sacred' and 'Be Entrepreneurial' suggest a culture of innovation and adaptability. However, no explicit mention of modern data engineering practices (e.g., CI/CD, testing) or tools beyond Python and notebooks limits the score.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.90,
+        "evidence": "No explicit mention of open source contributions, tech blogs, conference speaking, or innovation time in the job posting or team bios.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.85,
+        "evidence": "No explicit mention of development practices like code review, CI/CD, or monitoring beyond general references to 'data infrastructure' and 'clean production environments'.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Company values emphasize entrepreneurial action and challenging the status quo, but no explicit signals about experimentation or R&D time are mentioned.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.70,
+        "evidence": "Mentions 'clean production environment' and 'repeatable experiments', which suggest an awareness of maintainability and code quality, though no explicit refactoring or tech debt management is stated.",
+        "source": "inferred"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.80,
+        "evidence": "Role focuses on training and deploying machine learning models for business decisions, but no explicit mention of advanced ML tools (e.g., MLflow, SageMaker) or MLOps infrastructure.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No explicit ML tools mentioned beyond the 'typical data science stack' (pandas, scikit-learn, numpy, etc.).",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.60,
+        "evidence": "Job posting does not explicitly state urgency, but the contract nature and lack of start date flexibility may imply a desire to fill the role quickly.",
+        "source": "inferred"
+      },
+      "competition_level": {
+        "value": "high",
+        "confidence": 0.70,
+        "evidence": "Contract roles in distributed companies with a focus on Latin America and US time zones may attract a high volume of applicants. Additionally, the lack of salary disclosure and the broad skill requirements could increase competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "startup_series_a_b",
+        "confidence": 0.65,
+        "evidence": "Company description and team bios suggest a modern, tech-driven insurance platform with distributed teams. The small team size (implied by bios) and focus on insurtech align with Series A/B startup characteristics.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit mention of hiring velocity or team expansion plans beyond the contract role.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "small_2_5",
+        "confidence": 0.70,
+        "evidence": "Team bios mention only three individuals (Manager Data Scientist, Director Pricing Analytics, Lead Data Engineer), suggesting a small data team. No explicit mention of broader data org size.",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit funding stage signals in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Job posting does not clarify whether this is a new role, backfill, or team expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["remote_friendly", "data_focused_role", "collaborative_culture", "learning_opportunities"],
+    "strength_details": [
+      "Fully distributed company with 'Work from Anywhere' policy, offering flexibility for remote workers in Latin America and the Caribbean.",
+      "Role is data-focused, blending machine learning and business insights in the insurtech domain, which can be intellectually stimulating.",
+      "Company values emphasize collaboration, feedback, and selfless hospitality, suggesting a supportive and inclusive culture.",
+      "Sponsorship for language classes ($100/year) indicates investment in personal development, particularly for non-native English speakers."
+    ],
+    "concern_categories": ["scope_creep_risk", "unclear_reporting", "contract_short_term", "salary_not_disclosed"],
+    "concern_details": [
+      "Role combines Data Scientist, Machine Learning Engineer, and Data Analyst responsibilities, which may lead to unclear priorities or workload challenges.",
+      "Reporting structure is vague, with no explicit mention of who the contract Data Scientist will report to, despite team bios listing leadership.",
+      "Contract role with no mention of extension, conversion to FTE, or long-term opportunities, which may limit stability and career growth.",
+      "Salary range is disclosed as $70-80k annually, but this is below market rates for mid-to-senior Data Scientists in the US or other competitive markets, and the contract nature may further reduce total compensation."
+    ],
+    "best_fit_categories": ["data_generalists", "mid_level_engineers", "startup_enthusiasts", "career_changers"],
+    "best_fit_details": [
+      "Mid-level data professionals with 3-5 years of experience in Python and machine learning, who are comfortable working in a blended role (data science + engineering + business analysis).",
+      "Startup enthusiasts who value flexibility, remote work, and entrepreneurial culture over strict specialization or high compensation.",
+      "Career changers with quantitative backgrounds (e.g., actuaries, risk analysts) looking to transition into data science within the insurtech domain."
+    ],
+    "probe_categories": ["role_scope_boundaries", "reporting_structure", "career_growth_path", "work_hour_expectations", "contract_extension_conversion"],
+    "probe_details": [
+      "Ask for clarity on the boundaries of the role: What percentage of time will be spent on data science vs. engineering vs. business analysis tasks?",
+      "Understand the reporting structure: Who will be the primary stakeholder for this contract role, and how will feedback be provided?",
+      "Probe about career growth: Are there opportunities to transition into a full-time role or specialize further in machine learning or data engineering?",
+      "Ask about work expectations: What is the typical workload for this role, and are there deadlines that may require overtime?",
+      "Inquire about contract specifics: Is there a possibility of extension or conversion to FTE, and what factors influence this decision?"
+    ],
+    "leverage_categories": ["domain_expertise", "quick_availability", "local_candidate"],
+    "leverage_details": [
+      "Domain expertise in insurance, underwriting, or risk modeling is a rare and valuable match for this role, given the company's focus on insurtech.",
+      "Quick availability to start (ASAP) may be advantageous, as the role does not specify a start date but implies urgency.",
+      "Local candidates in Latin America or the Caribbean may have an edge due to timezone overlap with US meetings and existing work authorization."
+    ],
+    "overall_assessment": "This contract role at Counterpart is a unique opportunity for data professionals with a quantitative background and experience in insurance or risk modeling. The blended responsibilities (data science, engineering, and business analysis) offer exposure to multiple disciplines but may lack clarity in scope and long-term growth. The fully distributed work model and company values suggest a flexible and collaborative culture, though the below-market compensation and contract nature introduce risks. Ideal for mid-level candidates seeking insurtech experience or career changers looking to transition into data science.",
+    "recommendation_score": 0.55,
+    "recommendation_confidence": 0.75
+  }
+}
+```

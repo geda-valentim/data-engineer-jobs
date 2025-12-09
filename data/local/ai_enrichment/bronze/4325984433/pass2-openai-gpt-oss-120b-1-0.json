@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 12:44:29",
+    "job_posting_id": "4325984433",
+    "job_title": "Data Engineer-Data Warehouse",
+    "company_name": "IBM",
+    "job_location": "Kochi, Kerala, India",
+    "pass_name": "pass2",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.62,
+          "evidence": "Title lacks senior qualifier and no years of experience are listed; required skills (DBT, Spark, Hadoop, predictive modeling) suggest a mid‑level data engineer.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Title is \"Data Engineer-Data Warehouse\" and responsibilities focus on building data pipelines, ETL, and data warehousing.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "data_warehouse",
+          "confidence": 0.81,
+          "evidence": "Snowflake is mentioned (preferred) and the role is titled \"Data Engineer-Data Warehouse\"; primary focus is on warehouse‑style storage and analytics.",
+          "source": "combined"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.91,
+          "evidence": "No references to people‑management, hiring, or direct reports; the description emphasizes individual contribution to pipelines and modeling.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.94,
+          "evidence": "The posting lists tools (Spark, Hadoop, DBT, Snowflake) but does not specify any cloud provider such as AWS, Azure, or GCP.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.94,
+          "evidence": "No additional cloud platforms are referenced in the job description.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.86,
+          "evidence": "The role mentions both batch processing and real‑time processing responsibilities.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "dbt_core",
+          "confidence": 0.79,
+          "evidence": "DBT is listed as a required hard skill; while not an orchestrator per se, DBT often serves as the primary transformation/orchestration tool in modern pipelines.",
+          "source": "combined"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.84,
+          "evidence": "Snowflake (a cloud data warehouse) is mentioned as a preferred technology; no lake‑specific storage is described.",
+          "source": "combined"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.96,
+          "evidence": "Location is specified as Kochi, Kerala, India and ext_geo_restriction_type is \"specific_countries\" with allowed_countries = [\"IN\"].",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "apac",
+          "confidence": 0.91,
+          "evidence": "The job is based in India, which falls in the APAC region.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.88,
+          "evidence": "No relocation language is present; the posting restricts candidates to India, implying candidates must already be located there.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.92,
+          "evidence": "Visa sponsorship is not mentioned; the role is limited to candidates in India, making H‑1B sponsorship unlikely.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.88,
+          "evidence": "No reference to OPT/CPT or student visas; the position is location‑restricted to India.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.84,
+          "evidence": "Only a work‑location restriction (India) is stated; no citizenship clause is provided, implying any candidate authorized to work in India is acceptable.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "not_mentioned",
+          "confidence": 0.93,
+          "evidence": "Employment type, contract type, and pay model are not disclosed in the posting.",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "The posting does not list any benefits such as health, PTO, equity, or learning budgets.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.92,
+          "evidence": "The description contains no language about career ladders, promotion tracks, or growth opportunities.",
+          "source": "not_mentioned"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No mention of mentorship programs, assigned mentors, or learning from senior staff.",
+          "source": "not_mentioned"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.94,
+          "evidence": "The posting does not reference promotions, advancement, or career progression.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.94,
+          "evidence": "No language about internal transfers or lateral moves is present.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No career track options (IC, management, specialist, architect) are described in the posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.78,
+          "evidence": "The posting lists a clear set of required hard and soft skills and a short nice‑to‑have list, indicating a balanced but not overly strict requirement set.",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "The responsibilities focus specifically on data engineering tasks (ETL, pipelines, modeling, search applications) without blending other roles.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.81,
+          "evidence": "The skill set (DBT, Spark, Hadoop, predictive modeling) aligns with a realistic expectation for a mid‑level data engineer; no excessive senior‑level demands are evident.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8879,
+    "input_tokens": 5911,
+    "output_tokens": 2968,
+    "cost": 0.0017770499999999999
+  }
+}

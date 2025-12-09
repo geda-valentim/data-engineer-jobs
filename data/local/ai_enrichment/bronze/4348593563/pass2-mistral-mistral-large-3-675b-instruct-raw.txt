@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.85,
+        "evidence": "Title includes 'Data Engineer' without senior/staff/principal qualifiers, and minimum of 3 years of experience is mentioned",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "bi_engineer",
+        "confidence": 0.95,
+        "evidence": "Title is 'Data Engineer-Business Intelligence' and core responsibilities focus on reporting, visualization, and BI tools like Cognos",
+        "source": "combined"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.80,
+        "evidence": "ETL/Data Integration tools (IBM InfoSphere DataStage, Azure Data Factory, Informatica PowerCenter) and BI/DW projects mentioned, suggesting batch ETL focus",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.75,
+        "evidence": "Role focuses on technical execution (developing reports, ETL tasks) and mentions working with business/technical team members but no explicit leadership or mentoring responsibilities",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Cloud platforms (AWS, Google, Azure) are listed as preferred but not emphasized as primary",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No clear primary cloud, so secondary clouds cannot be inferred",
+        "source": "inferred"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.70,
+        "evidence": "ETL/Data Integration tools and BI/DW projects mentioned, suggesting batch processing focus",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No orchestration tools like Airflow, Luigi, or cloud-native orchestrators explicitly mentioned",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.80,
+        "evidence": "BI/DW projects and reporting/visualization focus suggest data warehouse as primary storage layer",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.80,
+        "evidence": "Location specified as 'Pune, Maharashtra, India', implying regional restriction",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No timezone requirements or team distribution details mentioned",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No relocation package or requirements mentioned, and location is specified as Pune",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Visa sponsorship is not mentioned, and location is India where H1B is not applicable",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No signals regarding OPT/CPT or student visa support, and location is India",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No citizenship or work authorization details mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Employment type stated as full_time but no contract specifics (W2, C2C, 1099) mentioned",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits discussed in the job posting or Pass 1 extraction",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit or implied career growth paths mentioned",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.65,
+        "evidence": "Mentions developing and maintaining relationships with business and technical members of the team, suggesting potential mentorship opportunities",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion or advancement paths",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal mobility or role changes",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No career tracks explicitly or confidently inferred",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "Job posting uses strict qualifiers like 'required', 'must have', and 'minimum of 3 years' for key skills and experience",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Job description is focused on BI/DW projects, reporting, and visualization with specific tools like Cognos",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Requirements align with mid-level seniority (3 years minimum experience, specific BI tools knowledge)",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

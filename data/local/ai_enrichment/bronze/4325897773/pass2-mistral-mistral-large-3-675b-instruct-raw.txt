@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.8,
+        "evidence": "Title mentions 'Application Developer' and preferred experience is 5-7 years, but the role is explicitly labeled as 'Data Engineer' with 3 years minimum experience in Appian. The seniority signals from responsibilities align more with mid-level than senior.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.6,
+        "evidence": "The role is explicitly labeled as 'Data Engineer' in responsibilities, but the title and core focus (BPM tools like Appian, IBM BPM, Pega, Camunda) suggest a stronger alignment with business process management and application development.",
+        "source": "combined"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.7,
+        "evidence": "Mentions 'batch and real-time processing' but emphasizes BPM tools, workflows, and database integration (Oracle SQL, MySQL), which aligns more with batch ETL and process automation.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.7,
+        "evidence": "Responsibilities focus on development, design, and integration tasks without explicit mention of leadership, mentoring, or management duties.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No cloud providers or services explicitly mentioned in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No secondary clouds mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.6,
+        "evidence": "Mentions both 'batch and real-time processing' but does not emphasize either heavily.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "BPM tools like IBM BPM, Pega, and Camunda are mentioned, but these are not traditional data orchestrators (e.g., Airflow, Luigi). No explicit orchestrator tools are listed.",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit mention of storage layers such as data warehouse, lake, or lakehouse.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.8,
+        "evidence": "Location is restricted to 'Pune, Maharashtra, India', implying a regional or city-specific requirement.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No timezone requirements or team distribution signals mentioned.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.7,
+        "evidence": "Location is specified as Pune, but no explicit mention of relocation support or requirements.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "Visa sponsorship is not mentioned in Pass 1 results or job posting.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No signals related to OPT/CPT or student visa support.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No citizenship or work authorization requirements explicitly stated.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Employment type is 'full_time', but contract specifics (W2, C2C, 1099) are not mentioned.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.9,
+        "evidence": "No benefits are mentioned in Pass 1 results or job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.6,
+        "evidence": "Mentions 'A career in IBM Consulting is rooted by long-term relationships', suggesting growth opportunities but no explicit career tracks.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.7,
+        "evidence": "Mentions collaborating with 'visionaries across multiple industries' and 'diverse teams', which may include senior engineers but is not explicit.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit mention of promotion or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of internal mobility or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No explicit career tracks mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.7,
+        "evidence": "Job posting lists multiple 'must have' skills (e.g., 'Minimum of 3 years of recent experience', 'Good understanding of database concepts') with no 'nice to have' skills mentioned in Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "multi_role",
+        "confidence": 0.7,
+        "evidence": "Role combines responsibilities of BPM development (Appian, IBM BPM, Pega) and data engineering (data gathering, storage, batch/real-time processing), suggesting a hybrid scope.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.6,
+        "evidence": "3 years minimum experience for a mid-level role is reasonable, though the role combines BPM and data engineering which may be considered broad.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

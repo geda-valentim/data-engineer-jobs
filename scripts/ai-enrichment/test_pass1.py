@@ -25,6 +25,7 @@ from test_enrichment_helpers import (
     save_pass_result,
     save_raw_response,
     print_comparison_table,
+    save_job_original,
 )
 
 
@@ -57,13 +58,12 @@ def test_multiple_jobs_comparison(
     elif use_s3:
         print("\nLoading jobs from S3 bucket...")
         if date:
-            print(f"  Date: {date} (latest hour)")
+            print(f"  Date filter: {date}")
         else:
-            print(f"  Using most recent partition")
-        print(f"  Limit: {limit} jobs")
+            print(f"  Using most recent partition(s)")
+        print(f"  Requested limit: {limit} jobs")
 
         linkedin_jobs, partition_info = load_jobs_from_s3(date_str=date, limit=limit)
-        print(f"  ✓ Loaded {len(linkedin_jobs)} jobs from partition\n")
     else:
         # Real LinkedIn jobs (hardcoded mocks)
         linkedin_jobs = [
@@ -141,6 +141,10 @@ We are unable to consider visa sponsorship or C2C
         cache_misses = 0
 
         for i, job in enumerate(linkedin_jobs, 1):
+            # Save original job data from S3 (only if from S3, not mocks)
+            if use_s3 or preloaded_jobs is not None:
+                save_job_original(job)
+
             print(f"[{i}/{len(linkedin_jobs)}] Processing: {job['job_title']} @ {job['company_name']}...", end=" ")
 
             # Try to load from cache if enabled

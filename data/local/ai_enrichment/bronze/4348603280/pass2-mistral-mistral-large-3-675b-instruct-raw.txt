@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.8,
+        "evidence": "Title is 'Data Engineer-Business Intelligence' with a minimum of 3 years of experience mentioned, aligning with mid-level expectations.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "bi_engineer",
+        "confidence": 0.95,
+        "evidence": "Title explicitly mentions 'Business Intelligence' and core responsibilities focus on reporting, visualization, and BI tools like Cognos.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.7,
+        "evidence": "ETL/Data Integration tools (IBM InfoSphere DataStage, Azure Data Factory, Informatica PowerCenter) are required, with no strong emphasis on streaming/realtime.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.75,
+        "evidence": "Role focuses on individual tasks like development, testing, and troubleshooting without explicit leadership or management duties.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Cloud platforms (AWS, Google, Azure) are listed as nice-to-have with no clear primary focus.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No primary cloud inferred, so secondary clouds cannot be determined.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.65,
+        "evidence": "ETL/Data Integration tools are required, and these are typically associated with batch processing. No strong streaming signals.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No orchestration tools like Airflow, Luigi, or cloud-native orchestrators explicitly mentioned.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.6,
+        "evidence": "BI/DW projects and reporting/visualization focus suggest a data warehouse storage layer, though not explicitly stated.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.8,
+        "evidence": "Location is specified as 'Navi Mumbai, Maharashtra, India', implying a regional restriction.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.75,
+        "evidence": "Location is restricted to India, suggesting timezone alignment within the country.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of relocation packages or requirements in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit mention of H1B sponsorship or visa-related details.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.7,
+        "evidence": "Job is based in India, and no signals about OPT/CPT or student visa support are present. Assumed work authorization required.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No discussion of citizenship or work authorization requirements in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Employment type is full-time but no contract specifics (W2, C2C, 1099) are mentioned.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.9,
+        "evidence": "No benefits are mentioned in the Pass 1 extraction results.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit or implied career growth paths discussed in the job posting.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.6,
+        "evidence": "Mentions developing a strong working relationship with business and technical members of the team, which may include mentorship.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of promotion or advancement paths in the job posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No discussion of internal mobility or role changes in the job posting.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No explicit or inferred career tracks available mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.8,
+        "evidence": "Job posting uses strict qualifiers like 'required', 'must have', and 'minimum of 3 years of experience'.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.8,
+        "evidence": "Job description is focused on BI/DW projects and reporting/visualization with a clear set of responsibilities.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.7,
+        "evidence": "Required skills and experience align reasonably with a mid-level BI Engineer role.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

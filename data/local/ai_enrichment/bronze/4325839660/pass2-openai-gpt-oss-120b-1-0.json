@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 12:34:53",
+    "job_posting_id": "4325839660",
+    "job_title": "Data Engineer",
+    "company_name": "Quest Global",
+    "job_location": "Bengaluru, Karnataka, India",
+    "pass_name": "pass2",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.78,
+          "evidence": "Job posting requires 3-6 years of experience; this range aligns with a mid‑level data engineer.",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.99,
+          "evidence": "Title is \"Data Engineer\" and responsibilities focus on pipelines, ETL, and data visualization.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.92,
+          "evidence": "Responsibilities explicitly mention developing and optimizing ETL workflows and data pipelines, with no streaming technologies referenced.",
+          "source": "combined"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.94,
+          "evidence": "No mention of people‑management duties, team leadership, or direct reports; role is described as an individual contributor.",
+          "source": "pass1_derived"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "Job description lists SharePoint, Power Platform, MySQL, Python, etc., but does not reference any specific cloud provider (AWS, Azure, GCP).",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No additional cloud platforms are referenced in the posting.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.93,
+          "evidence": "ETL workflows and data pipelines are described without any streaming or real‑time processing technologies.",
+          "source": "combined"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.94,
+          "evidence": "The posting does not mention Airflow, Luigi, dbt, or any other orchestration tool.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "not_mentioned",
+          "confidence": 0.94,
+          "evidence": "No data warehouse, data lake, or lakehouse technologies are cited.",
+          "source": "pass1_derived"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.96,
+          "evidence": "Location is specified as Bengaluru, India and geo restriction type is \"specific_countries\" with allowed country IN.",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "apac",
+          "confidence": 0.95,
+          "evidence": "The job is based in India, which falls in the APAC region.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.84,
+          "evidence": "No relocation language is present; the role is tied to a specific city (Bengaluru).",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.92,
+          "evidence": "Posting is for an India‑based role and makes no mention of H‑1B sponsorship.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.91,
+          "evidence": "No reference to OPT/CPT or student visa eligibility; the role is not US‑focused.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.93,
+          "evidence": "The posting does not specify any citizenship or work‑authorization requirements.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "not_mentioned",
+          "confidence": 0.94,
+          "evidence": "Employment type (full‑time, contractor, etc.) is not disclosed in the posting.",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits (health, PTO, equity, etc.) are listed in the job description.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.78,
+          "evidence": "The description talks about culture and internal collaboration but does not outline specific career ladders or promotion tracks.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit or implied mentorship programs are referenced.",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.92,
+          "evidence": "The posting contains no language about promotions or advancement paths.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.92,
+          "evidence": "No mention of internal transfers, lateral moves, or mobility programs.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No career track options (IC, management, specialist, architect) are described.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.81,
+          "evidence": "A substantial list of must‑have hard skills is provided, with only one nice‑to‑have skill, indicating a balanced but not overly strict set of requirements.",
+          "source": "combined"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.92,
+          "evidence": "The role is narrowly defined as a Data Engineer focusing on pipelines, SharePoint, and web app development.",
+          "source": "combined"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.84,
+          "evidence": "The required 3‑6 years of experience aligns reasonably with the breadth of technical skills listed.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8989,
+    "input_tokens": 6080,
+    "output_tokens": 2909,
+    "cost": 0.0017846999999999997
+  }
+}

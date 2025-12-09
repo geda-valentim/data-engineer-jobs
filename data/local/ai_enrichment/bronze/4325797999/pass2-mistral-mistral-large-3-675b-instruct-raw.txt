@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.65,
+        "evidence": "Role mentions leading design and construction of new solutions, but no explicit years of experience or senior title match. Responsibilities align with mid-level expectations.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_platform_engineer",
+        "confidence": 0.95,
+        "evidence": "Title is 'Data Engineer-Data Platforms' and responsibilities include designing application solutions, supporting project teams, and implementing architecture strategies for data platforms.",
+        "source": "combined"
+      },
+      "sub_specialty": {
+        "value": "hybrid",
+        "confidence": 0.75,
+        "evidence": "Mentions both batch-oriented tools (Apache Spark, PySpark, Hadoop, HDFS) and streaming tools (Kafka). No heavy emphasis on real-time alone.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.80,
+        "evidence": "Responsibilities include leading design and construction of solutions, mentoring project teams, and driving architecture strategy without explicit people management duties.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.90,
+        "evidence": "Multiple cloud platforms (AWS, Azure, GCP) mentioned with no clear primary focus.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No single cloud is emphasized as primary or secondary.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.80,
+        "evidence": "Both batch (Apache Spark, PySpark) and streaming (Kafka) technologies are mentioned.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.60,
+        "evidence": "No explicit mention of orchestrators like Airflow, Luigi, or cloud-native tools.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.75,
+        "evidence": "Mentions cloud storage systems (likely S3, ADLS, GCS) and data warehousing concepts, suggesting a mix of warehouse and lake patterns.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Location is specified as Bengaluru, but no remote work model or restrictions are discussed.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.95,
+        "evidence": "Location is explicitly Bengaluru, Karnataka, India, indicating a focus on the specific country.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of relocation packages or requirements; location is specified as Bengaluru.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned, and location is India, which does not require H1B inference.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No explicit mention of OPT/CPT or student visa support; role is based in India where such visas are not applicable.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No discussion of citizenship or work authorization requirements in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Employment type is full-time, but no contract specifics (W2, C2C, 1099) are mentioned.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits are mentioned in Pass 1 extraction results.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.60,
+        "evidence": "Mentions 'continuous improvements' and 'maximize and build creative solutions,' but no explicit career tracks or paths.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Role involves providing 'regular support/guidance to project teams,' suggesting mentorship opportunities.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion or advancement paths in the job posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No discussion of internal mobility or role changes in the job posting.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.60,
+        "evidence": "Mentions working with 'enterprise architecture' and 'project teams,' but no clear tracks like IC or management.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "Long list of 'must_have_hard_skills' with no 'nice_to_have' soft skills or flexible language.",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Job description focuses on data engineering and platform responsibilities with well-defined technical skills.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "Skill requirements align reasonably with mid-level data engineering responsibilities.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

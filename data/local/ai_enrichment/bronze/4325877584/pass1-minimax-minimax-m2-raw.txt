@@ -1,0 +1,154 @@
+<reasoning>I need to carefully extract information from this IBM job posting for a Data Engineer position in Kochi, Kerala, India. Let me go through each section systematically.
+
+Looking at the job posting:
+
+**Title**: Data Engineer-Data Integration
+**Company**: IBM
+**Location**: Kochi, Kerala, India
+
+Let me extract the information according to the required format:
+
+1. **Compensation**: No salary information is mentioned in the job posting, so all compensation fields should be null/false.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. No security clearance mentioned. So this should be "not_mentioned" for visa_sponsorship_stated and "not_mentioned" for security_clearance_stated.
+
+3. **Work Model**: 
+   - Location is specified as "Kochi, Kerala, India" - this suggests onsite work
+   - No mention of remote or hybrid work options
+   - No mention of employment type (full-time, contract, etc.)
+   - So work_model_stated should be "onsite"
+   - employment_type_stated should be "not_mentioned"
+
+4. **Contract Details**: No mention of contract type, duration, etc. So contract_type should be "not_mentioned".
+
+5. **Contractor Rates**: No mention of contractor rates, so all should be null/not_mentioned.
+
+6. **Skills Classified**: Let me analyze the technical requirements:
+
+**Required Technical And Professional Expertise**:
+- Expertise in Data warehousing/ information Management/ Data Integration/Business Intelligence using ETL tool Informatica PowerCenter
+- Knowledge of Cloud, Power BI, Data migration on cloud skills
+- End to end knowledge of existing HDFC Bank EDW/ SOR
+- Experience in Unix shell scripting and python
+- Experience with relational SQL, Big Data etc
+
+**Preferred Technical And Professional Experience**:
+- Knowledge of MS-Azure Cloud
+- End to end knowledge of existing HDFC Bank EDW/ SOR
+- Experience in Informatica PowerCenter, Unix shell scripting and python
+ 
+I'll focus on identifying the core technical skills for the Data Engineer role. The must-have hard skills include data warehousing, ETL tools like Informatica PowerCenter, cloud technologies, and programming languages like Python and Unix shell scripting. The preferred skills suggest additional cloud expertise, particularly with MS-Azure, and deep knowledge of HDFC Bank's enterprise data warehouse.
+
+The role requires strong technical competencies in data integration, with an emphasis on both technical expertise and industry-specific experience. Candidates will need to demonstrate proficiency in multiple data management and cloud technologies.
+
+No specific soft skills are explicitly mentioned in the job description. The educational requirements are not clearly defined, with no degree level or specific field of study specified. The role does not reference large language models or generative AI technologies.
+
+Geographically, the position is located in Kochi, Kerala, India, with no apparent restrictions on candidate location. The benefits section is not detailed in the provided text.
+
+The company description highlights IBM's global consulting approach, emphasizing technical innovation and industry expertise across public and private sectors through local delivery centers.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Kochi, Kerala, India",
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Data warehousing",
+        "Information Management",
+        "Data Integration",
+        "Business Intelligence",
+        "ETL tool Informatica PowerCenter",
+        "Cloud",
+        "Power BI",
+        "Data migration on cloud",
+        "Unix shell scripting",
+        "Python",
+        "relational SQL",
+        "Big Data"
+      ],
+      "nice_to_have_hard_skills": [
+        "MS-Azure Cloud",
+        "HDFC Bank EDW/ SOR"
+      ],
+      "must_have_soft_skills": [],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology.",
+      "company_description_text": "IBM Consulting Client Innovation Centers (Delivery Centers) deliver deep technical and industry expertise to a wide range of public and private sector clients around the world."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 52
+  }
+}
+```

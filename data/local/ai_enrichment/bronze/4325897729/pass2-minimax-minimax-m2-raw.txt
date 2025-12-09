@@ -1,0 +1,363 @@
+<reasoning>Let me analyze this job posting and Pass 1 extraction results to infer the job characteristics according to the rules provided.
+
+First, let me understand what we have:
+
+**Original Job Posting:**
+- Title: Data Engineer-Data Platforms-Azure
+- Company: IBM
+- Location: Kochi, Kerala, India
+- Role: Associate Software Developer at IBM
+- Experience: Total Exp-6-7 Yrs (Relevant-4-5 Yrs)
+- Focus: Data gathering, storage, batch and real-time processing
+- Skills: Azure Databricks, Python/PySpark, SQL, Github, Azure Devops, Azure Blob, Java, Scala, ETL, data integration, Linux, Spark, Hadoop
+- Nice to have: Elasticsearch, Splunk, statistical modeling, machine learning, big data
+- Work model: Agile, collaborative environment
+
+**Pass 1 Extraction Results:**
+- Full-time position
+- No salary disclosed
+- No visa sponsorship mentioned
+- No work model specified
+- No location restrictions mentioned
+- 6-7 years total experience, 4-5 years relevant
+- Various technical skills listed
+- No benefits mentioned
+- No certifications mentioned
+
+Now let me go through each inference category:
+
+## SENIORITY AND ROLE
+
+### seniority_level
+- Title: "Data Engineer-Data Platforms-Azure" but also "Associate Software Developer"
+- Experience: 6-7 years total, 4-5 years relevant
+- This suggests mid-to-senior level. Given 6-7 years experience, this would typically be "senior" level
+- Confidence: 0.8-0.9 (strong inference from title + experience)
+
+### job_family
+- Title clearly states "Data Engineer"
+- Responsibilities focus on data pipelines, ETL, data gathering, storage
+- This is clearly a data engineer role
+- Confidence: 0.95 (very clear from title and responsibilities)
+
+### sub_specialty
+- Mentions both "batch and real-time processing"
+
+
+- Azure Databricks and PySpark indicate a strong focus on batch ETL and data lakehouse architectures
+- The role involves comprehensive data platform engineering with Azure-centric technologies
+- Confidence: 0.85 (clear inference from tools and responsibilities)
+
+### leadership_expectation
+- No direct reports mentioned
+- No mentoring responsibilities specified
+- Role appears to be individual contributor focused
+- Confidence: 0.8 (clear IC role)
+
+## STACK AND CLOUD
+
+### primary_cloud
+- Multiple Azure services explicitly mentioned: Azure Databricks, Azure Devops, Azure Blob
+- Strong Azure ecosystem focus
+- Confidence: 0.95 (very clear Azure emphasis)
+
+### secondary_clouds
+- No other cloud providers mentioned
+- Only Azure services listed
+- Confidence: 0.9 (clear single cloud focus)
+
+### processing_paradigm
+- Mentions both "batch and real-time processing"
+- This indicates a hybrid approach
+- Confidence: 0.88 (explicitly stated)
+
+### orchestrator_category
+- No specific orchestrator mentioned
+- Azure DevOps could imply cloud-native orchestration
+- But no clear evidence of specific tools like Airflow, etc.
+- Confidence: 0.6 (weak inference, might be "not_mentioned")
+
+### storage_layer
+- Azure Databricks suggests lakehouse architecture
+- Azure Blob storage suggests data lake patterns
+- This points to lakehouse approach
+- Confidence: 0.82 (inferred from Azure ecosystem)
+
+## GEO AND WORK MODEL
+
+### remote_restriction
+- Location specified as "Kochi, Kerala, India"
+- No mention of remote work or restrictions
+- This suggests on-site or location-specific
+- But no explicit remote policy mentioned
+- Confidence: 0.7 (location specified but remote policy unclear)
+
+### timezone_focus
+- Location in India (Kochi, Kerala)
+- No specific timezone requirements mentioned
+- Would likely be India timezone or flexible
+- Confidence: 0.6 (location suggests India but no explicit timezone)
+
+### relocation_required
+- Location already specified as Kochi
+- No mention of relocation
+- This suggests already in the location or no relocation needed
+- Confidence: 0.8 (location specified, no relocation mentioned)
+
+## VISA AND AUTHORIZATION
+
+### h1b_friendly
+- No visa sponsorship mentioned
+- Location is India, so this would be for work in India
+- H1B is US-specific, so not applicable
+- Confidence: 0.9 (not applicable for India location)
+
+### opt_cpt_friendly
+- No mention of student visa support
+- Work authorization requirements not specified
+- Location in India suggests different visa framework
+- Confidence: 0.7 (unclear for India location)
+
+### citizenship_required
+- No citizenship requirements mentioned
+- Location in India suggests local work authorization
+- No specific restrictions stated
+- Confidence: 0.8 (no restrictions mentioned)
+
+## CONTRACT AND COMPENSATION
+
+### w2_vs_1099
+- Full-time position mentioned
+- IBM is a major corporation, typically W2 employees
+- No contractor language used
+- Confidence: 0.9 (standard corporate W2 position)
+
+### benefits_level
+- No benefits mentioned in the posting
+- This suggests either not discussed or basic/standard
+- Large corporations like IBM typically offer standard benefits
+- Confidence: 0.7 (no mention, but likely standard)
+
+## CAREER DEVELOPMENT
+
+### growth_path_clarity
+- No specific career paths mentioned
+- No growth opportunities discussed
+- Generic role description
+- Confidence: 0.6 (vague or not mentioned)
+
+### mentorship_signals
+- Mentions "collaborative environment"
+- Mentions working with "scientists, engineers, consultants and database administrators"
+- No specific mentorship program mentioned
+- This could be "implied" - working with diverse teams suggests learning opportunities
+- Confidence: 0.7 (implied from collaborative environment)
+
+### promotion_path_mentioned
+- No promotion or advancement mentioned
+- No career growth discussed
+- Confidence: 0.9 (no mentions)
+
+### internal_mobility_mentioned
+- No internal mobility or transfers mentioned
+- No team changes or role exploration discussed
+- Confidence: 0.9 (no mentions)
+
+### career_tracks_available
+- No specific career tracks mentioned
+- No IC or management paths discussed
+- Confidence: 0.6 (not mentioned)
+
+## REQUIREMENTS CLASSIFICATION
+
+### requirement_strictness
+- Clear "Mandatory Skills" vs "Preferred Technical And Professional Experience"
+- Mix of must-haves and nice-to-haves
+- Balanced approach
+- Confidence: 0.8 (clear distinction made)
+
+### scope_definition
+- Focused on data engineering role
+- Clear responsibilities around data pipelines, ETL, processing
+- Not a multi-role hybrid position
+- Confidence: 0.85 (clear, focused role)
+
+### skill_inflation_detected
+- 6-7 years experience for the skill level seems reasonable
+- Skills listed are appropriate for data engineer level
+- No obvious inflation detected
+- Confidence: 0.8 (reasonable requirements)
+
+Let me now format this into the required JSON structure.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.85,
+        "evidence": "6-7 years total experience with Associate Software Developer title and data engineer responsibilities indicates senior level",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Data Engineer' with core focus on data pipelines, ETL, data gathering and storage",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.82,
+        "evidence": "Azure Databricks, PySpark, ETL tools, and data integration focus with mention of both batch and real-time processing",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.80,
+        "evidence": "No direct reports or mentoring responsibilities mentioned, focused on individual contributor work in collaborative environment",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.95,
+        "evidence": "Multiple Azure services explicitly mentioned: Azure Databricks, Azure Devops, Azure Blob storage",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No other cloud providers mentioned beyond Azure ecosystem",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.88,
+        "evidence": "Explicitly mentions both 'batch and real-time processing' capabilities",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No specific orchestration tools mentioned, only Azure DevOps which could imply cloud-native but not explicitly stated",
+        "source": "inferred"
+      },
+      "storage_layer": {
+        "value": "lakehouse",
+        "confidence": 0.82,
+        "evidence": "Azure Databricks with Azure Blob storage suggests lakehouse architecture pattern",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.75,
+        "evidence": "Location specified as Kochi, Kerala, India but no explicit remote work policy or restrictions mentioned",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.85,
+        "evidence": "Location specified as Kochi, Kerala, India indicating India timezone focus",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Location already specified as Kochi with no mention of relocation requirements",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "H1B not applicable for India location, no visa sponsorship mentioned",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No work authorization requirements specified for India location",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No citizenship or work authorization requirements mentioned for India-based position",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Full-time position at IBM suggests standard W2 employment for corporate role",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No benefits mentioned in job posting despite being IBM corporate position",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.75,
+        "evidence": "No career growth paths, advancement opportunities, or promotion discussions mentioned",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions working in 'collaborative environment' with 'scientists, engineers, consultants and database administrators' suggesting learning opportunities",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion, advancement, or career growth paths mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No internal transfers, team changes, or role exploration mentioned",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.70,
+        "evidence": "No specific career tracks (IC, management, specialist, architect) mentioned",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.80,
+        "evidence": "Clear distinction between 'Mandatory Skills' and 'Preferred Technical And Professional Experience' with balanced requirements",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused data engineering role with clear responsibilities around data pipelines, ETL, and processing - not multi-role hybrid",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "6-7 years experience with listed technical skills (Azure, Python, Spark, etc.) is reasonable for senior data engineer level",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

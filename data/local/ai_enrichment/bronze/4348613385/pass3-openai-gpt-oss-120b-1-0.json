@@ -1,0 +1,272 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 13:18:38",
+    "job_posting_id": "4348613385",
+    "job_title": "Application Developer-Process Management (BPM)",
+    "company_name": "IBM",
+    "job_location": "Bengaluru East, Karnataka, India",
+    "pass_name": "pass3",
+    "model_id": "openai.gpt-oss-120b-1:0"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 2,
+          "confidence": 0.71,
+          "evidence": "Job mentions batch and real‑time processing but no modern data‑stack tools (e.g., dbt, Airflow, Snowflake) or CI/CD practices, indicating a developing level of data maturity.",
+          "source": "combined"
+        },
+        "data_maturity_level": {
+          "value": "developing",
+          "confidence": 0.71,
+          "evidence": "Score of 2 maps to the \"developing\" maturity level.",
+          "source": "combined"
+        },
+        "maturity_signals": {
+          "value": [],
+          "confidence": 0.92,
+          "evidence": "No signals such as modern_data_stack_adoption, cicd_practices, data_quality_testing, monitoring_observability, data_governance, data_mesh_patterns, mlops_practices, or cloud_native are present in the posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.18,
+          "confidence": 0.86,
+          "evidence": "Responsibilities are tightly focused on BPM‑related data engineering (Appian, IBM BPM, integration via APIs) with no mention of unrelated duties such as full‑stack development or data science.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.22,
+          "confidence": 0.78,
+          "evidence": "IBM is a large, established organization; posting contains no language about fast‑paced startup pressure, on‑call, or overtime expectations.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.91,
+          "evidence": "Pass2 inference explicitly labels scope_definition as \"clear\" and the job description lists concrete BPM tasks without blending other roles.",
+          "source": "pass2_inference"
+        },
+        "overall_red_flag_score": {
+          "value": 0.2,
+          "confidence": 0.84,
+          "evidence": "Low scope creep, low overtime risk, and clear role definition combine to produce a low overall red‑flag rating.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.81,
+          "evidence": "The posting does not specify a manager, team lead, or reporting line.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No titles (e.g., Head of Data, Director) are referenced in the description.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.73,
+          "evidence": "No information about hiring trends, team expansion, or turnover is provided.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.62,
+          "evidence": "The job posting contains no details about the size or makeup of the data engineering team.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.81,
+          "evidence": "No explicit reporting line (e.g., reports to CTO, Director of Data) is described.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.71,
+          "evidence": "Collaboration is mentioned with business analysts, IT teams, and stakeholders, but there is no indication of being embedded within a product squad.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.52,
+          "confidence": 0.73,
+          "evidence": "No PTO, remote‑work, or on‑call policies are mentioned; IBM typically offers standard work‑life balance but no explicit signals are present.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.44,
+          "confidence": 0.7,
+          "evidence": "The posting does not reference learning budgets, mentorship programs, or clear promotion paths.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.45,
+          "confidence": 0.71,
+          "evidence": "Absence of modern tooling, CI/CD, testing, or observability details suggests a modest technical culture.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [],
+          "confidence": 0.93,
+          "evidence": "None of the listed signals (open_source, conference_speaking, hackathons, etc.) appear in the description.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [],
+          "confidence": 0.94,
+          "evidence": "No mention of code review, pair programming, TDD, CI/CD, monitoring, incident response, postmortems, design docs, or RFC processes.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.88,
+          "evidence": "The job description does not discuss experimentation, R&D time, or adoption of emerging technologies.",
+          "source": "pass1_derived"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.81,
+          "evidence": "No language about refactoring, reducing tech debt, or modernizing legacy pipelines is present.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.92,
+          "evidence": "No AI/ML models, pipelines, or related tooling are referenced.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No ML tools (e.g., SageMaker, MLflow) are mentioned.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.84,
+          "evidence": "The posting does not specify a start date or urgency language such as \"ASAP\" or \"immediate\".",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.62,
+          "evidence": "IBM roles typically attract a moderate pool of applicants; no explicit applicant count is provided.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "established_tech",
+          "confidence": 0.96,
+          "evidence": "IBM is a globally recognized, publicly traded technology company with a long history.",
+          "source": "pass1_derived"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.71,
+          "evidence": "No language indicating aggressive hiring or rapid expansion; the role appears to be a standard addition.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.73,
+          "evidence": "The posting does not disclose the size of the data or engineering team.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "IBM is a public company; funding stage terminology (seed, series A, etc.) is irrelevant and not mentioned.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.84,
+          "evidence": "No indication whether the role is a new headcount, backfill, or part of team expansion.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "clear_requirements",
+        "well_defined_role",
+        "data_focused_role"
+      ],
+      "strength_details": [
+        "Clear, concrete responsibilities centered on BPM and data integration.",
+        "Requires 3+ years of Appian and BPM (IBM BPM, Pega, Camunda) experience.",
+        "Opportunity to work with enterprise systems (ERP, CRM) via APIs."
+      ],
+      "concern_categories": [
+        "salary_not_disclosed",
+        "no_visa_sponsorship",
+        "unclear_reporting"
+      ],
+      "concern_details": [
+        "Compensation range and benefits are not disclosed in the posting.",
+        "Visa sponsorship is not mentioned; likely limited to candidates with existing Indian work authorization.",
+        "Reporting line and manager role are not specified, creating uncertainty about hierarchy."
+      ],
+      "best_fit_categories": [
+        "mid_level_engineers",
+        "data_generalists",
+        "analytics_engineers"
+      ],
+      "best_fit_details": [
+        "Engineers with 3‑5 years of experience in BPM platforms and relational databases.",
+        "Candidates comfortable integrating ERP/CRM systems via APIs and web services.",
+        "Professionals seeking a focused data‑engineering role within a large enterprise environment."
+      ],
+      "probe_categories": [
+        "salary_range_details",
+        "reporting_structure",
+        "career_growth_path",
+        "work_hour_expectations",
+        "visa_sponsorship_details"
+      ],
+      "probe_details": [
+        "Ask for the expected salary range, bonus structure, and any equity components.",
+        "Clarify who the role reports to and the broader team hierarchy.",
+        "Inquire about promotion paths, mentorship programs, and professional development support.",
+        "Understand typical work hours, any on‑call duties, and expectations for overtime.",
+        "Confirm whether the company sponsors work visas for non‑Indian candidates."
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "domain_expertise",
+        "quick_availability"
+      ],
+      "leverage_details": [
+        "3+ years of Appian and BPM development aligns directly with the core requirements.",
+        "Experience integrating ERP/CRM systems via APIs is highly relevant to the role.",
+        "If available immediately, you can help the team meet its hiring timeline."
+      ],
+      "overall_assessment": "The role offers a well‑defined, BPM‑focused data engineering position at a reputable, established tech company. While compensation details and reporting structure are opaque, the technical fit is strong for candidates with Appian and BPM experience. Candidates should probe salary, career progression, and visa policies before proceeding.",
+      "recommendation_score": 0.71,
+      "recommendation_confidence": 0.85
+    },
+    "tokens": 13965,
+    "input_tokens": 9666,
+    "output_tokens": 4299,
+    "cost": 0.0027396
+  }
+}

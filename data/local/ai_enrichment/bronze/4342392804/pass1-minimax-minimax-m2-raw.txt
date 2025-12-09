@@ -1,0 +1,213 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+First, let me identify the key information:
+
+1. **Title**: Sr Data Engineer - Onsite
+2. **Company**: Bio-Techne
+3. **Location**: Minneapolis, MN
+
+Now let me extract information according to the JSON structure:
+
+**COMPENSATION:**
+- The posting mentions "Pay Range $100,800.00 - $165,600.00" and "Employer salary range - 125-150K"
+- This is clearly a salary range, so salary_disclosed = true
+- salary_min: 100800 (from first range) or 125000 (from second range) - I should use the more specific one
+- salary_max: 165600 (from first range) or 150000 (from second range) - I should use the more specific one
+- salary_currency: USD (since $ is mentioned)
+- salary_period: yearly (since it's a salary range)
+- salary_text_raw: "Pay Range $100,800.00 - $165,600.00" and "Employer salary range - 125-150K"
+
+**WORK AUTHORIZATION:**
+- The posting mentions "Bio-Techne is an E-Verify Employer in the United States"
+- It also says "All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or status as a protected veteran"
+- This doesn't explicitly mention visa sponsorship, so visa_sponsorship_stated = "not_mentioned"
+- work_auth_text: "Bio-Techne is an E-Verify Employer in the United States"
+- citizenship_text: "All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or status as a protected veteran"
+- security_clearance_stated: "not_mentioned" (no mention of security clearance)
+
+**WORK MODEL:**
+- The posting explicitly states "Onsite role- no remote work"
+- work_model_stated: "onsite"
+- location_restriction_text: "Onsite role- no remote work"
+- employment_type_stated: "full_time" (this is a senior engineering role, typically full-time)
+
+
+- The contract details indicate a permanent position with no specific duration mentioned
+- No contract extension or conversion details are provided
+- The role appears to be a standard full-time employment with no special contract provisions
+
+**SKILLS CLASSIFICATION:**
+I'll analyze the technical requirements for this senior data engineering role. The position demands advanced expertise in cloud platforms, distributed data processing, and programming languages. Key technical competencies include cloud infrastructure management, data pipeline optimization, and strong programming skills in Python and SQL. The role requires deep understanding of data architecture, scalability, and security principles.
+
+The ideal candidate will demonstrate leadership capabilities, mentoring junior engineers while collaborating across technical and business teams. Essential soft skills include exceptional problem-solving abilities, effective communication, and adaptability in fast-paced environments. The position emphasizes continuous learning and cross-functional collaboration.
+
+**EDUCATION REQUIREMENTS:**
+The role mandates a Bachelor's degree in Computer Science, Data Engineering, or Information Systems, with a Master's degree preferred. Candidates should have 5+ years of professional data engineering experience, showcasing expertise in data modeling, warehousing, and performance optimization.
+
+**GEOGRAPHIC RESTRICTIONS:**
+The position is located in Minneapolis, MN, with no explicit remote work options. The role appears to have standard US employment requirements, with no specific geographic limitations beyond the onsite nature of the position.
+
+**BENEFITS STRUCTURE:**
+Bio-Techne offers comprehensive benefits including medical, dental, vision, life, and disability insurance starting immediately. The company provides robust financial support through 401k plans, employee stock purchase options, and health savings accounts. Additional perks include paid time off, parental leave, and professional development opportunities like tuition reimbursement and mentorship programs.
+
+**CONTEXT:**
+The organization is dedicated to advancing life sciences and clinical diagnostics research, providing cutting-edge tools to combat diseases globally. Their mission centers on empowering scientific innovation and supporting researchers in developing transformative treatments and preventive strategies.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": true,
+      "salary_min": 100800,
+      "salary_max": 165600,
+      "salary_currency": "USD",
+      "salary_period": "yearly",
+      "salary_text_raw": "Pay Range $100,800.00 - $165,600.00",
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": "Bio-Techne is an E-Verify Employer in the United States",
+      "citizenship_text": "All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or status as a protected veteran",
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Onsite role- no remote work",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "permanent",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "salary",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "AWS Redshift",
+        "Azure Synapse",
+        "GCP BigQuery",
+        "Apache Spark",
+        "Apache Airflow",
+        "Python",
+        "SQL",
+        "ETL",
+        "data modeling",
+        "data warehousing",
+        "data architecture",
+        "data governance",
+        "data security",
+        "data compliance",
+        "distributed data processing",
+        "workflow orchestration",
+        "cloud data platforms",
+        "data storage optimization",
+        "data processing optimization",
+        "coding standards",
+        "documentation",
+        "quality assurance",
+        "data pipeline troubleshooting",
+        "data pipeline reliability"
+      ],
+      "nice_to_have_hard_skills": [
+        "CI/CD pipelines",
+        "Docker",
+        "infrastructure-as-code",
+        "AWS Certified Data Analytics",
+        "Google Cloud Professional Data Engineer",
+        "Azure Data Engineer Associate"
+      ],
+      "must_have_soft_skills": [
+        "Leadership",
+        "Mentoring",
+        "Problem Solving",
+        "Communication",
+        "Team Collaboration",
+        "Project Leadership"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [
+        "AWS Certified Data Analytics",
+        "Google Cloud Professional Data Engineer",
+        "Azure Data Engineer Associate"
+      ],
+      "years_experience_min": 5,
+      "years_experience_max": null,
+      "years_experience_text": "5+ years of professional experience in data engineering or related roles",
+      "education_level": "BACHELORS",
+      "education_area": "Computer Science",
+      "education_requirement": "required",
+      "education_text_raw": "Bachelor's degree in Computer Science, Data Engineering, Information Systems, or related field required; Master's degree preferred",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [
+        "medical insurance",
+        "dental insurance",
+        "vision insurance",
+        "life insurance",
+        "short-term disability",
+        "long-term disability",
+        "pet insurance",
+        "legal and ID shield",
+        "401k plans",
+        "employee stock purchase plan (ESPP)",
+        "Health Saving Account (HSA)",
+        "Flexible Spending Account (FSA)",
+        "Dependent Care FSA",
+        "mentorship",
+        "promotional opportunities",
+        "training and development",
+        "tuition reimbursement",
+        "internship programs",
+        "employee resource groups",
+        "volunteer paid time off",
+        "employee events",
+        "charity drives",
+        "paid holidays",
+        "paid time off",
+        "paid parental leave"
+      ],
+      "equity_mentioned": true,
+      "learning_budget_mentioned": true,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "generous"
+    },
+    "context": {
+      "team_info_text": null,
+      "company_description_text": "By joining Bio-Techne, you'll join a company with a powerful and positive purpose of enabling cutting-edge research in Life Sciences and Clinical Diagnostics. Bio-Techne, and all of its brands, provides tools for researchers to further treat and prevent disease worldwide"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 8
+  }
+}
+```

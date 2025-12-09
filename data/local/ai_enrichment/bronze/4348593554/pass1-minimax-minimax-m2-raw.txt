@@ -1,0 +1,130 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through the job posting systematically:
+
+**Job Title**: Data Engineer-Data Platforms
+**Company**: IBM
+**Location**: Pune, Maharashtra, India
+
+Let me analyze each section:
+
+1. **Compensation**: No salary information is mentioned in the posting, so all compensation fields should be null.
+
+2. **Work Authorization**: No mention of visa sponsorship or work authorization requirements, so this should be "not_mentioned".
+
+3. **Work Model**: The location is "Pune, Maharashtra, India" which suggests onsite work, but there's no explicit mention of work model. The location is given, so I should check if this implies onsite. Looking at the rules, if location is given but no work model specified, I should use "not_mentioned" unless there's clear indication. The posting mentions "Delivery Centers" and "locally based skills" which suggests onsite, but it's not explicitly stated. I'll go with "not_mentioned" to be safe.
+
+4. **Contract Details**: No mention of contract type, duration, etc. This should be "not_mentioned" for contract_type and other fields.
+
+5. **Contractor Rates**: This appears to be a full-time position, not contractor, so "not_mentioned" for pay_type.
+
+6. **Skills Classification**: Let me analyze the skills mentioned:
+
+**Must-have hard skills** (based on strong qualifiers):
+- "Strong Hands on experience in Python and Spark" - this has "Strong" qualifier
+- "Strong technical abilities to understand, design, write and debug to develop applications on Python and Pyspark" - this has "Strong" qualifier
+- "more than 4+ years of Strong Hands on experience in Python and Spark" - this has "Strong" qualifier
+
+**Nice-to-have hard skills** (based on weak qualifiers):
+- "Good to Have;- Hands on Experience on cloud technology AWS/GCP/Azure" - this has "Good to Have" which is a weak qualifier
+
+
+- "strong problem-solving skill" - this has "strong" qualifier, so it should be must-have
+
+I'll continue analyzing the soft skills and experience requirements. The problem-solving skill is clearly a must-have due to the "strong" qualifier. The experience requirement is explicitly stated as "more than 6 years of experience with more than 4+ years of Strong Hands on experience in Python and Spark", which provides a clear minimum experience threshold.
+
+The educational background shows a preference for a Master's Degree, but it's not an absolute requirement. The technical skills focus on Python and Spark development, with additional cloud technology experience being desirable but not mandatory.
+
+The role involves comprehensive feature development, including learning new technologies, debugging, and resolving complex software system challenges. Key responsibilities include end-to-end feature management, technical problem-solving, and continuous skill adaptation within specified timeframes.
+
+The position requires strong technical expertise in Python and PySpark, with hands-on experience in cloud platforms like AWS, GCP, or Azure. The ideal candidate will demonstrate robust problem-solving capabilities and the ability to manage intricate content management backend software systems.
+
+The role emphasizes continuous learning, technical agility, and the capacity to diagnose and resolve complex technical challenges efficiently.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": ["Python", "Spark", "PySpark", "debugging", "root cause analysis"],
+      "nice_to_have_hard_skills": ["AWS", "GCP", "Azure"],
+      "must_have_soft_skills": ["Problem Solving"],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 6,
+      "years_experience_max": null,
+      "years_experience_text": "Overall, more than 6 years of experience with more than 4+ years of Strong Hands on experience in Python and Spark",
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "preferred",
+      "education_text_raw": "Master's Degree",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology.",
+      "company_description_text": "IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 49
+  }
+}
+```

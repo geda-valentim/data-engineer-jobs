@@ -1,0 +1,236 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.85,
+        "evidence": "Heavy reliance on legacy on-premise tools (SQL Server, Oracle, SSIS, SSRS) with no mention of modern data stack (dbt, Airflow, Snowflake), CI/CD, or data quality testing tools. Some structured practices exist but lack modern governance or automation.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.85,
+        "evidence": "Matches score of 2 - basic pipelines with SSIS, some automation via TFS, but inconsistent modern practices and no cloud or data governance tools mentioned.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["data_governance"],
+        "confidence": 0.75,
+        "evidence": "Mentions compliance with federal/state laws and data protection policies, indicating some governance. No modern stack, CI/CD, or quality testing tools mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.45,
+        "confidence": 0.80,
+        "evidence": "Role combines data engineering (ETL, data warehousing) with BI reporting (SSRS, OBIEE, Tableau) and some DBA tasks (backups, performance tuning), indicating moderate scope creep.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.55,
+        "confidence": 0.70,
+        "evidence": "Hybrid work model and no explicit overtime/PTO mentions suggest moderate risk. Financial industry context may imply higher pressure, but no 'fast-paced' or 'immediate start' language.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Well-defined responsibilities centered on BI data engineering, ETL, and reporting with specific tools mentioned. No vague or overly broad language.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.40,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to scope creep (BI + DE + DBA) and legacy tech stack, but balanced by clear role definition and no extreme urgency signals.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.75,
+        "evidence": "Mentions working with analysts, product managers, and business users but does not specify reporting manager or team structure.",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No manager title or level mentioned in job posting or Pass 1/2 extraction.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "stable",
+        "confidence": 0.80,
+        "evidence": "No mention of team expansion or hiring velocity; role appears to be a standard hire within existing structure.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.65,
+        "evidence": "No explicit team size or composition details provided in job posting.",
+        "source": "not_mentioned"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No reporting line specified in job description.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Mentions working with business users and analysts but no indication of embedded cross-functional product teams; suggests centralized data/BI team.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.60,
+        "confidence": 0.75,
+        "evidence": "Hybrid work model is positive, but no PTO, unlimited time off, or work-life balance signals mentioned. Financial industry context may imply moderate pressure.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.55,
+        "confidence": 0.70,
+        "evidence": "Mentions 'professional growth' and training/conferences, but no clear career paths, mentorship, or promotion opportunities outlined.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.45,
+        "confidence": 0.80,
+        "evidence": "Legacy tech stack (SQL Server, Oracle, SSIS) with no modern practices (CI/CD, testing, code reviews) mentioned. Limited innovation signals.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.90,
+        "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No explicit mention of code review, pair programming, TDD, CI/CD, monitoring, incident response, postmortems, design docs, or RFC process.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.75,
+        "evidence": "Focus on maintaining and optimizing existing systems (SSIS, SQL Server) with no mention of new tech exploration or R&D.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt, refactoring, or modernization efforts in job description.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of ML, AI, or GenAI in job description or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML/AI tools mentioned or inferred from job description.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "normal",
+        "confidence": 0.85,
+        "evidence": "No 'ASAP', 'immediate start', or 'urgent' language; standard hiring timeline implied.",
+        "source": "inferred"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Hybrid role in NYC (high competition area) with 6+ years experience requirement; salary range is competitive for region but not exceptional.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.85,
+        "evidence": "UNFCU is a global not-for-profit financial institution serving UN community, suggesting stable, established organization rather than startup.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.80,
+        "evidence": "No indication of aggressive hiring or expansion; appears to be a standard replacement or backfill role.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No team size or engineering headcount mentioned in job posting.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No funding stage or financial health signals mentioned in job description.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No indication whether this is a new headcount, backfill, or team expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["transparent_salary", "well_defined_role", "learning_opportunities", "established_company"],
+    "strength_details": [
+      "Transparent salary range ($105k-$140k) with geographic adjustment",
+      "Clear responsibilities focused on BI data engineering and ETL",
+      "Opportunities for training and conference attendance",
+      "Stable, established financial institution with purposeful culture"
+    ],
+    "concern_categories": ["legacy_technology", "scope_creep_risk", "no_visa_sponsorship", "limited_growth"],
+    "concern_details": [
+      "Heavy reliance on legacy tools (SQL Server, SSIS, Oracle) with no modern stack",
+      "Role combines DE, BI, and DBA responsibilities creating scope creep risk",
+      "No visa sponsorship mentioned; US work authorization required",
+      "Limited career growth signals and no clear promotion paths"
+    ],
+    "best_fit_categories": ["senior_data_engineers", "bi_engineers", "enterprise_experienced", "remote_workers"],
+    "best_fit_details": [
+      "Senior DEs with 6+ years seeking stable enterprise environment",
+      "BI-focused engineers experienced with SSIS, SSRS, and dimensional modeling",
+      "Candidates with financial industry experience or compliance background",
+      "Those comfortable with hybrid work and legacy tech stack"
+    ],
+    "probe_categories": ["tech_stack_details", "career_growth_path", "work_hour_expectations", "visa_sponsorship_details"],
+    "probe_details": [
+      "Ask about actual tech stack evolution plans and modernization roadmap",
+      "Understand career progression opportunities and promotion criteria",
+      "Clarify expected work hours and on-call requirements",
+      "Confirm visa sponsorship eligibility for non-US citizens"
+    ],
+    "leverage_categories": ["exact_experience_match", "domain_expertise"],
+    "leverage_details": [
+      "6+ years with SQL Server and SSIS is a strong match for requirements",
+      "Financial industry experience is a valuable differentiator"
+    ],
+    "overall_assessment": "Stable opportunity for senior BI data engineers seeking enterprise environment with clear responsibilities and transparent compensation. Main trade-offs are legacy technology stack, combined BI/DE/DBA scope, and limited growth signals. Best suited for candidates prioritizing stability over innovation.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.80
+  }
+}

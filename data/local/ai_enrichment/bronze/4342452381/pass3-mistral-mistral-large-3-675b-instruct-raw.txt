@@ -1,0 +1,239 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "BMO is a large, established financial institution with mature data practices but no explicit mention of modern data engineering tools or governance frameworks. The focus on structured and unstructured data analysis and collaboration with analytics professionals suggests defined processes.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Matches the data_maturity_score of 3, indicating documented processes and some governance but inconsistent signals on modern tooling.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["data_governance"],
+        "confidence": 0.6,
+        "evidence": "Mentions 'advancement of innovative data strategies' and 'trust, bias and ethics' which imply some governance practices. However, no explicit tools or modern data stack components are mentioned.",
+        "source": "inferred"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.7,
+        "confidence": 0.85,
+        "evidence": "The role combines responsibilities of a data engineer (data modeling, pipelines) with those of a data scientist (ML/DL algorithms, predictive modeling) and analytics (data visualization, trend analysis). This suggests moderate scope creep.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.7,
+        "evidence": "While the role is part of a large, established organization (protective factor), the broad scope and emphasis on 'innovative data strategies' and 'unique situations' may imply moderate time pressure and overtime risk.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "multi_role",
+        "confidence": 0.85,
+        "evidence": "The job description blends data engineering, data science, and analytics tasks, indicating a hybrid role rather than a focused data engineering position.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.55,
+        "confidence": 0.8,
+        "evidence": "Composite score considering scope creep (0.7), moderate overtime risk (0.4), and multi-role clarity. The broad responsibilities and lack of modern tooling mentions are concerning.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No explicit mention of reporting structure or manager in the job posting.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No manager or leadership titles are mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No explicit signals about team growth velocity or hiring plans.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.9,
+        "evidence": "Job posting mentions collaboration with 'data and analytics professionals' but does not specify team size or composition.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No reporting structure details provided in the job posting.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.7,
+        "evidence": "Mentions collaboration with 'product team and partners' and 'business stakeholders', suggesting cross-functional embedding.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.6,
+        "confidence": 0.7,
+        "evidence": "No explicit mention of work-life balance signals, but BMO is a large organization with standard benefits (e.g., health insurance, retirement plans). The broad role scope may introduce variability in work hours.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.7,
+        "confidence": 0.75,
+        "evidence": "Mentions 'broaden your skillset', 'network-building opportunities', and 'inclusive workplace' as positive signals for growth. However, no explicit career paths or mentorship programs are detailed.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.5,
+        "confidence": 0.65,
+        "evidence": "While BMO emphasizes innovation and collaboration, the lack of explicit mentions of modern data engineering tools, CI/CD, or testing practices introduces uncertainty about the technical culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No explicit signals about open source contributions, internal OSS, tech blogs, conference speaking, hackathons, or innovation time.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No explicit development practices (e.g., code review, CI/CD, monitoring) are mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.6,
+        "evidence": "Mentions 'innovative data strategies' and 'creative thinking', but no explicit tools or frameworks are referenced to support this.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit mention of tech debt management or refactoring in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "advanced_ml",
+        "confidence": 0.85,
+        "evidence": "Mentions 'deep learning', 'machine learning', 'AI/ML solutions', and 'predictive models', indicating advanced ML integration. However, no explicit tools like MLflow or SageMaker are mentioned.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No explicit ML tools are mentioned in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No urgency signals (e.g., 'immediate start', 'ASAP') are mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.7,
+        "evidence": "BMO is a large, established company in a competitive industry (finance). The role is located in Toronto, a major financial hub with moderate competition for talent. No salary transparency or remote flexibility to offset this.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.95,
+        "evidence": "BMO Financial Group is a large, diversified financial services provider with US$1.0 trillion total assets and approximately 54,000 employees, indicating an enterprise-stage company.",
+        "source": "explicit"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.6,
+        "evidence": "The job posting does not specify hiring velocity, but the enterprise context and lack of urgency signals suggest steady hiring.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "very_large_50_plus",
+        "confidence": 0.85,
+        "evidence": "BMO Capital Markets has over 2,700 professionals globally, and BMO Financial Group has approximately 54,000 employees, indicating a very large team size.",
+        "source": "explicit"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "BMO is a publicly traded company (NYSE, TSX: BMO), but no specific funding stage signals are mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No explicit mention of whether this role is a new headcount, backfill, or team expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["established_company", "data_focused_role", "learning_opportunities", "collaborative_culture"],
+    "strength_details": [
+      "Enterprise-stage company with stability and resources (BMO Financial Group has US$1.0 trillion in assets and 54,000 employees).",
+      "Role emphasizes data-driven decision making and collaboration with analytics professionals, offering exposure to high-impact financial data projects.",
+      "Mentions skillset broadening and network-building opportunities, indicating potential for learning and career development.",
+      "Standard benefits package includes health insurance, tuition reimbursement, accident/life insurance, and retirement savings plans."
+    ],
+    "concern_categories": ["scope_creep_risk", "skill_inflation_detected", "requirement_strictness", "no_visa_sponsorship"],
+    "concern_details": [
+      "Role blends data engineering, data science, and analytics responsibilities, increasing scope creep risk (score: 0.7).",
+      "Associate-level role requires proficiency in advanced topics like deep learning, machine learning, and AI, which may be inflated expectations for a data engineer.",
+      "High requirement strictness (score: 0.8) with no 'nice to have' skills listed, making it harder to meet all criteria.",
+      "No mention of visa sponsorship or work authorization flexibility, which may limit international candidates."
+    ],
+    "best_fit_categories": ["data_generalists", "mid_level_engineers", "career_changers", "technical_specialists"],
+    "best_fit_details": [
+      "Mid-level data engineers (4-6 years) with hybrid experience in data engineering, analytics, and ML/AI.",
+      "Candidates comfortable with broad role scope and cross-functional collaboration in a large enterprise.",
+      "Data professionals with a strong foundation in mathematics, statistics, and computational thinking looking to transition into a data-focused role in finance."
+    ],
+    "probe_categories": ["tech_stack_details", "role_scope_boundaries", "career_growth_path", "work_hour_expectations", "team_composition"],
+    "probe_details": [
+      "What specific tools and technologies are used in the data stack (e.g., cloud platforms, orchestrators, storage layers)?",
+      "How is the scope of this role balanced between data engineering, data science, and analytics tasks?",
+      "What career growth paths are available for this role, and how does BMO support advancement in data engineering or related fields?",
+      "What are the typical work hours and expectations for overtime or on-call duties in this role?",
+      "Can you clarify the size and composition of the data engineering team, as well as the broader data org structure?"
+    ],
+    "leverage_categories": ["domain_expertise", "exact_experience_match"],
+    "leverage_details": [
+      "Experience in financial services (e.g., capital markets, risk management) is highly relevant and could strengthen negotiation leverage.",
+      "Proficiency in mathematics, statistics, and ML/AI aligns well with the role's requirements, offering potential for quick impact."
+    ],
+    "overall_assessment": "This role at BMO Capital Markets is a unique opportunity for mid-level data professionals with hybrid skills in data engineering, analytics, and ML/AI. The enterprise context provides stability, resources, and exposure to high-impact financial data projects. However, the broad scope and strict proficiency requirements may blur the lines between data engineering and data science, potentially leading to scope creep. Candidates should probe the tech stack, role boundaries, and career growth paths during interviews to ensure alignment with their goals.",
+    "recommendation_score": 0.6,
+    "recommendation_confidence": 0.8,
+    "evidence": "The role offers stability and learning opportunities but has moderate red flags due to scope creep and lack of modern tooling clarity."
+  }
+}
+```

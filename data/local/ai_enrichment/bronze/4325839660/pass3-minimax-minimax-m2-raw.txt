@@ -1,0 +1,296 @@
+<reasoning>Let me analyze this job posting for Quest Global's Data Engineer position in Bengaluru, India. I need to carefully examine both the Pass 1 extraction and Pass 2 inference to provide actionable insights.
+
+Looking at the job posting:
+
+**Company Context:**
+- Quest Global is an engineering services provider with 25+ years of experience
+- 21,000+ employees globally
+- Based in Bengaluru, Karnataka, India
+- Focus on engineering services and technology solutions
+
+**Role Analysis:**
+- Title: Data Engineer
+- Experience: 3-6 years
+- Location: Bengaluru, India
+- No salary disclosed
+- No visa sponsorship mentioned (likely local hire)
+
+**Key Responsibilities:**
+1. Data pipelines, ETL workflows
+2. Tableau dashboards and visualizations
+3. SharePoint customization and web development
+4. Power Apps and Power Automate workflows
+5. Web applications (HTML, JavaScript, Python, .NET, SQL, Node.js)
+6. SharePoint integration with enterprise systems
+7. Data governance and security compliance
+
+**Required Skills:**
+- MySQL, Python, PowerShell scripting
+- SharePoint (online/2016/2019)
+- Power Platforms (PowerApps, Power Automate)
+- Web development (HTML, CSS3, JavaScript, React/Angular, REST, APIs)
+- Tableau, ETL, data pipelines
+
+**Nice to Have:**
+- Databricks, .NET, SQL, Node.js
+
+**Red Flags/Concerns:**
+1. **Scope Creep**: This role combines data engineering, web development, SharePoint administration, and business intelligence - very broad scope
+2. **No Salary Information**: Compensation not disclosed
+3. **No Work Model Mentioned**: Unclear if remote/hybrid/onsite
+4. **No Benefits Mentioned**: No PTO, health benefits, etc. mentioned
+5. **Legacy Technology Focus**: Heavy emphasis on SharePoint and traditional technologies vs modern data stack
+6. **No Growth Path**: No mention of career development or advancement opportunities
+
+**Positive Aspects:**
+1. **Clear Technical Requirements**: Well-defined skill requirements
+
+
+2. **Diverse Technology Exposure**: Multiple platforms offer comprehensive skill development
+3. **Established Company**: Quest Global provides stability and potential long-term career prospects
+4. **Data Governance Focus**: Demonstrates commitment to data management best practices
+
+**Maturity Assessment:**
+The role suggests a developing data maturity level, with traditional technology stack and limited modern data engineering practices. The company's 25-year history indicates a stable but potentially less innovative approach to data management.
+
+**Tech Culture Insights:**
+The position reveals a traditional enterprise technology environment, emphasizing SharePoint and conventional development tools. While offering broad technical exposure, the role lacks modern data engineering sophistication and clear growth pathways.
+
+**Recommendation Considerations:**
+Prospective candidates should carefully evaluate the role's alignment with their career goals, technology preferences, and desire for innovation in data engineering practices.
+</reasoning>
+
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Heavy reliance on traditional technologies (SharePoint, MySQL) with basic ETL workflows, no modern data stack mentioned (no dbt, Airflow, Snowflake, etc.)",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Score of 2 indicates developing maturity with basic data pipelines but lacking modern practices and governance",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No modern data stack adoption, CI/CD practices, data quality testing, or governance tools mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.85,
+        "confidence": 0.90,
+        "evidence": "Severe scope creep - combines data engineering, web development, SharePoint administration, business intelligence, and full-stack development into single role",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.70,
+        "confidence": 0.80,
+        "evidence": "Multiple skill requirements suggest 'wearing many hats', strict delivery timelines mentioned, no work-life balance signals",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "multi_role",
+        "confidence": 0.95,
+        "evidence": "Role combines data engineer, web developer, SharePoint administrator, and business intelligence developer - unclear primary focus",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.78,
+        "confidence": 0.85,
+        "evidence": "High red flag score due to scope creep, unclear role definition, no compensation disclosure, and unrealistic skill combination expectations",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure, manager level, or team hierarchy mentioned in job posting",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No manager level or reporting structure information provided",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No team growth, expansion, or hiring velocity information mentioned",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.95,
+        "evidence": "No team size, composition, or data engineering team structure mentioned",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure information provided in job description",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No mention of cross-functional teams, product teams, or embedded work model - appears to be traditional centralized role",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.30,
+        "confidence": 0.85,
+        "evidence": "No work-life balance signals mentioned, strict delivery timelines emphasized, multiple skill requirements suggest high workload",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.20,
+        "confidence": 0.90,
+        "evidence": "No learning budget, career growth path, mentorship, or professional development opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "tech_culture_score": {
+        "value": 0.25,
+        "confidence": 0.80,
+        "evidence": "Legacy technology focus (SharePoint, traditional databases), no modern engineering practices mentioned, maintenance-heavy role",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No open source, tech blogs, conferences, hackathons, or innovation time mentioned",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No code review, CI/CD, testing, monitoring, or engineering practices mentioned",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.85,
+        "evidence": "Focus on maintaining SharePoint systems and traditional technologies, no innovation or experimentation culture mentioned",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of modernizing systems, reducing tech debt, or improving code quality",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No AI, ML, or advanced analytics mentioned - role focused on traditional data management and SharePoint",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools, AI frameworks, or data science platforms mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No start date urgency, timeline, or hiring speed mentioned",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No application count, competition level, or hiring difficulty mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.85,
+        "evidence": "25+ years in business, 21,000+ employees, established engineering services provider with global presence",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.70,
+        "evidence": "Established company with ongoing engineering services business suggests steady hiring for project-based work",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific team size or data team structure mentioned",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "profitable",
+        "confidence": 0.80,
+        "evidence": "25+ year established company with 21,000 employees suggests mature, profitable business model",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No indication if this is new headcount, backfill, or team expansion",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["established_company", "diverse_technology_exposure"],
+    "strength_details": [
+      "Established engineering services company with 25+ years of experience and 21,000+ employees globally",
+      "Broad technology exposure across data engineering, web development, and SharePoint administration"
+    ],
+    "concern_categories": ["scope_creep_risk", "jack_of_all_trades", "salary_not_disclosed", "legacy_technology", "limited_growth", "work_life_balance"],
+    "concern_details": [
+      "Severe scope creep combining data engineering, web development, SharePoint admin, and BI into single role",
+      "No salary, benefits, or compensation information disclosed",
+      "Heavy focus on legacy technologies (SharePoint, MySQL) vs modern data stack",
+      "No career growth, learning opportunities, or work-life balance signals mentioned"
+    ],
+    "best_fit_categories": ["data_generalists", "career_changers"],
+    "best_fit_details": [
+      "Data engineers seeking broad exposure across multiple technologies and domains",
+      "Professionals looking to transition into data engineering from web development or SharePoint administration"
+    ],
+    "probe_categories": ["salary_range_details", "role_scope_boundaries", "work_hour_expectations", "career_growth_path", "tech_stack_details"],
+    "probe_details": [
+      "Clarify salary range, benefits, and total compensation package",
+      "Understand primary role focus and how responsibilities are prioritized",
+      "Ask about actual work hours, overtime expectations, and delivery timelines",
+      "Inquire about career advancement and professional development opportunities",
+      "Understand current tech stack and plans for modernization"
+    ],
+    "leverage_categories": ["rare_skill_match"],
+    "leverage_details": [
+      "Unique combination of SharePoint expertise with data engineering skills is relatively rare and valuable"
+    ],
+    "overall_assessment": "Mixed opportunity at established company offering broad technology exposure but with significant concerns around scope creep, unclear role definition, and lack of modern data engineering practices. Role suits generalists seeking diverse experience but may not satisfy specialists wanting to focus on modern data stack and career growth.",
+    "recommendation_score": 0.45,
+    "recommendation_confidence": 0.80
+  }
+}
+```

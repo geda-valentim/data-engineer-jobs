@@ -1,0 +1,393 @@
+<reasoning>Let me analyze the job posting and Pass 1 extraction results to infer the job characteristics according to the rules provided.
+
+First, let me understand what I have:
+
+**Original Job Posting:**
+- Title: Data Engineer
+- Company: Accenture in India
+- Location: Bengaluru, Karnataka, India
+- Description mentions: Data Platform Engineer, data pipelines, ETL/ELT, PySpark, Spark, AWS/Azure/GCP, Big Data processing, data lakes, real-time streaming, batch processing, etc.
+- Must have: Databricks Unified Data Analytics Platform
+- Minimum 5 years experience required
+- 15 years full time education required
+
+**Pass 1 Extraction:**
+- No salary disclosed
+- No visa sponsorship mentioned
+- No work model mentioned
+- Must have skills: Databricks, PySpark, Spark, AWS, Azure, GCP, Python, SQL
+- Nice to have: Apache Airflow, Parquet, Avro, JSON, Kafka, CI/CD pipelines
+- 5 years minimum experience
+- Bachelor's degree required
+- No benefits mentioned
+- No team info
+
+Now let me go through each inference category:
+
+## SENIORITY AND ROLE
+
+### seniority_level
+- Title: "Data Engineer" (not "Senior Data Engineer")
+- Experience: 5 years minimum
+- Responsibilities: Building, maintaining, optimizing data pipelines - this suggests mid to senior level
+- Looking at the IC hierarchy: intern < entry < associate < junior < mid < senior < staff < principal < distinguished
+- 5 years typically maps to mid-senior level
+- Confidence: 0.7-0.9 (title doesn't have "Senior" but 5 years + responsibilities suggest senior level)
+- Value: "senior"
+
+### job_family
+- Title is "Data Engineer"
+- Core responsibilities: data pipelines, ETL/ELT, data processing
+- This is clearly a data engineering role
+- Confidence: 0.9+ (direct from title and responsibilities)
+
+
+- Value: "data_engineer"
+
+### sub_specialty
+- Mentions both real-time streaming and batch processing
+- Kafka mentioned as nice to have
+- Focus on data pipelines and ETL/ELT
+- This suggests a hybrid approach with emphasis on batch ETL
+- Confidence: 0.7-0.8 (hybrid processing mentioned)
+- Value: "batch_etl"
+
+### leadership_expectation
+- No mention of direct reports
+- No mention of team leadership
+- Focus on individual contribution to data engineering team
+- Suggests pure IC role
+- Confidence: 0.8+ (no leadership signals)
+- Value: "ic"
+
+## STACK AND CLOUD
+
+### primary_cloud
+- AWS, Azure, and GCP all mentioned as must-haves
+- No single cloud dominates the description
+- This suggests multi-cloud approach
+- Confidence: 0.8+ (multiple clouds mentioned)
+- Value: "multi"
+
+### secondary_clouds
+- Since primary is "multi", secondary would be empty array
+- Confidence: 0.9
+- Value: []
+
+### processing_paradigm
+- Mentions both real-time streaming and batch processing
+- "Work on real-time streaming data pipelines and batch data processing"
+- This is clearly hybrid
+- Confidence: 0.8+ (explicit mention of both)
+- Value: "hybrid"
+
+### orchestrator_category
+- Apache Airflow mentioned as nice to have
+- No other orchestrators mentioned
+- This suggests Airflow-like category
+- Confidence: 0.8+ (Airflow explicitly mentioned)
+- Value: "airflow_like"
+
+### storage_layer
+- Mentions data lakes for structured and unstructured data
+- Mentions cloud storage solutions (S3, Blob Storage, BigQuery, Redshift)
+- Focus on data lakes suggests lake architecture
+- Confidence: 0.7-0.8 (lake patterns mentioned)
+- Value: "lake"
+
+## GEO AND WORK MODEL
+
+### remote_restriction
+- Location: Bengaluru, Karnataka, India
+- No mention of remote work
+- No location restrictions mentioned
+- This suggests on-site or not specified
+- Confidence: 0.7 (no clear signals)
+- Value: "not_mentioned"
+
+### timezone_focus
+- Location: India (Bengaluru)
+- No timezone requirements mentioned
+- No global team mentioned
+- This suggests specific country focus
+- Confidence: 0.8+ (India location specified)
+- Value: "specific_country"
+
+### relocation_required
+- Already located in Bengaluru
+- No mention of relocation
+- This suggests no relocation needed
+- Confidence: 0.8+ (no relocation mentions)
+- Value: false
+
+## VISA AND AUTHORIZATION
+
+### h1b_friendly
+- No visa sponsorship mentioned
+- This is an Indian company (Accenture in India)
+- H1B is US-specific, not relevant here
+- Confidence: 0.9 (no sponsorship mentioned)
+- Value: false
+
+### opt_cpt_friendly
+- No mention of student visas
+- Work authorization not discussed
+- This suggests not friendly to student visas
+- Confidence: 0.7-0.8 (no student visa mentions)
+- Value: false
+
+### citizenship_required
+- No citizenship requirements mentioned
+- No work authorization restrictions
+- This suggests any work authorization accepted
+- Confidence: 0.8+ (no restrictions mentioned)
+- Value: "any"
+
+## CONTRACT AND COMPENSATION
+
+### w2_vs_1099
+- No contract type mentioned
+- This appears to be a full-time position at Accenture
+- No mention of contractor status
+- Confidence: 0.7 (no clear signals)
+- Value: "not_mentioned"
+
+### benefits_level
+- No benefits mentioned in the job posting
+- This suggests benefits not discussed
+- Confidence: 0.9 (no benefits mentioned)
+- Value: "none_mentioned"
+
+## CAREER DEVELOPMENT
+
+### growth_path_clarity
+- No career path mentioned
+- No growth opportunities discussed
+- This suggests not mentioned
+- Confidence: 0.9 (no career development mentions)
+- Value: "not_mentioned"
+
+### mentorship_signals
+- No mentorship mentioned
+- No working with senior people mentioned
+- This suggests not mentioned
+- Confidence: 0.9 (no mentorship signals)
+- Value: "not_mentioned"
+
+### promotion_path_mentioned
+- No promotion or advancement mentioned
+- This suggests false
+- Confidence: 0.9 (no promotion mentions)
+- Value: false
+
+### internal_mobility_mentioned
+- No internal mobility mentioned
+- This suggests false
+- Confidence: 0.9 (no mobility mentions)
+- Value: false
+
+### career_tracks_available
+- No career tracks mentioned
+- This suggests not mentioned
+- Confidence: 0.9 (no career track mentions)
+- Value: []
+
+## REQUIREMENTS CLASSIFICATION
+
+### requirement_strictness
+- Clear must-haves vs nice-to-haves distinction
+- Must have: Databricks (required)
+- Nice to have: Airflow, Kafka, etc.
+- This suggests medium strictness
+- Confidence: 0.7+ (clear distinction made)
+- Value: "medium"
+
+### scope_definition
+- Focused job description on data engineering
+- Single clear role (Data Engineer)
+- Well-defined responsibilities
+- This suggests clear scope
+- Confidence: 0.8+ (focused description)
+- Value: "clear"
+
+### skill_inflation_detected
+- 5 years experience for data engineer role
+- Skills mentioned are appropriate for the role
+- No unrealistic skill combinations
+- This suggests no skill inflation
+- Confidence: 0.8+ (reasonable requirements)
+- Value: false
+
+I'll analyze the skill requirements carefully. The role demands a balanced set of technical competencies that align with a mid-level data engineering position. The skills cover cloud platforms, programming languages, and data processing technologies, indicating a comprehensive yet realistic skill set for the role's scope.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.78,
+        "evidence": "5 years minimum experience with responsibilities for building, maintaining and optimizing scalable data pipelines suggests senior level despite title not having 'Senior'",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title is Data Engineer with core focus on data pipelines, ETL/ELT processes, and data platform engineering",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.72,
+        "evidence": "Heavy emphasis on ETL/ELT processes, data pipelines, and batch processing with mention of real-time as secondary",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "No mention of direct reports, team leadership, or mentoring responsibilities - focus on individual contribution to data engineering team",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.88,
+        "evidence": "AWS, Azure, and GCP all listed as must-have skills with equal emphasis, indicating multi-cloud approach",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "Since primary cloud is multi, no additional secondary clouds to list",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "Explicitly mentions both 'real-time streaming data pipelines and batch data processing' as core responsibilities",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.82,
+        "evidence": "Apache Airflow explicitly mentioned as nice-to-have skill for data orchestration",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "lake",
+        "confidence": 0.76,
+        "evidence": "Mentions data lakes for structured and unstructured data, cloud storage solutions like S3, with focus on raw data processing patterns",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.75,
+        "evidence": "No remote work model mentioned and location specified as Bengaluru, India, but no clear restriction type stated",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.90,
+        "evidence": "Location specified as Bengaluru, Karnataka, India with no global or multi-timezone team mentions",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Position is already located in Bengaluru with no mention of relocation requirements",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.92,
+        "evidence": "No visa sponsorship mentioned and this is an Indian company position, H1B sponsorship not applicable",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.78,
+        "evidence": "No mention of student visa support or OPT/CPT acceptance, work authorization requirements not specified",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "any",
+        "confidence": 0.82,
+        "evidence": "No citizenship or work authorization restrictions mentioned, suggesting all statuses accepted",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.75,
+        "evidence": "No contract type or employment structure mentioned, appears to be standard full-time position but not explicitly stated",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits, equity, PTO, or compensation details mentioned in the job posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "No career path, growth opportunities, or advancement discussions mentioned in the posting",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mentorship programs or working with senior engineers mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion, advancement, or career progression paths mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No internal transfers, role changes, or mobility opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.88,
+        "evidence": "No career tracks (IC, management, specialist, architect) mentioned in the posting",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.76,
+        "evidence": "Clear distinction between must-have skills (Databricks required) and nice-to-have skills (Airflow, Kafka optional), balanced requirement structure",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Focused job description on data engineering with well-defined responsibilities for data pipelines, ETL processes, and platform work",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.82,
+        "evidence": "5 years experience requirement is appropriate for senior data engineer role, skills mentioned are realistic and relevant",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

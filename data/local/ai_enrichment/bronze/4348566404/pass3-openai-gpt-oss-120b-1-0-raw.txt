@@ -1,0 +1,253 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 1,
+        "confidence": 0.78,
+        "evidence": "Job description only mentions OpenText Exstream template creation; no modern data stack, orchestration, CI/CD, or governance tools are referenced.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "ad_hoc",
+        "confidence": 0.78,
+        "evidence": "Score of 1 maps to ad_hoc maturity level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No signals such as Snowflake, dbt, Airflow, data quality testing, or monitoring are present.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.12,
+        "confidence": 0.88,
+        "evidence": "Responsibilities are narrowly limited to template design, document generation, and unit testing – no mention of broader data engineering, analytics, or DevOps duties.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "IBM consulting projects often have client‑driven deadlines, but the posting provides no explicit on‑call or overtime language.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.92,
+        "evidence": "The job lists specific tools (OpenText Extreme CE, Exstream Designer) and concrete tasks, giving a well‑defined scope.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.30,
+        "confidence": 0.80,
+        "evidence": "Low scope creep and clear responsibilities offset moderate overtime risk and lack of benefits information.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "The posting does not state who the role reports to or the team hierarchy.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.88,
+        "evidence": "No manager title (e.g., Head of Data, Director) appears in the description.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No indication of hiring surge or team expansion.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.80,
+        "evidence": "The posting provides no details about team size or composition.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.88,
+        "evidence": "No reporting line is described.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "No mention of being embedded in product or client delivery squads.",
+        "source": "pass1_derived"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.35,
+        "confidence": 0.70,
+        "evidence": "No PTO, flexible hours, or remote policy is described; consulting roles often have variable hours.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.30,
+        "confidence": 0.68,
+        "evidence": "No learning budget, mentorship, or career path information is provided.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.30,
+        "confidence": 0.75,
+        "evidence": "The tech stack is limited to a legacy document‑generation suite; no modern engineering practices are mentioned.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No references to open source, conferences, or innovation programs.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "The description does not mention code review, CI/CD, testing frameworks, or monitoring.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No language about experimenting with new technologies or R&D time.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of refactoring, modernization, or tech‑debt reduction.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "The posting contains no reference to machine learning, AI, or related tooling.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools are listed.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No start‑date or urgency language appears.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No data on applicant volume, location desirability, or salary transparency.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.96,
+        "evidence": "IBM is a global, publicly traded technology company with established data and consulting divisions.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.88,
+        "evidence": "No indication of aggressive or steady hiring cadence.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Team size is not disclosed in the posting.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "IBM is a mature, publicly listed company; funding stage is irrelevant.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.88,
+        "evidence": "The posting does not state whether this is a new headcount or a backfill.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "clear_requirements",
+      "well_defined_role",
+      "data_focused_role"
+    ],
+    "strength_details": [
+      "The role lists precise technical requirements (OpenText Extreme CE, Exstream Designer, PDF generation).",
+      "Scope is narrowly focused on document/template engineering, making day‑to‑day responsibilities clear.",
+      "Position sits within IBM Consulting, offering exposure to enterprise clients."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "legacy_technology",
+      "limited_growth"
+    ],
+    "concern_details": [
+      "Compensation range and benefits are not mentioned, making salary negotiation uncertain.",
+      "The technology stack centers on a legacy document‑generation suite rather than modern data platforms.",
+      "No career progression, mentorship, or learning budget is described."
+    ],
+    "best_fit_categories": [
+      "mid_level_engineers",
+      "data_generalists",
+      "enterprise_experienced"
+    ],
+    "best_fit_details": [
+      "Engineers with 2‑5 years of experience in document automation or similar legacy systems.",
+      "Candidates comfortable working in a consulting environment serving multiple enterprise clients.",
+      "Professionals seeking stable, long‑term employment at a large, established tech firm."
+    ],
+    "probe_categories": [
+      "salary_range_details",
+      "career_growth_path",
+      "tech_stack_details",
+      "work_hour_expectations"
+    ],
+    "probe_details": [
+      "Ask for the expected salary band, bonus structure, and any benefits (PTO, health, equity).",
+      "Inquire about formal career ladders, promotion criteria, and mentorship programs.",
+      "Clarify whether the team plans to modernize the stack or integrate newer data tools.",
+      "Understand typical project timelines, on‑call duties, and expected weekly work hours."
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "quick_availability"
+    ],
+    "leverage_details": [
+      "Your hands‑on experience with OpenText Exstream directly aligns with the core responsibilities.",
+      "If you can start immediately, you reduce the time‑to‑fill for a role that appears to be a priority."
+    ],
+    "overall_assessment": "The position offers a clear, narrowly scoped role within IBM Consulting, ideal for candidates experienced in legacy document‑generation tools. Compensation and growth signals are weak, so weigh stability against limited technical advancement. Overall, it is a solid fit for mid‑level engineers comfortable with enterprise consulting environments.",
+    "recommendation_score": 0.55,
+    "recommendation_confidence": 0.82
+  }
+}

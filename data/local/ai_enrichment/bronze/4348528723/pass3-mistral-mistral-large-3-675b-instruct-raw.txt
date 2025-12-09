@@ -1,0 +1,238 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.80,
+        "evidence": "Mentions modern tools like Databricks, dbt, Airflow, and cloud-native storage solutions (S3, Blob Storage, BigQuery, Redshift), but practices like governance, quality monitoring, and CI/CD are implied rather than explicitly detailed.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.80,
+        "evidence": "Matches the data_maturity_score of 3, with documented processes and some governance signals.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption", "cicd_practices"],
+        "confidence": 0.85,
+        "evidence": "Explicit mention of dbt, Airflow, and CI/CD pipelines, along with cloud-native tools (AWS/Azure/GCP).",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.2,
+        "confidence": 0.90,
+        "evidence": "Role is focused on data engineering tasks (pipelines, ETL, data lakes) with no conflation of backend, frontend, or ML responsibilities beyond collaboration.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.5,
+        "confidence": 0.75,
+        "evidence": "No explicit overtime signals, but the role is part of a consulting firm (Accenture) which may imply project-driven deadlines and time pressure. No PTO or work-life balance mentions are a concern.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Responsibilities are well-defined (e.g., 'build, maintain, and optimize scalable data pipelines', 'collaborate with data scientists/analysts').",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.4,
+        "confidence": 0.80,
+        "evidence": "Moderate risk due to potential overtime in a consulting environment, lack of disclosed benefits, and no visa sponsorship signals. Low scope creep but high minimum experience requirement (6 years for Databricks) may limit candidate pool.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Job posting mentions collaboration with architects but does not specify a direct reporting line (e.g., 'reporting to Head of Data Engineering' is not explicitly stated).",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit mention of reporting structure or manager title in the job posting.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.80,
+        "evidence": "Team composition is mentioned ('part of the data engineering team') but no signals about growth velocity (e.g., expansion, backfill) are provided.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.95,
+        "evidence": "No explicit details about team size or seniority mix beyond collaboration with a data engineering team.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "Job posting does not specify reporting structure beyond collaboration with architects and other engineers.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.70,
+        "evidence": "Mentions collaboration with Integration Architects, Data Architects, data scientists, and analysts, implying cross-functional work.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.75,
+        "evidence": "No explicit PTO or work-life balance signals, but consulting roles at Accenture may imply structured yet demanding project hours.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.6,
+        "confidence": 0.70,
+        "evidence": "Collaboration with architects and exposure to CI/CD pipelines suggest some growth opportunities, but no explicit learning budget, mentorship, or career path details are mentioned.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.7,
+        "confidence": 0.80,
+        "evidence": "Modern tooling (Databricks, dbt, Airflow) and cloud-native practices are positive signals, but lack of documentation, testing, or governance emphasis limits confidence.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No explicit signals about open source, tech blogs, conference speaking, or innovation time in the job posting.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["ci_cd"],
+        "confidence": 0.85,
+        "evidence": "CI/CD pipelines are explicitly mentioned as part of the role's responsibilities.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.70,
+        "evidence": "No explicit mentions of innovation time, experimentation, or R&D, though modern tooling is implied.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit or implied signals about tech debt management or refactoring in the job posting.",
+        "source": "inferred"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.70,
+        "evidence": "Mentions collaboration with data scientists and handling structured/unstructured data, but no advanced ML or MLOps tools are listed.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No explicit ML tools (e.g., SageMaker, MLflow) are mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "normal",
+        "confidence": 0.80,
+        "evidence": "No immediate or ASAP start signals, but consulting roles may imply steady hiring velocity.",
+        "source": "inferred"
+      },
+      "competition_level": {
+        "value": "high",
+        "confidence": 0.65,
+        "evidence": "Bengaluru is a competitive tech hub for data engineering roles, and Accenture's broad hiring may attract many applicants. No salary disclosure limits transparency.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.90,
+        "evidence": "Accenture is a well-established global consulting firm, implying enterprise-level maturity and scale.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit signals about hiring velocity (e.g., team expansion, backfill) in the job posting.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "Team size is not explicitly stated beyond collaboration with a data engineering team.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No funding stage signals (e.g., bootstrapped, seed, series A) are mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit mention of whether this is a new headcount, backfill, or team expansion role.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "cloud_native", "data_focused_role", "established_company"],
+    "strength_details": [
+      "Modern data stack adoption (Databricks, dbt, Airflow, Spark) signals alignment with industry best practices.",
+      "Cloud-native focus (AWS, Azure, GCP) provides exposure to scalable and flexible architectures.",
+      "Role is clearly data engineering-focused, avoiding scope creep with other disciplines.",
+      "Accenture is an established enterprise with global reach, offering stability and brand recognition."
+    ],
+    "concern_categories": ["salary_not_disclosed", "overtime_likely", "not_mentioned_benefits", "unclear_reporting"],
+    "concern_details": [
+      "No salary range disclosed, which may lead to negotiation challenges or below-market offers.",
+      "Consulting roles at Accenture often imply project-driven deadlines, increasing overtime risk (score: 0.5).",
+      "No benefits (e.g., PTO, learning budget) are mentioned, which is unusual for a role of this seniority.",
+      "Reporting structure is vague, with no clear manager or leadership hierarchy specified."
+    ],
+    "best_fit_categories": ["senior_data_engineers", "pipeline_developers", "cloud_specialists"],
+    "best_fit_details": [
+      "Senior data engineers with 5-6+ years of experience in Databricks and Spark, looking for a platform-focused role.",
+      "Engineers with strong cloud-native expertise (AWS/Azure/GCP) who can assist in designing and deploying solutions.",
+      "Candidates who thrive in hybrid processing environments (batch + streaming) and enjoy cross-functional collaboration."
+    ],
+    "probe_categories": ["work_hour_expectations", "remote_policy_details", "career_growth_path", "salary_range_details", "role_scope_boundaries"],
+    "probe_details": [
+      "Ask about typical work hours and whether overtime is common during project deadlines.",
+      "Clarify the remote work policy: Is this a hybrid role, fully on-site, or are there flexibility options?",
+      "Inquire about career growth paths within Accenture for data engineers (IC vs. management tracks).",
+      "Request details on the salary range and compensation structure for this role.",
+      "Understand the boundaries of the role: Are there expectations to take on tasks outside data engineering (e.g., DevOps, ML)?"
+    ],
+    "leverage_categories": ["exact_experience_match", "domain_expertise"],
+    "leverage_details": [
+      "Candidates with 6+ years of Databricks experience will have strong leverage, as this is a strict requirement.",
+      "Proficiency in hybrid cloud environments (AWS/Azure/GCP) is highly valued and can be a negotiation point."
+    ],
+    "overall_assessment": "This role at Accenture in Bengaluru is a solid opportunity for senior data engineers with Databricks and cloud-native expertise. It offers a modern tech stack and enterprise stability but lacks transparency in compensation, benefits, and reporting structure. Candidates should probe these areas during interviews to ensure alignment with their expectations.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.80
+  }
+}
+```

@@ -1,0 +1,232 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Basic requirements (Python, Spark) with cloud platforms as nice-to-have, no mention of modern data stack tools, CI/CD, testing, or governance practices",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2 - basic pipelines with some cloud adoption but no advanced practices mentioned",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["cloud_native"],
+        "confidence": 0.70,
+        "evidence": "AWS/GCP/Azure mentioned as preferred skills indicating cloud adoption",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.15,
+        "confidence": 0.85,
+        "evidence": "Focused on data engineering with Python/Spark, no conflation with data science, analytics, or DevOps responsibilities",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.35,
+        "confidence": 0.70,
+        "evidence": "IBM is established but delivery center role may have client deadlines; no explicit overtime or on-call mentions",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Well-defined responsibilities focused on feature development, debugging, and backend systems with specific technical requirements",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.25,
+        "confidence": 0.75,
+        "evidence": "Low risk - clear role definition, reasonable experience requirements, no major red flags",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about reporting structure or management hierarchy in job posting",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No manager title or level mentioned in the job description",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.65,
+        "evidence": "No information about team growth trajectory or hiring plans",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.60,
+        "evidence": "Mentions working in delivery centers but provides no specific team size or composition details",
+        "source": "inferred"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about who the role reports to in the organizational structure",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Role appears to be in delivery center focused on client projects, not embedded in cross-functional product teams",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.60,
+        "confidence": 0.70,
+        "evidence": "No explicit work-life balance signals, but IBM is established company; no mention of on-call or overtime expectations",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.65,
+        "confidence": 0.75,
+        "evidence": "Mentions 'limitless career path' but provides no specific growth opportunities, learning budget, or mentorship details",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.60,
+        "confidence": 0.70,
+        "evidence": "Basic tech stack (Python/Spark) with cloud platforms as nice-to-have; no mention of engineering practices, code reviews, or innovation culture",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No mention of code review, CI/CD, testing, monitoring, or other development practices",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No mention of innovation, R&D time, or experimentation culture",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt management, refactoring, or code quality improvement initiatives",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of ML/AI, data science, or related tools in the job description",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML/AI tools mentioned in requirements or description",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No mention of immediate start, ASAP, or urgent hiring needs",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about application volume, location competitiveness, or hiring metrics",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a well-established technology company with global presence",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "IBM likely has regular hiring but no specific expansion signals in job posting",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about data or engineering team size in the job description",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.95,
+        "evidence": "IBM is a publicly traded company",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No information about whether this is a new headcount, backfill, or expansion role",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["well_defined_role", "established_company", "data_focused_role"],
+    "strength_details": [
+      "Clear data engineering responsibilities focused on Python/Spark development",
+      "Established company (IBM) with global presence and stability",
+      "Role specifically focused on data platforms without scope creep"
+    ],
+    "concern_categories": ["vague_requirements", "salary_not_disclosed", "limited_growth", "unclear_reporting"],
+    "concern_details": [
+      "Salary not disclosed and no benefits mentioned",
+      "Vague growth opportunities despite 'limitless career path' claim",
+      "No information about reporting structure or team composition"
+    ],
+    "best_fit_categories": ["senior_data_engineers", "cloud_specialists", "enterprise_experienced"],
+    "best_fit_details": [
+      "Senior DEs with 6+ years experience in Python/Spark seeking enterprise environment",
+      "Engineers with cloud platform experience (AWS/GCP/Azure) as preferred skills"
+    ],
+    "probe_categories": ["career_growth_path", "salary_range_details", "reporting_structure", "team_size_composition"],
+    "probe_details": [
+      "Ask about specific career progression opportunities and timelines",
+      "Inquire about salary range and benefits package details",
+      "Clarify who the role reports to and team structure",
+      "Understand the size and composition of the data engineering team"
+    ],
+    "leverage_categories": ["exact_experience_match", "rare_skill_match"],
+    "leverage_details": [
+      "6+ years experience with Python/Spark matches exact requirements",
+      "Cloud platform experience (AWS/GCP/Azure) is preferred and valuable"
+    ],
+    "overall_assessment": "Solid opportunity for senior data engineers seeking stability in an established enterprise environment. Clear role definition with focus on Python/Spark development. Main concerns are lack of salary transparency, vague growth opportunities, and unclear reporting structure. Best suited for candidates prioritizing enterprise experience over startup innovation.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.75
+  }
+}

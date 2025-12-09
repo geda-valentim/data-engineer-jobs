@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Senior Data Engineer II' and requires 5+ years of relevant professional experience in data engineering or backend development.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is 'Senior Data Engineer II' and core responsibilities focus on data pipelines, ETL, and data infrastructure.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "hybrid",
+        "confidence": 0.80,
+        "evidence": "Mentions both 'real-time and batch data integrations' and 'reverse ETL workflows' as responsibilities, with tools like Hightouch and real-time systems in bonus points.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.85,
+        "evidence": "Role mentions mentoring junior engineers, participating in code reviews, and demonstrating technical leadership through documentation and communication, but no direct reports or people management responsibilities are stated.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.70,
+        "evidence": "Mentions AWS (SageMaker) and GCP (Vertex AI) explicitly, with no clear primary cloud provider emphasized.",
+        "source": "inferred"
+      },
+      "secondary_clouds": {
+        "value": ["aws", "gcp"],
+        "confidence": 0.90,
+        "evidence": "Both AWS (SageMaker) and GCP (Vertex AI) are mentioned as part of ML workflow deployment tools.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.80,
+        "evidence": "Mentions both 'real-time and batch data integrations' and 'ML model deployment' which typically involves hybrid processing paradigms.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.60,
+        "evidence": "ETL tools like Fivetran and data modeling frameworks like DBT are mentioned, but no explicit orchestrator tools (e.g., Airflow, Step Functions) are stated.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.80,
+        "evidence": "Mentions large analytical databases (Redshift, PostgreSQL) and hybrid data integrations (real-time and batch), suggesting a mix of warehouse and lake storage patterns.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.90,
+        "evidence": "Job posting specifies 'Registered States' within the US, implying remote work is restricted to the same country (US).",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.75,
+        "evidence": "Employees are expected to work with distributed teams across all US time zones, suggesting a focus on the Americas.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Job posting states it is a remote position and does not mention relocation requirements.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Explicitly states 'ActBlue is unable to sponsor work visas at this time'.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of OPT/CPT or student visa support, and explicitly states no work visa sponsorship.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.80,
+        "evidence": "Job posting mentions no visa sponsorship but does not specify citizenship requirements, implying work authorization is sufficient.",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Job posting specifies 'full-time, remote, salaried position' and mentions benefits typical for W2 employees.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "comprehensive",
+        "confidence": 0.85,
+        "evidence": "Benefits include unlimited PTO, fully paid health/dental/vision insurance, 401K contributions, paid parental leave, home-office setup allowance, and additional perks like quarterly snack deliveries and digital subscriptions.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions contributing to 'building and evolving data products' and 'mentor junior engineers', indicating growth opportunities but no explicit career tracks.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.85,
+        "evidence": "Job posting mentions mentoring junior engineers and participating in code reviews, suggesting mentorship opportunities.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion paths or advancement tracks in the job posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No discussion of internal mobility or lateral moves in the job posting.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.65,
+        "evidence": "Mentions mentoring and technical leadership but does not explicitly outline management or specialist tracks. IC track is implied by the role's focus on hands-on engineering.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "Job posting lists many 'must have' skills (Python, data architecture, distributed systems, SageMaker, Vertex AI, etc.) with minimal 'nice to have' skills.",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Job description focuses on a single role with well-defined responsibilities in data engineering and pipeline development.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Requirements align well with the seniority level (5+ years of experience, Senior Data Engineer II title).",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

@@ -1,0 +1,281 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 19:57:18",
+    "job_posting_id": "4348573803",
+    "job_title": "Data Engineer-Data Platforms",
+    "company_name": "IBM",
+    "job_location": "Mumbai Metropolitan Region",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.75,
+          "evidence": "IBM is an established enterprise with likely structured data practices, but the job posting lacks explicit mention of modern data stack tools (e.g., Snowflake, dbt, Airflow) or governance practices. The focus on 'agile environment' and 'customized systems' suggests some level of defined processes, but the absence of detailed tooling or practices limits confidence in higher maturity scores.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.75,
+          "evidence": "Matches the data_maturity_score of 3. The role is part of a consulting delivery center, which implies structured delivery but not necessarily cutting-edge or optimized data engineering practices.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "cloud_native"
+          ],
+          "confidence": 0.7,
+          "evidence": "Multi-cloud (AWS/GCP/Azure) is mentioned as a 'Good to Have', suggesting cloud-native architecture adoption. However, no explicit signals for modern data stack, CI/CD, or governance tools are present in the job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.5,
+          "confidence": 0.8,
+          "evidence": "The job title and primary responsibilities focus on data engineering, but the description conflates 'Application Developer' and 'Data Engineer' roles, which could imply broader scope than strictly data platforms. This suggests moderate scope creep risk, as the role may involve application development tasks beyond traditional data engineering.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.4,
+          "confidence": 0.7,
+          "evidence": "The posting mentions working in a 'fast-paced' consulting environment and resolving challenges 'within the time frame provided', which could imply tight deadlines. However, no explicit signals about overtime or work-life balance are mentioned, and IBM's enterprise context may mitigate some risk.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "multi_role",
+          "confidence": 0.8,
+          "evidence": "The job title and responsibilities suggest a data engineering role, but the description also refers to the candidate as an 'Application Developer' with debugging and backend system tasks, indicating potential overlap with software engineering responsibilities.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.45,
+          "confidence": 0.75,
+          "evidence": "Moderate scope creep (0.5) and unclear role boundaries (multi_role) are primary concerns. Overtime risk is also moderate (0.4) due to consulting environment signals. No major red flags like severe understaffing or unrealistic requirements, but the conflation of roles warrants caution.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "vague",
+          "confidence": 0.65,
+          "evidence": "The job posting does not explicitly state the reporting structure. It mentions 'leading IBM into the future' and working in a 'delivery center', but no clear manager title or hierarchy is provided.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of reporting to a manager or leadership title in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "unknown",
+          "confidence": 0.8,
+          "evidence": "The posting describes working in a 'delivery center' with 'deep technical and industry expertise', but no explicit signals about team growth velocity or hiring trajectory are provided.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.9,
+          "evidence": "The job posting does not provide explicit details about team size or composition beyond the consulting delivery center context.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of reporting lines or manager titles in the job posting.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "The role is part of IBM Consulting's Client Innovation Centers, which deliver expertise to 'a wide range of public and private sector clients', implying cross-functional collaboration with client teams and internal stakeholders.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "The job posting mentions 'fast-paced' and 'agile environment', which are neutral but could imply time pressure. No explicit signals about work-life balance, PTO, or overtime policies are provided, making it difficult to infer strongly. IBM's enterprise consulting context may balance this with some structure.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.7,
+          "confidence": 0.75,
+          "evidence": "Mentions 'limitless career path' and access to 'latest education, tools and technology', which are strong positive signals for growth. However, no explicit details about mentorship, learning budgets, or promotion paths are provided, limiting confidence.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.6,
+          "confidence": 0.7,
+          "evidence": "IBM is known for strong technical culture, but the job posting lacks explicit signals about modern dev practices (e.g., CI/CD, code review) or innovation time. The consulting focus may prioritize client delivery over internal tech culture.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No explicit mention of open source contributions, tech blogs, conference speaking, or innovation time in the job posting.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.8,
+          "evidence": "The job posting does not explicitly mention code review, pair programming, TDD, CI/CD, monitoring, incident response, postmortems, or design docs. While some practices are implied (e.g., debugging, root cause analysis), they are not clearly tied to structured dev practices.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit signals about innovation culture or experimentation time are present in the job posting.",
+          "source": "pass1_derived"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.7,
+          "evidence": "The job posting mentions debugging and root cause analysis, which are related to maintaining systems, but no explicit signals about tech debt management or refactoring are provided.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.95,
+          "evidence": "No mention of AI/ML, ML tools, or related responsibilities in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No ML/AI tools or frameworks are mentioned in the job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of hiring urgency (e.g., ASAP, immediate start) in the job posting or Pass 1 results.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "high",
+          "confidence": 0.6,
+          "evidence": "IBM is a well-known company with a global talent pool, and the role is based in Mumbai, a major tech hub. The lack of salary disclosure and potential role conflation may attract a large number of applicants, increasing competition. However, the absence of 'Easy Apply' signals or application counts limits confidence.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.95,
+          "evidence": "IBM is a globally recognized enterprise with established operations and consulting delivery centers.",
+          "source": "explicit"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.7,
+          "evidence": "The job posting mentions working in a 'delivery center' with ongoing client projects, implying steady hiring rather than aggressive expansion or backfill.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit signals about team size or composition beyond the consulting delivery center context.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "IBM is a public enterprise, but the job posting does not explicitly mention funding stage for the specific team or project.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of whether this role is a new headcount, backfill, or team expansion.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "established_company",
+        "learning_opportunities",
+        "career_growth_clear",
+        "cloud_native"
+      ],
+      "strength_details": [
+        "IBM is a globally recognized enterprise with stable operations and a strong reputation in consulting and technology, offering job security and established processes.",
+        "The role emphasizes access to 'latest education, tools and technology', suggesting opportunities for skill development and staying current with industry trends.",
+        "Mentions 'limitless career path' and potential for global impact, which are strong signals for long-term growth within a large organization."
+      ],
+      "concern_categories": [
+        "scope_creep_risk",
+        "role_clarity",
+        "salary_not_disclosed",
+        "overtime_likely"
+      ],
+      "concern_details": [
+        "Role conflation between 'Application Developer' and 'Data Engineer' could lead to responsibilities outside the candidate's core interest or expertise.",
+        "Unclear reporting structure and team composition may make it difficult to assess leadership support or collaboration dynamics.",
+        "No salary range disclosed, which could result in compensation below market expectations for a senior role in Mumbai.",
+        "Consulting environment and 'fast-paced' signals suggest potential overtime or deadline pressure, which may impact work-life balance."
+      ],
+      "best_fit_categories": [
+        "senior_data_engineers",
+        "data_generalists",
+        "technical_specialists"
+      ],
+      "best_fit_details": [
+        "Senior data engineers with 6+ years of experience and strong Python/Spark skills who are comfortable working in a consulting environment with cross-functional teams.",
+        "Data generalists who have experience with hybrid batch/streaming paradigms and can adapt to multi-cloud environments.",
+        "Technical specialists who are comfortable with role ambiguity and have experience in enterprise system debugging or backend development."
+      ],
+      "probe_categories": [
+        "role_scope_boundaries",
+        "work_hour_expectations",
+        "remote_policy_details",
+        "career_growth_path",
+        "tech_stack_details"
+      ],
+      "probe_details": [
+        "Clarify the balance between data engineering and application development tasks in this role. What percentage of time is expected to be spent on each?",
+        "Ask about typical work hours and how deadlines are managed in the consulting environment. Is overtime common, and how is it compensated or addressed?",
+        "Understand the remote work policy and whether there are any regional or timezone restrictions beyond the Mumbai Metropolitan Region.",
+        "Inquire about the career growth path for this role. Are there defined tracks for IC or leadership advancement, and how are promotions handled?",
+        "Probe for details about the tech stack used in client projects. Are modern data engineering tools like Airflow, dbt, or Snowflake part of the stack, or is it more traditional?"
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "domain_expertise",
+        "high_market_demand"
+      ],
+      "leverage_details": [
+        "Candidates with 6+ years of Python and Spark experience meet the core requirements and can emphasize their hands-on expertise in these areas.",
+        "Experience with multi-cloud (AWS/GCP/Azure) is a 'Good to Have' skill, which could be leveraged if the candidate has strong credentials in this area.",
+        "Senior data engineers with consulting or enterprise debugging experience may have high market demand, especially in client-facing roles."
+      ],
+      "overall_assessment": "This role at IBM Consulting offers a unique opportunity for senior data engineers to work on enterprise client projects with a focus on Python, Spark, and multi-cloud environments. The enterprise context provides stability and growth potential, but the conflation of application development and data engineering responsibilities, along with the lack of salary transparency, are key concerns. Candidates should probe for clarity on role boundaries, work expectations, and career paths during interviews.",
+      "recommendation_score": 0.65,
+      "recommendation_confidence": 0.8
+    },
+    "tokens": 13229,
+    "input_tokens": 9939,
+    "output_tokens": 3290,
+    "cost": 0.016519
+  }
+}

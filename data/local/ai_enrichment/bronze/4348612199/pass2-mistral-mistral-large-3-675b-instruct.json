@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 20:16:32",
+    "job_posting_id": "4348612199",
+    "job_title": "Data Engineer-Data Platforms-Google",
+    "company_name": "IBM",
+    "job_location": "Hyderabad, Telangana, India",
+    "pass_name": "pass2",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "associate",
+          "confidence": 0.95,
+          "evidence": "Title mentions 'Associate Software Developer' and role responsibilities align with early-career tasks (e.g., contributing to data gathering, collaborating with teams).",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_platform_engineer",
+          "confidence": 0.9,
+          "evidence": "Title is 'Data Engineer-Data Platforms-Google' and responsibilities include database integration, data replication, and cloud migration (Hadoop to GCP).",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "cloud_migration",
+          "confidence": 0.85,
+          "evidence": "Core focus on migrating databases from Hadoop to GCP and modernization roadmap journey.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.8,
+          "evidence": "Role is described as 'Associate Software Developer' with no direct mentions of leadership or management responsibilities.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "gcp",
+          "confidence": 0.95,
+          "evidence": "GCP mentioned explicitly in the title and job description (e.g., 'Hadoop to GCP', 'database platform').",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No other cloud providers mentioned beyond GCP.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.7,
+          "evidence": "Mentions both 'batch' and 'real-time' processing in the job description.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of orchestrators like Airflow, Luigi, or cloud-native alternatives.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.8,
+          "evidence": "Mentions Hadoop (on-prem/lake) and GCP (cloud) with a focus on migrating data management systems, implying mixed storage patterns.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "Location is specified as Hyderabad, India, but no remote work model or restrictions are discussed.",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.85,
+          "evidence": "Location is explicitly Hyderabad, India, suggesting a focus on the Indian timezone or APAC region.",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of relocation packages or requirements; role is based in Hyderabad, India.",
+          "source": "pass1_derived"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of H1B sponsorship or visa-related details.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "Role is based in India, and no signals suggest eligibility for OPT/CPT (typically US student visa programs).",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No discussion of citizenship or work authorization requirements in the job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "Employment type is not discussed in the job posting.",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.9,
+          "evidence": "No benefits are mentioned in the Pass 1 extraction or job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "implied",
+          "confidence": 0.65,
+          "evidence": "Mentions 'modernization roadmap journey' and 'leadership' as a soft skill, suggesting growth opportunities but no explicit career tracks.",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Collaboration with diverse teams and senior professionals is mentioned (e.g., 'partnering with other scientists, engineers, consultants').",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of promotions or advancement paths in the job posting.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No discussion of internal mobility or role changes in the job posting.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [
+            "ic_track"
+          ],
+          "confidence": 0.6,
+          "evidence": "Role emphasizes technical contributions and mentions 'leadership' as a soft skill, but no explicit management or specialist tracks are discussed.",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.8,
+          "evidence": "All listed skills are under 'must_have_hard_skills' with no 'nice_to_have' skills mentioned, indicating strict requirements.",
+          "source": "pass1_derived"
+        },
+        "scope_definition": {
+          "value": "multi_role",
+          "confidence": 0.75,
+          "evidence": "Responsibilities include data engineering, predictive modeling, enterprise search applications, and modernization tasks, suggesting a multi-role scope.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "Role title is 'Associate' but requires skills like predictive modeling, statistical models, and leadership, which are typically senior-level expectations.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7978,
+    "input_tokens": 6272,
+    "output_tokens": 1706,
+    "cost": 0.009684000000000002
+  }
+}

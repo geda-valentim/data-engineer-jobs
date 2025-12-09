@@ -1,0 +1,240 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Job posting mentions 'relational database management systems (RDBMS)' and 'data warehousing' but lacks explicit references to modern data stack tools (e.g., Snowflake, dbt, Airflow). The focus on 'process improvement' and 'automating manual processes' suggests some developing practices, but no signals of CI/CD, governance, or advanced automation.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches the data_maturity_score of 2, indicating basic pipelines and inconsistent practices.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.9,
+        "evidence": "No explicit signals of modern data stack adoption, CI/CD, governance, or advanced practices. Only mentions RDBMS, data warehousing, and basic automation.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.6,
+        "confidence": 0.8,
+        "evidence": "Role combines data engineering tasks (e.g., data warehousing, pipelines) with analytics modeling (R, Python), dashboard development (PowerBI), and cross-functional liaison duties (IT, regulatory compliance). This suggests moderate scope creep, as the responsibilities span multiple distinct roles.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.5,
+        "confidence": 0.7,
+        "evidence": "Mentions 'fast-paced' and 'immediate need' for automating processes, but no explicit signals of overtime or on-call. However, the lack of PTO or work-life balance mentions raises moderate concerns about pace.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "multi_role",
+        "confidence": 0.8,
+        "evidence": "Job description outlines responsibilities across data engineering, analytics, and cross-functional collaboration, indicating a combination of roles.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.45,
+        "confidence": 0.75,
+        "evidence": "Moderate scope creep (0.6) and overtime risk (0.5) contribute to a composite red flag score. Role clarity is multi_role, and requirement strictness is medium, but no severe red flags detected.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "clear",
+        "confidence": 0.9,
+        "evidence": "Job posting explicitly states 'Under the general supervision of the Manager of Load Research & Data Analytics', providing a clear reporting line.",
+        "source": "explicit"
+      },
+      "manager_level_inferred": {
+        "value": "manager",
+        "confidence": 0.85,
+        "evidence": "Title 'Manager of Load Research & Data Analytics' suggests the manager level is 'manager'.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit signals about team growth velocity or expansion plans.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.9,
+        "evidence": "No explicit mention of team size or composition beyond cross-functional collaboration.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "reports_to_manager",
+        "confidence": 0.9,
+        "evidence": "Job posting explicitly states reporting to 'Manager of Load Research & Data Analytics'.",
+        "source": "explicit"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.8,
+        "evidence": "Job description mentions 'working with cross-functional teams' and 'collaborate with business leaders', indicating embedded cross-functional collaboration.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.7,
+        "evidence": "No explicit mention of PTO or work-life balance, but hybrid work flexibility and lack of on-call signals suggest moderate balance. However, 'fast-paced' language is a concern.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.6,
+        "confidence": 0.7,
+        "evidence": "Mentions 'process improvement' and 'innovation', but lacks explicit signals like learning budgets or mentorship programs. The focus on automating reporting and cross-functional collaboration may provide some growth opportunities.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.4,
+        "confidence": 0.75,
+        "evidence": "Tech stack is outdated (RDBMS, PowerBI, SQL) with no modern engineering practices (e.g., CI/CD, testing, observability) explicitly mentioned. However, the focus on process improvement and automation suggests some awareness of technical culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.9,
+        "evidence": "No explicit signals of open source contributions, tech blogs, conference speaking, or innovation time.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.9,
+        "evidence": "No explicit mention of code review, pair programming, TDD, CI/CD, monitoring, postmortems, or design docs in the job posting.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.7,
+        "evidence": "Mentions 'push conventional thinking to drive change and innovation' but lacks concrete signals like R&D time or new tech exploration.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.6,
+        "evidence": "Mentions 'evaluate gaps in existing data platforms' and 'optimize technical reliability', suggesting some awareness of tech debt.",
+        "source": "inferred"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.9,
+        "evidence": "No explicit mention of ML/AI tools, frameworks, or responsibilities beyond basic analytics modeling.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No ML/AI tools or frameworks explicitly mentioned or inferred.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No explicit mention of start date urgency beyond 'immediate need' for automating processes.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "low",
+        "confidence": 0.7,
+        "evidence": "Location is El Paso, TX, which is not a high-competition tech hub. Salary range is disclosed but below market for data engineering roles, which may reduce competition. No signals of high application volume or remote work flexibility to attract broader competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.8,
+        "evidence": "El Paso Electric is a regional energy provider serving 460,000 customers, which suggests an established enterprise. The focus on regulatory compliance and legacy systems further supports this inference.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit signals about hiring velocity or team expansion beyond generic process improvement mentions.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit mention of team size beyond cross-functional collaboration.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No funding stage signals detected in the job posting.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No explicit mention of whether this is a new role, backfill, or team expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["data_focused_role", "cross_functional_collaboration", "regulatory_domain_expertise", "transparent_salary"],
+    "strength_details": [
+      "Role is explicitly data-focused, with responsibilities in data engineering and analytics, providing clarity on core tasks.",
+      "Opportunity to work with cross-functional teams and subject matter experts, which can enhance business acumen and collaboration skills.",
+      "Unique domain expertise in regulatory compliance (e.g., PUCT, NMPRC) and energy sector analytics, offering niche specialization potential.",
+      "Transparent salary range ($68,700 - $93,900) allows candidates to assess compensation upfront."
+    ],
+    "concern_categories": ["below_market_pay", "scope_creep_risk", "legacy_technology", "no_visa_sponsorship"],
+    "concern_details": [
+      "Salary range is significantly below market average for data engineering roles, especially for mid-level or senior candidates.",
+      "Role combines data engineering, analytics, and IT liaison tasks, which may lead to scope creep and diluted focus.",
+      "Tech stack is outdated (RDBMS, PowerBI, SQL) with no mention of modern data engineering tools (e.g., cloud platforms, orchestrators, or data quality frameworks).",
+      "No visa sponsorship or work authorization flexibility mentioned, limiting opportunities for non-US candidates."
+    ],
+    "best_fit_categories": ["mid_level_engineers", "career_changers", "data_generalists"],
+    "best_fit_details": [
+      "Mid-level data engineers with 2-5 years of experience looking for a role with cross-functional exposure and domain specialization in energy/regulatory compliance.",
+      "Candidates transitioning from IT or analytics roles into data engineering, particularly those with experience in RDBMS and PowerBI.",
+      "Data generalists who enjoy a mix of engineering, analytics, and process improvement tasks in a stable enterprise environment."
+    ],
+    "probe_categories": ["role_scope_boundaries", "tech_stack_details", "work_hour_expectations", "career_growth_path", "tech_debt_situation"],
+    "probe_details": [
+      "Ask for clarity on the boundaries between data engineering, analytics, and IT liaison responsibilities to avoid scope creep.",
+      "Inquire about the company's roadmap for modernizing the data stack, including potential adoption of cloud platforms or orchestrators.",
+      "Understand the actual work-hour expectations, especially given the 'fast-paced' language and lack of PTO details.",
+      "Probe the career growth path for this role, including opportunities for mentorship, promotions, or internal mobility.",
+      "Ask about the tech debt situation in the data platforms and how the company prioritizes refactoring vs. new development."
+    ],
+    "leverage_categories": ["domain_expertise", "local_candidate"],
+    "leverage_details": [
+      "Candidates with prior experience in the energy sector or regulatory compliance (e.g., PUCT, NMPRC) may have negotiation leverage due to niche expertise.",
+      "Local candidates in El Paso, TX, could emphasize their availability and familiarity with regional business needs as a strength."
+    ],
+    "overall_assessment": "This role at El Paso Electric is a unique opportunity for mid-level data engineers or career changers seeking domain expertise in the energy sector and regulatory compliance. The position offers cross-functional collaboration and clear responsibilities but suffers from below-market compensation and an outdated tech stack. Candidates should carefully probe the role's scope, career growth potential, and modernization plans during interviews.",
+    "recommendation_score": {
+      "value": 0.5,
+      "confidence": 0.8
+    }
+  }
+}
+```

@@ -1,0 +1,228 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Mentions Cognos, ETL tools, and BI/DW projects, but lacks modern cloud-native tooling and advanced practices.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [],
+        "confidence": 0.60,
+        "evidence": "Limited modern tooling mentioned; primarily focuses on traditional BI.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.20,
+        "confidence": 0.85,
+        "evidence": "Role is focused on reporting and visualization, a clear data engineering task.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "Startup environment and 'ASAP' start date suggest potential for pressure, but no explicit signals of long hours.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.88,
+        "evidence": "The job description clearly outlines responsibilities related to reporting and visualization.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.30,
+        "confidence": 0.75,
+        "evidence": "Low risk - well-defined role, but potential for pressure due to startup environment.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific manager or reporting line is mentioned.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No managerial title is present in the job description.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.70,
+        "evidence": "Mentions expanding team, but no specific growth numbers are provided.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.60,
+        "evidence": "No specific team size or composition details are provided.",
+        "source": "explicit"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No reporting structure is explicitly stated.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Focus on BI and DW suggests a centralized data team.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.50,
+        "confidence": 0.70,
+        "evidence": "No explicit work-life balance signals, but no red flags either.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.60,
+        "confidence": 0.75,
+        "evidence": "No specific learning or growth opportunities are mentioned.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.65,
+        "confidence": 0.78,
+        "evidence": "Traditional BI stack, no mention of modern engineering practices.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No signals of strong technical culture are present.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No development practices are explicitly mentioned.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.80,
+        "evidence": "Focus on maintaining existing reporting systems, little innovation mentioned.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt or refactoring.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of AI or ML.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools are mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.85,
+        "evidence": "Mentions 'ASAP' start date.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "low",
+        "confidence": 0.70,
+        "evidence": "Location in Pune, India, suggests lower competition compared to major tech hubs.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.80,
+        "evidence": "IBM is a large, established technology company.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "No indication of rapid expansion or urgent hiring.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "small_2_5",
+        "confidence": 0.65,
+        "evidence": "No specific team size is mentioned, but the role suggests a smaller team.",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "profitable",
+        "confidence": 0.90,
+        "evidence": "IBM is a publicly traded, profitable company.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "backfill",
+        "confidence": 0.70,
+        "evidence": "No indication of a new role or team expansion.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["well_defined_role", "established_company"],
+    "strength_details": [
+      "Clear responsibilities focused on reporting and visualization.",
+      "Stable role within a large, established company (IBM)."
+    ],
+    "concern_categories": ["no_visa_sponsorship", "overtime_likely"],
+    "concern_details": [
+      "No visa sponsorship mentioned.",
+      "ASAP start date suggests potential for time pressure."
+    ],
+    "best_fit_categories": ["mid_level_engineers", "data_generalists"],
+    "best_fit_details": [
+      "Mid-level data engineers with 3+ years of experience.",
+      "Candidates comfortable with traditional BI tools and reporting."
+    ],
+    "probe_categories": ["reporting_structure", "team_size_composition", "work_hour_expectations"],
+    "probe_details": [
+      "Clarify the reporting structure and team dynamics.",
+      "Understand the team size and composition.",
+      "Inquire about typical work hours and expectations."
+    ],
+    "leverage_categories": [],
+    "leverage_details": [],
+    "overall_assessment": "This is a stable, well-defined data engineering role within a large, established company. The role focuses on traditional BI and reporting. Concerns include the lack of visa sponsorship and potential for time pressure due to the ASAP start date.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.80
+  }
+}
+```

@@ -1,0 +1,231 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Mentions Hadoop to GCP migration, CDC, bulk data transfer, and modernization roadmap - indicates basic automation and migration focus but no advanced governance, testing, or monitoring tools mentioned",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2 - basic pipelines and migration focus without mature governance or quality practices",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption", "data_governance"],
+        "confidence": 0.70,
+        "evidence": "GCP adoption and modernization roadmap suggest some modern stack elements; discovery workshops and dependency analysis imply basic governance",
+        "source": "inferred"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.65,
+        "confidence": 0.80,
+        "evidence": "Role combines data engineering (migration, replication) with data science (predictive modeling, statistical models) and project management (WBS, RACI, RAID) - multiple distinct roles combined",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.55,
+        "confidence": 0.70,
+        "evidence": "Consulting environment with modernization roadmap and client-facing responsibilities suggests potential for long hours; no work-life balance signals mentioned",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "multi_role",
+        "confidence": 0.85,
+        "evidence": "Combines data engineering, data science, and project management responsibilities under one title",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.55,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to scope creep (0.65) and overtime risk (0.55), compounded by vague career growth and no benefits mentioned",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Mentions working in Client Innovation Centers with diverse teams but no specific reporting manager or hierarchy mentioned",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No manager title or level mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.60,
+        "evidence": "No information about team expansion or hiring velocity",
+        "source": "not_mentioned"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.55,
+        "evidence": "Mentions collaborating with diverse teams but no specific team size or composition details",
+        "source": "inferred"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No reporting structure specified in job description",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions working in Client Innovation Centers with scientists, engineers, consultants, and database administrators - suggests cross-functional team embedding",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "Onsite work model in Hyderabad, consulting environment with modernization roadmap, no PTO or work-life balance mentions - suggests potential for long hours",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.55,
+        "confidence": 0.65,
+        "evidence": "Mentions modernization roadmap and collaborative environment but no explicit learning budget, conferences, or career paths mentioned",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.60,
+        "confidence": 0.75,
+        "evidence": "GCP adoption and modernization focus suggest some modern practices, but no CI/CD, testing, or code review practices mentioned",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.90,
+        "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.85,
+        "evidence": "No explicit mention of code review, CI/CD, testing, monitoring, or other development practices",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.70,
+        "evidence": "Focus on migration and modernization rather than innovation; no mention of experimentation or R&D time",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions 'modernization roadmap journey' and 'analyze discovery and analysis outcomes' - suggests awareness of tech debt and need for improvement",
+        "source": "inferred"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.75,
+        "evidence": "Mentions implementing predictive models and statistical models with machine learning techniques, but no MLOps infrastructure or advanced ML tools mentioned",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": ["not_mentioned"],
+        "confidence": 0.90,
+        "evidence": "No specific ML tools (SageMaker, MLflow, etc.) mentioned in job description",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No urgency indicators like 'ASAP' or 'immediate start' mentioned",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Hyderabad location (moderate competition), full-time permanent role, no salary disclosed - likely moderate competition",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.85,
+        "evidence": "IBM is a well-established technology company with global delivery centers",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.70,
+        "evidence": "IBM likely has regular hiring but no specific expansion signals mentioned",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific team size mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.95,
+        "evidence": "IBM is a publicly traded company",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No indication whether this is a new headcount, backfill, or expansion role",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["established_company", "modern_tech_stack", "data_focused_role", "cloud_native"],
+    "strength_details": [
+      "Established company (IBM) with global delivery centers",
+      "Cloud-native focus with GCP migration and modernization roadmap",
+      "Data engineering core responsibilities with Hadoop to GCP migration"
+    ],
+    "concern_categories": ["scope_creep_risk", "vague_requirements", "limited_growth", "overtime_likely"],
+    "concern_details": [
+      "Role combines data engineering, data science, and project management responsibilities",
+      "No career growth path or learning opportunities mentioned",
+      "Consulting environment with onsite work suggests potential for long hours"
+    ],
+    "best_fit_categories": ["junior_engineers", "cloud_specialists", "data_generalists", "startup_enthusiasts"],
+    "best_fit_details": [
+      "Junior engineers with Master's degree seeking entry into data engineering",
+      "Candidates with cloud migration experience (Hadoop to GCP) and basic ML knowledge"
+    ],
+    "probe_categories": ["role_scope_boundaries", "work_hour_expectations", "career_growth_path", "tech_debt_situation"],
+    "probe_details": [
+      "Clarify boundaries between data engineering, data science, and project management responsibilities",
+      "Ask about typical work hours and client expectations in consulting environment",
+      "Understand opportunities for career progression within IBM's data team"
+    ],
+    "leverage_categories": ["rare_skill_match", "exact_experience_match"],
+    "leverage_details": [
+      "Experience with Hadoop to GCP migration is valuable for this role",
+      "Master's degree requirement matches exactly with candidate qualifications"
+    ],
+    "overall_assessment": "Entry-level data engineering role at IBM with focus on cloud migration and modernization. Strengths include established company and cloud-native focus, but concerns include scope creep (combining DE, DS, and PM responsibilities), vague career growth, and potential for long hours in consulting environment. Best for junior engineers seeking to build cloud migration experience.",
+    "recommendation_score": 0.55,
+    "recommendation_confidence": 0.75
+  }
+}

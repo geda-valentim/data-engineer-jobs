@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.75,
+        "evidence": "3+ years experience required, title is 'Data Scientist' (contract), responsibilities include building models and pipelines but not leading large teams or architecture decisions",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_scientist",
+        "confidence": 0.98,
+        "evidence": "Title is explicitly 'Data Scientist', core responsibilities focus on machine learning models, predictive analytics, and business insights",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "ml_infra",
+        "confidence": 0.85,
+        "evidence": "Focus on training and deploying ML models, tracking performance in production, and building data pipelines for business decisions",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.70,
+        "evidence": "Responsibilities include individual contribution to pipelines and models, presenting to stakeholders, and supporting a team — but no mention of direct reports or people management",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No cloud providers mentioned in job description or Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No cloud platforms referenced at all",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.75,
+        "evidence": "Mentions building pipelines, data sources, and models — typical batch processing context; no streaming tools like Kafka or Flink mentioned",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.95,
+        "evidence": "Airflow explicitly mentioned in team member bio (Newton Troung, Lead Data Engineer)",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No specific storage systems (warehouse, lake, lakehouse) mentioned in job description or Pass 1",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.88,
+        "evidence": "Location restricted to Latin American countries (Argentina, Brazil, Colombia, Chile, Mexico, Dominican Republic) — implies regional focus",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.92,
+        "evidence": "Work from anywhere but meetings often in US time zones — implies Americas focus",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Fully distributed company, no office, work from anywhere within allowed countries",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned; contract role based in Latin America, not US",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Contract role, no mention of student visa support; likely requires local work authorization",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "any",
+        "confidence": 0.88,
+        "evidence": "No citizenship or work authorization restrictions mentioned; open to multiple countries",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "1099",
+        "confidence": 0.90,
+        "evidence": "Explicitly stated as 'Contract' role with 'fixed_term' contract type — typical 1099 contractor arrangement",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "basic",
+        "confidence": 0.75,
+        "evidence": "Benefits include language classes, parental leave, computer reimbursement — minimal compared to full-time employee packages",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Mentions 'Prioritize Wellness' and 'grow' in values, but no specific career tracks or promotion paths outlined",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.80,
+        "evidence": "Team includes Manager Data Scientist and Director, Pricing Analytics — implies opportunity to learn from senior leaders",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of promotions, advancement, or career progression in job description",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal transfers, role changes, or lateral moves",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.70,
+        "evidence": "No explicit career tracks mentioned; role is contract-based, limiting long-term path clarity",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.73,
+        "evidence": "Clear must-haves (Python, ML models, 3+ years) with no nice-to-haves — balanced but firm requirements",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.82,
+        "evidence": "Focused on data science, ML modeling, and business insights — well-defined scope without hybrid roles",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "3+ years experience aligns with mid-level Data Scientist role; skills are standard for the field",
+        "source": "inferred"
+      }
+    }
+  }
+}

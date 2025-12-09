@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.65,
+        "evidence": "Title is 'Data Engineer' without explicit seniority prefix, and responsibilities include building and maintaining pipelines, collaborating with analytics teams, and working with architecture leads, which align with mid-level expectations. No years of experience are explicitly stated, but the education requirement is a Master's degree, which is often associated with mid-level roles in data engineering.",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is 'Data Engineer', and core responsibilities focus on ETL/ELT processes, data pipelines, and collaboration with analytics teams.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.75,
+        "evidence": "Responsibilities emphasize scalable ETL/ELT processes, data extraction, manipulation, and production from database tables, which are typical of batch ETL roles. No explicit mention of streaming or real-time tools.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.70,
+        "evidence": "Responsibilities focus on collaboration, design, and implementation of data solutions without explicit mention of mentoring, code reviews, or leadership over other engineers. The role involves working with leads but does not indicate leadership expectations for the candidate.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No cloud providers or services explicitly mentioned in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No secondary clouds mentioned as no cloud providers are referenced.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.70,
+        "evidence": "Responsibilities mention ETL/ELT processes and data extraction from database tables, which are typically batch-oriented. No explicit mention of streaming or real-time paradigms.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No orchestration tools like Airflow, Luigi, or cloud-native orchestrators mentioned.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.60,
+        "evidence": "Mentions relational databases (SQL Server, Oracle, MySQL) and collaboration with analytics teams, which often involve data warehouse solutions. No explicit mention of data lakes or lakehouses.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.80,
+        "evidence": "Location is specified as 'New Jersey, United States', and company is based in Central NJ, suggesting a preference for candidates in the same region.",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.75,
+        "evidence": "Location is restricted to New Jersey, implying candidates should be within the US time zones.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of relocation packages or requirements in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Visa sponsorship is explicitly stated as 'not_mentioned' in Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No explicit mention of OPT/CPT or student visa support, and the job posting does not indicate flexibility for student visas.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No text or signals regarding citizenship or work authorization requirements beyond location.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.90,
+        "evidence": "Employment type is stated as 'full_time' in Pass 1 extraction, and no contract types are mentioned, implying W2 for full-time employees.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits are mentioned in the Pass 1 extraction or job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "vague",
+        "confidence": 0.60,
+        "evidence": "Generic mention of 'growth opportunities' in the context of passion for data and learning, but no specific career tracks or ladders discussed.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Responsibilities include collaborating with architecture/engineering leads and other teams, which suggests potential mentorship opportunities from senior team members.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion or advancement paths in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of internal mobility or role changes in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.65,
+        "evidence": "Responsibilities mention working with architecture/engineering leads, which may imply a technical IC track, but no explicit mention of management or specialist tracks.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Job posting lists clear 'must have' skills (Python, relational databases) and 'nice to have' skills (data processing, Numpy, Pandas), indicating a medium level of strictness.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "Job description focuses on a single role with well-defined responsibilities such as ETL/ELT processes, data pipelines, and collaboration with analytics teams.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Requirements are reasonable for a mid-level data engineer role, with no unrealistic expectations or skill inflation detected.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

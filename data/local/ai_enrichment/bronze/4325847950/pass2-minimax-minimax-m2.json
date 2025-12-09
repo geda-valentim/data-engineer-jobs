@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 13:49:54",
+    "job_posting_id": "4325847950",
+    "job_title": "Data Engineer-Business Intelligence",
+    "company_name": "IBM",
+    "job_location": "Pune, Maharashtra, India",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.75,
+          "evidence": "Title is 'Data Engineer-Business Intelligence' without 'Senior' designation, but requires 3+ years experience which typically indicates mid-level position",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Data Engineer-Business Intelligence' and role focuses on BI/DW projects, reporting, and visualization",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "data_warehouse",
+          "confidence": 0.85,
+          "evidence": "Role specifically focuses on BI/DW projects, reporting, and visualization using Cognos, indicating traditional data warehousing and business intelligence focus",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.9,
+          "evidence": "No mention of team leadership, mentoring responsibilities, or direct reports - purely individual contributor role focused on technical execution",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "multi",
+          "confidence": 0.8,
+          "evidence": "Multiple cloud platforms mentioned equally as nice-to-have: AWS, Google Cloud Platform, and Azure with no single platform emphasized as primary",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "Since primary cloud is 'multi' with all three major platforms mentioned equally, no secondary clouds to list",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.8,
+          "evidence": "Focus on reporting, visualization, and traditional BI/DW projects suggests batch processing rather than streaming or real-time",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.7,
+          "evidence": "No specific orchestration tools mentioned (Airflow, Spark, dbt, etc.) - traditional BI tools like Cognos may have built-in scheduling but not explicitly discussed",
+          "source": "inferred"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.85,
+          "evidence": "Emphasis on BI/DW, reporting, and visualization with Cognos indicates traditional data warehousing approach rather than data lakes or lakehouse architectures",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.9,
+          "evidence": "Work model stated as 'onsite' with specific location requirement 'Pune, Maharashtra, India' indicating must be in India",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.85,
+          "evidence": "Location specified as Pune, Maharashtra, India, indicating Indian timezone (IST) focus with no other timezone requirements mentioned",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.85,
+          "evidence": "Onsite role in specific location (Pune) requires candidates to already be in or relocate to Pune, Maharashtra, India",
+          "source": "combined"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No visa sponsorship mentioned and role is based in India, so H1B (US work visa) sponsorship would not apply to this India-based position",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "India-based position with no mention of student visa support, and US student visas (OPT/CPT) would not apply to India-based employment",
+          "source": "pass1_derived"
+        },
+        "citizenship_required": {
+          "value": "any",
+          "confidence": 0.75,
+          "evidence": "No citizenship or work authorization restrictions mentioned for this India-based position, suggesting openness to all eligible candidates",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.85,
+          "evidence": "IBM Consulting position with full-time employee structure and benefits package typically indicates W2 employment rather than contractor roles",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "not_mentioned",
+          "confidence": 0.8,
+          "evidence": "No benefits, equity, PTO, learning budget, or other compensation details mentioned in the job posting",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No discussion of career paths, growth opportunities, advancement potential, or career development mentioned in the posting",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No mention of mentorship programs, working with senior staff, learning opportunities, or collaborative environment",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of promotion, advancement, career growth, or progression to senior roles",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal transfers, role changes, exploring different positions, or lateral moves within the organization",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No discussion of different career paths (IC track, management track, specialist track, architect track) or career progression options",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.8,
+          "evidence": "Clear distinction between 'Required Technical And Professional Expertise' and 'Preferred Technical And Professional Experience' with balanced must-have vs nice-to-have requirements",
+          "source": "pass1_derived"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.9,
+          "evidence": "Well-defined role focused specifically on Data Engineer-Business Intelligence with clear responsibilities around BI/DW, reporting, and visualization - not a multi-role hybrid position",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "3+ years experience requirement is reasonable for mid-level BI/Data Engineer role with appropriate technical skills listed for the position level",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 9342,
+    "input_tokens": 5894,
+    "output_tokens": 3448,
+    "cost": 0.01279
+  }
+}

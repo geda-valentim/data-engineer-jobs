@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 14:43:40",
+    "job_posting_id": "4348528723",
+    "job_title": "Data Engineer",
+    "company_name": "Accenture in India",
+    "job_location": "Bengaluru, Karnataka, India",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "senior",
+          "confidence": 0.85,
+          "evidence": "Requires minimum 6 years of experience and mentions 'Data Platform Engineer' responsibilities with system design and architecture work",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.95,
+          "evidence": "Title is 'Data Engineer' and core responsibilities focus on data pipelines, ETL processes, and data platform development",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "hybrid",
+          "confidence": 0.8,
+          "evidence": "Mentions both 'real-time streaming data pipelines' and 'batch data processing' with Kafka for streaming and traditional ETL for batch",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.75,
+          "evidence": "Focus on individual contributor work like building pipelines, implementing ETL processes, and coding - no mention of team leadership or direct reports",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "multi",
+          "confidence": 0.85,
+          "evidence": "AWS, Azure, and GCP are all listed as required skills with equal emphasis - no single cloud dominates",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [
+            "aws",
+            "azure",
+            "gcp"
+          ],
+          "confidence": 0.9,
+          "evidence": "All three major cloud providers are explicitly mentioned as required skills",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.85,
+          "evidence": "Job description explicitly mentions both 'real-time streaming data pipelines' and 'batch data processing' as separate requirements",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "airflow_like",
+          "confidence": 0.9,
+          "evidence": "Apache Airflow is explicitly listed as a required skill for data orchestration",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.8,
+          "evidence": "Mentions both data warehouse solutions (BigQuery, Redshift) and data lake storage (S3, Blob Storage) with no clear primary focus",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.9,
+          "evidence": "Location specified as Bengaluru, Karnataka, India with geo restriction to IN only",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "apac",
+          "confidence": 0.85,
+          "evidence": "Based in India (Bengaluru) which is in Asia-Pacific timezone region",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.8,
+          "evidence": "Onsite requirement in specific location (Bengaluru) implies relocation needed for non-local candidates",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.5,
+          "evidence": "No visa sponsorship mentioned, but this is an India-based position so H1B (US visa) not applicable",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.5,
+          "evidence": "No mention of student visa support, position appears to require existing work authorization in India",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.7,
+          "evidence": "No citizenship requirements mentioned, appears to require only legal work authorization in India",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "not_mentioned",
+          "confidence": 0.6,
+          "evidence": "No contract type specified, but being an Accenture position suggests traditional employment rather than 1099 contracting",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No benefits, equity, PTO, or other compensation details mentioned in the job posting",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No career progression, growth opportunities, or advancement paths mentioned in the job description",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No mentorship programs, working with senior staff, or learning opportunities mentioned",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No promotion, advancement, or career progression opportunities mentioned",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal transfers, role changes, or mobility opportunities within Accenture",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No career tracks, paths, or advancement opportunities mentioned",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.75,
+          "evidence": "Clear distinction between 'Must have skills' and 'Good to have skills' with specific technical requirements and 6+ years experience minimum",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused job description specifically on data engineering role with well-defined technical responsibilities and skill requirements",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "Skill requirements (6+ years, Databricks, cloud platforms, Spark) are appropriate for senior data engineer level",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8703,
+    "input_tokens": 6109,
+    "output_tokens": 2594,
+    "cost": 0.011297
+  }
+}

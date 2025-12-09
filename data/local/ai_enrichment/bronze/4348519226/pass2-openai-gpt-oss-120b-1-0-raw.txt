@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.82,
+        "evidence": "Job posting requires 5-8+ years of experience; senior level typically 5+ years even though title lacks senior qualifier.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.99,
+        "evidence": "Title is \"Data Engineer\" and responsibilities focus on building data pipelines, Spark, Hadoop, AWS.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "streaming_realtime",
+        "confidence": 0.85,
+        "evidence": "Explicit mention of \"streaming pipelines\" and use of Kafka for real‑time data processing.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.88,
+        "evidence": "No references to people‑management, team lead, or direct reports; responsibilities are individual contributor focused.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "aws",
+        "confidence": 0.99,
+        "evidence": "AWS is repeatedly referenced (AWS Cloud Data Platform, AWS EMR, AWS Glue, AWS RedShift, DynamoDB).",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No other cloud providers (Azure, GCP, etc.) are mentioned in the posting.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.78,
+        "evidence": "Job mentions both batch ingestion from files/databases and streaming pipelines using Kafka.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No orchestration tools (Airflow, Luigi, Dagster, etc.) are referenced.",
+        "source": "not_mentioned"
+      },
+      "storage_layer": {
+        "value": "lakehouse",
+        "confidence": 0.81,
+        "evidence": "Posting lists Data Management (DW, DL, Data Platform, Lakehouse) and mentions both RedShift (warehouse) and NoSQL lakes, indicating a lakehouse approach.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Location is given as Pune, India, but no remote or on‑site requirement is stated.",
+        "source": "not_mentioned"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No timezone preferences are described.",
+        "source": "not_mentioned"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "The posting does not mention relocation assistance or a requirement to move.",
+        "source": "not_mentioned"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "Visa sponsorship is not mentioned; default assumption is not provided.",
+        "source": "not_mentioned"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No reference to OPT/CPT eligibility; work authorization is not discussed.",
+        "source": "not_mentioned"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No citizenship or work‑authorization constraints are stated.",
+        "source": "not_mentioned"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "Employment type (full‑time, contractor, etc.) is not specified.",
+        "source": "not_mentioned"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No benefits (health, PTO, equity, etc.) are listed in the posting.",
+        "source": "not_mentioned"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "The posting does not discuss career ladders, promotion tracks, or growth opportunities.",
+        "source": "not_mentioned"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No mention of mentorship programs or working directly with senior engineers for learning.",
+        "source": "not_mentioned"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No language about promotions or advancement paths appears in the description.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "The posting does not reference internal transfers or mobility options.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No explicit mention of IC, management, specialist, or architect tracks.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.84,
+        "evidence": "Multiple mandatory hard‑skill requirements (Spark, Python, Scala, Hadoop, AWS, Kafka, etc.) and a minimum of 5 years experience; no nice‑to‑have items.",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.92,
+        "evidence": "Job description is focused specifically on data engineering tasks and technologies.",
+        "source": "combined"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.86,
+        "evidence": "The skill set aligns with a senior data engineer role given the 5‑8+ years experience requirement.",
+        "source": "inferred"
+      }
+    }
+  }
+}

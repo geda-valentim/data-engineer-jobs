@@ -1,0 +1,234 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.82,
+        "evidence": "Modern data stack (dbt, Airflow, Snowflake), CI/CD practices, and data quality focus suggest a 'defined' level of maturity.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.82,
+        "evidence": "Matches the data_maturity_score of 3.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption", "cicd_practices", "data_quality_testing"],
+        "confidence": 0.85,
+        "evidence": "Mentions dbt, Airflow, Snowflake, and a focus on data quality.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.20,
+        "confidence": 0.88,
+        "evidence": "The role is clearly defined as a Data Engineer position with specific responsibilities related to data pipelines and infrastructure.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.40,
+        "confidence": 0.72,
+        "evidence": "Startup environment and 'ASAP' start date suggest potential for longer hours, but generous PTO and a focus on work-life balance mitigate this risk.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "The job description provides a clear outline of responsibilities and required skills for a Data Engineer.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.30,
+        "confidence": 0.78,
+        "evidence": "Low to moderate risk - well-defined role at a funded startup with good signals, but potential for startup pace.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "clear",
+        "confidence": 0.88,
+        "evidence": "The job posting explicitly states reporting to the Head of Data Engineering.",
+        "source": "explicit"
+      },
+      "manager_level_inferred": {
+        "value": "director_plus",
+        "confidence": 0.92,
+        "evidence": "Reporting to the Head of Data Engineering suggests a director-level manager.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "rapid_expansion",
+        "confidence": 0.94,
+        "evidence": "The team is growing from 8 to 15 engineers, indicating rapid expansion.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "8-15 engineers",
+          "de_count": "5 data engineers",
+          "seniority_mix": "mix of senior and mid-level"
+        },
+        "confidence": 0.80,
+        "evidence": "The job description mentions joining a team of 5 data engineers within a broader 15-person data organization.",
+        "source": "explicit"
+      },
+      "reporting_structure": {
+        "value": "reports_to_director_data",
+        "confidence": 0.88,
+        "evidence": "Job posting mentions 'reporting to Head of Data Engineering'",
+        "source": "explicit"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions working closely with product teams and PMs, suggesting cross-functional collaboration.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.75,
+        "confidence": 0.80,
+        "evidence": "Generous PTO, hybrid flexibility, and no mention of on-call duties contribute to a positive work-life balance.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.85,
+        "confidence": 0.82,
+        "evidence": "The company emphasizes learning and development, and the expanding team offers growth opportunities.",
+        "source": "combined"
+      },
+      "tech_culture_score": {
+        "value": 0.80,
+        "confidence": 0.85,
+        "evidence": "Modern tech stack, CI/CD practices, and a focus on data quality indicate a strong engineering culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["open_source", "conference_speaking"],
+        "confidence": 0.85,
+        "evidence": "Mentions supporting conference attendance and potential for open-source contributions.",
+        "source": "inferred"
+      },
+      "dev_practices_mentioned": {
+        "value": ["code_review", "ci_cd", "monitoring"],
+        "confidence": 0.90,
+        "evidence": "Explicit mentions of peer review, automated testing, and observability.",
+        "source": "explicit"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "The company is focused on innovation in the nicotine alternative space, but doesn't explicitly mention dedicated innovation time.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.80,
+        "evidence": "Mentions modernizing legacy pipelines and improving code quality, indicating awareness of tech debt.",
+        "source": "explicit"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "advanced_ml",
+        "confidence": 0.75,
+        "evidence": "Mentions SageMaker and MLflow, suggesting involvement in advanced machine learning projects.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": ["SageMaker", "MLflow"],
+        "confidence": 0.88,
+        "evidence": "Both tools are explicitly mentioned in the job description.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.90,
+        "evidence": "The job description mentions an 'ASAP' start date.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Based on location and general demand for data engineers.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "startup_series_a_b",
+        "confidence": 0.75,
+        "evidence": "Rapid growth, funding, and team size suggest a Series A/B stage startup.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "rapid_expansion",
+        "confidence": 0.82,
+        "evidence": "The team is growing significantly, indicating a rapid expansion phase.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.88,
+        "evidence": "The data team currently consists of 8-15 engineers.",
+        "source": "explicit"
+      },
+      "funding_stage_signals": {
+        "value": "series_b_plus",
+        "confidence": 0.70,
+        "evidence": "Mentions being a well-funded startup and rapid growth.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.85,
+        "evidence": "The company is expanding the data team to support new initiatives.",
+        "source": "explicit"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "learning_opportunities", "well_defined_role", "work_life_balance"],
+    "strength_details": [
+      "Strong modern data stack (Snowflake, dbt, Airflow, Terraform)",
+      "Excellent learning culture with opportunities for growth",
+      "Clear role definition with specific responsibilities",
+      "Generous PTO and hybrid work flexibility"
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship"],
+    "concern_details": [
+      "Startup environment and 'ASAP' start date may lead to longer hours",
+      "US work authorization required - no visa sponsorship offered"
+    ],
+    "best_fit_categories": ["senior_data_engineers", "pipeline_developers", "cloud_specialists"],
+    "best_fit_details": [
+      "Experienced data engineers with 5+ years of experience",
+      "Engineers proficient in building and maintaining data pipelines",
+      "Candidates with strong AWS cloud skills"
+    ],
+    "probe_categories": ["work_hour_expectations", "team_dynamics", "tech_debt_situation"],
+    "probe_details": [
+      "Ask about typical work hours and on-call expectations",
+      "Inquire about team collaboration and communication styles",
+      "Understand the current state of tech debt and plans for addressing it"
+    ],
+    "leverage_categories": ["rare_skill_match", "domain_expertise"],
+    "leverage_details": [
+      "Experience with advanced ML tools (SageMaker, MLflow) is highly valuable",
+      "Experience in the e-commerce industry is a plus"
+    ],
+    "overall_assessment": "This is a strong opportunity for a senior data engineer seeking a challenging role in a fast-growing startup with a modern tech stack. The company offers excellent learning opportunities and a good work-life balance, but candidates should be prepared for a potentially fast-paced environment. The lack of visa sponsorship is a significant limitation.",
+    "recommendation_score": 0.82,
+    "recommendation_confidence": 0.85
+  }
+}
+```

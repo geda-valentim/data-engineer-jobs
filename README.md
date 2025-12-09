@@ -14,6 +14,9 @@ A fully automated data pipeline that scrapes, processes, and analyzes Data Engin
 - [Setup](#setup)
 - [Usage](#usage)
 - [Data Pipeline](#data-pipeline)
+  - [Ingestion Flow](#ingestion-flow-bronze)
+  - [Transformation](#transformation-silver)
+  - [AI Enrichment](#ai-enrichment-silver-ai)
 - [Documentation](#documentation)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
@@ -36,6 +39,10 @@ This project implements a complete data engineering pipeline to analyze the Data
 ✅ **Silver layer**: Cleaned Parquet data with normalized schema
 
 ✅ **Skills Detection**: Automatic extraction of 150+ tech skills from job descriptions
+
+✅ **AI Enrichment**: LLM-powered metadata extraction (salary inference, seniority, visa sponsorship, red flags)
+
+✅ **Multi-Model Validation**: Consensus-based quality assurance across 6+ LLM models
 
 ✅ **Glue ETL**: PySpark job for Bronze → Silver transformation
 
@@ -95,9 +102,19 @@ The pipeline follows the **Medallion Architecture** pattern:
                                          │  Parquet │
                                          └────┬─────┘
                                               │
-                                     [Planned] Glue ETL
+                            Lambda + Bedrock (LLM Enrichment)
+                              Pass 1 → Pass 2 → Pass 3
                                               │
                                               ▼
+                                       ┌────────────┐
+                                       │ Silver-AI  │
+                                       │    (S3)    │
+                                       │  +141 cols │
+                                       └─────┬──────┘
+                                             │
+                                    [Planned] Glue ETL
+                                             │
+                                             ▼
                                          ┌──────────┐
                                          │   Gold   │
                                          │   (S3)   │
@@ -111,15 +128,17 @@ The pipeline follows the **Medallion Architecture** pattern:
 |-------|--------|-------------|--------------|
 | **Bronze** | JSONL | Raw data from LinkedIn API | `year/month/day/hour/` |
 | **Silver** | Parquet | Cleaned, typed, normalized | `year/month/day/hour/` |
+| **Silver-AI** | Parquet | LLM-enriched with 141 new columns | `year/month/day/hour/` |
 | **Gold** | Parquet | Analytics tables, aggregations | Business-specific |
 
 ## Tech Stack
 
 ### Infrastructure
-- **AWS S3**: Data lake storage (Bronze, Silver, Gold layers)
+- **AWS S3**: Data lake storage (Bronze, Silver, Silver-AI, Gold layers)
 - **AWS SQS**: Message queue for ingestion throttling and backfill
 - **AWS Glue**: Serverless ETL (PySpark 4.0)
 - **AWS Lambda**: Ingestion orchestration (Python 3.12)
+- **AWS Bedrock**: LLM inference (6+ models for AI enrichment)
 - **AWS EventBridge**: Scheduling and event routing
 - **AWS Step Functions**: Workflow orchestration
 - **AWS DynamoDB**: Ingestion sources configuration
@@ -171,6 +190,19 @@ data-engineer-jobs/
 │   │   ├── bronze_to_silver.py    # Bronze → Silver ETL
 │   │   └── silver_to_gold.py      # [Planned] Silver → Gold
 │   │
+│   ├── lambdas/ai_enrichment/
+│   │   └── enrich_partition/
+│   │       ├── handler.py         # Main Lambda handler
+│   │       ├── bedrock_client.py  # AWS Bedrock wrapper
+│   │       ├── prompts/           # Pass 1/2/3 prompt templates
+│   │       ├── flatteners/        # JSON → flat columns
+│   │       └── parsers/           # JSON parsing & validation
+│   │
+│   ├── evaluation/                # Multi-model consensus evaluation
+│   │   ├── evaluator.py           # Model comparison logic
+│   │   ├── consensus.py           # Inter-model agreement
+│   │   └── report.py              # Markdown report generation
+│   │
 │   ├── skills_detection/
 │   │   ├── config/
 │   │   │   ├── skills_catalog.yaml  # 150+ skills with variations
@@ -186,7 +218,17 @@ data-engineer-jobs/
 │   ├── silver_schema.md           # Silver layer data schema
 │   ├── gold_features_metrics.md   # Gold layer design
 │   ├── bright-data.md             # Bright Data integration
-│   └── skills_detection_plan.md   # Skills extraction strategy
+│   ├── skills_detection_plan.md   # Skills extraction strategy
+│   ├── ai-enrichment-architecture.md  # AI pipeline architecture
+│   └── planning/ai-enrichment/    # AI enrichment specs & schemas
+│
+├── scripts/ai-enrichment/         # AI enrichment testing scripts
+│   ├── test_pass1.py              # Pass 1 extraction tests
+│   ├── test_pass2.py              # Pass 2 inference tests
+│   ├── test_pass3.py              # Pass 3 analysis tests
+│   └── test_multiple_models.py    # Multi-model comparison
+│
+├── reports/                       # Model evaluation reports
 │
 └── README.md
 ```
@@ -373,6 +415,81 @@ The pipeline automatically extracts technical skills from job descriptions using
 
 Skills are matched using canonical names and variations (e.g., "AWS" matches "Amazon Web Services", "aws", "Amazon AWS").
 
+### AI Enrichment (Silver-AI)
+
+The pipeline uses **LLMs via AWS Bedrock** to extract structured metadata from job descriptions using a **3-pass cascading context architecture**:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  Silver (Parquet) ──► Pass 1 ──► Pass 2 ──► Pass 3 ──► Silver-AI (Parquet)  │
+│                       Extract    Infer      Analyze                          │
+│                       Facts      Context    Signals                          │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+#### Three-Pass Architecture
+
+| Pass | Purpose | Examples | Confidence |
+|------|---------|----------|------------|
+| **Pass 1: Extraction** | Extract explicit facts from text | Salary, visa text, work model, skills mentioned | N/A (facts) |
+| **Pass 2: Inference** | Normalize and infer based on Pass 1 | Seniority level, primary cloud, geo restriction, H1B friendly | 0.0-1.0 |
+| **Pass 3: Analysis** | Complex analysis using Pass 1+2 | Data maturity, scope creep score, red flags, tech culture | 0.0-1.0 |
+
+#### Available Models (AWS Bedrock)
+
+| Model | Bedrock ID | Input/1M | Output/1M |
+|-------|------------|----------|-----------|
+| OpenAI GPT-OSS 120B | `openai.gpt-oss-120b-1:0` | $0.15 | $0.60 |
+| MiniMax-M2 | `minimax.minimax-m2` | $0.30 | $1.20 |
+| Qwen3 235B | `qwen.qwen3-vl-235b-a22b` | $0.22 | $0.88 |
+| Gemma 3 27B | `google.gemma-3-27b-it` | $0.23 | $0.38 |
+| DeepSeek R1 | `deepseek.r1-v1:0` | $1.35 | $5.40 |
+| Mistral Large 3 | `mistral.mistral-large-3-675b-instruct` | $2.00 | $6.00 |
+
+#### Multi-Model Consensus Validation
+
+Before promoting data to Gold, the pipeline validates enrichment quality using **inter-model consensus**:
+
+```bash
+# Run multi-model evaluation
+python scripts/evaluate_models.py <job_id> --output reports/
+```
+
+**Consensus Results (10 jobs sample):**
+- Pass 1 (Extraction): **88.1%** consensus
+- Pass 2 (Inference): **93.2%** consensus
+- Pass 3 (Analysis): **62.8%** consensus (subjective by nature)
+
+#### Output Schema (141 new columns)
+
+| Category | Prefix | Columns | Examples |
+|----------|--------|---------|----------|
+| Extraction | `ext_` | 57 | `ext_salary_disclosed`, `ext_visa_sponsorship_stated` |
+| Inference | `inf_` | 36 | `inf_seniority_level`, `inf_primary_cloud`, `inf_h1b_friendly` |
+| Analysis | `anl_` | 48 | `anl_data_maturity_level`, `anl_scope_creep_score`, `anl_red_flags` |
+
+#### Local Testing
+
+```bash
+# Test individual passes
+python scripts/ai-enrichment/test_enrichment_local.py --pass1
+python scripts/ai-enrichment/test_enrichment_local.py --pass2
+python scripts/ai-enrichment/test_enrichment_local.py --pass3
+
+# Test with multiple models
+python scripts/ai-enrichment/test_multiple_models.py --use-s3 --limit 5 --models minimax openai
+```
+
+#### Cost Estimation
+
+| Scenario | Jobs | Estimated Cost |
+|----------|------|----------------|
+| Initial load | 20,000 | ~$25 |
+| Weekly batch | 5,000 | ~$6 |
+| Monthly | 20,000 | ~$25 |
+
+See [docs/ai-enrichment-architecture.md](docs/ai-enrichment-architecture.md) for complete implementation details.
+
 ### Analytics (Gold - Planned)
 
 Planned transformations:
@@ -392,6 +509,8 @@ See [docs/gold_features_metrics.md](docs/gold_features_metrics.md) for complete 
 | [docs/gold_features_metrics.md](docs/gold_features_metrics.md) | Gold layer design with analytics tables |
 | [docs/bright-data.md](docs/bright-data.md) | Bright Data API integration guide |
 | [docs/skills_detection_plan.md](docs/skills_detection_plan.md) | Skills extraction strategy |
+| [docs/ai-enrichment-architecture.md](docs/ai-enrichment-architecture.md) | AI Enrichment pipeline architecture |
+| [scripts/ai-enrichment/README.md](scripts/ai-enrichment/README.md) | AI Enrichment testing scripts |
 
 ## Roadmap
 
@@ -409,20 +528,28 @@ See [docs/gold_features_metrics.md](docs/gold_features_metrics.md) for complete 
 - [x] Multi-region/work-type configuration
 - [x] Glue concurrent execution (max 10 parallel jobs)
 
-### 🚧 Phase 3: Analytics Layer (In Progress)
+### ✅ Phase 3: AI Enrichment (Completed)
+- [x] 3-pass LLM enrichment architecture (Extract → Infer → Analyze)
+- [x] AWS Bedrock integration with 6+ models
+- [x] Multi-model consensus validation framework
+- [x] 141 new enrichment columns (ext_, inf_, anl_)
+- [x] Local testing scripts with S3 integration
+- [x] Evaluation reports with inter-model agreement metrics
+
+### 🚧 Phase 4: Analytics Layer (In Progress)
 - [ ] Implement deduplication in Silver
 - [ ] Create Gold layer transformations
 - [ ] Build star schema (fact + dimensions)
 - [ ] Salary normalization and benchmarking
 
-### 📋 Phase 4: Insights & Visualization (Planned)
+### 📋 Phase 5: Insights & Visualization (Planned)
 - [ ] Athena/Presto queries for ad-hoc analysis
 - [ ] Metabase/Looker dashboards
 - [ ] Salary trends by location/seniority
 - [ ] Skills demand analysis
 - [ ] Geographic heat maps
 
-### 🚀 Phase 5: Advanced Features (Future)
+### 🚀 Phase 6: Advanced Features (Future)
 - [ ] Real-time alerting for matching jobs
 - [ ] ML-based job recommendations
 - [ ] Career path analysis

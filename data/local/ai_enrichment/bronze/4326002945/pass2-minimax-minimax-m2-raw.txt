@@ -1,0 +1,263 @@
+<reasoning>Let me analyze this job posting and Pass 1 extraction results to infer the job characteristics according to the rules provided.
+
+First, let me understand what we have:
+
+**Original Job Posting Analysis:**
+- Title: "Data Engineer-Business Intelligence" 
+- Company: IBM
+- Location: Pune, Maharashtra, India
+- This is for an IBM Consulting Client Innovation Center
+- Role involves Tableau dashboards, analytics, SQL, Oracle, Hive
+- Master's degree preferred
+- On-site work model
+- No salary mentioned
+- No visa sponsorship mentioned
+- No benefits mentioned
+
+**Pass 1 Extraction Results:**
+- Work model: onsite
+- No salary disclosed
+- No visa sponsorship mentioned
+- No security clearance mentioned
+- Must-have skills: Tableau Desktop, Tableau Server, SQL, Oracle, Hive, Tableau dashboards, analytics, querying large data sets, workbook performance optimization, technical dashboard structure interpretation, business requirements translation
+- Must-have soft skills: Communication, Project Management, Multitasking, Collaborative Skills
+- Education: Master's Degree (preferred)
+- No certifications mentioned
+- No years of experience specified
+- No benefits mentioned
+- No equity mentioned
+- No learning budget mentioned
+
+Now let me go through each inference category:
+
+## SENIORITY AND ROLE INFERENCE
+
+### seniority_level
+Looking at the title "Data Engineer-Business Intelligence" - this doesn't have "Senior" or "Junior" in the title. The responsibilities mention "Responsible to manage end to end feature development" which suggests some experience, but no specific years mentioned. The requirements are quite technical (Tableau, SQL, Oracle, Hive) but not overly senior-level. This seems like a mid-level role given the technical requirements and responsibility scope.
+
+**Value: "mid"**
+**Confidence: 0.6** (moderate inference - no explicit seniority in title, but technical requirements suggest more than entry-level)
+**Evidence: "Data Engineer-Business Intelligence" title without seniority modifier, but technical requirements (Tableau, SQL, Oracle, Hive) and end-to-end feature development responsibility suggest mid-level experience"
+
+
+**Source: "inferred"**
+
+I'll classify the job family as an analytics engineer, focusing on business intelligence and data visualization. The role centers on creating Tableau dashboards and performing data analytics, which aligns perfectly with the analytics engineer specialization. The key responsibilities involve translating business requirements into technical dashboard solutions, using tools like SQL, Oracle, and Hive to query and display large datasets effectively.
+
+The sub-specialty points to business intelligence, with a clear emphasis on Tableau-driven analytics and dashboard development. The role requires interpreting complex business requirements and transforming them into technical dashboard structures, highlighting the BI-focused nature of the position.
+
+Leadership expectations suggest an individual contributor role, with no explicit management responsibilities mentioned. The position appears to focus on technical execution and feature development without direct team leadership.
+
+## STACK AND CLOUD INFERENCE
+
+The job posting lacks specific cloud platform details, indicating a need for careful inference about the technical infrastructure. No clear cloud provider is mentioned, which requires a nuanced approach to understanding the potential technology stack.
+
+The absence of explicit cloud references suggests the role might involve on-premise systems or a hybrid approach. Without concrete evidence, the most prudent inference is to mark the cloud strategy as "not mentioned" with low confidence.
+
+The processing paradigm remains ambiguous, with no clear indicators of streaming or batch processing methodologies. The role seems to focus on dashboard development and analytics, which could involve either approach.
+
+Similarly, the orchestrator category and storage layer cannot be definitively determined from the available information, requiring a cautious "not_mentioned" classification.
+
+## GEO AND WORK MODEL INFERENCE
+
+The location in Pune, Maharashtra, India, combined with an on-site work model, suggests a specific geographic constraint. The role appears limited to candidates within the same country, with no indication of remote or hybrid work options.
+
+Timezone focus seems centered on the India region, though no explicit timezone requirements are specified. The absence of relocation requirements implies candidates should already be based in the Pune area.
+
+## VISA AND AUTHORIZATION INFERENCE
+
+The job posting lacks clear visa sponsorship information, making it challenging to determine international candidate eligibility. With no explicit mention of visa support, the most conservative inference is that visa sponsorship is not available.
+
+Work authorization appears to be a standard requirement, though no specific citizenship constraints are outlined. The role seems open to candidates with appropriate work permissions, without additional nationality restrictions.
+
+## CONTRACT AND COMPENSATION INFERENCE
+
+The employment structure suggests a traditional W2 full-time position, typical for corporate roles at established companies like IBM. However, the absence of detailed compensation information leaves some uncertainty about the exact employment terms.
+
+Benefits remain unspecified, with no clear indication of the compensation package beyond the base employment type.
+
+## CAREER DEVELOPMENT INFERENCE
+
+Career growth opportunities appear limited, with no explicit advancement paths or mentorship programs mentioned. The role seems focused on immediate technical execution rather than long-term professional development.
+
+The absence of clear promotion or internal mobility signals suggests a more static career trajectory within the current position.
+
+## REQUIREMENTS CLASSIFICATION
+
+The job requirements demonstrate a balanced approach, with a clear distinction between essential and preferred qualifications. The technical skills are specific but not overly restrictive, indicating a pragmatic hiring strategy.
+
+The scope appears well-defined, centered on business intelligence and dashboard development, without unnecessary complexity or multi-role expectations.
+
+Skill requirements seem appropriate for the stated position, without evidence of unrealistic or inflated expectations.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.6,
+        "evidence": "Data Engineer-Business Intelligence title without seniority modifier, but technical requirements (Tableau, SQL, Oracle, Hive) and end-to-end feature development responsibility suggest mid-level experience rather than entry-level",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "analytics_engineer",
+        "confidence": 0.9,
+        "evidence": "Title explicitly mentions 'Business Intelligence', role focuses on Tableau dashboards, analytics, and translating business requirements to technical dashboard structures",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "bi_engineer",
+        "confidence": 0.85,
+        "evidence": "Heavy emphasis on Tableau Desktop & Server, dashboard development, analytics, and business requirements translation - core BI engineering functions",
+        "source": "pass1_derived"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.8,
+        "evidence": "No mention of direct reports, team leadership, or people management responsibilities - focus is on individual technical work and feature development",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No cloud providers mentioned in job posting - tools mentioned (Tableau, SQL, Oracle, Hive) are platform-agnostic",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No cloud providers mentioned at all",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No mention of streaming, real-time, batch processing, or data pipeline orchestration - focus is on dashboard development and analytics",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No workflow orchestration tools mentioned (Airflow, etc.) - role focuses on dashboard development rather than pipeline management",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No specific data storage systems mentioned beyond SQL databases (Oracle) and Hive - no warehouse, lake, or lakehouse patterns discussed",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.85,
+        "evidence": "Location specified as Pune, Maharashtra, India with onsite work model - suggests candidates must be in India",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.8,
+        "evidence": "Location in Pune, India suggests India timezone focus, though no explicit timezone requirements mentioned",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "Must already be located in Pune, Maharashtra, India - no mention of relocation packages or moving assistance",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No visa sponsorship mentioned in job posting, and role is based in India which would not typically involve H1B visa",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "No mention of student visa support (OPT/CPT), and location in India suggests this is not a US-based position",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.7,
+        "evidence": "No citizenship restrictions mentioned, but role in India would require appropriate work authorization for India",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.8,
+        "evidence": "IBM Consulting position typically indicates full-time employment with benefits, consistent with W2 employment structure",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No benefits mentioned in job posting - no health insurance, PTO, retirement plans, or other compensation details provided",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No career progression, advancement opportunities, or growth paths mentioned in job description",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No mentorship programs, working with senior staff, or learning opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No promotion, advancement, or career progression mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of internal transfers, role changes, or mobility opportunities",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No career tracks, paths, or advancement opportunities mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.7,
+        "evidence": "Clear must-have technical skills listed (Tableau, SQL, Oracle, Hive) with preferred education level - balanced between requirements and preferences",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.8,
+        "evidence": "Focused role on Business Intelligence and Tableau dashboard development with specific technical requirements and responsibilities",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "Skills listed (Tableau, SQL, Oracle, Hive) are appropriate for mid-level BI/data engineering role, no unrealistic combinations or excessive requirements",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

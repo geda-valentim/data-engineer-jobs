@@ -1,0 +1,274 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 16:01:33",
+    "job_posting_id": "4325839660",
+    "job_title": "Data Engineer",
+    "company_name": "Quest Global",
+    "job_location": "Bengaluru, Karnataka, India",
+    "pass_name": "pass3",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 2,
+          "confidence": 0.75,
+          "evidence": "Basic ETL workflows and Tableau dashboards mentioned, but no modern data stack (dbt, Airflow, cloud data warehouses), no CI/CD, testing, or governance tools referenced. SharePoint and on-prem tools dominate, suggesting developing but not mature practices.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "developing",
+          "confidence": 0.75,
+          "evidence": "Matches score of 2 - basic automation and tools in place but lacking modern data engineering practices and governance.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.8,
+          "evidence": "No signals of modern data stack, CI/CD, data quality testing, monitoring, or governance. Tools mentioned are legacy or general-purpose (SharePoint, MySQL, Tableau).",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.75,
+          "confidence": 0.85,
+          "evidence": "Role combines data engineering (ETL, pipelines) with SharePoint customization, Power Platform development, and full-stack web development (HTML, JS, Python, .NET, Node.js). This is a multi-role position requiring DE + low-code dev + web dev skills.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.65,
+          "confidence": 0.7,
+          "evidence": "Mentions 'strict delivery timelines' and onsite work in Bengaluru, suggesting pressure to deliver. No PTO or work-life balance signals mentioned. Startup-like urgency implied by 'dynamic' and 'hunger' culture.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "multi_role",
+          "confidence": 0.9,
+          "evidence": "Job responsibilities span data pipelines, Tableau, SharePoint, Power Apps, Power Automate, and full-stack web development - clearly multiple distinct roles combined into one.",
+          "source": "pass1_derived"
+        },
+        "overall_red_flag_score": {
+          "value": 0.7,
+          "confidence": 0.75,
+          "evidence": "High scope creep (0.75), moderate overtime risk (0.65), multi-role definition, and no benefits or compensation details. Requirement strictness is moderate (3-6 years) but skill inflation is high due to breadth.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No mention of who the Data Engineer reports to or any team structure. Only 'join our team' is implied without specifics.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No managerial titles or reporting lines mentioned in job description or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "unknown",
+          "confidence": 0.6,
+          "evidence": "No signals of team size, growth, or hiring velocity. Company has 21,000 employees but no data team size mentioned.",
+          "source": "inferred"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.5,
+          "evidence": "No information about team size, composition, or seniority mix provided in job posting.",
+          "source": "not_mentioned"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No reporting structure specified - no mention of CTO, Director, Manager, or Tech Lead.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "No mention of working with product teams, PMs, or cross-functional collaboration. Role appears to be centralized within engineering services.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.35,
+          "confidence": 0.7,
+          "evidence": "No PTO, flexible work, or work-life balance signals mentioned. 'Strict delivery timelines' and onsite work in Bengaluru suggest pressure. Culture emphasizes 'hunger' and 'aspiration' which may imply high expectations.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.45,
+          "confidence": 0.65,
+          "evidence": "No learning budget, conferences, mentorship, or career paths mentioned. Company culture mentions 'aspiration' but no concrete growth opportunities. Team size and growth unknown.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.4,
+          "confidence": 0.75,
+          "evidence": "Legacy tools (SharePoint, MySQL) dominate, no modern stack or engineering practices (CI/CD, testing, code review) mentioned. No signals of innovation, open source, or tech blogs.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.95,
+          "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.95,
+          "evidence": "No development practices (code review, CI/CD, testing, monitoring, postmortems) mentioned in job description.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.7,
+          "evidence": "Focus on maintaining and optimizing existing systems (SharePoint, ETL) with no mention of new tech exploration or R&D. 'Doing things differently' is cultural but not technical.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of tech debt, refactoring, or modernization efforts. Responsibilities focus on development and maintenance without quality improvement emphasis.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.95,
+          "evidence": "No ML/AI mentioned in job description or Pass 1 extraction. No tools like MLflow, SageMaker, or feature stores referenced.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No ML/AI tools mentioned or implied in job requirements.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "normal",
+          "confidence": 0.8,
+          "evidence": "No 'ASAP', 'immediate start', or 'urgent' language. Standard hiring timeline implied by lack of urgency signals.",
+          "source": "inferred"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.65,
+          "evidence": "Location in Bengaluru (high competition tech hub), full-time role, no salary disclosed. Likely moderate competition due to location and broad requirements.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "established_tech",
+          "confidence": 0.85,
+          "evidence": "Over 25 years in business, 21,000+ employees, engineering services provider. Not a startup but established with large workforce.",
+          "source": "pass1_derived"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.7,
+          "evidence": "No signals of aggressive hiring or rapid expansion. Likely steady hiring to support existing operations.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No information about data or engineering team size provided in job posting.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No funding stage mentioned. Company is established with 25+ years, suggesting profitability or private funding.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No indication if this is a new headcount, backfill, or team expansion. Role appears to be ongoing need.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "established_company",
+        "data_focused_role",
+        "cloud_native"
+      ],
+      "strength_details": [
+        "Established company with 25+ years and 21,000+ employees",
+        "Role focused on data pipelines and analytics (ETL, Tableau)",
+        "Opportunity to work with modern tools like Databricks (nice-to-have)"
+      ],
+      "concern_categories": [
+        "scope_creep_risk",
+        "vague_requirements",
+        "overtime_likely",
+        "legacy_technology"
+      ],
+      "concern_details": [
+        "Role combines data engineering with SharePoint and full-stack web development - high scope creep risk",
+        "Vague requirements with broad skill set (Python, .NET, SharePoint, Tableau, Power Platform)",
+        "Strict delivery timelines and onsite work suggest overtime likely",
+        "Heavy reliance on legacy tools (SharePoint, MySQL) with no modern data stack mentioned"
+      ],
+      "best_fit_categories": [
+        "mid_level_engineers",
+        "data_generalists",
+        "startup_enthusiasts"
+      ],
+      "best_fit_details": [
+        "Mid-level engineers (3-6 years) comfortable with broad responsibilities",
+        "Generalists who can handle data, web, and low-code development",
+        "Candidates seeking established company with diverse projects"
+      ],
+      "probe_categories": [
+        "role_scope_boundaries",
+        "work_hour_expectations",
+        "tech_stack_details"
+      ],
+      "probe_details": [
+        "Clarify boundaries between data engineering, SharePoint, and web development responsibilities",
+        "Ask about typical work hours and overtime expectations given 'strict delivery timelines'",
+        "Inquire about actual tech stack beyond listed tools - is there a data warehouse or modern pipeline tooling?"
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "rare_skill_match"
+      ],
+      "leverage_details": [
+        "Strong SharePoint and Power Platform experience is valuable for this role",
+        "Experience with both data pipelines and web development is a differentiator"
+      ],
+      "overall_assessment": "Opportunity for mid-level data engineers seeking broad responsibilities in an established company. Role combines data engineering with SharePoint and web development, creating scope creep risk. Limited modern tech stack and no work-life balance signals. Best for generalists comfortable with legacy tools and tight deadlines.",
+      "recommendation_score": 0.55,
+      "recommendation_confidence": 0.7
+    },
+    "tokens": 12467,
+    "input_tokens": 9749,
+    "output_tokens": 2718,
+    "cost": 0.015185
+  }
+}

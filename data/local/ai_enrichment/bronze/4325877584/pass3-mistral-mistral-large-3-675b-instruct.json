@@ -1,0 +1,281 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 18:29:28",
+    "job_posting_id": "4325877584",
+    "job_title": "Data Engineer-Data Integration",
+    "company_name": "IBM",
+    "job_location": "Kochi, Kerala, India",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.75,
+          "evidence": "Mentions expertise in Informatica PowerCenter (a traditional but established ETL tool), Unix shell scripting, Python, and relational SQL. Also references 'Big Data' and enterprise data warehousing (EDW/SOR), which are part of defined practices but lack explicit signals for modern governance or MLOps.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.75,
+          "evidence": "Score of 3 aligns with 'defined' maturity level. The role involves documented processes and some governance (e.g., EDW/SOR knowledge), but no mention of advanced practices like data mesh or lineage tracking.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "data_warehousing",
+            "batch_processing",
+            "enterprise_tools"
+          ],
+          "confidence": 0.8,
+          "evidence": "Explicit mention of 'Data warehousing', 'Informatica PowerCenter', and 'Big Data' suggests enterprise-grade tools and practices. However, no modern stack tools (e.g., Snowflake, dbt, Airflow) or governance signals are present.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "Role combines data engineering with responsibilities like 'implementing and validating predictive models' and 'enterprise search applications (Elasticsearch/Splunk)', which overlap with ML engineering and DevOps/analytics tasks. This suggests moderate scope creep risk.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.4,
+          "confidence": 0.65,
+          "evidence": "Job posting mentions 'deep technical and industry expertise' and client-facing delivery, which may imply tight deadlines or occasional overtime. No explicit work-life balance signals or PTO policies are mentioned to mitigate this risk.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "multi_role",
+          "confidence": 0.7,
+          "evidence": "Responsibilities span data engineering, ML model implementation, and enterprise search applications, indicating a combination of distinct roles.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.45,
+          "confidence": 0.75,
+          "evidence": "Moderate scope creep and overtime risk, but no severe red flags like unrealistic requirements or lack of role focus. Compensation and benefits are not disclosed, which adds to the risk.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit mention of reporting structure or manager in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No manager title or reporting line is mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No signals about team growth velocity or hiring trajectory beyond the current role.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.9,
+          "evidence": "No explicit team size or composition details provided in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No reporting structure details are mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "Job posting mentions working in 'IBM Consulting Client Innovation Centers' and collaborating with 'diverse teams', which implies cross-functional embedded work.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.5,
+          "confidence": 0.65,
+          "evidence": "Client-facing consulting role may involve tight deadlines, but no explicit negative signals (e.g., 'fast-paced', on-call) are mentioned. No protective signals (e.g., PTO, flexibility) are mentioned either.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.6,
+          "confidence": 0.7,
+          "evidence": "Job posting implies growth through 'deep technical and industry expertise' and client-facing innovation, but no explicit learning budget, mentorship, or career paths are mentioned.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.55,
+          "confidence": 0.75,
+          "evidence": "Mentions enterprise tools (Informatica, EDW/SOR) and hybrid processing, but lacks signals for modern dev practices (e.g., CI/CD, testing). No explicit tech culture signals like open source or innovation time.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No explicit tech culture signals (e.g., open source, hackathons) are mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.85,
+          "evidence": "No explicit development practices (e.g., code review, CI/CD) are mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.65,
+          "evidence": "Role focuses on client delivery and enterprise tools, with no mention of experimentation or innovation time.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of tech debt management, refactoring, or code quality improvement in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "basic_ml",
+          "confidence": 0.7,
+          "evidence": "Job posting mentions 'implementing and validating predictive models' and 'statistical models', but no advanced ML tools (e.g., MLflow, SageMaker) are explicitly required.",
+          "source": "inferred"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No explicit ML tools are mentioned in the job posting or Pass 1 extraction beyond basic model implementation.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit hiring urgency signals (e.g., 'immediate start', 'ASAP') are mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.6,
+          "evidence": "Location is Kochi, Kerala (India), which is a growing tech hub but not as competitive as global hotspots. No salary disclosure or 'Easy Apply' signals suggest medium competition.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.95,
+          "evidence": "IBM is a well-established global enterprise with a structured consulting delivery model. The role is part of their Client Innovation Centers, which are enterprise-grade operations.",
+          "source": "explicit"
+        },
+        "hiring_velocity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit signals about hiring velocity or role creation type in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit team size signals beyond the consulting delivery center context.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "IBM is a public company, but no funding stage signals are mentioned in the job posting or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of whether this is a new headcount, backfill, or team expansion.",
+          "source": "pass1_derived"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "established_company",
+        "data_focused_role",
+        "enterprise_tools"
+      ],
+      "strength_details": [
+        "IBM is a globally recognized enterprise with deep industry expertise and stability, offering exposure to large-scale client projects.",
+        "Role is clearly focused on data engineering and integration, with responsibilities aligned to core DE tasks (ETL, warehousing, Big Data).",
+        "Experience with enterprise-grade tools like Informatica PowerCenter, Elasticsearch, and Splunk can enhance your profile for future roles in regulated industries."
+      ],
+      "concern_categories": [
+        "scope_creep_risk",
+        "salary_not_disclosed",
+        "overtime_likely",
+        "unclear_reporting"
+      ],
+      "concern_details": [
+        "Role includes responsibilities overlapping with ML engineering (e.g., predictive models) and DevOps/analytics (e.g., Elasticsearch/Splunk), which may lead to scope creep.",
+        "No compensation details are disclosed, making it difficult to assess whether the pay is competitive for the Indian market or the enterprise consulting space.",
+        "Client-facing consulting roles often involve tight deadlines and may require overtime, especially in enterprise projects with strict deliverables.",
+        "Reporting structure and team composition are not explicitly mentioned, which could lead to ambiguity about leadership and collaboration expectations."
+      ],
+      "best_fit_categories": [
+        "mid_level_engineers",
+        "data_generalists",
+        "technical_specialists",
+        "career_changers"
+      ],
+      "best_fit_details": [
+        "Mid-level data engineers with 3-5 years of experience in ETL, data warehousing, and hybrid processing (batch + real-time).",
+        "Data generalists comfortable with enterprise tools and client-facing delivery, rather than specialists in cutting-edge cloud-native stacks.",
+        "Technical specialists looking to transition into consulting or gain experience with large-scale enterprise projects in India."
+      ],
+      "probe_categories": [
+        "role_scope_boundaries",
+        "work_hour_expectations",
+        "salary_range_details",
+        "team_size_composition",
+        "career_growth_path"
+      ],
+      "probe_details": [
+        "Ask for clarity on the boundaries of the role: How much of the work involves ML model implementation vs. pure data engineering?",
+        "Inquire about typical work hours and whether overtime is compensated or expected as part of client delivery commitments.",
+        "Request details on the salary range and benefits, as these are not disclosed in the posting. Compare with market rates for similar roles in Kochi.",
+        "Clarify the team composition: How many data engineers are in the Kochi delivery center, and what is the seniority mix?",
+        "Understand the career growth path: Are there opportunities to specialize further in data engineering or move into leadership/consulting tracks within IBM?"
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "domain_expertise"
+      ],
+      "leverage_details": [
+        "If you have hands-on experience with Informatica PowerCenter, Unix shell scripting, and Python, highlight this as an exact match for the core requirements.",
+        "Domain expertise in banking/financial services (e.g., HDFC Bank EDW/SOR) can be a strong differentiator and negotiation lever."
+      ],
+      "overall_assessment": "This role at IBM's Client Innovation Center in Kochi is a solid opportunity for mid-level data engineers with enterprise tooling experience (Informatica, EDW, Big Data). It offers stability and exposure to large-scale consulting projects but lacks clarity on compensation, work hours, and role boundaries. Candidates should probe these areas to avoid potential scope creep and ensure alignment with career goals.",
+      "recommendation_score": 0.6,
+      "recommendation_confidence": 0.75
+    },
+    "tokens": 13116,
+    "input_tokens": 10010,
+    "output_tokens": 3106,
+    "cost": 0.016222
+  }
+}

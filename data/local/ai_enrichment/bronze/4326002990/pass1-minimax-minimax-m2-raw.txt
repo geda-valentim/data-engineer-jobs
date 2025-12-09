@@ -1,0 +1,159 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules. Let me go through each section systematically.
+
+Looking at the job posting:
+
+**Title**: Data Engineer-Data Warehouse
+**Company**: IBM
+**Location**: Kochi, Kerala, India
+
+Let me extract information section by section:
+
+1. **Compensation**: No salary information is mentioned, so all compensation fields should be null.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. So this should be "not_mentioned".
+
+3. **Work Model**: 
+   - Location is specified as "Kochi, Kerala, India" - this suggests onsite work
+   - No mention of remote or hybrid work
+   - Employment type is not explicitly mentioned, but this appears to be a full-time position based on context
+   - work_model_stated should be "onsite"
+   - employment_type_stated should be "not_mentioned" since it's not explicitly stated
+
+4. **Contract Details**: No mention of contract type, duration, etc. Should be "not_mentioned" for most fields.
+
+5. **Contractor Rates**: Not applicable since this doesn't appear to be a contractor position.
+
+6. **Skills Classification**: Let me analyze the skills mentioned:
+
+**Required Technical And Professional Expertise**:
+- "Good Hands-on experience in DBT is required" - This is a must-have hard skill (DBT)
+- "ETL DataStage and snowflake - preferred" - These are nice-to-have (preferred qualifier)
+- "Ability to use programming languages like Java, Python, Scala, etc., to build pipelines" - These are must-have (ability required)
+- "Ability to use Extract, Transform, and Load (ETL) tools" - This is must-have
+- "Ability to use leading edge tools such as Linux, SQL, Python, Spark, Hadoop and Java" - These are must-have
+
+**Preferred Technical And Professional Experience**:
+- "You thrive on teamwork and have excellent verbal and written communication skills" - This is a must-have soft skill (Communication, Team Collaboration)
+
+
+- "Ability to communicate with internal and external clients" - This is must-have soft skill (Communication)
+- "Ability to communicate results to technical and non-technical audience" - This is must-have soft skill (Communication)
+
+I'll continue analyzing the soft skills, focusing on communication abilities. The role requires strong communication skills across different audiences, emphasizing the importance of translating technical information for both technical and non-technical stakeholders. This highlights the need for versatile communication capabilities in the position.
+
+The job description reveals a comprehensive skill set spanning technical and interpersonal domains. Key technical competencies include data engineering tools like DBT, programming languages such as Java and Python, and data processing technologies like Spark and Hadoop. Soft skills emphasize collaborative teamwork and effective communication across diverse professional contexts.
+
+The role demands a multifaceted professional who can navigate complex data engineering challenges while maintaining clear, adaptable communication strategies. The position requires a Bachelor's degree in Computer Science or a related field, with a preference for candidates who can demonstrate strong technical and communication skills. The role emphasizes hands-on experience with data engineering tools like DBT, ETL DataStage, and Snowflake, alongside programming languages such as Java, Python, and Scala. The ideal candidate will have expertise in data pipeline development, ETL processes, and big data technologies like Spark and Hadoop.
+
+The position involves working in an Agile environment, collaborating with diverse teams to implement predictive models and enterprise search applications. Strong communication skills are essential for interacting with both internal and external clients, translating complex technical concepts for various audiences.
+
+The role is based in Kochi, Kerala, India, with no specific geographic restrictions mentioned. The company offers a standard benefits package, though specific details are not provided in the job description.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Kochi, Kerala, India",
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "DBT",
+        "Java",
+        "Python",
+        "Scala",
+        "ETL",
+        "Linux",
+        "SQL",
+        "Spark",
+        "Hadoop",
+        "data pipelines",
+        "data integration",
+        "federation tools"
+      ],
+      "nice_to_have_hard_skills": [
+        "DataStage",
+        "Snowflake"
+      ],
+      "must_have_soft_skills": [
+        "Communication",
+        "Team Collaboration"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": "BACHELORS",
+      "education_area": "Computer Science",
+      "education_requirement": "required",
+      "education_text_raw": "Bachelor's degree in Computer Science or related field required",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Work in an Agile, collaborative environment, partnering with other scientists, engineers, consultants and database administrators of all backgrounds and disciplines",
+      "company_description_text": "IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 37
+  }
+}
+```

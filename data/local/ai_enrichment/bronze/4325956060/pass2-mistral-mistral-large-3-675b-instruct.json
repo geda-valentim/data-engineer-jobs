@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 18:57:09",
+    "job_posting_id": "4325956060",
+    "job_title": "Data Engineer-Data Platforms",
+    "company_name": "IBM",
+    "job_location": "Bengaluru East, Karnataka, India",
+    "pass_name": "pass2",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.7,
+          "evidence": "Title is 'Data Engineer' without explicit senior/staff/principal qualifiers, and responsibilities include development, design, and support but no direct leadership or architectural oversight mentioned",
+          "source": "inferred"
+        },
+        "job_family": {
+          "value": "data_platform_engineer",
+          "confidence": 0.95,
+          "evidence": "Title is 'Data Engineer-Data Platforms', and responsibilities emphasize building data solutions for client delivery centers with a focus on distributed data processing and cloud platforms",
+          "source": "combined"
+        },
+        "sub_specialty": {
+          "value": "hybrid",
+          "confidence": 0.8,
+          "evidence": "Mentions both 'Apache Spark (PySpark)' for batch processing and 'Kafka' for streaming/realtime, with no clear emphasis on one paradigm",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.75,
+          "evidence": "Responsibilities include 'Lead the design and construction of new solutions' and 'provide regular support/guidance to project teams', but no direct reports or people management mentioned",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "multi",
+          "confidence": 0.9,
+          "evidence": "Pass 1 extraction lists AWS, Azure, and GCP as required skills with no primary cloud explicitly stated in the job posting",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "AWS, Azure, and GCP are all listed as required, but no additional clouds are mentioned",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.8,
+          "evidence": "Mentions 'Apache Spark' (batch) and 'Kafka' (streaming) in required skills, with no clear dominance of one paradigm",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No orchestration tools explicitly mentioned in the job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.7,
+          "evidence": "Mentions 'HDFS' (lake) and 'data warehousing concepts' (warehouse) in required skills, but no lakehouse-specific tools (Delta Lake, Iceberg, Hudi) are referenced",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.8,
+          "evidence": "Location is specified as 'Bengaluru East, Karnataka, India', implying a regional restriction (Bengaluru or nearby areas)",
+          "source": "inferred"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.9,
+          "evidence": "Location is restricted to India (Bengaluru), suggesting timezone alignment within the country",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "Location is specified as Bengaluru, but no relocation package or requirement is mentioned, implying candidates must already be in the region",
+          "source": "pass1_derived"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit mention of H1B sponsorship or visa support in Pass 1 extraction or job posting",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.6,
+          "evidence": "Job is located in India, and no signals about OPT/CPT or student visa support are present, but 'work authorization' is not explicitly restricted",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No discussion of citizenship or work authorization requirements in the job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "Employment type is 'full_time', but no contract specifics (W2, 1099, C2C) are mentioned for India-based roles",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits are mentioned in Pass 1 extraction or the job posting",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.6,
+          "evidence": "Mentions 'continuous improvements' and 'maximize and build creative solutions', but no explicit career tracks or promotion ladders are discussed",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Job posting mentions delivering 'deep technical and industry expertise' and working with 'project teams', suggesting collaboration with senior engineers",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of promotions or advancement paths in the job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No discussion of internal mobility or role changes in the job posting or Pass 1 extraction",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No explicit or implied career tracks (IC, management, specialist, architect) are mentioned",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.7,
+          "evidence": "Pass 1 extraction shows a clear distinction between 'must_have_hard_skills' and 'nice_to_have_hard_skills', with a balanced but not overly strict list of requirements",
+          "source": "pass1_derived"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.8,
+          "evidence": "Job posting describes focused responsibilities around data engineering and platform development, with no ambiguity or multi-role overlap",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.7,
+          "evidence": "Required skills align with mid-level data engineering roles, and no unrealistic expectations (e.g., 10+ years for mid-level) are detected",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7945,
+    "input_tokens": 6101,
+    "output_tokens": 1844,
+    "cost": 0.009789
+  }
+}

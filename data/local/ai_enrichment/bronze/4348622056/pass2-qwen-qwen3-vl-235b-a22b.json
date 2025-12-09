@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 17:41:32",
+    "job_posting_id": "4348622056",
+    "job_title": "Data Engineer-Data Platforms-Google",
+    "company_name": "IBM",
+    "job_location": "Hyderabad, Telangana, India",
+    "pass_name": "pass2",
+    "model_id": "qwen.qwen3-vl-235b-a22b"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "associate",
+          "confidence": 0.85,
+          "evidence": "Title is 'Associate Software Developer' at IBM, which typically corresponds to entry-level or associate roles in their hierarchy, despite the data engineering responsibilities.",
+          "source": "pass1_derived"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.98,
+          "evidence": "Job title explicitly states 'Data Engineer', and responsibilities focus on data pipelines, storage, and processing.",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.75,
+          "evidence": "Mentions 'batch and real-time processing' but emphasizes database migration (Hadoop to GCP), CDC, and data replication — all batch/ETL-heavy tasks. Real-time is mentioned but not prioritized.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.8,
+          "evidence": "Role is 'Associate Software Developer' with no mention of managing teams, mentoring, or technical leadership responsibilities. Focus is on implementation and collaboration.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "gcp",
+          "confidence": 0.95,
+          "evidence": "Explicitly mentions 'Hadoop to GCP' migration and GCP as the target platform. No other cloud platforms are referenced.",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No other cloud platforms are mentioned in the job description or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.8,
+          "evidence": "Explicitly mentions 'both batch and real-time processing' in the responsibilities section.",
+          "source": "pass1_derived"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No orchestration tools like Airflow, Dagster, or cloud-native schedulers are mentioned in the job description or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.75,
+          "evidence": "Mentions Hadoop (lake-style) and GCP migration, which could involve both data lake and warehouse components. No specific storage layer (e.g., Delta Lake, Snowflake) is named.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.88,
+          "evidence": "Location is specified as 'Hyderabad, Telangana, India' and work model is 'onsite', implying physical presence in that region is required.",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.92,
+          "evidence": "Only India is mentioned as the allowed country, with no reference to global or multi-timezone teams.",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.85,
+          "evidence": "Onsite work model in Hyderabad implies relocation may be required for candidates not already based there.",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No visa sponsorship mentioned, and location is in India — H1B is a US visa, so not applicable.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.85,
+          "evidence": "OPT/CPT are US student visa categories; job is based in India, so not applicable.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "any",
+          "confidence": 0.88,
+          "evidence": "No citizenship or work authorization restrictions mentioned beyond location (India). Implies local work authorization is sufficient.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.9,
+          "evidence": "Employment type is 'full_time' and 'permanent', which in India typically corresponds to regular employment (W2 equivalent).",
+          "source": "inferred"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits, equity, learning budget, or PTO policies are mentioned in the job description or Pass 1 extraction.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "vague",
+          "confidence": 0.65,
+          "evidence": "Mentions 'modernization roadmap journey' and 'collaborative environment' but no explicit career tracks, promotion paths, or levels (e.g., Staff, Principal).",
+          "source": "inferred"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.75,
+          "evidence": "Mentions 'collaborating with diverse teams including scientists, engineers, consultants and database administrators' — implies learning from experienced colleagues, but no formal mentorship program.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of promotions, advancement, or career progression in the job description or Pass 1 extraction.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No mention of internal transfers, lateral moves, or exploring other roles within IBM.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.55,
+          "evidence": "No explicit mention of IC, management, specialist, or architect tracks. Role is entry-level ('Associate'), so tracks are not defined in the posting.",
+          "source": "inferred"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.73,
+          "evidence": "All skills are listed as 'must have' with no 'nice to have' — suggesting moderate strictness. However, no years of experience required, which softens the requirement.",
+          "source": "inferred"
+        },
+        "scope_definition": {
+          "value": "multi_role",
+          "confidence": 0.82,
+          "evidence": "Role combines data engineering (pipelines, migration), data science (predictive/statistical modeling), and even search engineering (Elasticsearch, Splunk) — indicating a hybrid or multi-role scope.",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": true,
+          "confidence": 0.75,
+          "evidence": "Associate-level role requiring skills like predictive modeling, machine learning, CDC, API development, and enterprise search — typically senior or specialized skills. No experience requirement listed, suggesting unrealistic expectations for entry-level.",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 7775,
+    "input_tokens": 5976,
+    "output_tokens": 1799,
+    "cost": 0.009574000000000001
+  }
+}

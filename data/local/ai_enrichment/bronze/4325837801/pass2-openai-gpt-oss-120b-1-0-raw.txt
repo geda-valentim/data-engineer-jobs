@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.86,
+        "evidence": "Job requires 5+ years of experience and responsibilities typical of a senior data engineer.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title and description explicitly refer to the role as a Data Engineer.",
+        "source": "inferred"
+      },
+      "sub_specialty": {
+        "value": "streaming_realtime",
+        "confidence": 0.71,
+        "evidence": "Description mentions both batch and real‑time processing of data.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.84,
+        "evidence": "No people‑management or direct‑report responsibilities are listed.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.93,
+        "evidence": "Job posting does not reference any cloud provider (AWS, Azure, GCP, etc.).",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.93,
+        "evidence": "No additional cloud platforms are mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "The role involves both batch and real‑time data processing.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.94,
+        "evidence": "No orchestration tool (Airflow, dbt, etc.) is referenced.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.94,
+        "evidence": "The posting does not specify a data warehouse, lake, or lakehouse technology.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.86,
+        "evidence": "Location is fixed to Bengaluru, India with no remote work language.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "apac",
+        "confidence": 0.86,
+        "evidence": "Job is based in India, which falls in the APAC timezone region.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.81,
+        "evidence": "No relocation assistance or requirement is mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.55,
+        "evidence": "Visa sponsorship is not mentioned; IBM India typically hires locally.",
+        "source": "inferred"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.55,
+        "evidence": "No reference to OPT/CPT eligibility.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.55,
+        "evidence": "No citizenship clause; standard work‑authorization requirement implied for India.",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.73,
+        "evidence": "IBM posting implies a full‑time employee role with no contract language.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.92,
+        "evidence": "Benefits array is empty and no perks are described.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "The posting does not discuss career progression or growth tracks.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "No mentorship or coaching programs are referenced.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.93,
+        "evidence": "No language about promotions or advancement is present.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.93,
+        "evidence": "No mention of internal transfers or mobility opportunities.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "The job description does not specify IC, management, specialist, or architect tracks.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.81,
+        "evidence": "Multiple mandatory hard‑skill requirements (Appian, BPM tools, databases) and 5+ years experience.",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.86,
+        "evidence": "The responsibilities focus specifically on data engineering and BPM workflow development.",
+        "source": "pass1_derived"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Required skills and experience level align with a senior data engineer role.",
+        "source": "inferred"
+      }
+    }
+  }
+}

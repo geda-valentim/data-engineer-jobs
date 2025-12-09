@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.85,
+        "evidence": "Minimum 5 years of experience is required, but the title is 'Data Engineer' without seniority prefix. The responsibilities align more with mid-level than senior (e.g., 'assist in designing', 'support development').",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title is 'Data Engineer' and core focus is on building data pipelines, ETL processes, and data platform components.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "hybrid",
+        "confidence": 0.80,
+        "evidence": "Responsibilities include both 'real-time streaming data pipelines' (Kafka) and 'batch data processing' (PySpark, Spark).",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.75,
+        "evidence": "Role emphasizes collaboration and assistance but does not mention direct reports, hiring, or formal leadership responsibilities.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.90,
+        "evidence": "Job posting mentions 'major cloud platforms such as AWS, Azure, or GCP' without specifying a primary cloud provider.",
+        "source": "inferred"
+      },
+      "secondary_clouds": {
+        "value": ["aws", "azure", "gcp"],
+        "confidence": 0.95,
+        "evidence": "AWS, Azure, and GCP are all mentioned as potential cloud platforms for deployment.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "Both 'real-time streaming data pipelines' (Kafka) and 'batch data processing' (PySpark, Spark) are mentioned.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.80,
+        "evidence": "Apache Airflow is mentioned under nice-to-have skills, and no other orchestrators are emphasized.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.80,
+        "evidence": "Mentions both 'data lakes' (S3, Blob Storage) and 'data warehouse solutions' (BigQuery, Redshift) in the job posting.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Location is specified as Bengaluru, but work model (remote/hybrid/on-site) is not discussed.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.70,
+        "evidence": "Job posting is for Bengaluru, India, implying a focus on candidates within the country or region.",
+        "source": "inferred"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No relocation package or requirement mentioned, and location is specified as Bengaluru.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of visa sponsorship in the job posting or Pass 1 extraction.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Minimum 5 years of experience required, which is unlikely for OPT/CPT candidates.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 1.0,
+        "evidence": "No discussion of citizenship or work authorization requirements in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Employment type is full-time but contract specifics (W2, C2C, 1099) are not mentioned.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits are mentioned in the Pass 1 extraction results.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit or implied career growth paths or tracks mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions collaborating with Integration Architects and Data Architects, which suggests learning from experienced team members.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of promotion or advancement paths in the job posting.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal mobility or role changes in the job posting.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No explicit career tracks (IC, management, specialist, architect) mentioned in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.80,
+        "evidence": "Must-have skills are clearly defined and extensive, with no nice-to-have skills explicitly listed beyond 'NA'.",
+        "source": "pass1_derived"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Job description is focused on data engineering tasks with well-defined responsibilities like ETL, pipelines, and cloud data solutions.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "Minimum 5 years of experience aligns reasonably with mid-level data engineering responsibilities and skills.",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

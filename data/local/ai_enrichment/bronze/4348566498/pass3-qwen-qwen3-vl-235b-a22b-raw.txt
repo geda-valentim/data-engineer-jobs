@@ -1,0 +1,233 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Focus on Cognos, DataStage, Informatica, and UNIX suggests legacy BI/DW stack with batch processing. No mention of modern data stack tools (dbt, Airflow, Snowflake), data quality testing, or governance practices.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2 - basic ETL pipelines and reporting tools with some cloud exposure as nice-to-have, but no evidence of mature data practices.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["cloud_native"],
+        "confidence": 0.65,
+        "evidence": "AWS, Azure, and GCP mentioned as preferred experience, indicating some cloud adoption, but no evidence of modern data stack or governance.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.25,
+        "confidence": 0.85,
+        "evidence": "Role is focused on BI/DW reporting, visualization, and ETL with specific tool requirements (Cognos, DataStage). No conflation with ML, DevOps, or backend development.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "Onsite work model in Pune, India with no PTO or work-life balance signals mentioned. IBM delivery center environment may imply client-driven deadlines.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Well-defined responsibilities focused on BI/DW reporting, visualization, and ETL with specific tool requirements (Cognos, UNIX, DataStage).",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Moderate risk - clear role definition but legacy tech stack and onsite work model in India with no work-life balance signals.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "No specific reporting manager or team structure mentioned. Only reference to 'IBM Consulting Client Innovation Centers' without hierarchy details.",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No manager title or level mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.60,
+        "evidence": "No information about team size, growth trajectory, or hiring velocity provided.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.55,
+        "evidence": "No details about team size or composition provided in the job posting.",
+        "source": "not_mentioned"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No reporting structure details provided in the job posting.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Role is in IBM Consulting Client Innovation Centers (Delivery Centers) which typically implies centralized delivery team rather than embedded in cross-functional product teams.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.55,
+        "confidence": 0.70,
+        "evidence": "Onsite work model in Pune, India with no mention of PTO, flexible hours, or work-life balance. IBM delivery center environment may imply client-driven deadlines.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.60,
+        "confidence": 0.65,
+        "evidence": "No explicit growth opportunities, learning budget, or career paths mentioned. IBM may offer internal mobility, but not stated.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.50,
+        "confidence": 0.75,
+        "evidence": "Legacy tech stack (Cognos, DataStage) with some cloud exposure as nice-to-have. No mention of modern engineering practices, CI/CD, or testing.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.90,
+        "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.90,
+        "evidence": "No mention of code review, CI/CD, monitoring, incident response, or design docs.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.70,
+        "evidence": "Focus on maintaining and evolving existing BI/DW systems with legacy tools. No mention of innovation, experimentation, or new tech exploration.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of tech debt management, refactoring, or modernization efforts.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of ML, AI, or GenAI in the job description or requirements.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools mentioned in the job description.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mention of immediate start, ASAP, or urgent hiring needs.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "IBM is a well-known company with likely moderate competition for this role in Pune, India. No application count or Easy Apply mentioned.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a well-established, large technology company with global presence and long history.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "IBM likely has regular hiring for delivery centers, but no specific expansion or aggressive hiring signals mentioned.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No information about team size provided in the job posting.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.95,
+        "evidence": "IBM is a publicly traded company with stable funding.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No information about whether this is a new headcount, backfill, or team expansion.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["well_defined_role", "established_company", "data_focused_role"],
+    "strength_details": [
+      "Clear responsibilities focused on BI/DW reporting and ETL with specific tool requirements",
+      "Established company (IBM) with global presence and stability",
+      "Role is specifically data-focused with no scope creep into other engineering domains"
+    ],
+    "concern_categories": ["legacy_technology", "no_visa_sponsorship", "limited_growth", "on_call_expected"],
+    "concern_details": [
+      "Legacy tech stack (Cognos, DataStage) with limited modern cloud exposure",
+      "Location restricted to Pune, India - no visa sponsorship mentioned",
+      "Limited growth opportunities and innovation signals in job description",
+      "Onsite work model may imply client-driven deadlines and potential overtime"
+    ],
+    "best_fit_categories": ["mid_level_engineers", "batch_etl_specialists", "cloud_specialists"],
+    "best_fit_details": [
+      "Mid-level engineers with 3+ years experience in BI/DW and Cognos/DataStage",
+      "Candidates seeking stable roles in established companies with legacy systems",
+      "Engineers with some cloud exposure (AWS/Azure/GCP) who can adapt to legacy environments"
+    ],
+    "probe_categories": ["tech_stack_details", "work_hour_expectations", "career_growth_path"],
+    "probe_details": [
+      "Ask about the actual tech stack and modernization plans for the BI/DW environment",
+      "Understand expected work hours and any on-call or overtime requirements",
+      "Inquire about career progression opportunities within IBM's delivery centers"
+    ],
+    "leverage_categories": ["exact_experience_match", "domain_expertise"],
+    "leverage_details": [
+      "Strong Cognos and DataStage experience is a key differentiator for this role",
+      "Experience with IBM tools and delivery center environments is valuable"
+    ],
+    "overall_assessment": "Stable opportunity for mid-level data engineers seeking roles in established companies with legacy BI/DW systems. Clear role definition and IBM's stability are strengths, but the legacy tech stack and limited growth signals are concerns. Best suited for candidates with specific Cognos/DataStage experience who value stability over innovation.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.75
+  }
+}

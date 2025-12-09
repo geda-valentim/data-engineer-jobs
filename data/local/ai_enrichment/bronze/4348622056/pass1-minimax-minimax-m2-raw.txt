@@ -1,0 +1,218 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through the job posting systematically and extract only explicitly stated information.
+
+Looking at the job posting:
+
+**Title**: Data Engineer-Data Platforms-Google
+**Company**: IBM
+**Location**: Hyderabad, Telangana, India
+
+Let me analyze each section:
+
+1. **Compensation**: No salary information is mentioned, so all compensation fields should be null.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. This should be "not_mentioned".
+
+3. **Work Model**: 
+   - Location is specified as "Hyderabad, Telangana, India" - this suggests onsite work
+   - No mention of remote or hybrid work options
+   - This appears to be a full-time position based on the context
+   - work_model_stated should be "onsite"
+   - employment_type_stated should be "full_time"
+
+4. **Contract Details**: No mention of contract type, duration, etc. This should be "not_mentioned" for contract_type and other fields.
+
+5. **Contractor Rates**: Not applicable as this appears to be a full-time employee position.
+
+6. **Skills Classification**:
+   - Let me look for hard skills mentioned:
+     - "Hadoop to GCP" - database migration
+     - "Data Replication mechanism (CDC, file data transfer, bulk data transfer, etc.)"
+     - "API" - exposing data as API
+     - "Elasticsearch and Splunk" - enterprise search applications
+     - "statistical and machine learning techniques"
+     - "predictive or prescriptive models"
+     - "Agile" - methodology
+     - "big data"
+     - "database integration"
+     - "unstructured data sets"
+   
+   I need to classify these as must-have vs nice-to-have based on the qualifiers used. Looking at the text:
+   - "Required Technical And Professional Expertise" section contains skills that seem to be must-haves
+   - "Preferred Technical And Professional Experience" contains skills that are preferred/nice-to-have
+   
+   Let me analyze the qualifiers:
+   - In "Required" section: "Develop/Convert the database", "Implementation of", "Expose data as API", "Participation in", "Analyze", "Lead", "Identification of", "Analyze the non-functional requirements", "Prepare the effort estimates", "Leads the team" - these are strong requirements
+   - In "Preferred" section: "You thrive on teamwork and have excellent verbal and written communication skills" - this has strong qualifiers for soft skills
+
+   For hard skills in the "Required" section, these appear to be must-have:
+   - Database migration (Hadoop to GCP)
+   - Data Replication mechanisms
+   - API development
+   - Data analysis
+   - Workshop facilitation
+   - Dependency analysis
+   - Non-functional requirements analysis
+   - Effort estimation
+   - Team leadership
+
+   For hard skills in the "Preferred" section, these appear to be nice-to-have:
+   - Elasticsearch and Splunk
+   - Statistical and machine learning techniques
+   - Predictive modeling
+   - Agile methodology
+   - Big data processing
+   - Database integration
+   - Unstructured data processing
+
+   For soft skills:
+   - "excellent verbal and written communication skills" - this has strong qualifiers, so should be must-have
+   - "Ability to communicate with internal and external clients" - strong qualifier
+   - "Ability to communicate results to technical and non-technical audiences" - strong qualifier
+   - "You thrive on teamwork" - strong qualifier
+
+   Education:
+   - "Master's Degree Required" - this is explicitly stated as required
+   - No specific area mentioned, so education_area should be null
+
+   Experience:
+   - No specific years of experience mentioned
+
+   LLM/GenAI:
+   - No mention of LLMs, GenAI, or related technologies
+
+   Feature Store:
+   - No mention of feature stores
+
+7. **Geographic Restrictions**:
+   - Location is specified as "Hyderabad, Telangana, India"
+   - No mention of geographic restrictions or requirements
+   - This should be "not_mentioned" for geo_restriction_type
+
+8. **Benefits**:
+   - No benefits mentioned in the job posting
+   - All benefit fields should be null/false
+
+9. **Context**:
+   - Team info: "partnering with other scientists, engineers, consultants and database administrators of all backgrounds and disciplines"
+   - Company description: "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology"
+
+Let me now structure this into the JSON format:
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Hyderabad, Telangana, India",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Database migration",
+        "Hadoop to GCP conversion",
+        "Data Replication mechanisms",
+        "CDC",
+        "File data transfer",
+        "Bulk data transfer",
+        "API development",
+        "Data analysis",
+        "Workshop facilitation",
+        "Dependency analysis",
+        "Non-functional requirements analysis",
+        "Effort estimation",
+        "Team leadership"
+      ],
+      "nice_to_have_hard_skills": [
+        "Elasticsearch",
+        "Splunk",
+        "Statistical modeling",
+        "Machine learning techniques",
+        "Predictive modeling",
+        "Prescriptive modeling",
+        "Agile methodology",
+        "Big data processing",
+        "Database integration",
+        "Unstructured data processing"
+      ],
+      "must_have_soft_skills": [
+        "Communication",
+        "Team Collaboration",
+        "Analytical Skills"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "Master's Degree Required",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "partnering with other scientists, engineers, consultants and database administrators of all backgrounds and disciplines",
+      "company_description_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 45,
+    "fields_null": 31
+  }
+}
+```

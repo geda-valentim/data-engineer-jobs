@@ -1,0 +1,170 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.86,
+        "evidence": "Title is Associate and required 4-6 years of experience indicate a mid-level position.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Job title is \"Data Engineer\" and responsibilities focus on data pipelines and analytics.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "general",
+        "confidence": 0.71,
+        "evidence": "No specific mention of streaming, batch, or lakehouse; role covers broad data engineering and ML modeling tasks.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.92,
+        "evidence": "No reference to people management or direct reports; responsibilities are individual contributor focused.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.94,
+        "evidence": "Job description does not reference any cloud provider (AWS, Azure, GCP).",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.94,
+        "evidence": "No secondary cloud services are mentioned.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 0.93,
+        "evidence": "No explicit mention of streaming or batch processing technologies.",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.93,
+        "evidence": "No orchestration tools (Airflow, dbt, etc.) are referenced.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.93,
+        "evidence": "No data warehouse, lake, or lakehouse technologies are cited.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.9,
+        "evidence": "Location is specified as Toronto, Ontario, Canada and work model is onsite.",
+        "source": "combined"
+      },
+      "timezone_focus": {
+        "value": "americas",
+        "confidence": 0.9,
+        "evidence": "Toronto operates in the Eastern Time Zone (Americas).",
+        "source": "combined"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "Job is onsite in Toronto with no relocation language; assumes candidate is already in the area.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "Visa sponsorship field is \"not_mentioned\" in extraction.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of OPT/CPT eligibility; work authorization is implied.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No citizenship or work‑authorization restrictions are stated.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.95,
+        "evidence": "Employment type is full‑time permanent employee, indicating a W‑2 arrangement.",
+        "source": "combined"
+      },
+      "benefits_level": {
+        "value": "standard",
+        "confidence": 0.86,
+        "evidence": "Benefits listed (health, tuition reimbursement, accident/life insurance, retirement) represent a typical standard package.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.75,
+        "evidence": "Mentions training, coaching, and manager support but no explicit career ladder.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.71,
+        "evidence": "References collaboration with product team and senior staff, suggesting informal mentorship.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No language about promotion or advancement paths is present.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No mention of internal transfers or lateral moves.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [
+          "ic_track"
+        ],
+        "confidence": 0.62,
+        "evidence": "Only individual contributor responsibilities are described; no management track is referenced.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.86,
+        "evidence": "A long list of required hard and soft skills with no nice‑to‑have items.",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.9,
+        "evidence": "Job description focuses specifically on data engineering and ML modeling tasks.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Required skill set aligns with 4‑6 years of experience; not overly inflated.",
+        "source": "inferred"
+      }
+    }
+  }
+}

@@ -1,0 +1,233 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Mentions Cognos, ETL tools, and data warehousing, but lacks modern stack elements like dbt or Airflow. Processes seem defined but not fully automated.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.65,
+        "evidence": "Mentions cloud platforms (AWS, Google, Azure) as preferred experience, indicating some adoption of modern tools.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.20,
+        "confidence": 0.85,
+        "evidence": "Role is clearly defined as a Data Engineer focused on BI and reporting.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "Immediate start date and 'fast-paced' environment suggest potential for pressure, but no explicit mention of long hours.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "The job description provides a clear outline of responsibilities related to data engineering and BI.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.30,
+        "confidence": 0.75,
+        "evidence": "Low risk - well-defined role, but potential for time pressure due to immediate start.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "The job description does not specify who the role reports to.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No managerial title is mentioned in the job description.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "stable",
+        "confidence": 0.70,
+        "evidence": "The job description does not mention any significant team expansion plans.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.60,
+        "evidence": "No specific details about team size or composition are provided.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure is mentioned.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "The role focuses on BI and reporting, suggesting a centralized data team.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.50,
+        "confidence": 0.70,
+        "evidence": "No explicit work-life balance signals, but also no red flags like on-call requirements.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.60,
+        "confidence": 0.75,
+        "evidence": "No specific growth opportunities are mentioned, but the role could provide experience with cloud platforms.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.65,
+        "confidence": 0.75,
+        "evidence": "Mentions cloud platforms, but lacks details about engineering practices or innovation.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No signals of strong technical culture are present in the job description.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No development practices are explicitly mentioned.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.80,
+        "evidence": "The role focuses on maintaining existing reporting systems, with little mention of innovation.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of tech debt or refactoring.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of AI or ML in the job description.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML tools are mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.85,
+        "evidence": "The job description states 'ASAP' start date.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Location in India suggests moderate competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.80,
+        "evidence": "IBM is a well-established technology company.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "replacement",
+        "confidence": 0.75,
+        "evidence": "The job description does not indicate rapid expansion.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No information about team size is provided.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "profitable",
+        "confidence": 0.85,
+        "evidence": "IBM is a publicly traded, profitable company.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "backfill",
+        "confidence": 0.70,
+        "evidence": "The job description does not suggest a new role or team expansion.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["well_defined_role", "cloud_native", "established_company"],
+    "strength_details": [
+      "Clear role focused on Data Engineering and BI.",
+      "Opportunity to work with cloud platforms (AWS, Google, Azure).",
+      "Stable employment with a well-established company (IBM)."
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship", "vague_requirements"],
+    "concern_details": [
+      "Immediate start date suggests potential for time pressure.",
+      "No visa sponsorship is offered.",
+      "Lack of details about team structure and growth opportunities."
+    ],
+    "best_fit_categories": ["mid_level_engineers", "data_warehouse", "cloud_specialists"],
+    "best_fit_details": [
+      "Mid-level Data Engineers with 3+ years of experience.",
+      "Engineers with a background in data warehousing and BI.",
+      "Candidates with experience in cloud platforms."
+    ],
+    "probe_categories": ["reporting_structure", "team_size_composition", "work_hour_expectations"],
+    "probe_details": [
+      "Ask about the reporting structure and team dynamics.",
+      "Inquire about the size and composition of the data engineering team.",
+      "Clarify expectations regarding work hours and potential for overtime."
+    ],
+    "leverage_categories": ["domain_expertise"],
+    "leverage_details": [
+      "Experience with Cognos and data warehousing is highly relevant."
+    ],
+    "overall_assessment": "This is a solid opportunity for a mid-level Data Engineer with a background in BI and data warehousing. The role offers exposure to cloud platforms and stability with a large company. However, candidates should be prepared for a potentially fast-paced environment and clarify expectations regarding work-life balance.",
+    "recommendation_score": 0.68,
+    "recommendation_confidence": 0.80
+  }
+}
+```

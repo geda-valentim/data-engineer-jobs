@@ -1,0 +1,221 @@
+<reasoning>Let me analyze this job posting carefully to infer the job characteristics according to the rules provided.
+
+First, let me understand what I have:
+
+1. **Original Job Posting**: Data Engineer at Quest Global in Bengaluru, Karnataka, India
+2. **Pass 1 Extraction Results**: Contains various extracted information
+
+Let me go through each inference category:
+
+## SENIORITY AND ROLE
+
+### seniority_level
+- Title: "Data Engineer" 
+- Experience: 3-6 years
+- Looking at the hierarchy: intern < entry < associate < junior < mid < senior < staff < principal < distinguished
+- 3-6 years typically maps to mid-level positions
+- No "Senior" or "Junior" in title
+- Confidence: 0.7-0.9 for title OR years match strongly
+- This seems like a mid-level role based on 3-6 years experience
+- Value: "mid", confidence: 0.8, evidence: "3-6 years experience with Data Engineer title (no senior/junior qualifier)", source: "combined"
+
+### job_family
+- Title is "Data Engineer"
+- Core responsibilities: "Develop, maintain and optimize data pipelines, ETL workflows"
+- This is clearly a data engineer role
+- Value: "data_engineer", confidence: 0.95, evidence: "Title is Data Engineer with core focus on data pipelines and ETL", source: "pass1_derived"
+
+### sub_specialty
+- Responsibilities mention: "data pipelines, ETL workflows", "Tableau dashboards", "SharePoint customization"
+- Tools mentioned: MySQL, Python, PowerShell, SharePoint, PowerApps, Power Automate, HTML, CSS3, JavaScript, React, Angular, REST, APIs, Tableau
+- This seems like a general data engineering role with some web development and SharePoint integration
+- Not specifically streaming, batch, warehouse, etc. - more general
+- Value: "general", confidence: 0.7, evidence: "Mix of data engineering, web development, and SharePoint integration skills", source: "inferred"
+ 
+The leadership role appears to be a pure individual contributor position. The job description emphasizes technical execution without any management responsibilities. The focus is on hands-on technical work like developing data pipelines, creating dashboards, and building web applications. There's no indication of team leadership, mentoring, or direct report management. The role seems designed for someone who will work independently on technical projects, contributing through their expertise rather than through managing others.
+
+The technical infrastructure suggests a Microsoft-centric environment. SharePoint, PowerApps, and Power Automate indicate a strong Microsoft ecosystem presence. The lack of cloud provider references points to an on-premise or hybrid infrastructure approach. The role requires flexibility across multiple technology domains, from data engineering to web development.
+
+The work model remains ambiguous, with no explicit remote or hybrid work policies specified. The location in Bengaluru implies potential on-site expectations, though this isn't definitively stated.
+
+Visa and employment details are similarly unclear, with no specific sponsorship or contract type information provided. The role appears to be a standard full-time position without additional complexities.
+
+The compensation structure lacks transparency, with no salary, benefits, or equity information disclosed. This suggests a traditional employment approach where details would be discussed during the interview process.
+
+Career development opportunities seem limited, with no explicit growth paths or mentorship programs mentioned. The role appears focused on immediate technical execution rather than long-term professional advancement.
+
+The requirements appear moderately structured, balancing technical skills across multiple domains. While not overly restrictive, the role demands versatility in data engineering, web development, and Microsoft technologies.
+
+The scope suggests a clear, focused position centered on data engineering, with potential for cross-functional collaboration. Skill expectations seem reasonable for the specified experience level, avoiding unrealistic or inflated requirements.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.8,
+        "evidence": "3-6 years experience with Data Engineer title (no senior/junior qualifier), typical mid-level range",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title is Data Engineer with core focus on data pipelines, ETL workflows, and data management",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "general",
+        "confidence": 0.7,
+        "evidence": "Mix of data engineering, web development, SharePoint integration, and Tableau - no specific specialization mentioned",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "No mention of team leadership, mentoring, or direct reports - purely technical execution role",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No cloud providers mentioned - focus on on-premise technologies like SharePoint and traditional databases",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No cloud providers mentioned at all",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.75,
+        "evidence": "ETL workflows and data pipelines typically imply batch processing, no real-time/streaming mentioned",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No orchestration tools mentioned (Airflow, etc.)",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No specific data storage systems mentioned beyond MySQL database",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No work model or remote work policy mentioned in posting",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.9,
+        "evidence": "Location specified as Bengaluru, Karnataka, India - India timezone focus",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "Position located in Bengaluru, no mention of relocation requirements",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No visa sponsorship mentioned, position in India suggests local hiring",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "No mention of student visa support, position appears to be for local work authorization",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.8,
+        "evidence": "No citizenship requirements mentioned, likely requires work authorization in India",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No contract type or employment structure mentioned",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No benefits, compensation, or perks mentioned in posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No career growth, advancement, or development paths mentioned",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No mentorship programs or working with senior staff mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No promotion or advancement opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No internal transfers or role mobility mentioned",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No career tracks or paths mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.75,
+        "evidence": "Clear must-have vs nice-to-have distinction with specific technical requirements listed",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.8,
+        "evidence": "Focused Data Engineer role with well-defined responsibilities in data pipelines and web development",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "Reasonable skill requirements for 3-6 years experience level, no unrealistic expectations",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

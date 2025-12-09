@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 19:37:20",
+    "job_posting_id": "4348528723",
+    "job_title": "Data Engineer",
+    "company_name": "Accenture in India",
+    "job_location": "Bengaluru, Karnataka, India",
+    "pass_name": "pass2",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.85,
+          "evidence": "Minimum 5 years of experience is required, but the title is 'Data Engineer' without senior qualifiers, and responsibilities align with mid-level expectations (e.g., 'assist in designing', 'contribute to performance tuning').",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_platform_engineer",
+          "confidence": 0.75,
+          "evidence": "Title mentions 'Data Engineer' but description emphasizes 'Data Platform Engineer' with responsibilities like 'data platform blueprint and design', 'shaping data platform components', and collaboration with 'Integration Architects and Data Architects'.",
+          "source": "inferred"
+        },
+        "sub_specialty": {
+          "value": "hybrid",
+          "confidence": 0.8,
+          "evidence": "Both 'real-time streaming data pipelines' and 'batch data processing' are mentioned as responsibilities, with Kafka (streaming) and batch ETL tools (Informatica, Talend) listed.",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "tech_lead_ic",
+          "confidence": 0.7,
+          "evidence": "Responsibilities include 'performance tuning of Spark jobs', 'maintaining governance and data security practices', and collaboration with architects, suggesting technical leadership without direct people management.",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "multi",
+          "confidence": 0.9,
+          "evidence": "AWS, Azure, and GCP are all mentioned explicitly with no clear primary focus ('major cloud platforms such as AWS, Azure, or GCP').",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No secondary clouds beyond the primary three (AWS, Azure, GCP) are mentioned.",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "hybrid",
+          "confidence": 0.85,
+          "evidence": "Both 'real-time streaming data pipelines' (Kafka) and 'batch data processing' (Airflow, scheduled jobs) are mentioned as responsibilities.",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "airflow_like",
+          "confidence": 0.9,
+          "evidence": "Apache Airflow is explicitly mentioned as a data orchestration tool.",
+          "source": "pass1_derived"
+        },
+        "storage_layer": {
+          "value": "mixed",
+          "confidence": 0.8,
+          "evidence": "Mentions 'cloud-native data storage solutions such as S3, Blob Storage, Big Query, or Redshift', which includes both data lake (S3, Blob Storage) and warehouse (BigQuery, Redshift) patterns.",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_region",
+          "confidence": 0.85,
+          "evidence": "Location is explicitly stated as 'Bengaluru, Karnataka, India', implying a regional restriction.",
+          "source": "pass1_derived"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.9,
+          "evidence": "Location is restricted to 'Bengaluru, India', suggesting a focus on India (single country).",
+          "source": "inferred"
+        },
+        "relocation_required": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of relocation assistance or requirements, and location is explicitly Bengaluru.",
+          "source": "pass1_derived"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No explicit mention of visa sponsorship, and 'ext_visa_sponsorship_stated' is 'not_mentioned'.",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No signals indicating support for OPT/CPT or student visas, and minimum 5 years of experience suggests work authorization is expected.",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No discussion of citizenship or green card requirements in the posting or Pass 1 results.",
+          "source": "pass1_derived"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "Pass 1 states 'permanent' contract type, but this does not clearly map to W2 vs 1099 in the Indian context.",
+          "source": "pass1_derived"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.95,
+          "evidence": "No benefits are mentioned in the Pass 1 extraction or job posting.",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit or implied career growth paths or tracks are mentioned in the job posting.",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "implied",
+          "confidence": 0.7,
+          "evidence": "Mentions collaboration with 'Integration Architects and Data Architects', suggesting potential mentorship opportunities.",
+          "source": "inferred"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No explicit mention of promotions or advancement paths in the job posting.",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.95,
+          "evidence": "No discussion of internal mobility or role changes in the job posting.",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No explicit or implied career tracks (IC, management, specialist, architect) are mentioned beyond generic collaboration signals.",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "high",
+          "confidence": 0.8,
+          "evidence": "'Must have skills' section explicitly lists Databricks and 5+ years of experience as mandatory, with no 'nice to have' skills mentioned in the job posting (NA listed). Pass 1 extraction shows a clear distinction between must-have and nice-to-have skills.",
+          "source": "combined"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Job posting provides a focused description of data engineering responsibilities with specific tools and tasks (e.g., 'data pipelines', 'ETL processes', 'Databricks').",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.75,
+          "evidence": "Requirements align reasonably with mid-level seniority (5 years of experience, no unrealistic expectations for the role).",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8215,
+    "input_tokens": 6361,
+    "output_tokens": 1854,
+    "cost": 0.010069
+  }
+}

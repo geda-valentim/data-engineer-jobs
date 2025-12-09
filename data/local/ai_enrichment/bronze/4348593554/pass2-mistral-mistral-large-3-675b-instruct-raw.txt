@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.75,
+        "evidence": "Title mentions 'Data Engineer' and requires 'more than 6 years of experience' with specific technical skills like Python and Spark.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_platform_engineer",
+        "confidence": 0.90,
+        "evidence": "Title is 'Data Engineer-Data Platforms' and responsibilities include designing and developing customized systems for data platforms.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "general",
+        "confidence": 0.60,
+        "evidence": "Mentions 'Python and Spark' as core skills but no specific focus area like streaming, batch, or governance is emphasized.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.65,
+        "evidence": "Role involves leading feature development and debugging, suggesting technical leadership without explicit mention of direct reports.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.80,
+        "evidence": "AWS, GCP, and Azure are all mentioned as 'Good to Have' with no clear primary cloud provider.",
+        "source": "inferred"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No secondary clouds beyond the multi-cloud mention (AWS/GCP/Azure).",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "not_mentioned",
+        "confidence": 0.50,
+        "evidence": "No explicit mention of batch or streaming paradigms, only general Python/Spark experience.",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No orchestrator tools like Airflow, Luigi, or cloud-native orchestrators are mentioned.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No explicit mention of storage layers like warehouse, lake, or lakehouse.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Location is specified as Pune, but no remote work model or restrictions are discussed.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No timezone requirements or team distribution details are provided.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Location is Pune, India, but no relocation package or requirement is stated.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship is mentioned in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "No signals about OPT/CPT or student visa eligibility are present.",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No discussion of work authorization or citizenship requirements.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.70,
+        "evidence": "Job is stated as 'full_time' employment type with no contract details, implying W2 in India context.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "No benefits are mentioned in Pass 1 extraction results.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.65,
+        "evidence": "Mentions 'limitless career path' and 'access to latest education, tools and technology' but no explicit career tracks.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.60,
+        "evidence": "Role involves working in a 'Client Innovation Center' with senior expertise, suggesting potential mentorship opportunities.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No discussion of internal mobility or role changes.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.60,
+        "evidence": "Mentions 'limitless career path' which may imply IC track, but no explicit tracks like management or specialist are discussed.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.70,
+        "evidence": "Most skills are listed under 'must_have_hard_skills' with strict qualifiers like 'more than 6 years of experience'.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.75,
+        "evidence": "Job description focuses on data platform engineering with well-defined responsibilities like design and debugging.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.65,
+        "evidence": "Requirements align with senior-level expectations (6+ years, Python/Spark).",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

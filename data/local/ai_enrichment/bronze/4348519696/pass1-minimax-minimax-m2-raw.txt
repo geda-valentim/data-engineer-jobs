@@ -1,0 +1,200 @@
+<reasoning>Let me carefully analyze this job posting to extract the required information according to the rules. I need to go through each section systematically.
+
+First, let me identify the key information:
+
+**Title**: Data Engineer
+**Company**: Accenture in India
+**Location**: Bengaluru, Karnataka, India
+
+Now let me go through each section:
+
+1. **Compensation**: No salary information is mentioned in the posting, so salary_disclosed = false and all salary fields should be null.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. So visa_sponsorship_stated = "not_mentioned" and work_auth_text = null.
+
+3. **Work Model**: 
+   - Location is specified as "Bengaluru, Karnataka, India" but no mention of remote/hybrid/onsite work model
+   - No employment type mentioned (full-time, contract, etc.)
+   - So work_model_stated = "not_mentioned"
+
+4. **Contract Details**: No mention of contract type, duration, etc. So contract_type = "not_mentioned"
+
+5. **Contractor Rates**: No mention of contractor rates, so pay_type = "not_mentioned"
+
+6. **Skills Classification**: Let me analyze the skills mentioned:
+
+   **Must have skills**: "Databricks Unified Data Analytics Platform" - this is explicitly stated as "Must have skills"
+   
+   **Good to have skills**: "NA" - so no nice-to-have skills mentioned
+   
+   **Experience**: "Minimum 5 Year(s) Of Experience Is Required" and later "The candidate should have a minimum of 6 years of experience in Databricks Unified Data Analytics Platform"
+   - years_experience_min: 5 (from the main requirement)
+   - years_experience_max: null
+   - years_experience_text: "Minimum 5 Year(s) Of Experience Is Required"
+   
+   **Education**: "15 years full time education is required"
+   - This means 15 years of education, which typically means a bachelor's degree (12 years of schooling + 3 years of college)
+   - education_level: "BACHELORS" (inferred from 15 years)
+   - education_area: null (no specific field mentioned)
+   - education_requirement: "required"
+   - education_text_raw: "15 years full time education is required"
+   
+   **Technical Skills mentioned**:
+   - Py Spark, Spark
+   - AWS, Azure, GCP
+   - Big Data architectures
+   - S3, Blob Storage, Big Query, Redshift
+   - Apache Airflow
+   - Parquet, Avro, JSON
+   - Python
+   - SQL
+   - Kafka
+   - CI/CD pipelines
+   - DBT
+   - Informatica, Talend, Matillion
+   
+   I need to classify these skills based on the qualifiers used. Looking at the text:
+   - "Strong proficiency in Py Spark, Spark" - strong qualifier = must_have
+   - "Understanding of Big Data architectures" - no strong qualifier, but in technical skills section = must_have
+   - "Familiarity with cloud-native data storage solutions" - weak qualifier = nice_to_have
+   - "Experience with data orchestration tools like Apache Airflow" - no strong qualifier = must_have
+   - "Knowledge of data formats like Parquet, Avro, or JSON" - no strong qualifier = must_have
+   - "Strong coding skills in Python" - strong qualifier = must_have
+   - "Good understanding of SQL" - weak qualifier = nice_to_have
+   - "Experience with real-time data processing and Kafka" - no strong qualifier = must_have
+   - "Exposure to CI/CD pipelines" - weak qualifier = nice_to_have
+   - "Familiarity with DBT" - weak qualifier = nice_to_have
+   - "Experience with other ETL tools" - no strong qualifier = must_have
+
+   I'll continue analyzing the skills, focusing on the qualifiers and context to determine their classification. The key is to distinguish between must-have and nice-to-have skills based on the language used in the job description.
+
+   The soft skills section reveals collaborative and communication requirements. Teamwork, collaboration, and problem-solving emerge as critical competencies. These skills are essential for working effectively in a data engineering environment, requiring strong interpersonal and analytical capabilities.
+
+   The job description emphasizes cross-functional collaboration, highlighting the need for professionals who can work seamlessly across different teams and technical domains. Problem-solving and troubleshooting skills are particularly valued, indicating a need for individuals who can navigate complex technical challenges.
+
+   No specific certifications are mentioned, and the role does not involve language model or generative AI technologies. The position focuses on traditional data engineering skills and cloud platform expertise.
+
+   Geographic restrictions are not specified, suggesting a flexible approach to candidate location. The role appears to be open to global talent, with no explicit limitations on work authorization or regional constraints.
+
+   Benefits are not detailed in the provided context, leaving compensation and additional perks unspecified. The company description is minimal, providing only basic information about Accenture's presence in India.
+
+   The extraction process reveals a comprehensive data engineering role requiring diverse technical competencies across cloud platforms, data processing, and collaborative problem-solving.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Databricks Unified Data Analytics Platform",
+        "Py Spark",
+        "Spark",
+        "Big Data architectures",
+        "Apache Airflow",
+        "Parquet",
+        "Avro",
+        "JSON",
+        "Python",
+        "Kafka",
+        "ETL tools",
+        "Informatica",
+        "Talend",
+        "Matillion"
+      ],
+      "nice_to_have_hard_skills": [
+        "AWS",
+        "Azure",
+        "GCP",
+        "S3",
+        "Blob Storage",
+        "Big Query",
+        "Redshift",
+        "SQL",
+        "CI/CD pipelines",
+        "DBT"
+      ],
+      "must_have_soft_skills": [
+        "Team Collaboration",
+        "Problem Solving"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 5,
+      "years_experience_max": null,
+      "years_experience_text": "Minimum 5 Year(s) Of Experience Is Required",
+      "education_level": "BACHELORS",
+      "education_area": null,
+      "education_requirement": "required",
+      "education_text_raw": "15 years full time education is required",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Work as part of the data engineering team to build, maintain, and optimize scalable data pipelines for large-scale data processing. Collaborate with data scientists, analysts, and other engineers to ensure data accuracy and availability.",
+      "company_description_text": "Accenture in India"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 25
+  }
+}
+```

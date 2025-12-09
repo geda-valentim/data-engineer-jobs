@@ -1,0 +1,233 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Relies on Informatica PowerCenter (legacy ETL tool), mentions batch/stream processing but no modern orchestration (Airflow, Dagster) or data quality tools. Cloud migration mentioned but no specific modern stack (dbt, Snowflake).",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2 - basic pipelines with some cloud migration, but lacks modern tooling and governance practices.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["cloud_native"],
+        "confidence": 0.70,
+        "evidence": "Mentions 'Cloud' and 'Data migration on cloud' as required skills, indicating cloud adoption is underway.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.45,
+        "confidence": 0.80,
+        "evidence": "Role includes data engineering (pipelines, ETL) plus data science tasks (implementing predictive models, statistical modeling) and analytics (Power BI, Elasticsearch/Splunk), suggesting moderate scope creep.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.55,
+        "confidence": 0.70,
+        "evidence": "Onsite work model in Pune, India, with no PTO or work-life balance signals. IBM Consulting delivery centers often have client-driven deadlines, increasing overtime risk.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "vague",
+        "confidence": 0.75,
+        "evidence": "Responsibilities span data engineering, data science, and analytics without clear boundaries. Mentions 'implementing predictive models' which is typically a data scientist role.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.50,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to scope creep (DE + DS + analytics), vague role definition, and potential overtime in onsite delivery center environment.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "vague",
+        "confidence": 0.65,
+        "evidence": "Mentions working with 'diverse teams' but no specific reporting line or manager title mentioned.",
+        "source": "inferred"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No manager title or reporting structure specified in job posting.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.60,
+        "evidence": "No information about team size changes or hiring velocity. IBM Consulting typically has stable teams but no explicit signals.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.55,
+        "evidence": "Mentions 'collaborating with diverse teams' but no specific team size or composition details.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No reporting structure specified in job posting.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Mentions 'IBM Consulting Client Innovation Centers (Delivery Centers)' which typically implies centralized delivery teams rather than embedded cross-functional product teams.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.45,
+        "confidence": 0.70,
+        "evidence": "Onsite work model in Pune, no PTO or work-life balance mentions. IBM Consulting delivery centers often have client-driven deadlines and potential for overtime.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.60,
+        "confidence": 0.65,
+        "evidence": "IBM offers training programs but no specific learning budget or career path mentioned. Implied mentorship from working with diverse teams.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.55,
+        "confidence": 0.70,
+        "evidence": "Uses legacy tools (Informatica PowerCenter) with some cloud migration. No mention of modern practices like CI/CD, testing, or code reviews.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No mention of open source, tech blogs, conference speaking, hackathons, or innovation time.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.90,
+        "evidence": "No mention of code review, CI/CD, testing, monitoring, or other development practices.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.70,
+        "evidence": "Focus on implementing existing tools (Informatica, Power BI) rather than innovation. No mention of R&D or experimentation.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of tech debt, refactoring, or modernization efforts beyond cloud migration.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.75,
+        "evidence": "Mentions 'implementing predictive models' and 'statistical models' but no MLOps infrastructure or advanced ML tools. Working with data scientists suggests basic ML support.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "No specific ML tools mentioned (MLflow, SageMaker, etc.). Only general mention of predictive models.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No urgency signals like 'ASAP' or 'immediate start' mentioned.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "IBM is a well-known company in India with likely moderate competition for Pune-based roles. No application count or Easy Apply mentioned.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.95,
+        "evidence": "IBM is a well-established, global technology company with mature operations.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.70,
+        "evidence": "IBM Consulting typically hires steadily for delivery centers, but no specific expansion signals mentioned.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No team size mentioned in job posting.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "public",
+        "confidence": 0.95,
+        "evidence": "IBM is a publicly traded company with stable funding.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No indication whether this is a new headcount, backfill, or expansion role.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["established_company", "cloud_native", "data_focused_role"],
+    "strength_details": [
+      "Established company (IBM) with global reputation and stability",
+      "Cloud migration focus indicates modernization efforts",
+      "Core data engineering responsibilities despite some scope creep"
+    ],
+    "concern_categories": ["vague_requirements", "scope_creep_risk", "legacy_technology", "overtime_likely"],
+    "concern_details": [
+      "Role combines data engineering, data science, and analytics responsibilities",
+      "Uses legacy ETL tool (Informatica PowerCenter) with limited modern stack",
+      "Onsite work in Pune with no work-life balance signals, potential for overtime"
+    ],
+    "best_fit_categories": ["mid_level_engineers", "cloud_specialists", "data_generalists"],
+    "best_fit_details": [
+      "Mid-level engineers with 3-5 years experience comfortable with legacy tools",
+      "Candidates with cloud migration experience (Azure) and Informatica skills",
+      "Generalists who can handle both ETL and basic analytics/modeling tasks"
+    ],
+    "probe_categories": ["role_scope_boundaries", "tech_stack_details", "work_hour_expectations", "career_growth_path"],
+    "probe_details": [
+      "Clarify boundaries between data engineering and data science responsibilities",
+      "Ask about specific cloud tools and modernization roadmap beyond Informatica",
+      "Understand typical work hours and overtime expectations in delivery center",
+      "Inquire about career progression opportunities within IBM Consulting"
+    ],
+    "leverage_categories": ["exact_experience_match", "domain_expertise"],
+    "leverage_details": [
+      "Strong Informatica PowerCenter experience is a key differentiator",
+      "Azure cloud migration experience is valuable for this role"
+    ],
+    "overall_assessment": "Moderate opportunity for mid-level data engineers seeking stability at IBM. Role has some scope creep (DE + DS + analytics) and uses legacy tools, but offers cloud migration experience. Main concerns are vague role definition, potential overtime in onsite delivery center, and limited modern tech stack. Best for candidates with Informatica and Azure experience who value established company stability.",
+    "recommendation_score": 0.55,
+    "recommendation_confidence": 0.75
+  }
+}

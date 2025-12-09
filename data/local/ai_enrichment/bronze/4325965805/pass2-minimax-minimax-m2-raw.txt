@@ -1,0 +1,226 @@
+<reasoning>Let me analyze this job posting systematically to infer the job characteristics based on the Pass 1 extraction results and the original job posting.
+
+First, let me understand what we have:
+
+**Original Job Posting Analysis:**
+- Title: Data Engineer-Data Integration
+- Company: IBM
+- Location: Navi Mumbai, Maharashtra, India
+- Role: Data Engineer focusing on data warehousing, ETL, cloud data migration
+- Required skills: Informatica PowerCenter, Cloud, Power BI, Unix shell scripting, Python, SQL, Big Data
+- Preferred: MS-Azure Cloud, Informatica PowerCenter experience
+
+**Pass 1 Extraction Results:**
+- No salary information disclosed
+- No visa sponsorship mentioned
+- No work model specified
+- No employment type specified
+- Must-have skills: Data warehousing, Information Management, Data Integration, Business Intelligence, ETL tool Informatica PowerCenter, Cloud, Power BI, Data migration on cloud, Unix shell scripting, Python, relational SQL, Big Data
+- Nice-to-have skills: MS-Azure Cloud, Informatica PowerCenter
+- Must-have soft skills: Team Collaboration, Problem Solving
+- No certifications mentioned
+- No years of experience specified
+- No education requirements mentioned
+- No benefits mentioned
+- No equity mentioned
+- No learning budget mentioned
+- Team info: Collaborating with diverse teams, deciding data management systems
+
+Now let me make inferences for each category:
+
+**SENIORITY AND ROLE:**
+1. **seniority_level**: The title is "Data Engineer-Data Integration" without any seniority indicator like "Senior", "Junior", etc. The skills required are quite comprehensive (ETL, cloud, multiple programming languages, big data) which suggests this might be a mid to senior level role, but without explicit years of experience mentioned, I should be conservative. Let me go with "mid" level with moderate confidence.
+
+2. **job_family**: This is clearly a "data_engineer" role based on the title and responsibilities focused on data integration, ETL, and data warehousing.
+ 
+The role's sub-specialty centers on batch ETL and data integration, with a strong emphasis on Informatica PowerCenter and cloud data migration. The leadership expectation appears to be an individual contributor role, focusing on technical execution without direct management responsibilities.
+
+**STACK AND CLOUD:**
+The primary cloud infrastructure leans towards Azure, with secondary cloud options potentially including multi-cloud approaches. The processing paradigm seems to be primarily batch-oriented, with potential for hybrid processing methods. The orchestrator category suggests a preference for cloud-native solutions, with storage likely involving a mixed approach of data warehousing and lake technologies.
+
+**GEOGRAPHIC AND WORK MODEL:**
+The role appears to have specific geographic constraints, likely limited to India or the Asia-Pacific region. The timezone focus would align with the Asia-Pacific region, with no immediate relocation requirements indicated.
+
+**VISA AND AUTHORIZATION:**
+The position seems to have strict work authorization requirements, potentially limiting opportunities for international candidates. The role appears to be designed for local talent with existing work permissions.
+
+**CONTRACT AND COMPENSATION:**
+The employment structure suggests a full-time W2 position, with a standard benefits package. The compensation approach seems traditional, without significant additional perks or equity options.
+
+**CAREER DEVELOPMENT:**
+Growth opportunities appear limited, with minimal mentorship or clear advancement pathways. The role seems focused on individual contribution rather than professional development.
+
+**REQUIREMENTS CLASSIFICATION:**
+The role demands a high level of technical expertise, with clear and specific skill requirements. The scope is well-defined, targeting data integration professionals with precise technical competencies.
+</reasoning>
+
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "mid",
+        "confidence": 0.65,
+        "evidence": "Title is 'Data Engineer' without seniority indicator, but comprehensive skill requirements (ETL, cloud, multiple programming languages, big data) suggest mid-level rather than entry level",
+        "source": "inferred"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.95,
+        "evidence": "Title explicitly states 'Data Engineer', core responsibilities focus on data integration, ETL, data warehousing, and data migration",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "batch_etl",
+        "confidence": 0.82,
+        "evidence": "Primary focus on ETL tool Informatica PowerCenter, data warehousing, and data migration - classic batch ETL patterns",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.75,
+        "evidence": "No mention of team leadership, mentoring, or management responsibilities - pure individual contributor role",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.88,
+        "evidence": "MS-Azure Cloud mentioned as preferred experience, cloud skills required, data migration on cloud mentioned",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "Only Azure mentioned specifically, no other cloud providers referenced",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "batch",
+        "confidence": 0.78,
+        "evidence": "ETL tool Informatica PowerCenter is primarily batch-oriented, data warehousing suggests batch processing patterns",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific orchestration tools mentioned (Airflow, Spark, etc.)",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "warehouse",
+        "confidence": 0.72,
+        "evidence": "Data warehousing mentioned as core requirement, business intelligence focus suggests warehouse patterns",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.85,
+        "evidence": "Location specified as Navi Mumbai, Maharashtra, India - suggests on-site or local requirement",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "apac",
+        "confidence": 0.88,
+        "evidence": "Location in India (Navi Mumbai) indicates Asia-Pacific timezone focus",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Specific location already mentioned (Navi Mumbai), no relocation package or moving requirements stated",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No visa sponsorship mentioned, location in India suggests local hiring without international visa support",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No mention of student visa support, location in India suggests local work authorization requirements",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.75,
+        "evidence": "No citizenship requirements mentioned, but location specificity suggests work authorization in India required",
+        "source": "inferred"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No employment type or contract structure mentioned in posting",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits, equity, PTO, or compensation details mentioned in the posting",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No career progression, growth opportunities, or advancement paths mentioned",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No mentorship programs, working with senior staff, or learning opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No promotion, advancement, or career progression mentioned",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No internal transfers, role changes, or mobility opportunities mentioned",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No career tracks, paths, or advancement opportunities mentioned",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.82,
+        "evidence": "Long list of required technical skills with specific tools (Informatica PowerCenter), multiple programming languages, and comprehensive technical expertise expected",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.88,
+        "evidence": "Focused role on data engineering with clear responsibilities: data integration, ETL, data warehousing, and cloud migration",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.75,
+        "evidence": "Skill requirements appear reasonable for data engineering role, no unrealistic combinations or excessive years of experience demanded",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```

@@ -1,0 +1,278 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 20:02:40",
+    "job_posting_id": "4348593563",
+    "job_title": "Data Engineer-Business Intelligence",
+    "company_name": "IBM",
+    "job_location": "Pune, Maharashtra, India",
+    "pass_name": "pass3",
+    "model_id": "mistral.mistral-large-3-675b-instruct"
+  },
+  "result": {
+    "analysis": {
+      "company_maturity": {
+        "data_maturity_score": {
+          "value": 3,
+          "confidence": 0.75,
+          "evidence": "Job posting mentions IBM Consulting Client Innovation Centers with a focus on delivering deep technical and industry expertise, suggesting structured processes. However, the emphasis on legacy tools like Cognos, IBM InfoSphere DataStage, and Informatica PowerCenter indicates a mix of modern and older technologies, with no explicit mention of CI/CD, governance, or advanced practices.",
+          "source": "inferred"
+        },
+        "data_maturity_level": {
+          "value": "defined",
+          "confidence": 0.75,
+          "evidence": "Matches the data_maturity_score of 3, as there are documented processes and some technical expertise but inconsistent modernization signals.",
+          "source": "inferred"
+        },
+        "maturity_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No explicit mention of modern data stack adoption, CI/CD, data quality testing, or governance tools. Legacy BI tools are emphasized, but no signals of contemporary practices like dbt, Airflow, or data mesh patterns.",
+          "source": "pass1_derived"
+        }
+      },
+      "red_flags_and_role_quality": {
+        "scope_creep_score": {
+          "value": 0.3,
+          "confidence": 0.8,
+          "evidence": "Role combines BI-focused data engineering with some evolutionary maintenance and troubleshooting tasks, which may expand scope beyond pure DE responsibilities. However, it remains primarily within the BI/DW domain.",
+          "source": "inferred"
+        },
+        "overtime_risk_score": {
+          "value": 0.5,
+          "confidence": 0.7,
+          "evidence": "Mentions 'relentless focus on quality' and 'fast-paced client environment' suggest moderate time pressure. No protective factors like PTO or work-life balance are mentioned, increasing overtime risk.",
+          "source": "inferred"
+        },
+        "role_clarity": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Responsibilities are well-defined within BI/DW projects, reporting, and visualization, though some tasks like 'evolutionary maintenance' could be ambiguous.",
+          "source": "inferred"
+        },
+        "overall_red_flag_score": {
+          "value": 0.4,
+          "confidence": 0.75,
+          "evidence": "Moderate risk due to scope expansion, potential overtime, and lack of protective signals like PTO or work-life balance. However, role clarity and alignment with BI/DW focus mitigate some concerns.",
+          "source": "combined"
+        }
+      },
+      "stakeholders_and_leadership": {
+        "reporting_structure_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No explicit mention of reporting structure or manager title in the job posting.",
+          "source": "pass1_derived"
+        },
+        "manager_level_inferred": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No signals to infer manager level confidently.",
+          "source": "pass1_derived"
+        },
+        "team_growth_velocity": {
+          "value": "unknown",
+          "confidence": 0.9,
+          "evidence": "Job posting mentions working in a delivery center but does not provide explicit details about team growth velocity or current hiring trends.",
+          "source": "pass1_derived"
+        },
+        "team_composition": {
+          "value": {
+            "team_size": "not_mentioned",
+            "de_count": "not_mentioned",
+            "seniority_mix": "not_mentioned"
+          },
+          "confidence": 0.95,
+          "evidence": "No explicit team size, DE count, or seniority mix mentioned in the job posting.",
+          "source": "pass1_derived"
+        },
+        "reporting_structure": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "No reporting structure details provided in the job posting.",
+          "source": "pass1_derived"
+        },
+        "cross_functional_embedded": {
+          "value": true,
+          "confidence": 0.7,
+          "evidence": "Mentions developing and maintaining relationships with 'business and technical members of the team', implying cross-functional collaboration. However, no explicit mention of embedded team structure.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture": {
+        "work_life_balance_score": {
+          "value": 0.4,
+          "confidence": 0.7,
+          "evidence": "No PTO policy mentioned, but 'time management' and 'multi-tasking' are listed as required skills. The lack of explicit work-life balance signals and potential client-driven deadlines suggest moderate risk.",
+          "source": "inferred"
+        },
+        "growth_opportunities_score": {
+          "value": 0.5,
+          "confidence": 0.65,
+          "evidence": "Mentions 'relentless focus on quality and continuous improvement' and preferred cloud platforms, suggesting some growth opportunities. However, no explicit learning budget, mentorship, or career paths are mentioned.",
+          "source": "inferred"
+        },
+        "tech_culture_score": {
+          "value": 0.55,
+          "confidence": 0.7,
+          "evidence": "Role emphasizes technical execution and quality improvement but lacks modern engineering practices like CI/CD, testing, or documentation. Legacy tools dominate the stack, and no innovation or open-source signals are present.",
+          "source": "inferred"
+        }
+      },
+      "tech_culture_assessment": {
+        "tech_culture_signals": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.95,
+          "evidence": "No explicit mention of open-source contributions, tech blogs, conferences, or innovation time in the job posting.",
+          "source": "pass1_derived"
+        },
+        "dev_practices_mentioned": {
+          "value": [
+            "not_mentioned"
+          ],
+          "confidence": 0.9,
+          "evidence": "No development practices like code review, pair programming, TDD, or CI/CD explicitly mentioned. The focus is on tool-specific execution rather than broader engineering practices.",
+          "source": "pass1_derived"
+        },
+        "innovation_signals": {
+          "value": "low",
+          "confidence": 0.7,
+          "evidence": "Job posting emphasizes legacy tools and client-driven projects with no mention of experimentation, R&D, or innovation culture.",
+          "source": "inferred"
+        },
+        "tech_debt_awareness": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No explicit mention of tech debt management, refactoring, or code quality improvement beyond generic 'continuous improvement' phrasing.",
+          "source": "inferred"
+        }
+      },
+      "ai_ml_integration": {
+        "ai_integration_level": {
+          "value": "none",
+          "confidence": 0.95,
+          "evidence": "No mention of ML/AI tools, frameworks, or responsibilities in the job posting.",
+          "source": "pass1_derived"
+        },
+        "ml_tools_expected": {
+          "value": [],
+          "confidence": 0.95,
+          "evidence": "No ML/AI tools or frameworks mentioned or inferred.",
+          "source": "pass1_derived"
+        }
+      },
+      "competition_and_timing": {
+        "hiring_urgency": {
+          "value": "normal",
+          "confidence": 0.7,
+          "evidence": "Job posting does not mention immediate or ASAP start, but the focus on client-driven projects may imply standard urgency for filling the role.",
+          "source": "inferred"
+        },
+        "competition_level": {
+          "value": "medium",
+          "confidence": 0.65,
+          "evidence": "Location is Pune (a major tech hub in India with high talent supply), and no salary transparency or remote flexibility signals are present. However, the lack of 'Easy Apply' and specific competition details limit confidence.",
+          "source": "inferred"
+        }
+      },
+      "company_context": {
+        "company_stage_inferred": {
+          "value": "enterprise",
+          "confidence": 0.95,
+          "evidence": "IBM is a well-established, large-scale enterprise with global operations and a structured consulting delivery model.",
+          "source": "inferred"
+        },
+        "hiring_velocity": {
+          "value": "steady",
+          "confidence": 0.75,
+          "evidence": "Job posting mentions working in a delivery center with client projects but does not signal aggressive hiring or rapid expansion. The focus on legacy skills suggests steady hiring for established functions.",
+          "source": "inferred"
+        },
+        "team_size_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No explicit team size or composition details provided beyond cross-functional collaboration.",
+          "source": "pass1_derived"
+        },
+        "funding_stage_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.95,
+          "evidence": "IBM is a publicly traded enterprise, but no funding stage signals are relevant to this job posting.",
+          "source": "pass1_derived"
+        },
+        "role_creation_type": {
+          "value": "team_expansion",
+          "confidence": 0.6,
+          "evidence": "Job posting mentions delivery centers and client projects, implying expansion of existing teams rather than backfill or new function creation. However, confidence is limited due to lack of explicit details.",
+          "source": "inferred"
+        }
+      }
+    },
+    "summary": {
+      "strength_categories": [
+        "established_company",
+        "data_focused_role",
+        "clear_requirements"
+      ],
+      "strength_details": [
+        "IBM is a globally recognized enterprise with deep industry expertise and stability, reducing company risk compared to startups.",
+        "Role is well-defined within BI/DW and reporting/visualization, offering clear responsibilities for candidates with Cognos and ETL experience.",
+        "Requirements are explicit and aligned with mid-level seniority, making it easier for candidates to assess fit."
+      ],
+      "concern_categories": [
+        "legacy_technology",
+        "overtime_likely",
+        "limited_growth",
+        "not_mentioned"
+      ],
+      "concern_details": [
+        "Heavy reliance on legacy IBM tools (Cognos, InfoSphere DataStage) may limit exposure to modern data engineering practices like cloud-native architectures or data mesh.",
+        "Client-driven consulting environment and 'relentless focus on quality' suggest potential overtime or deadline pressure, with no protective signals like PTO or work-life balance mentioned.",
+        "No explicit career growth paths, learning budgets, or mentorship programs are discussed, which may indicate limited structured development opportunities.",
+        "Location is restricted to Pune, Maharashtra, with no remote flexibility signals, which could be a concern for candidates seeking hybrid or fully remote roles."
+      ],
+      "best_fit_categories": [
+        "mid_level_engineers",
+        "bi_engineers",
+        "technical_specialists"
+      ],
+      "best_fit_details": [
+        "Mid-level data engineers with 3+ years of experience in BI/DW projects, particularly those familiar with Cognos and ETL tools like IBM InfoSphere DataStage, Azure Data Factory, or Informatica PowerCenter.",
+        "Candidates with a strong background in batch ETL and reporting/visualization who are comfortable working in a client-driven consulting environment.",
+        "Engineers seeking roles in established enterprises with a focus on technical execution rather than innovation or leadership."
+      ],
+      "probe_categories": [
+        "role_scope_boundaries",
+        "work_hour_expectations",
+        "career_growth_path",
+        "tech_debt_situation",
+        "team_size_composition"
+      ],
+      "probe_details": [
+        "Ask for clarity on 'evolutionary maintenance' tasks—does this involve modernizing legacy systems or maintaining existing ones?",
+        "Inquire about typical work hours, sprint cadence, and how client deadlines impact the team's workload.",
+        "Understand the career growth path within IBM Consulting: Are there opportunities to transition into cloud-native or modern data stack roles?",
+        "Probe the team's approach to tech debt: Is there a structured process for addressing legacy tooling and improving engineering practices?",
+        "Ask about the size and composition of the team you'll be joining: How many data engineers are there, and what is the seniority mix?"
+      ],
+      "leverage_categories": [
+        "exact_experience_match",
+        "domain_expertise"
+      ],
+      "leverage_details": [
+        "Candidates with exact experience in Cognos Developer/Admin and IBM InfoSphere DataStage can leverage this as a rare skill match in modern job markets.",
+        "Experience with UNIX and batch ETL tools (Informatica PowerCenter, Azure Data Factory) may provide additional negotiation leverage due to the role's specific requirements."
+      ],
+      "overall_assessment": "This role at IBM Consulting is a solid opportunity for mid-level data engineers with expertise in legacy BI tools like Cognos and batch ETL. The enterprise stability and clear role focus are major strengths, but candidates should be aware of potential overtime, limited growth opportunities, and legacy technology constraints. Ideal for those looking to deepen their BI/DW skills in a client-driven environment.",
+      "recommendation_score": 0.6,
+      "recommendation_confidence": 0.8
+    },
+    "tokens": 13047,
+    "input_tokens": 10007,
+    "output_tokens": 3040,
+    "cost": 0.016087
+  }
+}

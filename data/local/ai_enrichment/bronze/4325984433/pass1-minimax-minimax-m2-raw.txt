@@ -1,0 +1,143 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules. Let me go through each section systematically:
+
+1. **COMPENSATION**: The job posting doesn't mention any salary information, so all compensation fields should be null.
+
+2. **WORK AUTHORIZATION**: There's no mention of visa sponsorship, work authorization requirements, or citizenship requirements. So this should be "not_mentioned" with null text fields.
+
+3. **WORK MODEL**: 
+   - Location is "Kochi, Kerala, India" - this suggests onsite work
+   - No mention of remote or hybrid work
+   - No mention of employment type (full-time, contract, etc.)
+   - So work_model_stated should be "onsite" based on the location
+   - employment_type_stated should be "not_mentioned"
+
+4. **CONTRACT DETAILS**: No mention of contract type, duration, etc. So all should be null/not_mentioned.
+
+5. **CONTRACTOR RATES**: No mention of contractor rates, so all should be null/not_mentioned.
+
+6. **SKILLS CLASSIFIED**: Let me analyze the skills:
+
+   **Must-have hard skills** (strong qualifiers or required sections):
+   - "Good Hands-on experience in DBT is required" → "DBT" (strong qualifier "required")
+   - "Ability to use programming languages like Java, Python, Scala" → "Java", "Python", "Scala" (required for the role)
+   - "Ability to use Extract, Transform, and Load (ETL) tools" → "ETL" (required)
+   - "Ability to use leading edge tools such as Linux, SQL, Python, Spark, Hadoop" → "Linux", "SQL", "Python", "Spark", "Hadoop" (required tools)
+   
+   **Nice-to-have hard skills** (weaker qualifiers):
+   - "ETL DataStage and snowflake - preferred" → "DataStage", "Snowflake" (weak qualifier "preferred")
+   - "Designing and implementing various enterprise search applications such as Elasticsearch and Splunk" → "Elasticsearch", "Splunk" (mentioned as examples but no strong qualifier)
+   
+   **Must-have soft skills** (strong qualifiers):
+   - "excellent verbal and written communication skills" → "Communication" (strong qualifier "excellent")
+   - "Ability to communicate with internal and external clients" → "Communication" (required for the role)
+   - "Ability to communicate results to technical and non-technical audience" → "Communication" (required for the role)
+   
+   **Nice-to-have soft skills**: None explicitly mentioned with weak qualifiers.
+
+   **Experience**: No specific years mentioned, so years_experience fields should be null.
+
+   **Education**: No education requirements mentioned, so all education fields should be null.
+
+   **LLM/GenAI**: No mention of LLMs, GenAI, or related technologies, so llm_genai_mentioned should be false.
+
+   **Feature Store**: No mention of feature stores, so feature_store_mentioned should be false.
+
+7. **GEOGRAPHIC RESTRICTIONS**: Location is "Kochi, Kerala, India" which suggests this is for India specifically. The geo_restriction_type should be "specific_countries" and allowed_countries should be ["IN"].
+
+8. **BENEFITS STRUCTURED**: No benefits mentioned, so all should be null/false.
+
+9. **CONTEXT**: 
+   - Team info: "Work in an Agile, collaborative environment, partnering with other scientists, engineers, consultants and database administrators"
+   - Company description: "Introduction In this role, you&apos;ll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+
+I'll focus on the key insights about the role's collaborative nature and global impact. The position emphasizes cross-functional teamwork across various technical domains, highlighting the dynamic and innovative environment at IBM's consulting centers.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": ["DBT", "Java", "Python", "Scala", "ETL", "Linux", "SQL", "Spark", "Hadoop"],
+      "nice_to_have_hard_skills": ["DataStage", "Snowflake", "Elasticsearch", "Splunk"],
+      "must_have_soft_skills": ["Communication"],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "specific_countries",
+      "allowed_countries": ["IN"],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Work in an Agile, collaborative environment, partnering with other scientists, engineers, consultants and database administrators of all backgrounds and disciplines to bring analytical rigor and statistical methods to the challenges of predicting behaviours.",
+      "company_description_text": "Introduction In this role, you&apos;ll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 29
+  }
+}
+```

@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.92,
+        "evidence": "Total experience 6-7 years (relevant 4-5 years) aligns with senior level in typical IC hierarchy.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.99,
+        "evidence": "Title is Data Engineer and responsibilities focus on data pipelines, ETL, and real‑time processing.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "streaming_realtime",
+        "confidence": 0.78,
+        "evidence": "Job description explicitly mentions both batch and real‑time processing, indicating a streaming/realtime focus.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.90,
+        "evidence": "No mention of people‑management or technical‑lead responsibilities; role is presented as an individual contributor.",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "azure",
+        "confidence": 0.99,
+        "evidence": "Mandatory skills list includes Azure Databricks, Azure DevOps, Azure Blob; title also contains 'Azure'.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No other cloud providers are mentioned in the posting.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.88,
+        "evidence": "Description references both batch processing and real‑time processing.",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No orchestration tool (e.g., Airflow, Luigi, dbt, etc.) is referenced.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "lake",
+        "confidence": 0.75,
+        "evidence": "Azure Blob storage is highlighted; no data‑warehouse technology is cited.",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.95,
+        "evidence": "Geo restriction type is 'specific_countries' with allowed country = IN (India).",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "apac",
+        "confidence": 0.90,
+        "evidence": "Job location is Kochi, Kerala, India, which falls in the APAC timezone region.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Location is fixed to India and no relocation assistance or requirement is mentioned.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Visa sponsorship is not mentioned in the posting.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No reference to OPT/CPT eligibility; standard work‑authorization implied.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "work_auth_only",
+        "confidence": 0.80,
+        "evidence": "No citizenship clause; only a country‑specific location requirement is present.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "w2",
+        "confidence": 0.75,
+        "evidence": "Position is described as a full‑time Associate Software Developer, typical of an employee (W‑2) role.",
+        "source": "inferred"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.90,
+        "evidence": "Pass‑1 extraction shows no benefits listed.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "Job posting does not discuss career ladders, promotion tracks, or growth pathways.",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No mentorship program or mentorship language is present.",
+        "source": "inferred"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion or advancement opportunities.",
+        "source": "inferred"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "The posting does not reference internal transfers or mobility.",
+        "source": "inferred"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.80,
+        "evidence": "No indication of distinct IC, management, specialist, or architect tracks.",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.85,
+        "evidence": "A long list of mandatory hard skills and a specific years‑of‑experience range, with no nice‑to‑have items.",
+        "source": "combined"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Job description is focused on data engineering responsibilities without ambiguity.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Required experience (6‑7 years) matches senior level; skill set is appropriate for that seniority.",
+        "source": "inferred"
+      }
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "senior",
+        "confidence": 0.78,
+        "evidence": "Job posting mentions 5-7 years of BPM experience and 2+ years with Appian, plus responsibilities for design, integration, and performance optimization, which align with senior‑level expectations.",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.99,
+        "evidence": "Title and description explicitly refer to the role as a Data Engineer.",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "api_development",
+        "confidence": 0.66,
+        "evidence": "Responsibilities include integrating BPM solutions with enterprise systems via APIs and web services, indicating a focus on API‑centric data integration.",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "ic",
+        "confidence": 0.85,
+        "evidence": "No mention of people‑management duties or direct reports; the role emphasizes collaboration and technical contribution.",
+        "source": "pass1_derived"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "The posting lists BPM tools and databases but does not reference any cloud provider.",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.92,
+        "evidence": "No additional cloud platforms are referenced in the description.",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.81,
+        "evidence": "The role explicitly mentions both batch and real‑time processing of data.",
+        "source": "pass1_derived"
+      },
+      "orchestrator_category": {
+        "value": "not_mentioned",
+        "confidence": 0.93,
+        "evidence": "No orchestration tools (e.g., Airflow, Luigi, dbt) are cited.",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "not_mentioned",
+        "confidence": 0.94,
+        "evidence": "The posting does not discuss data warehouses, lakes, or lakehouses.",
+        "source": "pass1_derived"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_country",
+        "confidence": 0.86,
+        "evidence": "Location restriction is specified as Bengaluru East, Karnataka, India, with no remote‑work language.",
+        "source": "pass1_derived"
+      },
+      "timezone_focus": {
+        "value": "specific_country",
+        "confidence": 0.84,
+        "evidence": "The job is tied to an Indian location, implying a focus on India's time zones.",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.81,
+        "evidence": "No relocation assistance or requirement is mentioned; candidates are expected to be based in the specified Indian city.",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.5,
+        "evidence": "Visa sponsorship is not mentioned in the posting.",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.5,
+        "evidence": "No reference to OPT/CPT eligibility is provided.",
+        "source": "pass1_derived"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "Neither citizenship nor work‑authorization requirements are stated.",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.93,
+        "evidence": "Employment type (full‑time, contractor, etc.) is not disclosed.",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.94,
+        "evidence": "The benefits array is empty and no perks are described.",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.92,
+        "evidence": "The posting does not discuss career ladders, promotion tracks, or growth opportunities.",
+        "source": "pass1_derived"
+      },
+      "mentorship_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.91,
+        "evidence": "No mentorship programs or senior‑mentor relationships are referenced.",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.93,
+        "evidence": "There is no language about promotions or advancement paths.",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.94,
+        "evidence": "The description does not mention internal transfers or mobility options.",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": [],
+        "confidence": 0.88,
+        "evidence": "No explicit career tracks (IC, management, specialist, architect) are identified.",
+        "source": "pass1_derived"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "medium",
+        "confidence": 0.78,
+        "evidence": "The posting lists several mandatory hard skills and a few nice‑to‑have soft skills, indicating a balanced requirement set.",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.86,
+        "evidence": "Responsibilities focus specifically on BPM‑related data engineering tasks without blending other roles.",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.81,
+        "evidence": "The skill set aligns with the stated 5‑7 years of experience; no unrealistic senior‑level expectations are present.",
+        "source": "inferred"
+      }
+    }
+  }
+}

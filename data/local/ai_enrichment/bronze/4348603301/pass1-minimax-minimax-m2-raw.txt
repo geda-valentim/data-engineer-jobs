@@ -1,0 +1,165 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+First, let me identify what information is explicitly stated in the job posting:
+
+**Job Details:**
+- Title: Data Engineer-Business Intelligence
+- Company: IBM
+- Location: Pune, Maharashtra, India
+
+**Compensation:**
+- No salary information mentioned → salary_disclosed: false, all salary fields null
+
+**Work Authorization:**
+- No mention of visa sponsorship or work authorization requirements → visa_sponsorship_stated: "not_mentioned", work_auth_text: null, citizenship_text: null, security_clearance_stated: "not_mentioned"
+
+**Work Model:**
+- Location is specified as Pune, Maharashtra, India → work_model_stated: "onsite" (since it's a specific location)
+- No mention of employment type → employment_type_stated: "not_mentioned"
+- location_restriction_text: "Pune, Maharashtra, India"
+
+**Contract Details:**
+- No mention of contract type, duration, etc. → contract_type: "not_mentioned", all other contract fields null
+
+**Contractor Rates:**
+- No contractor information → pay_type: "not_mentioned", all other contractor fields null
+
+**Skills Classification:**
+Let me analyze the skills mentioned:
+
+**Hard Skills:**
+- "Cognos Developer & Admin Required" → This is in "Required Technical And Professional Expertise" section with "Required" qualifier, so this is must_have
+- "UNIX" → "good understanding of UNIX" - this is in required section, so must_have
+- "AWS, Google, Azure" → "Experience with various cloud and integration platforms (e.g. AWS, Google, Azure)" - this is in "Preferred Technical And Professional Experience" section, but "Experience with" is a strong qualifier, so this should be must_have
+- "IBM InfoSphere DataStage, Azure Data Factory, Informatica PowerCenter" → "Experience with an ETL/Data Integration tool (eg. IBM InfoSphere DataStage, Azure Data Factory, Informatica PowerCenter)" - also in preferred section but "Experience with" is strong, so must_have
+ 
+I'll continue analyzing the soft skills, focusing on the communication and professional competencies required for this role. The position demands strong interpersonal abilities, including excellent writing, MIS, communication, and time management skills. These soft skills are crucial for effective collaboration and project success in a business intelligence environment.
+
+The role requires a Master's degree, with specific technical expertise in Cognos development and administration. Candidates need a minimum of 3 years of experience in BI/DW projects, demonstrating proficiency in reporting and visualization. The position emphasizes a comprehensive skill set that combines technical acumen with strong professional capabilities.
+
+The educational requirement is clear: a full-time MCA/M.Tech/B.Tech/B.E. degree, with a preference for relevant certifications. This indicates a preference for candidates with advanced technical education and specialized knowledge in business intelligence and data warehousing.
+
+The role demands extensive experience in BI/DW projects, specifically in reporting and visualization using Cognos. Candidates must have participated in at least two projects showcasing their ability to develop complex reporting solutions. Additionally, the position requires strong technical skills in UNIX, excellent English communication, and proficiency in time management and multitasking.
+
+The preferred qualifications include cloud platform experience across AWS, Google, and Azure, an agile mindset, and expertise in ETL/Data Integration tools like IBM InfoSphere DataStage, Azure Data Factory, and Informatica PowerCenter. These skills highlight the need for adaptability, technical versatility, and a proactive approach to problem-solving.
+
+The role emphasizes continuous learning and innovation, with a focus on delivering deep technical and industry expertise to diverse clients. The position requires strong analytical skills, attention to detail, and the ability to work collaboratively across different technical and business domains.
+
+The candidate must demonstrate proficiency in root cause analysis, technical requirements development, and effective content management. Key soft skills include critical thinking, troubleshooting, debugging, and exceptional communication abilities. The role demands a proactive approach to quality improvement and cross-functional collaboration.
+
+The position requires a Master's degree, with specific technical expertise in Cognos development and administration. Candidates need a minimum of 3 years of BI/DW project experience, focusing on reporting and visualization. The role emphasizes strong UNIX understanding, excellent English communication, and proficiency in time management and multitasking.
+
+Preferred qualifications include cloud platform experience across AWS, Google, and Azure, an agile mindset, and expertise in ETL/Data Integration tools like IBM InfoSphere DataStage, Azure Data Factory, and Informatica PowerCenter. The role demands continuous learning and adaptability in a dynamic technical environment.
+
+The position is based in Pune, Maharashtra, India, with no specific geographic restrictions mentioned. No compensation details are provided, and the work model appears to be onsite given the specific location requirement.
+
+The role emphasizes deep technical and industry expertise across public and private sector clients, highlighting a collaborative team approach focused on quality and continuous improvement. Key responsibilities include analysis, requirements gathering, design, and support of reports within client environments.
+
+The position requires strong technical skills in Cognos, UNIX, and cloud platforms, with a preference for candidates holding a Master's degree and having 3+ years of BI/DW project experience. Soft skills like communication, time management, and multitasking are crucial for success in this role.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Pune, Maharashtra, India",
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Cognos Developer",
+        "Cognos Admin",
+        "UNIX",
+        "AWS",
+        "Google Cloud Platform",
+        "Azure",
+        "IBM InfoSphere DataStage",
+        "Azure Data Factory",
+        "Informatica PowerCenter"
+      ],
+      "nice_to_have_hard_skills": [],
+      "must_have_soft_skills": [
+        "Communication",
+        "Time Management",
+        "Multi-tasking",
+        "Problem Solving",
+        "Critical Thinking",
+        "Team Collaboration"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 3,
+      "years_experience_max": null,
+      "years_experience_text": "minimum of 3 years of experience",
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "preferred",
+      "education_text_raw": "Master's Degree",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology",
+      "company_description_text": "IBM Consulting Client Innovation Centers (Delivery Centers)"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 37
+  }
+}
+```

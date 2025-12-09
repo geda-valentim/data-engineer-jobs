@@ -1,0 +1,177 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+First, let me identify what information is explicitly stated in the job posting:
+
+**Title**: Data Engineer-Data Platforms-Azure
+**Company**: IBM
+**Location**: Kochi, Kerala, India
+
+**Description sections**:
+- Introduction about working in IBM Consulting Client Innovation Centers
+- Role and Responsibilities as Associate Software Developer/Data Engineer
+- Required Technical And Professional Expertise
+- Preferred Technical And Professional Experience
+
+Let me extract information systematically:
+
+**Compensation**: No salary information is mentioned, so all compensation fields should be null.
+
+**Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. Should be "not_mentioned".
+
+**Work Model**: 
+- Location is specified as "Kochi, Kerala, India" - this suggests onsite work
+- No mention of remote or hybrid work options
+- Employment type not explicitly stated, but given it's a full-time role at IBM, likely "full_time"
+
+**Contract Details**: No mention of contract type, duration, etc. Should be "not_mentioned" for most fields.
+
+**Contractor Rates**: Not applicable since this appears to be a full-time employee position.
+
+**Skills Classification**:
+Let me analyze the skills mentioned:
+
+**Must-have hard skills** (from "Mandatory Skills" section):
+- Azure Databricks
+- Python/PySpark  
+- SQL
+- Github
+- Azure Devops
+- Azure Blob
+- Java, Python, Scala (programming languages)
+- ETL tools/data integration
+- Linux, SQL, Python, Spark, Hadoop, Java
+
+**Nice-to-have hard skills** (from "Preferred" section):
+- Excellent verbal and written communication skills (this is soft skill)
+- Ability to communicate with internal and external clients
+- Ability to communicate results to technical and non-technical audiences
+
+**Must-have soft skills**:
+- Excellent verbal and written communication skills (from preferred section, but "excellent" is a strong qualifier)
+
+
+- Teamwork and collaboration skills are highlighted as essential soft skills for the role
+
+**Experience**:
+- Total Experience: 6-7 years
+- Relevant Experience: 4-5 years
+
+**Education**: No specific education requirements mentioned.
+
+**AI/ML Technologies**: No mention of LLMs, GenAI, or feature stores.
+
+**Geographic Restrictions**: Location is Kochi, Kerala, India - this suggests specific location requirement.
+
+**Benefits**: No benefits mentioned.
+
+**Context**: Company description mentions IBM Consulting Client Innovation Centers and working with public/private sector clients.
+
+Let me structure this into the JSON format:
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Kochi, Kerala, India",
+      "employment_type_stated": "full_time"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Azure Databricks",
+        "Python",
+        "PySpark",
+        "SQL",
+        "Github",
+        "Azure Devops",
+        "Azure Blob",
+        "Java",
+        "Scala",
+        "ETL",
+        "data integration",
+        "Linux",
+        "Spark",
+        "Hadoop"
+      ],
+      "nice_to_have_hard_skills": [],
+      "must_have_soft_skills": [
+        "Communication",
+        "Team Collaboration"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 6,
+      "years_experience_max": 7,
+      "years_experience_text": "Total Exp-6-7 Yrs (Relevant-4-5 Yrs)",
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "specific_countries",
+      "allowed_countries": ["IN"],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "must_be_resident"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "Work in an Agile, collaborative environment, partnering with other scientists, engineers, consultants and database administrators of all backgrounds and disciplines",
+      "company_description_text": "IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world"
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 49
+  }
+}
+```

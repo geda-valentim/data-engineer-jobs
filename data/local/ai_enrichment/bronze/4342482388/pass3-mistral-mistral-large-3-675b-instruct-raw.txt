@@ -1,0 +1,238 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "The job posting explicitly requires Cloud Databricks and SQL, which are modern tools, but lacks detailed mentions of governance, CI/CD, or broader team practices beyond audit knowledge.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Score of 3 aligns with 'defined' maturity level, indicating documented processes and some governance but inconsistent broader maturity signals.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.85,
+        "evidence": "Explicit mention of Cloud Databricks as a required tool suggests adoption of a modern data stack.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.2,
+        "confidence": 0.9,
+        "evidence": "The role is focused on data engineering tasks (Databricks, SQL, audit) with no mention of conflated responsibilities like ML, DevOps, or backend/frontend development.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.5,
+        "confidence": 0.7,
+        "evidence": "Fixed-term contract (6 months) and lack of explicit overtime mentions suggest moderate risk. However, the hybrid work model and absence of aggressive startup language (e.g., 'fast-paced') reduce confidence in this assessment.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "The job posting specifies required skills (Cloud Databricks, SQL, Audit) and a fixed-term contract, indicating a well-defined role scope.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.4,
+        "confidence": 0.8,
+        "evidence": "Composite score derived from low scope creep (0.2) and moderate overtime risk (0.5), with no additional red flags detected beyond the contract nature and lack of benefits.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit or inferred reporting structure mentioned in the job posting or Pass 1/Pass 2 results.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No leadership titles or reporting lines are mentioned to infer manager level.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.9,
+        "evidence": "No signals about team growth velocity or hiring plans beyond the 6-month contract duration.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.9,
+        "evidence": "No explicit or inferred team composition details provided in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No reporting structure details are available in the job posting or Pass 1/Pass 2 results.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "No explicit mention of embedded cross-functional teams or collaboration with product managers/other stakeholders beyond audit knowledge.",
+        "source": "pass1_derived"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.7,
+        "evidence": "Hybrid work model suggests some flexibility, but the fixed-term contract and lack of PTO/benefits mentions introduce uncertainty about work-life balance.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.3,
+        "confidence": 0.7,
+        "evidence": "No learning budget, mentorship, or career growth paths mentioned, but the fixed-term contract may limit long-term opportunities.",
+        "source": "pass1_derived"
+      },
+      "tech_culture_score": {
+        "value": 0.5,
+        "confidence": 0.75,
+        "evidence": "Modern tooling (Databricks) is a positive signal, but lack of broader engineering practices or innovation culture mentions limits confidence in a high score.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.9,
+        "evidence": "No explicit or inferred signals about open source contributions, tech blogs, conference speaking, or innovation time in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.9,
+        "evidence": "No development practices (code review, CI/CD, monitoring, etc.) are explicitly mentioned in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit or inferred signals about innovation or experimentation culture.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.8,
+        "evidence": "No explicit mention of tech debt management, refactoring, or code quality improvement in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.9,
+        "evidence": "No mention of ML/AI tools, frameworks, or responsibilities in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No ML/AI tools are mentioned or inferred in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit urgency signals (e.g., 'immediate start', 'ASAP') beyond the fixed-term contract duration.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.7,
+        "evidence": "Hybrid role in Toronto (a competitive tech hub) with no salary disclosure may attract a moderate number of applicants. The fixed-term contract could also limit competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit or inferred signals about company stage (funding, size, growth trajectory) beyond the fixed-term contract and hybrid work model.",
+        "source": "pass1_derived"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No signals about hiring velocity or team expansion plans beyond the 6-month contract duration.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No explicit or inferred signals about team size or composition beyond the contract role.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.9,
+        "evidence": "No funding stage signals are mentioned in the job posting or Pass 1 results.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "The job posting does not clarify whether this is a new headcount, backfill, or team expansion, though the fixed-term contract suggests it may be project-based.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "data_focused_role", "contract_duration"],
+    "strength_details": [
+      "Modern tech stack with Cloud Databricks and SQL, which are in-demand skills for data engineering.",
+      "Role is clearly focused on data engineering tasks, reducing ambiguity in responsibilities.",
+      "Fixed-term contract (6 months) may appeal to candidates seeking short-term projects or trial periods."
+    ],
+    "concern_categories": ["salary_not_disclosed", "no_benefits_mentioned", "contract_short_term", "unknown_company_maturity"],
+    "concern_details": [
+      "Salary is not disclosed, which may make it difficult to assess compensation competitiveness.",
+      "No benefits (e.g., PTO, health insurance) are mentioned, a common concern for contract roles.",
+      "Fixed-term contract (6 months) with no mention of extension or conversion to FTE may limit long-term appeal.",
+      "Lack of clarity on company maturity, team size, and culture could be a concern for candidates seeking stability or growth."
+    ],
+    "best_fit_categories": ["mid_level_engineers", "senior_data_engineers", "domain_experts"],
+    "best_fit_details": [
+      "Mid-level to senior data engineers with experience in Databricks and SQL, particularly those with a background in banking or audit.",
+      "Candidates with prior experience at TD Bank may have a competitive edge due to the 'preferred' mention.",
+      "Data engineers seeking contract roles in Toronto with a focus on modern tools and domain-specific projects."
+    ],
+    "probe_categories": ["role_scope_boundaries", "salary_range_details", "contract_extension", "team_size_composition", "work_hour_expectations"],
+    "probe_details": [
+      "Ask for clarification on the role's boundaries: Is this purely a data engineering position, or will there be overlap with other responsibilities?",
+      "Request details on the salary range or hourly rate to ensure alignment with market expectations.",
+      "Inquire about the possibility of contract extension or conversion to FTE after the 6-month term.",
+      "Understand the team size and composition: How many data engineers are currently on the team, and what is the broader data org structure?",
+      "Clarify work hour expectations and whether overtime or on-call duties are expected despite the contract duration."
+    ],
+    "leverage_categories": ["domain_expertise", "exact_experience_match"],
+    "leverage_details": [
+      "Experience with banking data or audit knowledge is explicitly required, providing strong leverage for candidates with this background.",
+      "Prior work at TD Bank is a preferred qualification, which could be a unique advantage in negotiations."
+    ],
+    "overall_assessment": "This is a well-defined 6-month contract role for a data engineer with a strong focus on Cloud Databricks, SQL, and audit knowledge in the banking sector. The hybrid work model in Toronto and modern tech stack are key strengths. However, the lack of salary transparency, benefits, and long-term role clarity are notable concerns. Candidates with banking or TD Bank experience will find this role particularly appealing and may have negotiation leverage.",
+    "recommendation_score": 0.6,
+    "confidence": 0.8,
+    "evidence": "The role offers a modern tech stack and clear responsibilities but is limited by its contract nature and lack of transparency around compensation and benefits."
+  }
+}
+```

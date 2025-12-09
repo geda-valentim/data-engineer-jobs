@@ -1,0 +1,260 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.78,
+        "evidence": "Job mentions Spark, Hadoop, Kafka and multi‑cloud experience but no orchestration, CI/CD, data catalog or testing tools, indicating basic pipelines with some automation.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.78,
+        "evidence": "Score 2 maps to the \"developing\" maturity level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [
+          "cloud_native",
+          "monitoring_observability"
+        ],
+        "confidence": 0.71,
+        "evidence": "Required skill list includes AWS, Azure, GCP (cloud native) and \"monitoring\"; no explicit CI/CD or data‑quality tooling.",
+        "source": "combined"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.15,
+        "confidence": 0.88,
+        "evidence": "Responsibilities focus solely on data engineering (ETL, modeling, Spark) with no mention of analytics, dev‑ops, or product ownership.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.55,
+        "confidence": 0.73,
+        "evidence": "Role is within IBM Consulting delivery centers where client‑facing projects often have tight timelines; no explicit work‑life balance language is provided.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.92,
+        "evidence": "Job title and bullet points clearly define a data‑engineer scope without blending other functions.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.38,
+        "confidence": 0.80,
+        "evidence": "Low scope creep and clear role offset by lack of salary/benefits disclosure, potential overtime in consulting, and no visa sponsorship.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.84,
+        "evidence": "Posting does not specify who the data engineer reports to.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No manager title (e.g., Head of Data, Director) is referenced.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.78,
+        "evidence": "No information about hiring pace or team expansion is provided.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.80,
+        "evidence": "Job posting does not describe the size or makeup of the data team.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.84,
+        "evidence": "No reporting line is described.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "No mention of being embedded in product or cross‑functional squads; role appears centralized within a consulting delivery center.",
+        "source": "pass1_derived"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.42,
+        "confidence": 0.78,
+        "evidence": "No PTO, flexible hours, or on‑call policies are described; consulting environments typically have variable hours.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Posting does not mention learning budgets, mentorship, or clear promotion paths.",
+        "source": "pass1_derived"
+      },
+      "tech_culture_score": {
+        "value": 0.45,
+        "confidence": 0.80,
+        "evidence": "Use of modern big‑data tools (Spark, Kafka) but absence of CI/CD, testing, or data‑catalog tooling suggests a modest engineering culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "No explicit mention of open‑source contributions, conference support, or innovation programs.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "Job description does not list code review, CI/CD, testing, or incident‑response practices.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No language about experimentation, hackathons, or dedicated R&D time.",
+        "source": "pass1_derived"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.88,
+        "evidence": "No reference to refactoring, tech‑debt reduction, or modernization initiatives.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.92,
+        "evidence": "Job posting does not mention machine‑learning models, feature stores, or MLOps tooling.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No ML‑related tools are listed among required or nice‑to‑have skills.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No start‑date or urgency language appears in the posting.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.80,
+        "evidence": "No data on applicant volume, easy‑apply, or location scarcity is provided.",
+        "source": "pass1_derived"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.94,
+        "evidence": "IBM is a global, publicly‑traded technology company with established consulting divisions.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "Posting does not indicate whether hiring is aggressive, steady, or a backfill.",
+        "source": "pass1_derived"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.88,
+        "evidence": "No team‑size numbers are disclosed.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "IBM is a public company; funding stage is not applicable.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.86,
+        "evidence": "No indication whether this is a new headcount or a backfill.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "cloud_native",
+      "data_focused_role",
+      "established_company"
+    ],
+    "strength_details": [
+      "Work with industry‑standard big‑data technologies (Spark, Hadoop, Kafka).",
+      "Exposure to multi‑cloud environments (AWS, Azure, GCP) within IBM Consulting.",
+      "Opportunity to contribute to client‑facing data solutions at a global enterprise."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "no_visa_sponsorship",
+      "overtime_likely",
+      "limited_growth"
+    ],
+    "concern_details": [
+      "Compensation range is not provided, making salary negotiation uncertain.",
+      "Visa sponsorship is not mentioned; candidates requiring sponsorship may be ineligible.",
+      "Consulting delivery centers often have tight project timelines that can lead to overtime.",
+      "No explicit career‑path, mentorship, or learning‑budget information is given."
+    ],
+    "best_fit_categories": [
+      "mid_level_engineers",
+      "data_generalists",
+      "enterprise_experienced"
+    ],
+    "best_fit_details": [
+      "Engineers with 3‑5 years of experience in Spark, ETL, and cloud platforms looking for stable enterprise projects.",
+      "Candidates comfortable with big‑data ecosystems who prefer a focused data‑engineering role without product ownership.",
+      "Professionals seeking to deepen consulting experience within a large, established tech firm."
+    ],
+    "probe_categories": [
+      "salary_range_details",
+      "benefits_details",
+      "work_hour_expectations",
+      "career_growth_path",
+      "team_size_composition"
+    ],
+    "probe_details": [
+      "Can you share the expected salary band and any performance bonus structure?",
+      "What benefits (health, PTO, learning budget) are offered to data engineers?",
+      "What are the typical weekly work hours and is on‑call or weekend work required?",
+      "Is there a defined promotion ladder or mentorship program for DEs?",
+      "How large is the data engineering team and what is the seniority mix?"
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "quick_availability"
+    ],
+    "leverage_details": [
+      "Candidate has direct experience with Spark, Hadoop, and multi‑cloud environments, matching the core technical stack.",
+      "If the candidate can start within the next few weeks, it may align with any unspoken hiring urgency."
+    ],
+    "overall_assessment": "The role offers solid exposure to big‑data technologies at a reputable enterprise, but the lack of salary transparency, benefits, and clear growth pathways are notable drawbacks. It suits mid‑level engineers who value stability and technical depth over rapid career acceleration.",
+    "recommendation_score": 0.62,
+    "recommendation_confidence": 0.84
+  }
+}

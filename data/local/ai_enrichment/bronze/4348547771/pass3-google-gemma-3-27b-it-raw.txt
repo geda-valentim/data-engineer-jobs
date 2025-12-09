@@ -1,0 +1,229 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Mentions BPM tools, database concepts, and integration, but lacks details on modern data stack components like cloud data warehouses or data lakes. Practices seem developing but not fully defined.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Matches score of 2.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.65,
+        "evidence": "Mentions BPM tools which can be considered part of a modern data stack, but lacks specifics.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.3,
+        "confidence": 0.85,
+        "evidence": "Role primarily focused on BPM and database integration, with some data engineering aspects. Reasonable multi-tasking expected.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.70,
+        "evidence": "Startup environment and 'immediate start' suggest potential for pressure, but no explicit signals of long hours.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "vague",
+        "confidence": 0.70,
+        "evidence": "Job title is broad ('Application Developer') and responsibilities are somewhat generic.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Moderate risk - role clarity is a concern, but scope creep and overtime risk are manageable.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific manager or reporting line is mentioned.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No managerial titles are present in the job description.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.70,
+        "evidence": "Mentions expanding team, but no specific numbers are provided.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.60,
+        "evidence": "No specific details about team size or composition are provided.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No reporting structure is specified.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Focus on BPM and database integration suggests a centralized data team.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.70,
+        "evidence": "No explicit work-life balance signals, but also no red flags.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.6,
+        "confidence": 0.75,
+        "evidence": "No specific learning or growth opportunities are mentioned.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.65,
+        "confidence": 0.78,
+        "evidence": "Focus on BPM and database integration suggests a more traditional tech culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No signals of strong technical culture are present.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No specific development practices are mentioned.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.80,
+        "evidence": "Focus on BPM and database integration suggests limited innovation.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt or refactoring.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.95,
+        "evidence": "No mention of AI or ML.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.98,
+        "evidence": "No ML tools are mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "immediate",
+        "confidence": 0.90,
+        "evidence": "Mentions 'immediate start'",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.70,
+        "evidence": "Location in India suggests moderate competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "established_tech",
+        "confidence": 0.80,
+        "evidence": "IBM is a large, established technology company.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "No indication of rapid expansion.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.65,
+        "evidence": "No specific team size is mentioned, but IBM is a large company.",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "profitable",
+        "confidence": 0.90,
+        "evidence": "IBM is a publicly traded, profitable company.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "backfill",
+        "confidence": 0.70,
+        "evidence": "No indication that this is a new role or team.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["established_company", "well_defined_role"],
+    "strength_details": [
+      "Working for a well-established and reputable company (IBM).",
+      "Clear focus on BPM and database integration."
+    ],
+    "concern_categories": ["vague_requirements", "no_visa_sponsorship", "overtime_likely"],
+    "concern_details": [
+      "Job description is somewhat generic and lacks detail.",
+      "No visa sponsorship is offered.",
+      "Immediate start date suggests potential for time pressure."
+    ],
+    "best_fit_categories": ["mid_level_engineers", "data_generalists"],
+    "best_fit_details": [
+      "Mid-level engineers with 3-5 years of experience.",
+      "Engineers with a broad understanding of data management and BPM."
+    ],
+    "probe_categories": ["reporting_structure", "team_size_composition", "work_hour_expectations"],
+    "probe_details": [
+      "Clarify the reporting structure and manager level.",
+      "Understand the size and composition of the data team.",
+      "Inquire about typical work hours and expectations."
+    ],
+    "leverage_categories": [],
+    "leverage_details": [],
+    "overall_assessment": "This role at IBM offers stability and a clear focus on BPM and database integration. However, the job description is somewhat vague, and there are concerns about potential time pressure. Best suited for mid-level engineers seeking a stable role in a large organization.",
+    "recommendation_score": 0.65,
+    "recommendation_confidence": 0.80
+  }
+}
+```

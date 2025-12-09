@@ -1,0 +1,167 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+First, let me identify what information is explicitly stated in the job posting:
+
+**Job Details:**
+- Title: Data Engineer-Business Intelligence
+- Company: IBM
+- Location: Pune, Maharashtra, India
+
+**Compensation:**
+- No salary information mentioned → salary_disclosed: false, all salary fields null
+
+**Work Authorization:**
+- No mention of visa sponsorship or work authorization requirements → visa_sponsorship_stated: "not_mentioned", work_auth_text: null, citizenship_text: null
+- No security clearance mentioned → security_clearance_stated: "not_mentioned"
+
+**Work Model:**
+- Location is specified as Pune, Maharashtra, India → work_model_stated: "onsite"
+- No specific mention of employment type, but this appears to be a full-time position → employment_type_stated: "not_mentioned" (since not explicitly stated as full_time)
+
+**Contract Details:**
+- No contract type mentioned → contract_type: "not_mentioned"
+- No contract duration mentioned → contract_duration_months: null, contract_duration_text: null
+- No extension or conversion info → extension_possible: "not_mentioned", conversion_to_fte: "not_mentioned"
+- No start date mentioned → start_date: "not_mentioned", start_date_text: null
+- No probation period mentioned → probation_period_text: null
+
+**Contractor Rates:**
+- No contractor rates mentioned → pay_type: "not_mentioned", all rate fields null
+
+**Skills Classification:**
+Let me analyze the skills mentioned:
+
+**Required Technical And Professional Expertise:**
+- "Cognos Developer & Admin Required" → must_have_hard_skills: ["Cognos Developer", "Cognos Admin"]
+- "Experience: The resource should have a minimum of 3 years of experience" → years_experience_min: 3, years_experience_max: null, years_experience_text: "minimum of 3 years of experience"
+
+
+- "working in the in BI DW projects in areas pertaining to reporting and visualization using cognos" → must_have_hard_skills: ["BI", "Data Warehouse", "reporting", "visualization"]
+- "He shall have worked in at least two projects where they were involved in developing reporting/ visualization" → must_have_hard_skills: ["reporting", "visualization"]
+- "He shall have good understanding of UNIX" → must_have_hard_skills: ["UNIX"]
+- "Should be well conversant in English and should have excellent writing, MIS, communication, time management and multi-tasking skill" → must_have_soft_skills: ["Communication", "Time Management", "Multi-tasking"]
+
+I'll continue analyzing the preferred technical skills and professional experience. The role requires expertise in cloud platforms, ETL tools, and an agile approach to problem-solving. Key skills include cloud integration, data transformation, and adaptive project management. The position demands a professional with strong technical capabilities and flexible thinking.
+
+The educational requirements specify a full-time Master's degree in Computer Applications or Technology, with a preference for relevant certifications. The role emphasizes comprehensive technical and soft skills across multiple domains.
+
+I'll map out the specific technical competencies, focusing on cloud platforms, data integration tools, and professional attributes that demonstrate adaptability and critical thinking.
+
+The role requires deep expertise in business intelligence, with specific emphasis on Cognos development and administration. Key technical skills include UNIX understanding, data warehousing, and visualization techniques. Professional competencies span communication, time management, and agile problem-solving approaches.
+
+The position demands a professional with a Master's degree, preferably in a technical field, and proven experience in BI/DW projects. Certifications and cloud platform familiarity are additional desirable qualifications.
+
+The role emphasizes continuous improvement, quality focus, and collaborative technical problem-solving across diverse project environments.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Pune, Maharashtra, India",
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Cognos Developer",
+        "Cognos Admin",
+        "BI",
+        "Data Warehouse",
+        "reporting",
+        "visualization",
+        "UNIX",
+        "English"
+      ],
+      "nice_to_have_hard_skills": [
+        "AWS",
+        "Google Cloud",
+        "Azure",
+        "IBM InfoSphere DataStage",
+        "Azure Data Factory",
+        "Informatica PowerCenter"
+      ],
+      "must_have_soft_skills": [
+        "Communication",
+        "Time Management",
+        "Multi-tasking",
+        "Writing",
+        "Critical Thinking",
+        "Ownership"
+      ],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": 3,
+      "years_experience_max": null,
+      "years_experience_text": "minimum of 3 years of experience",
+      "education_level": "MASTERS",
+      "education_area": "Computer Applications",
+      "education_requirement": "required",
+      "education_text_raw": "Master's Degree",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "business and technical members of the team",
+      "company_description_text": "IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 47,
+    "fields_null": 29
+  }
+}
+```

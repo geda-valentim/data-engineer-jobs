@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-08 15:23:53",
+    "job_posting_id": "4348603303",
+    "job_title": "Data Engineer-Business Intelligence",
+    "company_name": "IBM",
+    "job_location": "Pune, Maharashtra, India",
+    "pass_name": "pass2",
+    "model_id": "minimax.minimax-m2"
+  },
+  "result": {
+    "inference": {
+      "seniority_and_role": {
+        "seniority_level": {
+          "value": "mid",
+          "confidence": 0.75,
+          "evidence": "Title is 'Data Engineer-Business Intelligence' without 'Senior' designation, but requires 3+ years experience which typically maps to mid-level in IC hierarchy",
+          "source": "combined"
+        },
+        "job_family": {
+          "value": "data_engineer",
+          "confidence": 0.95,
+          "evidence": "Title explicitly states 'Data Engineer-Business Intelligence' with focus on BI/DW projects, reporting, and visualization",
+          "source": "pass1_derived"
+        },
+        "sub_specialty": {
+          "value": "batch_etl",
+          "confidence": 0.82,
+          "evidence": "Focus on BI/DW projects, reporting, visualization using Cognos, and ETL tools (DataStage, Azure Data Factory, Informatica PowerCenter) indicates batch processing and data warehouse focus",
+          "source": "inferred"
+        },
+        "leadership_expectation": {
+          "value": "ic",
+          "confidence": 0.9,
+          "evidence": "No mention of team leadership, mentoring, managing people, or senior responsibilities. Pure individual contributor focus on technical execution",
+          "source": "inferred"
+        }
+      },
+      "stack_and_cloud": {
+        "primary_cloud": {
+          "value": "multi",
+          "confidence": 0.8,
+          "evidence": "Multiple clouds mentioned (AWS, Google Cloud Platform, Azure) with no clear primary cloud specified, indicating multi-cloud approach",
+          "source": "pass1_derived"
+        },
+        "secondary_clouds": {
+          "value": [
+            "aws",
+            "gcp",
+            "azure"
+          ],
+          "confidence": 0.8,
+          "evidence": "All three major cloud providers (AWS, Google Cloud Platform, Azure) mentioned as nice-to-have skills",
+          "source": "pass1_derived"
+        },
+        "processing_paradigm": {
+          "value": "batch",
+          "confidence": 0.85,
+          "evidence": "Focus on BI/DW projects, reporting, visualization, and ETL tools suggests batch processing rather than streaming or real-time",
+          "source": "inferred"
+        },
+        "orchestrator_category": {
+          "value": "not_mentioned",
+          "confidence": 0.3,
+          "evidence": "No specific orchestration platform mentioned - ETL tools like DataStage and Azure Data Factory could be orchestrators but no clear category identified",
+          "source": "inferred"
+        },
+        "storage_layer": {
+          "value": "warehouse",
+          "confidence": 0.75,
+          "evidence": "Focus on BI/DW projects and Cognos (a BI tool) suggests data warehouse storage layer rather than data lake patterns",
+          "source": "inferred"
+        }
+      },
+      "geo_and_work_model": {
+        "remote_restriction": {
+          "value": "same_country",
+          "confidence": 0.9,
+          "evidence": "Location specified as 'Pune, Maharashtra, India' with onsite work model indicates requirement to be in India",
+          "source": "combined"
+        },
+        "timezone_focus": {
+          "value": "specific_country",
+          "confidence": 0.85,
+          "evidence": "Location in Pune, India suggests India Standard Time (IST) timezone focus",
+          "source": "pass1_derived"
+        },
+        "relocation_required": {
+          "value": true,
+          "confidence": 0.65,
+          "evidence": "Onsite position in Pune with no mention of remote work suggests relocation to Pune area may be required",
+          "source": "inferred"
+        }
+      },
+      "visa_and_authorization": {
+        "h1b_friendly": {
+          "value": false,
+          "confidence": 0.7,
+          "evidence": "No visa sponsorship mentioned and role is based in India, suggesting no H1B sponsorship available for US positions",
+          "source": "pass1_derived"
+        },
+        "opt_cpt_friendly": {
+          "value": false,
+          "confidence": 0.6,
+          "evidence": "No mention of student visa support (OPT/CPT) and work authorization requirements suggest focus on permanent work authorization",
+          "source": "inferred"
+        },
+        "citizenship_required": {
+          "value": "work_auth_only",
+          "confidence": 0.75,
+          "evidence": "No citizenship requirement mentioned, only work authorization in India implied for the Pune-based position",
+          "source": "inferred"
+        }
+      },
+      "contract_and_compensation": {
+        "w2_vs_1099": {
+          "value": "w2",
+          "confidence": 0.85,
+          "evidence": "Employment type stated as 'full_time' and contract type as 'permanent' indicates traditional W2 employment relationship",
+          "source": "combined"
+        },
+        "benefits_level": {
+          "value": "none_mentioned",
+          "confidence": 0.9,
+          "evidence": "No benefits mentioned in the job posting extraction, indicating benefits were not discussed",
+          "source": "pass1_derived"
+        }
+      },
+      "career_development": {
+        "growth_path_clarity": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No mention of career growth, advancement opportunities, or development paths in the job description",
+          "source": "pass1_derived"
+        },
+        "mentorship_signals": {
+          "value": "not_mentioned",
+          "confidence": 0.9,
+          "evidence": "No mention of mentorship programs, working with senior staff, or collaborative learning environment",
+          "source": "pass1_derived"
+        },
+        "promotion_path_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of promotion opportunities, advancement, or career progression paths",
+          "source": "pass1_derived"
+        },
+        "internal_mobility_mentioned": {
+          "value": false,
+          "confidence": 0.9,
+          "evidence": "No mention of internal transfers, role changes, or mobility opportunities within IBM",
+          "source": "pass1_derived"
+        },
+        "career_tracks_available": {
+          "value": [],
+          "confidence": 0.9,
+          "evidence": "No mention of career tracks, IC path, management path, or specialist tracks available",
+          "source": "pass1_derived"
+        }
+      },
+      "requirements_classification": {
+        "requirement_strictness": {
+          "value": "medium",
+          "confidence": 0.75,
+          "evidence": "Clear distinction between must-have skills (Cognos, UNIX, BI/DW) and nice-to-have skills (cloud platforms, Agile) with balanced requirements",
+          "source": "combined"
+        },
+        "scope_definition": {
+          "value": "clear",
+          "confidence": 0.85,
+          "evidence": "Focused job description specifically for Data Engineer-Business Intelligence role with clear responsibilities around BI/DW, reporting, and visualization",
+          "source": "inferred"
+        },
+        "skill_inflation_detected": {
+          "value": false,
+          "confidence": 0.8,
+          "evidence": "3 years experience requirement is reasonable for mid-level data engineer role with appropriate skill set (Cognos, ETL tools, BI/DW)",
+          "source": "inferred"
+        }
+      }
+    },
+    "tokens": 8986,
+    "input_tokens": 5897,
+    "output_tokens": 3089,
+    "cost": 0.012075
+  }
+}

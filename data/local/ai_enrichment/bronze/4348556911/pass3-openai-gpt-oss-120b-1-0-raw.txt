@@ -1,0 +1,256 @@
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 2,
+        "confidence": 0.75,
+        "evidence": "Job mentions Azure Databricks, Spark, Hadoop and Azure DevOps but no explicit orchestration, data catalog, testing or monitoring tools, indicating a developing level of data engineering practice.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "developing",
+        "confidence": 0.75,
+        "evidence": "Score of 2 maps to the \"developing\" maturity level.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [
+          "modern_data_stack_adoption",
+          "cloud_native"
+        ],
+        "confidence": 0.78,
+        "evidence": "Use of Azure Databricks, Spark, Hadoop and Azure Blob storage shows adoption of a modern cloud‑native data stack.",
+        "source": "combined"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.15,
+        "confidence": 0.9,
+        "evidence": "The description is limited to data engineering tasks (pipeline building, ETL, batch & real‑time processing) with no mention of data science, dev‑ops or product ownership responsibilities.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.8,
+        "evidence": "IBM consulting roles often involve client‑facing delivery, which can create occasional peak periods, but no explicit on‑call or overtime language is present.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.92,
+        "evidence": "Responsibilities are explicitly listed (data gathering, storage, batch & real‑time processing, ETL, search app development) and match the title.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.3,
+        "confidence": 0.85,
+        "evidence": "Low scope creep, moderate overtime risk, clear responsibilities, but lack of salary, benefits and growth information raises some caution.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "Job posting does not specify who the role reports to.",
+        "source": "not_mentioned"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No manager title (e.g., Head of Data, Director) is referenced.",
+        "source": "not_mentioned"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.7,
+        "evidence": "No indication of hiring surge or team expansion in the description.",
+        "source": "not_mentioned"
+      },
+      "team_composition": {
+        "value": null,
+        "confidence": 0.6,
+        "evidence": "No details about team size or composition are provided.",
+        "source": "not_mentioned"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No reporting line is described.",
+        "source": "not_mentioned"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.7,
+        "evidence": "Collaboration with diverse teams is mentioned, but the role is not described as embedded within a product squad.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.7,
+        "evidence": "No PTO, remote‑work or on‑call policies are mentioned; IBM typically offers standard benefits, but nothing is explicit.",
+        "source": "not_mentioned"
+      },
+      "growth_opportunities_score": {
+        "value": 0.4,
+        "confidence": 0.7,
+        "evidence": "The posting does not discuss learning budgets, mentorship, or promotion paths.",
+        "source": "not_mentioned"
+      },
+      "tech_culture_score": {
+        "value": 0.55,
+        "confidence": 0.75,
+        "evidence": "Use of modern Azure tools suggests a decent technical culture, but lack of CI/CD, testing, monitoring, or community signals keeps the score moderate.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.8,
+        "evidence": "No explicit mention of open‑source contributions, conferences, hackathons, or dedicated innovation time.",
+        "source": "not_mentioned"
+      },
+      "dev_practices_mentioned": {
+        "value": [],
+        "confidence": 0.85,
+        "evidence": "Job description lists tools but does not reference code review, CI/CD pipelines, testing, or monitoring practices.",
+        "source": "not_mentioned"
+      },
+      "innovation_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No language about experimentation, R&D time, or new‑technology pilots.",
+        "source": "not_mentioned"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No reference to refactoring, tech‑debt reduction, or modernization initiatives.",
+        "source": "not_mentioned"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "none",
+        "confidence": 0.85,
+        "evidence": "The posting focuses on data pipelines and search applications; no ML, model serving, or MLOps tools are mentioned.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.9,
+        "evidence": "No ML‑related tools appear in the mandatory or nice‑to‑have skill list.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No start‑date or urgency language is provided.",
+        "source": "not_mentioned"
+      },
+      "competition_level": {
+        "value": "not_mentioned",
+        "confidence": 0.7,
+        "evidence": "No data on applicant volume, location desirability, or salary disclosure to infer competition.",
+        "source": "not_mentioned"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.95,
+        "evidence": "IBM is a globally recognized, large‑scale enterprise with established consulting divisions.",
+        "source": "pass1_derived"
+      },
+      "hiring_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No indication of aggressive or steady hiring cadence.",
+        "source": "not_mentioned"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "Team size is not disclosed in the posting.",
+        "source": "not_mentioned"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "IBM is a publicly traded company; funding stage is irrelevant.",
+        "source": "not_mentioned"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.8,
+        "evidence": "No language indicating whether this is a new headcount or a backfill.",
+        "source": "not_mentioned"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "modern_tech_stack",
+      "cloud_native",
+      "established_company",
+      "data_focused_role"
+    ],
+    "strength_details": [
+      "Uses Azure Databricks, Spark, Hadoop and Azure DevOps – a modern cloud‑native data stack.",
+      "IBM is a large, stable enterprise with global consulting reach.",
+      "Role is tightly focused on data engineering (ETL, batch & real‑time pipelines, search app development).",
+      "Opportunity to work on Azure‑based lakehouse architectures."
+    ],
+    "concern_categories": [
+      "salary_not_disclosed",
+      "limited_growth",
+      "unclear_reporting"
+    ],
+    "concern_details": [
+      "Compensation range is not provided, making salary negotiation harder.",
+      "No mention of career progression, mentorship, or internal mobility.",
+      "Reporting line and manager level are not described, leaving hierarchy unclear."
+    ],
+    "best_fit_categories": [
+      "senior_data_engineers",
+      "pipeline_developers",
+      "cloud_specialists"
+    ],
+    "best_fit_details": [
+      "Senior data engineers (5‑8+ years) with strong Azure/Databricks and Spark experience.",
+      "Engineers who enjoy building both batch and streaming pipelines.",
+      "Candidates comfortable working in a large‑enterprise consulting environment."
+    ],
+    "probe_categories": [
+      "salary_range_details",
+      "career_growth_path",
+      "reporting_structure",
+      "work_hour_expectations",
+      "tech_stack_details"
+    ],
+    "probe_details": [
+      "What is the compensation range (base, bonus, equity) for this role?",
+      "Can you describe the typical career progression for data engineers at IBM Consulting?",
+      "Who will this role report to and what is the manager's level?",
+      "What are the expected weekly hours and on‑call responsibilities, if any?",
+      "Beyond Azure Databricks, which orchestration, monitoring, and testing tools are used?"
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "rare_skill_match"
+    ],
+    "leverage_details": [
+      "Extensive experience with Azure Databricks and PySpark aligns directly with the core tech stack.",
+      "Hands‑on knowledge of Hadoop ecosystem and Azure DevOps is relatively scarce among candidates."
+    ],
+    "overall_assessment": "The role offers a solid senior‑level data engineering position within IBM's established consulting practice, leveraging a modern Azure stack. Compensation details and career‑path information are missing, so candidates should clarify those points. Overall, it is a good fit for experienced Azure‑focused engineers seeking enterprise‑scale impact.",
+    "recommendation_score": 0.71,
+    "recommendation_confidence": 0.84
+  }
+}

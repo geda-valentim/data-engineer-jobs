@@ -1,0 +1,233 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.82,
+        "evidence": "Mentions modern tools like SQL Server, SSIS, Power BI, Tableau, and a focus on data warehousing, but lacks advanced practices like data mesh or MLops.  Indicates defined processes but not fully managed.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.82,
+        "evidence": "Matches score of 3.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.75,
+        "evidence": "Mentions SQL Server, SSIS, Power BI, Tableau - indicating adoption of modern data tools.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.2,
+        "confidence": 0.88,
+        "evidence": "The role is primarily focused on data engineering tasks (building pipelines, data warehousing) with some BI reporting, indicating a focused scope.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.72,
+        "evidence": "The 'ASAP' start date and hybrid work model suggest potential for some time pressure, but the lack of explicit mentions of long hours or on-call duty mitigates the risk.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "The job description clearly outlines the responsibilities and required skills for a BI Data Engineer.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.3,
+        "confidence": 0.78,
+        "evidence": "Low to moderate risk - well-defined role, but potential for time pressure due to 'ASAP' start.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "clear",
+        "confidence": 0.95,
+        "evidence": "The job posting explicitly states reporting to the Head of Data Engineering.",
+        "source": "explicit"
+      },
+      "manager_level_inferred": {
+        "value": "director_plus",
+        "confidence": 0.92,
+        "evidence": "Reporting to the 'Head of Data Engineering' strongly suggests a director-level or higher manager.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.75,
+        "evidence": "The team is expanding from 8 to 15, indicating a steady growth trajectory.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "8-15 engineers",
+          "de_count": "5 data engineers",
+          "seniority_mix": "mix of senior and mid-level"
+        },
+        "confidence": 0.80,
+        "evidence": "Mentions joining a team of 5 DEs within a broader 15-person data organization.",
+        "source": "explicit"
+      },
+      "reporting_structure": {
+        "value": "reports_to_director_data",
+        "confidence": 0.95,
+        "evidence": "Job posting mentions 'reporting to Head of Data Engineering'",
+        "source": "explicit"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions working closely with Analysts, Product Managers, and business users, suggesting cross-functional collaboration.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.65,
+        "confidence": 0.80,
+        "evidence": "Hybrid work model is positive, but 'ASAP' start date and lack of PTO details are concerns.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.70,
+        "confidence": 0.82,
+        "evidence": "Opportunities to learn new technologies and work on challenging projects, but no explicit mention of mentorship or career paths.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.70,
+        "confidence": 0.85,
+        "evidence": "Modern data stack, focus on quality, and collaboration are positive signals.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.85,
+        "evidence": "No explicit mentions of open source contributions, tech blogs, or hackathons.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["code_review", "ci_cd"],
+        "confidence": 0.80,
+        "evidence": "Mentions code review and CI/CD practices.",
+        "source": "explicit"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.70,
+        "evidence": "Focus on maintaining existing systems and delivering BI solutions, with limited mention of innovation.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions 'modernizing legacy pipelines' and 'improving code quality'.",
+        "source": "explicit"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No mention of AI or ML technologies in the job description.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML/AI tools are mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.90,
+        "evidence": "The job posting explicitly states an 'ASAP' start date.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Hybrid role in NYC suggests moderate competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "growth_stage",
+        "confidence": 0.75,
+        "evidence": "Expanding team, well-funded, and serving a specific community.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.82,
+        "evidence": "Team is expanding from 8 to 15, indicating steady growth.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.88,
+        "evidence": "Mentions a team of 8 data engineers within a larger organization.",
+        "source": "explicit"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.70,
+        "evidence": "No specific funding stage is mentioned.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.85,
+        "evidence": "The team is expanding, suggesting this is a new headcount to support growth.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["transparent_salary", "modern_tech_stack", "well_defined_role", "career_growth_clear"],
+    "strength_details": [
+      "Transparent compensation ($105k - $140k)",
+      "Modern data stack (SQL Server, SSIS, Power BI, Tableau)",
+      "Clear role definition with focused responsibilities",
+      "Opportunities for growth within an expanding team"
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship"],
+    "concern_details": [
+      "ASAP start date suggests potential for time pressure",
+      "US work authorization required - no visa sponsorship"
+    ],
+    "best_fit_categories": ["senior_data_engineers", "pipeline_developers", "data_warehouse_specialists"],
+    "best_fit_details": [
+      "Senior data engineers with 6+ years of experience",
+      "Engineers proficient in SQL Server, SSIS, and data warehousing",
+      "Candidates seeking a stable role with growth potential"
+    ],
+    "probe_categories": ["work_hour_expectations", "team_dynamics", "tech_debt_situation"],
+    "probe_details": [
+      "Ask about typical work hours and expectations for overtime",
+      "Inquire about team culture and collaboration practices",
+      "Understand the extent of tech debt and plans for modernization"
+    ],
+    "leverage_categories": ["domain_expertise"],
+    "leverage_details": [
+      "Experience in the financial/banking industry is a plus"
+    ],
+    "overall_assessment": "This is a solid opportunity for a senior data engineer seeking a well-defined role in a growing organization. The modern tech stack and clear reporting structure are attractive, but candidates should be prepared for a potentially fast-paced environment. The lack of visa sponsorship is a significant limitation.",
+    "recommendation_score": 0.75,
+    "recommendation_confidence": 0.85
+  }
+}
+```

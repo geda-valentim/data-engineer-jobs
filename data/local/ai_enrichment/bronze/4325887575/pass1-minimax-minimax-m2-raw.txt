@@ -1,0 +1,160 @@
+<reasoning>I need to carefully extract information from this job posting following the strict rules provided. Let me go through each section systematically.
+
+Looking at the job posting:
+
+**Title**: Data Engineer-Data Integration
+**Company**: IBM
+**Location**: Pune, Maharashtra, India
+
+Let me extract information section by section:
+
+1. **Compensation**: No salary information is mentioned, so all compensation fields should be null/false.
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. So this should be "not_mentioned" for visa_sponsorship_stated and null for the text fields.
+
+3. **Work Model**: 
+   - Location is specified as "Pune, Maharashtra, India" - this suggests onsite work
+   - No mention of remote or hybrid work
+   - No mention of employment type (full-time, contract, etc.)
+   - So work_model_stated should be "onsite" since a specific location is given
+
+4. **Contract Details**: No mention of contract type, duration, etc. So contract_type should be "not_mentioned" and other fields null.
+
+5. **Contractor Rates**: No mention of contractor rates, so all fields null.
+
+6. **Skills Classified**: Let me analyze the skills mentioned:
+
+**Hard Skills Analysis:**
+- "Expertise in designing and implementing scalable data warehouse solutions on Snowflake" - This has "Expertise" which is a strong qualifier, so this should be must_have
+- "Strong experience in building data ingestion and transformation pipelines using Talend" - "Strong experience" is a strong qualifier, so must_have
+- "Proficiency in integrating data from cloud platforms into Snowflake using Talend and native Snowflake capabilities" - "Proficiency" is a strong qualifier, so must_have
+- "Hands-on experience with dimensional and relational data modelling techniques" - "Hands-on experience" is a strong qualifier, so must_have
+
+
+- "Understanding of optimizing Snowflake workloads" - "Understanding" is a weaker qualifier, so nice_to_have
+- "Ability to implement robust data validation, cleansing, and governance frameworks" - "Ability" suggests a strong capability, so likely must_have
+- "Proficiency in SQL and/or Shell scripting" - "Proficiency" indicates a strong skill level, so must_have
+
+I'll continue analyzing the soft skills and technical requirements. The role demands advanced technical expertise in data engineering, with a focus on Snowflake, Talend, and data modeling. The qualifications suggest a need for both technical depth and practical implementation skills.
+
+The preferred education is a Master's Degree, which indicates a preference for advanced academic preparation in the field. This suggests the role requires not just technical skills, but also theoretical knowledge and analytical thinking.
+
+The technical and professional expertise requirements reinforce the need for strong data warehouse design, pipeline development, and integration capabilities. The role seems to require someone who can work across multiple data platforms and technologies.
+
+The preferred experience section highlights additional skills in Snowflake workload optimization, data validation, and scripting. These requirements suggest a need for continuous improvement and efficiency in data management processes.
+
+No specific geographic restrictions are mentioned, and the benefits are not detailed in the provided text. The company description focuses on IBM's consulting approach, emphasizing technical and industry expertise across various sectors.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "onsite",
+      "location_restriction_text": "Pune, Maharashtra, India",
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Snowflake",
+        "data warehouse solutions",
+        "schema design",
+        "performance tuning",
+        "query optimization",
+        "Talend",
+        "data ingestion pipelines",
+        "transformation pipelines",
+        "data integration",
+        "cloud platforms",
+        "dimensional data modelling",
+        "relational data modelling",
+        "data validation",
+        "data cleansing",
+        "data governance",
+        "ETL processes",
+        "SQL",
+        "Shell scripting"
+      ],
+      "nice_to_have_hard_skills": [
+        "Snowflake workload optimization",
+        "clustering keys",
+        "caching strategies",
+        "query profiling"
+      ],
+      "must_have_soft_skills": [],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [],
+      "years_experience_min": null,
+      "years_experience_max": null,
+      "years_experience_text": null,
+      "education_level": "MASTERS",
+      "education_area": null,
+      "education_requirement": "preferred",
+      "education_text_raw": "Master's Degree",
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": null,
+      "company_description_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 52
+  }
+}
+```

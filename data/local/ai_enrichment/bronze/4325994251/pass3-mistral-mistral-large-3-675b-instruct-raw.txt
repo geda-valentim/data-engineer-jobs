@@ -1,0 +1,267 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 4,
+        "confidence": 0.8,
+        "evidence": "IBM is an established enterprise with mature tooling (Azure Databricks, PySpark, ETL tools) and explicit mentions of Agile collaboration, suggesting structured data practices and governance.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "managed",
+        "confidence": 0.8,
+        "evidence": "Score of 4 aligns with 'managed' maturity level, indicating strong practices and quality monitoring.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": [
+          "modern_data_stack_adoption",
+          "cicd_practices",
+          "data_governance"
+        ],
+        "confidence": 0.85,
+        "evidence": "Mentions Azure Databricks, PySpark, ETL/data integration tools, and Agile collaboration, which are indicative of modern data stack adoption and governance. Azure DevOps implies CI/CD practices.",
+        "source": "combined"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.3,
+        "confidence": 0.85,
+        "evidence": "Role is primarily focused on data engineering but includes responsibilities like implementing predictive models and enterprise search applications, which overlap with data science and analytics.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.7,
+        "evidence": "Job posting mentions 'IBM Consulting Client Innovation Centers' and client delivery, which may imply project deadlines and moderate overtime risk. No explicit protective factors like PTO or work-life balance are mentioned.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "multi_role",
+        "confidence": 0.8,
+        "evidence": "Job description combines data engineering tasks with data science/model implementation and enterprise search tools, suggesting a multi-role expectation.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.8,
+        "evidence": "Moderate scope creep and overtime risk, but role is at a well-established company with structured practices, reducing overall red flag severity.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit or clear reporting structure mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure or manager title is mentioned to infer manager level.",
+        "source": "pass1_derived"
+      },
+      "team_growth_velocity": {
+        "value": "unknown",
+        "confidence": 0.9,
+        "evidence": "No explicit signals about team growth velocity beyond the general context of IBM Consulting.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.9,
+        "evidence": "Team composition details are sparse; only mentions collaboration with diverse teams without specifics.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No reporting structure details provided in the job posting.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Job posting mentions collaborating closely with diverse teams, including scientists, engineers, and consultants, indicating cross-functional embedding.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.6,
+        "evidence": "Agile environment and client delivery focus may imply moderate work-life balance risk, but no explicit negative signals like on-call or overtime are mentioned. No protective factors like PTO are stated.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.7,
+        "confidence": 0.75,
+        "evidence": "IBM is known for offering learning opportunities and career growth paths, even if not explicitly mentioned in this posting. The role involves working with advanced tools and diverse teams, which can provide growth.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.75,
+        "confidence": 0.8,
+        "evidence": "Mentions Agile collaboration, modern Azure tools, and enterprise data practices, indicating a reasonably strong tech culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.95,
+        "evidence": "No explicit tech culture signals like open source contributions, tech blogs, or innovation time are mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["ci_cd", "data_governance"],
+        "confidence": 0.8,
+        "evidence": "Azure DevOps is mentioned, which implies CI/CD practices. Collaboration with diverse teams suggests data governance processes.",
+        "source": "inferred"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.7,
+        "evidence": "Role involves working with modern Azure tools and hybrid processing paradigms, indicating some innovation focus, but no explicit signals like R&D time or hackathons are mentioned.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.9,
+        "evidence": "No explicit or inferred mentions of tech debt management or refactoring in the job posting.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.75,
+        "evidence": "Responsibilities include implementing predictive models and statistical techniques, but no advanced MLOps or GenAI tools are mentioned.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No explicit ML tools mentioned beyond general statistical and machine learning techniques.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit hiring urgency signals like 'immediate start' or 'ASAP' are mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.7,
+        "evidence": "IBM is a well-known company, and the role is located in Kochi, India, which may attract a moderate number of applicants. The hybrid nature of the role (DE + some ML) could also increase competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "enterprise",
+        "confidence": 0.95,
+        "evidence": "IBM is a globally established enterprise with a large workforce and mature operations.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "Given IBM's size and consulting focus, hiring is likely steady to support client projects and innovation centers.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No explicit team size signals provided in the job posting.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No funding stage signals mentioned in the job posting.",
+        "source": "pass1_derived"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.6,
+        "evidence": "Role is likely part of IBM Consulting's expansion in client innovation centers, but no explicit mention of role creation type.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": [
+      "modern_tech_stack",
+      "established_company",
+      "learning_opportunities",
+      "collaborative_culture",
+      "data_focused_role"
+    ],
+    "strength_details": [
+      "IBM is a globally recognized enterprise with mature data engineering practices and resources.",
+      "Modern tech stack centered around Azure (Databricks, PySpark, DevOps) with hybrid processing capabilities.",
+      "Opportunity to collaborate with diverse teams, including data scientists, engineers, and consultants, which can enhance learning and exposure.",
+      "Role focuses on data engineering tasks with clear responsibilities in data management and pipeline development."
+    ],
+    "concern_categories": [
+      "scope_creep_risk",
+      "overtime_likely",
+      "unclear_reporting",
+      "not_mentioned_benefits"
+    ],
+    "concern_details": [
+      "Role includes responsibilities overlapping with data science and analytics, which may lead to scope creep and unclear expectations.",
+      "Client delivery focus in a consulting environment may imply moderate overtime risk due to project deadlines.",
+      "No explicit benefits (PTO, learning budget, etc.) are mentioned, which could be a concern for work-life balance and career growth.",
+      "Reporting structure is unclear, making it difficult to assess managerial support or leadership hierarchy."
+    ],
+    "best_fit_categories": [
+      "mid_level_engineers",
+      "data_generalists",
+      "cloud_specialists",
+      "career_changers"
+    ],
+    "best_fit_details": [
+      "Mid-level data engineers with 4-7 years of experience in Azure and hybrid data processing.",
+      "Data generalists comfortable with both engineering and basic ML/analytics tasks, seeking exposure to enterprise consulting.",
+      "Cloud specialists with expertise in Azure Databricks, PySpark, and DevOps, looking to work in a structured environment."
+    ],
+    "probe_categories": [
+      "role_scope_boundaries",
+      "work_hour_expectations",
+      "career_growth_path",
+      "tech_stack_details",
+      "team_composition"
+    ],
+    "probe_details": [
+      "Ask for clarity on the boundaries between data engineering, data science, and analytics responsibilities in this role.",
+      "Inquire about typical work hours, project deadlines, and overtime expectations in the Client Innovation Center.",
+      "Understand the career growth path within IBM Consulting for data engineers, including mentorship and promotion opportunities.",
+      "Probe for details on the tech stack, including specific tools used for data governance, CI/CD, and processing.",
+      "Ask about the size and composition of the team you'll be joining, including seniority mix and cross-functional dynamics."
+    ],
+    "leverage_categories": [
+      "exact_experience_match",
+      "domain_expertise"
+    ],
+    "leverage_details": [
+      "Candidates with 4-5 years of relevant experience in Azure Databricks, PySpark, and ETL tools will have strong negotiation leverage.",
+      "Experience in enterprise consulting or client-facing roles can be a differentiator for this position."
+    ],
+    "overall_assessment": "This role at IBM Consulting offers a solid opportunity for mid-level data engineers with Azure expertise and a willingness to engage in hybrid data processing and basic ML tasks. The enterprise environment provides stability and access to modern tools, but candidates should be cautious about potential scope creep and unclear work-life balance or benefits. Ideal for those seeking exposure to consulting and cross-functional collaboration.",
+    "recommendation_score": 0.7,
+    "recommendation_confidence": 0.85
+  }
+}
+```

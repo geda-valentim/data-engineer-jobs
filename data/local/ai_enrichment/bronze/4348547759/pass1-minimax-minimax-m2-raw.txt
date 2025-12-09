@@ -1,0 +1,187 @@
+<reasoning>I need to carefully extract information from this IBM job posting for a Data Engineer position. Let me go through each section systematically.
+
+Looking at the job posting:
+
+**Title**: Data Engineer-Data Platforms-AWS
+**Company**: IBM
+**Location**: Pune, Maharashtra, India
+
+**Description Analysis**:
+
+1. **Compensation**: No salary information is mentioned, so salary_disclosed = false, all salary fields = null
+
+2. **Work Authorization**: No mention of visa sponsorship, work authorization requirements, or citizenship requirements. So visa_sponsorship_stated = "not_mentioned", work_auth_text = null, citizenship_text = null, security_clearance_stated = "not_mentioned"
+
+3. **Work Model**: The location is "Pune, Maharashtra, India" which suggests onsite work, but no explicit mention of work model. employment_type is not explicitly mentioned either. So work_model_stated = "not_mentioned", location_restriction_text = null, employment_type_stated = "not_mentioned"
+
+4. **Contract Details**: No mention of contract type, duration, etc. So contract_type = "not_mentioned", all other contract fields = null
+
+5. **Contractor Rates**: No mention of contractor rates, so all contractor rate fields = null
+
+6. **Skills Classification**: Let me analyze the technical requirements:
+
+**Required Technical And Professional Expertise**:
+- Minimum 4+ years of experience in Big Data technologies with extensive data engineering experience in Spark / Python or Scala
+- Minimum 3 years of experience on Cloud Data Platforms on Azure
+- Experience in DataBricks / Azure HDInsight / Azure Data Factory, Synapse, SQL Server DB
+- Good to excellent SQL skills
+- Exposure to streaming solutions and message brokers like Kafka technologies
+
+**Preferred Technical And Professional Experience**:
+- Certification in Azure and Data Bricks or Cloudera Spark Certified developers
+
+Let me classify the skills:
+
+**Must-have hard skills** (from "Required" section with strong qualifiers):
+- "Spark" (extensive experience mentioned)
+- "Python" (extensive experience mentioned) 
+- "Scala" (extensive experience mentioned)
+
+
+- "Azure" (3+ years experience required)
+- "DataBricks" (experience required)
+- "Azure HDInsight" (experience required)
+- "Azure Data Factory" (experience required)
+- "Synapse" (experience required)
+- "SQL Server DB" (experience required)
+- "SQL" (good to excellent skills required)
+- "Kafka" (exposure to streaming solutions and message brokers)
+- "Hadoop" (mentioned in responsibilities)
+- "HDFS" (mentioned in responsibilities)
+- "Hive" (mentioned in responsibilities)
+- "Hbase" (mentioned in responsibilities)
+- "NoSQL databases" (mentioned in responsibilities)
+
+I'll continue identifying the hard skills, focusing on the technical requirements and preferred qualifications. The list includes a comprehensive set of technologies spanning big data, cloud platforms, and data engineering tools. These skills represent the core technical competencies needed for the role, with a strong emphasis on Azure-based data platforms and big data technologies.
+
+The preferred skills include specific certifications that demonstrate advanced expertise in cloud and data engineering technologies. These certifications signal a higher level of technical proficiency and commitment to professional development in the field.
+
+The experience requirements are clearly defined, with a minimum of 4+ years in big data technologies and 3+ years on Azure cloud platforms. This indicates a need for substantial hands-on experience in data engineering and cloud infrastructure.
+
+No specific educational background is mentioned, suggesting that practical experience and technical skills take precedence over formal degree requirements. The role appears to prioritize real-world expertise and proven capabilities in data engineering and cloud technologies.
+
+The job description does not reference any generative AI or machine learning technologies, focusing instead on traditional data engineering and cloud platform skills. This suggests a more conventional approach to data infrastructure and processing.
+
+The geographic context is limited to India, with no explicit global or regional restrictions specified. The role seems to be centered on local data engineering capabilities within the Indian market.
+
+Benefits are not detailed, leaving compensation and additional perks unspecified. The company description provides minimal insight into organizational culture or unique value propositions.
+
+The extraction process reveals a comprehensive yet concise job posting, with most fields remaining undefined or set to null, indicating a need for further clarification from potential candidates or the hiring organization.
+</reasoning>
+
+```json
+{
+  "extraction": {
+    "compensation": {
+      "salary_disclosed": false,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "salary_text_raw": null,
+      "hourly_rate_min": null,
+      "hourly_rate_max": null,
+      "hourly_rate_currency": null,
+      "hourly_rate_text_raw": null
+    },
+    "work_authorization": {
+      "visa_sponsorship_stated": "not_mentioned",
+      "work_auth_text": null,
+      "citizenship_text": null,
+      "security_clearance_stated": "not_mentioned"
+    },
+    "work_model": {
+      "work_model_stated": "not_mentioned",
+      "location_restriction_text": null,
+      "employment_type_stated": "not_mentioned"
+    },
+    "contract_details": {
+      "contract_type": "not_mentioned",
+      "contract_duration_months": null,
+      "contract_duration_text": null,
+      "extension_possible": "not_mentioned",
+      "conversion_to_fte": "not_mentioned",
+      "start_date": "not_mentioned",
+      "start_date_text": null,
+      "probation_period_text": null
+    },
+    "contractor_rates": {
+      "pay_type": "not_mentioned",
+      "daily_rate_min": null,
+      "daily_rate_max": null,
+      "daily_rate_currency": null,
+      "daily_rate_text_raw": null,
+      "rate_negotiable": "not_mentioned",
+      "overtime_paid": "not_mentioned"
+    },
+    "skills_classified": {
+      "must_have_hard_skills": [
+        "Spark",
+        "Python",
+        "Scala",
+        "Azure",
+        "DataBricks",
+        "Azure HDInsight",
+        "Azure Data Factory",
+        "Synapse",
+        "SQL Server DB",
+        "SQL",
+        "Kafka",
+        "Hadoop",
+        "HDFS",
+        "Hive",
+        "Hbase",
+        "NoSQL databases",
+        "PySpark",
+        "streaming pipelines",
+        "big data technologies"
+      ],
+      "nice_to_have_hard_skills": [
+        "Azure certification",
+        "Data Bricks certification",
+        "Cloudera Spark certification"
+      ],
+      "must_have_soft_skills": [],
+      "nice_to_have_soft_skills": [],
+      "certifications_mentioned": [
+        "Azure certification",
+        "Data Bricks certification",
+        "Cloudera Spark certification"
+      ],
+      "years_experience_min": 4,
+      "years_experience_max": null,
+      "years_experience_text": "Minimum 4+ years of experience in Big Data technologies with extensive data engineering experience in Spark / Python or Scala; Minimum 3 years of experience on Cloud Data Platforms on Azure",
+      "education_level": null,
+      "education_area": null,
+      "education_requirement": "not_mentioned",
+      "education_text_raw": null,
+      "llm_genai_mentioned": false,
+      "feature_store_mentioned": false
+    },
+    "geographic_restrictions": {
+      "geo_restriction_type": "not_mentioned",
+      "allowed_countries": [],
+      "excluded_countries": [],
+      "us_state_restrictions": [],
+      "residency_requirement": "not_mentioned"
+    },
+    "benefits_structured": {
+      "benefits_mentioned": [],
+      "equity_mentioned": false,
+      "learning_budget_mentioned": false,
+      "conference_budget_mentioned": false,
+      "hardware_choice_mentioned": false,
+      "pto_policy": "not_mentioned"
+    },
+    "context": {
+      "team_info_text": "IBM Consulting Client Innovation Centers (Delivery Centers)",
+      "company_description_text": "In this role, you'll work in one of our IBM Consulting Client Innovation Centers (Delivery Centers), where we deliver deep technical and industry expertise to a wide range of public and private sector clients around the world. Our delivery centers offer our clients locally based skills and technical expertise to drive innovation and adoption of new technology."
+    }
+  },
+  "metadata": {
+    "extraction_complete": true,
+    "fields_found": 15,
+    "fields_null": 57
+  }
+}
+```

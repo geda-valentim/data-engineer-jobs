@@ -25,6 +25,7 @@ from test_enrichment_helpers import (
     load_jobs_from_s3,
     save_pass_result,
     save_raw_response,
+    save_job_original,
 )
 
 # Import execution helpers
@@ -60,13 +61,12 @@ def test_pass3_analysis(
     elif use_s3:
         print("\nLoading jobs from S3 bucket...")
         if date:
-            print(f"  Date: {date} (latest hour)")
+            print(f"  Date filter: {date}")
         else:
-            print(f"  Using most recent partition")
-        print(f"  Limit: {limit} jobs")
+            print(f"  Using most recent partition(s)")
+        print(f"  Requested limit: {limit} jobs")
 
         linkedin_jobs, partition_info = load_jobs_from_s3(date_str=date, limit=limit)
-        print(f"  ✓ Loaded {len(linkedin_jobs)} jobs from partition\n")
     else:
         # Use same hardcoded mocks as comparison test
         linkedin_jobs = [
@@ -118,6 +118,10 @@ def test_pass3_analysis(
             print(f"\n{'=' * 120}")
             print(f"[{i}/{len(linkedin_jobs)}] {job['company_name']} - {job['job_title']}")
             print(f"{'=' * 120}")
+
+            # Save original job data from S3 (only if from S3, not mocks)
+            if use_s3 or preloaded_jobs is not None:
+                save_job_original(job)
 
             job_result = {"job": job}
             pass1_from_cache = False

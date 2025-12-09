@@ -1,0 +1,170 @@
+```json
+{
+  "inference": {
+    "seniority_and_role": {
+      "seniority_level": {
+        "value": "staff",
+        "confidence": 0.95,
+        "evidence": "Title is 'Staff Data Engineer' and requires 5+ or 7+ years of experience depending on education level",
+        "source": "combined"
+      },
+      "job_family": {
+        "value": "data_engineer",
+        "confidence": 0.98,
+        "evidence": "Title explicitly states 'Staff Data Engineer' and core responsibilities focus on data pipelines and engineering",
+        "source": "pass1_derived"
+      },
+      "sub_specialty": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "Mentions both batch tools (Hadoop, Hive, Spark, Airflow) and streaming tools (Kafka, Spark-Streaming)",
+        "source": "inferred"
+      },
+      "leadership_expectation": {
+        "value": "tech_lead_ic",
+        "confidence": 0.80,
+        "evidence": "Leading development independently, driving strategy and roadmap, coordinating with teams, and leading junior engineers without explicit people management duties",
+        "source": "inferred"
+      }
+    },
+    "stack_and_cloud": {
+      "primary_cloud": {
+        "value": "multi",
+        "confidence": 0.90,
+        "evidence": "Both AWS and Azure mentioned explicitly, no clear primary cloud provider",
+        "source": "pass1_derived"
+      },
+      "secondary_clouds": {
+        "value": [],
+        "confidence": 0.90,
+        "evidence": "No additional clouds beyond AWS and Azure mentioned",
+        "source": "pass1_derived"
+      },
+      "processing_paradigm": {
+        "value": "hybrid",
+        "confidence": 0.85,
+        "evidence": "Mentions both batch (Hadoop, Hive, Spark, Airflow) and streaming (Kafka, Spark-Streaming) processing",
+        "source": "inferred"
+      },
+      "orchestrator_category": {
+        "value": "airflow_like",
+        "confidence": 0.95,
+        "evidence": "Airflow explicitly mentioned as a data pipeline and workflow management tool",
+        "source": "pass1_derived"
+      },
+      "storage_layer": {
+        "value": "mixed",
+        "confidence": 0.75,
+        "evidence": "Mentions both NoSQL databases and data lakes (Hadoop, Hive), along with cloud platforms (AWS, Azure) which may include warehouse solutions",
+        "source": "inferred"
+      }
+    },
+    "geo_and_work_model": {
+      "remote_restriction": {
+        "value": "same_region",
+        "confidence": 0.85,
+        "evidence": "Hybrid position in Bengaluru East, Karnataka, India suggests regional restriction",
+        "source": "inferred"
+      },
+      "timezone_focus": {
+        "value": "not_mentioned",
+        "confidence": 0.0,
+        "evidence": "No timezone requirements explicitly or implicitly mentioned",
+        "source": "pass1_derived"
+      },
+      "relocation_required": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "Hybrid position implies local residency, no relocation package mentioned",
+        "source": "inferred"
+      }
+    },
+    "visa_and_authorization": {
+      "h1b_friendly": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of H1B visa sponsorship in Pass 1 extraction",
+        "source": "pass1_derived"
+      },
+      "opt_cpt_friendly": {
+        "value": false,
+        "confidence": 0.85,
+        "evidence": "No explicit mention of OPT/CPT or student visa support, location in India suggests local work authorization",
+        "source": "inferred"
+      },
+      "citizenship_required": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No citizenship or work authorization requirements mentioned for India",
+        "source": "pass1_derived"
+      }
+    },
+    "contract_and_compensation": {
+      "w2_vs_1099": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "Employment type is full-time permanent but no explicit contract type (W2, C2C, 1099) mentioned",
+        "source": "pass1_derived"
+      },
+      "benefits_level": {
+        "value": "none_mentioned",
+        "confidence": 0.95,
+        "evidence": "No benefits explicitly mentioned in Pass 1 extraction",
+        "source": "pass1_derived"
+      }
+    },
+    "career_development": {
+      "growth_path_clarity": {
+        "value": "implied",
+        "confidence": 0.70,
+        "evidence": "Mentions leading and driving strategy, suggesting growth opportunities but no explicit career tracks",
+        "source": "inferred"
+      },
+      "mentorship_signals": {
+        "value": "implied",
+        "confidence": 0.80,
+        "evidence": "Proven experience working in a team of senior data engineers and leading a team of junior engineers suggests mentorship",
+        "source": "pass1_derived"
+      },
+      "promotion_path_mentioned": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No explicit mention of promotion or advancement paths",
+        "source": "pass1_derived"
+      },
+      "internal_mobility_mentioned": {
+        "value": false,
+        "confidence": 0.95,
+        "evidence": "No mention of internal mobility or role changes",
+        "source": "pass1_derived"
+      },
+      "career_tracks_available": {
+        "value": ["ic_track"],
+        "confidence": 0.70,
+        "evidence": "Title and responsibilities align with individual contributor track at a staff level, no explicit mention of management or other tracks",
+        "source": "inferred"
+      }
+    },
+    "requirements_classification": {
+      "requirement_strictness": {
+        "value": "high",
+        "confidence": 0.75,
+        "evidence": "Extensive list of must-have hard and soft skills with clear qualifiers like 'Proven experience' and 'Extensive experience'",
+        "source": "inferred"
+      },
+      "scope_definition": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "Job description and responsibilities are well-defined and focused on data engineering tasks",
+        "source": "inferred"
+      },
+      "skill_inflation_detected": {
+        "value": false,
+        "confidence": 0.80,
+        "evidence": "Skill requirements align well with the staff seniority level and title",
+        "source": "inferred"
+      }
+    }
+  }
+}
+```
