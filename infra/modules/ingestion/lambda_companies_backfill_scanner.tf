@@ -33,8 +33,13 @@ resource "aws_lambda_function" "companies_backfill_scanner" {
   filename         = data.archive_file.companies_backfill_scanner_zip.output_path
   source_code_hash = data.archive_file.companies_backfill_scanner_zip.output_base64sha256
 
-  # Python dependencies layer (includes boto3, pyarrow, pandas)
-  layers = [var.aws_lambda_layer_version_python_dependencies]
+  # Python dependencies layers:
+  # - AWS SDK for pandas (includes pandas, pyarrow, numpy, boto3)
+  # - Custom layer with project dependencies
+  layers = [
+    "arn:aws:lambda:us-east-1:336392948345:layer:AWSSDKPandas-Python312:13",
+    var.aws_lambda_layer_version_python_dependencies
+  ]
 
   environment {
     variables = {

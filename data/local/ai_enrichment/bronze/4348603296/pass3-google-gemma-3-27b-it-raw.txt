@@ -1,0 +1,233 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "Mentions modern tools (Python, Spark, potentially AWS/GCP/Azure) but lacks details on governance or CI/CD beyond basic mentions.  Indicates 'defined' level.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Matches score of 3.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.70,
+        "evidence": "Mentions Python, Spark, and cloud technologies.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.20,
+        "confidence": 0.85,
+        "evidence": "Role focuses on application development and debugging, a clear data engineering task.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.60,
+        "confidence": 0.78,
+        "evidence": "Immediate start date and 'fast-paced' environment suggest potential for long hours. No explicit work-life balance signals.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.85,
+        "evidence": "The job description clearly outlines responsibilities related to application development and debugging.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.45,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to potential for long hours and lack of work-life balance signals, but overall a well-defined role.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "Explicitly states reporting to the Head of Data Engineering.",
+        "source": "explicit"
+      },
+      "manager_level_inferred": {
+        "value": "director_plus",
+        "confidence": 0.92,
+        "evidence": "Reporting to the 'Head of Data Engineering' strongly suggests a director-level manager.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.75,
+        "evidence": "Expanding team from 8 to 15 indicates growth, but not necessarily rapid expansion.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "8-15 engineers",
+          "de_count": "5 data engineers",
+          "seniority_mix": "mix of senior and mid-level"
+        },
+        "confidence": 0.75,
+        "evidence": "Mentions a team of 5 data engineers within a larger 15-person data organization.",
+        "source": "explicit"
+      },
+      "reporting_structure": {
+        "value": "reports_to_director_data",
+        "confidence": 0.90,
+        "evidence": "Job posting explicitly states reporting to the Head of Data Engineering.",
+        "source": "explicit"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.70,
+        "evidence": "Mentions working within Client Innovation Centers and collaborating with PMs.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.55,
+        "confidence": 0.70,
+        "evidence": "No explicit work-life balance signals, but also no strong negative indicators.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.70,
+        "confidence": 0.75,
+        "evidence": "Access to education, tools, and technology suggests some growth opportunities.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.65,
+        "confidence": 0.70,
+        "evidence": "Modern tools mentioned, but limited details on engineering practices.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.60,
+        "evidence": "No explicit signals of strong technical culture (open source, blogs, etc.).",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["ci_cd"],
+        "confidence": 0.70,
+        "evidence": "Mentions CI/CD practices.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.75,
+        "evidence": "Focus on application development and debugging suggests limited innovation focus.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt or refactoring.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No mention of AI or ML in the job description.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML/AI tools mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.85,
+        "evidence": "Mentions 'ASAP' start date.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Location in Pune, India, suggests moderate competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "growth_stage",
+        "confidence": 0.70,
+        "evidence": "IBM Consulting is an established company, but the Client Innovation Centers suggest a growth-focused approach.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "Expanding team, but not a massive hiring spree.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.88,
+        "evidence": "Team size is between 8 and 15 engineers.",
+        "source": "explicit"
+      },
+      "funding_stage_signals": {
+        "value": "profitable",
+        "confidence": 0.85,
+        "evidence": "IBM is a large, established, and profitable company.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.80,
+        "evidence": "Expanding the data engineering team.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["well_defined_role", "modern_tech_stack", "career_growth_clear", "established_company"],
+    "strength_details": [
+      "Clear role focused on application development and debugging.",
+      "Utilizes modern technologies like Python and Spark.",
+      "Offers access to education and tools for career development.",
+      "Backed by the stability and resources of IBM."
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship"],
+    "concern_details": [
+      "Immediate start date and 'fast-paced' environment may lead to long hours.",
+      "No visa sponsorship is offered."
+    ],
+    "best_fit_categories": ["mid_level_engineers", "data_generalists", "cloud_specialists"],
+    "best_fit_details": [
+      "Mid-level data engineers with 6+ years of experience.",
+      "Engineers comfortable with application development and debugging.",
+      "Candidates with cloud experience (AWS, GCP, Azure) are a plus."
+    ],
+    "probe_categories": ["work_hour_expectations", "team_turnover_history", "tech_debt_situation"],
+    "probe_details": [
+      "Inquire about typical work hours and on-call expectations.",
+      "Ask about team turnover rates to gauge employee satisfaction.",
+      "Understand the level of technical debt and plans for modernization."
+    ],
+    "leverage_categories": ["domain_expertise"],
+    "leverage_details": [
+      "Experience with IBM's clients or industries is a differentiator."
+    ],
+    "overall_assessment": "This is a solid opportunity for a mid-level data engineer seeking a stable role at a well-established company. The role is well-defined and utilizes modern technologies. The main trade-offs are the potential for long hours and the lack of visa sponsorship.",
+    "recommendation_score": 0.75,
+    "recommendation_confidence": 0.80
+  }
+}
+```

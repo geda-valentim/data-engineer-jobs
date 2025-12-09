@@ -1,0 +1,231 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.75,
+        "evidence": "Mentions POC development, statistical models, and enterprise search applications (Elasticsearch, Splunk). No explicit CI/CD or data governance practices mentioned, but a focus on data gathering and processing suggests a defined level.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.75,
+        "evidence": "Matches score of 3.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.65,
+        "evidence": "Mentions Elasticsearch and Splunk, indicating some modern tooling.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.3,
+        "confidence": 0.85,
+        "evidence": "Role primarily focuses on data engineering tasks, but also includes predictive modeling and statistical analysis, suggesting some scope expansion.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.4,
+        "confidence": 0.70,
+        "evidence": "ASAP start date and focus on POC development suggest potential for tight deadlines and pressure, but no explicit mention of long hours.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.80,
+        "evidence": "The job description outlines specific responsibilities related to data engineering and AI solution development.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.35,
+        "confidence": 0.75,
+        "evidence": "Moderate risk due to potential for tight deadlines and scope expansion, but overall a well-defined role.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No specific manager or reporting structure mentioned.",
+        "source": "pass1_derived"
+      },
+      "manager_level_inferred": {
+        "value": "not_mentioned",
+        "confidence": 0.85,
+        "evidence": "No title provided for the manager.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No information about team growth or hiring plans.",
+        "source": "pass1_derived"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.50,
+        "evidence": "No specific details about team size or composition.",
+        "source": "pass1_derived"
+      },
+      "reporting_structure": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No reporting structure mentioned.",
+        "source": "pass1_derived"
+      },
+      "cross_functional_embedded": {
+        "value": false,
+        "confidence": 0.70,
+        "evidence": "Focus on technical tasks rather than direct collaboration with product teams.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.5,
+        "confidence": 0.70,
+        "evidence": "No explicit work-life balance signals, but also no red flags like on-call requirements.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.6,
+        "confidence": 0.75,
+        "evidence": "Focus on staying up-to-date with latest trends suggests some learning opportunities.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.65,
+        "confidence": 0.78,
+        "evidence": "Focus on POC development and modern AI technologies suggests a reasonably progressive tech culture.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": ["not_mentioned"],
+        "confidence": 0.85,
+        "evidence": "No explicit signals of strong technical culture.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["not_mentioned"],
+        "confidence": 0.90,
+        "evidence": "No specific development practices mentioned.",
+        "source": "pass1_derived"
+      },
+      "innovation_signals": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Focus on POC development and staying up-to-date with latest trends.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt or refactoring.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "basic_ml",
+        "confidence": 0.80,
+        "evidence": "Focus on implementing and validating predictive models and statistical models.",
+        "source": "inferred"
+      },
+      "ml_tools_expected": {
+        "value": ["Elasticsearch", "Splunk"],
+        "confidence": 0.75,
+        "evidence": "Mentions Elasticsearch and Splunk for enterprise search applications.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.85,
+        "evidence": "Mentions 'ASAP' start date.",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.60,
+        "evidence": "Location in Bengaluru suggests moderate competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "growth_stage",
+        "confidence": 0.70,
+        "evidence": "IBM is an established tech company.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "No indication of rapid expansion or urgent hiring.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No information about team size.",
+        "source": "pass1_derived"
+      },
+      "funding_stage_signals": {
+        "value": "profitable",
+        "confidence": 0.85,
+        "evidence": "IBM is a publicly traded, profitable company.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "not_mentioned",
+        "confidence": 0.90,
+        "evidence": "No information about whether this is a new or backfill role.",
+        "source": "pass1_derived"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["well_defined_role", "modern_tech_stack", "learning_opportunities"],
+    "strength_details": [
+      "Clear role focused on data engineering and AI solution development.",
+      "Utilizes modern AI technologies like Elasticsearch and Splunk.",
+      "Opportunity to stay up-to-date with latest trends in AI and foundation models."
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship"],
+    "concern_details": [
+      "ASAP start date suggests potential for tight deadlines.",
+      "No visa sponsorship mentioned."
+    ],
+    "best_fit_categories": ["mid_level_engineers", "data_generalists", "analytics_engineers"],
+    "best_fit_details": [
+      "Mid-level data engineers with experience in statistical modeling and data processing.",
+      "Engineers interested in applying AI techniques to solve real-world problems."
+    ],
+    "probe_categories": ["reporting_structure", "team_size_composition", "work_hour_expectations"],
+    "probe_details": [
+      "Clarify the reporting structure and manager level.",
+      "Understand the size and composition of the data engineering team.",
+      "Inquire about typical work hours and expectations for meeting deadlines."
+    ],
+    "leverage_categories": ["domain_expertise"],
+    "leverage_details": [
+      "Experience with specific AI/ML frameworks or tools (e.g., TensorFlow, PyTorch)."
+    ],
+    "overall_assessment": "This is a solid opportunity for a mid-level data engineer interested in applying AI techniques within a large, established company. The role is well-defined and offers opportunities for learning and growth. The main trade-offs are the potential for tight deadlines and the lack of visa sponsorship.",
+    "recommendation_score": 0.75,
+    "recommendation_confidence": 0.80
+  }
+}
+```

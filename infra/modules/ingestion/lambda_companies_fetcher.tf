@@ -61,7 +61,7 @@ resource "aws_lambda_event_source_mapping" "companies_fetcher_sqs" {
   # naturalmente limitada a 1 por grupo. O scaling_config abaixo
   # é mantido como segurança adicional.
   scaling_config {
-    maximum_concurrency = 2
+    maximum_concurrency = 10
   }
 }
 

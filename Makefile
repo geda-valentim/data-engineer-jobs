@@ -1,6 +1,6 @@
 TF_DIR=infra/environments/dev
 
-.PHONY: help secrets layer skills-catalog init validate plan apply deploy clean destroy up
+.PHONY: help secrets layer skills-catalog init validate plan apply deploy clean destroy up graphql delta-bronze-to-silver
 
 help: ## Mostra este help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}'
@@ -47,3 +47,15 @@ up: ## Sobe tudo: secrets + layer + skills-catalog + terraform init/validate/app
 	cd $(TF_DIR) && terraform init
 	cd $(TF_DIR) && terraform validate
 	cd $(TF_DIR) && terraform apply
+
+# =============================================================================
+# Dev Tools
+# =============================================================================
+
+JAVA_HOME ?= /usr/lib/jvm/java-17-openjdk-amd64
+
+graphql: ## Inicia GraphQL server local sobre Delta Lake
+	PYTHONPATH=. JAVA_HOME=$(JAVA_HOME) poetry run python src/dev/graphql/server.py
+
+delta-bronze-to-silver: ## Processa Bronze -> Silver Delta Lake
+	PYTHONPATH=. JAVA_HOME=$(JAVA_HOME) poetry run python src/dev/deltalake/bronze_to_silver_enriched_jobs.py

@@ -1,0 +1,233 @@
+```json
+{
+  "analysis": {
+    "company_maturity": {
+      "data_maturity_score": {
+        "value": 3,
+        "confidence": 0.82,
+        "evidence": "Mentions modern data stack (Snowflake, DBT, Unix, SQL), but lacks explicit CI/CD or data governance details.  Indicates defined processes but not fully managed.",
+        "source": "inferred"
+      },
+      "data_maturity_level": {
+        "value": "defined",
+        "confidence": 0.82,
+        "evidence": "Matches score of 3.",
+        "source": "inferred"
+      },
+      "maturity_signals": {
+        "value": ["modern_data_stack_adoption"],
+        "confidence": 0.75,
+        "evidence": "Mentions Snowflake, DBT, Unix, SQL - indicating adoption of modern tools.",
+        "source": "pass1_derived"
+      }
+    },
+    "red_flags_and_role_quality": {
+      "scope_creep_score": {
+        "value": 0.20,
+        "confidence": 0.88,
+        "evidence": "Role is focused on data engineering tasks (ETL, data modeling) with no indication of broader responsibilities.",
+        "source": "inferred"
+      },
+      "overtime_risk_score": {
+        "value": 0.45,
+        "confidence": 0.72,
+        "evidence": "Immediate start date and 'fast-paced' environment suggest potential for pressure, but not extreme. No explicit mention of long hours.",
+        "source": "inferred"
+      },
+      "role_clarity": {
+        "value": "clear",
+        "confidence": 0.90,
+        "evidence": "The job description clearly outlines responsibilities related to ETL, data modeling, and system enhancements.",
+        "source": "inferred"
+      },
+      "overall_red_flag_score": {
+        "value": 0.30,
+        "confidence": 0.78,
+        "evidence": "Generally positive, with moderate risk of time pressure.  Clear role definition and modern stack are strong positives.",
+        "source": "combined"
+      }
+    },
+    "stakeholders_and_leadership": {
+      "reporting_structure_clarity": {
+        "value": "clear",
+        "confidence": 0.95,
+        "evidence": "Explicitly states reporting to the Head of Data Engineering.",
+        "source": "explicit"
+      },
+      "manager_level_inferred": {
+        "value": "director_plus",
+        "confidence": 0.92,
+        "evidence": "Reporting to the 'Head of Data Engineering' strongly suggests a director-level or higher manager.",
+        "source": "inferred"
+      },
+      "team_growth_velocity": {
+        "value": "steady_growth",
+        "confidence": 0.75,
+        "evidence": "Mentions expanding the team, but the growth isn't described as 'rapid'.",
+        "source": "inferred"
+      },
+      "team_composition": {
+        "value": {
+          "team_size": "not_mentioned",
+          "de_count": "not_mentioned",
+          "seniority_mix": "not_mentioned"
+        },
+        "confidence": 0.60,
+        "evidence": "Team size and composition are not explicitly stated.",
+        "source": "explicit"
+      },
+      "reporting_structure": {
+        "value": "reports_to_director_data",
+        "confidence": 0.95,
+        "evidence": "Job posting mentions 'reporting to Head of Data Engineering'",
+        "source": "explicit"
+      },
+      "cross_functional_embedded": {
+        "value": true,
+        "confidence": 0.75,
+        "evidence": "Mentions working directly with client counterparts, suggesting cross-functional collaboration.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture": {
+      "work_life_balance_score": {
+        "value": 0.65,
+        "confidence": 0.75,
+        "evidence": "No explicit mention of PTO or flexible work arrangements, but no strong negative signals either.",
+        "source": "inferred"
+      },
+      "growth_opportunities_score": {
+        "value": 0.70,
+        "confidence": 0.78,
+        "evidence": "Mentions 'attending educational workshops' and 'reviewing publications', suggesting some learning support.",
+        "source": "inferred"
+      },
+      "tech_culture_score": {
+        "value": 0.70,
+        "confidence": 0.75,
+        "evidence": "Modern stack, focus on system enhancements, and collaboration with clients are positive signals.",
+        "source": "inferred"
+      }
+    },
+    "tech_culture_assessment": {
+      "tech_culture_signals": {
+        "value": [],
+        "confidence": 0.60,
+        "evidence": "No explicit mentions of open source contributions, tech blogs, or hackathons.",
+        "source": "pass1_derived"
+      },
+      "dev_practices_mentioned": {
+        "value": ["code_review"],
+        "confidence": 0.70,
+        "evidence": "Mentions 'testing' which can imply code review.",
+        "source": "inferred"
+      },
+      "innovation_signals": {
+        "value": "low",
+        "confidence": 0.70,
+        "evidence": "Focus is on maintaining and enhancing existing systems, with no explicit mention of innovation.",
+        "source": "inferred"
+      },
+      "tech_debt_awareness": {
+        "value": false,
+        "confidence": 0.90,
+        "evidence": "No mention of tech debt or refactoring.",
+        "source": "pass1_derived"
+      }
+    },
+    "ai_ml_integration": {
+      "ai_integration_level": {
+        "value": "not_mentioned",
+        "confidence": 0.95,
+        "evidence": "No mention of AI or ML in the job description.",
+        "source": "pass1_derived"
+      },
+      "ml_tools_expected": {
+        "value": [],
+        "confidence": 0.95,
+        "evidence": "No ML/AI tools are mentioned.",
+        "source": "pass1_derived"
+      }
+    },
+    "competition_and_timing": {
+      "hiring_urgency": {
+        "value": "asap",
+        "confidence": 0.85,
+        "evidence": "The job description states 'ASAP'",
+        "source": "explicit"
+      },
+      "competition_level": {
+        "value": "medium",
+        "confidence": 0.65,
+        "evidence": "Location in India suggests moderate competition.",
+        "source": "inferred"
+      }
+    },
+    "company_context": {
+      "company_stage_inferred": {
+        "value": "growth_stage",
+        "confidence": 0.70,
+        "evidence": "IBM is an established tech company.",
+        "source": "inferred"
+      },
+      "hiring_velocity": {
+        "value": "steady",
+        "confidence": 0.75,
+        "evidence": "Expanding team, but not described as 'rapid'.",
+        "source": "inferred"
+      },
+      "team_size_signals": {
+        "value": "medium_6_15",
+        "confidence": 0.60,
+        "evidence": "No explicit team size mentioned.",
+        "source": "inferred"
+      },
+      "funding_stage_signals": {
+        "value": "profitable",
+        "confidence": 0.85,
+        "evidence": "IBM is a well-established and profitable company.",
+        "source": "inferred"
+      },
+      "role_creation_type": {
+        "value": "team_expansion",
+        "confidence": 0.75,
+        "evidence": "Mentions expanding the team.",
+        "source": "inferred"
+      }
+    }
+  },
+  "summary": {
+    "strength_categories": ["modern_tech_stack", "well_defined_role", "clear_reporting", "established_company"],
+    "strength_details": [
+      "Modern data stack (Snowflake, DBT, Unix, SQL)",
+      "Clear role definition focused on data engineering tasks",
+      "Clear reporting structure to Head of Data Engineering",
+      "Opportunity to work for a well-established company (IBM)"
+    ],
+    "concern_categories": ["overtime_likely", "no_visa_sponsorship"],
+    "concern_details": [
+      "Immediate start date suggests potential for time pressure",
+      "No visa sponsorship available"
+    ],
+    "best_fit_categories": ["mid_level_engineers", "data_warehouse", "pipeline_developers"],
+    "best_fit_details": [
+      "Mid-level data engineers with 3+ years of experience",
+      "Engineers specializing in data warehousing and ETL",
+      "Candidates proficient in Snowflake, DBT, and SQL"
+    ],
+    "probe_categories": ["work_hour_expectations", "team_size_composition", "tech_debt_situation"],
+    "probe_details": [
+      "Ask about typical work hours and on-call expectations",
+      "Inquire about the size and composition of the data engineering team",
+      "Understand the current state of the data infrastructure and any existing tech debt"
+    ],
+    "leverage_categories": ["domain_expertise"],
+    "leverage_details": [
+      "Experience with IBM's data ecosystem or similar enterprise environments"
+    ],
+    "overall_assessment": "This is a solid opportunity for a mid-level data engineer to join a well-established company (IBM) and work with a modern data stack. The role is clearly defined, and the reporting structure is clear. The main trade-offs are the potential for time pressure and the lack of visa sponsorship.",
+    "recommendation_score": 0.78,
+    "recommendation_confidence": 0.85
+  }
+}
+```

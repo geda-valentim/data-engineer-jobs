@@ -324,29 +324,29 @@ def extract_companies_from_partition(partition_key: str) -> List[Dict]:
     """
     Extract unique companies from a Silver layer partition.
 
-    Uses pyarrow to read only needed columns from Parquet files.
+    Uses awswrangler to read only needed columns from Parquet files.
 
     Returns list of dicts: [{"company_id": "...", "company_url": "...", "company_name": "..."}]
     """
-    import pyarrow.parquet as pq
-    import pyarrow.fs as fs
+    import awswrangler as wr
 
     try:
         # S3 path
         s3_path = f"s3://{SILVER_BUCKET_NAME}/linkedin/{partition_key}/"
 
-        # Create S3 filesystem
-        s3 = fs.S3FileSystem()
-
-        # Read Parquet with only needed columns
-        table = pq.read_table(
-            s3_path,
-            columns=["company_id", "company_url", "company_name"],
-            filesystem=s3
-        )
-
-        # Convert to pandas for easier processing
-        df = table.to_pandas()
+        # Read Parquet with only needed columns using awswrangler
+        try:
+            df = wr.s3.read_parquet(
+                path=s3_path,
+                columns=["company_id", "company_url", "company_name"]
+            )
+        except Exception as e:
+            # Handle NoFilesFound or empty partitions gracefully
+            if "No files Found" in str(e) or "NoFilesFound" in str(type(e).__name__):
+                logger.info(f"No Parquet files found in partition {partition_key} - partition may be empty")
+                return []
+            # Re-raise other errors
+            raise
 
         # Filter out rows where both company_id and company_url are null
         df = df[df["company_id"].notna() | df["company_url"].notna()]
