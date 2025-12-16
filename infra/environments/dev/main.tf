@@ -55,6 +55,7 @@ module "ai_enrichment" {
   aws_region   = var.region
 
   silver_bucket_name = module.storage.silver_bucket_name
+  bronze_bucket_name = module.storage.bronze_bucket_name
   silver_prefix      = "linkedin/"
   silver_ai_prefix   = "linkedin_ai/"
 

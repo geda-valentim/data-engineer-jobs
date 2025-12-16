@@ -778,5 +778,5 @@ if __name__ == "__main__":
     import uvicorn
     print(f"Iniciando GraphQL Server...")
     print(f"Delta Path: {DELTA_SILVER_PATH}")
-    print(f"GraphQL Playground: http://localhost:8000/graphql")
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    print(f"GraphQL Playground: http://localhost:8001/graphql")
+    uvicorn.run(app, host="0.0.0.0", port=8001)

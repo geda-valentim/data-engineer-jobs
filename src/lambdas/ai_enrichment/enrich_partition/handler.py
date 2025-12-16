@@ -1,32 +1,54 @@
 """
 Lambda: EnrichPartition
-Enriches a single partition with AI-derived metadata using 3-pass architecture.
-Fault-tolerant: processes all records, marking failures individually.
+Enriches a single job with AI-derived metadata using 3-pass architecture.
+Invoked by Step Function for each pass (pass1, pass2, pass3).
+
+Event format from Step Function:
+{
+    "pass_name": "pass1",  // or "pass2", "pass3"
+    "job_data": {
+        "job_posting_id": "123",
+        "job_title": "Data Engineer",
+        "company_name": "Acme Corp",
+        "job_location": "Remote",
+        "job_description": "..."
+    },
+    "pass1_result": {...},  // For pass2/pass3 - extraction from pass1
+    "pass2_result": {...},  // For pass3 - inference from pass2
+    "execution_id": "job-123-abc123"
+}
+
+Returns format for Step Function:
+- Pass1: {statusCode, extraction, raw_response, model_id, success}
+- Pass2: {statusCode, inference, raw_response, model_id, success}
+- Pass3: {statusCode, analysis, raw_response, model_id, success}
 """
 
 import os
 import logging
-from datetime import datetime, timezone
-from typing import Dict, Any, List, Optional
-
-import pandas as pd
+from typing import Dict, Any
 
 from .bedrock_client import BedrockClient
-from .prompts import build_pass1_prompt
-from .parsers import parse_llm_json, validate_extraction_response
-from .flatteners import flatten_extraction
+from .prompts import build_pass1_prompt, build_pass2_prompt, build_pass3_prompt
+from .parsers import parse_llm_json, validate_extraction_response, validate_inference_response, validate_analysis_response
+
+# Import shared utilities (handle both Lambda and local testing)
+try:
+    from ..shared.s3_utils import write_bronze_result, check_job_processed, read_bronze_result
+except ImportError:
+    from shared.s3_utils import write_bronze_result, check_job_processed, read_bronze_result
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 # Environment variables
-SILVER_BUCKET = os.environ.get("SILVER_BUCKET")
-SILVER_PREFIX = os.environ.get("SILVER_PREFIX", "linkedin/")
-SILVER_AI_PREFIX = os.environ.get("SILVER_AI_PREFIX", "linkedin_ai/")
+BRONZE_BUCKET = os.environ.get("BRONZE_BUCKET")
+BRONZE_AI_PREFIX = os.environ.get("BRONZE_AI_PREFIX", "ai_enrichment/")
 BEDROCK_MODEL_PASS1 = os.environ.get("BEDROCK_MODEL_PASS1", "openai.gpt-oss-120b-1:0")
 BEDROCK_MODEL_PASS2 = os.environ.get("BEDROCK_MODEL_PASS2", "openai.gpt-oss-120b-1:0")
 BEDROCK_MODEL_PASS3 = os.environ.get("BEDROCK_MODEL_PASS3", "openai.gpt-oss-120b-1:0")
 AWS_REGION = os.environ.get("AWS_REGION", "us-east-1")
+WRITE_TO_BRONZE = os.environ.get("WRITE_TO_BRONZE", "true").lower() == "true"
 
 # Enrichment version - increment on schema changes
 ENRICHMENT_VERSION = "1.0"
@@ -50,68 +72,61 @@ def get_bedrock_client() -> BedrockClient:
     return _bedrock_client
 
 
-def create_empty_enrichment() -> Dict[str, Any]:
-    """Create empty enrichment columns for failed records."""
-    return {
-        # Metadata
-        "enriched_at": datetime.now(timezone.utc).isoformat(),
-        "enrichment_version": ENRICHMENT_VERSION,
-        "enrichment_model_pass1": BEDROCK_MODEL_PASS1,
-        "enrichment_model_pass2": BEDROCK_MODEL_PASS2,
-        "enrichment_model_pass3": BEDROCK_MODEL_PASS3,
-
-        # Status flags
-        "pass1_success": False,
-        "pass2_success": False,
-        "pass3_success": False,
-
-        # Metrics (null for failures)
-        "total_tokens_used": None,
-        "enrichment_input_tokens": None,
-        "enrichment_output_tokens": None,
-        "enrichment_cost_usd": None,
-        "avg_confidence_pass2": None,
-        "avg_confidence_pass3": None,
-
-        # Error tracking
-        "enrichment_errors": None,
-        "low_confidence_fields": None,
+def get_model_for_pass(pass_name: str) -> str:
+    """Get the model ID for a specific pass."""
+    models = {
+        "pass1": BEDROCK_MODEL_PASS1,
+        "pass2": BEDROCK_MODEL_PASS2,
+        "pass3": BEDROCK_MODEL_PASS3,
     }
+    return models.get(pass_name, BEDROCK_MODEL_PASS1)
 
 
-def enrich_single_job(job: Dict[str, Any], bedrock_client: Optional[BedrockClient] = None) -> Dict[str, Any]:
+# ═══════════════════════════════════════════════════════════════════════════════
+# Pass Execution Functions
+# ═══════════════════════════════════════════════════════════════════════════════
+
+
+def execute_pass1(job_data: Dict[str, Any]) -> Dict[str, Any]:
     """
-    Run 3-pass enrichment on a single job.
+    Execute Pass 1: Extraction.
 
-    Returns dict with all enrichment columns.
-    Handles errors gracefully - returns partial results on failure.
+    Extracts structured data from job description.
+    Returns cached result if already processed with same model.
 
     Args:
-        job: Job dict with title, company_name, job_location, job_description_text
-        bedrock_client: Optional Bedrock client (uses singleton if not provided)
-    """
-    result = create_empty_enrichment()
-    errors = []
-    total_tokens = 0
-    total_input_tokens = 0
-    total_output_tokens = 0
-    total_cost = 0.0
+        job_data: Job information with job_posting_id, job_title, company_name, etc.
 
-    job_id = job.get("job_posting_id", "unknown")
-    client = bedrock_client or get_bedrock_client()
+    Returns:
+        Dict with statusCode, extraction, raw_response, model_id, success
+    """
+    job_id = job_data.get("job_posting_id", "unknown")
+    model_id = get_model_for_pass("pass1")
+
+    # Check for cached result in Bronze
+    if BRONZE_BUCKET and check_job_processed(job_id, model_id, "pass1"):
+        cached = read_bronze_result(job_id, model_id, "pass1")
+        if cached:
+            logger.info(f"Pass 1 cache hit for job {job_id}, returning cached result")
+            return {
+                "statusCode": 200,
+                "success": True,
+                "extraction": cached,
+                "raw_response": None,  # Not stored in cache lookup
+                "model_id": model_id,
+                "cached": True,
+            }
+
+    client = get_bedrock_client()
 
     # Extract job fields
-    title = job.get("job_title", "") or job.get("title", "")
-    company = job.get("company_name", "")
-    location = job.get("job_location", "") or job.get("location", "")
-    description = job.get("job_description_text", "") or job.get("description", "")
+    title = job_data.get("job_title", "") or ""
+    company = job_data.get("company_name", "") or ""
+    location = job_data.get("job_location", "") or ""
+    description = job_data.get("job_description", "") or job_data.get("job_description_text", "") or ""
 
-    # Store raw extraction result for cascading to Pass 2/3
-    pass1_extraction = None
+    logger.info(f"Pass 1 (Extraction) starting for job {job_id}")
 
-    # ═══════════════════════════════════════════════════════════════
-    # PASS 1: Extraction
-    # ═══════════════════════════════════════════════════════════════
     try:
         system_prompt, user_prompt = build_pass1_prompt(
             job_title=title,
@@ -126,14 +141,6 @@ def enrich_single_job(job: Dict[str, Any], bedrock_client: Optional[BedrockClien
             pass_name="pass1",
         )
 
-        # Store raw response for debugging
-        result["pass1_raw_response"] = response_text
-
-        total_tokens += input_tokens + output_tokens
-        total_input_tokens += input_tokens
-        total_output_tokens += output_tokens
-        total_cost += cost
-
         # Parse JSON response
         parsed, parse_error = parse_llm_json(response_text)
         if parse_error:
@@ -144,175 +151,352 @@ def enrich_single_job(job: Dict[str, Any], bedrock_client: Optional[BedrockClien
         if not is_valid:
             raise ValueError(f"Validation errors: {validation_errors}")
 
-        # Extract and flatten
-        pass1_extraction = parsed.get("extraction", {})
-        result.update(flatten_extraction(pass1_extraction))
-        result["pass1_success"] = True
+        extraction = parsed.get("extraction", {})
 
         logger.info(f"Pass 1 success for {job_id}: {input_tokens}+{output_tokens} tokens, ${cost:.6f}")
 
+        # Write to Bronze
+        if WRITE_TO_BRONZE and BRONZE_BUCKET:
+            write_bronze_result(
+                job_id=job_id,
+                pass_name="pass1",
+                model_id=model_id,
+                result=extraction,
+                raw_response=response_text,
+                job_metadata={"job_title": title, "company_name": company, "job_location": location},
+            )
+
+        return {
+            "statusCode": 200,
+            "success": True,
+            "extraction": extraction,
+            "raw_response": response_text,
+            "model_id": model_id,
+            "tokens": {"input": input_tokens, "output": output_tokens},
+            "cost_usd": cost,
+        }
+
     except Exception as e:
-        logger.warning(f"Pass 1 failed for job {job_id}: {e}")
-        errors.append(f"Pass1: {str(e)}")
-        result["pass1_success"] = False
-
-    # TODO: Implement in Sprint 3
-    # Pass 2: Inference (only if Pass 1 succeeded)
-    if result.get("pass1_success", False):
-        try:
-            # pass2_result = run_pass2(job, pass1_extraction)
-            # result.update(flatten_inference(pass2_result))
-            # result["pass2_success"] = True
-            pass  # Skeleton - Sprint 3
-        except Exception as e:
-            logger.warning(f"Pass 2 failed for job {job_id}: {e}")
-            errors.append(f"Pass2: {str(e)}")
-            result["pass2_success"] = False
-
-    # TODO: Implement in Sprint 4
-    # Pass 3: Analysis (only if Pass 1 and 2 succeeded)
-    if result.get("pass1_success", False) and result.get("pass2_success", False):
-        try:
-            # pass3_result = run_pass3(job, pass1_extraction, pass2_inference)
-            # result.update(flatten_analysis(pass3_result))
-            # result["pass3_success"] = True
-            pass  # Skeleton - Sprint 4
-        except Exception as e:
-            logger.warning(f"Pass 3 failed for job {job_id}: {e}")
-            errors.append(f"Pass3: {str(e)}")
-            result["pass3_success"] = False
-
-    # Aggregate metrics
-    result["total_tokens_used"] = total_tokens if total_tokens > 0 else None
-    result["enrichment_input_tokens"] = total_input_tokens if total_input_tokens > 0 else None
-    result["enrichment_output_tokens"] = total_output_tokens if total_output_tokens > 0 else None
-    result["enrichment_cost_usd"] = round(total_cost, 6) if total_cost > 0 else None
-    result["enrichment_errors"] = "; ".join(errors) if errors else None
-
-    return result
+        logger.error(f"Pass 1 failed for job {job_id}: {e}")
+        return {
+            "statusCode": 500,
+            "success": False,
+            "extraction": None,
+            "raw_response": None,
+            "model_id": model_id,
+            "error": str(e),
+        }
 
 
-def process_partition(df: pd.DataFrame) -> pd.DataFrame:
+def execute_pass2(job_data: Dict[str, Any], pass1_result: Dict[str, Any]) -> Dict[str, Any]:
     """
-    Process all jobs in a partition.
+    Execute Pass 2: Inference.
 
-    Fault-tolerant: continues processing even if individual jobs fail.
-    Returns DataFrame with original columns + enrichment columns.
+    Infers additional attributes from job description + pass1 extraction.
+    Returns cached result if already processed with same model.
+
+    Args:
+        job_data: Job information
+        pass1_result: Extraction result from Pass 1
+
+    Returns:
+        Dict with statusCode, inference, raw_response, model_id, success
     """
-    enriched_rows = []
+    job_id = job_data.get("job_posting_id", "unknown")
+    model_id = get_model_for_pass("pass2")
 
-    total_jobs = len(df)
-    success_count = 0
-    partial_count = 0
-    failure_count = 0
+    # Check for cached result in Bronze
+    if BRONZE_BUCKET and check_job_processed(job_id, model_id, "pass2"):
+        cached = read_bronze_result(job_id, model_id, "pass2")
+        if cached:
+            logger.info(f"Pass 2 cache hit for job {job_id}, returning cached result")
+            return {
+                "statusCode": 200,
+                "success": True,
+                "inference": cached,
+                "raw_response": None,
+                "model_id": model_id,
+                "cached": True,
+            }
 
-    for idx, row in df.iterrows():
-        job_dict = row.to_dict()
-        job_id = job_dict.get("job_posting_id", f"row_{idx}")
+    client = get_bedrock_client()
 
-        logger.info(f"Processing job {idx + 1}/{total_jobs}: {job_id}")
+    # Extract job fields
+    title = job_data.get("job_title", "") or ""
+    company = job_data.get("company_name", "") or ""
+    location = job_data.get("job_location", "") or ""
+    description = job_data.get("job_description", "") or job_data.get("job_description_text", "") or ""
 
-        try:
-            # Run enrichment
-            enrichment = enrich_single_job(job_dict)
+    logger.info(f"Pass 2 (Inference) starting for job {job_id}")
 
-            # Merge original + enrichment
-            merged = {**job_dict, **enrichment}
-            enriched_rows.append(merged)
+    try:
+        system_prompt, user_prompt = build_pass2_prompt(
+            job_title=title,
+            company_name=company,
+            job_location=location,
+            job_description_text=description,
+            pass1_extraction=pass1_result,
+        )
 
-            # Track success rate
-            if enrichment.get("pass3_success"):
-                success_count += 1
-            elif enrichment.get("pass1_success"):
-                partial_count += 1
-            else:
-                failure_count += 1
+        response_text, input_tokens, output_tokens, cost = client.invoke(
+            prompt=user_prompt,
+            system=system_prompt,
+            pass_name="pass2",
+        )
 
-        except Exception as e:
-            # Catastrophic failure - still keep the record
-            logger.error(f"Catastrophic failure for job {job_id}: {e}")
+        # Parse JSON response
+        parsed, parse_error = parse_llm_json(response_text)
+        if parse_error:
+            raise ValueError(f"JSON parse error: {parse_error}")
 
-            empty_enrichment = create_empty_enrichment()
-            empty_enrichment["enrichment_errors"] = f"Catastrophic: {str(e)}"
+        # Validate schema
+        is_valid, validation_errors = validate_inference_response(parsed)
+        if not is_valid:
+            raise ValueError(f"Validation errors: {validation_errors}")
 
-            merged = {**job_dict, **empty_enrichment}
-            enriched_rows.append(merged)
-            failure_count += 1
+        inference = parsed.get("inference", {})
 
-    logger.info(f"Partition complete: {success_count} success, {partial_count} partial, {failure_count} failed")
+        logger.info(f"Pass 2 success for {job_id}: {input_tokens}+{output_tokens} tokens, ${cost:.6f}")
 
-    return pd.DataFrame(enriched_rows)
+        # Write to Bronze
+        if WRITE_TO_BRONZE and BRONZE_BUCKET:
+            write_bronze_result(
+                job_id=job_id,
+                pass_name="pass2",
+                model_id=model_id,
+                result=inference,
+                raw_response=response_text,
+                job_metadata={"job_title": title, "company_name": company, "job_location": location},
+            )
+
+        return {
+            "statusCode": 200,
+            "success": True,
+            "inference": inference,
+            "raw_response": response_text,
+            "model_id": model_id,
+            "tokens": {"input": input_tokens, "output": output_tokens},
+            "cost_usd": cost,
+        }
+
+    except Exception as e:
+        logger.error(f"Pass 2 failed for job {job_id}: {e}")
+        return {
+            "statusCode": 500,
+            "success": False,
+            "inference": None,
+            "raw_response": None,
+            "model_id": model_id,
+            "error": str(e),
+        }
+
+
+def execute_pass3(job_data: Dict[str, Any], pass1_result: Dict[str, Any], pass2_result: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Execute Pass 3: Analysis.
+
+    Performs complex analysis combining extraction and inference.
+    Returns cached result if already processed with same model.
+
+    Args:
+        job_data: Job information
+        pass1_result: Extraction result from Pass 1
+        pass2_result: Inference result from Pass 2
+
+    Returns:
+        Dict with statusCode, analysis, raw_response, model_id, success
+    """
+    job_id = job_data.get("job_posting_id", "unknown")
+    model_id = get_model_for_pass("pass3")
+
+    # Check for cached result in Bronze
+    if BRONZE_BUCKET and check_job_processed(job_id, model_id, "pass3"):
+        cached = read_bronze_result(job_id, model_id, "pass3")
+        if cached:
+            logger.info(f"Pass 3 cache hit for job {job_id}, returning cached result")
+            return {
+                "statusCode": 200,
+                "success": True,
+                "analysis": cached,
+                "raw_response": None,
+                "model_id": model_id,
+                "cached": True,
+            }
+
+    client = get_bedrock_client()
+
+    # Extract job fields
+    title = job_data.get("job_title", "") or ""
+    company = job_data.get("company_name", "") or ""
+    location = job_data.get("job_location", "") or ""
+    description = job_data.get("job_description", "") or job_data.get("job_description_text", "") or ""
+
+    logger.info(f"Pass 3 (Analysis) starting for job {job_id}")
+
+    try:
+        system_prompt, user_prompt = build_pass3_prompt(
+            job_title=title,
+            company_name=company,
+            job_location=location,
+            job_description_text=description,
+            pass1_extraction=pass1_result,
+            pass2_inference=pass2_result,
+        )
+
+        response_text, input_tokens, output_tokens, cost = client.invoke(
+            prompt=user_prompt,
+            system=system_prompt,
+            pass_name="pass3",
+        )
+
+        # Parse JSON response
+        parsed, parse_error = parse_llm_json(response_text)
+        if parse_error:
+            raise ValueError(f"JSON parse error: {parse_error}")
+
+        # Validate schema
+        is_valid, validation_errors = validate_analysis_response(parsed)
+        if not is_valid:
+            raise ValueError(f"Validation errors: {validation_errors}")
+
+        analysis = parsed.get("analysis", {})
+        summary = parsed.get("summary", {})
+
+        # Combine analysis and summary for output
+        combined_result = {"analysis": analysis, "summary": summary}
+
+        logger.info(f"Pass 3 success for {job_id}: {input_tokens}+{output_tokens} tokens, ${cost:.6f}")
+
+        # Write to Bronze
+        if WRITE_TO_BRONZE and BRONZE_BUCKET:
+            write_bronze_result(
+                job_id=job_id,
+                pass_name="pass3",
+                model_id=model_id,
+                result=combined_result,
+                raw_response=response_text,
+                job_metadata={"job_title": title, "company_name": company, "job_location": location},
+            )
+
+        return {
+            "statusCode": 200,
+            "success": True,
+            "analysis": combined_result,
+            "raw_response": response_text,
+            "model_id": model_id,
+            "tokens": {"input": input_tokens, "output": output_tokens},
+            "cost_usd": cost,
+        }
+
+    except Exception as e:
+        logger.error(f"Pass 3 failed for job {job_id}: {e}")
+        return {
+            "statusCode": 500,
+            "success": False,
+            "analysis": None,
+            "raw_response": None,
+            "model_id": model_id,
+            "error": str(e),
+        }
 
 
 def handler(event: Dict[str, Any], context) -> Dict[str, Any]:
     """
-    Process a single partition for AI enrichment.
+    Process a single pass for AI enrichment.
 
-    Fault-tolerant: processes all records, marking failures individually.
-    The partition is written even if some records fail.
+    Invoked by Step Function for each pass (pass1, pass2, pass3).
+    Routes to the appropriate pass execution function.
 
-    Event:
+    Event format:
     {
-        "partition": {
-            "year": "2025",
-            "month": "12",
-            "day": "05",
-            "hour": "10"
-        }
+        "pass_name": "pass1",  // or "pass2", "pass3"
+        "job_data": {
+            "job_posting_id": "123",
+            "job_title": "Data Engineer",
+            "company_name": "Acme Corp",
+            "job_location": "Remote",
+            "job_description": "..."
+        },
+        "pass1_result": {...},  // For pass2/pass3 - extraction from pass1
+        "pass2_result": {...},  // For pass3 - inference from pass2
+        "execution_id": "job-123-abc123"
     }
+
+    Returns:
+        For Pass1: {statusCode, extraction, raw_response, model_id, success}
+        For Pass2: {statusCode, inference, raw_response, model_id, success}
+        For Pass3: {statusCode, analysis, raw_response, model_id, success}
     """
-    partition = event.get("partition", {})
-    year = partition.get("year")
-    month = partition.get("month")
-    day = partition.get("day")
-    hour = partition.get("hour")
+    pass_name = event.get("pass_name")
+    job_data = event.get("job_data", {})
+    execution_id = event.get("execution_id", "unknown")
 
-    if not all([year, month, day, hour]):
-        return {"statusCode": 400, "error": "Missing partition keys"}
+    job_id = job_data.get("job_posting_id", "unknown")
 
-    partition_path = f"year={year}/month={month}/day={day}/hour={hour}"
-    logger.info(f"EnrichPartition started: {partition_path}")
+    logger.info(f"EnrichPartition invoked: pass={pass_name}, job={job_id}, execution={execution_id}")
     logger.info(f"Models: Pass1={BEDROCK_MODEL_PASS1}, Pass2={BEDROCK_MODEL_PASS2}, Pass3={BEDROCK_MODEL_PASS3}")
 
-    # TODO: Implement S3 I/O in Sprint 5
-    # from shared.s3_utils import read_partition, write_partition
-    #
-    # # 1. Read Silver Parquet
-    # df = read_partition(year, month, day, hour)
-    # if df is None or df.empty:
-    #     return {"statusCode": 200, "message": "Empty partition", "jobs_processed": 0}
-    #
-    # # 2. Process all jobs (fault-tolerant)
-    # enriched_df = process_partition(df)
-    #
-    # # 3. Write to Silver-AI (always writes, even with failures)
-    # write_partition(enriched_df, year, month, day, hour)
-    #
-    # # 4. Calculate stats
-    # success_rate = enriched_df["pass3_success"].sum() / len(enriched_df)
+    # Validate required fields
+    if not pass_name:
+        return {"statusCode": 400, "error": "Missing pass_name", "success": False}
 
-    return {
-        "statusCode": 200,
-        "status": "skeleton",
-        "partition": partition_path,
-        "enrichment_version": ENRICHMENT_VERSION,
-        "enriched_at": datetime.now(timezone.utc).isoformat(),
-        "message": "Handler skeleton - implement passes in Sprints 2-4, S3 I/O in Sprint 5"
-    }
+    if not job_data or not job_id:
+        return {"statusCode": 400, "error": "Missing job_data or job_posting_id", "success": False}
+
+    # Route to appropriate pass
+    if pass_name == "pass1":
+        return execute_pass1(job_data)
+
+    elif pass_name == "pass2":
+        pass1_result = event.get("pass1_result")
+        if not pass1_result:
+            return {
+                "statusCode": 400,
+                "error": "Missing pass1_result for pass2",
+                "success": False,
+                "model_id": get_model_for_pass("pass2"),
+            }
+        return execute_pass2(job_data, pass1_result)
+
+    elif pass_name == "pass3":
+        pass1_result = event.get("pass1_result")
+        pass2_result = event.get("pass2_result")
+        if not pass1_result or not pass2_result:
+            return {
+                "statusCode": 400,
+                "error": "Missing pass1_result or pass2_result for pass3",
+                "success": False,
+                "model_id": get_model_for_pass("pass3"),
+            }
+        return execute_pass3(job_data, pass1_result, pass2_result)
+
+    else:
+        return {
+            "statusCode": 400,
+            "error": f"Invalid pass_name: {pass_name}. Must be pass1, pass2, or pass3",
+            "success": False,
+        }
 
 
 if __name__ == "__main__":
     # Local testing
+    import json
     from dotenv import load_dotenv
     load_dotenv()
 
-    test_event = {
-        "partition": {
-            "year": "2025",
-            "month": "12",
-            "day": "05",
-            "hour": "10"
-        }
+    # Test Pass 1
+    test_event_pass1 = {
+        "pass_name": "pass1",
+        "job_data": {
+            "job_posting_id": "test-123",
+            "job_title": "Senior Data Engineer",
+            "company_name": "Test Company",
+            "job_location": "Remote",
+            "job_description": "We are looking for a Senior Data Engineer with experience in Python, SQL, and AWS...",
+        },
+        "execution_id": "test-exec-001",
     }
-    result = handler(test_event, None)
-    print(result)
+
+    print("Testing Pass 1:")
+    result = handler(test_event_pass1, None)
+    print(json.dumps(result, indent=2, default=str))

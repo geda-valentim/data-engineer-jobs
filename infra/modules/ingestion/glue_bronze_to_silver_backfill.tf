@@ -21,6 +21,7 @@ resource "aws_glue_job" "bronze_to_silver_backfill" {
   glue_version      = "4.0"
   number_of_workers = 4 # Mais workers para backfill
   worker_type       = "G.1X"
+  execution_class   = "FLEX"
 
   command {
     name            = "glueetl"

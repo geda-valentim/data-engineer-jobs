@@ -2,7 +2,7 @@ from pathlib import Path
 from pyspark.sql.functions import input_file_name, lit
 from src.dev.deltalake.spark_session import get_spark
 
-BASE_DIR = Path("/home/gedalias/data-engineer-jobs/data/local/ai_enrichment")
+BASE_DIR = Path(__file__).resolve().parent.parent / "data" / "local" / "ai_enrichment"
 BRONZE_DIR = BASE_DIR / "bronze"
 DELTA_SILVER_PATH = BASE_DIR / "silver" / "delta" / "enriched_jobs"
 

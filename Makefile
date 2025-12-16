@@ -1,6 +1,6 @@
 TF_DIR=infra/environments/dev
 
-.PHONY: help secrets layer skills-catalog init validate plan apply deploy clean destroy up graphql delta-bronze-to-silver
+.PHONY: help secrets layer skills-catalog init validate plan apply deploy clean destroy up graphql delta-bronze-to-silver push
 
 help: ## Mostra este help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}'
@@ -40,6 +40,11 @@ clean: ## Remove arquivos gerados (layer, skills json, zip)
 destroy: ## Destroi toda infraestrutura
 	cd $(TF_DIR) && terraform destroy
 
+push: ## Git add, commit e push (uso: make push m="mensagem")
+	git add -A
+	git commit -m "$(m)"
+	git push
+
 up: ## Sobe tudo: secrets + layer + skills-catalog + terraform init/validate/apply
 	make secrets
 	make layer
@@ -55,7 +60,29 @@ up: ## Sobe tudo: secrets + layer + skills-catalog + terraform init/validate/app
 JAVA_HOME ?= /usr/lib/jvm/java-17-openjdk-amd64
 
 graphql: ## Inicia GraphQL server local sobre Delta Lake
-	PYTHONPATH=. JAVA_HOME=$(JAVA_HOME) poetry run python src/dev/graphql/server.py
+	PYTHONPATH=. JAVA_HOME=$(JAVA_HOME) python src/dev/graphql/server.py
 
 delta-bronze-to-silver: ## Processa Bronze -> Silver Delta Lake
-	PYTHONPATH=. JAVA_HOME=$(JAVA_HOME) poetry run python src/dev/deltalake/bronze_to_silver_enriched_jobs.py
+	PYTHONPATH=. JAVA_HOME=$(JAVA_HOME) python src/dev/deltalake/bronze_to_silver_enriched_jobs.py
+
+# =============================================================================
+# AI Enrichment Testing
+# =============================================================================
+
+test-ai: ## Roda testes locais do AI Enrichment pipeline
+	cd tests/ai_enrichment && python test_local.py
+
+test-ai-circuit: ## Testa Circuit Breaker
+	cd tests/ai_enrichment && python test_local.py TestCircuitBreaker
+
+test-ai-dynamo: ## Testa DynamoDB Utils
+	cd tests/ai_enrichment && python test_local.py TestDynamoUtils
+
+test-ai-discover: ## Testa Discover Partitions
+	cd tests/ai_enrichment && python test_local.py TestDiscoverPartitions
+
+test-ai-enrich: ## Testa Enrich Partition Handler
+	cd tests/ai_enrichment && python test_local.py TestEnrichPartitionHandler
+
+test-ai-integration: ## Testa fluxo completo de integração
+	cd tests/ai_enrichment && python test_local.py TestIntegrationFlow

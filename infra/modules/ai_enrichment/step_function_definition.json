@@ -1,0 +1,547 @@
+{
+  "Comment": "AI Enrichment Pipeline - 3-pass job enrichment with semaphore concurrency control",
+  "StartAt": "AcquireLock",
+  "States": {
+    "AcquireLock": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::dynamodb:updateItem",
+      "Parameters": {
+        "TableName": "${semaphore_table}",
+        "Key": {
+          "LockName": {"S": "ProcessingLock"}
+        },
+        "UpdateExpression": "SET currentlockcount = if_not_exists(currentlockcount, :zero) + :one, #execId = :timestamp",
+        "ConditionExpression": "attribute_not_exists(currentlockcount) OR currentlockcount < :maxcount",
+        "ExpressionAttributeNames": {
+          "#execId.$": "$$.Execution.Name"
+        },
+        "ExpressionAttributeValues": {
+          ":zero": {"N": "0"},
+          ":one": {"N": "1"},
+          ":maxcount": {"N": "${max_concurrent}"},
+          ":timestamp": {"S.$": "$$.State.EnteredTime"}
+        }
+      },
+      "ResultPath": "$.lockResult",
+      "Next": "GetJobStatus",
+      "Retry": [
+        {
+          "ErrorEquals": ["DynamoDB.ConditionalCheckFailedException"],
+          "IntervalSeconds": 1,
+          "MaxAttempts": 20,
+          "BackoffRate": 1.2,
+          "JitterStrategy": "FULL"
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "LockAcquisitionFailed"
+        }
+      ]
+    },
+
+    "LockAcquisitionFailed": {
+      "Type": "Fail",
+      "Error": "LockAcquisitionFailed",
+      "Cause": "Could not acquire semaphore lock after retries"
+    },
+
+    "GetJobStatus": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::dynamodb:getItem",
+      "Parameters": {
+        "TableName": "${status_table}",
+        "Key": {
+          "job_posting_id": {"S.$": "$.job_data.job_posting_id"}
+        }
+      },
+      "ResultPath": "$.statusResult",
+      "Next": "EvaluatePasses",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "ReleaseLockOnError"
+        }
+      ]
+    },
+
+    "EvaluatePasses": {
+      "Type": "Choice",
+      "Comment": "Check if job exists and determine which passes to run. First check Item exists to avoid null access errors.",
+      "Choices": [
+        {
+          "Comment": "New job - Item doesn't exist in DynamoDB",
+          "Not": {
+            "Variable": "$.statusResult.Item",
+            "IsPresent": true
+          },
+          "Next": "CreateOrUpdateJobStatus"
+        },
+        {
+          "Comment": "All passes completed",
+          "And": [
+            {
+              "Variable": "$.statusResult.Item.pass1.M.status.S",
+              "IsPresent": true
+            },
+            {
+              "Variable": "$.statusResult.Item.pass1.M.status.S",
+              "StringEquals": "COMPLETED"
+            },
+            {
+              "Variable": "$.statusResult.Item.pass2.M.status.S",
+              "IsPresent": true
+            },
+            {
+              "Variable": "$.statusResult.Item.pass2.M.status.S",
+              "StringEquals": "COMPLETED"
+            },
+            {
+              "Variable": "$.statusResult.Item.pass3.M.status.S",
+              "IsPresent": true
+            },
+            {
+              "Variable": "$.statusResult.Item.pass3.M.status.S",
+              "StringEquals": "COMPLETED"
+            }
+          ],
+          "Next": "AlreadyCompleted"
+        },
+        {
+          "Comment": "Pass 1 and 2 completed, run pass 3",
+          "And": [
+            {
+              "Variable": "$.statusResult.Item.pass1.M.status.S",
+              "IsPresent": true
+            },
+            {
+              "Variable": "$.statusResult.Item.pass1.M.status.S",
+              "StringEquals": "COMPLETED"
+            },
+            {
+              "Variable": "$.statusResult.Item.pass2.M.status.S",
+              "IsPresent": true
+            },
+            {
+              "Variable": "$.statusResult.Item.pass2.M.status.S",
+              "StringEquals": "COMPLETED"
+            }
+          ],
+          "Next": "ExecutePass3"
+        },
+        {
+          "Comment": "Pass 1 completed, run pass 2",
+          "And": [
+            {
+              "Variable": "$.statusResult.Item.pass1.M.status.S",
+              "IsPresent": true
+            },
+            {
+              "Variable": "$.statusResult.Item.pass1.M.status.S",
+              "StringEquals": "COMPLETED"
+            }
+          ],
+          "Next": "ExecutePass2"
+        }
+      ],
+      "Default": "CreateOrUpdateJobStatus"
+    },
+
+    "AlreadyCompleted": {
+      "Type": "Pass",
+      "Result": {
+        "message": "Job already fully processed"
+      },
+      "ResultPath": "$.skipReason",
+      "Next": "ReleaseLock"
+    },
+
+    "CreateOrUpdateJobStatus": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::dynamodb:putItem",
+      "Parameters": {
+        "TableName": "${status_table}",
+        "Item": {
+          "job_posting_id": {"S.$": "$.job_data.job_posting_id"},
+          "pass1": {"M": {"status": {"S": "PENDING"}}},
+          "pass2": {"M": {"status": {"S": "PENDING"}}},
+          "pass3": {"M": {"status": {"S": "PENDING"}}},
+          "overallStatus": {"S": "PENDING"},
+          "createdAt": {"S.$": "$$.State.EnteredTime"},
+          "updatedAt": {"S.$": "$$.State.EnteredTime"},
+          "currentExecutionId": {"S.$": "$$.Execution.Name"}
+        },
+        "ConditionExpression": "attribute_not_exists(job_posting_id)"
+      },
+      "ResultPath": "$.createResult",
+      "Next": "ExecutePass1",
+      "Catch": [
+        {
+          "ErrorEquals": ["DynamoDB.ConditionalCheckFailedException"],
+          "ResultPath": "$.createResult",
+          "Next": "ExecutePass1"
+        },
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "ReleaseLockOnError"
+        }
+      ]
+    },
+
+    "ExecutePass1": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "${enrich_lambda_arn}",
+        "Payload": {
+          "pass_name": "pass1",
+          "job_data.$": "$.job_data",
+          "execution_id.$": "$$.Execution.Name"
+        }
+      },
+      "ResultPath": "$.pass1Result",
+      "ResultSelector": {
+        "statusCode.$": "$.Payload.statusCode",
+        "extraction.$": "$.Payload.extraction",
+        "raw_response.$": "$.Payload.raw_response",
+        "model_id.$": "$.Payload.model_id"
+      },
+      "Next": "UpdatePass1Status",
+      "Retry": [
+        {
+          "ErrorEquals": ["Lambda.ServiceException", "Lambda.TooManyRequestsException"],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "MarkPass1Failed"
+        }
+      ]
+    },
+
+    "UpdatePass1Status": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::dynamodb:updateItem",
+      "Parameters": {
+        "TableName": "${status_table}",
+        "Key": {
+          "job_posting_id": {"S.$": "$.job_data.job_posting_id"}
+        },
+        "UpdateExpression": "SET pass1 = :pass1Status, overallStatus = :inProgress, updatedAt = :now",
+        "ExpressionAttributeValues": {
+          ":pass1Status": {
+            "M": {
+              "status": {"S": "COMPLETED"},
+              "completedAt": {"S.$": "$$.State.EnteredTime"},
+              "executionId": {"S.$": "$$.Execution.Name"},
+              "model": {"S.$": "$.pass1Result.model_id"}
+            }
+          },
+          ":inProgress": {"S": "IN_PROGRESS"},
+          ":now": {"S.$": "$$.State.EnteredTime"}
+        }
+      },
+      "ResultPath": "$.updatePass1Result",
+      "Next": "ExecutePass2",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "ReleaseLockOnError"
+        }
+      ]
+    },
+
+    "MarkPass1Failed": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::dynamodb:updateItem",
+      "Parameters": {
+        "TableName": "${status_table}",
+        "Key": {
+          "job_posting_id": {"S.$": "$.job_data.job_posting_id"}
+        },
+        "UpdateExpression": "SET pass1 = :pass1Status, overallStatus = :failed, updatedAt = :now",
+        "ExpressionAttributeValues": {
+          ":pass1Status": {
+            "M": {
+              "status": {"S": "FAILED"},
+              "failedAt": {"S.$": "$$.State.EnteredTime"},
+              "error": {"S.$": "$.error.Cause"}
+            }
+          },
+          ":failed": {"S": "FAILED"},
+          ":now": {"S.$": "$$.State.EnteredTime"}
+        }
+      },
+      "ResultPath": "$.markFailedResult",
+      "Next": "ReleaseLockOnError"
+    },
+
+    "ExecutePass2": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "${enrich_lambda_arn}",
+        "Payload": {
+          "pass_name": "pass2",
+          "job_data.$": "$.job_data",
+          "pass1_result.$": "$.pass1Result.extraction",
+          "execution_id.$": "$$.Execution.Name"
+        }
+      },
+      "ResultPath": "$.pass2Result",
+      "ResultSelector": {
+        "statusCode.$": "$.Payload.statusCode",
+        "inference.$": "$.Payload.inference",
+        "raw_response.$": "$.Payload.raw_response",
+        "model_id.$": "$.Payload.model_id"
+      },
+      "Next": "UpdatePass2Status",
+      "Retry": [
+        {
+          "ErrorEquals": ["Lambda.ServiceException", "Lambda.TooManyRequestsException"],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "MarkPass2Failed"
+        }
+      ]
+    },
+
+    "UpdatePass2Status": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::dynamodb:updateItem",
+      "Parameters": {
+        "TableName": "${status_table}",
+        "Key": {
+          "job_posting_id": {"S.$": "$.job_data.job_posting_id"}
+        },
+        "UpdateExpression": "SET pass2 = :pass2Status, updatedAt = :now",
+        "ExpressionAttributeValues": {
+          ":pass2Status": {
+            "M": {
+              "status": {"S": "COMPLETED"},
+              "completedAt": {"S.$": "$$.State.EnteredTime"},
+              "executionId": {"S.$": "$$.Execution.Name"},
+              "model": {"S.$": "$.pass2Result.model_id"}
+            }
+          },
+          ":now": {"S.$": "$$.State.EnteredTime"}
+        }
+      },
+      "ResultPath": "$.updatePass2Result",
+      "Next": "ExecutePass3",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "ReleaseLockOnError"
+        }
+      ]
+    },
+
+    "MarkPass2Failed": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::dynamodb:updateItem",
+      "Parameters": {
+        "TableName": "${status_table}",
+        "Key": {
+          "job_posting_id": {"S.$": "$.job_data.job_posting_id"}
+        },
+        "UpdateExpression": "SET pass2 = :pass2Status, overallStatus = :failed, updatedAt = :now",
+        "ExpressionAttributeValues": {
+          ":pass2Status": {
+            "M": {
+              "status": {"S": "FAILED"},
+              "failedAt": {"S.$": "$$.State.EnteredTime"},
+              "error": {"S.$": "$.error.Cause"}
+            }
+          },
+          ":failed": {"S": "FAILED"},
+          ":now": {"S.$": "$$.State.EnteredTime"}
+        }
+      },
+      "ResultPath": "$.markFailedResult",
+      "Next": "ReleaseLockOnError"
+    },
+
+    "ExecutePass3": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "${enrich_lambda_arn}",
+        "Payload": {
+          "pass_name": "pass3",
+          "job_data.$": "$.job_data",
+          "pass1_result.$": "$.pass1Result.extraction",
+          "pass2_result.$": "$.pass2Result.inference",
+          "execution_id.$": "$$.Execution.Name"
+        }
+      },
+      "ResultPath": "$.pass3Result",
+      "ResultSelector": {
+        "statusCode.$": "$.Payload.statusCode",
+        "analysis.$": "$.Payload.analysis",
+        "raw_response.$": "$.Payload.raw_response",
+        "model_id.$": "$.Payload.model_id"
+      },
+      "Next": "UpdatePass3Status",
+      "Retry": [
+        {
+          "ErrorEquals": ["Lambda.ServiceException", "Lambda.TooManyRequestsException"],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "MarkPass3Failed"
+        }
+      ]
+    },
+
+    "UpdatePass3Status": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::dynamodb:updateItem",
+      "Parameters": {
+        "TableName": "${status_table}",
+        "Key": {
+          "job_posting_id": {"S.$": "$.job_data.job_posting_id"}
+        },
+        "UpdateExpression": "SET pass3 = :pass3Status, overallStatus = :completed, updatedAt = :now",
+        "ExpressionAttributeValues": {
+          ":pass3Status": {
+            "M": {
+              "status": {"S": "COMPLETED"},
+              "completedAt": {"S.$": "$$.State.EnteredTime"},
+              "executionId": {"S.$": "$$.Execution.Name"},
+              "model": {"S.$": "$.pass3Result.model_id"}
+            }
+          },
+          ":completed": {"S": "COMPLETED"},
+          ":now": {"S.$": "$$.State.EnteredTime"}
+        }
+      },
+      "ResultPath": "$.updatePass3Result",
+      "Next": "ReleaseLock",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "ReleaseLockOnError"
+        }
+      ]
+    },
+
+    "MarkPass3Failed": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::dynamodb:updateItem",
+      "Parameters": {
+        "TableName": "${status_table}",
+        "Key": {
+          "job_posting_id": {"S.$": "$.job_data.job_posting_id"}
+        },
+        "UpdateExpression": "SET pass3 = :pass3Status, overallStatus = :failed, updatedAt = :now",
+        "ExpressionAttributeValues": {
+          ":pass3Status": {
+            "M": {
+              "status": {"S": "FAILED"},
+              "failedAt": {"S.$": "$$.State.EnteredTime"},
+              "error": {"S.$": "$.error.Cause"}
+            }
+          },
+          ":failed": {"S": "FAILED"},
+          ":now": {"S.$": "$$.State.EnteredTime"}
+        }
+      },
+      "ResultPath": "$.markFailedResult",
+      "Next": "ReleaseLockOnError"
+    },
+
+    "ReleaseLock": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::dynamodb:updateItem",
+      "Parameters": {
+        "TableName": "${semaphore_table}",
+        "Key": {
+          "LockName": {"S": "ProcessingLock"}
+        },
+        "UpdateExpression": "SET currentlockcount = currentlockcount - :one REMOVE #execId",
+        "ConditionExpression": "attribute_exists(#execId) AND currentlockcount > :zero",
+        "ExpressionAttributeNames": {
+          "#execId.$": "$$.Execution.Name"
+        },
+        "ExpressionAttributeValues": {
+          ":one": {"N": "1"},
+          ":zero": {"N": "0"}
+        }
+      },
+      "ResultPath": "$.releaseLockResult",
+      "Next": "Success",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.releaseLockError",
+          "Next": "Success"
+        }
+      ]
+    },
+
+    "ReleaseLockOnError": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::dynamodb:updateItem",
+      "Parameters": {
+        "TableName": "${semaphore_table}",
+        "Key": {
+          "LockName": {"S": "ProcessingLock"}
+        },
+        "UpdateExpression": "SET currentlockcount = currentlockcount - :one REMOVE #execId",
+        "ConditionExpression": "attribute_exists(#execId) AND currentlockcount > :zero",
+        "ExpressionAttributeNames": {
+          "#execId.$": "$$.Execution.Name"
+        },
+        "ExpressionAttributeValues": {
+          ":one": {"N": "1"},
+          ":zero": {"N": "0"}
+        }
+      },
+      "ResultPath": "$.releaseLockResult",
+      "Next": "Failure",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.releaseLockError",
+          "Next": "Failure"
+        }
+      ]
+    },
+
+    "Success": {
+      "Type": "Succeed"
+    },
+
+    "Failure": {
+      "Type": "Fail",
+      "Error": "ProcessingFailed",
+      "Cause": "One or more passes failed during enrichment"
+    }
+  }
+}

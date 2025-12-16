@@ -1,11 +1,14 @@
 """
 Bedrock Client - Wrapper for Amazon Bedrock InvokeModel
 Supports multiple model formats (openai.gpt-oss-120b-1:0, Claude, etc.)
+Includes Circuit Breaker pattern for throttling protection.
 """
 
 import json
 import logging
+import os
 import time
+from enum import Enum
 from typing import Dict, Optional, Tuple
 
 import boto3
@@ -22,6 +25,138 @@ MODEL_PRICING = {
 
 # Default pricing for unknown models
 DEFAULT_PRICING = {"input": 0.001, "output": 0.002}
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Circuit Breaker Pattern
+# Protects against cascading failures from Bedrock throttling
+# ═══════════════════════════════════════════════════════════════════════════════
+
+class CircuitState(Enum):
+    CLOSED = "closed"      # Normal operation, requests flow through
+    OPEN = "open"          # Circuit tripped, requests fail fast
+    HALF_OPEN = "half_open"  # Testing if service recovered
+
+
+class CircuitBreaker:
+    """
+    Circuit Breaker for Bedrock API calls.
+
+    States:
+    - CLOSED: Normal operation, tracking failures
+    - OPEN: Service is failing, reject requests immediately
+    - HALF_OPEN: Allow one request to test if service recovered
+
+    Configuration via environment variables:
+    - CIRCUIT_BREAKER_FAILURE_THRESHOLD: Failures before opening (default: 5)
+    - CIRCUIT_BREAKER_RECOVERY_TIMEOUT: Seconds before half-open (default: 60)
+    """
+
+    def __init__(
+        self,
+        failure_threshold: Optional[int] = None,
+        recovery_timeout: Optional[int] = None,
+    ):
+        self.failure_threshold = failure_threshold or int(
+            os.environ.get("CIRCUIT_BREAKER_FAILURE_THRESHOLD", "5")
+        )
+        self.recovery_timeout = recovery_timeout or int(
+            os.environ.get("CIRCUIT_BREAKER_RECOVERY_TIMEOUT", "60")
+        )
+
+        self.state = CircuitState.CLOSED
+        self.failure_count = 0
+        self.last_failure_time: Optional[float] = None
+        self.success_count = 0
+
+    def can_execute(self) -> bool:
+        """Check if request should be allowed through."""
+        if self.state == CircuitState.CLOSED:
+            return True
+
+        if self.state == CircuitState.OPEN:
+            # Check if recovery timeout has passed
+            if self.last_failure_time and \
+               (time.time() - self.last_failure_time) >= self.recovery_timeout:
+                logger.info("Circuit breaker: transitioning to HALF_OPEN")
+                self.state = CircuitState.HALF_OPEN
+                return True
+            return False
+
+        # HALF_OPEN: allow one request to test
+        return True
+
+    def record_success(self) -> None:
+        """Record successful call."""
+        if self.state == CircuitState.HALF_OPEN:
+            logger.info("Circuit breaker: test request succeeded, closing circuit")
+            self.state = CircuitState.CLOSED
+            self.failure_count = 0
+            self.success_count = 0
+
+        self.success_count += 1
+
+    def record_failure(self, is_throttling: bool = False) -> None:
+        """Record failed call."""
+        self.failure_count += 1
+        self.last_failure_time = time.time()
+
+        if self.state == CircuitState.HALF_OPEN:
+            logger.warning("Circuit breaker: test request failed, reopening circuit")
+            self.state = CircuitState.OPEN
+            return
+
+        # Only open circuit for throttling errors (transient)
+        if is_throttling and self.failure_count >= self.failure_threshold:
+            logger.warning(
+                f"Circuit breaker: opening after {self.failure_count} failures "
+                f"(threshold: {self.failure_threshold})"
+            )
+            self.state = CircuitState.OPEN
+
+    def get_status(self) -> Dict:
+        """Get circuit breaker status for monitoring."""
+        return {
+            "state": self.state.value,
+            "failure_count": self.failure_count,
+            "success_count": self.success_count,
+            "last_failure_time": self.last_failure_time,
+        }
+
+
+class CircuitBreakerOpenError(Exception):
+    """Raised when circuit breaker is open and request is rejected."""
+    pass
+
+
+# Per-model circuit breakers (shared across Lambda invocations in warm container)
+# This allows different models to fail independently - if mistral is throttled,
+# gemma requests can still proceed
+_circuit_breakers: Dict[str, CircuitBreaker] = {}
+
+
+def get_circuit_breaker(model_id: str = "default") -> CircuitBreaker:
+    """
+    Get or create circuit breaker for a specific model.
+
+    Each model has its own circuit breaker, allowing independent failure handling.
+    This prevents a single throttled model from blocking all requests.
+
+    Args:
+        model_id: Bedrock model ID (e.g., "mistral.mistral-large-3-675b-instruct")
+
+    Returns:
+        CircuitBreaker instance for the specified model
+    """
+    if model_id not in _circuit_breakers:
+        _circuit_breakers[model_id] = CircuitBreaker()
+        logger.info(f"Created circuit breaker for model: {model_id}")
+    return _circuit_breakers[model_id]
+
+
+def get_all_circuit_breakers_status() -> Dict[str, Dict]:
+    """Get status of all circuit breakers for monitoring."""
+    return {model_id: cb.get_status() for model_id, cb in _circuit_breakers.items()}
 
 
 class BedrockClient:
@@ -76,7 +211,7 @@ class BedrockClient:
         temperature: float = 0.1,
     ) -> Tuple[str, int, int, float]:
         """
-        Invoke Bedrock model with retry logic.
+        Invoke Bedrock model with retry logic and circuit breaker protection.
 
         Args:
             prompt: User prompt
@@ -87,8 +222,21 @@ class BedrockClient:
 
         Returns:
             Tuple of (response_text, input_tokens, output_tokens, cost_usd)
+
+        Raises:
+            CircuitBreakerOpenError: If circuit breaker is open (service unavailable)
         """
         model_id = self.get_model_id(pass_name)
+
+        # Check per-model circuit breaker
+        circuit_breaker = get_circuit_breaker(model_id)
+        if not circuit_breaker.can_execute():
+            status = circuit_breaker.get_status()
+            logger.error(f"Circuit breaker OPEN for model {model_id}, rejecting request. Status: {status}")
+            raise CircuitBreakerOpenError(
+                f"Circuit breaker is open for {model_id}. Service will retry after recovery timeout. "
+                f"Failures: {status['failure_count']}"
+            )
         # Use pass-specific default if max_tokens not provided
         if max_tokens is None:
             max_tokens = self.DEFAULT_MAX_TOKENS.get(pass_name, 4096)
@@ -96,6 +244,8 @@ class BedrockClient:
 
         # Retry loop with exponential backoff
         last_error = None
+        is_throttling_error = False
+
         for attempt in range(self.max_retries):
             try:
                 response = self.client.invoke_model(
@@ -109,6 +259,8 @@ class BedrockClient:
                 text, input_tokens, output_tokens = self._parse_response(model_id, response_body)
                 cost = self._calculate_cost(model_id, input_tokens, output_tokens)
 
+                # Success - record with circuit breaker
+                circuit_breaker.record_success()
                 return text, input_tokens, output_tokens, cost
 
             except ClientError as e:
@@ -124,14 +276,17 @@ class BedrockClient:
 
                 if is_throttling or is_transient_error:
                     last_error = e
+                    is_throttling_error = is_throttling
                     delay = self.retry_delay * (2 ** attempt)
                     reason = "throttled" if is_throttling else "transient error"
                     logger.warning(f"Bedrock {reason}, retrying in {delay}s (attempt {attempt + 1}/{self.max_retries})")
                     time.sleep(delay)
                 else:
+                    # Non-retryable error - don't affect circuit breaker
                     raise
 
-        # All retries exhausted
+        # All retries exhausted - record failure with circuit breaker
+        circuit_breaker.record_failure(is_throttling=is_throttling_error)
         raise last_error or Exception("Bedrock invocation failed after retries")
 
     def _is_openai_compatible(self, model_id: str) -> bool:

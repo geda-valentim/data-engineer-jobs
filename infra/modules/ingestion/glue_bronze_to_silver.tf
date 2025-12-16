@@ -25,6 +25,7 @@ resource "aws_glue_job" "bronze_to_silver" {
   glue_version      = "4.0"
   number_of_workers = 2
   worker_type       = "G.1X"
+  execution_class   = "FLEX"
 
   # Permite múltiplas execuções simultâneas
   # Aumentado para suportar backfill de múltiplas regiões
