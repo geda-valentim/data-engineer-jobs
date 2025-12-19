@@ -10,8 +10,8 @@ resource "aws_lambda_function" "discover_partitions" {
   role          = aws_iam_role.ai_enrichment_lambda.arn
   handler       = "handler.handler"
   runtime       = local.lambda_runtime
-  timeout       = 60
-  memory_size   = 256
+  timeout       = 120
+  memory_size   = 512
 
   filename         = data.archive_file.discover_partitions.output_path
   source_code_hash = data.archive_file.discover_partitions.output_base64sha256
@@ -31,6 +31,7 @@ resource "aws_lambda_function" "discover_partitions" {
       MAX_JOBS_PER_PARTITION = var.max_jobs_per_partition
       MIN_JOBS_TO_PUBLISH    = var.min_jobs_to_publish
       STATUS_TABLE           = aws_dynamodb_table.status.name
+      LOOKBACK_DAYS          = var.lookback_days
     }
   }
 

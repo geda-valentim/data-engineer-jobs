@@ -130,6 +130,22 @@ variable "min_jobs_to_publish" {
   default     = 100
 }
 
+variable "lookback_days" {
+  description = <<-EOT
+    Number of days to look back for pending partitions (partition pruning).
+
+    Production mode only checks partitions from the last N days to avoid
+    scanning the entire Silver layer as it grows. For backfilling older
+    partitions, invoke the discover function with target_date parameter.
+
+    - 2: Default, covers most recent data (recommended for production)
+    - 7: Weekly backlog processing
+    - 0: Disable lookback filter (scan all partitions - NOT recommended for large datasets)
+  EOT
+  type        = number
+  default     = 2
+}
+
 variable "max_job_retries" {
   description = "Maximum retries for failed jobs before marking as permanently failed"
   type        = number

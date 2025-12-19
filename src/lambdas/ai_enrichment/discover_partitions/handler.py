@@ -7,6 +7,7 @@ Optionally publishes jobs to SQS for distributed processing.
 import os
 import json
 import logging
+from datetime import datetime, timedelta
 from typing import Dict, Any, List, Set
 
 import boto3
@@ -27,6 +28,7 @@ PUBLISH_TO_SQS = os.environ.get("PUBLISH_TO_SQS", "false").lower() == "true"
 MAX_JOBS_PER_PARTITION = int(os.environ.get("MAX_JOBS_PER_PARTITION", "100"))
 MIN_JOBS_TO_PUBLISH = int(os.environ.get("MIN_JOBS_TO_PUBLISH", "100"))
 STATUS_TABLE = os.environ.get("STATUS_TABLE")
+LOOKBACK_DAYS = int(os.environ.get("LOOKBACK_DAYS", "2"))
 
 # SQS client singleton
 _sqs_client = None
@@ -147,6 +149,62 @@ def parse_partition_key(partition_key: str) -> Dict[str, str]:
             key, value = part.split("=", 1)
             result[key] = value
     return result
+
+
+def filter_partitions_by_date(
+    partitions: Set[str],
+    target_date: str = None,
+    lookback_days: int = None
+) -> Set[str]:
+    """
+    Filter partitions by date for partition pruning.
+
+    Args:
+        partitions: Set of partition keys (year=2025/month=12/day=04/hour=20)
+        target_date: If provided, return ONLY partitions from this day (YYYY-MM-DD format)
+        lookback_days: If provided, return partitions from the last N days
+
+    Returns:
+        Filtered set of partition keys
+    """
+    if not partitions:
+        return partitions
+
+    if target_date:
+        # Backfill mode: only partitions from the specific day
+        try:
+            target = datetime.strptime(target_date, "%Y-%m-%d")
+            prefix = f"year={target.year}/month={target.month:02d}/day={target.day:02d}"
+            filtered = {p for p in partitions if p.startswith(prefix)}
+            logger.info(f"Date filter (target={target_date}): {len(partitions)} -> {len(filtered)} partitions")
+            return filtered
+        except ValueError as e:
+            logger.error(f"Invalid target_date format '{target_date}': {e}")
+            return partitions
+
+    if lookback_days is not None and lookback_days > 0:
+        # Production mode: only partitions from last N days
+        cutoff = datetime.utcnow().replace(hour=0, minute=0, second=0, microsecond=0) - timedelta(days=lookback_days)
+        filtered = set()
+
+        for p in partitions:
+            try:
+                parsed = parse_partition_key(p)
+                part_date = datetime(
+                    int(parsed["year"]),
+                    int(parsed["month"]),
+                    int(parsed["day"])
+                )
+                if part_date >= cutoff:
+                    filtered.add(p)
+            except (KeyError, ValueError):
+                # Include partition if we can't parse it (safety)
+                filtered.add(p)
+
+        logger.info(f"Date filter (lookback={lookback_days}d, cutoff={cutoff.date()}): {len(partitions)} -> {len(filtered)} partitions")
+        return filtered
+
+    return partitions
 
 
 def get_silver_path(partition: Dict[str, str]) -> str:
@@ -276,21 +334,33 @@ def handler(event: Dict[str, Any], context) -> Dict[str, Any]:
 
     If PUBLISH_TO_SQS=true, reads jobs from partitions and publishes to SQS.
 
+    Event parameters (optional):
+        target_date: "YYYY-MM-DD" - Backfill mode: process only this specific day
+        lookback_days: int - Production mode: process only last N days (default from env)
+
     Returns:
     {
         "has_work": bool,
-        "partitions": [
-            {"year": "2025", "month": "12", "day": "05", "hour": "10"},
-            ...
-        ],
+        "partitions": [...],
         "total_pending": int,
         "processing_count": int,
-        "sqs_stats": {"published": int, "failed": int}  # if PUBLISH_TO_SQS
+        "sqs_stats": {"published": int, "failed": int},
+        "mode": "backfill" | "production"
     }
     """
-    logger.info(f"DiscoverPartitions started - bucket={SILVER_BUCKET}")
-    logger.info(f"Silver prefix: {SILVER_PREFIX}, Silver-AI prefix: {SILVER_AI_PREFIX}")
-    logger.info(f"PUBLISH_TO_SQS: {PUBLISH_TO_SQS}")
+    # Extract date filtering parameters
+    target_date = event.get("target_date")  # For backfill: "2025-12-03"
+    lookback_days = event.get("lookback_days", LOOKBACK_DAYS)  # Default from env
+
+    # Determine mode
+    if target_date:
+        mode = "backfill"
+        logger.info(f"DiscoverPartitions started - BACKFILL MODE for {target_date}")
+    else:
+        mode = "production"
+        logger.info(f"DiscoverPartitions started - PRODUCTION MODE (last {lookback_days} days)")
+
+    logger.info(f"Bucket={SILVER_BUCKET}, PUBLISH_TO_SQS={PUBLISH_TO_SQS}")
 
     if not SILVER_BUCKET:
         raise ValueError("SILVER_BUCKET environment variable not set")
@@ -299,12 +369,18 @@ def handler(event: Dict[str, Any], context) -> Dict[str, Any]:
     silver_partitions = list_partitions(SILVER_BUCKET, SILVER_PREFIX)
     silver_ai_partitions = list_partitions(SILVER_BUCKET, SILVER_AI_PREFIX)
 
-    logger.info(f"Found {len(silver_partitions)} Silver partitions")
-    logger.info(f"Found {len(silver_ai_partitions)} Silver-AI partitions")
+    logger.info(f"Found {len(silver_partitions)} Silver partitions, {len(silver_ai_partitions)} Silver-AI partitions")
 
     # Compute pending (Silver - Silver-AI)
     pending_partitions = silver_partitions - silver_ai_partitions
-    logger.info(f"Pending partitions: {len(pending_partitions)}")
+
+    # Apply date filter for partition pruning
+    if target_date:
+        pending_partitions = filter_partitions_by_date(pending_partitions, target_date=target_date)
+    else:
+        pending_partitions = filter_partitions_by_date(pending_partitions, lookback_days=lookback_days)
+
+    logger.info(f"Pending partitions after date filter: {len(pending_partitions)}")
 
     # Sort by partition key (oldest first) and limit
     sorted_pending = sorted(pending_partitions)[:MAX_PARTITIONS]
@@ -317,6 +393,9 @@ def handler(event: Dict[str, Any], context) -> Dict[str, Any]:
         "partitions": partitions,
         "total_pending": len(pending_partitions),
         "processing_count": len(partitions),
+        "mode": mode,
+        "target_date": target_date,
+        "lookback_days": lookback_days if not target_date else None,
     }
 
     # Optionally publish jobs to SQS

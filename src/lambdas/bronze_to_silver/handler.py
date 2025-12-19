@@ -125,8 +125,8 @@ def transform_bronze_to_silver(df: pd.DataFrame, year: str, month: str, day: str
 
     if "job_posted_date" in df.columns:
         df["job_posted_datetime"] = pd.to_datetime(df["job_posted_date"], errors="coerce")
-        # Convert to date, then back to datetime for Parquet DATE compatibility with Glue/Spark
-        df["job_posted_date_only"] = pd.to_datetime(df["job_posted_datetime"].dt.date)
+        # Keep as date object for proper Parquet DATE type
+        df["job_posted_date_only"] = df["job_posted_datetime"].dt.date
 
     # Campos de empresa
     for col in ["company_name", "company_id", "company_url"]:
