@@ -9,6 +9,7 @@ A fully automated data pipeline that scrapes, processes, and analyzes Data Engin
 - [Overview](#overview)
 - [Architecture](#architecture)
 - [Tech Stack](#tech-stack)
+- [Architecture Decisions](#architecture-decisions)
 - [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
@@ -44,7 +45,9 @@ This project implements a complete data engineering pipeline to analyze the Data
 
 ✅ **Multi-Model Validation**: Consensus-based quality assurance across 6+ LLM models
 
-✅ **Glue ETL**: PySpark job for Bronze → Silver transformation
+✅ **Lambda ETL**: pandas-based Bronze → Silver transformation (default)
+
+✅ **Glue ETL**: PySpark job available for backfills and heavy workloads
 
 ✅ **Backfill Support**: Fan-out Lambda for bulk region/work-type ingestion
 
@@ -93,7 +96,12 @@ The pipeline follows the **Medallion Architecture** pattern:
                                          │   JSONL  │
                                          └────┬─────┘
                                               │
-                            AWS Glue ETL (PySpark + Skills Detection)
+                    ┌─────────────────────────┴─────────────────────────┐
+                    │                                                   │
+          Lambda ETL (pandas)                              AWS Glue ETL (PySpark)
+          [DEFAULT - 96% cheaper]                          [Backfills only]
+                    │                                                   │
+                    └─────────────────────────┬─────────────────────────┘
                                               │
                                               ▼
                                          ┌──────────┐
@@ -154,6 +162,72 @@ The pipeline follows the **Medallion Architecture** pattern:
 - **Python 3.13**: Primary programming language
 - **Git**: Version control
 
+## Architecture Decisions
+
+### ADR-001: Lambda vs Glue for Bronze → Silver ETL
+
+**Status:** Implemented (December 2024)
+
+**Context:**
+The Bronze → Silver transformation was initially implemented using AWS Glue (PySpark). After analyzing production costs, we found:
+
+| Metric | Value |
+|--------|-------|
+| Average job duration | 87 seconds |
+| Monthly cost (Glue) | $19.24 |
+| Spark overhead | 45-60s cold start |
+
+For partitions with ~1000 records and 87s average runtime, Spark's distributed processing overhead is disproportionate.
+
+**Decision:**
+Migrate the `bronze_to_silver` ETL from AWS Glue to AWS Lambda using `pandas` via `awswrangler`.
+
+**Architecture:**
+
+```
+BEFORE:
+Step Functions → Glue Job (PySpark) → Silver
+
+AFTER:
+Step Functions → Lambda ETL (pandas) → Silver
+                ↘ Glue Job (backup, disabled by default)
+```
+
+**Implementation:**
+- Toggle via Terraform variable: `use_lambda_etl = true` (default)
+- Lambda uses AWS SDK for pandas layer (`awswrangler`)
+- Glue infrastructure preserved for backfills and heavy workloads
+- Skills detection works without Spark (pure Python `SkillMatcher` class)
+
+**Cost Impact:**
+
+| Component | Before | After |
+|-----------|--------|-------|
+| Glue bronze-to-silver | $18.76/mth | $0 |
+| Lambda bronze-to-silver | - | ~$0.30/mth |
+| Glue backfills | $0.48/mth | $0.48/mth |
+| **Total** | $19.24/mth | ~$0.78/mth |
+
+**Savings: ~96%**
+
+**Trade-offs:**
+- ✅ 96% cost reduction for typical workloads
+- ✅ Faster cold start (no JVM/Spark initialization)
+- ✅ Simpler debugging (pandas vs distributed Spark)
+- ⚠️ Lambda limited to 15min timeout (sufficient for hourly partitions)
+- ⚠️ Memory limited to 10GB (sufficient for ~1000 records)
+- ✅ Glue remains available for large backfills
+
+**Configuration:**
+```hcl
+# infra/environments/dev/main.tf
+module "ingestion" {
+  # ...
+  use_lambda_etl = true  # Use Lambda (default)
+  # use_lambda_etl = false  # Use Glue instead
+}
+```
+
 ## Project Structure
 
 ```
@@ -183,11 +257,13 @@ data-engineer-jobs/
 │   │   │               └── save_to_s3.py    # Save to Bronze
 │   │   ├── queue_consumer/
 │   │   │   └── handler.py           # SQS → Step Functions
-│   │   └── backfill_fanout/
-│   │       └── handler.py           # Bulk region ingestion
+│   │   ├── backfill_fanout/
+│   │   │   └── handler.py           # Bulk region ingestion
+│   │   └── bronze_to_silver/
+│   │       └── handler.py           # Lambda ETL (pandas) - DEFAULT
 │   │
 │   ├── glue_jobs/
-│   │   ├── bronze_to_silver.py    # Bronze → Silver ETL
+│   │   ├── bronze_to_silver.py    # Glue ETL (PySpark) - Backfills
 │   │   └── silver_to_gold.py      # [Planned] Silver → Gold
 │   │
 │   ├── lambdas/ai_enrichment/
@@ -389,7 +465,11 @@ The fan-out Lambda reads `linkedin_geo_ids_flat.json` and sends messages to SQS 
 
 ### Transformation (Silver)
 
-AWS Glue Job (`bronze_to_silver.py`) runs PySpark to:
+**Default: Lambda ETL** (`src/lambdas/bronze_to_silver/handler.py`) using pandas:
+
+**Alternative: Glue Job** (`src/glue_jobs/bronze_to_silver.py`) using PySpark for heavy workloads.
+
+Both implementations:
 
 - ✅ **Load** raw JSONL from Bronze
 - ✅ **Clean** and cast data types

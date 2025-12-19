@@ -24,13 +24,13 @@ resource "aws_sqs_queue" "companies_dlq" {
 resource "aws_sqs_queue" "companies_queue" {
   name                        = "${var.project_name}-companies-to-fetch.fifo"
   fifo_queue                  = true
-  content_based_deduplication = true                 # Deduplica por hash do conteúdo
-  deduplication_scope         = "messageGroup"       # Deduplica dentro do grupo
-  fifo_throughput_limit       = "perMessageGroupId"  # Throughput por grupo
+  content_based_deduplication = true                # Deduplica por hash do conteúdo
+  deduplication_scope         = "messageGroup"      # Deduplica dentro do grupo
+  fifo_throughput_limit       = "perMessageGroupId" # Throughput por grupo
 
-  visibility_timeout_seconds = 420 # 7 min - tempo para SF completar
+  visibility_timeout_seconds = 420   # 7 min - tempo para SF completar
   message_retention_seconds  = 86400 # 1 dia
-  receive_wait_time_seconds  = 20 # Long polling
+  receive_wait_time_seconds  = 20    # Long polling
 
   redrive_policy = jsonencode({
     deadLetterTargetArn = aws_sqs_queue.companies_dlq.arn

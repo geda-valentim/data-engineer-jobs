@@ -195,10 +195,10 @@ class BedrockClient:
         """Get model ID for a specific pass."""
         return self.model_ids.get(pass_name, "openai.gpt-oss-120b-1:0")
 
-    # Default max_tokens per pass (Pass 3 needs more due to large JSON schema)
+    # Default max_tokens per pass (larger outputs for structured JSON schemas)
     DEFAULT_MAX_TOKENS = {
-        "pass1": 4096,
-        "pass2": 4096,
+        "pass1": 8192,   # Pass 1 extraction schema is substantial
+        "pass2": 8192,   # Pass 2 inference schema with confidence/evidence
         "pass3": 32768,  # Pass 3 has ~500 lines of structured JSON output
     }
 

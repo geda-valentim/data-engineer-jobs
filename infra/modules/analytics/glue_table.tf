@@ -17,8 +17,8 @@ resource "aws_glue_catalog_table" "linkedin_silver" {
     "projection.enabled" = "true"
 
     # Year: 2024-2030
-    "projection.year.type"   = "integer"
-    "projection.year.range"  = "2024,2030"
+    "projection.year.type"  = "integer"
+    "projection.year.range" = "2024,2030"
 
     # Month: 01-12
     "projection.month.type"   = "integer"

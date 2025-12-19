@@ -60,12 +60,13 @@ def process_sqs_record(record: Dict[str, Any]) -> Dict[str, Any]:
             return {"success": False, "error": "missing_job_posting_id"}
 
         # Extract job metadata
+        # Prioritize job_description_text (from discover_partitions), fallback to job_description
         job_data = {
             "job_posting_id": job_posting_id,
             "job_title": body.get("job_title"),
             "company_name": body.get("company_name"),
             "job_location": body.get("job_location"),
-            "job_description": body.get("job_description"),
+            "job_description": body.get("job_description_text") or body.get("job_description"),
             "partition": body.get("partition", {}),
         }
 

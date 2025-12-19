@@ -20,12 +20,12 @@ output "gold_bucket_name" {
 
 output "glue_temp_bucket_name" {
   description = "Nome do bucket temporário do Glue"
-  value = aws_s3_bucket.glue_temp.bucket
+  value       = aws_s3_bucket.glue_temp.bucket
 }
 
 output "glue_scripts_bucket_name" {
   description = "Nome do bucket de scripts do Glue"
-  value = aws_s3_bucket.glue_scripts.bucket
+  value       = aws_s3_bucket.glue_scripts.bucket
 }
 
 output "athena_results_bucket_name" {

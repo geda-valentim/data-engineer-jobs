@@ -5,7 +5,8 @@
 # ═══════════════════════════════════════════════════════════════════════════════
 
 resource "aws_lambda_function" "discover_partitions" {
-  function_name = "${var.project_name}-${var.environment}-discover-partitions"
+  function_name = "${var.project_name}-${var.environment}-ai-discover-partitions"
+  description   = "Discovers Silver partitions pending AI enrichment and queues jobs to SQS"
   role          = aws_iam_role.ai_enrichment_lambda.arn
   handler       = "handler.handler"
   runtime       = local.lambda_runtime
@@ -28,11 +29,13 @@ resource "aws_lambda_function" "discover_partitions" {
       PUBLISH_TO_SQS         = "true"
       SQS_QUEUE_URL          = aws_sqs_queue.jobs.url
       MAX_JOBS_PER_PARTITION = var.max_jobs_per_partition
+      MIN_JOBS_TO_PUBLISH    = var.min_jobs_to_publish
+      STATUS_TABLE           = aws_dynamodb_table.status.name
     }
   }
 
   tags = merge(local.common_tags, {
-    Name = "${var.project_name}-${var.environment}-discover-partitions"
+    Name = "${var.project_name}-${var.environment}-ai-discover-partitions"
   })
 }
 
@@ -41,7 +44,8 @@ resource "aws_lambda_function" "discover_partitions" {
 # ═══════════════════════════════════════════════════════════════════════════════
 
 resource "aws_lambda_function" "invoke_enrichment" {
-  function_name = "${var.project_name}-${var.environment}-invoke-enrichment"
+  function_name = "${var.project_name}-${var.environment}-ai-invoke-enrichment"
+  description   = "Consumes SQS jobs and starts Step Function executions for AI enrichment"
   role          = aws_iam_role.ai_enrichment_lambda.arn
   handler       = "handler.handler"
   runtime       = local.lambda_runtime
@@ -80,7 +84,8 @@ resource "aws_lambda_event_source_mapping" "sqs_trigger" {
 # ═══════════════════════════════════════════════════════════════════════════════
 
 resource "aws_lambda_function" "cleanup_locks" {
-  function_name = "${var.project_name}-${var.environment}-cleanup-locks"
+  function_name = "${var.project_name}-${var.environment}-ai-cleanup-locks"
+  description   = "Releases orphaned locks from failed AI enrichment executions"
   role          = aws_iam_role.ai_enrichment_lambda.arn
   handler       = "handler.handler"
   runtime       = local.lambda_runtime
@@ -100,7 +105,7 @@ resource "aws_lambda_function" "cleanup_locks" {
   }
 
   tags = merge(local.common_tags, {
-    Name = "${var.project_name}-${var.environment}-cleanup-locks"
+    Name = "${var.project_name}-${var.environment}-ai-cleanup-locks"
   })
 }
 
@@ -109,12 +114,17 @@ resource "aws_lambda_function" "cleanup_locks" {
 # ═══════════════════════════════════════════════════════════════════════════════
 
 resource "aws_lambda_function" "enrich_partition" {
-  function_name = "${var.project_name}-${var.environment}-enrich-partition"
+  function_name = "${var.project_name}-${var.environment}-ai-enrich-partition"
+  description   = "Enriches job listings with AI-extracted skills using Amazon Bedrock"
   role          = aws_iam_role.ai_enrichment_lambda.arn
   handler       = "handler.handler"
   runtime       = local.lambda_runtime
   timeout       = var.enrich_partition_timeout
   memory_size   = 512
+
+  # Reserved concurrency prevents throttling from other functions in the account
+  # Set to max_concurrent + buffer for retry bursts
+  reserved_concurrent_executions = var.max_concurrent_executions + 20
 
   filename         = data.archive_file.enrich_partition.output_path
   source_code_hash = data.archive_file.enrich_partition.output_base64sha256

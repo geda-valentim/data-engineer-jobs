@@ -10,6 +10,7 @@ import logging
 from typing import Dict, Any, List, Set
 
 import boto3
+from boto3.dynamodb.conditions import Key
 import awswrangler as wr
 import pandas as pd
 
@@ -24,9 +25,12 @@ MAX_PARTITIONS = int(os.environ.get("MAX_PARTITIONS", "10"))
 SQS_QUEUE_URL = os.environ.get("SQS_QUEUE_URL")
 PUBLISH_TO_SQS = os.environ.get("PUBLISH_TO_SQS", "false").lower() == "true"
 MAX_JOBS_PER_PARTITION = int(os.environ.get("MAX_JOBS_PER_PARTITION", "100"))
+MIN_JOBS_TO_PUBLISH = int(os.environ.get("MIN_JOBS_TO_PUBLISH", "100"))
+STATUS_TABLE = os.environ.get("STATUS_TABLE")
 
 # SQS client singleton
 _sqs_client = None
+_dynamodb_resource = None
 
 
 def _get_sqs_client():
@@ -35,6 +39,63 @@ def _get_sqs_client():
     if _sqs_client is None:
         _sqs_client = boto3.client("sqs")
     return _sqs_client
+
+
+def _get_dynamodb_table():
+    """Get or create DynamoDB table resource singleton."""
+    global _dynamodb_resource
+    if _dynamodb_resource is None:
+        _dynamodb_resource = boto3.resource("dynamodb").Table(STATUS_TABLE)
+    return _dynamodb_resource
+
+
+def get_completed_job_ids(job_ids: List[str]) -> Set[str]:
+    """
+    Check DynamoDB for jobs that should not be reprocessed.
+
+    Args:
+        job_ids: List of job posting IDs to check
+
+    Returns:
+        Set of job IDs that have overallStatus = COMPLETED or PERMANENTLY_FAILED
+    """
+    if not STATUS_TABLE or not job_ids:
+        return set()
+
+    table = _get_dynamodb_table()
+    completed = set()
+
+    # DynamoDB BatchGetItem allows max 100 items per request
+    batch_size = 100
+
+    for i in range(0, len(job_ids), batch_size):
+        batch = job_ids[i:i + batch_size]
+
+        try:
+            # Use batch_get_item for efficiency
+            dynamodb = boto3.resource("dynamodb")
+            response = dynamodb.batch_get_item(
+                RequestItems={
+                    STATUS_TABLE: {
+                        "Keys": [{"job_posting_id": jid} for jid in batch],
+                        "ProjectionExpression": "job_posting_id, overallStatus",
+                    }
+                }
+            )
+
+            items = response.get("Responses", {}).get(STATUS_TABLE, [])
+            for item in items:
+                status = item.get("overallStatus")
+                # Skip jobs that are completed OR permanently failed (max retries exceeded)
+                if status in ("COMPLETED", "PERMANENTLY_FAILED"):
+                    completed.add(item["job_posting_id"])
+
+        except Exception as e:
+            logger.warning(f"Error checking DynamoDB status for batch: {e}")
+            # Continue with other batches
+
+    logger.info(f"Found {len(completed)} already-completed/permanently-failed jobs out of {len(job_ids)}")
+    return completed
 
 
 def list_partitions(bucket: str, prefix: str) -> Set[str]:
@@ -46,14 +107,22 @@ def list_partitions(bucket: str, prefix: str) -> Set[str]:
     path = f"s3://{bucket}/{prefix}"
 
     try:
-        directories = wr.s3.list_directories(path)
+        # List all parquet files to discover full partition paths
+        files = wr.s3.list_objects(path, suffix=".parquet")
         partitions = set()
 
-        for dir_path in directories:
-            # Extract partition key from path
-            parts = dir_path.replace(path, "").strip("/")
-            if parts and "year=" in parts:
-                partitions.add(parts)
+        for file_path in files:
+            # Extract partition path from file path
+            # e.g., s3://bucket/linkedin/year=2025/month=12/day=05/hour=10/file.parquet
+            # -> year=2025/month=12/day=05/hour=10
+            relative = file_path.replace(f"s3://{bucket}/{prefix}", "")
+            parts = relative.split("/")
+
+            # Build partition key from year/month/day/hour parts
+            partition_parts = [p for p in parts if "=" in p]
+            if len(partition_parts) >= 4:
+                partition_key = "/".join(partition_parts[:4])
+                partitions.add(partition_key)
 
         return partitions
 
@@ -85,6 +154,13 @@ def get_silver_path(partition: Dict[str, str]) -> str:
     return f"s3://{SILVER_BUCKET}/{SILVER_PREFIX}year={partition['year']}/month={partition['month']}/day={partition['day']}/hour={partition['hour']}/"
 
 
+def _safe_str(value) -> str:
+    """Convert value to string, handling NA/NaN/None."""
+    if value is None or pd.isna(value):
+        return ""
+    return str(value)
+
+
 def read_partition_jobs(partition: Dict[str, str]) -> List[Dict[str, Any]]:
     """
     Read jobs from a Silver partition.
@@ -114,11 +190,11 @@ def read_partition_jobs(partition: Dict[str, str]) -> List[Dict[str, Any]]:
         jobs = []
         for _, row in df.iterrows():
             job = {
-                "job_posting_id": str(row.get("job_posting_id", "")),
-                "job_title": row.get("job_title", ""),
-                "company_name": row.get("company_name", ""),
-                "job_location": row.get("job_location", ""),
-                "job_description": row.get("job_description", ""),
+                "job_posting_id": _safe_str(row.get("job_posting_id", "")),
+                "job_title": _safe_str(row.get("job_title", "")),
+                "company_name": _safe_str(row.get("company_name", "")),
+                "job_location": _safe_str(row.get("job_location", "")),
+                "job_description_text": _safe_str(row.get("job_description_text", "")),
                 "partition": partition,
             }
             if job["job_posting_id"]:
@@ -244,15 +320,44 @@ def handler(event: Dict[str, Any], context) -> Dict[str, Any]:
     }
 
     # Optionally publish jobs to SQS
-    if PUBLISH_TO_SQS and partitions:
-        logger.info(f"Publishing jobs from {len(partitions)} partitions to SQS")
+    if PUBLISH_TO_SQS and pending_partitions:
+        logger.info(f"Publishing jobs to SQS (target: {MIN_JOBS_TO_PUBLISH} pending jobs)")
 
         all_jobs = []
-        for partition in partitions:
-            jobs = read_partition_jobs(partition)
-            all_jobs.extend(jobs)
+        partitions_processed = []
+        partition_index = 0
+        all_sorted_pending = sorted(pending_partitions)
 
-        logger.info(f"Total jobs to publish: {len(all_jobs)}")
+        # Keep fetching partitions until we have MIN_JOBS_TO_PUBLISH pending jobs
+        while len(all_jobs) < MIN_JOBS_TO_PUBLISH and partition_index < len(all_sorted_pending):
+            partition = parse_partition_key(all_sorted_pending[partition_index])
+            partitions_processed.append(partition)
+
+            jobs = read_partition_jobs(partition)
+
+            # Filter completed jobs immediately (backfill logic)
+            if jobs and STATUS_TABLE:
+                job_ids = [j["job_posting_id"] for j in jobs]
+                completed_ids = get_completed_job_ids(job_ids)
+
+                if completed_ids:
+                    original_count = len(jobs)
+                    jobs = [j for j in jobs if j["job_posting_id"] not in completed_ids]
+                    logger.info(f"Partition {partition_index + 1}: {original_count} jobs, {len(completed_ids)} completed, {len(jobs)} pending")
+                else:
+                    logger.info(f"Partition {partition_index + 1}: {len(jobs)} jobs, 0 completed")
+
+            all_jobs.extend(jobs)
+            partition_index += 1
+
+            logger.info(f"Progress: {len(all_jobs)}/{MIN_JOBS_TO_PUBLISH} pending jobs from {partition_index} partitions")
+
+        # Update result with actual partitions processed
+        partitions = partitions_processed
+        result["partitions"] = partitions
+        result["processing_count"] = len(partitions)
+
+        logger.info(f"Total pending jobs to publish: {len(all_jobs)} from {len(partitions)} partitions")
 
         if all_jobs:
             sqs_stats = publish_jobs_to_sqs(all_jobs)
@@ -261,6 +366,7 @@ def handler(event: Dict[str, Any], context) -> Dict[str, Any]:
         else:
             result["sqs_stats"] = {"published": 0, "failed": 0}
             result["total_jobs"] = 0
+            result["all_completed"] = True
 
     logger.info(f"Returning {len(partitions)} partitions for processing")
     return result

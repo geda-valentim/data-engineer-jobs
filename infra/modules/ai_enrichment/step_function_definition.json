@@ -1,5 +1,5 @@
 {
-  "Comment": "AI Enrichment Pipeline - 3-pass job enrichment with semaphore concurrency control",
+  "Comment": "AI Enrichment Pipeline - 3-pass job enrichment with semaphore concurrency control and retry logic",
   "StartAt": "AcquireLock",
   "States": {
     "AcquireLock": {
@@ -27,9 +27,9 @@
       "Retry": [
         {
           "ErrorEquals": ["DynamoDB.ConditionalCheckFailedException"],
-          "IntervalSeconds": 1,
-          "MaxAttempts": 20,
-          "BackoffRate": 1.2,
+          "IntervalSeconds": 3,
+          "MaxAttempts": 100,
+          "BackoffRate": 1.5,
           "JitterStrategy": "FULL"
         }
       ],
@@ -70,8 +70,22 @@
 
     "EvaluatePasses": {
       "Type": "Choice",
-      "Comment": "Check if job exists and determine which passes to run. First check Item exists to avoid null access errors.",
+      "Comment": "Route based on job status: new jobs process, completed skip, failed retry (up to max_retries)",
       "Choices": [
+        {
+          "Comment": "Force reprocessing - skip all cache checks",
+          "And": [
+            {
+              "Variable": "$.force",
+              "IsPresent": true
+            },
+            {
+              "Variable": "$.force",
+              "BooleanEquals": true
+            }
+          ],
+          "Next": "ResetJobStatus"
+        },
         {
           "Comment": "New job - Item doesn't exist in DynamoDB",
           "Not": {
@@ -81,73 +95,71 @@
           "Next": "CreateOrUpdateJobStatus"
         },
         {
-          "Comment": "All passes completed",
+          "Comment": "Job COMPLETED - skip processing",
           "And": [
             {
-              "Variable": "$.statusResult.Item.pass1.M.status.S",
+              "Variable": "$.statusResult.Item",
               "IsPresent": true
             },
             {
-              "Variable": "$.statusResult.Item.pass1.M.status.S",
-              "StringEquals": "COMPLETED"
-            },
-            {
-              "Variable": "$.statusResult.Item.pass2.M.status.S",
-              "IsPresent": true
-            },
-            {
-              "Variable": "$.statusResult.Item.pass2.M.status.S",
-              "StringEquals": "COMPLETED"
-            },
-            {
-              "Variable": "$.statusResult.Item.pass3.M.status.S",
-              "IsPresent": true
-            },
-            {
-              "Variable": "$.statusResult.Item.pass3.M.status.S",
+              "Variable": "$.statusResult.Item.overallStatus.S",
               "StringEquals": "COMPLETED"
             }
           ],
           "Next": "AlreadyCompleted"
         },
         {
-          "Comment": "Pass 1 and 2 completed, run pass 3",
+          "Comment": "Job FAILED with max retries reached - permanently failed",
           "And": [
             {
-              "Variable": "$.statusResult.Item.pass1.M.status.S",
+              "Variable": "$.statusResult.Item",
               "IsPresent": true
             },
             {
-              "Variable": "$.statusResult.Item.pass1.M.status.S",
-              "StringEquals": "COMPLETED"
+              "Variable": "$.statusResult.Item.overallStatus.S",
+              "StringEquals": "FAILED"
             },
             {
-              "Variable": "$.statusResult.Item.pass2.M.status.S",
+              "Variable": "$.statusResult.Item.retryCount.N",
               "IsPresent": true
             },
             {
-              "Variable": "$.statusResult.Item.pass2.M.status.S",
-              "StringEquals": "COMPLETED"
+              "Variable": "$.statusResult.Item.retryCount.N",
+              "StringGreaterThanEquals": "${max_retries}"
             }
           ],
-          "Next": "ExecutePass3"
+          "Next": "PermanentlyFailed"
         },
         {
-          "Comment": "Pass 1 completed, run pass 2",
+          "Comment": "Job FAILED with retries remaining - increment and reprocess",
           "And": [
             {
-              "Variable": "$.statusResult.Item.pass1.M.status.S",
+              "Variable": "$.statusResult.Item",
               "IsPresent": true
             },
             {
-              "Variable": "$.statusResult.Item.pass1.M.status.S",
-              "StringEquals": "COMPLETED"
+              "Variable": "$.statusResult.Item.overallStatus.S",
+              "StringEquals": "FAILED"
             }
           ],
-          "Next": "ExecutePass2"
+          "Next": "IncrementRetryAndReprocess"
+        },
+        {
+          "Comment": "Job IN_PROGRESS - previous execution failed silently, reprocess",
+          "And": [
+            {
+              "Variable": "$.statusResult.Item",
+              "IsPresent": true
+            },
+            {
+              "Variable": "$.statusResult.Item.overallStatus.S",
+              "StringEquals": "IN_PROGRESS"
+            }
+          ],
+          "Next": "ReprocessInProgress"
         }
       ],
-      "Default": "CreateOrUpdateJobStatus"
+      "Default": "AlreadyCompleted"
     },
 
     "AlreadyCompleted": {
@@ -157,6 +169,145 @@
       },
       "ResultPath": "$.skipReason",
       "Next": "ReleaseLock"
+    },
+
+    "PermanentlyFailed": {
+      "Type": "Task",
+      "Comment": "Mark job as permanently failed after max retries",
+      "Resource": "arn:aws:states:::dynamodb:updateItem",
+      "Parameters": {
+        "TableName": "${status_table}",
+        "Key": {
+          "job_posting_id": {"S.$": "$.job_data.job_posting_id"}
+        },
+        "UpdateExpression": "SET overallStatus = :permFailed, updatedAt = :now",
+        "ExpressionAttributeValues": {
+          ":permFailed": {"S": "PERMANENTLY_FAILED"},
+          ":now": {"S.$": "$$.State.EnteredTime"}
+        }
+      },
+      "ResultPath": "$.permFailedResult",
+      "Next": "ReleaseLockPermanentlyFailed",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "ReleaseLockPermanentlyFailed"
+        }
+      ]
+    },
+
+    "ReleaseLockPermanentlyFailed": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::dynamodb:updateItem",
+      "Parameters": {
+        "TableName": "${semaphore_table}",
+        "Key": {
+          "LockName": {"S": "ProcessingLock"}
+        },
+        "UpdateExpression": "SET currentlockcount = currentlockcount - :one REMOVE #execId",
+        "ConditionExpression": "attribute_exists(#execId) AND currentlockcount > :zero",
+        "ExpressionAttributeNames": {
+          "#execId.$": "$$.Execution.Name"
+        },
+        "ExpressionAttributeValues": {
+          ":one": {"N": "1"},
+          ":zero": {"N": "0"}
+        }
+      },
+      "ResultPath": "$.releaseLockResult",
+      "Next": "SuccessPermanentlyFailed",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.releaseLockError",
+          "Next": "SuccessPermanentlyFailed"
+        }
+      ]
+    },
+
+    "SuccessPermanentlyFailed": {
+      "Type": "Succeed",
+      "Comment": "Job exceeded max retries - not an execution error"
+    },
+
+    "IncrementRetryAndReprocess": {
+      "Type": "Task",
+      "Comment": "Increment retry count and reset status for reprocessing",
+      "Resource": "arn:aws:states:::dynamodb:updateItem",
+      "Parameters": {
+        "TableName": "${status_table}",
+        "Key": {
+          "job_posting_id": {"S.$": "$.job_data.job_posting_id"}
+        },
+        "UpdateExpression": "SET retryCount = if_not_exists(retryCount, :zero) + :one, overallStatus = :inProgress, pass1 = :pendingPass, pass2 = :pendingPass, pass3 = :pendingPass, updatedAt = :now, currentExecutionId = :execId",
+        "ExpressionAttributeValues": {
+          ":zero": {"N": "0"},
+          ":one": {"N": "1"},
+          ":inProgress": {"S": "IN_PROGRESS"},
+          ":pendingPass": {"M": {"status": {"S": "PENDING"}}},
+          ":now": {"S.$": "$$.State.EnteredTime"},
+          ":execId": {"S.$": "$$.Execution.Name"}
+        }
+      },
+      "ResultPath": "$.retryResult",
+      "Next": "ExecutePass1",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "ReleaseLockOnError"
+        }
+      ]
+    },
+
+    "ReprocessInProgress": {
+      "Type": "Task",
+      "Comment": "Reset IN_PROGRESS job for reprocessing - previous execution failed silently",
+      "Resource": "arn:aws:states:::dynamodb:updateItem",
+      "Parameters": {
+        "TableName": "${status_table}",
+        "Key": {
+          "job_posting_id": {"S.$": "$.job_data.job_posting_id"}
+        },
+        "UpdateExpression": "SET overallStatus = :inProgress, pass1 = :pendingPass, pass2 = :pendingPass, pass3 = :pendingPass, updatedAt = :now, currentExecutionId = :execId",
+        "ExpressionAttributeValues": {
+          ":inProgress": {"S": "IN_PROGRESS"},
+          ":pendingPass": {"M": {"status": {"S": "PENDING"}}},
+          ":now": {"S.$": "$$.State.EnteredTime"},
+          ":execId": {"S.$": "$$.Execution.Name"}
+        }
+      },
+      "ResultPath": "$.reprocessResult",
+      "Next": "ExecutePass1",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "ReleaseLockOnError"
+        }
+      ]
+    },
+
+    "ResetJobStatus": {
+      "Type": "Task",
+      "Comment": "Delete existing job status to force reprocessing from scratch",
+      "Resource": "arn:aws:states:::dynamodb:deleteItem",
+      "Parameters": {
+        "TableName": "${status_table}",
+        "Key": {
+          "job_posting_id": {"S.$": "$.job_data.job_posting_id"}
+        }
+      },
+      "ResultPath": "$.resetResult",
+      "Next": "CreateOrUpdateJobStatus",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "ReleaseLockOnError"
+        }
+      ]
     },
 
     "CreateOrUpdateJobStatus": {
@@ -170,6 +321,7 @@
           "pass2": {"M": {"status": {"S": "PENDING"}}},
           "pass3": {"M": {"status": {"S": "PENDING"}}},
           "overallStatus": {"S": "PENDING"},
+          "retryCount": {"N": "0"},
           "createdAt": {"S.$": "$$.State.EnteredTime"},
           "updatedAt": {"S.$": "$$.State.EnteredTime"},
           "currentExecutionId": {"S.$": "$$.Execution.Name"}
@@ -213,10 +365,11 @@
       "Next": "UpdatePass1Status",
       "Retry": [
         {
-          "ErrorEquals": ["Lambda.ServiceException", "Lambda.TooManyRequestsException"],
-          "IntervalSeconds": 2,
-          "MaxAttempts": 3,
-          "BackoffRate": 2
+          "ErrorEquals": ["Lambda.ServiceException", "Lambda.TooManyRequestsException", "Lambda.Unknown"],
+          "IntervalSeconds": 3,
+          "MaxAttempts": 10,
+          "BackoffRate": 1.5,
+          "JitterStrategy": "FULL"
         }
       ],
       "Catch": [
@@ -269,7 +422,7 @@
         "Key": {
           "job_posting_id": {"S.$": "$.job_data.job_posting_id"}
         },
-        "UpdateExpression": "SET pass1 = :pass1Status, overallStatus = :failed, updatedAt = :now",
+        "UpdateExpression": "SET pass1 = :pass1Status, overallStatus = :failed, retryCount = if_not_exists(retryCount, :zero) + :one, updatedAt = :now",
         "ExpressionAttributeValues": {
           ":pass1Status": {
             "M": {
@@ -279,6 +432,8 @@
             }
           },
           ":failed": {"S": "FAILED"},
+          ":zero": {"N": "0"},
+          ":one": {"N": "1"},
           ":now": {"S.$": "$$.State.EnteredTime"}
         }
       },
@@ -308,10 +463,11 @@
       "Next": "UpdatePass2Status",
       "Retry": [
         {
-          "ErrorEquals": ["Lambda.ServiceException", "Lambda.TooManyRequestsException"],
-          "IntervalSeconds": 2,
-          "MaxAttempts": 3,
-          "BackoffRate": 2
+          "ErrorEquals": ["Lambda.ServiceException", "Lambda.TooManyRequestsException", "Lambda.Unknown"],
+          "IntervalSeconds": 3,
+          "MaxAttempts": 10,
+          "BackoffRate": 1.5,
+          "JitterStrategy": "FULL"
         }
       ],
       "Catch": [
@@ -363,7 +519,7 @@
         "Key": {
           "job_posting_id": {"S.$": "$.job_data.job_posting_id"}
         },
-        "UpdateExpression": "SET pass2 = :pass2Status, overallStatus = :failed, updatedAt = :now",
+        "UpdateExpression": "SET pass2 = :pass2Status, overallStatus = :failed, retryCount = if_not_exists(retryCount, :zero) + :one, updatedAt = :now",
         "ExpressionAttributeValues": {
           ":pass2Status": {
             "M": {
@@ -373,6 +529,8 @@
             }
           },
           ":failed": {"S": "FAILED"},
+          ":zero": {"N": "0"},
+          ":one": {"N": "1"},
           ":now": {"S.$": "$$.State.EnteredTime"}
         }
       },
@@ -403,10 +561,11 @@
       "Next": "UpdatePass3Status",
       "Retry": [
         {
-          "ErrorEquals": ["Lambda.ServiceException", "Lambda.TooManyRequestsException"],
-          "IntervalSeconds": 2,
-          "MaxAttempts": 3,
-          "BackoffRate": 2
+          "ErrorEquals": ["Lambda.ServiceException", "Lambda.TooManyRequestsException", "Lambda.Unknown"],
+          "IntervalSeconds": 3,
+          "MaxAttempts": 10,
+          "BackoffRate": 1.5,
+          "JitterStrategy": "FULL"
         }
       ],
       "Catch": [
@@ -459,7 +618,7 @@
         "Key": {
           "job_posting_id": {"S.$": "$.job_data.job_posting_id"}
         },
-        "UpdateExpression": "SET pass3 = :pass3Status, overallStatus = :failed, updatedAt = :now",
+        "UpdateExpression": "SET pass3 = :pass3Status, overallStatus = :failed, retryCount = if_not_exists(retryCount, :zero) + :one, updatedAt = :now",
         "ExpressionAttributeValues": {
           ":pass3Status": {
             "M": {
@@ -469,6 +628,8 @@
             }
           },
           ":failed": {"S": "FAILED"},
+          ":zero": {"N": "0"},
+          ":one": {"N": "1"},
           ":now": {"S.$": "$$.State.EnteredTime"}
         }
       },

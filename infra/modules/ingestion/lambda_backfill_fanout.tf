@@ -20,11 +20,12 @@ data "archive_file" "backfill_fanout_zip" {
 
 # Lambda Function
 resource "aws_lambda_function" "backfill_fanout" {
-  function_name = "${var.project_name}-backfill-fanout"
+  function_name = "${var.project_name}-${var.environment}-ingestion-backfill-fanout"
+  description   = "Fans out backfill requests to Step Function for parallel geo processing"
   role          = aws_iam_role.backfill_fanout_role.arn
   handler       = "handler.handler"
   runtime       = "python3.11"
-  timeout       = 60  # 1 min - só gera JSON e inicia Step Function
+  timeout       = 60 # 1 min - só gera JSON e inicia Step Function
   memory_size   = 256
 
   filename         = data.archive_file.backfill_fanout_zip.output_path
@@ -32,7 +33,7 @@ resource "aws_lambda_function" "backfill_fanout" {
 
   environment {
     variables = {
-      BACKFILL_BUCKET              = var.data_lake_bucket_name
+      BACKFILL_BUCKET                = var.data_lake_bucket_name
       ORCHESTRATOR_STATE_MACHINE_ARN = aws_sfn_state_machine.backfill_orchestrator.arn
     }
   }

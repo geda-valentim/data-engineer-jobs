@@ -11,7 +11,8 @@ data "archive_file" "queue_consumer_zip" {
 
 # Lambda Function
 resource "aws_lambda_function" "queue_consumer" {
-  function_name = "${var.project_name}-queue-consumer"
+  function_name = "${var.project_name}-${var.environment}-ingestion-queue-consumer"
+  description   = "Consumes ingestion jobs from SQS and triggers BrightData snapshot collection"
   role          = aws_iam_role.queue_consumer_role.arn
   handler       = "handler.handler"
   runtime       = "python3.11"
@@ -26,8 +27,8 @@ resource "aws_lambda_function" "queue_consumer" {
 
   environment {
     variables = {
-      STATE_MACHINE_ARN          = aws_sfn_state_machine.bright_data_snapshot_ingestion.arn
-      MAX_CONCURRENT_EXECUTIONS  = "10"
+      STATE_MACHINE_ARN         = aws_sfn_state_machine.bright_data_snapshot_ingestion.arn
+      MAX_CONCURRENT_EXECUTIONS = "10"
     }
   }
 
@@ -41,7 +42,7 @@ resource "aws_lambda_function" "queue_consumer" {
 resource "aws_lambda_event_source_mapping" "queue_consumer_trigger" {
   event_source_arn = aws_sqs_queue.ingestion_queue.arn
   function_name    = aws_lambda_function.queue_consumer.arn
-  batch_size       = 1  # Processa 1 mensagem por vez
+  batch_size       = 1 # Processa 1 mensagem por vez
   enabled          = true
 
   # Limita concorrência para não sobrecarregar Step Functions e Glue

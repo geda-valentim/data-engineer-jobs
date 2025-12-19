@@ -41,6 +41,10 @@ pip install -r requirements.txt --target "$BUILD_DIR" --upgrade
 find "$BUILD_DIR" -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
 find "$BUILD_DIR" -type d -name "*.dist-info" -exec rm -rf {} + 2>/dev/null || true
 
+# Copia módulos locais (skills_detection) para a layer
+echo "📦 Adding local modules to layer..."
+cp -r "$PROJECT_ROOT/src/skills_detection" "$BUILD_DIR/"
+
 # Zipar a pasta python/ (estrutura correta pra Lambda)
 zip -r layer.zip python -q
 

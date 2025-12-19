@@ -47,11 +47,11 @@ resource "aws_glue_job" "skills_backfill" {
     "--silver_bucket"                    = var.silver_bucket_name
     "--source_system"                    = "linkedin"
     # Adiciona o diretório de scripts ao PYTHONPATH para imports
-    "--extra-py-files"                   = "s3://${var.glue_scripts_bucket_name}/glue/skills_detection.zip"
+    "--extra-py-files" = "s3://${var.glue_scripts_bucket_name}/glue/skills_detection.zip"
   }
 
   depends_on = [aws_s3_object.glue_skills_detection_zip]
 
-  max_retries = 0 # Backfill não deve ter retry automático
+  max_retries = 0   # Backfill não deve ter retry automático
   timeout     = 120 # 2 horas para processar histórico
 }

@@ -33,13 +33,13 @@ resource "aws_dynamodb_table_item" "ingestion_sources_seed" {
   range_key  = "source_type"
 
   item = jsonencode({
-    source_id = { S = each.value.source_id }
+    source_id   = { S = each.value.source_id }
     source_type = { S = each.value.source_type }
 
-    provider      = { S = each.value.provider }
-    dataset_kind  = { S = each.value.dataset_kind }
-    domain        = { S = each.value.domain }
-    entity        = { S = each.value.entity }
+    provider     = { S = each.value.provider }
+    dataset_kind = { S = each.value.dataset_kind }
+    domain       = { S = each.value.domain }
+    entity       = { S = each.value.entity }
 
     brightdata_dataset_id = { S = each.value.brightdata_dataset_id }
 
@@ -63,7 +63,7 @@ resource "aws_dynamodb_table_item" "ingestion_sources_seed" {
     bronze_prefix = { S = each.value.bronze_prefix }
     file_format   = { S = each.value.file_format }
 
-    enabled       = { BOOL = each.value.enabled }
+    enabled        = { BOOL = each.value.enabled }
     schedule_group = { S = each.value.schedule_group }
     owner          = { S = each.value.owner }
   })

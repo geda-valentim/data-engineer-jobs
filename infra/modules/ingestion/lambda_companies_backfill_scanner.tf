@@ -23,7 +23,8 @@ data "archive_file" "companies_backfill_scanner_zip" {
 
 # Lambda Function
 resource "aws_lambda_function" "companies_backfill_scanner" {
-  function_name = "${var.project_name}-companies-backfill-scanner"
+  function_name = "${var.project_name}-${var.environment}-ingestion-backfill-scanner"
+  description   = "Scans Silver layer for missing companies and queues to SQS for fetching"
   role          = aws_iam_role.companies_backfill_scanner_role.arn
   handler       = "handler.handler"
   runtime       = "python3.12"
@@ -43,12 +44,12 @@ resource "aws_lambda_function" "companies_backfill_scanner" {
 
   environment {
     variables = {
-      SILVER_BUCKET_NAME       = var.silver_bucket_name
-      COMPANIES_STATUS_TABLE   = aws_dynamodb_table.companies_status.name
-      BACKFILL_STATE_TABLE     = aws_dynamodb_table.backfill_processing_state.name
-      COMPANIES_QUEUE_URL      = aws_sqs_queue.companies_queue.url
-      LOOKBACK_DAYS            = "30"  # Last 30 days by default
-      MAX_PARTITIONS_PER_RUN   = "10"  # Process 10 partitions per run
+      SILVER_BUCKET_NAME     = var.silver_bucket_name
+      COMPANIES_STATUS_TABLE = aws_dynamodb_table.companies_status.name
+      BACKFILL_STATE_TABLE   = aws_dynamodb_table.backfill_processing_state.name
+      COMPANIES_QUEUE_URL    = aws_sqs_queue.companies_queue.url
+      LOOKBACK_DAYS          = "30" # Last 30 days by default
+      MAX_PARTITIONS_PER_RUN = "10" # Process 10 partitions per run
     }
   }
 

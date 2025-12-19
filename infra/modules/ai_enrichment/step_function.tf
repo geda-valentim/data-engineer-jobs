@@ -10,6 +10,7 @@ resource "aws_sfn_state_machine" "ai_enrichment" {
     status_table      = aws_dynamodb_table.status.name
     enrich_lambda_arn = aws_lambda_function.enrich_partition.arn
     max_concurrent    = var.max_concurrent_executions
+    max_retries       = var.max_job_retries
   })
 
   logging_configuration {

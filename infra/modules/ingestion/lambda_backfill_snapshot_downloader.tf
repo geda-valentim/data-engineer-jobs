@@ -11,7 +11,8 @@ data "archive_file" "backfill_snapshot_downloader_zip" {
 
 # Lambda Function
 resource "aws_lambda_function" "backfill_snapshot_downloader" {
-  function_name = "${var.project_name}-backfill-snapshot-downloader"
+  function_name = "${var.project_name}-${var.environment}-ingestion-snapshot-downloader"
+  description   = "Downloads pending BrightData snapshots to S3 Bronze layer"
   role          = aws_iam_role.backfill_snapshot_downloader_role.arn
   handler       = "handler.handler"
   runtime       = "python3.12"

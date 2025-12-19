@@ -30,9 +30,9 @@ resource "aws_s3_bucket_lifecycle_configuration" "athena_results_lifecycle" {
     id     = "delete-old-query-results"
     status = "Enabled"
 
-    # Deleta objetos após 7 dias
+    # Deleta objetos após 24 horas (1 dia)
     expiration {
-      days = 7
+      days = 1
     }
 
     # Aplica a todos os objetos no bucket

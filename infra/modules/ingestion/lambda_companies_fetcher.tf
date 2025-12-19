@@ -15,7 +15,8 @@ data "archive_file" "companies_fetcher_zip" {
 
 # Lambda Function
 resource "aws_lambda_function" "companies_fetcher" {
-  function_name = "${var.project_name}-companies-fetcher"
+  function_name = "${var.project_name}-${var.environment}-ingestion-companies-fetcher"
+  description   = "Fetches company data from BrightData API and saves to Bronze layer"
   role          = aws_iam_role.companies_fetcher_role.arn
   handler       = "handler.handler"
   runtime       = "python3.12"

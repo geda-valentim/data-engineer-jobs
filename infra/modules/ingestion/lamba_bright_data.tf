@@ -1,12 +1,13 @@
 resource "aws_lambda_function" "bright_data" {
   for_each = local.lambdas
 
-  filename         = data.archive_file.lambda_code.output_path
-  function_name    = "bright-data-${each.key}"
-  role            = var.lambda_exec_role_arn
-  handler         = each.value.handler
-  runtime         = "python3.12"
-  timeout         = each.value.timeout
+  filename      = data.archive_file.lambda_code.output_path
+  function_name = "${var.project_name}-${var.environment}-ingestion-brightdata-${each.key}"
+  description   = each.value.description
+  role          = var.lambda_exec_role_arn
+  handler       = each.value.handler
+  runtime       = "python3.12"
+  timeout       = each.value.timeout
 
   source_code_hash = data.archive_file.lambda_code.output_base64sha256
 

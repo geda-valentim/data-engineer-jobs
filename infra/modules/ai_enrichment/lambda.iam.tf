@@ -157,6 +157,7 @@ resource "aws_iam_role_policy" "dynamodb_access" {
         Effect = "Allow"
         Action = [
           "dynamodb:GetItem",
+          "dynamodb:BatchGetItem",
           "dynamodb:PutItem",
           "dynamodb:UpdateItem",
           "dynamodb:DeleteItem",
@@ -166,6 +167,21 @@ resource "aws_iam_role_policy" "dynamodb_access" {
         Resource = [
           aws_dynamodb_table.status.arn,
           "${aws_dynamodb_table.status.arn}/index/*"
+        ]
+      },
+      {
+        Sid    = "ETLProcessedTableAccess"
+        Effect = "Allow"
+        Action = [
+          "dynamodb:GetItem",
+          "dynamodb:BatchGetItem",
+          "dynamodb:PutItem",
+          "dynamodb:BatchWriteItem",
+          "dynamodb:Query",
+          "dynamodb:Scan"
+        ]
+        Resource = [
+          aws_dynamodb_table.etl_processed.arn
         ]
       }
     ]

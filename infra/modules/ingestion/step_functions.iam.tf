@@ -24,17 +24,19 @@ resource "aws_iam_policy" "bright_data_sfn_policy" {
   policy = jsonencode({
     Version = "2012-10-17",
     Statement = [
-      # Invocar as três Lambdas
+      # Invocar Lambdas de ingestão
       {
         Effect = "Allow",
         Action = [
           "lambda:InvokeFunction"
         ],
-        Resource = [
+        Resource = compact([
           aws_lambda_function.bright_data["trigger"].arn,
           aws_lambda_function.bright_data["check_status"].arn,
-          aws_lambda_function.bright_data["save_to_s3"].arn
-        ]
+          aws_lambda_function.bright_data["save_to_s3"].arn,
+          # Lambda ETL (usa local com try() para evitar erro quando count=0)
+          local.lambda_etl_arn
+        ])
       },
 
       # Rodar o Glue Job bronze_to_silver via Step Functions (startJobRun.sync)

@@ -26,9 +26,9 @@ variable "silver_prefix" {
 }
 
 variable "silver_ai_prefix" {
-  description = "S3 prefix for Silver-AI layer data"
+  description = "S3 prefix for Silver-AI layer data (source-agnostic)"
   type        = string
-  default     = "linkedin_ai/"
+  default     = "ai_enrichment/"
 }
 
 # Bedrock Model Configuration
@@ -76,7 +76,7 @@ variable "max_concurrent_executions" {
     Scaling considerations:
     - Each concurrent execution processes 1 job through 3 passes
     - With 180s per pass (worst case), throughput = N * 60 / 540 = N/9 jobs/min
-    - Default 5 = ~0.55 jobs/min = ~33 jobs/hour
+    - Default 10 = ~1.1 jobs/min = ~66 jobs/hour
     - Set to 20 = ~2.2 jobs/min = ~133 jobs/hour
     - Set to 50 = ~5.5 jobs/min = ~333 jobs/hour
 
@@ -85,7 +85,7 @@ variable "max_concurrent_executions" {
     - Each job = 3 Bedrock calls, so max_concurrent = quota/3
   EOT
   type        = number
-  default     = 5
+  default     = 10
 }
 
 variable "sqs_batch_size" {
@@ -122,6 +122,18 @@ variable "max_jobs_per_partition" {
   description = "Maximum jobs to process per partition"
   type        = number
   default     = 100
+}
+
+variable "min_jobs_to_publish" {
+  description = "Minimum pending jobs to publish per discover run (backfill until target met)"
+  type        = number
+  default     = 100
+}
+
+variable "max_job_retries" {
+  description = "Maximum retries for failed jobs before marking as permanently failed"
+  type        = number
+  default     = 3
 }
 
 # Bronze Bucket Configuration
@@ -208,4 +220,32 @@ variable "circuit_breaker_recovery_timeout" {
   description = "Seconds to wait before attempting recovery (half-open state)"
   type        = number
   default     = 60
+}
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# ETL Configuration (Bronze AI → Silver AI)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+variable "etl_schedule_expression" {
+  description = "Schedule expression for AI Enrichment ETL (e.g., 'rate(30 minutes)')"
+  type        = string
+  default     = "rate(30 minutes)"
+}
+
+variable "enable_etl_schedule" {
+  description = "Enable the ETL schedule"
+  type        = bool
+  default     = true
+}
+
+variable "etl_max_jobs_per_run" {
+  description = "Maximum jobs to process per ETL run"
+  type        = number
+  default     = 500
+}
+
+variable "log_retention_days" {
+  description = "CloudWatch log retention in days"
+  type        = number
+  default     = 14
 }

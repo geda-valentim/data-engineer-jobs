@@ -49,7 +49,7 @@ resource "aws_glue_job" "bronze_to_silver" {
     "--silver_bucket"                    = var.silver_bucket_name
     "--source_system"                    = "linkedin"
     # Módulo de skills compartilhado
-    "--extra-py-files"                   = "s3://${var.glue_scripts_bucket_name}/glue/skills_detection.zip"
+    "--extra-py-files" = "s3://${var.glue_scripts_bucket_name}/glue/skills_detection.zip"
   }
 
   depends_on = [aws_s3_object.glue_skills_detection_zip]

@@ -78,6 +78,39 @@ resource "aws_dynamodb_table" "status" {
 
 # Note: This creates the initial semaphore record with count=0
 # The Step Function will manage incrementing/decrementing
+# ═══════════════════════════════════════════════════════════════════════════════
+# ETL Processed Table - Tracks jobs moved from Bronze to Silver
+# ═══════════════════════════════════════════════════════════════════════════════
+
+resource "aws_dynamodb_table" "etl_processed" {
+  name         = "${var.project_name}-${var.environment}-ai-etl-processed"
+  billing_mode = "PAY_PER_REQUEST"
+  hash_key     = "job_posting_id"
+
+  attribute {
+    name = "job_posting_id"
+    type = "S"
+  }
+
+  # TTL para limpeza automática após 90 dias (opcional)
+  ttl {
+    attribute_name = "ttl"
+    enabled        = true
+  }
+
+  point_in_time_recovery {
+    enabled = false # Não precisa de PITR para tabela de controle
+  }
+
+  tags = merge(local.common_tags, {
+    Name = "${var.project_name}-${var.environment}-ai-etl-processed"
+  })
+}
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Initialize Semaphore Record
+# ═══════════════════════════════════════════════════════════════════════════════
+
 resource "aws_dynamodb_table_item" "semaphore_init" {
   table_name = aws_dynamodb_table.semaphore.name
   hash_key   = aws_dynamodb_table.semaphore.hash_key

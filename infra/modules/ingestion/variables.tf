@@ -3,6 +3,11 @@ variable "project_name" {
   description = "Nome base do projeto (prefixo de recursos)"
 }
 
+variable "environment" {
+  description = "Environment name (dev, staging, prod)"
+  type        = string
+}
+
 variable "bronze_bucket_name" {
   type = string
 }
@@ -36,26 +41,26 @@ variable "brightdata_api_key_param" {
 variable "ingestion_sources_seed" {
   description = "Fontes de ingestão para seed inicial no DynamoDB"
   type = list(object({
-    source_id             = string
-    source_type           = string         # "jobs_listing" etc.
+    source_id   = string
+    source_type = string # "jobs_listing" etc.
 
-    provider              = string         # "brightdata"
-    dataset_kind          = string         # "snapshot"
+    provider     = string # "brightdata"
+    dataset_kind = string # "snapshot"
 
-    domain                = string         # "linkedin"
-    entity                = string         # "jobs"
+    domain = string # "linkedin"
+    entity = string # "jobs"
 
-    brightdata_dataset_id = string
-    brightdata_extra_params = map(string)  # include_errors, type, discover_by...
+    brightdata_dataset_id   = string
+    brightdata_extra_params = map(string) # include_errors, type, discover_by...
 
-    request_urls          = list(string)
-    request_url           = string         # URL base de request (se quiser logar)
-    bronze_prefix         = string         # prefixo dentro do bronze
-    file_format           = string         # "jsonl", "json", "csv"...
+    request_urls  = list(string)
+    request_url   = string # URL base de request (se quiser logar)
+    bronze_prefix = string # prefixo dentro do bronze
+    file_format   = string # "jsonl", "json", "csv"...
 
-    enabled               = bool
-    schedule_group        = string         # "daily_midday" etc.
-    owner                 = string
+    enabled        = bool
+    schedule_group = string # "daily_midday" etc.
+    owner          = string
   }))
   default = []
 }
@@ -76,4 +81,16 @@ variable "data_lake_bucket_name" {
 variable "data_lake_bucket_arn" {
   type        = string
   description = "ARN do bucket S3 do data lake"
+}
+
+variable "aws_sdk_pandas_layer_arn" {
+  type        = string
+  description = "ARN do AWS SDK for Pandas layer (awswrangler)"
+  default     = ""
+}
+
+variable "use_lambda_etl" {
+  type        = bool
+  description = "Use Lambda instead of Glue for bronze_to_silver ETL"
+  default     = true
 }

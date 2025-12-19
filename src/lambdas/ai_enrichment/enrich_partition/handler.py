@@ -28,15 +28,11 @@ import os
 import logging
 from typing import Dict, Any
 
-from .bedrock_client import BedrockClient
-from .prompts import build_pass1_prompt, build_pass2_prompt, build_pass3_prompt
-from .parsers import parse_llm_json, validate_extraction_response, validate_inference_response, validate_analysis_response
-
-# Import shared utilities (handle both Lambda and local testing)
-try:
-    from ..shared.s3_utils import write_bronze_result, check_job_processed, read_bronze_result
-except ImportError:
-    from shared.s3_utils import write_bronze_result, check_job_processed, read_bronze_result
+# Use absolute imports for Lambda deployment (flat structure in zip)
+from bedrock_client import BedrockClient
+from prompts import build_pass1_prompt, build_pass2_prompt, build_pass3_prompt
+from parsers import parse_llm_json, validate_extraction_response, validate_inference_response, validate_analysis_response
+from shared.s3_utils import write_bronze_result, check_job_processed, read_bronze_result
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -87,7 +83,7 @@ def get_model_for_pass(pass_name: str) -> str:
 # ═══════════════════════════════════════════════════════════════════════════════
 
 
-def execute_pass1(job_data: Dict[str, Any]) -> Dict[str, Any]:
+def execute_pass1(job_data: Dict[str, Any], skip_cache: bool = False) -> Dict[str, Any]:
     """
     Execute Pass 1: Extraction.
 
@@ -96,6 +92,7 @@ def execute_pass1(job_data: Dict[str, Any]) -> Dict[str, Any]:
 
     Args:
         job_data: Job information with job_posting_id, job_title, company_name, etc.
+        skip_cache: If True, bypass cache and force reprocessing.
 
     Returns:
         Dict with statusCode, extraction, raw_response, model_id, success
@@ -103,8 +100,8 @@ def execute_pass1(job_data: Dict[str, Any]) -> Dict[str, Any]:
     job_id = job_data.get("job_posting_id", "unknown")
     model_id = get_model_for_pass("pass1")
 
-    # Check for cached result in Bronze
-    if BRONZE_BUCKET and check_job_processed(job_id, model_id, "pass1"):
+    # Check for cached result in Bronze (skip if force reprocessing)
+    if not skip_cache and BRONZE_BUCKET and check_job_processed(job_id, model_id, "pass1"):
         cached = read_bronze_result(job_id, model_id, "pass1")
         if cached:
             logger.info(f"Pass 1 cache hit for job {job_id}, returning cached result")
@@ -188,7 +185,7 @@ def execute_pass1(job_data: Dict[str, Any]) -> Dict[str, Any]:
         }
 
 
-def execute_pass2(job_data: Dict[str, Any], pass1_result: Dict[str, Any]) -> Dict[str, Any]:
+def execute_pass2(job_data: Dict[str, Any], pass1_result: Dict[str, Any], skip_cache: bool = False) -> Dict[str, Any]:
     """
     Execute Pass 2: Inference.
 
@@ -198,6 +195,7 @@ def execute_pass2(job_data: Dict[str, Any], pass1_result: Dict[str, Any]) -> Dic
     Args:
         job_data: Job information
         pass1_result: Extraction result from Pass 1
+        skip_cache: If True, bypass cache and force reprocessing.
 
     Returns:
         Dict with statusCode, inference, raw_response, model_id, success
@@ -205,8 +203,8 @@ def execute_pass2(job_data: Dict[str, Any], pass1_result: Dict[str, Any]) -> Dic
     job_id = job_data.get("job_posting_id", "unknown")
     model_id = get_model_for_pass("pass2")
 
-    # Check for cached result in Bronze
-    if BRONZE_BUCKET and check_job_processed(job_id, model_id, "pass2"):
+    # Check for cached result in Bronze (skip if force reprocessing)
+    if not skip_cache and BRONZE_BUCKET and check_job_processed(job_id, model_id, "pass2"):
         cached = read_bronze_result(job_id, model_id, "pass2")
         if cached:
             logger.info(f"Pass 2 cache hit for job {job_id}, returning cached result")
@@ -291,7 +289,7 @@ def execute_pass2(job_data: Dict[str, Any], pass1_result: Dict[str, Any]) -> Dic
         }
 
 
-def execute_pass3(job_data: Dict[str, Any], pass1_result: Dict[str, Any], pass2_result: Dict[str, Any]) -> Dict[str, Any]:
+def execute_pass3(job_data: Dict[str, Any], pass1_result: Dict[str, Any], pass2_result: Dict[str, Any], skip_cache: bool = False) -> Dict[str, Any]:
     """
     Execute Pass 3: Analysis.
 
@@ -302,6 +300,7 @@ def execute_pass3(job_data: Dict[str, Any], pass1_result: Dict[str, Any], pass2_
         job_data: Job information
         pass1_result: Extraction result from Pass 1
         pass2_result: Inference result from Pass 2
+        skip_cache: If True, bypass cache and force reprocessing.
 
     Returns:
         Dict with statusCode, analysis, raw_response, model_id, success
@@ -309,8 +308,8 @@ def execute_pass3(job_data: Dict[str, Any], pass1_result: Dict[str, Any], pass2_
     job_id = job_data.get("job_posting_id", "unknown")
     model_id = get_model_for_pass("pass3")
 
-    # Check for cached result in Bronze
-    if BRONZE_BUCKET and check_job_processed(job_id, model_id, "pass3"):
+    # Check for cached result in Bronze (skip if force reprocessing)
+    if not skip_cache and BRONZE_BUCKET and check_job_processed(job_id, model_id, "pass3"):
         cached = read_bronze_result(job_id, model_id, "pass3")
         if cached:
             logger.info(f"Pass 3 cache hit for job {job_id}, returning cached result")
@@ -430,10 +429,11 @@ def handler(event: Dict[str, Any], context) -> Dict[str, Any]:
     pass_name = event.get("pass_name")
     job_data = event.get("job_data", {})
     execution_id = event.get("execution_id", "unknown")
+    force = event.get("force", False)
 
     job_id = job_data.get("job_posting_id", "unknown")
 
-    logger.info(f"EnrichPartition invoked: pass={pass_name}, job={job_id}, execution={execution_id}")
+    logger.info(f"EnrichPartition invoked: pass={pass_name}, job={job_id}, execution={execution_id}, force={force}")
     logger.info(f"Models: Pass1={BEDROCK_MODEL_PASS1}, Pass2={BEDROCK_MODEL_PASS2}, Pass3={BEDROCK_MODEL_PASS3}")
 
     # Validate required fields
@@ -445,7 +445,7 @@ def handler(event: Dict[str, Any], context) -> Dict[str, Any]:
 
     # Route to appropriate pass
     if pass_name == "pass1":
-        return execute_pass1(job_data)
+        return execute_pass1(job_data, skip_cache=force)
 
     elif pass_name == "pass2":
         pass1_result = event.get("pass1_result")
@@ -456,7 +456,7 @@ def handler(event: Dict[str, Any], context) -> Dict[str, Any]:
                 "success": False,
                 "model_id": get_model_for_pass("pass2"),
             }
-        return execute_pass2(job_data, pass1_result)
+        return execute_pass2(job_data, pass1_result, skip_cache=force)
 
     elif pass_name == "pass3":
         pass1_result = event.get("pass1_result")
@@ -468,7 +468,7 @@ def handler(event: Dict[str, Any], context) -> Dict[str, Any]:
                 "success": False,
                 "model_id": get_model_for_pass("pass3"),
             }
-        return execute_pass3(job_data, pass1_result, pass2_result)
+        return execute_pass3(job_data, pass1_result, pass2_result, skip_cache=force)
 
     else:
         return {

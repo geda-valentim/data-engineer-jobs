@@ -5,7 +5,7 @@
 # Dead Letter Queue para mensagens que falharam
 resource "aws_sqs_queue" "ingestion_dlq" {
   name                      = "${var.project_name}-ingestion-dlq"
-  message_retention_seconds = 1209600  # 14 dias
+  message_retention_seconds = 1209600 # 14 dias
 
   tags = {
     Name    = "${var.project_name}-ingestion-dlq"
@@ -16,13 +16,13 @@ resource "aws_sqs_queue" "ingestion_dlq" {
 # Fila principal de ingestão
 resource "aws_sqs_queue" "ingestion_queue" {
   name                       = "${var.project_name}-ingestion-queue"
-  visibility_timeout_seconds = 900  # 15 min - tempo para Lambda processar
-  message_retention_seconds  = 86400  # 1 dia
-  receive_wait_time_seconds  = 20  # Long polling
+  visibility_timeout_seconds = 900   # 15 min - tempo para Lambda processar
+  message_retention_seconds  = 86400 # 1 dia
+  receive_wait_time_seconds  = 20    # Long polling
 
   redrive_policy = jsonencode({
     deadLetterTargetArn = aws_sqs_queue.ingestion_dlq.arn
-    maxReceiveCount     = 3  # 3 tentativas antes de ir para DLQ
+    maxReceiveCount     = 3 # 3 tentativas antes de ir para DLQ
   })
 
   tags = {
